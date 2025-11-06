@@ -204,7 +204,6 @@ return make_read_only({
   "Huaxu_Haojing_ZhiliuHJ",
   "Huaxu_Haojing_ZhiliuHJ_Door",
   "Huaxu_Haojing_ZhiliuHJ_Talk",
-  "Huaxu_Haojing_ZhiLvGeNei",
   "Huaxu_Haojing_ZhuliuHJ_Door",
   "Huaxu_Haojing_ZhuliuHJ_Talk",
   "Huaxu_Yanjindu_Alt",

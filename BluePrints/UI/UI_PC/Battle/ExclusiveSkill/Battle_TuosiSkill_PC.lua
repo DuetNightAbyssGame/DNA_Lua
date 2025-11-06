@@ -36,7 +36,7 @@ end
 function M:OnBuffsChanged(Buffs)
   local bOnFire = false
   for _, Buff in pairs(Buffs) do
-    if IsValid(Buff) and Buff.BuffId and Buff.BuffId == self.FireBuffId then
+    if Buff.BuffId and Buff.BuffId == self.FireBuffId then
       bOnFire = true
     end
   end

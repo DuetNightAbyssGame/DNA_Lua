@@ -118,7 +118,7 @@ return ReadOnly("ChannelInfo", {
     DeviceType = "mobile",
     Name = "安卓云游戏",
     OS = "android",
-    Provider = "cloud",
+    Provider = "hero",
     Region = "china",
     SDKChannelId = 0
   },
@@ -128,7 +128,7 @@ return ReadOnly("ChannelInfo", {
     DeviceType = "mobile",
     Name = "iOS云游戏",
     OS = "ios",
-    Provider = "cloud",
+    Provider = "hero",
     Region = "china",
     SDKChannelId = 0
   },
@@ -138,7 +138,7 @@ return ReadOnly("ChannelInfo", {
     DeviceType = "mobile",
     Name = "OPPO",
     OS = "android",
-    Provider = "oppo",
+    Provider = "hero",
     Region = "china",
     SDKChannelId = 0
   }

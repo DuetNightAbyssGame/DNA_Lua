@@ -83,7 +83,6 @@ function BP_RescueComponent_C:TriggerRescueExitMechanismOverlap(Player)
   local Hostage = Battle(self):Getentity(self:GetHostageEid())
   if nil == Hostage then
     DebugPrint("RescueComponent Error: 人质未刷出，无法移动到撤离机关")
-    return
   end
   local ExitMachanism = self.GameMode:GetEscapeMechanismActor()
   if nil == ExitMachanism then

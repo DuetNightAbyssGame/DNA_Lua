@@ -78,8 +78,6 @@ function EMLevelLoader:InitGameDLSS()
     end
     if 3 == GameDLSS then
       GameDLSS = 1
-    elseif 7 == GameDLSS then
-      GameDLSS = 6
     end
     UDLSSLibrary.SetDLSSMode(GameDLSS)
   else

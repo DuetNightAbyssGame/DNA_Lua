@@ -12,7 +12,7 @@ local FileName = "Screenshot-" .. DateTimeStr .. ".png"
 function M:Construct()
   local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
   if "Android" == PlatformName then
-    FilePath = UE4.URuntimeCommonFunctionLibrary.ConvertRelativePathToFull(UE4.UBlueprintPathsLibrary.ProjectSavedDir() .. "HighResScreenshots/")
+    FilePath = "/sdcard/Pictures/Screenshots/" .. AlbumName .. "/"
   elseif "IOS" == PlatformName then
     FilePath = UE4.URuntimeCommonFunctionLibrary.GetProjectSavedPath() .. "HighResScreenshots/"
     FilePath = FilePath:gsub("%.%.%/", "")

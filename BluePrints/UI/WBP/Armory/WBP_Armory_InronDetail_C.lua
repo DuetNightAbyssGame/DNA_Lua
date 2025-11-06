@@ -166,6 +166,10 @@ function M:OnCloseBtnClicked()
     ArmoryMain.Tab_Arm:PlayInAnim()
     ArmoryMain.ReceiveEnterStateNoAnim = true
     ArmoryMain:UpdateMontageAndCamera()
+    if ArmoryMain.CurSubTab.Name == "Grade" and ArmoryMain.CurSubTab.Widget and self.Parent and self.Parent.Char then
+      local IsRed = not self.Parent.IsPreviewMode and ArmoryMain.CheckCharPromoteReddot and ArmoryMain:CheckCharPromoteReddot(self.Parent.Char)
+      ArmoryMain.CurSubTab.Widget:SetReddot(false, IsRed)
+    end
   end
 end
 

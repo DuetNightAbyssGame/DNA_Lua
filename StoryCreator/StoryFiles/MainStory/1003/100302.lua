@@ -994,18 +994,6 @@ return {
             startPort = "Out",
             endQuest = "173313058531414978",
             endPort = "Success"
-          },
-          {
-            startQuest = "173313058531414975",
-            startPort = "QuestStart",
-            endQuest = "17618210071792019",
-            endPort = "In"
-          },
-          {
-            startQuest = "17618210071792019",
-            startPort = "Out",
-            endQuest = "17618210134332183",
-            endPort = "In"
           }
         },
         nodeData = {
@@ -1040,32 +1028,6 @@ return {
               StaticCreatorId = 1720201,
               GuideType = "M",
               GuidePointName = "Mechanism_1720201"
-            }
-          },
-          ["17618210071792019"] = {
-            key = "17618210071792019",
-            type = "GoToRegionNode",
-            name = "进入区域",
-            pos = {x = 1211.421052631579, y = 75.34210526315792},
-            propsData = {
-              RegionType = 2,
-              IsEnter = "Enter",
-              RegionId = 1017,
-              bGuideUIEnable = false,
-              GuideType = "P",
-              GuideName = ""
-            }
-          },
-          ["17618210134332183"] = {
-            key = "17618210134332183",
-            type = "SwitchMechanismStateNode",
-            name = "切换机关状态",
-            pos = {x = 1511.421052631579, y = 90.34210526315792},
-            propsData = {
-              StaticCreatorIdList = {},
-              ManualItemIdList = {173005},
-              StateId = 104011,
-              QuestId = 0
             }
           }
         },

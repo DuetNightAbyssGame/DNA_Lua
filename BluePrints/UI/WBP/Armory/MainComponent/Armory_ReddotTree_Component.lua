@@ -72,11 +72,11 @@ function Component:AddMainTabReddotListen()
   end)
   self:AddCharReddotReddotListen(function(Count)
     local NewCharNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.NewChar.Name)
-    local PromoteCharNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.PromoteChar.Name)
+    local HasPromoteCharReddot = self:CheckCharPromoteReddot(self.ComparedChar)
     local CharRewardNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.CharReward.Name)
     local UnlockableCharNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.UnlockableChar.Name)
     local IsNew = NewCharNode.Count > 0
-    local IsRed = PromoteCharNode.Count > 0 or CharRewardNode.Count > 0 or UnlockableCharNode.Count > 0
+    local IsRed = HasPromoteCharReddot or CharRewardNode.Count > 0 or UnlockableCharNode.Count > 0
     self:MainTabReddotFunc(ArmoryUtils.ArmoryMainTabNames.Char, IsNew, IsRed)
     if self.CurMainTab.Name == ArmoryUtils.ArmoryMainTabNames.Char then
       self.Btn_Selective:SetReddot(IsNew, IsRed)
@@ -177,10 +177,6 @@ function Component:AddSubTabReddotListen()
       local UnLockableCharNodeCache = ReddotManager.GetLeafNodeCacheDetail(DataMgr.ReddotNode.UnlockableChar.Name) or {}
       local HasReddot = 1 == CharRewardNodeCache[self.ComparedChar.CharId] or 1 == UnLockableCharNodeCache[self.ComparedChar.CharId]
       self:SubTabReddotFunc(ArmoryUtils.ArmorySubTabNames.Attribute, nil, HasReddot)
-    end, self.ComparedChar.CharId)
-    self:AddCharGradeReddotListen(function(self, Count)
-      local IsRed = self:CheckCharPromoteReddot(self.ComparedChar)
-      self:SubTabReddotFunc(ArmoryUtils.ArmorySubTabNames.Grade, nil, IsRed)
     end, self.ComparedChar.CharId)
     self:AddCharAppearanceReddotListen(function(self, Count)
       self:SubTabReddotFunc(ArmoryUtils.ArmorySubTabNames.Appearance, Count > 0)
@@ -405,30 +401,6 @@ function Component:RemoveCharAttributeReddotListen()
     return
   end
   self:_RemoveReddotListenerCommon(CommonConst.DataType.Char .. ArmoryUtils.ArmorySubTabNames.Attribute)
-end
-
-function Component:AddCharGradeReddotListen(Callback, CharId)
-  if self.IsPreviewMode or self.NoReddot then
-    return
-  end
-  self:RemoveCharGradeReddotListen()
-  local NodeName = CommonConst.DataType.Char .. ArmoryUtils.ArmorySubTabNames.Grade .. CharId
-  if not self.CharGradeNodeNames then
-    self.CharGradeNodeNames = {}
-  end
-  if not self.CharGradeNodeNames[NodeName] then
-    local LeafNodes = {}
-    LeafNodes[DataMgr.ReddotNode.PromoteChar.Name] = 1
-    ReddotManager.AddListener(NodeName, self, Callback, LeafNodes)
-    self.CharGradeNodeNames[NodeName] = 1
-  end
-end
-
-function Component:RemoveCharGradeReddotListen()
-  if self.IsPreviewMode or self.NoReddot then
-    return
-  end
-  self:_RemoveReddotListenerCommon(CommonConst.DataType.Char .. ArmoryUtils.ArmorySubTabNames.Grade)
 end
 
 function Component:AddCharAppearanceReddotListen(Callback, CharId)

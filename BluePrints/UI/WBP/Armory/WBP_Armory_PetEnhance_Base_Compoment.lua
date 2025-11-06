@@ -34,7 +34,6 @@ function M:Construct()
   self.Btn_Enhance:SetDefaultGamePadImg("X")
   self.Selective_Listing.bIsShowNavigateGuide = false
   self.SuccessToast.Text_Success:SetText(GText("Pet_Affix_Break_Success"))
-  self.Hint_Pet.Text_Hint_Positive:SetText(GText("Pet_LevelUp_LevelMax"))
 end
 
 function M:OnLoaded(Pet, CurEntryContent)

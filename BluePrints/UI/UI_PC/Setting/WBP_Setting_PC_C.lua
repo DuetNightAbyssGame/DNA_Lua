@@ -893,11 +893,11 @@ function WBP_Setting_PC_C:OnKeyDown(MyGeometry, InKeyEvent)
     self.NextTabIsLeft = false
     self.Tab_Set:TabToRight()
   elseif "A" == InKeyName and 1 == self.CurrentTab then
-    if 1 ~= self.MultiPlateIndex and self.Tab_MultiPlate and self.Tab_MultiPlate:GetVisibility() ~= UE4.ESlateVisibility.Collapsed then
+    if 1 ~= self.MultiPlateIndex and self.Tab_MultiPlate then
       self.Tab_MultiPlate:Handle_KeyEventOnPC(InKeyName)
       self.MultiPlateIndex = 1
     end
-  elseif "D" == InKeyName and 1 == self.CurrentTab and 2 ~= self.MultiPlateIndex and self.Tab_MultiPlate and self.Tab_MultiPlate:GetVisibility() ~= UE4.ESlateVisibility.Collapsed then
+  elseif "D" == InKeyName and 1 == self.CurrentTab and 2 ~= self.MultiPlateIndex and self.Tab_MultiPlate then
     self.Tab_MultiPlate:Handle_KeyEventOnPC(InKeyName)
     self.MultiPlateIndex = 2
   end
@@ -931,12 +931,12 @@ function WBP_Setting_PC_C:OnGamePadDown(InKeyName)
   end
   IsEventHandled = IsEventHandled or self.Tab_Set:Handle_KeyEventOnGamePad(InKeyName)
   if InKeyName == Const.GamepadLeftTrigger and 1 == self.CurrentTab then
-    if 1 ~= self.MultiPlateIndex and self.Tab_MultiPlate and self.Tab_MultiPlate:GetVisibility() ~= UE4.ESlateVisibility.Collapsed then
+    if 1 ~= self.MultiPlateIndex then
       self.Tab_MultiPlate:Handle_KeyEventOnGamePad(InKeyName)
       self.MultiPlateIndex = 1
     end
   elseif InKeyName == Const.GamepadRightTrigger and 1 == self.CurrentTab then
-    if 2 ~= self.MultiPlateIndex and self.Tab_MultiPlate and self.Tab_MultiPlate:GetVisibility() ~= UE4.ESlateVisibility.Collapsed then
+    if 2 ~= self.MultiPlateIndex then
       self.Tab_MultiPlate:Handle_KeyEventOnGamePad(InKeyName)
       self.MultiPlateIndex = 2
     end

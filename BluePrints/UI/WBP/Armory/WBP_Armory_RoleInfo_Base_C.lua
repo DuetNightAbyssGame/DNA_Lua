@@ -647,6 +647,12 @@ function M:OnUnlockBtnClicked()
     if nil == Resource2Data then
       local Data = DataMgr.Resource[Resource1.Id]
       UIManager(self):ShowUITip("CommonToastMain", string.format(GText("UI_Armory_LackUnlcokResource"), GText(Data and Data.ResourceName or "")))
+    elseif Resource2.Id == CommonConst.Coins.Coin4 and Resource2Data.Count < Resource2.NeedCount then
+      UIManager(self):ShowCommonPopupUI(100248, {
+        RightCallbackFunction = function()
+          PageJumpUtils:JumpToShopPage(CommonConst.GachaJumpToShopMainTabId, nil, nil, "Shop")
+        end
+      }, self)
     else
       local R1Data = DataMgr.Resource[Resource1.Id]
       local BuyCount = Resource1.NeedCount - Resource1.Count
@@ -671,14 +677,6 @@ function M:OnUnlockBtnClicked()
           GText(R1Data.ResourceName)
         },
         RightCallbackFunction = function()
-          if Resource2.Id == CommonConst.Coins.Coin4 and Resource2Data.Count < Resource2.NeedCount then
-            UIManager(self):ShowCommonPopupUI(100248, {
-              RightCallbackFunction = function()
-                PageJumpUtils:JumpToShopPage(CommonConst.GachaJumpToShopMainTabId, nil, nil, "Shop")
-              end
-            }, self)
-            return
-          end
           self.Parent:BlockAllUIInput(true)
           self.IsWatingForBuyResource = true
           Avatar:PurchaseShopItem(Resource1.ShopItemId, BuyCount, true)

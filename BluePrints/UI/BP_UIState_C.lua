@@ -246,9 +246,6 @@ function BP_UIState_C:ReceiveEnterState(StackAction)
       self:CameraToViewTarget(self.CurrentCameraViewTarget)
     elseif 0 == StackAction then
       rawset(self, "OriginalViewTarget", self:GetOwningPlayer():GetViewTarget())
-      if 1 == UIManager:StateCount() then
-        rawset(UIManager, "ViewTargetBeforeOpenSystem", self.OriginalViewTarget)
-      end
     end
   end
 end
@@ -257,11 +254,7 @@ function BP_UIState_C:ReceiveExitState(StackAction)
   local UIManager = UIManager(self)
   if UIManager:GetWidgetObjInTopStack() == self then
     if 1 == StackAction and 1 == UIManager:StateCount() then
-      if IsValid(rawget(UIManager, "ViewTargetBeforeOpenSystem")) then
-        self:CameraToViewTarget(UIManager.ViewTargetBeforeOpenSystem)
-      else
-        self:CameraToViewTarget(UGameplayStatics.GetPlayerCharacter(self, 0))
-      end
+      self:DoRecoverCamera()
     else
       self:SetCurrentCameraViewTarget()
     end

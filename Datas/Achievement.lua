@@ -5598,7 +5598,7 @@ return ReadOnly("Achievement", {
     AchievementReward = 7473,
     AchievementType = 1,
     TargetId = {1070305},
-    TargetProgress = 35
+    TargetProgress = 1
   },
   [140010101] = {
     AchievementDescribe = "UI_Achievement_Des_1400101",

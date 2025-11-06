@@ -164602,6 +164602,11 @@ return ReadOnly("Talk_SoundEditor", {
     SelectKey = "voice_jp_story_1002_110123_1B9171F6",
     SoundLength = 8480
   },
+  voice_jp_story_1002_110123_1B917220 = {
+    ProgrammerSoundPath = "event:/voice/jp/story/1002",
+    SelectKey = "voice_jp_story_1002_110123_1B917220",
+    SoundLength = 3040
+  },
   voice_jp_story_1002_110124_1B91820A = {
     ProgrammerSoundPath = "event:/voice/jp/story/1002",
     SelectKey = "voice_jp_story_1002_110124_1B91820A",

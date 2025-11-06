@@ -65,10 +65,9 @@ end
 function Component:_OnPropChangeResources(Keys)
   local ResourceId = Keys and Keys[1]
   if ResourceId then
-    local CharIds = CharModel:GetCharIdsByCardLevelResource(ResourceId, self)
-    for CharId, value in pairs(CharIds or {}) do
-      EventManager:FireEvent(EventID.OnCharCardLevelResourcesChanged, ResourceId, CharId, CharModel:GetUuidByCharId(CharId))
-    end
+    local CharUuid = CharModel:GetUuidByCardLevelResource(ResourceId)
+    local CharId = CharModel:GetCharIdByCardLevelResource(ResourceId)
+    EventManager:FireEvent(EventID.OnCharCardLevelResourcesChanged, ResourceId, CharId, CharUuid)
   end
 end
 

@@ -294,7 +294,7 @@ function WBP_GameStartMainPage_C:OnLogout()
     GWorld.NetworkMgr:Disconnect()
   end
   if not GWorld.IsDev then
-    self.ServerInfo = nil
+    self:SetServerInfo(nil)
   end
   self.UID:HideUid()
   self.UID:SetUid()
@@ -381,7 +381,7 @@ function WBP_GameStartMainPage_C:OnClickServerSelect()
         return
       end
       if not GWorld.GetAvatarInfos[ServerInfo.hostnum] then
-        ServerInfos = {}
+        local ServerInfos = {}
         for k, v in pairs(self.ServerInfos) do
           if v.area == ServerInfo.area then
             ServerInfos[k] = v
@@ -389,7 +389,7 @@ function WBP_GameStartMainPage_C:OnClickServerSelect()
         end
         ServerInfo = self:RandomServerInfo(ServerInfos)
       end
-      self.ServerInfo = ServerInfo
+      self:SetServerInfo(ServerInfo)
       self.VB_ServerLocation:SetVisibility(ESlateVisibility.Visible)
       self.Text_ServerLoaction:SetText(GText(ServerInfo.area))
       self.Text_OverSeaSeverTitle:SetText(GText(ServerInfo.area))
@@ -399,7 +399,7 @@ function WBP_GameStartMainPage_C:OnClickServerSelect()
 end
 
 function WBP_GameStartMainPage_C:RandomServerInfo(InServerInfos)
-  if not InServerInfos or not next(InServerInfos) then
+  if not InServerInfos or 0 == CommonUtils.TableLength(InServerInfos) then
     return nil
   end
   local ServerList = {}
@@ -409,6 +409,7 @@ function WBP_GameStartMainPage_C:RandomServerInfo(InServerInfos)
     end
   end
   if 0 == #ServerList then
+    DebugPrint("WBP_GameStartMainPage_C:RandomServerInfo No Recommend Server, Use All Servers")
     for _, ServerInfo in pairs(InServerInfos) do
       table.insert(ServerList, ServerInfo)
     end
@@ -439,15 +440,21 @@ end
 function WBP_GameStartMainPage_C:OnGetAllAvatars()
   DebugPrint("OnGetAllAvatars")
   self:ResetGetAllAvatarsBlock()
-  self.ServerInfo = nil
+  self:SetServerInfo(nil)
+  self.RecommandServerInfo = nil
   local CachedServerInfo = EMCache:Get("CacheServerInfo")
   if CachedServerInfo and CachedServerInfo.ServerInfo and CachedServerInfo.SdkUserId == HeroUSDKUtils.GetUserInfo().sdkUserId then
+    DebugPrint("OnGetAllAvatars Use Cache ServerInfo", CachedServerInfo.ServerInfo.hostnum, CachedServerInfo.SdkUserId)
     for _, ServerInfo in pairs(self.ServerInfos) do
       if ServerInfo.hostnum == CachedServerInfo.ServerInfo.hostnum then
-        self.ServerInfo = ServerInfo
+        self:SetServerInfo(ServerInfo)
         break
       end
     end
+  end
+  if self.ServerInfo and not GWorld.GetAvatarInfos[self.ServerInfo.hostnum] then
+    DebugPrint("OnGetAllAvatars Cache ServerInfo Invalid, Clear it")
+    self:SetServerInfo(nil)
   end
   if AHotUpdateGameMode.IsGlobalPak() then
     self.Panel_OverSeaSeverSelect:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -463,7 +470,8 @@ function WBP_GameStartMainPage_C:OnGetAllAvatars()
       if MaxLevelHostnum then
         for _, ServerInfo in pairs(self.ServerInfos) do
           if ServerInfo.hostnum == MaxLevelHostnum then
-            self.ServerInfo = ServerInfo
+            self:SetServerInfo(ServerInfo)
+            DebugPrint("OnGetAllAvatars Select ServerInfo by Max Level Avatar Hostnum", self.ServerInfo.hostnum)
             break
           end
         end
@@ -480,7 +488,8 @@ function WBP_GameStartMainPage_C:OnGetAllAvatars()
               end
             end
           end
-          self.ServerInfo = self:RandomServerInfo(ServerInfos)
+          self:SetServerInfo(self:RandomServerInfo(ServerInfos))
+          DebugPrint("OnGetAllAvatars Select ServerInfo by RegionCode", RegionCode, self.ServerInfo and self.ServerInfo.hostnum or "nil")
         end
         if not self.ServerInfo then
           local ServerList = {}
@@ -498,7 +507,8 @@ function WBP_GameStartMainPage_C:OnGetAllAvatars()
                 table.insert(NewServerInfos, ServerInfo)
               end
             end
-            self.ServerInfo = self:RandomServerInfo(NewServerInfos)
+            self:SetServerInfo(self:RandomServerInfo(NewServerInfos))
+            DebugPrint("OnGetAllAvatars Select ServerInfo by Alphabetical Order", self.ServerInfo and self.ServerInfo.hostnum or "nil")
           end
         end
       end
@@ -512,12 +522,14 @@ function WBP_GameStartMainPage_C:OnGetAllAvatars()
     self.VB_ServerLocation:SetVisibility(ESlateVisibility.Visible)
     self.Text_ServerLoaction:SetText(GText(self.ServerInfo.area))
     self.Text_OverSeaSeverTitle:SetText(GText(self.ServerInfo.area))
-  elseif not next(GWorld.GetAvatarInfos) then
-    self.ServerInfo = self:RandomServerInfo(self.ServerInfos)
+  elseif 0 == CommonUtils.TableLength(GWorld.GetAvatarInfos) then
+    DebugPrint("OnGetAllAvatars No Avatar, Random Select ServerInfo")
+    self:SetServerInfo(self:RandomServerInfo(self.ServerInfos))
   elseif not self.ServerInfo then
     for _, Avatar in pairs(GWorld.GetAvatarInfos) do
       if self.ServerInfos[Avatar.Hostnum] then
-        self.ServerInfo = self.ServerInfos[Avatar.Hostnum]
+        self:SetServerInfo(self.ServerInfos[Avatar.Hostnum])
+        DebugPrint("OnGetAllAvatars Select ServerInfo by Avatar Hostnum", self.ServerInfo.hostnum)
         break
       end
     end
@@ -616,6 +628,7 @@ function WBP_GameStartMainPage_C:GetDefaultServerInfo()
         self.ServerInfo.port = v.port
         break
       end
+      self:SetServerInfo(self.ServerInfo)
     end
   end
 end
@@ -745,7 +758,7 @@ function WBP_GameStartMainPage_C:OnHeroSDKLogin(Result, UserInfoStr, Msg)
   self.UID:HideUid()
   self.UID:SetUid()
   if not GWorld.IsDev then
-    self.ServerInfo = nil
+    self:SetServerInfo(nil)
   end
   local Json = require("rapidjson")
   if 0 == Result then
@@ -791,8 +804,7 @@ function WBP_GameStartMainPage_C:OnHeroSDKLogin(Result, UserInfoStr, Msg)
         end
         assert(ExamineServerInfo, "ExamineServerInfo is nil, ChannelId: " .. HeroUSDKSubsystem(self):GetChannelId() .. " MirrorChannelId: " .. MirrorChannelId)
         local HostNum = ExamineServerInfo.HostNum
-        self.ServerInfo = {}
-        self.ServerInfo.hostnum = HostNum
+        self:SetServerInfo({hostnum = HostNum})
       elseif GWorld.IsDev then
         self:LoadLoginInfo()
       else
@@ -903,8 +915,7 @@ function WBP_GameStartMainPage_C:EMLogin()
       local Ip = ExamineServerInfo.IP
       local Port = ExamineServerInfo.Port
       DebugPrint("ExamineServerInfo", HostNum, Ip, Port)
-      self.ServerInfo = {}
-      self.ServerInfo.hostnum = HostNum
+      self:SetServerInfo({hostnum = HostNum})
       GWorld.NetworkMgr:ConnectServer(HostNum, Ip, Port, self.AccountId, self.IsQuickLogin)
       TimerFunc()
     else
@@ -994,13 +1005,13 @@ end
 function WBP_GameStartMainPage_C:VerifyServerInfo()
   if self.Widget_ServerSelect ~= nil and self.Widget_ServerSelect.IsSelectionChanged == true then
     self.Widget_ServerSelect.IsSelectionChanged = false
-    self.ServerInfo = {
+    self:SetServerInfo({
       hostnum = self.Widget_ServerSelect.SelectedServer.HostId,
       name = self.Widget_ServerSelect.SelectedServer.Name,
       area = self.Widget_ServerSelect.SelectedServer.Area,
       ip = self.Widget_ServerSelect.SelectedServer.Ip,
       port = self.Widget_ServerSelect.SelectedServer.Port
-    }
+    })
     self.Text_Server_Select:SetText(self.ServerInfo.hostnum .. " " .. self.ServerInfo.name)
     self:AddTimer(0.01, self.OpenAnnouncementOnce, false, 0, nil, true, true)
   end
@@ -1060,13 +1071,13 @@ function WBP_GameStartMainPage_C:LoadLoginInfo(bFirst)
     self.EditableText_Account:SetText(LoginInfo.AccountId)
     if LoginInfo.name and LoginInfo.name and LoginInfo.hostnum then
       self.Text_Server_Select:SetText(LoginInfo.hostnum .. " " .. LoginInfo.name)
-      self.ServerInfo = {
+      self:SetServerInfo({
         hostnum = LoginInfo.hostnum,
         area = LoginInfo.area,
         name = LoginInfo.name,
         ip = LoginInfo.ip,
         port = LoginInfo.port
-      }
+      })
       self:ChangeEnterMode(nil, LoginInfo.EnterMode)
     end
     if not UE4.UUCloudGameInstanceSubsystem.IsCloudGame() then
@@ -1082,13 +1093,13 @@ function WBP_GameStartMainPage_C:LoadLoginInfo(bFirst)
     self:ChangePlatformMode()
     if LoginInfo and nil ~= LoginInfo.name and LoginInfo.name ~= "" then
       self.Text_Server_Select:SetText(LoginInfo.hostnum .. " " .. LoginInfo.name)
-      self.ServerInfo = {
+      self:SetServerInfo({
         hostnum = LoginInfo.hostnum,
         area = LoginInfo.area,
         name = LoginInfo.name,
         ip = LoginInfo.ip,
         port = LoginInfo.port
-      }
+      })
       self:ChangeEnterMode(nil, LoginInfo.EnterMode)
     else
       self:GetDefaultServerInfo()
@@ -1863,8 +1874,12 @@ function WBP_GameStartMainPage_C:LoginToTargetServer(TargetHostNum)
     DebugPrint("LoginToTargetServer TargetServerInfo is nil")
     return
   end
-  self.ServerInfo = TargetServerInfo
+  self:SetServerInfo(TargetServerInfo)
   self:EMLogin()
+end
+
+function WBP_GameStartMainPage_C:SetServerInfo(SInfo)
+  self.ServerInfo = SInfo
 end
 
 AssembleComponents(WBP_GameStartMainPage_C)

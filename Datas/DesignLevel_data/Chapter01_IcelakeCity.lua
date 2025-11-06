@@ -903,7 +903,7 @@ return {
     ["1191201"] = {
       CreatorId = 1191201,
       UnitType = "Npc",
-      UnitId = 100315
+      UnitId = 100355
     },
     ["1191202"] = {
       CreatorId = 1191202,
@@ -1892,8 +1892,8 @@ return {
     },
     ["1192008"] = {
       CreatorId = 1192008,
-      UnitType = "Mechanism",
-      UnitId = 39046
+      UnitType = "Npc",
+      UnitId = 200009
     },
     ["1191948"] = {
       CreatorId = 1191948,
@@ -2009,16 +2009,6 @@ return {
       CreatorId = 1192040,
       UnitType = "Mechanism",
       UnitId = 390362
-    },
-    ["1192047"] = {
-      CreatorId = 1192047,
-      UnitType = "Npc",
-      UnitId = 200009
-    },
-    ["1192059"] = {
-      CreatorId = 1192059,
-      UnitType = "Mechanism",
-      UnitId = 1
     },
     ["1191854"] = {
       CreatorId = 1191854,
@@ -5111,15 +5101,6 @@ return {
         UnitType = "Drop",
         UnitId = 2000064,
         RarelyId = 7010113
-      }
-    },
-    ["7010114"] = {
-      AutoReset = 0,
-      ["1192060"] = {
-        CreatorId = 1192060,
-        UnitType = "Drop",
-        UnitId = 29002,
-        RarelyId = 7010114
       }
     }
   },

@@ -2270,11 +2270,6 @@ return {
       UnitType = "Mechanism",
       UnitId = 39046
     },
-    ["1241173"] = {
-      CreatorId = 1241173,
-      UnitType = "Mechanism",
-      UnitId = 1
-    },
     ["1241103"] = {
       CreatorId = 1241103,
       UnitType = "Phantom",
@@ -2620,10 +2615,10 @@ return {
       UnitType = "Mechanism",
       UnitId = 1130128
     },
-    ["1241164"] = {
-      CreatorId = 1241164,
+    ["1240665"] = {
+      CreatorId = 1240665,
       UnitType = "Npc",
-      UnitId = 2000062
+      UnitId = 200006
     },
     ["1240669"] = {
       CreatorId = 1240669,

@@ -179,7 +179,7 @@ function Component:AddFinishAvatar(ExtraInfo, AvatarEid, RealFinishAvatar, Avata
   ExtraInfo[AvatarEid].PlayerTime = PlayerTime
   ExtraInfo[AvatarEid].CombatStatistics = PlayerController and PlayerController:GetCombatStatistics() or {}
   ExtraInfo[AvatarEid].CustomInfo = GameMode:TriggerDungeonComponentFun("CustomFinishInfo", AvatarStr, IsWin) or {}
-  ExtraInfo[AvatarEid].PlayerInfo = self.PersistPlayerInfos[AvatarStr] or self.AvatarInfos[AvatarStr].PlayerInfo
+  ExtraInfo[AvatarEid].PlayerInfo = self.PersistPlayerInfos[AvatarStr] and self.PersistPlayerInfos[AvatarStr].PlayerInfo
   ExtraInfo[AvatarEid].bInactive = bInactive
   rawset(self.HasLeaveAvatars, AvatarStr, IsWin)
   self.CacheRewards[AvatarStr] = nil

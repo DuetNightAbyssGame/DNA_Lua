@@ -194,10 +194,11 @@ function M:InitResourceNeeded()
       ItemType = CommonConst.ItemType.Resource,
       Rarity = ResourceConf.Rarity,
       IsShowDetails = true,
-      NeedCount = Value,
-      ShopItemId = ShopItemId,
-      CountTextWhite = true
+      ShopItemId = ShopItemId
     }
+    if Value <= FakeContent.Count then
+      FakeContent.Count = Value
+    end
     local Item = UIManager(self):_CreateWidgetNew("ComItemUniversalM")
     Item:BindEvents(self, {
       OnMenuOpenChanged = self.OnTipsOpenChanged
@@ -229,6 +230,14 @@ function M:InitResourceNeeded()
           Price = ShopItemData2.Price,
           IsShowDetails = true
         }
+        local AddKey = UIManager(self):_CreateWidgetNew("ArmoryAddKey")
+        self.Details.HB_Item:AddChild(AddKey)
+        local Slot = UE4.UWidgetLayoutLibrary.SlotAsWrapBoxSlot(AddKey)
+        if Slot then
+          Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Center)
+        end
+        local ItemNeed = UIManager(self):_CreateWidgetNew("ComItemUniversalM")
+        self.Details.HB_Item:AddChild(ItemNeed)
         if NeedCount <= Resource2.Count then
           Res = {
             2,
@@ -236,13 +245,16 @@ function M:InitResourceNeeded()
             NeedContent
           }
         else
+          NeedContent.CountTextRed = true
           Res = {
             3,
             FakeContent,
             NeedContent
           }
         end
+        ItemNeed:Init(NeedContent)
       else
+        FakeContent.CountTextRed = true
         Res = {
           4,
           nil,
@@ -313,7 +325,7 @@ function M:OnClickBTN(Type, Resource1, Resource2)
       local CallServerFunc = Avatar.UpCharGradeLevel
       CallServerFunc(Avatar, Char.Uuid, tonumber(Char.GradeLevel))
     end
-  elseif 2 == Type or 3 == Type then
+  elseif 2 == Type then
     local Avatar = GWorld:GetAvatar()
     local Resource1Data = {}
     Resource1Data.Count = Avatar.Resources[Resource1.Id] and Avatar.Resources[Resource1.Id].Count or 0
@@ -345,16 +357,13 @@ function M:OnClickBTN(Type, Resource1, Resource2)
         Avatar:PurchaseShopItem(Resource1.ShopItemId, BuyCount, true)
       end
     }
-    if 3 == Type then
-      function Params.RightCallbackFunction()
-        UIManager(self):ShowCommonPopupUI(100248, {
-          RightCallbackFunction = function()
-            PageJumpUtils:JumpToShopPage(CommonConst.GachaJumpToShopMainTabId, nil, nil, "Shop")
-          end
-        }, self)
-      end
-    end
     UIManager(self):ShowCommonPopupUI(100247, Params, self)
+  elseif 3 == Type then
+    UIManager(self):ShowCommonPopupUI(100248, {
+      RightCallbackFunction = function()
+        PageJumpUtils:JumpToShopPage(CommonConst.GachaJumpToShopMainTabId, nil, nil, "Shop")
+      end
+    }, self)
   end
 end
 

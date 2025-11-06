@@ -42,7 +42,7 @@ function M:OnBuffsChanged(Buffs)
   }
   local BaonuBuff
   for _, Buff in pairs(Buffs) do
-    if IsValid(Buff) and Buff.BuffId == self.BuffId then
+    if Buff.BuffId == self.BuffId then
       NewBuffState.Layer = Buff.Layer
       NewBuffState.LastTime = Buff.LastTime
       NewBuffState.IsCountDown = Buff.LastTime >= 0

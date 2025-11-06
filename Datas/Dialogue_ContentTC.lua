@@ -8918,7 +8918,7 @@ CameraMoveTo{_delay{1.5},TargetPosition{"1180.628296,-769.296875,95.171875,0.000
           VoiceName = "voice/$Locale$/story/1003/100306/191C5044"
         },
         [10030619] = {
-          ContentTC = "……既然你說了「又」，那就說明這幾天你已經應付過她很多次了。交給你了，奧特賽德，加油，你可以的。",
+          ContentTC = "……既然你說了「又」，那就說明這幾天已經應付過她很多次了。交給你了，奧特賽德，加油，你可以的。",
           DialogueId = 10030619,
           GUID = "191C506E",
           LookAt = {
@@ -9143,7 +9143,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Shock_Start"},Duration{1}}
         },
         [10030703] = {
           Camera = "29.417786,145.418945,56.080078,0.000265,19.004721,-80.540367,35.000011,219.87709,false,Manual,3.0",
-          ContentTC = "不用。帝國軍律第142條規定軍人執勤期間不能飲酒，而且我也沒有這個習慣。",
+          ContentTC = "不用。帝國軍律第142條規定軍人執勤期間不能喝酒，而且我也沒有這個習慣。",
           DialogueId = 10030703,
           FacialId = {
             [1] = "200002:None",
@@ -9570,7 +9570,7 @@ MoveTo{ActorId{100304},TargetPoint{"lise_03_leave"},MoveSpeed{90},Visibility{"Sh
         },
         [10030802] = {
           Camera = "40.330078,-14.789795,129.912109,-0.000122,3.401612,100.797935,35.000019,1.5,false,DoNotOverride,1.2",
-          ContentTC = "嗯，我平時累了的話，就會來這裡散心。這裡一般沒什麼人，適合聊正事。",
+          ContentTC = "嗯，我平常累了的話，就會來這裡散心。這裡一般沒什麼人，適合聊正事。",
           DialogueId = 10030802,
           FacialId = {
             [1] = "100304:Think01"
@@ -10159,7 +10159,7 @@ SEQ{CameraMoveTo{_delay{5},TargetPosition{"24.785156,58.79248,123.002441,-0.0001
         },
         [10031010] = {
           Camera = "120.47168,-462.604004,186.308594,0.000047,-12.402864,110.025742,35.0,941.904541,false,DoNotOverride,1.903106",
-          ContentTC = "（把這個信息告訴黎瑟吧。）",
+          ContentTC = "（把這個訊息告訴黎瑟吧。）",
           DetectiveQuestionId = 1001,
           DialogueId = 10031010,
           FinalCamera = "120.47168,-462.604004,186.308594,0.000047,-10.402828,110.02562,35.0,941.904541,false,DoNotOverride,1.903106",
@@ -12048,7 +12048,7 @@ CameraMoveTo{_delay{0},TargetPosition{"-68.912094,-67.938797,184.066406,0.000075
         },
         [10032210] = {
           Camera = "-82.898415,-30.874966,169.933594,0.000135,-14.003205,122.032799,45.000011,284.991394,false,DoNotOverride,3.584893",
-          ContentTC = "好吧，看來是我太敏感了，不好意思啊。",
+          ContentTC = "衛戍部隊……好吧，看來是我太敏感了，不好意思啊。",
           DialogueId = 10032210,
           FacialId = {
             [1] = "100329:CM_Idle"
@@ -12635,7 +12635,7 @@ CameraMoveTo{_delay{0},TargetPosition{"-68.912094,-67.938797,184.066406,0.000075
         },
         [10032509] = {
           Camera = "126.557007,23.318359,114.344238,0.00044,4.800209,-130.965836,30.000008,100000.0,false,DoNotOverride,22.0",
-          ContentTC = "喔呦，小矮子是不是很會跳芭蕾啊，剛才在戲院就該讓你來一手的。",
+          ContentTC = "喔呦，小矮子是不是很會跳芭蕾啊，剛才在戲院該讓你來一手的。",
           DialogueId = 10032509,
           FacialId = {
             [1] = "200021:Smile01"
@@ -16102,7 +16102,7 @@ LookAt{LookAtDescription{"200021:p(cp2fixsimple23_aoteWatch2)"}}
         },
         [10033905] = {
           Camera = "33.217773,125.854919,134.521484,0.000093,2.393059,111.061989,35.000015,100000.0,false,DoNotOverride,22.0",
-          ContentTC = "你來了，跟那群內城士兵說清楚情況了？",
+          ContentTC = "你來了，跟那群內城士兵說清楚狀況了？",
           DialogueId = 10033905,
           FinalCamera = "17.6875,121.21051,134.521484,0.000088,1.993083,104.461479,35.000015,100000.0,false,DoNotOverride,22.0",
           GUID = "191E6B8A",
@@ -16836,7 +16836,7 @@ CameraMoveTo{_delay{0},TargetPosition{"-150.234375,-8.808838,0.62915,0.002212,35
         },
         [10033948] = {
           Camera = "127.84375,-20.15332,112.732666,0.002085,15.912045,-140.45549,30.000013,108.648788,false,Manual,3.232587",
-          ContentTC = "對了，第六軍團還是蠻辛苦的，長官說入伍前三年都是封閉式訓練，回不了家……如果姐姐想我的話，就經常看看內城那盞燈吧。",
+          ContentTC = "對了，第六軍團還是蠻辛苦的，長官說入伍前三年都是封閉式訓練，回不了家……如果姐姐想我的話，就常常看看內城那盞燈吧。",
           DialogueId = 10033948,
           FinalCamera = "133.529297,-27.189453,112.732666,0.002083,15.91197,-145.655502,30.000013,108.648788,false,Manual,3.232587",
           GUID = "191E7298",
@@ -16926,7 +16926,7 @@ PlayAnimation{_delay{5},ActorId{100358},AnimationId{"Explain02_End"},Duration{2}
         [10033954] = {
           Camera = "22.037598,80.328857,85.623047,0.000103,13.600046,166.199295,28.0,226.057693,false,DoNotOverride,3.159981",
           CameraBlendCurve = "easeOutQuad",
-          ContentTC = "黎瑟長官！你醒啦！你、你怎麼在哭？做惡夢了嗎？",
+          ContentTC = "黎瑟長官！你醒啦！你、你怎麼在哭？做了惡夢嗎？",
           DialogueId = 10033954,
           FacialId = {
             [1] = "200002:Happy01"
@@ -17597,7 +17597,7 @@ LookAt{_delay{2.1},LookAtDescription{"100360:n(100001)"}},
         },
         [10034207] = {
           Camera = "-83.59375,619.290039,74.404297,0.000918,8.607185,-95.991829,35.000008,527.224426,false,DoNotOverride,2.038203",
-          ContentTC = "她不想再看到任何人死在穢獸手上，也許正因為如此她才會加入衛戍部隊吧。",
+          ContentTC = "她不想再看到任何人死在穢獸手上，也許正因為此她才會加入衛戍部隊吧。",
           DialogueId = 10034207,
           FinalCamera = "-65.59375,616.701172,74.404297,0.000924,8.607192,-98.191681,35.000008,527.224426,false,DoNotOverride,2.038203",
           GUID = "191E9D16",
@@ -17669,7 +17669,7 @@ LookAt{_delay{2.1},LookAtDescription{"100360:n(100001)"}},
         },
         [10034212] = {
           Camera = "-278.289062,544.645508,272.761719,0.000823,-24.392176,-64.799492,35.000008,527.224426,false,DoNotOverride,2.038203",
-          ContentTC = "我只是……下意識地找了個藉口，想讓自己心裡好受些。",
+          ContentTC = "我只是……下意識找了個藉口，想讓自己心裡好受些。",
           DialogueId = 10034212,
           FacialId = {
             [1] = "100001:Unhappy02"
@@ -18098,7 +18098,7 @@ CameraMoveTo{TargetPosition{"127.391602,18.329529,141.330078,0.000104,2.00229,-1
         },
         [10034309] = {
           Camera = "55.936523,212.618408,73.029297,0.000063,10.604968,-88.343674,22.000006,243.305359,false,Manual,3.0",
-          ContentTC = "她長著銀色的長髮，紅色的眼睛。她很漂亮，但總是把自己打扮得黑漆漆的。",
+          ContentTC = "她長著銀色的頭髮，紅色的眼睛。她很漂亮，但總是把自己打扮得黑漆漆的。",
           DialogueId = 10034309,
           FinalCamera = "55.936523,212.618408,73.029297,0.000058,11.004971,-88.943642,25.0,243.305359,false,Manual,3.0",
           GUID = "191EADD2",
@@ -18155,7 +18155,7 @@ CameraMoveTo{TargetPosition{"-1.558594,62.309326,135.460938,0.000113,-4.393983,-
         },
         [10034312] = {
           Camera = "126.6875,33.446411,128.46875,0.000021,9.599721,-150.740402,20.0,71.86837,false,Manual,5.0",
-          ContentTC = "不用了！只要告訴我她現在在哪裡，是否平安就好，剩下的交給我。",
+          ContentTC = "不用了！只要告訴我她現在在哪裡，是否平安就好，剩下的就交給我。",
           DialogueId = 10034312,
           FacialId = {
             [1] = "100001:Happy01"
@@ -19983,7 +19983,7 @@ PlayAnimation{_delay{0.5},ActorId{100304},AnimationId{"Talk02_Start"},Duration{1
         },
         [10034702] = {
           Camera = "-2.082031,-139.125,131.305664,0.000139,2.002461,72.988098,25.0,169.606277,false,Manual,3.0",
-          ContentTC = "讓我看看……麵包、豆子、北風莓……還有新鮮的魚！謝謝謝謝！嗚嗚……這幾天連垃圾箱都被掏空了，要不是你肯幫忙，真不知道大家要怎麼挨過去。",
+          ContentTC = "讓我看看……面包、豆子、北風莓……還有新鮮的魚！謝謝謝謝！嗚嗚……這幾天連垃圾箱都被掏空了，要不是你肯幫忙，真不知道大家要怎麼挨過去。",
           DialogueId = 10034702,
           FacialId = {
             [1] = "200011:Sad02",
@@ -21493,7 +21493,7 @@ PlayAnimation{_delay{1},ActorId{200022},AnimationId{"Explain02_Start"},Duration{
         },
         [10035024] = {
           Camera = "-66.293457,-257.270508,156.422119,-15.042948,-17.819818,-43.800907,47.823811,29.010689,false,Manual,8.0",
-          ContentTC = "結束了。別讓我再重複第二次。",
+          ContentTC = "結束了。別再讓我重複第二次。",
           DialogueId = 10035024,
           GUID = "191F2320",
           NextDialogue = 10035025,
@@ -22052,7 +22052,7 @@ LookAt{_delay{4.5},LookAtDescription{"100304:n(100001)"}},
         },
         [10035226] = {
           Camera = "-767.976807,-468.421631,1021.622314,0.000127,-46.820312,30.559282,35.0,1471.360107,false,Manual,22.0",
-          ContentTC = "你還記得我說過一件事嗎？我的父母是被穢獸殺害的，因為他們收留了一名偽裝成正常人的穢蝕者……",
+          ContentTC = "你還記得我說過一件事嗎？我的父母是被穢獸殺害的，因為他們收留了一名偽裝成常人的穢蝕者……",
           DialogueId = 10035226,
           FinalCamera = "-783.698853,-437.067078,1022.494141,0.000135,-46.820293,30.359089,35.0,1471.360107,false,Manual,22.0",
           GUID = "191F4444",
@@ -22388,7 +22388,7 @@ PlayAnimation{ActorId{200021},AnimationId{"Angry01_Start"},Duration{1}},
         },
         [10035242] = {
           Camera = "-228.074402,-7.094055,122.501221,0.000179,0.777364,12.810387,36.000011,142.203568,false,Manual,8.0",
-          ContentTC = "多虧了他們兩個，我這會兒感覺好多了。我們也走吧。",
+          ContentTC = "【輕笑】多虧了他們兩個，我這會兒感覺好多了。我們也走吧。",
           DialogueId = 10035242,
           FacialId = {
             [1] = "100304:Ahaha01",
@@ -22478,7 +22478,7 @@ TurnTo{TurnToDescription{"200002:p(-120)"}}
         },
         [10035247] = {
           Camera = "-2.861729,-18.827354,135.044922,0.000094,1.196997,102.249947,30.000008,100000.0,false,Manual,22.0",
-          ContentTC = "但下水道密室的線索來看，兇手和歌劇還是有著千絲萬縷的聯繫。",
+          ContentTC = "但下水道密室的線索來看，兇手和歌劇還是有千絲萬縷的關係。",
           DialogueId = 10035247,
           FacialId = {
             [1] = "100001:Think01"
@@ -25833,7 +25833,7 @@ SetLocation{ActorId{200021},TargetPoint{"aoge_57"},Visibility{"Show"}}
         [10036309] = {
           Camera = "47.290932,-282.748688,98.773438,0.000223,12.987468,99.416245,20.0,100000.0,false,Manual,22.0",
           CameraBlendCurve = "easeInOutQuad",
-          ContentTC = "我不是說過如無必要減少碰面嗎？現在十三軍團也撤走了，我們得盡快完成此前的約定才是。",
+          ContentTC = "我不是說過如無必要減少碰面嗎？現在十三軍團也撤走了，我們得盡快完成先前的約定才是。",
           DialogueId = 10036309,
           FinalCamera = "153.951035,-298.556122,92.078125,-2.0,9.185791,119.818588,20.0,100000.0,false,Manual,22.0",
           GUID = "191FF5F2",
@@ -25940,7 +25940,7 @@ SetLocation{ActorId{200021},TargetPoint{"aoge_57"},Visibility{"Show"}}
           VoiceName = "voice/$Locale$/story/1003/100363/191FF7C0"
         },
         [10036321] = {
-          ContentTC = "我*，這槍聲，演得太真了吧！",
+          ContentTC = "我*【我草】，這槍聲，演得太真了吧！",
           DialogueId = 10036321,
           GUID = "191FF7EA",
           NextDialogue = 10036322,
@@ -26617,7 +26617,7 @@ SetLocation{ActorId{100371},TargetPoint{"BP_NewTargetPoint_fix61"},Visibility{"S
         },
         [10036526] = {
           Camera = "428.052734,-715.745728,114.421875,0.000065,5.591596,-177.37323,50.000008,328.959259,false,Manual,2.8",
-          ContentTC = "這種粉末，抓捕行動那天，琳恩射出的最後一發子彈也有。所以奧特賽德就提出了一種假設……",
+          ContentTC = "這種粉末，抓捕行動那天，琳恩射出的最後一發子彈也有。所以奧特賽德就提出了一個假設……",
           DialogueId = 10036526,
           FinalCamera = "428.052734,-715.745728,114.421875,0.000065,8.791054,-174.572998,50.000008,328.959259,false,Manual,2.8",
           GUID = "1920198C",
@@ -27139,7 +27139,7 @@ SetLocation{ActorId{100304},TargetPoint{"lise_61_01"},Visibility{"Show"}}
         },
         [10036557] = {
           Camera = "129.630859,-634.838989,126.636719,0.000079,7.986567,19.837446,35.000011,100000.0,false,Manual,22.0",
-          ContentTC = "黎瑟說過，布魯斯不喜歡那首歌的歌詞，所以自作主張把詞改掉了，改成了一個幸福的結局。而你唱的「深眠於凍土之下」，應該是原本的悲傷結局。",
+          ContentTC = "黎瑟說過，布魯斯不喜歡那首歌的歌詞，所以自作主張把字改掉了，改成了一個幸福的結局。而你唱的「深眠於凍土之下」，應該是原本的悲傷結局吧。",
           DialogueId = 10036557,
           GUID = "19201EA2",
           LookAt = {
@@ -27182,7 +27182,7 @@ SetLocation{ActorId{100304},TargetPoint{"lise_61_01"},Visibility{"Show"}}
         },
         [10036560] = {
           Camera = "-103.888672,-805.379944,258.925781,0.000151,-21.420866,25.25528,35.000011,436.775146,false,Manual,2.8",
-          ContentTC = "此前我也一直想不通，我們大家看到的兇手明明喪失了理智，但你為什麼如此冷靜？冷靜到可以清晰地和我們講述那麼多往事？",
+          ContentTC = "此前我也一直想不通，我們大家看到的兇手明明喪失了理智，但你為什麼如此冷靜？冷靜到可以清楚地和我們講述那麼多往事？",
           DialogueId = 10036560,
           GUID = "19201F20",
           GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_10036560.T_Story_Recall_10036560'",
@@ -27294,7 +27294,7 @@ SetLocation{ActorId{100304},TargetPoint{"lise_61_01"},Visibility{"Show"}}
         },
         [10036568] = {
           Camera = "279.453125,-473.799011,108.164062,0.000056,14.180913,-120.722359,35.000008,698.253357,false,Manual,4.0",
-          ContentTC = "是的，布魯斯已經不在了。但他不想，他的姐姐知道，是誰殺了自己……",
+          ContentTC = "是的，布魯斯不在了。但他不想，他的姐姐知道，是誰殺了自己……",
           DialogueId = 10036568,
           GUID = "19202070",
           LookAt = {
@@ -27311,7 +27311,7 @@ SetLocation{ActorId{100304},TargetPoint{"lise_61_01"},Visibility{"Show"}}
         },
         [10036569] = {
           Camera = "279.453125,-473.799011,108.164062,0.000056,14.180913,-120.722359,35.000008,698.253357,false,Manual,4.0",
-          ContentTC = "你，很聰明。如果那時，我們，和你一樣……算了，哪有如果。",
+          ContentTC = "你，很聰明。如果那時，我們，也和你一樣……算了，哪有如果。",
           DialogueId = 10036569,
           GUID = "1920209A",
           LookAt = {
@@ -27351,7 +27351,7 @@ SetLocation{ActorId{100304},TargetPoint{"lise_61_01"},Visibility{"Show"}}
         },
         [10036572] = {
           Camera = "-103.888672,-805.379944,258.925781,0.000151,-21.420866,25.25528,35.000011,436.775146,false,Manual,2.8",
-          ContentTC = "狩月人，我委託你，帶上黎瑟，離開這裡，保護好她。",
+          ContentTC = "狩月人，我委託你，帶著黎瑟，離開這裡，保護好她。",
           DialogueId = 10036572,
           GUID = "19202118",
           NextDialogue = 10036573,
@@ -27893,7 +27893,7 @@ SetRotation{SetRotationDescription{"100346:p(-150)"}},
           VoiceName = "voice/$Locale$/story/1003/100367/192037E6"
         },
         [10036712] = {
-          ContentTC = "不……對了，姐姐、你的姐姐！你說過最想念的就是姐姐，你還沒有和她相認！",
+          ContentTC = "不……對了，姐姐、你的姐姐！你說過最想念的就是姐姐，你還沒跟她相認啊！",
           DialogueId = 10036712,
           GUID = "19203810",
           GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_10030104.T_Story_Recall_10030104'",
@@ -28266,7 +28266,7 @@ SetRotation{SetRotationDescription{"100346:p(-150)"}},
         [10036904] = {
           Camera = "340.896484,593.860718,-280.917969,0.000343,-0.415986,-124.291214,50.0,584.186157,false,Manual,8.0",
           CameraBlendCurve = "easeInOutQuad",
-          ContentTC = "「我曾經的夢想……是成為一位演員。」",
+          ContentTC = "「我曾經的夢想……是成為一個演員。」",
           DialogueId = 10036904,
           FinalCamera = "290.404297,546.044067,-275.390625,0.000343,-0.615967,-124.49128,50.0,512.017639,false,Manual,8.0",
           GUID = "19205790",
@@ -28896,7 +28896,7 @@ CameraMoveTo{TargetPosition{"252.603516,-1139.067505,153.863281,0.000024,-1.3470
         },
         [10037514] = {
           Camera = "5.262695,76.219727,134.480713,0.000847,0.195241,81.158875,45.0,112.349808,false,DoNotOverride,4.180777",
-          ContentTC = "但這枚獎章對現在的我來說唯一的用處，就是讓我在遞交辭呈的時候沒被為難。它沾了太多人的血和淚水，如今已經沒有意義。",
+          ContentTC = "但這枚獎章對現在的我來說唯一的用處，就是讓我遞交辭呈的時候沒被為難。它沾了太多人的血和淚水，如今已經沒有意義。",
           DialogueId = 10037514,
           FinalCamera = "2.518555,76.645996,134.480713,0.000847,0.195241,81.158875,45.0,112.349808,false,DoNotOverride,4.180777",
           GUID = "1920BBA4",
@@ -29991,7 +29991,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10038301] = {
           Camera = "-352.324951,420.12915,199.878906,0.000157,-10.802886,-58.593517,35.000008,100000.0,false,DoNotOverride,22.0",
-          ContentTC = "哎呀，這不是聽說你傷得不輕，特地來慰問一下嘛。",
+          ContentTC = "哎呀，這不是聽說你傷得不輕，特地慰問一下嘛。",
           DialogueId = 10038301,
           FinalCamera = "-377.254883,404.907959,199.878906,0.000155,-10.602905,-55.19278,35.000008,100000.0,false,DoNotOverride,22.0",
           GUID = "1920CA15",
@@ -36775,7 +36775,7 @@ PlayAnimation{ActorId{200003},AnimationId{"Disagree"},Duration{1}}
         },
         [10104010] = {
           Camera = "684.517334,308.858398,177.394531,0.00124,-5.298,-154.201248,54.56435,525.42511,false,Manual,3.0",
-          ContentTC = "狩月人是天生的冒險家，可不是來者不拒的莽夫！且不說廢礦到底有沒有他要的那石頭，天知道恩里克到底能不能拿出來那筆錢？",
+          ContentTC = "狩月人是天生的冒險家，但不是來者不拒的莽夫！且不說廢礦到底有沒有他要的那石頭，天知道恩里克到底能不能拿出來那筆錢？",
           DefaultLookAt = "TalkNpc",
           DialogueId = 10104010,
           GUID = "194B5924",
@@ -45590,6 +45590,7 @@ CameraMoveTo{_delay{6.8},TargetPosition{"116.96875,481.013184,111.717285,0.00045
         },
         [10108605] = {
           Camera = "-294.443359,996.944824,136.692383,0.00046,2.199457,-90.197632,50.0,334.402466,false,Manual,8.0",
+          ContentTC = "{空格}",
           DialogueId = 10108605,
           GUID = "194E4A85",
           LookAt = {
@@ -45607,6 +45608,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/01/bai_enter_water"
           Subtitle = "Snow, get back here. This water is freezing, even for a Charon."
         },
         [10108606] = {
+          ContentTC = "{空格}",
           DialogueId = 10108606,
           DisableMouth = 1,
           GUID = "194E4A86",
@@ -64894,7 +64896,7 @@ TurnTo{TurnToDescription{"110009:n(110015)"},AnimationId{"Talk03_Rotation"}}
           VoiceName = "voice/$Locale$/story/1002/110124/1B91820A"
         },
         [11012402] = {
-          ContentTC = "懺悔……？哈，小弟弟，你是不是吃多了你們煉金院的藥，腦子吃出毛病了？",
+          ContentTC = "懺悔……？哈，小弟弟，你是不是吃多了你們煉金院的藥，腦子吃出毛病了啊？",
           DialogueId = 11012402,
           Duration = 1,
           GUID = "1B918234",
@@ -64905,7 +64907,7 @@ TurnTo{TurnToDescription{"110009:n(110015)"},AnimationId{"Talk03_Rotation"}}
         },
         [11012403] = {
           Camera = "260.713257,-90.661621,58.734558,8.00024,13.399219,-178.404022,25.0,100000.0,false,DoNotOverride,22.0",
-          ContentTC = "哦，有一件事確實要懺悔。剛才為了哄騙你那個笨笨的小長官，我把帝國對我們做的好事全都說成了同盟幹的。唉，我對不起我同盟的兄弟姐妹，懺悔懺悔！",
+          ContentTC = "哦，有一件事確實要懺悔。剛才為了哄騙你那個笨笨的小長官，我把帝國對我們做的好事全都說成了同盟幹的。唉，我對不起同盟的兄弟姐妹，懺悔懺悔！",
           DialogueId = 11012403,
           FacialId = {
             [1] = "110009:Happy01"
@@ -65624,7 +65626,7 @@ PostProcess{MaterailInstance{"MaterialInstanceConstant'/Game/Asset/Scene/common/
         },
         [11012441] = {
           Camera = "46.395996,104.947266,140.937012,0.000127,-5.595858,-100.208458,15.610328,100000.0,false,Manual,22.0",
-          ContentTC = "你怎麽不說話？剛才不還裝模作樣地教訓我嗎，啞巴啦？",
+          ContentTC = "你怎麽不說話？剛才不是還裝模作樣地教訓我嗎，啞巴啦？",
           DialogueId = 11012441,
           Duration = 3,
           FinalCamera = "61.274414,101.967773,140.937012,0.000126,-6.195862,-102.008621,15.610328,100000.0,false,Manual,22.0",
@@ -66657,7 +66659,7 @@ CameraMoveTo{TargetPosition{"56.547432,607.355469,269.340637,0.000025,-22.399134
         },
         [11012716] = {
           Camera = "99.497269,128.321777,127.789551,0.000096,-7.798484,120.205383,30.0,847.801208,false,DoNotOverride,2.8",
-          ContentTC = "但長官最後還是好好地回來了。所以說，別擔心。想想你們的母親，她正在壁爐邊一邊織毛衣，一邊等你們回家。",
+          ContentTC = "但長官最後還是好好地回來了。所以說，別擔心。想想你們的母親，她正在壁爐邊一邊織毛衣，一邊等你回家。",
           DialogueId = 11012716,
           Duration = 3,
           FinalCamera = "93.344849,138.890625,126.369141,0.000097,-7.798484,120.205383,30.0,847.801208,false,DoNotOverride,2.8",
@@ -67282,7 +67284,7 @@ CameraMoveTo{TargetPosition{"-1236.708984,-39.920101,90.824463,-1.0,0.200131,36.
         },
         [11012821] = {
           Camera = "-386.329163,1674.61145,67.646606,0.0,4.599599,-79.570862,35.0,100000.0,false,DoNotOverride,22.0",
-          ContentTC = "這些話我也沒聽太明白，但有一點是明確的，達芙涅有很好的前途。所以，絕對不能有一個卡戎父親阻礙她的道路。",
+          ContentTC = "這些話我也沒聽太明白，但有一點是明確的，達芙涅有很好的前途。所以，絕對不能有一個卡戎之民的父親阻礙她的道路。",
           DialogueId = 11012821,
           Duration = 3,
           FinalCamera = "-386.329163,1674.61145,41.897461,0.0,4.599599,-79.570862,35.0,100000.0,false,DoNotOverride,22.0",
@@ -67447,7 +67449,7 @@ CameraMoveTo{TargetPosition{"-256.535095,917.831116,151.587341,-0.0,-5.799807,-8
         },
         [11012832] = {
           Camera = "-324.594086,581.971741,140.384827,0.000062,1.799953,62.62788,45.0,100000.0,false,DoNotOverride,22.0",
-          ContentTC = "聽說迪斯瑪尼亞最近新上了一出戲，從北邊科賽托斯那邊傳來的，叫雪國什麽什麽……到時候我多買一張票，你也一起吧。",
+          ContentTC = "聽說迪斯瑪尼亞最近新上了一出戲，從北邊科賽托斯那邊傳來的，叫雪國什麽什麽……到時候我多買張票，你也一起吧。",
           DialogueId = 11012832,
           Duration = 3,
           FinalCamera = "-320.052155,590.743225,140.695251,0.000062,1.799953,62.62788,45.0,100000.0,false,DoNotOverride,22.0",
@@ -68739,7 +68741,7 @@ PlayAnimation{ActorId{110011},AnimationId{"Sigh_End"},Duration{3}}
         },
         [11013621] = {
           Camera = "169.007309,92.732422,41.227081,-10.000513,6.204441,84.826546,21.125471,100000.0,false,DoNotOverride,22.0",
-          ContentTC = "高層的桂冠卡戎本就飽受爭議，屆時他們還能留在現在的位子上？比如我們那位敬愛的長官——你知道有多少雙眼睛在盯著她，等著看她如何跌得粉身碎骨嗎？",
+          ContentTC = "高層裡的桂冠卡戎本就飽受爭議，屆時他們還能留在現在的位子上？比如我們那位敬愛的長官——你知道有多少雙眼睛在盯著她，等著看她如何跌得粉身碎骨嗎？",
           DialogueId = 11013621,
           Duration = 3,
           FinalCamera = "139.76091,94.824219,46.366302,-10.000513,6.204441,84.826546,21.125471,100000.0,false,DoNotOverride,22.0",
@@ -68934,7 +68936,7 @@ CameraMoveTo{_delay{6},TargetPosition{"110.352188,24.90625,106.656708,0.000074,-
         },
         [11013633] = {
           Camera = "-2118.515137,-306.582031,571.609009,0.00001,-10.997062,16.436613,40.0,271.651154,false,DoNotOverride,10.0",
-          ContentTC = "「第二新枝」計劃對帝國來說太重要了，勝過一百個龍莎要塞。如果你找到「觸媒」，完成計劃的最後一塊拼圖，那時整個皇都都會高呼你的名字——安東尼·富爾維斯。",
+          ContentTC = "「第二新枝」計劃對帝國來說太重要了，勝過一百個龍莎要塞。如果你找到「觸媒」，完成計劃的最後一塊拼圖，那時整個帝都都會高呼你的名字——安東尼·富爾維斯。",
           DialogueId = 11013633,
           Duration = 3,
           FinalCamera = "-2147.418945,-208.613281,571.609009,0.00001,-10.997062,16.436708,40.0,271.651154,false,DoNotOverride,10.0",
@@ -70649,7 +70651,7 @@ SetLocation{ActorId{110022},TargetPoint{"nanzhu_hugset2"},Visibility{"Show"}}
         },
         [11015131] = {
           Camera = "74.1875,-11.549334,140.752075,0.000139,2.317531,0.270602,35.0,100000.0,false,Manual,22.0",
-          ContentTC = "您與他都不知道……我想要的，從來都不是一個用自己的身軀為我遮風擋雨的人。我真正的願望是……",
+          ContentTC = "您與他都不知道……我想要的，從來都不是一個用自己的身軀為我遮擋風雨的人。我真正的願望是……",
           DialogueId = 11015131,
           Duration = 3,
           FacialId = {
@@ -72268,7 +72270,7 @@ PlayOrStopBGM{PlayType{"Play"},SoundType{"SOUND_BGM"},EventPath{"event:/bgm/cbt0
           VoiceName = "voice/$Locale$/story/1002/110166/1B943512"
         },
         [11016614] = {
-          ContentTC = "這是錄音設備，貼身帶著。它會成為你日後扳倒富爾維斯的鐵證。",
+          ContentTC = "這是錄音設備，你貼身帶著。它會成為你日後扳倒富爾維斯的鐵證。",
           DialogueId = 11016614,
           GUID = "1B94353C",
           GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_11016614.T_Story_Recall_11016614'",
@@ -72305,7 +72307,7 @@ PlayOrStopBGM{PlayType{"Play"},SoundType{"SOUND_BGM"},EventPath{"event:/bgm/cbt0
           VoiceName = "voice/$Locale$/story/1002/110166/1B943590"
         },
         [11016617] = {
-          ContentTC = "別苦著臉，笑一個！戰士哪怕面對千萬發炮彈，也要笑著一步步向前。",
+          ContentTC = "別苦著臉，笑一個！戰士哪怕面對千萬發炮彈，也要笑著一步步向前啊。",
           DialogueId = 11016617,
           GUID = "1B9435BA",
           GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_11016617.T_Story_Recall_11016617'",
@@ -72635,7 +72637,7 @@ SetLocation{ActorId{110005},TargetPoint{"fix27jt"},Visibility{"Hide"}},
           VoiceName = "voice/$Locale$/story/1002/110168/1B945492"
         },
         [11016806] = {
-          ContentTC = "那、那個，我也不知道為什麽，從今天下午開始，審問官突然變溫和了許多，甚至還主動問我有什麽特別想實現的心願。",
+          ContentTC = "那、那個，我也不知道為什麽，從今天下午開始，審問官突然變溫和了許多，甚至還主問我有什麽特別想實現的心願。",
           DialogueId = 11016806,
           GUID = "1B9454BC",
           LookAt = {
@@ -73153,7 +73155,7 @@ CameraMoveTo{TargetPosition{"246.750977,635.553711,145.472656,0.000125,-0.197017
         },
         [11016905] = {
           Camera = "-650.21875,847.072266,405.632812,0.000051,-26.194887,-39.601955,26.0,530.095764,false,Manual,22.0",
-          ContentTC = "看看這份文件吧，最後這串簽名。連最高法務大臣都簽了，西比爾也攔不下。可真是卷進了了不得的事呢。",
+          ContentTC = "看看這份文件吧，最後這串簽名。連最高法務大臣都簽了，西比爾也攔不下。你們真是卷進了了不得的事。",
           DialogueId = 11016905,
           FacialId = {
             [1] = "110041:Unacceptable01"
@@ -73506,7 +73508,7 @@ CameraMoveTo{TargetPosition{"691.962891,133.231445,414.648438,0.0001,-25.800047,
         },
         [11017109] = {
           Camera = "626.061523,-377.210938,104.453125,0.000161,-1.200583,124.384415,28.000006,310.596832,false,DoNotOverride,7.801928",
-          ContentTC = "那就好……抱歉，現在的我，暫時還沒法報答你。",
+          ContentTC = "……抱歉，現在的我，暫時還沒法報答你。",
           DialogueId = 11017109,
           ExStoryInfo = "EXPlayer",
           FinalCamera = "640.552734,-398.384766,104.984375,0.000161,-1.200583,124.384415,28.000006,310.596832,false,DoNotOverride,7.801928",
@@ -75415,7 +75417,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/ex01/signal_on"},PlayAs2D{tru
         },
         [11018904] = {
           Camera = "223.848587,-12.462891,99.281006,0.000007,13.799665,-121.595177,40.278976,100000.0,false,DoNotOverride,2.8",
-          ContentTC = "走吧，先去看看馬爾科他們的情況，一起找個安全的地方藏身。",
+          ContentTC = "走吧，先去看看馬爾科他們的狀況，一起找個安全的地方藏身。",
           DialogueId = 11018904,
           ExStoryInfo = "EXPlayer",
           FacialId = {
@@ -75792,7 +75794,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/ex01/signal_on"},PlayAs2D{tru
         },
         [11019028] = {
           Camera = "13.287109,114.423828,114.03125,-0.000825,14.198904,-86.82589,17.134987,100000.0,false,Manual,22.0",
-          ContentTC = "（無需迷惘，堅定地做出選擇吧。）",
+          ContentTC = "（無需迷茫，堅定地做出選擇吧。）",
           DialogueId = 11019028,
           DisableMouth = 1,
           ExStoryInfo = "EXPlayer",
@@ -76274,7 +76276,7 @@ CameraMoveTo{TargetPosition{"144.664062,19.453125,118.726562,0.000105,12.600271,
         },
         [11019119] = {
           Camera = "207.460938,360.240234,139.1875,0.000101,-0.600462,-130.806396,31.194527,446.287842,false,Manual,11.834087",
-          ContentTC = "我明白了。那就按你說的吧，剛好我要找的東西也順路。需要我向你宣誓效忠之類的嗎，親王殿下？",
+          ContentTC = "我明白了。那就照你說的吧，剛好我要找的東西也順路。需要我向你宣誓效忠之類的嗎，親王殿下？",
           DialogueId = 11019119,
           ExStoryInfo = "EXPlayer",
           GUID = "1B95D036",
@@ -82878,7 +82880,7 @@ PlayAnimation{ActorId{211002},AnimationId{"Sigh_Start"},Duration{1}}
         },
         [12030412] = {
           Camera = "-449.797119,284.380859,80.856934,0.000134,3.600438,-23.285967,35.0,272.126312,false,Manual,22.0",
-          ContentTC = "差不多可以跟上去了。拜托你啦，「獨角獸{性别:先生|小姐}」兼「守護靈」{性别:大哥哥|大姐姐}！",
+          ContentTC = "差不多可以跟上去了。拜托你了，「獨角獸{性别:先生|小姐}」兼「守護靈」{性别:大哥哥|大姐姐}！",
           DialogueId = 12030412,
           FinalCamera = "-458.496094,299.924805,79.969238,0.000133,3.600438,-23.085436,35.0,272.126312,false,Manual,22.0",
           GUID = "1E1DEB78",
@@ -93507,7 +93509,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"DisagreeHead"},Duration{1
         [20005204] = {
           Camera = "374.921875,941.964844,-19.973633,-2.5,3.799989,-124.398064,35.0,776.751282,false,Manual,1.2",
           CameraBlendCurve = "easeInQuad",
-          ContentTC = "是啊，怎麼，你也有這個打算？先來後到，排隊排隊，可別跟我們搶。",
+          ContentTC = "是啊，怎麼，你們也有這個打算？先來後到，排隊排隊，可別跟我們搶。",
           DialogueId = 20005204,
           FinalCamera = "334.910156,940.46875,-17.991211,-5.000005,3.799989,-120.000008,35.0,260.575531,false,Manual,1.8174",
           GUID = "3214B7C8",
@@ -100160,7 +100162,7 @@ Now shoo, take your lowlife vibes away from me.]],
           Subtitle = "Of course!"
         },
         [51001619] = {
-          ContentTC = "聽說內城有一座叫做「沃彼安德」的噴泉，很有名的！",
+          ContentTC = "聽說內城有一座叫做「沃彼安德」的噴泉，很有名的！（這邊的「沃彼安德」是「我編的」的諧音，各語言翻譯的時候保持這個諧音即可）",
           DialogueId = 51001619,
           GUID = "7FAD5D1E",
           NextDialogue = 51001620,
@@ -107542,11 +107544,20 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           DialogueId = 51005946,
           GUID = "7FB02304",
           LookAt = {
-            [1] = "700130:n(0)"
+            [1] = "700130:n(0)",
+            [2] = "700131:n(0)",
+            [3] = "700132:n(0)"
           },
           SpeakNpcName = "UI_CMNpc_Name_SanXiongdi",
+          TalkActionId = {
+            [1] = "700130:Agree",
+            [2] = "700131:Agree",
+            [3] = "700132:Agree"
+          },
           TurnTo = {
-            [1] = "700130:n(0)"
+            [1] = "700130:n(0)",
+            [2] = "700131:n(0)",
+            [3] = "700132:n(0)"
           }
         },
         [51006001] = {
@@ -109337,40 +109348,40 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 700230
         },
         [51006922] = {
-          ContentTC = "我還沒動手呢！",
+          ContentTC = "我才沒有翻垃圾桶的癖好。",
           DialogueId = 51006922,
           GUID = "7FB0C0DA",
           NextDialogue = 51006924
         },
         [51006923] = {
-          ContentTC = "我才沒有翻垃圾桶的癖好。",
+          ContentTC = "你這小孩少充楞，我都看到了。",
           DialogueId = 51006923,
           GUID = "7FB0C0DB",
           NextDialogue = 51006924
         },
         [51006924] = {
-          ContentTC = "你這小孩少充楞，我都看到了。",
+          ContentTC = "昨天有個穿制服的女的，一邊哭，一邊把這盒子丟了進去。有個拾荒的老太太好心問她怎麼了，結果愣是被那兇女人劈頭蓋臉罵了一頓，讓少管閒事。",
           DialogueId = 51006924,
           GUID = "7FB0C0DC",
           NextDialogue = 51006925,
           SpeakNpcId = 700230
         },
         [51006925] = {
-          ContentTC = "昨天有個穿制服的女的，一邊哭，一邊把這盒子丟了進去。有個拾荒的老太太好心問她怎麼了，結果愣是被那兇女人劈頭蓋臉罵了一頓，讓少管閒事。",
+          ContentTC = "喏，就是你手上那個盒子。還說你不是從垃圾桶撿的？",
           DialogueId = 51006925,
           GUID = "7FB0C0DD",
           NextDialogue = 51006926,
           SpeakNpcId = 700230
         },
         [51006926] = {
-          ContentTC = "喏，就是你手上那個盒子。還說你不是從垃圾桶撿的？",
+          ContentTC = "不是我……算了懶得解釋了，總之謝謝你告訴我失主的信息。",
           DialogueId = 51006926,
           GUID = "7FB0C0DE",
           NextDialogue = 51006927,
           SpeakNpcId = 700230
         },
         [51006927] = {
-          ContentTC = "不是我……算了懶得解釋了，總之謝謝你告訴我失主的信息。",
+          ContentTC = "（穿制服的兇女人……會和瑪爾潔的「哪件貨物」有關呢？）",
           DialogueId = 51006927,
           GUID = "7FB0C0DF",
           NextDialogue = 51006928,
@@ -114758,27 +114769,27 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 230003
         },
         [51009301] = {
-          ContentTC = "這次就選粉紅色的花吧！",
+          Content = "这次就选粉红色的花吧！",
           DialogueId = 51009301,
           GUID = "7FB24972",
           NextDialogue = 51009302,
           SpeakNpcId = 700247
         },
         [51009302] = {
-          ContentTC = "（女子面帶微笑地拿起她精心挑選的粉色花朵。抬起頭來時，她注意到了你。）",
+          Content = "（女子面带微笑地拿起她精心挑选的粉色花朵。抬起头来时，她注意到了你。）",
           DialogueId = 51009302,
           GUID = "7FB2499C",
           NextDialogue = 51009303
         },
         [51009303] = {
-          ContentTC = "你好呀，你也是來買花的嗎？",
+          Content = "你好呀，你也是来买花的吗？",
           DialogueId = 51009303,
           GUID = "7FB249C6",
           NextDialogue = 51009304,
           SpeakNpcId = 700247
         },
         [51009304] = {
-          ContentTC = "要不要看看這一種，粉紅色的花可不多見喔。",
+          Content = "要不要看看这一种，粉红色的花可不多见喔。",
           DialogueId = 51009304,
           GUID = "7FB249F0",
           NextOptions = {
@@ -114789,14 +114800,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009305] = {
-          ContentTC = "可以送我嗎？",
+          Content = "可以送我吗？",
           DialogueId = 51009305,
           GUID = "7FB24A1A",
           ImprPlusId = 1001,
           NextDialogue = 51009306
         },
         [51009306] = {
-          ContentTC = "呵呵，當然可以！",
+          Content = "呵呵，当然可以！",
           DialogueId = 51009306,
           GUID = "7FB24A44",
           NextDialogue = 51009307,
@@ -114811,81 +114822,81 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
     Loader = function()
       return {
         [51009307] = {
-          ContentTC = "（女子伸出手，輕巧地從貨架上多取了幾支花，一並結賬後遞給了你。）",
+          Content = "（女子伸出手，轻巧地从货架上多取了几支花，一并结账后递给了你。）",
           DialogueId = 51009307,
           GUID = "7FB24A6E",
           NextDialogue = 51009308
         },
         [51009308] = {
-          ContentTC = "來，收好了。",
+          Content = "来，收好了。",
           DialogueId = 51009308,
           GUID = "7FB24A98",
           NextDialogue = 51009309,
           SpeakNpcId = 700247
         },
         [51009309] = {
-          ContentTC = "不用謝我，你就當作是沾了他的光吧。",
+          Content = "不用谢我，你就当作是沾了他的光吧。",
           DialogueId = 51009309,
           GUID = "7FB24AC2",
           NextDialogue = 51009317,
           SpeakNpcId = 700247
         },
         [51009310] = {
-          ContentTC = "謝謝你，我也覺得很好看。",
+          Content = "谢谢你，我也觉得很好看。",
           DialogueId = 51009310,
           GUID = "7FB24AEC",
           ImprPlusId = 1004,
           NextDialogue = 51009311
         },
         [51009311] = {
-          ContentTC = "如果你喜歡的話，我也可以送給你哦。",
+          Content = "如果你喜欢的话，我也可以送给你哦。",
           DialogueId = 51009311,
           GUID = "7FB24B16",
           NextDialogue = 51009312
         },
         [51009312] = {
-          ContentTC = "他一定也會很樂意的。",
+          Content = "他一定也会很乐意的。",
           DialogueId = 51009312,
           GUID = "7FB24B40",
           NextDialogue = 51009317
         },
         [51009313] = {
-          ContentTC = "哦不，我討厭粉紅色！",
+          Content = "哦不，我讨厌粉红色！",
           DialogueId = 51009313,
           GUID = "7FB24B6A",
           ImprPlusId = 1005,
           NextDialogue = 51009314
         },
         [51009314] = {
-          ContentTC = "哎呀，那真是抱歉了。",
+          Content = "哎呀，那真是抱歉了。",
           DialogueId = 51009314,
           GUID = "7FB24B94",
           NextDialogue = 51009315,
           SpeakNpcId = 700247
         },
         [51009315] = {
-          ContentTC = "也對，不是每個人都會喜歡粉紅色的吧……",
+          Content = "也对，不是每个人都会喜欢粉红色的吧……",
           DialogueId = 51009315,
           GUID = "7FB24BBE",
           NextDialogue = 51009316,
           SpeakNpcId = 700247
         },
         [51009316] = {
-          ContentTC = "這麼說來，或許他也不喜歡……不過沒關係啦！就當做他喜歡好了。",
+          Content = "这么说来，或许他也不喜欢……不过没关系啦！就当做他喜欢好了。",
           DialogueId = 51009316,
           GUID = "7FB24BE8",
           NextDialogue = 51009317,
           SpeakNpcId = 700247
         },
         [51009317] = {
-          ContentTC = "這花是用來送人的嗎？",
+          Content = "这花是用来送人的吗？",
           DialogueId = 51009317,
           GUID = "7FB24C12",
           NextDialogue = 51009318,
           SpeakNpcId = 100001
         },
         [51009318] = {
-          ContentTC = "是呀。我有一位和你一樣頭上長著角的精靈朋友，這花就是要送給他的。",
+          Content = "是呀。我有一位和你一样头上长着角的精灵朋友，这花就是要送给他的。",
           DialogueId = 51009318,
           GUID = "7FB24C3C",
           NextOptions = {
@@ -114895,33 +114906,33 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009319] = {
-          ContentTC = "「精靈？」",
+          Content = "“精灵？”",
           DialogueId = 51009319,
           GUID = "7FB24C66",
           NextDialogue = 51009320
         },
         [51009320] = {
-          ContentTC = "呵呵，那是他的說法。",
+          Content = "呵呵，那是他的说法。",
           DialogueId = 51009320,
           GUID = "7FB24C90",
           NextDialogue = 51009323,
           SpeakNpcId = 700247
         },
         [51009321] = {
-          ContentTC = "我是卡戎。",
+          Content = "我是卡戎。",
           DialogueId = 51009321,
           GUID = "7FB24CBA",
           NextDialogue = 51009322
         },
         [51009322] = {
-          ContentTC = "嗯，「精靈」是他的說法。",
+          Content = "嗯，“精灵”是他的说法。",
           DialogueId = 51009322,
           GUID = "7FB24CE4",
           NextDialogue = 51009323,
           SpeakNpcId = 700247
         },
         [51009323] = {
-          ContentTC = "說起來，外面起風了嗎？",
+          Content = "说起来，外面起风了吗？",
           DialogueId = 51009323,
           GUID = "7FB24D0E",
           NextOptions = {
@@ -114932,46 +114943,46 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009324] = {
-          ContentTC = "我沒注意。",
+          Content = "我没注意。",
           DialogueId = 51009324,
           GUID = "7FB24D38",
           NextDialogue = 51009325
         },
         [51009325] = {
-          ContentTC = "這樣啊……沒關係，我等會兒自己出去確認一下。",
+          Content = "这样啊……没关系，我等会儿自己出去确认一下。",
           DialogueId = 51009325,
           GUID = "7FB24D62",
           NextDialogue = 51009330,
           SpeakNpcId = 700247
         },
         [51009326] = {
-          ContentTC = "正在颳大風。",
+          Content = "正在刮大风。",
           DialogueId = 51009326,
           GUID = "7FB24D8C",
           NextDialogue = 51009327
         },
         [51009327] = {
-          ContentTC = "那就太好了。",
+          Content = "那就太好了。",
           DialogueId = 51009327,
           GUID = "7FB24DB6",
           NextDialogue = 51009330,
           SpeakNpcId = 700247
         },
         [51009328] = {
-          ContentTC = "沒有風我也可以製造風。",
+          Content = "没有风我也可以制造风。",
           DialogueId = 51009328,
           GUID = "7FB24DE0",
           NextDialogue = 51009329
         },
         [51009329] = {
-          ContentTC = "是嗎，原來你這麼厲害呀！謝謝你的好意。",
+          Content = "是吗，原来你这么厉害呀！谢谢你的好意。",
           DialogueId = 51009329,
           GUID = "7FB24E0A",
           NextDialogue = 51009330,
           SpeakNpcId = 700247
         },
         [51009330] = {
-          ContentTC = "我得等到起風的時候，才能把花送給他呢。",
+          Content = "我得等到起风的时候，才能把花送给他呢。",
           DialogueId = 51009330,
           GUID = "7FB24E34",
           NextOptions = {
@@ -114982,53 +114993,53 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009331] = {
-          ContentTC = "為什麼一定要等起風？",
+          Content = "为什么一定要等起风？",
           DialogueId = 51009331,
           GUID = "7FB24E5E",
           NextDialogue = 51009332
         },
         [51009332] = {
-          ContentTC = "因為起風的時候，花才會往空中飄呀。",
+          Content = "因为起风的时候，花才会往空中飘呀。",
           DialogueId = 51009332,
           GUID = "7FB24E88",
           NextDialogue = 51009337,
           SpeakNpcId = 700247
         },
         [51009333] = {
-          ContentTC = "莫非你的朋友是風精靈嗎？",
+          Content = "莫非你的朋友是风精灵吗？",
           DialogueId = 51009333,
           GUID = "7FB24EB2",
           NextDialogue = 51009334
         },
         [51009334] = {
-          ContentTC = "呵呵，很有意思的想法！說不定真的是喔。",
+          Content = "呵呵，很有意思的想法！说不定真的是喔。",
           DialogueId = 51009334,
           GUID = "7FB24EDC",
           NextDialogue = 51009337,
           SpeakNpcId = 700247
         },
         [51009335] = {
-          ContentTC = "這是某種特殊的儀式嗎？",
+          Content = "这是某种特殊的仪式吗？",
           DialogueId = 51009335,
           GUID = "7FB24F06",
           NextDialogue = 51009336
         },
         [51009336] = {
-          ContentTC = "嗯……是傳遞思念的儀式。",
+          Content = "嗯……是传递思念的仪式。",
           DialogueId = 51009336,
           GUID = "7FB24F30",
           NextDialogue = 51009337,
           SpeakNpcId = 700247
         },
         [51009337] = {
-          ContentTC = "我的那位朋友，在幾年前就去天上啦。",
+          Content = "我的那位朋友，在几年前就去天上啦。",
           DialogueId = 51009337,
           GUID = "7FB24F5A",
           NextDialogue = 51009338,
           SpeakNpcId = 700247
         },
         [51009338] = {
-          ContentTC = "今天是每年一次的紀念日。",
+          Content = "今天是每年一次的纪念日。",
           DialogueId = 51009338,
           GUID = "7FB24F84",
           NextOptions = {
@@ -115038,7 +115049,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009339] = {
-          ContentTC = "（提醒她卡戎人的習俗。）",
+          Content = "（提醒她卡戎人的习俗。）",
           DialogueId = 51009339,
           FailDialogue = 51009340,
           GUID = "7FB24FAE",
@@ -115046,46 +115057,46 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           NextDialogue = 51009341
         },
         [51009340] = {
-          ContentTC = "（你一時記不起習俗的細節。）",
+          Content = "（你一时记不起习俗的细节。）",
           DialogueId = 51009340,
           GUID = "7FB24FD8"
         },
         [51009341] = {
-          ContentTC = "在卡戎人的觀念中，霧海才是靈魂的歸去之地。如果要紀念他，將花送往水中更加合理。",
+          Content = "在卡戎人的观念中，雾海才是灵魂的归去之地。如果要纪念他，将花送往水中更加合理。",
           DialogueId = 51009341,
           GUID = "7FB25002",
           NextDialogue = 51009342,
           SpeakNpcId = 100001
         },
         [51009342] = {
-          ContentTC = "嗯……我知道。但是，他不一樣。",
+          Content = "嗯……我知道。但是，他不一样。",
           DialogueId = 51009342,
           GUID = "7FB2502C",
           NextDialogue = 51009343,
           SpeakNpcId = 700247
         },
         [51009343] = {
-          ContentTC = "（女子沉默了片刻，看向窗外，眼神中流露著溫柔的懷念。）",
+          Content = "（女子沉默了片刻，看向窗外，眼神中流露着温柔的怀念。）",
           DialogueId = 51009343,
           GUID = "7FB25056",
           NextDialogue = 51009344
         },
         [51009344] = {
-          ContentTC = "我第一次遇見他是在城外。我們年紀相仿，性格也很像，所以很快就成了好朋友。",
+          Content = "我第一次遇见他是在城外。我们年纪相仿，性格也很像，所以很快就成了好朋友。",
           DialogueId = 51009344,
           GUID = "7FB25080",
           NextDialogue = 51009345,
           SpeakNpcId = 700247
         },
         [51009345] = {
-          ContentTC = "他對我說自己從是天上來的「精靈」……呵呵，其實我早知道他是卡戎人，但每次看到他那麼努力地圓謊，實在是捨不得戳穿。",
+          Content = "他对我说自己从是天上来的“精灵”……呵呵，其实我早知道他是卡戎人，但每次看到他那么努力地圆谎，实在是舍不得戳穿。",
           DialogueId = 51009345,
           GUID = "7FB250AA",
           NextDialogue = 51009346,
           SpeakNpcId = 700247
         },
         [51009346] = {
-          ContentTC = "而且，他確實就像故事裡的精靈一樣，知道許多我不知道的事，永遠有講不完的新奇見聞。",
+          Content = "而且，他确实就像故事里的精灵一样，知道许多我不知道的事，永远有讲不完的新奇见闻。",
           DialogueId = 51009346,
           GUID = "7FB250D4",
           NextOptions = {
@@ -115095,61 +115106,61 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009347] = {
-          ContentTC = "聽起來是個很棒的朋友。",
+          Content = "听起来是个很棒的朋友。",
           DialogueId = 51009347,
           GUID = "7FB250FE",
           NextDialogue = 51009348
         },
         [51009348] = {
-          ContentTC = "嗯！他是最棒的朋友。",
+          Content = "嗯！他是最棒的朋友。",
           DialogueId = 51009348,
           GUID = "7FB25128",
           NextDialogue = 51009351,
           SpeakNpcId = 700247
         },
         [51009349] = {
-          ContentTC = "所以他從小到大一直在扮演精靈嗎？",
+          Content = "所以他从小到大一直在扮演精灵吗？",
           DialogueId = 51009349,
           GUID = "7FB25152",
           NextDialogue = 51009350
         },
         [51009350] = {
-          ContentTC = "呵呵，聽起來有點幼稚，對吧？",
+          Content = "呵呵，听起来有点幼稚，对吧？",
           DialogueId = 51009350,
           GUID = "7FB2517C",
           NextDialogue = 51009351,
           SpeakNpcId = 700247
         },
         [51009351] = {
-          ContentTC = "我心裡一直都有些苦惱——等到我們都長大，過了能理所當然地相信童話的年紀以後，要怎麼開口說破這件事？",
+          Content = "我心里一直都有些苦恼——等到我们都长大，过了能理所当然地相信童话的年纪以后，要怎么开口说破这件事？",
           DialogueId = 51009351,
           GUID = "7FB251A6",
           NextDialogue = 51009352,
           SpeakNpcId = 700247
         },
         [51009352] = {
-          ContentTC = "無論是我先開口還是他先開口，想像一下都很尷尬呀……",
+          Content = "无论是我先开口还是他先开口，想象一下都很尴尬呀……",
           DialogueId = 51009352,
           GUID = "7FB251D0",
           NextDialogue = 51009353,
           SpeakNpcId = 700247
         },
         [51009353] = {
-          ContentTC = "但最後我們並沒有走到那個時間點。他在成年之前便離開了。",
+          Content = "但最后我们并没有走到那个时间点。他在成年之前便离开了。",
           DialogueId = 51009353,
           GUID = "7FB251FA",
           NextDialogue = 51009354,
           SpeakNpcId = 700247
         },
         [51009354] = {
-          ContentTC = "你說，他會不會是想到了這一點，才故意選在那個時候離開的？呵呵，真是個溫柔的人啊……",
+          Content = "你说，他会不会是想到了这一点，才故意选在那个时候离开的？呵呵，真是个温柔的人啊……",
           DialogueId = 51009354,
           GUID = "7FB25224",
           NextDialogue = 51009355,
           SpeakNpcId = 700247
         },
         [51009355] = {
-          ContentTC = "（女子撫摸著柔軟的花瓣，輕輕垂下了眼眸。你分辨不出她臉上的情緒。）",
+          Content = "（女子抚摸着柔软的花瓣，轻轻垂下了眼眸。你分辨不出她脸上的情绪。）",
           DialogueId = 51009355,
           GUID = "7FB2524E",
           NextOptions = {
@@ -115159,97 +115170,97 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           }
         },
         [51009356] = {
-          ContentTC = "抱歉，請節哀……",
+          Content = "抱歉，请节哀……",
           DialogueId = 51009356,
           GUID = "7FB25278",
           ImprPlusId = 1002,
           NextDialogue = 51009357
         },
         [51009357] = {
-          ContentTC = "沒關係，已經過去很多年啦。",
+          Content = "没关系，已经过去很多年啦。",
           DialogueId = 51009357,
           GUID = "7FB252A2",
           NextDialogue = 51009362,
           SpeakNpcId = 700247
         },
         [51009358] = {
-          ContentTC = "你們都是非常溫柔的人。",
+          Content = "你们都是非常温柔的人。",
           DialogueId = 51009358,
           GUID = "7FB252CC",
           ImprPlusId = 1004,
           NextDialogue = 51009359
         },
         [51009359] = {
-          ContentTC = "呵呵，謝謝你。",
+          Content = "呵呵，谢谢你。",
           DialogueId = 51009359,
           GUID = "7FB252F6",
           NextDialogue = 51009362,
           SpeakNpcId = 700247
         },
         [51009360] = {
-          ContentTC = "成年這個時間點……難道說，他是出現了穢蝕的徵兆？",
+          Content = "成年这个时间点……难道说，他是出现了秽蚀的征兆？",
           DialogueId = 51009360,
           GUID = "7FB25320",
           ImprPlusId = 1003,
           NextDialogue = 51009361
         },
         [51009361] = {
-          ContentTC = "嗯，我也這麼想。畢竟他離開的時候，剛好是快滿十八歲。",
+          Content = "嗯，我也这么想。毕竟他离开的时候，刚好是快满十八岁。",
           DialogueId = 51009361,
           GUID = "7FB2534A",
           NextDialogue = 51009362,
           SpeakNpcId = 700247
         },
         [51009362] = {
-          ContentTC = "他早就預料到了自己的結局……最後見面的那次，他對我說，自己將要回到天上的故鄉，從今往後不能再來找我。",
+          Content = "他早就预料到了自己的结局……最后见面的那次，他对我说，自己将要回到天上的故乡，从今往后不能再来找我。",
           DialogueId = 51009362,
           GUID = "7FB25374",
           NextDialogue = 51009363,
           SpeakNpcId = 700247
         },
         [51009363] = {
-          ContentTC = "那是他撒謊撒得最拙劣的一次……明明眼淚已經在眼眶裡打轉了，還拼命擠出一副微笑的表情，用愉快的語調對我說——",
+          Content = "那是他撒谎撒得最拙劣的一次……明明眼泪已经在眼眶里打转了，还拼命挤出一副微笑的表情，用愉快的语调对我说——",
           DialogueId = 51009363,
           GUID = "7FB2539E",
           NextDialogue = 51009364,
           SpeakNpcId = 700247
         },
         [51009364] = {
-          ContentTC = "「請你不要感到難過。雖然我不能再來見你，但我會在雲端之上一直、一直注視著你……」",
+          Content = "“请你不要感到难过。虽然我不能再来见你，但我会在云端之上一直、一直注视着你……”",
           DialogueId = 51009364,
           GUID = "7FB253C8",
           NextDialogue = 51009365,
           SpeakNpcId = 700247
         },
         [51009365] = {
-          ContentTC = "「無論何時，只要你抬頭望向天空，你的思念就能夠隨風抵達我的身邊。」",
+          Content = "“无论何时，只要你抬头望向天空，你的思念就能够随风抵达我的身边。”",
           DialogueId = 51009365,
           GUID = "7FB253F2",
           NextDialogue = 51009366,
           SpeakNpcId = 700247
         },
         [51009366] = {
-          ContentTC = "（說到這裡，女子露出了微笑。不知是否是錯覺，她的眼中隱約閃過了一絲光亮——那究竟是淚光，還是從玻璃窗中灑下的陽光呢？）",
+          Content = "（说到这里，女子露出了微笑。不知是否是错觉，她的眼中隐约闪过了一丝光亮——那究竟是泪光，还是从玻璃窗中洒下的阳光呢？）",
           DialogueId = 51009366,
           GUID = "7FB2541C",
           NextDialogue = 51009367
         },
         [51009367] = {
-          ContentTC = "所以，你才會把花撒向天空……？",
+          Content = "所以，你才会把花撒向天空……？",
           DialogueId = 51009367,
           GUID = "7FB25446",
           NextDialogue = 51009368,
           SpeakNpcId = 100001
         },
         [51009368] = {
-          ContentTC = "嗯。既然那是他想要告訴我的故事，那麼我也願意相信，他的歸處不是霧海，而是遼闊的藍天。",
+          Content = "嗯。既然那是他想要告诉我的故事，那么我也愿意相信，他的归处不是雾海，而是辽阔的蓝天。",
           DialogueId = 51009368,
           GUID = "7FB25470",
           NextDialogue = 51009369,
           SpeakNpcId = 700247
         },
         [51009369] = {
-          ContentTC = "只要將花瓣撒向天空，他就能感受到我的思念。",
+          Content = "只要将花瓣撒向天空，他就能感受到我的思念。",
           DialogueId = 51009369,
           GUID = "7FB2549A",
           NextOptions = {
@@ -115259,53 +115270,53 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009370] = {
-          ContentTC = "如果他能收到你的花就好了。",
+          Content = "如果他能收到你的花就好了。",
           DialogueId = 51009370,
           GUID = "7FB254C4",
           NextDialogue = 51009372
         },
         [51009371] = {
-          ContentTC = "他一定會收到你的花的。",
+          Content = "他一定会收到你的花的。",
           DialogueId = 51009371,
           GUID = "7FB254EE",
           NextDialogue = 51009372
         },
         [51009372] = {
-          ContentTC = "嗯，謝謝你！",
+          Content = "嗯，谢谢你！",
           DialogueId = 51009372,
           GUID = "7FB25518",
           NextDialogue = 51009373,
           SpeakNpcId = 700247
         },
         [51009373] = {
-          ContentTC = "現在回想起來，他大概也早就知道我已經看穿了他的謊話吧。",
+          Content = "现在回想起来，他大概也早就知道我已经看穿了他的谎话吧。",
           DialogueId = 51009373,
           GUID = "7FB25542",
           NextDialogue = 51009374,
           SpeakNpcId = 700247
         },
         [51009374] = {
-          ContentTC = "一個由謊言編織的故事，最後有了一個用謊言寫就的結局……不也算是恰如其分嗎？",
+          Content = "一个由谎言编织的故事，最后有了一个用谎言写就的结局……不也算是恰如其分吗？",
           DialogueId = 51009374,
           GUID = "7FB2556C",
           NextDialogue = 51009375,
           SpeakNpcId = 700247
         },
         [51009375] = {
-          ContentTC = "好啦，我要趁天還沒黑，去城外完成和他的約定。",
+          Content = "好啦，我要趁天还没黑，去城外完成和他的约定。",
           DialogueId = 51009375,
           GUID = "7FB25596",
           NextDialogue = 51009376,
           SpeakNpcId = 700247
         },
         [51009376] = {
-          ContentTC = "再見了，可愛的小精靈。祝願你的故事有一個真實而美滿的結局。",
+          Content = "再见了，可爱的小精灵。祝愿你的故事有一个真实而美满的结局。",
           DialogueId = 51009376,
           GUID = "7FB255C0",
           SpeakNpcId = 700247
         },
         [51009377] = {
-          ContentTC = "哎呀，小精靈，又見面了。今天的天色很美吧？",
+          Content = "哎呀，小精灵，又见面了。今天的天色很美吧？",
           DialogueId = 51009377,
           GUID = "7FB255EA",
           SpeakNpcId = 700247
@@ -126279,7 +126290,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [70016107] = {
           Camera = "-71.794922,628.722656,135.195312,0.000076,12.199674,-90.596268,17.78793,100000.0,false,Manual,22.0",
-          ContentTC = "※「一角鯨」分隊士兵凱魯姆的證詞\n\n「我看到『獅鷲』小隊的隊長{nickname2}獨自從▇▇▇▇出來，胸口沾了大片▇▇▇▇。」\n\n「{性别2:他|她}示意我們守在▇▇▇▇不要擅自行動，並表示自己將去▇▇▇▇查看是否有躲藏的同盟成員。」\n\n「大約兩分鍾後我聽到▇▇▇▇傳來的警報聲，便與法露茜長官一起前去查看。我們發現『雪狼』分隊的阿瓦爾隊長倒在血泊中，而▇▇▇▇已經啟動。」",
+          ContentTC = "※「一角鯨」分隊士兵凱魯姆的證詞\n\n「我看到『獅鷲』小隊的隊長{nickname2}獨自從▇▇▇▇出來，胸口沾了大片▇▇▇▇。」\n\n「{性别2:他|她}示意我們守在▇▇▇▇不要擅自行動，並表示自己將去▇▇▇▇查看是否有躲藏的同盟成員。「\n\n「大約兩分鍾後我聽到▇▇▇▇傳來的警報聲，便與法露茜長官一起前去查看。我們發現‘雪狼’分隊的阿瓦爾隊長倒在血泊中，而▇▇▇▇已經啟動。」",
           DialogueId = 70016107,
           GUID = "AF47298E"
         },
@@ -128171,7 +128182,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 818041
         },
         [71005101] = {
-          ContentTC = "魚來，魚來。",
+          Content = "鱼来，鱼来。",
           DialogueId = 71005101,
           GUID = "B1C0EAA3",
           SpeakNpcId = 818045
@@ -128419,14 +128430,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 818045
         },
         [71005137] = {
-          ContentTC = "（男人說完指了指你。）",
+          Content = "（男人说完指了指你。）",
           DialogueId = 71005137,
           GUID = "B1C0FEFC",
           NextDialogue = 71005138,
           SpeakNpcId = 800006
         },
         [71005138] = {
-          ContentTC = "釣魚釣的也可以不是魚。撒下幾句話，做一些奇怪的事，就會有無數魚爭相咬鉤。",
+          Content = "钓鱼钓的也可以不是鱼。撒下几句话，做一些奇怪的事，就会有无数鱼争相咬钩。",
           DialogueId = 71005138,
           GUID = "B1C0FEFD",
           NextDialogue = 71005139,
@@ -128539,14 +128550,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 800006
         },
         [71005212] = {
-          ContentTC = "是呀，幸福硬幣就是我們手上的銅幣。它不是魔法創造出來的寶貝，而是誕生自大家的善意。",
+          Content = "是呀，幸福硬币就是我们手里的铜币。它不是魔法创造出来的宝贝，而是诞生自大家的善意。",
           DialogueId = 71005212,
           GUID = "B1C10B9F",
           NextDialogue = 71005213,
           SpeakNpcId = 818048
         },
         [71005213] = {
-          ContentTC = "一枚幸福硬幣就能買到她的笑容，這麼輕鬆的買賣可不多見呀。",
+          Content = "一枚幸福硬币就能买到她的笑容，这么轻松的买卖可不多见呀。",
           DialogueId = 71005213,
           GUID = "B1C10BA0",
           SpeakNpcId = 818048
@@ -131177,7 +131188,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72002902] = {
-          ContentTC = "咿呀——！請不要拿走這個寶箱。",
+          Content = "咿呀——！请不要拿走这个宝箱。",
           DialogueId = 72002902,
           FacialId = {
             [1] = "820000:PetPan_Wink"
@@ -131187,7 +131198,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72002903] = {
-          ContentTC = "我的家被壞老鼠占領了，我正打算用這些錢去雇一隻勇敢的小貓，幫我趕跑老鼠。",
+          Content = "我的家被坏老鼠占领了，我正打算用这些钱去雇一只勇敢的小猫，帮我赶跑老鼠。",
           DialogueId = 72002903,
           FacialId = {
             [1] = "820000:PetPan_Dizzy"
@@ -131220,7 +131231,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72003002] = {
-          ContentTC = "哇，你好厲害，唰唰——咻咻——幾下就把附近的老鼠全消滅了。",
+          Content = "哇，你好厉害，唰唰——咻咻——几下就把附近的老鼠全消灭了。",
           DialogueId = 72003002,
           FacialId = {
             [1] = "820000:PetPan_Smile"
@@ -131230,7 +131241,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72003003] = {
-          ContentTC = "那麼，這個寶箱就送給你啦。",
+          Content = "那么，这个宝箱就送给你啦。",
           DialogueId = 72003003,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131664,7 +131675,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72003902] = {
-          ContentTC = "會動的鳥，不會動的鳥，還有不會動的人都還在這裡。",
+          Content = "会动的鸟，不会动的鸟，还有不会动的人都还在这里。",
           DialogueId = 72003902,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131675,7 +131686,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72003903] = {
-          ContentTC = "但是會動的人都離開了，他們還會回來嗎？",
+          Content = "但是会动的人都离开了，他们还会回来吗？",
           DialogueId = 72003903,
           FacialId = {
             [1] = "820000:PetPan_Speechless"
@@ -131709,7 +131720,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004002] = {
-          ContentTC = "每一盞熄滅的燈都是一個沒有回家的人……",
+          Content = "每一盏熄灭的灯都是一个没有回家的人……",
           DialogueId = 72004002,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131719,7 +131730,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004003] = {
-          ContentTC = "那麼每一盞亮起的燈都會是一個回到了家的人吧？",
+          Content = "那么每一盏亮起的灯都会是一个回到了家的人吧？",
           DialogueId = 72004003,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131753,7 +131764,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004102] = {
-          ContentTC = "咿呀！你怎麼把我的小窩打碎了。",
+          Content = "咿呀！你怎么把我的小窝打碎了。",
           DialogueId = 72004102,
           FacialId = {
             [1] = "820000:PetPan_Dizzy"
@@ -131764,7 +131775,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004103] = {
-          ContentTC = "據說睡在硬邦邦的床上可以磨鍊意志力哦。",
+          Content = "据说睡在硬邦邦的床上可以磨炼意志力哦。",
           DialogueId = 72004103,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131798,7 +131809,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004202] = {
-          ContentTC = "箱子堆在這麼高的地方有什麼用呢？",
+          Content = "箱子堆在这么高的地方有什么用呢？",
           DialogueId = 72004202,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131809,7 +131820,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004203] = {
-          ContentTC = "不如就讓給我當房子吧。",
+          Content = "不如就让给我当房子吧。",
           DialogueId = 72004203,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131843,7 +131854,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004302] = {
-          ContentTC = "飄啊飄，我是一隻自由的小鴨子~",
+          Content = "飘啊飘，我是一只自由的小鸭子~",
           DialogueId = 72004302,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131854,7 +131865,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004303] = {
-          ContentTC = "咿呀！你怎麼把我游泳池裡的水放掉了？",
+          Content = "咿呀！你怎么把我游泳池里的水放掉了？",
           DialogueId = 72004303,
           FacialId = {
             [1] = "820000:PetPan_Dizzy"
@@ -131888,7 +131899,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004402] = {
-          ContentTC = "咿呀，采蘑菇的小人類你好~",
+          Content = "咿呀，采蘑菇的小人类你好~",
           DialogueId = 72004402,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131898,7 +131909,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004403] = {
-          ContentTC = "蘑菇雖然美味，但一定要等完全煮熟以後再吃哦。",
+          Content = "蘑菇虽然美味，但一定要等完全煮熟以后再吃哦。",
           DialogueId = 72004403,
           FacialId = {
             [1] = "820000:PetPan_Cry"
@@ -131932,7 +131943,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004502] = {
-          ContentTC = "咚咚，咚咚咚！",
+          Content = "咚咚，咚咚咚！",
           DialogueId = 72004502,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131942,7 +131953,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004503] = {
-          ContentTC = "我正在學習演奏這台管道琴。",
+          Content = "我正在学习演奏这台管道琴。",
           DialogueId = 72004503,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131976,7 +131987,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004602] = {
-          ContentTC = "咿呀，恭喜你發現了我的秘密基地~",
+          Content = "咿呀，恭喜你发现了我的秘密基地~",
           DialogueId = 72004602,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131986,7 +131997,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004603] = {
-          ContentTC = "藤蔓、水草、池塘和我，是一個小小生態圈。",
+          Content = "藤蔓、水草、池塘和我，是一个小小生态圈。",
           DialogueId = 72004603,
           FacialId = {
             [1] = "820000:PetPan_Common"

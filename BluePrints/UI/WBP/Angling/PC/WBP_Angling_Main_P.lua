@@ -336,14 +336,8 @@ function M:OnClickFishRod(RodId)
     ShowBKeyClose = false,
     TabConfigData = {
       Tabs = {
-        {
-          Text = GText("UI_Fishing_FishingRod"),
-          TabId = 1
-        },
-        {
-          Text = GText("UI_Fishing_FishingLure"),
-          TabId = 2
-        }
+        {Text = "鱼竿", TabId = 1},
+        {Text = "鱼饵", TabId = 2}
       },
       DefaultTabId = 1
     }

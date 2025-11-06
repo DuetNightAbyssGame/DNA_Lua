@@ -630,6 +630,7 @@ UIConst.Tip_CommonToast = "CommonToastMain"
 UIConst.Tip_ExcavationToast = "ExcavationToast"
 UIConst.Tip_CommonDialogTip = "CommonDialogTip"
 UIConst.Tip_StoryToast = "CommonStoryToast"
+UIConst.ClickSe = UE4.UFMODBlueprintStatics.FindEventbyName("event:/ui/common/click")
 UIConst.RarityColor = {
   [1] = "d1d1d1ff",
   [2] = "4cb587ff",

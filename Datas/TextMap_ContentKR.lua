@@ -1,7 +1,7 @@
 local Data = {
   {
     MinKey = "AFFIX_1001_DESC",
-    MaxKey = "Attr_StrongValue_Name",
+    MaxKey = "Attr_TriggerEsRate_Name",
     Loader = function()
       return {
         AFFIX_1001_DESC = {
@@ -177,7 +177,7 @@ local Data = {
           TextMapId = "Abyss_Battle_Fail"
         },
         Abyss_Battle_RemainTime = {
-          ContentKR = "남은 시간:{空格}",
+          ContentKR = "남은 시간:",
           TextMapId = "Abyss_Battle_RemainTime"
         },
         Abyss_Battle_Win = {
@@ -339,10 +339,6 @@ local Data = {
         Abyss_PartySetup_ConditionsAreNot = {
           ContentKR = "현재 설정이 출전 요구 사항을 충족하지 못했습니다",
           TextMapId = "Abyss_PartySetup_ConditionsAreNot"
-        },
-        Abyss_PartyUnlock = {
-          ContentKR = "라인업이 해제되었습니다.",
-          TextMapId = "Abyss_PartyUnlock"
         },
         Abyss_Party_ConditionsAreNot = {
           ContentKR = "먼저 라인업을 설정하세요",
@@ -797,19 +793,19 @@ local Data = {
         Attr_StrongValue_Name = {
           ContentKR = "격양",
           TextMapId = "Attr_StrongValue_Name"
+        },
+        Attr_TriggerEsRate_Name = {
+          ContentKR = "관통 추가 효과 발동 시 실드에 대한 대미지",
+          TextMapId = "Attr_TriggerEsRate_Name"
         }
       }
     end
   },
   {
-    MinKey = "Attr_TriggerEsRate_Name",
-    MaxKey = "CVName2014",
+    MinKey = "Attr_TriggerHpRate_Name",
+    MaxKey = "CVName2015",
     Loader = function()
       return {
-        Attr_TriggerEsRate_Name = {
-          ContentKR = "베기 추가 효과 발동 시 실드에 대한 대미지",
-          TextMapId = "Attr_TriggerEsRate_Name"
-        },
         Attr_TriggerHpRate_Name = {
           ContentKR = "관통 추가 효과 발동 시 HP에 대한 대미지",
           TextMapId = "Attr_TriggerHpRate_Name"
@@ -1332,7 +1328,7 @@ local Data = {
           TextMapId = "Buff_Content_203"
         },
         Buff_Content_211 = {
-          ContentKR = "적 유닛이 3초마다 최대 실드의 #1만큼 회복한다. 속성 추가 발동 효과 보유 시 회복을 중단한다.",
+          ContentKR = "적 유닛이 2초마다 최대 실드의 #1만큼 회복한다. 속성 추가 발동 효과 보유 시 회복을 중단한다.",
           TextMapId = "Buff_Content_211"
         },
         Buff_Content_30 = {
@@ -1533,19 +1529,19 @@ local Data = {
         CVName2014 = {
           ContentKR = "Carina Reeves",
           TextMapId = "CVName2014"
+        },
+        CVName2015 = {
+          ContentKR = "Shannon Tarbet",
+          TextMapId = "CVName2015"
         }
       }
     end
   },
   {
-    MinKey = "CVName2015",
-    MaxKey = "Condition_Toast_PlayerLv_30",
+    MinKey = "CVName2016",
+    MaxKey = "Condition_Toast_PlayerLv_31",
     Loader = function()
       return {
-        CVName2015 = {
-          ContentKR = "Shannon Tarbet",
-          TextMapId = "CVName2015"
-        },
         CVName2016 = {
           ContentKR = "Jamie Hoskin",
           TextMapId = "CVName2016"
@@ -2248,19 +2244,19 @@ local Data = {
         Condition_Toast_PlayerLv_30 = {
           ContentKR = "수련 30레벨 달성 후 해제",
           TextMapId = "Condition_Toast_PlayerLv_30"
+        },
+        Condition_Toast_PlayerLv_31 = {
+          ContentKR = "수련 31레벨 달성 후 해제",
+          TextMapId = "Condition_Toast_PlayerLv_31"
         }
       }
     end
   },
   {
-    MinKey = "Condition_Toast_PlayerLv_31",
-    MaxKey = "Content_120111_5",
+    MinKey = "Condition_Toast_PlayerLv_32",
+    MaxKey = "Content_120111_6",
     Loader = function()
       return {
-        Condition_Toast_PlayerLv_31 = {
-          ContentKR = "수련 31레벨 달성 후 해제",
-          TextMapId = "Condition_Toast_PlayerLv_31"
-        },
         Condition_Toast_PlayerLv_32 = {
           ContentKR = "수련 32레벨 달성 후 해제",
           TextMapId = "Condition_Toast_PlayerLv_32"
@@ -3056,19 +3052,19 @@ local Data = {
         Content_120111_5 = {
           ContentKR = "새로운 게임이 시작되었다. 이번에야말로 감자구이를 찾아내야 한다.",
           TextMapId = "Content_120111_5"
+        },
+        Content_120111_6 = {
+          ContentKR = "마법책을 펼쳐 이야기 [옛 동굴과의 작별]을 완성하고 대마법사의 마법을 소환하자.",
+          TextMapId = "Content_120111_6"
         }
       }
     end
   },
   {
-    MinKey = "Content_120111_6",
-    MaxKey = "Content_200227_1",
+    MinKey = "Content_120111_7",
+    MaxKey = "Content_200228_1",
     Loader = function()
       return {
-        Content_120111_6 = {
-          ContentKR = "마법책을 펼쳐 이야기 [옛 동굴과의 작별]을 완성하고 대마법사의 마법을 소환하자.",
-          TextMapId = "Content_120111_6"
-        },
         Content_120111_7 = {
           ContentKR = "대마법사가 감자구이의 위치를 알아낸 듯하다. 따라가 보자.",
           TextMapId = "Content_120111_7"
@@ -3864,19 +3860,19 @@ local Data = {
         Content_200227_1 = {
           ContentKR = "몰입형 연극은 루카에서 아이스레이크 시티로 전해진 완전히 새로운 연극 형식이다. 갈레아 극장은 이 예술 실험을 위한 자원봉사자를 모집하고 있다. 시간이 있다면 극단원을 찾아서 이야기해 보자.",
           TextMapId = "Content_200227_1"
+        },
+        Content_200228_1 = {
+          ContentKR = "대장장이 루나가 갑자기 당신을 불러 세웠다. 무슨 일이 있는 것 같으니 시간이 되면 그녀를 찾아가 자세한 내용을 물어보자.",
+          TextMapId = "Content_200228_1"
         }
       }
     end
   },
   {
-    MinKey = "Content_200228_1",
-    MaxKey = "DUNGEON_HIJACK_110",
+    MinKey = "Content_200228_2",
+    MaxKey = "DUNGEON_HIJACK_111",
     Loader = function()
       return {
-        Content_200228_1 = {
-          ContentKR = "대장장이 루나가 갑자기 당신을 불러 세웠다. 무슨 일이 있는 것 같으니 시간이 되면 그녀를 찾아가 자세한 내용을 물어보자.",
-          TextMapId = "Content_200228_1"
-        },
         Content_200228_2 = {
           ContentKR = "\"모험 전에는 충분히 준비하라.\" 이는 모든 초보 모험가가 따라야 할 조언이다. 휴식처로 돌아가 첫 모험을 위한 기초를 다지자.",
           TextMapId = "Content_200228_2"
@@ -4672,19 +4668,19 @@ local Data = {
         DUNGEON_HIJACK_110 = {
           ContentKR = "화물차 가속 중",
           TextMapId = "DUNGEON_HIJACK_110"
+        },
+        DUNGEON_HIJACK_111 = {
+          ContentKR = "화물차 감속 중",
+          TextMapId = "DUNGEON_HIJACK_111"
         }
       }
     end
   },
   {
-    MinKey = "DUNGEON_HIJACK_111",
-    MaxKey = "DUNGEON_SYNTHESIS_127",
+    MinKey = "DUNGEON_HIJACK_112",
+    MaxKey = "DUNGEON_SYNTHESIS_128",
     Loader = function()
       return {
-        DUNGEON_HIJACK_111 = {
-          ContentKR = "화물차 감속 중",
-          TextMapId = "DUNGEON_HIJACK_111"
-        },
         DUNGEON_HIJACK_112 = {
           ContentKR = "접근하여 화물차를 가동하세요. 접근 시 실드가 소모됩니다. 목표 지점에 도달할 때까지 화물차 가동 상태를 유지하세요.",
           TextMapId = "DUNGEON_HIJACK_112"
@@ -5480,19 +5476,19 @@ local Data = {
         DUNGEON_SYNTHESIS_127 = {
           ContentKR = "'성광이 당신을 지켜주기를' 팀이 등장했습니다.",
           TextMapId = "DUNGEON_SYNTHESIS_127"
+        },
+        DUNGEON_SYNTHESIS_128 = {
+          ContentKR = "'천하제일 군단장' 팀이 등장했습니다.",
+          TextMapId = "DUNGEON_SYNTHESIS_128"
         }
       }
     end
   },
   {
-    MinKey = "DUNGEON_SYNTHESIS_128",
-    MaxKey = "Description_120003_6",
+    MinKey = "DUNGEON_SYNTHESIS_129",
+    MaxKey = "Description_120003_7",
     Loader = function()
       return {
-        DUNGEON_SYNTHESIS_128 = {
-          ContentKR = "'천하제일 군단장' 팀이 등장했습니다.",
-          TextMapId = "DUNGEON_SYNTHESIS_128"
-        },
         DUNGEON_SYNTHESIS_129 = {
           ContentKR = "'포세이돈 동맹' 팀이 등장했습니다.",
           TextMapId = "DUNGEON_SYNTHESIS_129"
@@ -5510,7 +5506,7 @@ local Data = {
           TextMapId = "DUNGEON_SYNTHESIS_132"
         },
         DUNGEON_SYNTHESIS_133 = {
-          ContentKR = "현상금 의뢰는 상당한 시간이 소요됩니다. 시간적 여유가 충분할 때 진행하시는 것을 권장합니다. 계속하시겠습니까? (파티 도전 권장)",
+          ContentKR = "현상금 의뢰는 상당한 시간이 소요됩니다. 시간적 여유가 충분할 때 진행하시는 것을 권장합니다. 계속하시겠습니까?",
           TextMapId = "DUNGEON_SYNTHESIS_133"
         },
         DUNGEON_SYNTHESIS_134 = {
@@ -6282,19 +6278,19 @@ local Data = {
         Description_120003_6 = {
           ContentKR = "스노우와 대책 논의하기",
           TextMapId = "Description_120003_6"
+        },
+        Description_120003_7 = {
+          ContentKR = "정찰기의 경계를 피하며 이곳을 탈출하기",
+          TextMapId = "Description_120003_7"
         }
       }
     end
   },
   {
-    MinKey = "Description_120003_7",
-    MaxKey = "Description_20020605_2",
+    MinKey = "Description_120003_8",
+    MaxKey = "Description_20020605_3",
     Loader = function()
       return {
-        Description_120003_7 = {
-          ContentKR = "정찰기의 경계를 피하며 이곳을 탈출하기",
-          TextMapId = "Description_120003_7"
-        },
         Description_120003_8 = {
           ContentKR = "아이스레이크 시티 성문으로 가기",
           TextMapId = "Description_120003_8"
@@ -7090,19 +7086,19 @@ local Data = {
         Description_20020605_2 = {
           ContentKR = "바크 집 창문 보기",
           TextMapId = "Description_20020605_2"
+        },
+        Description_20020605_3 = {
+          ContentKR = "바크가 쓰러진 진실을 추론하기",
+          TextMapId = "Description_20020605_3"
         }
       }
     end
   },
   {
-    MinKey = "Description_20020605_3",
-    MaxKey = "DynQuest_FortBattery_Des",
+    MinKey = "Description_20020606_1",
+    MaxKey = "DynQuest_FortBattery_Title",
     Loader = function()
       return {
-        Description_20020605_3 = {
-          ContentKR = "바크가 쓰러진 진실을 추론하기",
-          TextMapId = "Description_20020605_3"
-        },
         Description_20020606_1 = {
           ContentKR = "갈레아 극장 근처에서 단서 찾기",
           TextMapId = "Description_20020606_1"
@@ -7892,19 +7888,19 @@ local Data = {
         DynQuest_FortBattery_Des = {
           ContentKR = "물자 회수하기",
           TextMapId = "DynQuest_FortBattery_Des"
+        },
+        DynQuest_FortBattery_Title = {
+          ContentKR = "물자 회수",
+          TextMapId = "DynQuest_FortBattery_Title"
         }
       }
     end
   },
   {
-    MinKey = "DynQuest_FortBattery_Title",
-    MaxKey = "EntryTitle_408009",
+    MinKey = "DynQuest_FortDecapitate_Des",
+    MaxKey = "EpisodeName_100301",
     Loader = function()
       return {
-        DynQuest_FortBattery_Title = {
-          ContentKR = "물자 회수",
-          TextMapId = "DynQuest_FortBattery_Title"
-        },
         DynQuest_FortDecapitate_Des = {
           ContentKR = "정예 부사관을 처치하고 현재 구역을 소탕하세요.",
           TextMapId = "DynQuest_FortDecapitate_Des"
@@ -8691,19 +8687,19 @@ local Data = {
         EntryTitle_408009 = {
           ContentKR = "속삭임 강",
           TextMapId = "EntryTitle_408009"
+        },
+        EpisodeName_100301 = {
+          ContentKR = "밤의 깊은 곳에서",
+          TextMapId = "EpisodeName_100301"
         }
       }
     end
   },
   {
-    MinKey = "EpisodeName_100301",
-    MaxKey = "FeinaEvent_SimpleDungeonDes_2",
+    MinKey = "EpisodeName_100302",
+    MaxKey = "FeinaEvent_SimpleDungeonDes_3_1",
     Loader = function()
       return {
-        EpisodeName_100301 = {
-          ContentKR = "밤의 깊은 곳에서",
-          TextMapId = "EpisodeName_100301"
-        },
         EpisodeName_100302 = {
           ContentKR = "그림자의 잠복",
           TextMapId = "EpisodeName_100302"
@@ -9043,7 +9039,7 @@ local Data = {
           TextMapId = "Event_Des_105102011"
         },
         Event_Des_105102012 = {
-          ContentKR = "겹겹이 쌓인 베일 아래, 속삭임으로 사랑을 말하고, 죽음으로 영원을 터치하라",
+          ContentKR = "겹겹이 쌓인 커튼 아래, 속삭임으로 사랑을 말하고, 죽음으로 영원을 터치하라",
           TextMapId = "Event_Des_105102012"
         },
         Event_Des_105102013 = {
@@ -9063,7 +9059,7 @@ local Data = {
           TextMapId = "Event_Des_107001"
         },
         Event_Des_107002 = {
-          ContentKR = "PC 클라이언트와\n모바일 클라이언트로 모두 로그인 시\n프로필 프레임·고요한 향로, 순백의 모래시계 등\n보상을 수령할 수 있습니다.",
+          ContentKR = "PC 클라이언트 또는\n모바일 클라이언트로 로그인 시\n프로필 프레임·고요한 향로, 순백의 모래시계 등\n보상을 수령할 수 있습니다.",
           TextMapId = "Event_Des_107002"
         },
         Event_Des_107003 = {
@@ -9493,19 +9489,19 @@ local Data = {
         FeinaEvent_SimpleDungeonDes_2 = {
           ContentKR = "유니콘 씨와 함께 미로 수수께끼 풀기",
           TextMapId = "FeinaEvent_SimpleDungeonDes_2"
+        },
+        FeinaEvent_SimpleDungeonDes_3_1 = {
+          ContentKR = "호수 맞은편에 도착하기",
+          TextMapId = "FeinaEvent_SimpleDungeonDes_3_1"
         }
       }
     end
   },
   {
-    MinKey = "FeinaEvent_SimpleDungeonDes_3_1",
-    MaxKey = "GRADEUP_5301_01",
+    MinKey = "FeinaEvent_SimpleDungeonDes_3_2",
+    MaxKey = "GRADEUP_5301_02",
     Loader = function()
       return {
-        FeinaEvent_SimpleDungeonDes_3_1 = {
-          ContentKR = "호수 맞은편에 도착하기",
-          TextMapId = "FeinaEvent_SimpleDungeonDes_3_1"
-        },
         FeinaEvent_SimpleDungeonDes_3_2 = {
           ContentKR = "나비 소녀와 함께 종점으로 가기",
           TextMapId = "FeinaEvent_SimpleDungeonDes_3_2"
@@ -10292,19 +10288,19 @@ local Data = {
         GRADEUP_5301_01 = {
           ContentKR = "[고치의 꿈]과 [빛 쫓기] 시전 시, 자신은 #3의 최대 HP를 회복하고, 입히는 대미지 #2 상승 효과를 획득하며, 지속 시간 #4초.",
           TextMapId = "GRADEUP_5301_01"
+        },
+        GRADEUP_5301_02 = {
+          ContentKR = "[허물 벗기] 상태에서 #7초마다 [빛나는 비늘 가루] 16개를 발사한다. [빛나는 비늘 가루]와 [비늘 가루 인장]으로 대미지를 입힐 시, #1 확률로 대상 위치에 1개의 [환영]을 생성한다.",
+          TextMapId = "GRADEUP_5301_02"
         }
       }
     end
   },
   {
-    MinKey = "GRADEUP_5301_02",
-    MaxKey = "HomePianoNAme_1003003",
+    MinKey = "GRADEUP_5301_03",
+    MaxKey = "HomePianoNAme_1003004",
     Loader = function()
       return {
-        GRADEUP_5301_02 = {
-          ContentKR = "[허물 벗기] 상태에서 #7초마다 [빛나는 비늘 가루] 16개를 발사한다. [빛나는 비늘 가루]와 [비늘 가루 인장]으로 대미지를 입힐 시, #1 확률로 대상 위치에 1개의 [환영]을 생성한다.",
-          TextMapId = "GRADEUP_5301_02"
-        },
         GRADEUP_5301_03 = {
           ContentKR = "[고치의 꿈] 레벨+2, [반딧불의 빛] 레벨+1.",
           TextMapId = "GRADEUP_5301_03"
@@ -10362,7 +10358,7 @@ local Data = {
           TextMapId = "Guide_HighlightButton_Skill2"
         },
         Guide_Message_AbyssUI_1 = {
-          ContentKR = "<H>몰입형 연극</>이 열렸어. 여기서 적으로 분장한 배우들과 싸우며 전투 기술을 연마할 수 있어.",
+          ContentKR = "<H>몰입형 연극</>이 열렸습니다. 여기서 적으로 분장한 배우들과 싸우며 전투 기술을 연마할 수 있어.",
           TextMapId = "Guide_Message_AbyssUI_1"
         },
         Guide_Message_AbyssUI_2 = {
@@ -10394,7 +10390,7 @@ local Data = {
           TextMapId = "Guide_Message_AbyssUI_7"
         },
         Guide_Message_AbyssUI_8 = {
-          ContentKR = "<H>이동</>을 클릭하여 해당 막의 도전을 시작하세요.",
+          ContentKR = "<H>이동하기</>를 클릭하여 해당 막의 도전을 시작하세요.",
           TextMapId = "Guide_Message_AbyssUI_8"
         },
         Guide_Message_DailyGoalUI_1 = {
@@ -10887,7 +10883,7 @@ local Data = {
           TextMapId = "HomePianoDes_1004004"
         },
         HomePianoDes_1004005 = {
-          ContentKR = "행운의 월석 사냥꾼 1명을 랜덤으로 추첨해 피보다 진한 {性别:형제|자매}를 만나게 한다.",
+          ContentKR = "행운의 월석 사냥꾼 1명을 랜덤으로 추첨해 피보다 진한 {성별: 형제|자매}를 만나게 한다.",
           TextMapId = "HomePianoDes_1004005"
         },
         HomePianoDes_1004006 = {
@@ -11097,19 +11093,19 @@ local Data = {
         HomePianoNAme_1003003 = {
           ContentKR = "생존, 또는 멸망 Ⅰ Fight, or Die Ⅰ",
           TextMapId = "HomePianoNAme_1003003"
+        },
+        HomePianoNAme_1003004 = {
+          ContentKR = "생존, 또는 멸망 Ⅱ Fight, or Die Ⅱ",
+          TextMapId = "HomePianoNAme_1003004"
         }
       }
     end
   },
   {
-    MinKey = "HomePianoNAme_1003004",
-    MaxKey = "MAINUIGUIDE_TITLE_TEST",
+    MinKey = "HomePianoNAme_1004001",
+    MaxKey = "MAINUIGUIDE_TITLE_TRAININGGROUND",
     Loader = function()
       return {
-        HomePianoNAme_1003004 = {
-          ContentKR = "생존, 또는 멸망 Ⅱ Fight, or Die Ⅱ",
-          TextMapId = "HomePianoNAme_1003004"
-        },
         HomePianoNAme_1004001 = {
           ContentKR = "굳게 닫힌 문 The Closed Door",
           TextMapId = "HomePianoNAme_1004001"
@@ -11893,19 +11889,19 @@ local Data = {
         MAINUIGUIDE_TITLE_TEST = {
           ContentKR = "게임 튜토리얼 프로그램 테스트용",
           TextMapId = "MAINUIGUIDE_TITLE_TEST"
+        },
+        MAINUIGUIDE_TITLE_TRAININGGROUND = {
+          ContentKR = "모래 바다의 명상",
+          TextMapId = "MAINUIGUIDE_TITLE_TRAININGGROUND"
         }
       }
     end
   },
   {
-    MinKey = "MAINUIGUIDE_TITLE_TRAININGGROUND",
-    MaxKey = "MESSAGE_TITLE_LOADING_21_PC",
+    MinKey = "MAINUIGUIDE_TITLE_TRAININGGROUND_2",
+    MaxKey = "MESSAGE_TITLE_LOADING_36_PC",
     Loader = function()
       return {
-        MAINUIGUIDE_TITLE_TRAININGGROUND = {
-          ContentKR = "모래 바다의 명상",
-          TextMapId = "MAINUIGUIDE_TITLE_TRAININGGROUND"
-        },
         MAINUIGUIDE_TITLE_TRAININGGROUND_2 = {
           ContentKR = "모래 바다의 명상 종료",
           TextMapId = "MAINUIGUIDE_TITLE_TRAININGGROUND_2"
@@ -12411,18 +12407,6 @@ local Data = {
           ContentKR = "사악한 폭탄 '글로리'를 파괴한 후에는 발판을 이용해서 철수 포인트로 빠르게 이동할 수 있습니다.",
           TextMapId = "MESSAGE_LOADING_37_PC"
         },
-        MESSAGE_LOADING_38_PC = {
-          ContentKR = "제국 요새에서는 다양한 색깔의 케이블이 연결된 방향을 살펴보세요. 방어 장치를 해제하는 데 도움이 될 것입니다.",
-          TextMapId = "MESSAGE_LOADING_38_PC"
-        },
-        MESSAGE_LOADING_39_PC = {
-          ContentKR = "&Avoid&를 누르면 회피할 수 있고, 이때 방향키를 동시에 누르면 해당 방향으로 회피할 수 있습니다.",
-          TextMapId = "MESSAGE_LOADING_39_PC"
-        },
-        MESSAGE_LOADING_39_Phone = {
-          ContentKR = "회피 버튼으로 회피할 수 있고, 이때 방향키를 동시에 누르면 해당 방향으로 회피할 수 있습니다.",
-          TextMapId = "MESSAGE_LOADING_39_Phone"
-        },
         MESSAGE_LOADING_3_PC = {
           ContentKR = "슬라이드 중 &Attack&을 누르면 빠르게 돌진하여 슬라이드 공격할 수 있습니다.",
           TextMapId = "MESSAGE_LOADING_3_PC"
@@ -12431,57 +12415,9 @@ local Data = {
           ContentKR = "점프 버튼을 길게 누른 상태에서 왼쪽으로 슬라이드 하여 빠르게 돌진하며 슬라이드 공격을 할 수 있습니다.",
           TextMapId = "MESSAGE_LOADING_3_Phone"
         },
-        MESSAGE_LOADING_40_PC = {
-          ContentKR = "염료로 캐릭터와 무기의 색깔을 바꿀 수 있습니다.",
-          TextMapId = "MESSAGE_LOADING_40_PC"
-        },
-        MESSAGE_LOADING_41_PC = {
-          ContentKR = "캐릭터에 다양한 장신구를 착용하여 자신만의 독특한 패션을 완성해 보세요.",
-          TextMapId = "MESSAGE_LOADING_41_PC"
-        },
-        MESSAGE_LOADING_42_PC = {
-          ContentKR = "대장장이 루나에게서 무기와 아이템을 주조할 수 있습니다.",
-          TextMapId = "MESSAGE_LOADING_42_PC"
-        },
-        MESSAGE_LOADING_43_PC = {
-          ContentKR = "월드 탐험 도중 우연히 <H>마령</>를 만났다면, <H>통조림</>을 먹이로 주고 친구가 되어 보세요. 마령 지원을 통해, 마령이 전투에 다양한 도움을 줄 것입니다.",
-          TextMapId = "MESSAGE_LOADING_43_PC"
-        },
-        MESSAGE_LOADING_44_PC = {
-          ContentKR = "일부 큰 물고기를 낚았을 때는 <H>더 큰 물고기 잡기</> 기회가 주어집니다. 이번에 낚은 물고기를 미끼로 사용하여 다시 캐스팅하면 더 희귀한 물고기를 낚을 수 있습니다.",
-          TextMapId = "MESSAGE_LOADING_44_PC"
-        },
-        MESSAGE_LOADING_45_PC = {
-          ContentKR = "스페셜 사이드 퀘스트를 완료하면 새로운 시스템 기능을 해제할 수 있습니다.",
-          TextMapId = "MESSAGE_LOADING_45_PC"
-        },
-        MESSAGE_LOADING_46_PC = {
-          ContentKR = "<Highlight>세월 모음집</>에서는 캐릭터가 특정 시기에 겪은 이야기를 확인할 수 있습니다.",
-          TextMapId = "MESSAGE_LOADING_46_PC"
-        },
-        MESSAGE_LOADING_47_PC = {
-          ContentKR = "1개 또는 여러 개의 단서에 대해 생각을 진행하여, 새로운 단서를 획득할 수 있습니다. 중요 단서를 제출하면 사건 추리를 완료할 수 있습니다.",
-          TextMapId = "MESSAGE_LOADING_47_PC"
-        },
-        MESSAGE_LOADING_48_PC = {
-          ContentKR = "월드 각지에서 우연히 일어나는 일부 돌발 사건에 개입하면 해당 사건의 방향에 영향을 미칠 수 있습니다. 일부 돌발 사건에서는 선택에 따라 당신의 '인상'에 영향을 미칠 수 있습니다.",
-          TextMapId = "MESSAGE_LOADING_48_PC"
-        },
-        MESSAGE_LOADING_49_PC = {
-          ContentKR = "달걀 루나의 상점에서 가치 있는 아이템을 대량으로 팔고 있습니다. 달걀 루나의 각 차원의 인상 판정을 완료하면 푸짐한 보상을 획득합니다.",
-          TextMapId = "MESSAGE_LOADING_49_PC"
-        },
         MESSAGE_LOADING_4_PC = {
           ContentKR = "경보가 울리면 더 많은 적이 몰려듭니다.",
           TextMapId = "MESSAGE_LOADING_4_PC"
-        },
-        MESSAGE_LOADING_50_PC = {
-          ContentKR = "월드 탐색, 의뢰, 악몽의 잔향에서는 전투를 보조할 협력 동료를 소환할 수 있습니다.",
-          TextMapId = "MESSAGE_LOADING_50_PC"
-        },
-        MESSAGE_LOADING_51_PC = {
-          ContentKR = "마령 판신, 가장 똑똑한 마령! 그들이 남긴 흔적을 곳곳에서 발견할 수 있습니다. 이 흔적을 추적하여 그들을 찾으면, 뜻밖의 수확이 있을지도 모릅니다.",
-          TextMapId = "MESSAGE_LOADING_51_PC"
         },
         MESSAGE_LOADING_5_PC = {
           ContentKR = "플레이 도중 좁은 곳에 끼어 움직일 수 없다면, '설정'의 '끼임 탈출' 버튼을 사용하세요.",
@@ -12698,15 +12634,7 @@ local Data = {
         MESSAGE_TITLE_LOADING_21_PC = {
           ContentKR = "아스크의 징벌",
           TextMapId = "MESSAGE_TITLE_LOADING_21_PC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MESSAGE_TITLE_LOADING_22_PC",
-    MaxKey = "MOD_NAME_1400",
-    Loader = function()
-      return {
+        },
         MESSAGE_TITLE_LOADING_22_PC = {
           ContentKR = "인상",
           TextMapId = "MESSAGE_TITLE_LOADING_22_PC"
@@ -12770,70 +12698,22 @@ local Data = {
         MESSAGE_TITLE_LOADING_36_PC = {
           ContentKR = "월석 사냥꾼 의뢰: 추격",
           TextMapId = "MESSAGE_TITLE_LOADING_36_PC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MESSAGE_TITLE_LOADING_37_PC",
+    MaxKey = "MOD_NAME_1721",
+    Loader = function()
+      return {
         MESSAGE_TITLE_LOADING_37_PC = {
           ContentKR = "월석 사냥꾼 의뢰: 파괴",
           TextMapId = "MESSAGE_TITLE_LOADING_37_PC"
         },
-        MESSAGE_TITLE_LOADING_38_PC = {
-          ContentKR = "제국 요새 내의 단서",
-          TextMapId = "MESSAGE_TITLE_LOADING_38_PC"
-        },
-        MESSAGE_TITLE_LOADING_39_PC = {
-          ContentKR = "회피",
-          TextMapId = "MESSAGE_TITLE_LOADING_39_PC"
-        },
         MESSAGE_TITLE_LOADING_3_PC = {
           ContentKR = "슬라이드 공격",
           TextMapId = "MESSAGE_TITLE_LOADING_3_PC"
-        },
-        MESSAGE_TITLE_LOADING_40_PC = {
-          ContentKR = "색상 변경",
-          TextMapId = "MESSAGE_TITLE_LOADING_40_PC"
-        },
-        MESSAGE_TITLE_LOADING_41_PC = {
-          ContentKR = "나만의 패션",
-          TextMapId = "MESSAGE_TITLE_LOADING_41_PC"
-        },
-        MESSAGE_TITLE_LOADING_42_PC = {
-          ContentKR = "주조 마스터 대장장이",
-          TextMapId = "MESSAGE_TITLE_LOADING_42_PC"
-        },
-        MESSAGE_TITLE_LOADING_43_PC = {
-          ContentKR = "마령은 통조림을 좋아해",
-          TextMapId = "MESSAGE_TITLE_LOADING_43_PC"
-        },
-        MESSAGE_TITLE_LOADING_44_PC = {
-          ContentKR = "대물 낚시",
-          TextMapId = "MESSAGE_TITLE_LOADING_44_PC"
-        },
-        MESSAGE_TITLE_LOADING_45_PC = {
-          ContentKR = "스페셜 사이드 퀘스트",
-          TextMapId = "MESSAGE_TITLE_LOADING_45_PC"
-        },
-        MESSAGE_TITLE_LOADING_46_PC = {
-          ContentKR = "세월 속의 이야기",
-          TextMapId = "MESSAGE_TITLE_LOADING_46_PC"
-        },
-        MESSAGE_TITLE_LOADING_47_PC = {
-          ContentKR = "추리 시간",
-          TextMapId = "MESSAGE_TITLE_LOADING_47_PC"
-        },
-        MESSAGE_TITLE_LOADING_48_PC = {
-          ContentKR = "돌발사건",
-          TextMapId = "MESSAGE_TITLE_LOADING_48_PC"
-        },
-        MESSAGE_TITLE_LOADING_49_PC = {
-          ContentKR = "달걀 루나의 상점",
-          TextMapId = "MESSAGE_TITLE_LOADING_49_PC"
-        },
-        MESSAGE_TITLE_LOADING_50_PC = {
-          ContentKR = "협력 동료",
-          TextMapId = "MESSAGE_TITLE_LOADING_50_PC"
-        },
-        MESSAGE_TITLE_LOADING_51_PC = {
-          ContentKR = "마령 판신",
-          TextMapId = "MESSAGE_TITLE_LOADING_51_PC"
         },
         MESSAGE_TITLE_SHOOT_PC = {
           ContentKR = "원거리 공격",
@@ -12944,7 +12824,7 @@ local Data = {
           TextMapId = "MOD_DESC_1314"
         },
         MOD_DESC_1315 = {
-          ContentKR = "전투 태세의 균형을 잃은 적에게 대미지를 입힌 후, 전투 태세 균형 상실로 인한 받는 대미지 증가 효과의 양이 #1 상승한다.",
+          ContentKR = "불균형한 자세의 적에게 대미지를 입힌 후, 불균형한 자세로 인한 받는 대미지 증가 효과의 양이 #1 상승한다.",
           TextMapId = "MOD_DESC_1315"
         },
         MOD_DESC_1316 = {
@@ -13506,15 +13386,7 @@ local Data = {
         MOD_NAME_1400 = {
           ContentKR = "전성",
           TextMapId = "MOD_NAME_1400"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MOD_NAME_1401",
-    MaxKey = "MOD_Tag_Type_Name_Lilith01",
-    Loader = function()
-      return {
+        },
         MOD_NAME_1401 = {
           ContentKR = "전성·격양",
           TextMapId = "MOD_NAME_1401"
@@ -13634,7 +13506,15 @@ local Data = {
         MOD_NAME_1721 = {
           ContentKR = "작열·환생",
           TextMapId = "MOD_NAME_1721"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MOD_NAME_1722",
+    MaxKey = "MOD_Type_Name_Suyi01",
+    Loader = function()
+      return {
         MOD_NAME_1722 = {
           ContentKR = "작열·권능",
           TextMapId = "MOD_NAME_1722"
@@ -13968,7 +13848,7 @@ local Data = {
           TextMapId = "MOD_NAME_2504"
         },
         MOD_NAME_2511 = {
-          ContentKR = "꿰뚫기",
+          ContentKR = "꿰뚫어 보기",
           TextMapId = "MOD_NAME_2511"
         },
         MOD_NAME_2512 = {
@@ -14144,7 +14024,7 @@ local Data = {
           TextMapId = "MOD_NAME_3504"
         },
         MOD_NAME_3511 = {
-          ContentKR = "꿰뚫기",
+          ContentKR = "꿰뚫어 보기",
           TextMapId = "MOD_NAME_3511"
         },
         MOD_NAME_3512 = {
@@ -14284,7 +14164,7 @@ local Data = {
           TextMapId = "MOD_Tag_Type_Name_Cerberus02"
         },
         MOD_Tag_Type_Name_Fafnir01 = {
-          ContentKR = "파프니르 (원거리)",
+          ContentKR = "파브니르 (원거리)",
           TextMapId = "MOD_Tag_Type_Name_Fafnir01"
         },
         MOD_Tag_Type_Name_FeatheredSnake01 = {
@@ -14314,15 +14194,7 @@ local Data = {
         MOD_Tag_Type_Name_Lilith01 = {
           ContentKR = "릴리스 (원거리)",
           TextMapId = "MOD_Tag_Type_Name_Lilith01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MOD_Tag_Type_Name_Lilith02",
-    MaxKey = "Message_Guide_DungeonSec_6",
-    Loader = function()
-      return {
+        },
         MOD_Tag_Type_Name_Lilith02 = {
           ContentKR = "돌연변이 릴리스 (원거리 동조)",
           TextMapId = "MOD_Tag_Type_Name_Lilith02"
@@ -14442,7 +14314,15 @@ local Data = {
         MOD_Type_Name_Suyi01 = {
           ContentKR = "소을 모듈",
           TextMapId = "MOD_Type_Name_Suyi01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MOD_Type_Name_Suyi02",
+    MaxKey = "Message_Guide_Fish05",
+    Loader = function()
+      return {
         MOD_Type_Name_Suyi02 = {
           ContentKR = "소을 모듈",
           TextMapId = "MOD_Type_Name_Suyi02"
@@ -14503,10 +14383,6 @@ local Data = {
           ContentKR = "월석 사냥꾼님께,\nCHZZK 스트리밍 시청으로 획득한 보상이 계정에 지급되었습니다.\n우편 하단에 첨부된 아이템을 확인해 주세요.\n \n한결같은 성원에 감사드립니다!\n \n<듀엣 나이트 어비스> 운영진",
           TextMapId = "Mail_Content_10012"
         },
-        Mail_Content_10013 = {
-          ContentKR = "비밀 하나를 알려 줄게. 오늘은 우리가 아주 오랫동안 기다려온 아주 중요한 날이야.\n그래서 12시의 종이 울리자마자, 우리는 네 선물을 준비하기 위해 곧바로 뛰어나갔어. 상인과 흥정하고, 귀찮은 필토이드를 쫓아버려야 했지만, 그래도 무사히 이걸 네게 가져왔어.\n왜냐하면 제일 아끼는 네게 가장 먼저 이 말을 해주고 싶었거든...\n생일 축하해!\n헤헤... 아, 맞다! 이럴 때는 소원을 빌어야지. 음... 올해도 모험을 계속하면서 더 많은 즐거운 것들을 함께 발견하고, 아트라시아 대륙에 우리만의 이야기를 가득 써내려갈 수 있기를!\n아, 아니지, 아니지! 이러면 우리의 소원이 돼 버리잖아. 다시, 얼른 네 마음 속의 소원을 빌어봐! 그게 무엇이든, 미래의 어느날 반드시 이뤄질 테니까!\n——아트라시아의 루나 일동",
-          TextMapId = "Mail_Content_10013"
-        },
         Mail_Content_10014 = {
           ContentKR = "월석 사냥꾼님께,\nLunoloft에서 출석을 완료했습니다. 보상을 수령해 주세요.",
           TextMapId = "Mail_Content_10014"
@@ -14522,18 +14398,6 @@ local Data = {
         Mail_Content_100301 = {
           ContentKR = "보상 결산 오류, 재지급 보상이 이미 가방에 지급되었습니다.",
           TextMapId = "Mail_Content_100301"
-        },
-        Mail_Content_10031 = {
-          ContentKR = "월석 사냥꾼님께,\n월간 주문이 <H>{Time}</>에 만료됩니다. 만료 시간에 유의하여 보상 수령을 놓치지 마세요.",
-          TextMapId = "Mail_Content_10031"
-        },
-        Mail_Content_10032 = {
-          ContentKR = "월석 사냥꾼님께,\n음유 시집이 <H>{Time}</>에 만료됩니다. 만료 시간에 유의하여 보상 수령을 놓치지 마세요.",
-          TextMapId = "Mail_Content_10032"
-        },
-        Mail_Content_10033 = {
-          ContentKR = "월석 사냥꾼님께,\n「{EventName}」 이벤트가 <H>{Time}</>(서버 시간)에 만료됩니다. 만료 시간에 유의하여 보상 수령을 놓치지 마세요.",
-          TextMapId = "Mail_Content_10033"
         },
         Mail_Content_100401 = {
           ContentKR = "월석 사냥꾼님, 이번 음유 시집 장정이 종료되었습니다. 모든 미수령한 보상은 우편을 통해 지급되었으니, 확인해 주세요",
@@ -14623,10 +14487,6 @@ local Data = {
           ContentKR = "CHZZK 시청 보상 지급 완료",
           TextMapId = "Mail_Title_10012"
         },
-        Mail_Title_10013 = {
-          ContentKR = "특별한 오늘",
-          TextMapId = "Mail_Title_10013"
-        },
         Mail_Title_10014 = {
           ContentKR = "출석 보상 우편",
           TextMapId = "Mail_Title_10014"
@@ -14642,14 +14502,6 @@ local Data = {
         Mail_Title_100301 = {
           ContentKR = "결산 보상 재지급 우편",
           TextMapId = "Mail_Title_100301"
-        },
-        Mail_Title_10031 = {
-          ContentKR = "월간 주문 만료 알림",
-          TextMapId = "Mail_Title_10031"
-        },
-        Mail_Title_10032 = {
-          ContentKR = "음유 시집 만료 알림",
-          TextMapId = "Mail_Title_10032"
         },
         Mail_Title_10033 = {
           ContentKR = "[{EventName}] 이벤트 종료 알림",
@@ -15056,18 +14908,6 @@ local Data = {
           ContentKR = "자동 선택 버튼을 눌러 대리인을 한 번에 선택하세요.",
           TextMapId = "Message_Guide_Dispatch_09_Pad"
         },
-        Message_Guide_Dispatch_10 = {
-          ContentKR = "추천 특성에 맞는 캐릭터를 선택하면 성공률을 크게 높일 수 있습니다.",
-          TextMapId = "Message_Guide_Dispatch_10"
-        },
-        Message_Guide_Dispatch_11 = {
-          ContentKR = "여기를 눌러 파견을 시작하세요.",
-          TextMapId = "Message_Guide_Dispatch_11"
-        },
-        Message_Guide_Dispatch_12 = {
-          ContentKR = "참고로, 이미 완료한 돌발 사건만 대리인을 파견할 수 있어. 새로운 돌발 사건은 직접 완료한 후에만 대리인을 파견할 수 있다는 점 잊지 마!",
-          TextMapId = "Message_Guide_Dispatch_12"
-        },
         Message_Guide_DungeonSec_1 = {
           ContentKR = "각 의뢰 편지에는 6가지 다른 보상이 포함되어 있으며, 보상은 세 가지 희귀도로 나뉩니다.",
           TextMapId = "Message_Guide_DungeonSec_1"
@@ -15119,15 +14959,7 @@ local Data = {
         Message_Guide_DungeonSec_6 = {
           ContentKR = "클릭하여 <H>의뢰 편지</> 화면으로 들어가세요.",
           TextMapId = "Message_Guide_DungeonSec_6"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Message_Guide_DungeonSec_6_Pad",
-    MaxKey = "Message_Guide_ReplaceChar_8",
-    Loader = function()
-      return {
+        },
         Message_Guide_DungeonSec_6_Pad = {
           ContentKR = "버튼을 눌러 <H>의뢰 편지</> 화면으로 들어가세요.",
           TextMapId = "Message_Guide_DungeonSec_6_Pad"
@@ -15137,7 +14969,7 @@ local Data = {
           TextMapId = "Message_Guide_DungeonSec_7"
         },
         Message_Guide_DungeonSec_8 = {
-          ContentKR = "해당 의뢰 편지 완료 시 획득 가능한 보상입니다. 의뢰 편지 퀘스트를 완료할 때마다 6종 중 랜덤 3종이 퀘스트 보상으로 제공되며, 그중 1개를 선택할 수 있습니다.",
+          ContentKR = "이곳에서는 해당 의뢰 편지를 완료 시 획득 가능한 보상을 확인할 수 있습니다. 의뢰 편지 퀘스트를 완료할 때마다 6종의 보상 중 랜덤으로 3종이 퀘스트 보상으로 제공되며, 그중 1개를 선택해 수령할 수 있습니다.",
           TextMapId = "Message_Guide_DungeonSec_8"
         },
         Message_Guide_DungeonSec_9 = {
@@ -15287,7 +15119,15 @@ local Data = {
         Message_Guide_Fish05 = {
           ContentKR = "여기를 클릭하여 낚싯줄을 감으세요",
           TextMapId = "Message_Guide_Fish05"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Message_Guide_Forge_1",
+    MaxKey = "Message_Guide_Rouge_4",
+    Loader = function()
+      return {
         Message_Guide_Forge_1 = {
           ContentKR = "여기는 주조대야. 평소에 수집한 재료를 가져오면 여기에서 다양한 무기와 유용한 아이템으로 만들 수 있지!",
           TextMapId = "Message_Guide_Forge_1"
@@ -15927,15 +15767,7 @@ local Data = {
         Message_Guide_ReplaceChar_8 = {
           ContentKR = "<H>'+' 버튼</>을 눌러 <H>캐릭터를 레벨업</>해 보세요.",
           TextMapId = "Message_Guide_ReplaceChar_8"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Message_Guide_ReplaceChar_9",
-    MaxKey = "ModArchive_Name_Char_1010",
-    Loader = function()
-      return {
+        },
         Message_Guide_ReplaceChar_9 = {
           ContentKR = "캐릭터를 교체하고 캐릭터 레벨업 후에는 캐릭터에 적합한 근접 및 원거리 무기를 장착하는 것을 잊지 마세요.",
           TextMapId = "Message_Guide_ReplaceChar_9"
@@ -16095,7 +15927,15 @@ local Data = {
         Message_Guide_Rouge_4 = {
           ContentKR = "<H>'이동'</>을 눌러 미로로 진입하세요.",
           TextMapId = "Message_Guide_Rouge_4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Message_Guide_Rouge_4_Pad",
+    MaxKey = "ModArchive_Name_Char_1400",
+    Loader = function()
+      return {
         Message_Guide_Rouge_4_Pad = {
           ContentKR = "<H>'이동'</>을 선택해 미로로 들어가세요.",
           TextMapId = "Message_Guide_Rouge_4_Pad"
@@ -16735,15 +16575,7 @@ local Data = {
         ModArchive_Name_Char_1010 = {
           ContentKR = "불사조 Ⅰ",
           TextMapId = "ModArchive_Name_Char_1010"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "ModArchive_Name_Char_1020",
-    MaxKey = "Mon_DesDetail_8511001",
-    Loader = function()
-      return {
+        },
         ModArchive_Name_Char_1020 = {
           ContentKR = "티폰 Ⅰ",
           TextMapId = "ModArchive_Name_Char_1020"
@@ -16903,7 +16735,15 @@ local Data = {
         ModArchive_Name_Char_1400 = {
           ContentKR = "그리핀 바람",
           TextMapId = "ModArchive_Name_Char_1400"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "ModArchive_Name_Char_1410",
+    MaxKey = "Mon_Guide_8515001_01",
+    Loader = function()
+      return {
         ModArchive_Name_Char_1410 = {
           ContentKR = "그리핀 번개",
           TextMapId = "ModArchive_Name_Char_1410"
@@ -17097,43 +16937,43 @@ local Data = {
           TextMapId = "ModArchive_Name_Range_3020"
         },
         ModArchive_Name_Range_3030 = {
-          ContentKR = "파프니르 Ⅰ",
+          ContentKR = "파브니르 Ⅰ",
           TextMapId = "ModArchive_Name_Range_3030"
         },
         ModArchive_Name_Range_3040 = {
-          ContentKR = "파프니르 Ⅱ",
+          ContentKR = "파브니르 Ⅱ",
           TextMapId = "ModArchive_Name_Range_3040"
         },
         ModArchive_Name_Range_3050 = {
-          ContentKR = "릴리스 Ⅳ",
+          ContentKR = "릴리스 Ⅲ",
           TextMapId = "ModArchive_Name_Range_3050"
         },
         ModArchive_Name_Range_3060 = {
-          ContentKR = "릴리스 Ⅴ",
+          ContentKR = "릴리스 Ⅳ",
           TextMapId = "ModArchive_Name_Range_3060"
         },
         ModArchive_Name_Range_3070 = {
-          ContentKR = "파프니르 Ⅲ",
+          ContentKR = "릴리스 Ⅴ",
           TextMapId = "ModArchive_Name_Range_3070"
         },
         ModArchive_Name_Range_3080 = {
-          ContentKR = "릴리스 Ⅵ",
+          ContentKR = "파브니르 Ⅲ",
           TextMapId = "ModArchive_Name_Range_3080"
         },
         ModArchive_Name_Range_3090 = {
-          ContentKR = "파프니르 Ⅳ",
+          ContentKR = "파브니르 Ⅳ",
           TextMapId = "ModArchive_Name_Range_3090"
         },
         ModArchive_Name_Range_3100 = {
-          ContentKR = "파프니르 Ⅴ",
+          ContentKR = "파브니르 Ⅴ",
           TextMapId = "ModArchive_Name_Range_3100"
         },
         ModArchive_Name_Range_3110 = {
-          ContentKR = "파프니르 Ⅵ",
+          ContentKR = "파브니르 Ⅵ",
           TextMapId = "ModArchive_Name_Range_3110"
         },
         ModArchive_Name_Range_3120 = {
-          ContentKR = "파프니르 Ⅶ",
+          ContentKR = "파브니르 Ⅷ",
           TextMapId = "ModArchive_Name_Range_3120"
         },
         ModArchive_Name_Range_3130 = {
@@ -17543,15 +17383,7 @@ local Data = {
         Mon_DesDetail_8511001 = {
           ContentKR = "이치로 법을 바로잡고 세상에 빛과 혹한을 내리리라.",
           TextMapId = "Mon_DesDetail_8511001"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_DesDetail_8512001",
-    MaxKey = "Mon_Name_6011022",
-    Loader = function()
-      return {
+        },
         Mon_DesDetail_8512001 = {
           ContentKR = "기승을 부리는 설국의 야수. 아이들의 고향을 무너뜨리고, 요정의 깨진 꿈을 녹였다.",
           TextMapId = "Mon_DesDetail_8512001"
@@ -17711,7 +17543,15 @@ local Data = {
         Mon_Guide_8515001_01 = {
           ContentKR = "<Highlight>거식자</>가 <Highlight>'포자 폭발'</> 또는 <Highlight>'타오르는 숨'</>을 사용할 때, <Highlight>머리의 발광 부위</>가 대미지를 입으면, 일시적으로 행동 불능 상태가 됩니다.",
           TextMapId = "Mon_Guide_8515001_01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Guide_9003001_01",
+    MaxKey = "Mon_Name_6014011",
+    Loader = function()
+      return {
         Mon_Guide_9003001_01 = {
           ContentKR = "<Highlight>'토이박스'</>: 포세이큰 동맹의 '병사' 중 하나로, 주위 환경을 개조하고 함정을 설치하는 것에 능통합니다. \n<Highlight>파괴 의뢰</>에서 '토이박스'를 처치하면 철수 경로에 이동을 돕는 <Highlight>발판</>이 나타납니다.",
           TextMapId = "Mon_Guide_9003001_01"
@@ -18351,15 +18191,7 @@ local Data = {
         Mon_Name_6011022 = {
           ContentKR = "벨로시 필토이드·전뢰 Ⅱ",
           TextMapId = "Mon_Name_6011022"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_6011023",
-    MaxKey = "Mon_Name_7011201",
-    Loader = function()
-      return {
+        },
         Mon_Name_6011023 = {
           ContentKR = "벨로시 필토이드·사혈 Ⅱ",
           TextMapId = "Mon_Name_6011023"
@@ -18519,7 +18351,15 @@ local Data = {
         Mon_Name_6014011 = {
           ContentKR = "새비지 필토이드·서리 Ⅱ",
           TextMapId = "Mon_Name_6014011"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_6014012",
+    MaxKey = "Mon_Name_7014014",
+    Loader = function()
+      return {
         Mon_Name_6014012 = {
           ContentKR = "새비지 필토이드·폭파 Ⅱ",
           TextMapId = "Mon_Name_6014012"
@@ -19159,15 +18999,7 @@ local Data = {
         Mon_Name_7011201 = {
           ContentKR = "저격병·전뢰&수호 Ⅱ",
           TextMapId = "Mon_Name_7011201"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_7011301",
-    MaxKey = "Mon_Name_9001015",
-    Loader = function()
-      return {
+        },
         Mon_Name_7011301 = {
           ContentKR = "저격병·진홍&메마름&서리 Ⅱ",
           TextMapId = "Mon_Name_7011301"
@@ -19327,7 +19159,15 @@ local Data = {
         Mon_Name_7014014 = {
           ContentKR = "돌격병·벼락 Ⅱ",
           TextMapId = "Mon_Name_7014014"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_7014015",
+    MaxKey = "Mon_Name_9003021",
+    Loader = function()
+      return {
         Mon_Name_7014015 = {
           ContentKR = "돌격병·진홍 Ⅱ",
           TextMapId = "Mon_Name_7014015"
@@ -19967,15 +19807,7 @@ local Data = {
         Mon_Name_9001015 = {
           ContentKR = "와일드비 칼날·진홍",
           TextMapId = "Mon_Name_9001015"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_9001016",
-    MaxKey = "Name_200209",
-    Loader = function()
-      return {
+        },
         Mon_Name_9001016 = {
           ContentKR = "와일드비 칼날·메마름",
           TextMapId = "Mon_Name_9001016"
@@ -20135,7 +19967,15 @@ local Data = {
         Mon_Name_9003021 = {
           ContentKR = "'토이박스'·희생",
           TextMapId = "Mon_Name_9003021"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_9003022",
+    MaxKey = "Name_999998",
+    Loader = function()
+      return {
         Mon_Name_9003022 = {
           ContentKR = "'토이박스'·전뢰",
           TextMapId = "Mon_Name_9003022"
@@ -20772,15 +20612,7 @@ local Data = {
         Name_200209 = {
           ContentKR = "위험한 처방전",
           TextMapId = "Name_200209"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Name_200210",
-    MaxKey = "Pack_Name_Battle_Dispatch_9",
-    Loader = function()
-      return {
+        },
         Name_200210 = {
           ContentKR = "하수도의 고목",
           TextMapId = "Name_200210"
@@ -20940,7 +20772,15 @@ local Data = {
         Name_999998 = {
           ContentKR = "긴급 의뢰",
           TextMapId = "Name_999998"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Name_999999",
+    MaxKey = "Pack_Name_Dye_Red1_Shop",
+    Loader = function()
+      return {
         Name_999999 = {
           ContentKR = "다음 버전에서 계속",
           TextMapId = "Name_999999"
@@ -21320,7 +21160,7 @@ local Data = {
           TextMapId = "PET_426_PASSIVE"
         },
         PET_426_SKILL = {
-          ContentKR = "주변의 적에게 메인 캐릭터 공격력 #1의 빛 속성 대미지를 입히고, 자신과 팀원에게 #2의 빛 속성 추가 대미지를 부여한다. 지속 시간 #3초.",
+          ContentKR = "주변의 적에게 메인 캐릭터 공격력 #1의 빛 속성 대미지를 입히고, 자신과 팀원에게 #2의 빛 속성 추가 대미지를 입힌다. 지속 시간 #3초.",
           TextMapId = "PET_426_SKILL"
         },
         PET_491_SKILL = {
@@ -21550,15 +21390,7 @@ local Data = {
         Pack_Name_Battle_Dispatch_9 = {
           ContentKR = "파견 전투 보상 패키지 Lv.9",
           TextMapId = "Pack_Name_Battle_Dispatch_9"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Pack_Name_Battle_Dispatch_Des",
-    MaxKey = "PartyReward_Description_310203",
-    Loader = function()
-      return {
+        },
         Pack_Name_Battle_Dispatch_Des = {
           ContentKR = "보상 패키지 오픈 시 등장 가능 아이템:\n파손된 스멜링 솔트\n석재 분말\n붉은 눈물방울\n땅의 가지\n필토이드의 응고체\n사슬",
           TextMapId = "Pack_Name_Battle_Dispatch_Des"
@@ -21718,7 +21550,15 @@ local Data = {
         Pack_Name_Dye_Red1_Shop = {
           ContentKR = "기본 염료 세트·라테라이트",
           TextMapId = "Pack_Name_Dye_Red1_Shop"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Pack_Name_Dye_Red2_Shop",
+    MaxKey = "PartyReward_Name_110103",
+    Loader = function()
+      return {
         Pack_Name_Dye_Red2_Shop = {
           ContentKR = "기본 염료 세트·연지",
           TextMapId = "Pack_Name_Dye_Red2_Shop"
@@ -21780,7 +21620,7 @@ local Data = {
           TextMapId = "Pack_Name_Globule_Plenty"
         },
         Pack_Name_MainChar_General_1 = {
-          ContentKR = "월석 사냥꾼 코스튬 패키지·별빛",
+          ContentKR = "월석 사냥꾼 패키지·별빛",
           TextMapId = "Pack_Name_MainChar_General_1"
         },
         Pack_Name_Midsummer_Gacha01 = {
@@ -22352,15 +22192,7 @@ local Data = {
         PartyReward_Description_310203 = {
           ContentKR = "가위를 쥔 메이드의 손이 메마른 꽃을 향하고 있는 것 같아 다행이다.",
           TextMapId = "PartyReward_Description_310203"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "PartyReward_Description_310204",
-    MaxKey = "PartyTopic_Name_230101",
-    Loader = function()
-      return {
+        },
         PartyReward_Description_310204 = {
           ContentKR = "꽃차 한 잔, 그리고 메이드의 맹세.",
           TextMapId = "PartyReward_Description_310204"
@@ -22520,7 +22352,15 @@ local Data = {
         PartyReward_Name_110103 = {
           ContentKR = "<달이 걸려있는 가지>",
           TextMapId = "PartyReward_Name_110103"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PartyReward_Name_110104",
+    MaxKey = "PartyTopic_Name_510104",
+    Loader = function()
+      return {
         PartyReward_Name_110104 = {
           ContentKR = "사라진 시간",
           TextMapId = "PartyReward_Name_110104"
@@ -23160,15 +23000,7 @@ local Data = {
         PartyTopic_Name_230101 = {
           ContentKR = "슈퍼체인지",
           TextMapId = "PartyTopic_Name_230101"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "PartyTopic_Name_230102",
-    MaxKey = "Pet_Name_4931",
-    Loader = function()
-      return {
+        },
         PartyTopic_Name_230102 = {
           ContentKR = "보육원 탈출",
           TextMapId = "PartyTopic_Name_230102"
@@ -23328,7 +23160,15 @@ local Data = {
         PartyTopic_Name_510104 = {
           ContentKR = "소녀 트러플의 고민",
           TextMapId = "PartyTopic_Name_510104"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PartyTopic_Name_510201",
+    MaxKey = "PhantomTalk_5102_Chest",
+    Loader = function()
+      return {
         PartyTopic_Name_510201 = {
           ContentKR = "술 친구",
           TextMapId = "PartyTopic_Name_510201"
@@ -23959,15 +23799,7 @@ local Data = {
         Pet_Name_4931 = {
           ContentKR = "기적의 흔들흔들 젤리",
           TextMapId = "Pet_Name_4931"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Pet_Name_4932",
-    MaxKey = "QuestDesc_10020609",
-    Loader = function()
-      return {
+        },
         Pet_Name_4932 = {
           ContentKR = "굳센 흔들흔들 젤리",
           TextMapId = "Pet_Name_4932"
@@ -24127,7 +23959,15 @@ local Data = {
         PhantomTalk_5102_Chest = {
           ContentKR = "내가 뭘 찾았는지 봐. 늘 하던 대로 반반씩 나눌까?",
           TextMapId = "PhantomTalk_5102_Chest"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PhantomTalk_5301_Chest",
+    MaxKey = "QuestDesc_10030113",
+    Loader = function()
+      return {
         PhantomTalk_5301_Chest = {
           ContentKR = "이 상자... 안에도 누군가의 추억이 담겨 있을까요?",
           TextMapId = "PhantomTalk_5301_Chest"
@@ -24767,15 +24607,7 @@ local Data = {
         QuestDesc_10020609 = {
           ContentKR = "프시케의 시력에 심각한 문제가 생긴 것 같지만, 그녀는 더 이상 말하려 하지 않는다.\n프시케는 당신과 함께 눈물의 호수 근처의 오래된 나무뿌리로 가고 싶어 한다. 그곳에는 그녀의 어린 시절 추억이 담겨있는 것 같다.",
           TextMapId = "QuestDesc_10020609"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "QuestDesc_10020610",
-    MaxKey = "QuestName_10020311",
-    Loader = function()
-      return {
+        },
         QuestDesc_10020610 = {
           ContentKR = "프시케의 말에 따르면 이 나무뿌리 아래에 비밀이 묻혀 있는 것 같다. 땅을 파서 꺼내보자.",
           TextMapId = "QuestDesc_10020610"
@@ -24935,7 +24767,15 @@ local Data = {
         QuestDesc_10030113 = {
           ContentKR = "리듬에게서 어유를 받아들자, 고양이는 매우 친근한 태도로 꼬리를 흔들고 야옹거리며 당신에게 따라오라는 신호를 보냈다. 그렇다면 한 번 따라가 보자.",
           TextMapId = "QuestDesc_10030113"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "QuestDesc_10030114",
+    MaxKey = "QuestName_10020612",
+    Loader = function()
+      return {
         QuestDesc_10030114 = {
           ContentKR = "당신들은 고양이를 따라가 수상한 표정의 어부를 발견했고, 어부는 뭔가 질문하기도 전에 울며 무릎을 꿇고 자백하겠다고 하지만 뭔가 수상해 보인다. 그를 잘 심문해보자.",
           TextMapId = "QuestDesc_10030114"
@@ -25517,7 +25357,7 @@ local Data = {
           TextMapId = "QuestName_10020304"
         },
         QuestName_10020305 = {
-          ContentKR = "글로스터 폐광 깊숙히 들어가 반짝이는 수정 찾기",
+          ContentKR = "'히프노스의 집'으로 이동",
           TextMapId = "QuestName_10020305"
         },
         QuestName_10020306 = {
@@ -25573,27 +25413,19 @@ local Data = {
           TextMapId = "QuestName_10020310"
         },
         QuestName_10020311 = {
-          ContentKR = "글로스터 폐광 깊숙히 들어가 반짝이는 수정 찾기",
+          ContentKR = "다른 투숙객에게서 단서 알아보기",
           TextMapId = "QuestName_10020311"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "QuestName_10020312",
-    MaxKey = "READSERIES_1057",
-    Loader = function()
-      return {
+        },
         QuestName_10020312 = {
           ContentKR = "글로스터 폐광 깊이 들어가 반짝이는 수정 찾기",
           TextMapId = "QuestName_10020312"
         },
         QuestName_10020313 = {
-          ContentKR = "폐광 깊숙히 도사리고 있는 거대 필토이드 처치하기",
+          ContentKR = "아웃사이더에게 조사 결과 보고",
           TextMapId = "QuestName_10020313"
         },
         QuestName_10020314 = {
-          ContentKR = "반짝이는 수정 줍기",
+          ContentKR = "아웃사이더에게 조사 결과 보고",
           TextMapId = "QuestName_10020314"
         },
         QuestName_10020315 = {
@@ -25641,7 +25473,7 @@ local Data = {
           TextMapId = "QuestName_10020409"
         },
         QuestName_10020410 = {
-          ContentKR = "로비로 돌아가 헨릭 기다리기",
+          ContentKR = "아웃사이더 집 근처로 가서 그와 만나기",
           TextMapId = "QuestName_10020410"
         },
         QuestName_10020411 = {
@@ -25649,7 +25481,7 @@ local Data = {
           TextMapId = "QuestName_10020411"
         },
         QuestName_10020412 = {
-          ContentKR = "아웃사이더에게 조사 결과 보고하기",
+          ContentKR = "프시케의 안전 확인",
           TextMapId = "QuestName_10020412"
         },
         QuestName_10020501 = {
@@ -25689,7 +25521,7 @@ local Data = {
           TextMapId = "QuestName_10020507"
         },
         QuestName_10020601 = {
-          ContentKR = "'히프노스의 집' 근처로 가서 스노우와 만나기",
+          ContentKR = "???",
           TextMapId = "QuestName_10020601"
         },
         QuestName_10020602 = {
@@ -25743,7 +25575,15 @@ local Data = {
         QuestName_10020612 = {
           ContentKR = "아이스레이크 시티로 돌아가기",
           TextMapId = "QuestName_10020612"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "QuestName_10020613",
+    MaxKey = "READ_DESC_2000037",
+    Loader = function()
+      return {
         QuestName_10020613 = {
           ContentKR = "수상한 병사 처치",
           TextMapId = "QuestName_10020613"
@@ -26333,7 +26173,7 @@ local Data = {
           TextMapId = "Quest_Tips_GuideBookInDungeon"
         },
         Quest_Tips_LeaveHintTrigger = {
-          ContentKR = "퀘스트 지역을 떠납니다",
+          ContentKR = "퀘스트 지역 떠나기",
           TextMapId = "Quest_Tips_LeaveHintTrigger"
         },
         Quest_Tips_QuestTrackLock = {
@@ -26383,15 +26223,7 @@ local Data = {
         READSERIES_1057 = {
           ContentKR = "<은촛불 축제 찬가>",
           TextMapId = "READSERIES_1057"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "READSERIES_1069",
-    MaxKey = "READ_TEXT_2000042",
-    Loader = function()
-      return {
+        },
         READSERIES_1069 = {
           ContentKR = "<포세이큰 동맹 비화>",
           TextMapId = "READSERIES_1069"
@@ -26399,10 +26231,6 @@ local Data = {
         READSERIES_1070 = {
           ContentKR = "<달이 걸려있는 가지>",
           TextMapId = "READSERIES_1070"
-        },
-        READSERIES_1096 = {
-          ContentKR = "연금술사의 노트",
-          TextMapId = "READSERIES_1096"
         },
         READSERIES_DESC_1039 = {
           ContentKR = "자료 선반의 수많은 자료를 뒤져 아이들의 사진이 붙어 있는 자료를 찾았다. 그가 히프노스의 집에서 보낸 매일이 상세하게 기록되어 있다.",
@@ -26555,7 +26383,15 @@ local Data = {
         READ_DESC_2000037 = {
           ContentKR = "책상 위에 놓인 편지. 펼쳐져 있는 걸 보아 이미 읽은 것 같으며, 글씨가 정갈하게 적혀 있다. 수신인은 헨릭 애설레드.",
           TextMapId = "READ_DESC_2000037"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "READ_DESC_2000038",
+    MaxKey = "READ_TEXT_20621",
+    Loader = function()
+      return {
         READ_DESC_2000038 = {
           ContentKR = "여러 장의 채무 독촉장이 책상 위에 어지럽게 널려 있다. 전부 헨릭에게 빨리 돈을 갚으라고 재촉하는 내용이다. 히프노스의 집은 일찍이 재정난에 빠진 것이 분명하다.",
           TextMapId = "READ_DESC_2000038"
@@ -26635,14 +26471,6 @@ local Data = {
         READ_DESC_2000070 = {
           ContentKR = "이스엘의 학자 코메나가 쓴 역사서. 내용이 워낙 난해한 데다 휘페르보레아 제국의 정사와도 차이가 있어 널리 읽히지 않는다. 서점에서 5년에 한 질이 팔릴까 말까 한 책으로, 사실상 실용성보다는 장식적인 가치가 높다.",
           TextMapId = "READ_DESC_2000070"
-        },
-        READ_DESC_2000096 = {
-          ContentKR = "글로스터 광산에 남겨져 있는 노트. 내용으로 보아, 어떤 학자가 쓴 듯하다.",
-          TextMapId = "READ_DESC_2000096"
-        },
-        READ_DESC_2000097 = {
-          ContentKR = "글로스터 광산 깊은 곳에 남겨진 노트. 군데군데 검붉은 얼룩이 묻어 있다. 필체로 볼 때, 앞서 발견한 노트와 동일한 인물이 작성한 듯하다. 뒷부분은 휘갈기듯 쓰여 있어, 매우 다급한 상황에서 기록한 것 같다.",
-          TextMapId = "READ_DESC_2000097"
         },
         READ_DESC_20600 = {
           ContentKR = "우연히 발견하여 수집한 종이들. 정교한 양피지 두루마리부터 잉크 냄새가 아직 남아 있는 인쇄물, 급하게 노트에서 찢어낸 듯한 페이지 조각까지 다양하다. 깔끔하거나 지저분한 이 글자들의 유일한 공통점은 모두 특정 장소를 암시하는 것 같다는 것이다...",
@@ -26940,14 +26768,6 @@ local Data = {
           ContentKR = "달이 걸려있는 가지·봉기 전야",
           TextMapId = "READ_NAME_2000071"
         },
-        READ_NAME_2000096 = {
-          ContentKR = "연금술사의 노트 Ⅰ",
-          TextMapId = "READ_NAME_2000096"
-        },
-        READ_NAME_2000097 = {
-          ContentKR = "연금술사의 노트 Ⅱ",
-          TextMapId = "READ_NAME_2000097"
-        },
         READ_NAME_20602 = {
           ContentKR = "연옥도 Ⅰ",
           TextMapId = "READ_NAME_20602"
@@ -27191,15 +27011,7 @@ local Data = {
         READ_TEXT_2000042 = {
           ContentKR = "이름: 엘리사 테일러\n나이: 17\n증상: 미각 감퇴\n\n...\n다른 아이들이 종일 우는 것과는 다르게 엘리사는 이상할 정도로 냉정했다. 아니, 심지어는 냉담했다. 미각이 상실되는 자신의 증상에 대해 얘기할 때도, 그녀는 음식 섭취는 인간의 생존 수단일 뿐이며, 자신은 미각이 사라져도 괜찮다고 했다. 심지어는 어머니께 자신을 이곳에 데려올 필요가 없다고 직설적으로 말하기도 했다. 병사들에게 총에 맞아 죽어도 상관없다고 말하는 그녀는 마치 태어날 때부터 죽을 날을 기다리는 사람처럼 담담하게 모든 것을 받아들였다.\n...\n엘리사는 글 쓰는 것을 좋아하는 것 같았다. 매일 창가에 시를 적고는 했는데, 그녀의 시는 전부 조금 난해했다. 사용하는 단어를 보자면, 그녀의 정신 상태가 그렇게 좋은 편은 아닌 것 같다.\n...\n어느 날 프시케와 한참을 대화하던 엘리사는 보기 드물게 웃음을 비췄다. 그전까지 난 질병이 엘리사의 웃음을 앗아갔다고 생각했었다.\n...",
           TextMapId = "READ_TEXT_2000042"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "READ_TEXT_2000043",
-    MaxKey = "RESOURCE_DESC_12079",
-    Loader = function()
-      return {
+        },
         READ_TEXT_2000043 = {
           ContentKR = "이름: 헌트 클라크\n나이: 18\n증상: 간헐적 난청\n\n...\n미아가 그를 많이 배려했던 덕인지 헌트의 정서는 안정적인 편이었다. 그가 이곳에 왔을 땐 침식이 이미 중후기까지 진행됐었다. 그날 그에게 살날이 많지 않다는 소식을 전했을 때, 나보다 키가 컸던 아이가 내 앞에서 펑펑 울며 살려달라고 애원했다. 그는 겨우 18세였다. 자신을 사랑하는 부모가 있었고, 자신을 아껴주는 선배, 그리고 새로이 만난 애인도 있었다. 난 칼로 마음이 베이는 것만 같았지만, 표정을 가다듬고 그에게 이건 운명이라는 말밖엔 할 수 없었다. 사실 난 침식 억제 약물을 다시 실험하던 중이었지만, 위험성도 높고 결과도 예측할 수 없었기에 그에게 아무런 약속도 할 수 없었다. 세상에서 제일 잔인한 건, 한 사람에게 절망을 주는 것이 아니라, 희망을 줬다가 다시 무참히 빼앗는 것이니까.\n...\n미아는 헌트가 그녀에게 선물한 회중시계를 손에 쥐고 눈물을 흘리며 노래를 흥얼거렸다. 하지만 헌트는 더 이상 그녀의 노래를 들을 수 없었다. 헌트는 영원한 잠에 빠졌다. 그의 얼굴은 평온했고 옅은 미소까지 띠고 있었다. 난 그가 고통스럽게 간 건 아니라고 생각한다. 그저 내가 반짝이는 수정을 찾기도 전에... 약을 만들기도 전에, 너무 조급하게 갔을 뿐이다...",
           TextMapId = "READ_TEXT_2000043"
@@ -27257,7 +27069,7 @@ local Data = {
           TextMapId = "READ_TEXT_2000056"
         },
         READ_TEXT_2000057 = {
-          ContentKR = "1. 서곡\n\n이런 광란의 축제를 들어본 적 있는가\n\n신을 모독하는 군사가 악마의 후예와 손잡고\n\n남쪽의 손님과 극북의 주민이 함께 노래하여\n\n솔라와 카론의 은빛 평화를 찬미하노라\n\n솔라는 등불을 든 채 눈물 흘리고\n\n카론은 걱정 없이 기쁘게 웃네\n\n허리를 돌려라, 손발을 흔들자\n\n춤추며 즐거움에 젖어라\n\n즐거움에 열광하라\n\n열광으로 슬픔을 지우고\n\n슬픔을 과거에 선물하라\n\n과거의 끝, 그곳에서 칭송할 성과 이름\n\n솔라누스 갈레아\n\n오랜 이름을 얻되 신에게 반기를 들어라\n\n갑주의 이름을 계승하여 제왕을 보필하라\n\n디스 갈레아 폐하의 너무 일찍 세상을 떠난 동생\n\n솔라누스 갈레아!",
+          ContentKR = "Ⅰ. 서곡\n\n이런 광란의 축제를 들어본 적 있는가\n\n신을 모독하는 군사가 악마의 후예와 손잡고\n\n남쪽의 손님과 극북의 주민이 함께 노래하여\n\n솔라와 카론의 은빛 평화를 찬미하노라\n\n솔라는 등불을 든 채 눈물 흘리고\n\n카론은 걱정 없이 기쁘게 웃네\n\n허리를 돌려라, 손발을 흔들자\n\n춤추며 즐거움에 젖어라\n\n즐거움에 열광하라\n\n열광으로 슬픔을 지우고\n\n슬픔을 과거에 선물하라\n\n과거의 끝, 그곳에서 칭송할 성과 이름\n\n솔라누스 갈레아\n\n오랜 이름을 얻되 신에게 반기를 들어라\n\n갑주의 이름을 계승하여 제왕을 보필하라\n\n디스 갈레아 폐하의 너무 일찍 세상을 떠난 동생\n\n솔라누스 갈레아!",
           TextMapId = "READ_TEXT_2000057"
         },
         READ_TEXT_2000058 = {
@@ -27315,14 +27127,6 @@ local Data = {
         READ_TEXT_2000071 = {
           ContentKR = "성탑력 900~998년: 봉기 전야\n성탑력 998년, 굳건한 기반을 자랑하는 엘리시안 교회에서 일어난 거대한 봉기가 대륙 남부 전역을 휩쓸었다. 봉기는 교회의 통치를 뒤엎지는 못했지만, 살아남은 봉기군은 엘리시안을 떠나 북부 땅에 새로운 나라들을 세웠다. 역사는 이 일련의 사건을 ‘대이동’이라 칭한다.\n이 사건이 있기 전까지 천 년간 이어진 교회의 신권 통치는 영원할 것처럼 보였다. 고위 사제부터 평민까지 모두가 이 체제가 밖으로는 필토이드의 침략을 막고 안으로는 평온한 일상을 지켜줄, 영원불변의 질서라 믿었다. 하지만 반복되는 필토이드의 침공은 겉으로는 교회를 향한 민중의 숭배심을 키우는 동시에, 물밑에서는 대지의 모든 것을 조용히 바꾸고 있었다.\n이 필토이드의 공습은 교회의 각 계급에 서로 다른 문제를 안겨주었다.\n첫 번째 변화는 침공 당시 가장 큰 피해를 입었던 기사단에서 시작되었다. 역설적이게도 기사단은 전쟁이 끝난 후 놀라운 속도로 세력을 회복했다. 기사들의 영웅적인 전투 모습과 신을 직접 목격했다는 소문에, 신앙심 깊은 평민들이 기사단으로 구름처럼 몰려들었다. 대부분은 정식 기사가 아닌 평범한 군인이 되었을 뿐이지만, 그들은 신과 더 가까워졌다고 느끼며 자발적으로 자신들의 토지까지 기사단에 헌납했다.\n그 결과 순수한 군사 조직이었던 기사단은 상업, 경제, 종교 기능까지 아우르는 복합 조직으로 변모했다. 아홉 신을 향한 믿음 위에는 기사단장 개인을 향한 충성이 더해졌고, 이 개인적 충성과 막대한 부가 결합하여 역사상 유례없던 계급인 군사 귀족이 탄생했다.\n이들을 '귀족'이라 부른 이유는, 신의 선택이나 시험으로 정해지던 기사단장직이 세습으로 변질되었기 때문이다. 기사단장의 친족들은 재정과 영지 관리를 명목으로 요직을 차지했고, 위세 높은 기사단이 여는 연회는 신을 기리는 의식보다 성대하다는 소문까지 돌았다. 당시에는 누구도 이 변화가 무엇을 의미하는지 알지 못했지만, 한 인간을 향한 숭배가 신에 대한 믿음을 넘어설 때, 그 인간이 신마저 끌어내릴 힘을 쥐게 된다는 사실을 역사가 증명하기까지는 오랜 시간이 걸리지 않았다.\n두 번째 변화는 자영농 계층에서 시작되었다. 침공 이전에 도시 근교에서 자급자족하던 이들은 필토이드의 습격으로 모든 것을 잃고 기사단장에게 의탁하는 소작농으로 전락했다. 한편, 이들이 남긴 폐허를 복구하는 과정에서 상인이라는 새로운 직업이 태어났다.\n이들은 물건을 등에 지고 떠도는 행상인이나 노점상과 달리, 막대한 자본으로 한 지역의 물품을 사들여 이를 재건 지역에 유통시켰다. 그들은 호화로운 저택 안에서 오직 돈의 힘으로 모든 것을 움직였고, 수많은 자영농은 그들의 거대한 사업 계획을 떠받치는 톱니바퀴가 되었다.\n이 상인들은 마땅히 취해야 할 이익만을 챙기며 교회의 계율을 따르는 듯했지만, 시간이 지나자 '마땅히 취해야 할 이익'이라는 말의 의미를 왜곡하고 거대한 부를 쌓았다.\n그리고 이러한 거대 상인의 등장은 자영농의 삶을 더욱 옥죄였다. 게다가 만약 그들이 마주해야 하는 대상인이 때마침 기사단장이었을 경우, 자영농은 경제적 착취와 군사적 위압이라는 이중고를 겪었다. 흉년이라도 들면, 그들은 대상인에게 땅을 넘기고 소작농이 되는 것으로도 모자라, 기사단의 여러 의식을 위한 공물 부담까지 더해져 생계마저 위협받았다. 그럼에도 이들은 그 모든 고통이 신의 섭리일 것이라 믿었다. 하지만, 어째서 신이 내게 이런 가혹한 시련을 내리는가에 대한 의문이 피어나며, 그 믿음도 흔들리기 시작했다.\n그렇다면 신들 자신은 어땠을까? 변화의 바람은 신과 가장 가까운 이들인 사제들 역시 뒤흔들었다. 겉보기에는 여전히 교회에 앉아 수도에서 내려온 지시를 따랐기에 별다른 영향을 받지 않은 듯했지만, 소수의 사제들은 훗날 봉기와 대이동에 참여해 그 누구보다도 거대한 파장을 일으켰다.\n결국, 신이란 무엇인가?\n본디 완벽하고 지고한 존재가, 스스로를 서로 다른 아홉 신으로 나눈 것인가?\n혹은 각기 다른 완벽한 아홉 존재가 뜻을 모아 이 세상의 토대가 된 것인가?\n아홉 신의 탄생에 순서가 있다면, 이는 신들 사이에 우열이 존재한다는 것인가?\n신 위에 또 다른 신이 존재하는가?\n이 질문들은 수백 년간 신학자들을 괴롭혔고, 마침내 성탑력 480년 제8차 보편 공의회에서 다음과 같은 합의가 이루어졌다.\n신은 복잡하다. 신의 의식은 만물을 품고 있으며, 스스로를 아홉으로 나누었으나, 이 아홉 신은 모두 평등하며 하나이다.\n신은 완벽하고 완전하다. 이 세상의 모든 일과 변화 여부는 신의 완벽한 안배이며, 신은 변화를 초월한 불변이자 필연적인 존재이다.\n신은 무한하다. 신은 모든 것의 끝과 시작이며, 만물이 태어나게 된 이유이다.\n그러나 백여 년에 걸친 논쟁 끝에 간신히 도출된 이 합의는, 불과 20년 뒤 성탑력 500년의 필토이드의 공습 앞에서 속절없이 무너졌다.\n만월과 운명의 신의 강림은 신의 존재를 증명했지만, '아홉 신은 진정으로 평등한가?'라는 새로운 의문을 낳았다.\n이 세상의 모든 것이 신의 계획에 따른 것이라면, 신이 직접 강림해 자신의 계획인 필토이드의 공습을 중단시켜야 했던 이유는 무엇인가?\n보편 공의회가 내린 결론에 불만을 품었던 사제들의 마음에 싹튼 이런 의문들은, 자영농들이 품었던 의문과 맞닿아 '신은 믿을 수 있는 존재인가?'라는 하나의 질문으로 합쳐졌다.\n맹신이 의심으로 변하자, 일부 사제들은 신의 존재를 탐구하려 낡은 기록을 파헤치고 실험을 고안했다.\n그 결과 과거 여덟 차례의 공의회 기록은 교리의 기준이 되기는커녕, 서로를 공격하는 무기가 되어, 1차 공의회의 결론이 7차 공의회에서 뒤집히고, 2차 공의회에서 이단으로 규정한 자가 6차 공의회에서 무죄를 선고받는 등, 서로 충돌하는 모순된 기록들이 오히려 신의 존재 기반을 송두리째 흔들었다.\n교회는 사제들의 의문을 해소하고 그들의 사상을 바로잡기 위해 '아카데미 사제'라는 직책을 신설했고, 수백 년이 지나서야 교회 내부의 목소리는 표면적으로나마 다시 하나로 통일되는 듯했다. 그러나 아카데미 사제의 가르침보다는 낡은 기록과 사변적 문서에 더 많은 관심을 보이는 사제들은 소수나마 여전히 남아 있었고, 교회는 그들을 학문에 빠진 괴짜 정도로 여겼다.\n그런 박식하고 문제 의식을 갖춘 사제들 중 렉시스라는 젊은이가 있었다. 그는 영원의 서라는 책을 통해 교리의 모든 허점을 해결하겠다는 목표를 세우고, 신의 은총이 이 세상에 어떻게 퍼져 나가는지 직접 확인하고 기록으로 남기고자 수도를 떠났다.\n하지만 '현자'라는 또 다른 이름을 얻게 된 렉시스는 끝내 수도로 돌아오지 않았으며, 삼두늑대 기사단 출신의 디스 갈레아와 함께 의병들을 이끌고 교회를 떠나, 역사의 새로운 장을 열었다.",
           TextMapId = "READ_TEXT_2000071"
-        },
-        READ_TEXT_2000096 = {
-          ContentKR = "연금술사의 노트 Ⅰ\n\n(글로스터 광산에 남겨져 있는 노트. 내용으로 보아, 어떤 학자가 쓴 듯하다.)\n......\n4월 16일\n우리는 이 폐광에서 특이한 <H>노란색 정동</>을 발견했다. 재질로 볼 때, 산속 깊은 동굴에 숨겨져 있다는 반짝이는 수정이나 폐광에 남겨진 월석은 아닌 듯하며, 아마도 현재까지 발견되지 않은 광물인 듯하다.\n......\n4월 18일\n놀랍게도, 이 은은한 빛을 내뿜는 노란 정동의 크기가 <H>커진</> 것을 밥이 발견했다. 분명히 손바닥만 하던 것이 덤불 크기만 한 결정 군락이 되어 있었다.\n......\n4월 20일\n...정동이 또 '자라났다'. 마치 살아있는 생물체처럼, 가시 모양의 수정체가 되어, 광갱 안의 통로를 막아버렸다. 다행히 재질이 약해서 쉽게 깨지기 때문에, 약간의 <H>화약</>만 있으면 폭파할 수 있다.\n밥이 이 결정은 광물이 아니라 어떤 <H>필토이드의 분비물</>, 또는 이를 모체로 한 생성물이며, 시간이 흐르면서 물에 젖은 스펀지처럼 팽창하는 것이 아닐까 하는 가설을 제시했다. 밥이 필토이드 생물학에 관해 조예가 깊기는 하지만, 아직까지는 대담한 가설에 불과하다.\n......\n4월 21일\n밥의 가설을 검증하기 위해, 광갱 깊숙히 들어가 보기로 했다. 만약 그의 추측이 맞다면, 이 폐광 깊은 곳에는 야외의 필트이드와 다른 특수한 필토이드 <H>모체</>가 반드시 존재할 것이다.\n......",
-          TextMapId = "READ_TEXT_2000096"
-        },
-        READ_TEXT_2000097 = {
-          ContentKR = "연금술사의 노트 Ⅱ\n\n(글로스터 광산 깊은 곳에 남겨진 노트. 군데군데 검붉은 얼룩이 묻어 있다. 필체로 볼 때, 앞서 발견한 노트와 동일한 인물이 작성한 듯하다. 뒷부분은 휘갈기듯 쓰여 있어, 매우 다급한 상황에서 기록한 것 같다.)\n\n......\n4월 23일\n밥의 예상대로 우리는 산속 깊은 곳에 있는 바위 동굴, 즉 글로스터 광산의 옛 '금지구역'에서 필토이드를 발견했다.\n20여 미터 길이의, 지금까지 본 필토이드 중 가장 큰 개체였다. 모습은 해골을 닮았는데, 사지의 말단에서 노란 결정체가 계속 '자라나고' 있어, 이것이 그동안 본 노란색 결정체의 '모체'임을 확인할 수 있었다.\n우리는 일단 이곳에서 잠복하며 놈의 습성을 계속 관찰하기로 했다.\n......\n4월 26일\n놈은 기타 필토이드와 비교할 때, 체격이 큰 것 외에도 분명히 구분되는 특징이 있었다. 바로, <H>빛을 내는 광물</>에 매우 큰 흥미를 보인다는 것이었다. 놈은 종종 폐광을 돌아다니며, 무언가를 캐내는 동작을 끝없이 반복했다. 그러다 광산에 있는 월석 부스러기나 산속의 실버라이트 등 발광체 광물을 찾아내면, 곧장 신체의 말단에 노란 결정을 만들어내, 광물들을 잘 감쌌다.\n밥은 이 습성에 큰 관심을 가졌다. 놈이 발광체를 캐내 모으고, 포장하는 일련의 행위는 단순히 해바라기처럼 빛을 좇는 습성이 아니라, '의식'의 산물에 가깝다는 것이었다.\n필토이드에게 인류에 가까운 의식이 남아 있다고? 만약 이 가설이 사실로 증명된다면, 필토이드 생물학의 기존 연구에는 거대한 파장이 일어날 것이다.\n......\n4월 27일\n우리는 중대한 실수를 범했다.\n밥은 놈의 행동양식을 더욱 심층적으로 검증하기 위해, '수집품'을 훔치는 방식으로 놈을 자극하여, 반응을 관찰하려 했다.\n그러나 우리는 놈의 반응 속도를 간과했다. 놈은 한 번도 보지 못한 속도로 달려들어, 우리 두 사람을 갈가리 찢어버리려 했다.\n밥이 내게 도망칠 시간을 벌어 주어, 가까스로 놈의 동굴에서 빠져나갈 수 있었지만, 나는 이미 치명상을 입었다. 이 폐광에서 살아서 나가기는 틀렸다.\n만약 이 노트를 발견하는 이가 있다면, 이것을 꼭 디즈마니아 황실 소드 연금원에 전달해 주길 바란다. 우리가 '크리스탈 이터'라고 이름 붙인 이 필토이드에 대한 연구는, 지금까지의 필토이드 생물학에 중대한 변화를 가져올 것이다.\n지식이 우리와 함께 이 작은 동굴 안에 묻혀서는 안 된다.\n\n연금술사 이네스 모레이",
-          TextMapId = "READ_TEXT_2000097"
         },
         READ_TEXT_20602 = {
           ContentKR = "1월 1일\n오늘 ▇▇▇▇에게 '용돈'이라며 월석 조각을 몇 개 받았다. 황성의 아이들은 성인이 되기 전까진 어른들에게 '용돈'을 받아 간식이나 장난감 같은 걸 산다는 이야기도 덧붙였다.\n유적지엔 상점이 없으니까 일단 모아 뒀다가 갖고 싶거나 하고 싶은 게 생기면 자기가 도와줄 테니 '용돈'을 내고 바꾸면 된다고 한다.\n근데 난 갖고 싶은 게 없는데…\n\n1월 2일\n{nickname}에게 줄 '생일 선물'을 사면 될 것 같다. 황성 아이들이 생일 때 먹는다는 '케이크'를 사 줘야지! 엄청 귀한 음식 같지만, '용돈'을 더 모아서 ▇▇▇▇에게 부탁하면 분명 구해다 줄 것이다.\n마침 주방에서 오래된 항아리 하나를 찾았다. 여기에 '용돈'을 보관하면 딱 좋겠다.\n\n1월 16일\n오늘 숨바꼭질 하다가 {nickname}이(가) 내 항아리를 발견해서 하마터면 열어볼 뻔했다… 더 안전한 곳을 찾아서 숨겨둬야겠다.\n내일 ▇▇▇▇의 연금용 방에 가봐야겠다. 그 방엔 엄청난 물건들이 있어서 ▇▇▇▇가 절대 {nickname}을(를) 들여보내 주지 않을 거다.\n\n1월 17일\n<H>연금용 방 옆의 폭포 아래</>에 저금통을 숨겨 두었다. 이러면 {nickname}(이)랑 ▇▇▇▇에게 들키지 않겠지.\n\n…\n\n▇▇월 ▇▇일\n곧 {nickname}의 생일이다. 상자 가득 '용돈'을 모아 놨으니, '케이크'로 바꿀 수 있을 것이다. 그런데 요즘 ▇▇▇▇에게 무슨 걱정거리가 있는 건지 늦게까지 깨어 있던데…아무래도 내년에 부탁하는 게 좋겠다.\n그때는 더 큰 케이크를 살 수 있을 테니 우리 셋이 배불리 먹을 수 있을 것이다.",
@@ -27387,7 +27191,15 @@ local Data = {
         READ_TEXT_20621 = {
           ContentKR = "임시 물자 수령 지점:\n\n<H>동력실 외곽의 감시창 컨트롤러 스테이션 아래</>",
           TextMapId = "READ_TEXT_20621"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "READ_TEXT_20622",
+    MaxKey = "RESOURCE_DESC_12125",
+    Loader = function()
+      return {
         READ_TEXT_20622 = {
           ContentKR = "안녕, 내 전 동료들! 같이 축제를 보내자고!\n \n벌써부터 의심하진 말고. 요새에서 개선 기념일 이외의 축제를 금지하는 건 알아... 우리끼리 몰래 보내면 되는 거잖아!\n내 고향에서는 4월의 첫날을 '봄맞이 눈꽃 축제'라고 불러. 다 같이 눈이 녹은 소나무 가지에 장식을 달고, 나무 아래에서 선물을 교환하면서 지나간 추운 겨울을 축하하고 다가올 따뜻한 봄을 기다리는 거지.\n다들 알겠지만, <H>모의 전장</>에도 소나무가 있어! 훈련할 때 종종 탄흔과 화학 연기를 남기기도 했지. 뭐, 그것도 나름 장식이라고 할 수 있지 않을까? 다음 주에 제6편대 훈련인 거로 기억하는데, 너희들의 선물을 <H>물가 근처에 있는 소나무 아래</>에 묻어뒀어. 훈련 끝나면 전장 청소를 핑계로 선물 챙겨가~\n(한 사람당 하나씩 준비했으니까 욕심부리지 말 것! 몰래 지켜보고 있을 거야... 0~0)\n \n내가 다른 부대로 발령 났어도, 우린 계속 친구인 거 맞지?",
           TextMapId = "READ_TEXT_20622"
@@ -27999,15 +27811,7 @@ local Data = {
         RESOURCE_DESC_12079 = {
           ContentKR = "도면대로 정확히 제작한 정화의 불 부품. 일단 방아쇠를 당기면, 마치 결심을 내린 그 순간처럼 탄환은 절대 뒤를 돌아보지 않는다.",
           TextMapId = "RESOURCE_DESC_12079"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_12080",
-    MaxKey = "RESOURCE_DESC_41008",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_12080 = {
           ContentKR = "도면대로 정확히 제작한 정화의 불 부품. 강철로 만들어 매우 단단하기 때문에 탄환이 부족할 때 둔기 또는 투척물로 사용할 수 있다.",
           TextMapId = "RESOURCE_DESC_12080"
@@ -28195,7 +27999,15 @@ local Data = {
         RESOURCE_DESC_12125 = {
           ContentKR = "도면대로 정확히 제작한 와해 부품. 강철로 만들어 매우 단단하기 때문에 탄환이 부족할 때 둔기 또는 투척물로 사용할 수 있다.",
           TextMapId = "RESOURCE_DESC_12125"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_12126",
+    MaxKey = "RESOURCE_DESC_5110200",
+    Loader = function()
+      return {
         RESOURCE_DESC_12126 = {
           ContentKR = "도면대로 정확히 제작한 와해 부품. 탄환이 쏘아져 나갈 때면, 전사의 심장은 그 총열처럼 뜨거워진다.",
           TextMapId = "RESOURCE_DESC_12126"
@@ -28807,15 +28619,7 @@ local Data = {
         RESOURCE_DESC_41008 = {
           ContentKR = "자주 무기의 상태를 확인하는 건 승률을 올리는 효과적인 방법 중 하나다.",
           TextMapId = "RESOURCE_DESC_41008"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_41009",
-    MaxKey = "RESOURCE_NAME_10102",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_41009 = {
           ContentKR = "무심코 반복하는 행동이야말로, 사람의 가장 깊은 내면을 비추는 거울이다.",
           TextMapId = "RESOURCE_DESC_41009"
@@ -29003,7 +28807,15 @@ local Data = {
         RESOURCE_DESC_5110200 = {
           ContentKR = "대장장이 루나가 제작한 낚싯대. 수면 감지 까망이 한 마리가 증정품으로 딸려 온다. 물고기가 바늘을 물면 까망이가 신호를 준다. 구매한 사람들의 평가를 들어보면, 까망이에 정신이 팔려 빈손으로 돌아가는 사람도 많다고 한다.",
           TextMapId = "RESOURCE_DESC_5110200"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_5110300",
+    MaxKey = "RESOURCE_NAME_105",
+    Loader = function()
+      return {
         RESOURCE_DESC_5110300 = {
           ContentKR = "대장장이 루나가 제작한 낚싯대. 수면 감지 까망이 한 마리가 증정품으로 딸려 온다. 물고기가 바늘을 물면 까망이가 신호를 준다. 구매한 사람들의 평가를 들어보면, 까망이에 정신이 팔려 빈손으로 돌아가는 사람도 많다고 한다.",
           TextMapId = "RESOURCE_DESC_5110300"
@@ -29615,15 +29427,7 @@ local Data = {
         RESOURCE_NAME_10102 = {
           ContentKR = "곤경 탈출의 링",
           TextMapId = "RESOURCE_NAME_10102"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_10103",
-    MaxKey = "RESOURCE_NAME_12129",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_10103 = {
           ContentKR = "시간 역행의 링",
           TextMapId = "RESOURCE_NAME_10103"
@@ -29645,7 +29449,7 @@ local Data = {
           TextMapId = "RESOURCE_NAME_1011104"
         },
         RESOURCE_NAME_1011501 = {
-          ContentKR = "인장·리사벨",
+          ContentKR = "인장·분노",
           TextMapId = "RESOURCE_NAME_1011501"
         },
         RESOURCE_NAME_1011502 = {
@@ -29811,7 +29615,15 @@ local Data = {
         RESOURCE_NAME_105 = {
           ContentKR = "루나 코인·2차 CBT",
           TextMapId = "RESOURCE_NAME_105"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_110",
+    MaxKey = "RESOURCE_NAME_20029",
+    Loader = function()
+      return {
         RESOURCE_NAME_110 = {
           ContentKR = "물빛 프리즘",
           TextMapId = "RESOURCE_NAME_110"
@@ -29821,7 +29633,7 @@ local Data = {
           TextMapId = "RESOURCE_NAME_110001"
         },
         RESOURCE_NAME_110006 = {
-          ContentKR = "출항 선택 코스튬 패키지·별빛",
+          ContentKR = "출항 캐릭터 코스튬 패키지·별빛",
           TextMapId = "RESOURCE_NAME_110006"
         },
         RESOURCE_NAME_11001 = {
@@ -30423,15 +30235,7 @@ local Data = {
         RESOURCE_NAME_12129 = {
           ContentKR = "비탄의 메아리 총열",
           TextMapId = "RESOURCE_NAME_12129"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_12130",
-    MaxKey = "RESOURCE_NAME_4010010",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_12130 = {
           ContentKR = "발골 방아쇠",
           TextMapId = "RESOURCE_NAME_12130"
@@ -30619,7 +30423,15 @@ local Data = {
         RESOURCE_NAME_20029 = {
           ContentKR = "고정 지지대",
           TextMapId = "RESOURCE_NAME_20029"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_2003",
+    MaxKey = "RESOURCE_NAME_5013031",
+    Loader = function()
+      return {
         RESOURCE_NAME_2003 = {
           ContentKR = "완성도",
           TextMapId = "RESOURCE_NAME_2003"
@@ -31231,15 +31043,7 @@ local Data = {
         RESOURCE_NAME_4010010 = {
           ContentKR = "틈새의 꽃",
           TextMapId = "RESOURCE_NAME_4010010"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_4010011",
-    MaxKey = "RESOURCE_TEXT_11007",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_4010011 = {
           ContentKR = "성음 은방울꽃",
           TextMapId = "RESOURCE_NAME_4010011"
@@ -31427,7 +31231,15 @@ local Data = {
         RESOURCE_NAME_5013031 = {
           ContentKR = "키다리 아저씨·특이종",
           TextMapId = "RESOURCE_NAME_5013031"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_5021010",
+    MaxKey = "RESOURCE_TEXT_20022",
+    Loader = function()
+      return {
         RESOURCE_NAME_5021010 = {
           ContentKR = "영원의 등대",
           TextMapId = "RESOURCE_NAME_5021010"
@@ -32039,15 +31851,7 @@ local Data = {
         RESOURCE_TEXT_11007 = {
           ContentKR = "\"남들과 다른 게 뭐가 나빠! 누군가는 필사적으로 자신의 개성을 증명하려고 하는데, 나는, 하... 난 타고난 이단아야. 아버지 신에게 버림받은 부족에서도 가장 기이한 장식품 같은 존재라고!\"\n\n—— 포세이큰 동맹 '레이븐' 카오스",
           TextMapId = "RESOURCE_TEXT_11007"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_TEXT_11008",
-    MaxKey = "RLBlessingGroup_Desc_202",
-    Loader = function()
-      return {
+        },
         RESOURCE_TEXT_11008 = {
           ContentKR = "\"남들과 다른 게 뭐가 나빠! 누군가는 필사적으로 자신의 개성을 증명하려고 하는데, 나는, 하... 난 타고난 이단아야. 아버지 신에게 버림받은 부족에서도 가장 기이한 장식품 같은 존재라고!\"\n\n—— 포세이큰 동맹 '레이븐' 카오스",
           TextMapId = "RESOURCE_TEXT_11008"
@@ -32235,7 +32039,15 @@ local Data = {
         RESOURCE_TEXT_20022 = {
           ContentKR = "\"그것은 시간의 흐름을 떠올리게 한다... 그 작용도 시간과 유사하게, 균열을 메우고 과거를 감추며 모든 게 문제 없는 것처럼 가장한다. 그렇다, 그것의 원래 용도는 낡은 옛 구조를 보강하는 것이었다. 하지만 사물에 한계가 있듯이, 고온에 노출되면 급격하게 폭발하여, 새것이든 낡은 것이든 상관없이 모든 것을 파괴한다.\" \n\n—— 공학 연금원 재료학 연구원 에메랄드, <신규 재료의 원리 해설 및 사용 설명>",
           TextMapId = "RESOURCE_TEXT_20022"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_TEXT_20023",
+    MaxKey = "RLBlessing_Desc_110",
+    Loader = function()
+      return {
         RESOURCE_TEXT_20023 = {
           ContentKR = "\"이제 나는 여기에 잠들어\n수억 개의 모래알을 짊어진다.\n이보다 호화스러운 무덤은 없으리라.\n태양이 떠오르면\n금빛으로 빛나는 나의 무덤을 보게 될 거다.\" \n\n—— 케메트 민요, <금전꾼의 만종>",
           TextMapId = "RESOURCE_TEXT_20023"
@@ -32847,15 +32659,7 @@ local Data = {
         RLBlessingGroup_Desc_202 = {
           ContentKR = "원거리 무기로 대미지를 입힐 시, [부유하는 달] 효과를 발동하고 [초소형 부유하는 달] <Highlight>3</>개를 생성한다. 해당 효과는 <Highlight>10</>초마다 최대 1회 발동.",
           TextMapId = "RLBlessingGroup_Desc_202"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessingGroup_Desc_203",
-    MaxKey = "RLBlessing_Name_413",
-    Loader = function()
-      return {
+        },
         RLBlessingGroup_Desc_203 = {
           ContentKR = "[초소형 부유하는 달] 습득 시 [유월]을 1개 획득한다.",
           TextMapId = "RLBlessingGroup_Desc_203"
@@ -33043,7 +32847,15 @@ local Data = {
         RLBlessing_Desc_110 = {
           ContentKR = "<Highlight>$1</>초마다 주변 <Highlight>8</>m 내의 적에게 [염화] <Highlight>1</>단계를 부여한다.",
           TextMapId = "RLBlessing_Desc_110"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLBlessing_Desc_111",
+    MaxKey = "RLBlessing_Name_715",
+    Loader = function()
+      return {
         RLBlessing_Desc_111 = {
           ContentKR = "<Highlight>$3</>단계 이상의 [염화]를 보유한 적에게 대미지를 입힐 시, 자신이 HP를 <Highlight>$1</> 회복한다. 해당 효과는 <Highlight>$2</>초마다 최대 1회 발동한다.",
           TextMapId = "RLBlessing_Desc_111"
@@ -33133,7 +32945,7 @@ local Data = {
           TextMapId = "RLBlessing_Desc_302"
         },
         RLBlessing_Desc_303 = {
-          ContentKR = "스킬 효율이 <Highlight>#1</> 상승한다.",
+          ContentKR = "스킬 효율이 <Highlight>$1</> 상승한다.",
           TextMapId = "RLBlessing_Desc_303"
         },
         RLBlessing_Desc_304 = {
@@ -33169,7 +32981,7 @@ local Data = {
           TextMapId = "RLBlessing_Desc_311"
         },
         RLBlessing_Desc_312 = {
-          ContentKR = "스킬 위력이 <Highlight>#1</> 상승한다.",
+          ContentKR = "스킬 위력이 <Highlight>$1</> 상승한다.",
           TextMapId = "RLBlessing_Desc_312"
         },
         RLBlessing_Desc_313 = {
@@ -33277,7 +33089,7 @@ local Data = {
           TextMapId = "RLBlessing_Desc_508"
         },
         RLBlessing_Desc_509 = {
-          ContentKR = "최대 회피 횟수가 <Highlight>#1</>회 증가한다.",
+          ContentKR = "최대 회피 횟수가 <Highlight>$1</>회 증가한다.",
           TextMapId = "RLBlessing_Desc_509"
         },
         RLBlessing_Desc_510 = {
@@ -33297,7 +33109,7 @@ local Data = {
           TextMapId = "RLBlessing_Desc_513"
         },
         RLBlessing_Desc_514 = {
-          ContentKR = "공격 속도가 <Highlight>$1</> 상승한다.",
+          ContentKR = "공격 속도가 <Highlight>#1</> 상승한다.",
           TextMapId = "RLBlessing_Desc_514"
         },
         RLBlessing_Desc_515 = {
@@ -33655,15 +33467,7 @@ local Data = {
         RLBlessing_Name_413 = {
           ContentKR = "자연의 중후",
           TextMapId = "RLBlessing_Name_413"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessing_Name_414",
-    MaxKey = "RLBlessing_UnlockCon_409",
-    Loader = function()
-      return {
+        },
         RLBlessing_Name_414 = {
           ContentKR = "자연의 법칙",
           TextMapId = "RLBlessing_Name_414"
@@ -33851,7 +33655,15 @@ local Data = {
         RLBlessing_Name_715 = {
           ContentKR = "얽힌 줄기",
           TextMapId = "RLBlessing_Name_715"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLBlessing_Name_unknown",
+    MaxKey = "RLContract_Desc_107",
+    Loader = function()
+      return {
         RLBlessing_Name_unknown = {
           ContentKR = "미지의 축복",
           TextMapId = "RLBlessing_Name_unknown"
@@ -34463,15 +34275,7 @@ local Data = {
         RLBlessing_UnlockCon_409 = {
           ContentKR = "심지 미해제",
           TextMapId = "RLBlessing_UnlockCon_409"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessing_UnlockCon_410",
-    MaxKey = "RLTreasure_Desc_12201",
-    Loader = function()
-      return {
+        },
         RLBlessing_UnlockCon_410 = {
           ContentKR = "심지 미해제",
           TextMapId = "RLBlessing_UnlockCon_410"
@@ -34659,7 +34463,15 @@ local Data = {
         RLContract_Desc_107 = {
           ContentKR = "전투·희미한 그림자와 전투·흩어진 그림자에서 추가로 <Highlight>#1</>명의 지휘자가 나타난다.",
           TextMapId = "RLContract_Desc_107"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLContract_Desc_108",
+    MaxKey = "RLTreasure_IPDesc_10303",
+    Loader = function()
+      return {
         RLContract_Desc_108 = {
           ContentKR = "전투·아득한 그림자에서 추가로 <Highlight>#1</>명의 엘리트 적이 나타난다.",
           TextMapId = "RLContract_Desc_108"
@@ -35271,15 +35083,7 @@ local Data = {
         RLTreasure_Desc_12201 = {
           ContentKR = "대미지가 <Highlight>$1</> 감소한다. <Highlight>@1</>층 클리어 후 해당 효과를 종료하고 잿불 <Highlight>@2</>개를 획득한다.",
           TextMapId = "RLTreasure_Desc_12201"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLTreasure_Desc_13101",
-    MaxKey = "RLTreasure_SimpleDesc_14201",
-    Loader = function()
-      return {
+        },
         RLTreasure_Desc_13101 = {
           ContentKR = "대미지를 입힐 시, <Highlight>$1</> 확률로 캐릭터 공격력 <Highlight>$2</>의 추가 불 속성 대미지를 입힌다.",
           TextMapId = "RLTreasure_Desc_13101"
@@ -35467,7 +35271,15 @@ local Data = {
         RLTreasure_IPDesc_10303 = {
           ContentKR = "\"왜 날 구한 거죠?\" 깨어난 기사가 물었다. 부릅뜬 눈이 창백한 얼굴에서 튀어나올 듯했다. \"난 미치기 전에 죽고 싶었을 뿐이에요. 그랬다면 적어도 온전한 영혼을 가질 수 있었으니까!\"\n기사는 치유 사제가 어렵게 살려낸 몸을 끌고, 다시 어둠 속으로 발길을 돌렸다. 이제, 그는 또 누구를 구해야 할 것인가?",
           TextMapId = "RLTreasure_IPDesc_10303"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLTreasure_IPDesc_10304",
+    MaxKey = "RL_Event304_Select_2",
+    Loader = function()
+      return {
         RLTreasure_IPDesc_10304 = {
           ContentKR = "\"그 융통성 없는 상인이 상점 규칙을 바꾸려 하지 않는군요. 어쩔 수 없이 제가 애프터서비스를 해 드리죠.\" 마술사는 카드 한 묶음을 꺼내더니, 뒷면이 위로 가게 놓고 잘 섞었다. \"자, 이제 신나게 한 번 뽑아 볼까요!\"",
           TextMapId = "RLTreasure_IPDesc_10304"
@@ -36079,15 +35891,7 @@ local Data = {
         RLTreasure_SimpleDesc_14201 = {
           ContentKR = "근접 무기 대미지가 감소하는 대신, 입히는 대미지가 상승한다.",
           TextMapId = "RLTreasure_SimpleDesc_14201"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLTreasure_SimpleDesc_14202",
-    MaxKey = "RougeLike_Room_EB_Fail",
-    Loader = function()
-      return {
+        },
         RLTreasure_SimpleDesc_14202 = {
           ContentKR = "원거리 무기 대미지가 감소하는 대신, 입히는 대미지가 상승한다.",
           TextMapId = "RLTreasure_SimpleDesc_14202"
@@ -36275,7 +36079,15 @@ local Data = {
         RL_Event304_Select_2 = {
           ContentKR = "[-50 잿불] <Highlight>파란색</> 또는 <Highlight>보라색</> [유물] 1개 랜덤 획득.",
           TextMapId = "RL_Event304_Select_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RL_Event304_Select_3",
+    MaxKey = "SKILL_10502_DESC",
+    Loader = function()
+      return {
         RL_Event304_Select_3 = {
           ContentKR = "[잿불] <Highlight>150</>개를 획득한다.",
           TextMapId = "RL_Event304_Select_3"
@@ -36433,11 +36245,11 @@ local Data = {
           TextMapId = "RL_Event321_Select_1"
         },
         RL_Event321_Select_2 = {
-          ContentKR = "<Highlight>파란색</> 또는 <Highlight>보라색</> [심지]를 랜덤으로 1개 획득한다.",
+          ContentKR = "<Highlight>파란색</> 또는 <Highlight>보라색</> [잿불]을 랜덤으로 1개 획득한다.",
           TextMapId = "RL_Event321_Select_2"
         },
         RL_Event322_Select_1 = {
-          ContentKR = "전투 시작 및 승리 후, <Highlight>보라색</> [심지]를 랜덤으로 1개 획득한다.",
+          ContentKR = "전투 시작 및 승리 후,  <Highlight>보라색</> [잿불]을 랜덤으로 1개 획득한다.",
           TextMapId = "RL_Event322_Select_1"
         },
         RL_Event322_Select_2 = {
@@ -36526,7 +36338,7 @@ local Data = {
         },
         Ranged = {ContentKR = "원거리", TextMapId = "Ranged"},
         Reading_Content_101223 = {
-          ContentKR = "(글로스터 광산에 남겨져 있는 노트. 내용으로 보아, 어떤 학자가 쓴 듯하다.)\n......\n4월 16일\n우리는 이 폐광에서 특이한 <H>노란색 정동</>을 발견했다. 재질로 볼 때, 산속 깊은 동굴에 숨겨져 있다는 반짝이는 수정이나 폐광에 남겨진 월석은 아닌 듯하며, 아마도 현재까지 발견되지 않은 광물인 듯하다.\n......\n4월 18일\n놀랍게도, 이 은은한 빛을 내뿜는 노란 정동의 크기가 <H>커진</> 것을 밥이 발견했다. 분명히 손바닥만 하던 것이 덤불 크기만 한 결정 군락이 되어 있었다.\n......\n4월 20일\n...정동이 또 '자라났다'. 마치 살아있는 생물체처럼, 가시 모양의 수정체가 되어, 광갱 안의 통로를 막아버렸다. 다행히 재질이 약해서 쉽게 깨지기 때문에, 약간의 <H>화약</>만 있으면 폭파할 수 있다.\n밥이 이 결정은 광물이 아니라 어떤 <H>필토이드의 분비물</>, 또는 이를 모체로 한 생성물이며, 시간이 흐르면서 물에 젖은 스펀지처럼 팽창하는 것이 아닐까 하는 가설을 제시했다. 밥이 필토이드 생물학에 관해 조예가 깊기는 하지만, 아직까지는 대담한 가설에 불과하다.\n......\n4월 21일\n밥의 가설을 검증하기 위해, 광갱 깊숙히 들어가 보기로 했다. 만약 그의 추측이 맞다면, 이 폐광 깊은 곳에는 야외의 필트이드와 다른 특수한 필토이드 <H>모체</>가 반드시 존재할 것이다.\n.......",
+          ContentKR = "(글로스터 광산에 남겨져 있는 노트. 내용으로 보아, 어떤 학자가 쓴 듯하다.)\n......\n4월 16일\n우리는 이 폐광에서 특이한 <H>노란색 정동</H>을 발견했다. 재질로 볼 때, 산속 깊은 동굴에 숨겨져 있다는 반짝이는 수정이나 폐광에 남겨진 월석은 아닌 듯하며, 아마도 현재까지 발견되지 않은 광물인 듯하다.\n......\n4월 18일\n놀랍게도, 이 은은한 빛을 내뿜는 노란 정동의 크기가 <H>커진</H> 것을 밥이 발견했다. 분명히 손바닥만 하던 것이 덤불 크기만 한 결정 군락이 되어 있었다.\n......\n4월 20일\n...정동이 또 '자라났다'. 마치 살아있는 생물체처럼, 가시 모양의 수정체가 되어, 광갱 안의 통로를 막아버렸다. 다행히 재질이 약해서 쉽게 깨지기 때문에, 약간의 <H>화약</>만 있으면 폭파할 수 있다.\n 밥이 이 결정은 광물이 아니라 어떤 <H>필토이드의 분비물</>, 또는 이를 모체로 한 생성물이며, 시간이 흐르면서 물에 젖은 스펀지처럼 팽창하는 것이 아닐까 하는 가설을 제시했다. 밥이 필토이드 생물학에 관해 조예가 깊기는 하지만, 아직까지는 대담한 가설에 불과하다.\n......\n4월 21일\n밥의 가설을 검증하기 위해, 광갱 깊숙히 들어가 보기로 했다. 만약 그의 추측이 맞다면, 이 폐광 깊은 곳에는 야외의 필트이드와 다른 특수한 필토이드 <H>모체</>가 반드시 존재할 것이다.\n.......",
           TextMapId = "Reading_Content_101223"
         },
         Reading_Content_200208 = {
@@ -36563,7 +36375,7 @@ local Data = {
           TextMapId = "RightShift"
         },
         RougeLike_GetBlessing = {
-          ContentKR = "심지 획득!",
+          ContentKR = "심지 얻다!",
           TextMapId = "RougeLike_GetBlessing"
         },
         RougeLike_GetTreasure = {
@@ -36881,15 +36693,7 @@ local Data = {
         RougeLike_Room_EB_Fail = {
           ContentKR = "그림자에 삼켜졌습니다.",
           TextMapId = "RougeLike_Room_EB_Fail"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RougeLike_Room_EB_Success",
-    MaxKey = "SKILL_310303_NAME",
-    Loader = function()
-      return {
+        },
         RougeLike_Room_EB_Success = {
           ContentKR = "모든 그림자가 사라졌습니다.",
           TextMapId = "RougeLike_Room_EB_Success"
@@ -37077,7 +36881,15 @@ local Data = {
         SKILL_10502_DESC = {
           ContentKR = "스킬 위력+<H>#1</>. 물 속성 캐릭터가 해당 무기로 크리티컬 발동 시, 다른 팀원에게 스킬 대미지 <H>#2</> 상승 효과를 부여한다. 지속 시간 <H>#3</>초.",
           TextMapId = "SKILL_10502_DESC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_10503_DESC",
+    MaxKey = "SKILL_420101_DESC",
+    Loader = function()
+      return {
         SKILL_10503_DESC = {
           ContentKR = "스킬 지속+<H>#1</>",
           TextMapId = "SKILL_10503_DESC"
@@ -37203,7 +37015,7 @@ local Data = {
           TextMapId = "SKILL_150101_NAME"
         },
         SKILL_150102_DESC = {
-          ContentKR = "근접 무기를 [사마엘]로 전환하고 전방 범위 내의 적에게 빛 속성 대미지를 입힌다. [사마엘] 사용 기간, 해당 스킬을 다시 사용하면 [사마엘]이 회수된다.\n[사마엘]로 기본 공격 시전 시, 최대 4단계의 연속 공격을 발동한다.\n[사마엘]로 차지 공격 시전 시 정신력을 소모하며, 길게 눌러 차지 상태를 유지할 수 있다. 차지 기간 [못 참아]를 획득하고, 0.5초마다 정신력을 소모하여 콤보 포인트를 획득한다. \n길게 누르기 종료, 정신력 부족 또는 콤보 레벨이 최대에 도달하면 차지 공격을 발동하여, 전방 범위 내의 적에게 빛 속성 대미지를 입힌다.",
+          ContentKR = "근접 무기를 [사마엘]로 전환하고 전방 범위 내의 적에게 빛 속성 대미지를 입힌다. [사마엘] 사용 기간, 자신의 정신력이 지속적으로 소모되며, 정신력이 0이 되거나 해당 스킬을 다시 사용할 때 [사마엘]을 회수한다.\n[사마엘]로 기본 공격 시전 시, 최대 4단계의 연속 공격을 발동한다.\n[사마엘]로 차지 공격 시전 시, 길게 누르면 정신력을 지속적으로 소모하여 차지 상태를 유지한다. 길게 누러 종료, 정신력 부족 또는 콤보 레벨이 최대에 도달하면 차지 공격을 발동하여 전방 범위 내의 적에게 빛 속성 대미지를 입힌다.\n차지 지속 기간, [못 참아]를 획득하고 0.5초마다 일정한 콤보 포인트를 획득한다.",
           TextMapId = "SKILL_150102_DESC"
         },
         SKILL_150102_NAME = {
@@ -37227,7 +37039,7 @@ local Data = {
           TextMapId = "SKILL_150104_NAME"
         },
         SKILL_150202_DESC = {
-          ContentKR = "[장송] 상태에 진입한다. 진입 시, 자신의 스킬 범위가 100%를 초과할 경우, 초과한 부분은 일정 비율에 따라 스킬 위력으로 전환되고, 스킬 범위는 100%가 된다. 효과는 [장송] 상태가 종료될 때까지 지속된다.\n[장송] 상태에서 원거리 무기의 발동 확률이 상승한다. [달 사냥] 시전 시 정신력을 소모하지 않고, 대미지 대상을 범위 중심으로 끌어당긴다. [일식] 시전 시 정신력을 소모하지 않으며, 대미지 배율이 증가한다.\n일정 시간이 지나거나 [달 사냥]과 [일식] 6회 시전 후 [장송] 상태는 종료된다.",
+          ContentKR = "[장송] 상태에 진입한다. 진입 시, 자신의 스킬 범위가 100%를 초과할 경우, 초과한 부분은 일정 비율에 따라 스킬 위력으로 전환되고, 스킬 범위가 100%로 감소하면 [장송] 상태가 종료될 때까지 지속된다.\n[장송] 상태에서 원거리 무기의 발동 확률이 상승한다. [달 사냥] 시전 시 정신력을 소모하지 않고, 대미지 대상을 범위 중심으로 끌어당긴다. [일식] 시전 시 정신력을 소모하지 않으며, 대미지 배율이 증가한다.\n일정 시간이 지나거나 [달 사냥]과 [일식] 6회 시전 후 [장송] 상태를 종료한다.",
           TextMapId = "SKILL_150202_DESC"
         },
         SKILL_150202_NAME = {
@@ -37363,7 +37175,7 @@ local Data = {
           TextMapId = "SKILL_180191_NAME"
         },
         SKILL_20101_DESC = {
-          ContentKR = "발동 확률+<H>#1</>. 해당 무기로 사격 시, 해당 무기의 발동 확률에 따라 1개의 탄환을 추가로 발사하며, 탄환을 소모하지 않는다. 명중 시 해당 무기 공격력 <H>#2</>의 범위 대미지를 입힌다.",
+          ContentKR = "캐릭터 공격력+<H>#1</>. 해당 무기로 사격 시, 해당 무기의 발동 확률에 따라 1개의 탄환을 추가로 발사하며, 탄환을 소모하지 않는다. 명중 시 해당 무기 공격력 <H>#2</>의 범위 대미지를 입힌다.",
           TextMapId = "SKILL_20101_DESC"
         },
         SKILL_20102_DESC = {
@@ -37689,15 +37501,7 @@ local Data = {
         SKILL_310303_NAME = {
           ContentKR = "정확한 플레이 방법",
           TextMapId = "SKILL_310303_NAME"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_310304_DESC",
-    MaxKey = "SKILL_DESC_2301Rate",
-    Loader = function()
-      return {
+        },
         SKILL_310304_DESC = {
           ContentKR = "[귀요미]를 시전할 때마다 [광란의 굉음] 1단계 획득한다. 스킬 효율 상승, 최대 중첩 3단계.",
           TextMapId = "SKILL_310304_DESC"
@@ -37771,7 +37575,7 @@ local Data = {
           TextMapId = "SKILL_320204_NAME"
         },
         SKILL_330101_DESC = {
-          ContentKR = "전방 범위 내의 여러명의 적에게 불 속성 대미지를 입히고 기절 효과를 부여한다. 길게 누를 시 지속적인 공격을 가한다.",
+          ContentKR = "전방 범위 내의 여러명의 적에게 불 속성 대미지를 입히고 기절 효과를 부여한다. 길게 눌러 시 지속적인 공격을 가한다.",
           TextMapId = "SKILL_330101_DESC"
         },
         SKILL_330101_NAME = {
@@ -37885,7 +37689,15 @@ local Data = {
         SKILL_420101_DESC = {
           ContentKR = "자신은 공중으로 점프하고, 체공 기간 동안 다음 근접 무기의 낙하 공격은 [별의 추락]으로 교체된다.\n만약 [현교 빙의] 상태라면, 1발의 [역린]을 획득한다.\n[역린]이 최대 수량에 도달 시, [별의 추락]은 [적막한 은하수]로 강화된다.",
           TextMapId = "SKILL_420101_DESC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_420101_NAME",
+    MaxKey = "SKILL_DESC_3301Skill02Damage",
+    Loader = function()
+      return {
         SKILL_420101_NAME = {
           ContentKR = "옥산붕",
           TextMapId = "SKILL_420101_NAME"
@@ -38497,15 +38309,7 @@ local Data = {
         SKILL_DESC_2301Rate = {
           ContentKR = "[소환물·촉수] 대미지 상승",
           TextMapId = "SKILL_DESC_2301Rate"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_DESC_2401MaxSkill02SkillIntensity",
-    MaxKey = "SKILL_DESC_ExploreRadius3",
-    Loader = function()
-      return {
+        },
         SKILL_DESC_2401MaxSkill02SkillIntensity = {
           ContentKR = "스킬 위력 상승 최대치",
           TextMapId = "SKILL_DESC_2401MaxSkill02SkillIntensity"
@@ -38693,7 +38497,15 @@ local Data = {
         SKILL_DESC_3301Skill02Damage = {
           ContentKR = "폭발 대미지",
           TextMapId = "SKILL_DESC_3301Skill02Damage"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_DESC_3301Skill02Damage2",
+    MaxKey = "SKILL_DESC_SkillSpeedUpLayer",
+    Loader = function()
+      return {
         SKILL_DESC_3301Skill02Damage2 = {
           ContentKR = "추가 대미지",
           TextMapId = "SKILL_DESC_3301Skill02Damage2"
@@ -39305,15 +39117,7 @@ local Data = {
         SKILL_DESC_ExploreRadius3 = {
           ContentKR = "3단 폭발 반경",
           TextMapId = "SKILL_DESC_ExploreRadius3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_DESC_ExploreRadius4",
-    MaxKey = "StoryEventName_21",
-    Loader = function()
-      return {
+        },
         SKILL_DESC_ExploreRadius4 = {
           ContentKR = "4단 폭발 반경",
           TextMapId = "SKILL_DESC_ExploreRadius4"
@@ -39466,10 +39270,6 @@ local Data = {
           ContentKR = "3급 사격 간격",
           TextMapId = "SKILL_DESC_ShootingRate3"
         },
-        SKILL_DESC_ShootingRate4 = {
-          ContentKR = "4급 사격 간격",
-          TextMapId = "SKILL_DESC_ShootingRate4"
-        },
         SKILL_DESC_SkillDmgUp = {
           ContentKR = "스킬 대미지 상승",
           TextMapId = "SKILL_DESC_SkillDmgUp"
@@ -39505,7 +39305,15 @@ local Data = {
         SKILL_DESC_SkillSpeedUpLayer = {
           ContentKR = "단계당 스킬 속도 상승",
           TextMapId = "SKILL_DESC_SkillSpeedUpLayer"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_DESC_SkillSpeedUpTime",
+    MaxKey = "Subtract",
+    Loader = function()
+      return {
         SKILL_DESC_SkillSpeedUpTime = {
           ContentKR = "스킬 속도 상승 효과 지속 시간",
           TextMapId = "SKILL_DESC_SkillSpeedUpTime"
@@ -39880,7 +39688,7 @@ local Data = {
           TextMapId = "StarterQuest_Des_102001_2_2"
         },
         StarterQuest_Des_102001_2_3 = {
-          ContentKR = "임의의 캐릭터 스킬 2개 Lv.2 달성",
+          ContentKR = "임의의 캐릭터 스킬 2레벨 누적 2개 달성",
           TextMapId = "StarterQuest_Des_102001_2_3"
         },
         StarterQuest_Des_102001_2_4 = {
@@ -39916,16 +39724,12 @@ local Data = {
           TextMapId = "StarterQuest_Des_102001_4_1"
         },
         StarterQuest_Des_102001_4_2 = {
-          ContentKR = "임의의 캐릭터 스킬 3개 Lv.3 달성",
+          ContentKR = "임의의 캐릭터 스킬 3레벨 누적 3개 달성",
           TextMapId = "StarterQuest_Des_102001_4_2"
         },
         StarterQuest_Des_102001_4_3 = {
           ContentKR = "메인 퀘스트 '문 뒤의 비밀' 완료",
           TextMapId = "StarterQuest_Des_102001_4_3"
-        },
-        StarterQuest_Des_102001_4_4 = {
-          ContentKR = "탐험가 루나의 도전 1회 완료",
-          TextMapId = "StarterQuest_Des_102001_4_4"
         },
         StarterQuest_Des_102001_4_5 = {
           ContentKR = "의뢰 '퇴치' 1회 완료",
@@ -39968,7 +39772,7 @@ local Data = {
           TextMapId = "StarterQuest_Des_102001_6_2"
         },
         StarterQuest_Des_102001_6_3 = {
-          ContentKR = "임의의 캐릭터 스킬 12개 Lv.3 달성",
+          ContentKR = "임의의 캐릭터 스킬 12레벨 누적 3개 달성",
           TextMapId = "StarterQuest_Des_102001_6_3"
         },
         StarterQuest_Des_102001_6_4 = {
@@ -40098,15 +39902,7 @@ local Data = {
         StoryEventName_21 = {
           ContentKR = "심연으로 추락하는 새 Ⅱ",
           TextMapId = "StoryEventName_21"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "StoryEventName_22",
-    MaxKey = "TERMEXP_3103_Summon02",
-    Loader = function()
-      return {
+        },
         StoryEventName_22 = {
           ContentKR = "새벽을 갈망하는 외침 Ⅰ",
           TextMapId = "StoryEventName_22"
@@ -40299,7 +40095,15 @@ local Data = {
           ContentKR = "과학 기술",
           TextMapId = "SubType_4_Technology"
         },
-        Subtract = {ContentKR = "Num -", TextMapId = "Subtract"},
+        Subtract = {ContentKR = "Num -", TextMapId = "Subtract"}
+      }
+    end
+  },
+  {
+    MinKey = "System_Des_Achievement",
+    MaxKey = "TERMEXP_Rou_10105_Powder",
+    Loader = function()
+      return {
         System_Des_Achievement = {
           ContentKR = "<Highlight>업적</> 해제. 우리의 업적은 기억될 것입니다.",
           TextMapId = "System_Des_Achievement"
@@ -40897,21 +40701,13 @@ local Data = {
           TextMapId = "TERMEXP_3103_Skill02"
         },
         TERMEXP_3103_Summon01 = {
-          ContentKR = "대미지를 입힐 시 전투 태세 약화 효과를 부여한다. 자신의 스킬 위력과 스킬 범위의 차이가 클수록 [귀요미·예일 제조]를 투척할 확률이 상승한다. 차이가 50% 이상일 경우 [귀요미·예일 제조]를 확정으로 투척한다.",
+          ContentKR = "대미지를 입힐 시 전투 태세 약화 효과를 부여한다. 악마의 쐐기가 제공하는 스킬 위력과 스킬 범위의 차이가 클수록 [귀요미·예일 제조]를 투척할 확률이 상승한다. 차이가 50% 이상일 경우 [귀요미·예일 제조]를 확정으로 투척한다.",
           TextMapId = "TERMEXP_3103_Summon01"
         },
         TERMEXP_3103_Summon02 = {
           ContentKR = "더 큰 대미지를 입힌다. 악마의 쐐기가 제공하는 스킬 범위와 스킬 위력의 차이가 클수록 [귀요미·올리버 제조]를 투척할 확률이 상승한다. 차이가 50% 이상일 경우 [귀요미·올리버 제조]를 확정으로 투척한다.",
           TextMapId = "TERMEXP_3103_Summon02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TERMEXP_3201_Skill01",
-    MaxKey = "TextMap_AnswerDetail_100404",
-    Loader = function()
-      return {
+        },
         TERMEXP_3201_Skill01 = {
           ContentKR = "2초마다 주위의 적에게 불 속성 지속 대미지를 입힌다. 효과 지속 기간 중 자신이 대미지를 받을 시, 효과 지속 시간이 연장되고 주위의 적에게 [꿰뚫는 심판] 불 속성 대미지를 입힌다. 해당 효과는 매 2초마다 최대 1회 발동된다.",
           TextMapId = "TERMEXP_3201_Skill01"
@@ -41107,7 +40903,15 @@ local Data = {
         TERMEXP_Rou_10105_Powder = {
           ContentKR = "매초 반경 <Highlight>4</>m 내의 적에게 대미지를 1회 입힌다.",
           TextMapId = "TERMEXP_Rou_10105_Powder"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TERMEXP_Rou_10105_WindWings",
+    MaxKey = "TextMap_AnswerName_200103",
+    Loader = function()
+      return {
         TERMEXP_Rou_10105_WindWings = {
           ContentKR = "추적 능력을 보유한 소형 비행탄.",
           TextMapId = "TERMEXP_Rou_10105_WindWings"
@@ -41690,15 +41494,7 @@ local Data = {
         TextMap_AnswerDetail_100404 = {
           ContentKR = "범인은 남서쪽으로 도망쳤으며, 그곳에서 대량의 액체 폭시코르를 접할 수 있는 장소는 공장뿐이다. 그곳이 범인의 은신처일까? 어쨌든, 공장을 조사해 볼 가치가 있다.",
           TextMapId = "TextMap_AnswerDetail_100404"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TextMap_AnswerDetail_100501",
-    MaxKey = "Title_20012",
-    Loader = function()
-      return {
+        },
         TextMap_AnswerDetail_100501 = {
           ContentKR = "하수도 안의 무대 커튼, 정교하게 배치된 마네킹... 범인과 '무대'는 어떤 관계가 있을까? 이 단서를 다른 정보와 조합하면 범인의 정체를 파악할 새로운 실마리를 얻을 수 있을지도 모른다.",
           TextMapId = "TextMap_AnswerDetail_100501"
@@ -41894,7 +41690,15 @@ local Data = {
         TextMap_AnswerName_200103 = {
           ContentKR = "바크 씨 창턱에 아이의 발자국이 있다.",
           TextMapId = "TextMap_AnswerName_200103"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TextMap_AnswerName_200104",
+    MaxKey = "Title_Des",
+    Loader = function()
+      return {
         TextMap_AnswerName_200104 = {
           ContentKR = "발자국 옆에 팝콘이 떨어져 있다.",
           TextMapId = "TextMap_AnswerName_200104"
@@ -42000,7 +41804,7 @@ local Data = {
           TextMapId = "TextMap_Inference_1002"
         },
         TextMap_Inference_1003 = {
-          ContentKR = "범인이 출몰할 가능성이 있는 장소는 어디인가? Ⅰ",
+          ContentKR = "범인이 출몰할 가능성이 있는 장소는 어디인가? I",
           TextMapId = "TextMap_Inference_1003"
         },
         TextMap_Inference_1004 = {
@@ -42016,7 +41820,7 @@ local Data = {
           TextMapId = "TextMap_Inference_2001"
         },
         TextMap_Inference_2002 = {
-          ContentKR = "{$Huozai04Tag$|사건 사이의 연관성을 떠올리고 숨겨진 진실 찾기: ???}",
+          ContentKR = "($Huozai04Tag$|사건 사이의 연관성을 떠올리고 숨겨진 진실 찾기: ???)",
           TextMapId = "TextMap_Inference_2002"
         },
         TextMap_ResultTips_10010101 = {
@@ -42492,15 +42296,7 @@ local Data = {
         Title_20012 = {
           ContentKR = "탐험가",
           TextMapId = "Title_20012"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Title_20013",
-    MaxKey = "UIGuide_PetPan_02",
-    Loader = function()
-      return {
+        },
         Title_20013 = {
           ContentKR = "방랑자",
           TextMapId = "Title_20013"
@@ -42696,7 +42492,15 @@ local Data = {
         Title_Des = {
           ContentKR = "칭호에서 장착 가능",
           TextMapId = "Title_Des"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Toast_DonglishiJiaoxue",
+    MaxKey = "UIGuide_SpecialSideStoryUI1",
+    Loader = function()
+      return {
         Toast_DonglishiJiaoxue = {
           ContentKR = "작동 중인 회전체를 공격하여 폐쇄 상태로 전환하기",
           TextMapId = "Toast_DonglishiJiaoxue"
@@ -43297,15 +43101,7 @@ local Data = {
         UIGuide_PetPan_02 = {
           ContentKR = "이 흔적을 추적하여 그들을 찾으면, 뜻밖의 수확이 있을지도 모릅니다.",
           TextMapId = "UIGuide_PetPan_02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UIGuide_PetPan_Title",
-    MaxKey = "UI_Accessory_Desc_10012",
-    Loader = function()
-      return {
+        },
         UIGuide_PetPan_Title = {
           ContentKR = "마령 판신을 찾아가세요!",
           TextMapId = "UIGuide_PetPan_Title"
@@ -43501,7 +43297,15 @@ local Data = {
         UIGuide_SpecialSideStoryUI1 = {
           ContentKR = "게임을 진행하는 동안 스페셜 사이드 퀘스트를 받을 수 있으며, 이는 퀘스트 목록에서 파란색 아이콘으로 표시됩니다.",
           TextMapId = "UIGuide_SpecialSideStoryUI1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UIGuide_SpecialSideStoryUI2",
+    MaxKey = "UI_Accessory_Desc_40001",
+    Loader = function()
+      return {
         UIGuide_SpecialSideStoryUI2 = {
           ContentKR = "자유 탐색 시에도 같은 아이콘을 볼 수 있으며, 이러한 사이드 퀘스트를 완료하면 새로운 시스템 기능을 해제할 수 있습니다.",
           TextMapId = "UIGuide_SpecialSideStoryUI2"
@@ -44096,15 +43900,7 @@ local Data = {
         UI_Accessory_Desc_10012 = {
           ContentKR = "이걸 가지고 다니면 '탐구' 능력이 향상된다.",
           TextMapId = "UI_Accessory_Desc_10012"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Desc_10013",
-    MaxKey = "UI_Accessory_Name_80001",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Desc_10013 = {
           ContentKR = "화서의 선조를 기리는 가면. 가면을 착용하면 갑옷을 입고 얼굴을 가린 수만 명의 사람이 태평한 세상을 갈망하며 천지개벽하는 웅장한 장면이 보이는 듯하다.",
           TextMapId = "UI_Accessory_Desc_10013"
@@ -44300,7 +44096,15 @@ local Data = {
         UI_Accessory_Desc_40001 = {
           ContentKR = "달의 여우는 아주 미세한 습도 변화도 꼬리로 감지한다. 경험이 풍부한 여행자들은 달의 여우가 비 오는 밤에 홀로 춤을 추는지에 따라 먹구름이 언제 사라질지, 달빛이 언제 다시 돌아올지를 판단한다.",
           TextMapId = "UI_Accessory_Desc_40001"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Desc_40002",
+    MaxKey = "UI_Achievement_Des_10103",
+    Loader = function()
+      return {
         UI_Accessory_Desc_40002 = {
           ContentKR = "칼은 몸을 보호하는 물건이지만 몸을 다치게 하는 물건이기도 하다. 역대 주인들의 품위와 신념을 담은 칼은, 과거의 교훈을 오랜 세월 너머 현대에까지 전해 준다.",
           TextMapId = "UI_Accessory_Desc_40002"
@@ -44904,15 +44708,7 @@ local Data = {
         UI_Accessory_Name_80001 = {
           ContentKR = "여름밤의 초대",
           TextMapId = "UI_Accessory_Name_80001"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_90001",
-    MaxKey = "UI_Achievement_Des_40701",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_90001 = {
           ContentKR = "칠흑의 날개",
           TextMapId = "UI_Accessory_Name_90001"
@@ -45013,17 +44809,9 @@ local Data = {
           ContentKR = "[해제 조건]",
           TextMapId = "UI_Accessory_Unlock_Condition"
         },
-        UI_Accessory_Unlock_Exchange = {
-          ContentKR = "프리즘 교환으로 획득",
-          TextMapId = "UI_Accessory_Unlock_Exchange"
-        },
         UI_Accessory_Unlock_Forge = {
           ContentKR = "주조를 통해 획득",
           TextMapId = "UI_Accessory_Unlock_Forge"
-        },
-        UI_Accessory_Unlock_Gacha = {
-          ContentKR = "광채에서 획득",
-          TextMapId = "UI_Accessory_Unlock_Gacha"
         },
         UI_Accessory_Unlock_Hardboss = {
           ContentKR = "악몽의 잔향을 통해 획득",
@@ -45116,7 +44904,15 @@ local Data = {
         UI_Achievement_Des_10103 = {
           ContentKR = "문서 누적 <highlight>#1</>개 획득",
           TextMapId = "UI_Achievement_Des_10103"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_10104",
+    MaxKey = "UI_Achievement_Des_505101",
+    Loader = function()
+      return {
         UI_Achievement_Des_10104 = {
           ContentKR = "연옥도·유적에서 모든 <highlight>흩어진 일기</> 수집",
           TextMapId = "UI_Achievement_Des_10104"
@@ -45712,15 +45508,7 @@ local Data = {
         UI_Achievement_Des_40701 = {
           ContentKR = "빛나는 붉은 칼날 용해 레벨 Lv.5 달성",
           TextMapId = "UI_Achievement_Des_40701"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_5001",
-    MaxKey = "UI_Achievement_Des_9411",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_5001 = {
           ContentKR = "싱글 도전에서 <highlight>#1</>초 이내에 '악몽의 잔향·시빌라' 최고 난이도 클리어",
           TextMapId = "UI_Achievement_Des_5001"
@@ -45924,7 +45712,15 @@ local Data = {
         UI_Achievement_Des_505101 = {
           ContentKR = "누적 <highlight>#1</>회 마령 판신의 선물 획득",
           TextMapId = "UI_Achievement_Des_505101"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_5052",
+    MaxKey = "UI_Achievement_Name_101101",
+    Loader = function()
+      return {
         UI_Achievement_Des_5052 = {
           ContentKR = "<highlight>HP 대미지를 받지 않고, 협력 동료를 소환하지 않은 상태로</> '악몽의 잔향·크리스탈 이터' 최고 난이도 클리어",
           TextMapId = "UI_Achievement_Des_5052"
@@ -46520,15 +46316,7 @@ local Data = {
         UI_Achievement_Des_9411 = {
           ContentKR = "'미로'에서 한 번에 입힌 빛 속성 대미지 <highlight>#1</> 달성",
           TextMapId = "UI_Achievement_Des_9411"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_9412",
-    MaxKey = "UI_Achievement_Name_201803",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_9412 = {
           ContentKR = "'미로'에서 한 번에 입힌 어둠 속성 대미지 <highlight>#1</> 달성",
           TextMapId = "UI_Achievement_Des_9412"
@@ -46732,7 +46520,15 @@ local Data = {
         UI_Achievement_Name_101101 = {
           ContentKR = "눈을 감아요 Ⅰ",
           TextMapId = "UI_Achievement_Name_101101"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_101102",
+    MaxKey = "UI_Achievement_Name_301201",
+    Loader = function()
+      return {
         UI_Achievement_Name_101102 = {
           ContentKR = "눈을 감아요 Ⅱ",
           TextMapId = "UI_Achievement_Name_101102"
@@ -47328,15 +47124,7 @@ local Data = {
         UI_Achievement_Name_201803 = {
           ContentKR = "완전무결·벼락",
           TextMapId = "UI_Achievement_Name_201803"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_201804",
-    MaxKey = "UI_Achievement_Name_506403",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_201804 = {
           ContentKR = "완전무결·진홍",
           TextMapId = "UI_Achievement_Name_201804"
@@ -47540,7 +47328,15 @@ local Data = {
         UI_Achievement_Name_301201 = {
           ContentKR = "끝없는 자비 Ⅰ",
           TextMapId = "UI_Achievement_Name_301201"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_301202",
+    MaxKey = "UI_Achievement_Name_5220101",
+    Loader = function()
+      return {
         UI_Achievement_Name_301202 = {
           ContentKR = "끝없는 자비 Ⅱ",
           TextMapId = "UI_Achievement_Name_301202"
@@ -48136,15 +47932,7 @@ local Data = {
         UI_Achievement_Name_506403 = {
           ContentKR = "긴급 구조·신의 속도 Ⅲ",
           TextMapId = "UI_Achievement_Name_506403"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_506501",
-    MaxKey = "UI_ActionPoint_HourMinuteSecond",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_506501 = {
           ContentKR = "진격의 월석 사냥꾼·신의 속도 Ⅰ",
           TextMapId = "UI_Achievement_Name_506501"
@@ -48348,7 +48136,15 @@ local Data = {
         UI_Achievement_Name_5220101 = {
           ContentKR = "백독불침",
           TextMapId = "UI_Achievement_Name_5220101"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_5230101",
+    MaxKey = "UI_Archive_Tab_NormalResource",
+    Loader = function()
+      return {
         UI_Achievement_Name_5230101 = {
           ContentKR = "행운 E",
           TextMapId = "UI_Achievement_Name_5230101"
@@ -48944,15 +48740,7 @@ local Data = {
         UI_ActionPoint_HourMinuteSecond = {
           ContentKR = "%d시간 %d분 %d초",
           TextMapId = "UI_ActionPoint_HourMinuteSecond"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_ActionPoint_ItemShortage",
-    MaxKey = "UI_Bag_Sellconfirm_Hold",
-    Loader = function()
-      return {
+        },
         UI_ActionPoint_ItemShortage = {
           ContentKR = "%s 부족",
           TextMapId = "UI_ActionPoint_ItemShortage"
@@ -49153,7 +48941,15 @@ local Data = {
         UI_Archive_Tab_NormalResource = {
           ContentKR = "일반 물건",
           TextMapId = "UI_Archive_Tab_NormalResource"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Archive_Tab_OtherEnemy",
+    MaxKey = "UI_BattlePass_QuestRewardClaim",
+    Loader = function()
+      return {
         UI_Archive_Tab_OtherEnemy = {
           ContentKR = "기타",
           TextMapId = "UI_Archive_Tab_OtherEnemy"
@@ -49211,7 +49007,7 @@ local Data = {
           TextMapId = "UI_Armory_Char_Empty"
         },
         UI_Armory_ClickEmpty = {
-          ContentKR = "빈 공간을 눌러 닫기",
+          ContentKR = "빈 구역을 눌러 닫기",
           TextMapId = "UI_Armory_ClickEmpty"
         },
         UI_Armory_Conflict = {
@@ -49663,7 +49459,7 @@ local Data = {
           TextMapId = "UI_Bag_Equipped"
         },
         UI_Bag_Fish_Weight = {
-          ContentKR = "치수:",
+          ContentKR = "무게:",
           TextMapId = "UI_Bag_Fish_Weight"
         },
         UI_Bag_IgnoreEquipped = {
@@ -49749,15 +49545,7 @@ local Data = {
         UI_Bag_Sellconfirm_Hold = {
           ContentKR = "보유 수량: ",
           TextMapId = "UI_Bag_Sellconfirm_Hold"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Bag_Sellconfirm_Polarity",
-    MaxKey = "UI_CHAR_DATA_TEXT_15030301",
-    Loader = function()
-      return {
+        },
         UI_Bag_Sellconfirm_Polarity = {
           ContentKR = "성향",
           TextMapId = "UI_Bag_Sellconfirm_Polarity"
@@ -49819,7 +49607,7 @@ local Data = {
           TextMapId = "UI_Banner_SkinGacha_Goto"
         },
         UI_Banner_Tab_SaleForNew = {
-          ContentKR = "초특가 2930% 혜택",
+          ContentKR = "초특가 760% 혜택",
           TextMapId = "UI_Banner_Tab_SaleForNew"
         },
         UI_Banner_Tab_SpSale_10 = {
@@ -49961,7 +49749,15 @@ local Data = {
         UI_BattlePass_QuestRewardClaim = {
           ContentKR = "수령",
           TextMapId = "UI_BattlePass_QuestRewardClaim"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_BattlePass_QuestToBeFinish",
+    MaxKey = "UI_CHAR_DATA_TEXT_23010305",
+    Loader = function()
+      return {
         UI_BattlePass_QuestToBeFinish = {
           ContentKR = "미완료",
           TextMapId = "UI_BattlePass_QuestToBeFinish"
@@ -50557,15 +50353,7 @@ local Data = {
         UI_CHAR_DATA_TEXT_15030301 = {
           ContentKR = "기대해 주세요",
           TextMapId = "UI_CHAR_DATA_TEXT_15030301"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_15030401",
-    MaxKey = "UI_CHAR_DATA_TEXT_43010203",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_15030401 = {
           ContentKR = "기대해 주세요",
           TextMapId = "UI_CHAR_DATA_TEXT_15030401"
@@ -50769,7 +50557,15 @@ local Data = {
         UI_CHAR_DATA_TEXT_23010305 = {
           ContentKR = "\"우리도 상황이 좋은 건 아니지만, 착한 사람의 물건을 훔치면 안 되잖아. 그렇지?\"\n타비사는 인정했다. 소녀의 반문은 '나쁜 어른'의 죄를 착한 어른이 떠안아서는 안 된다는 것을 깨닫게 해 주었다. 만약 타비사가 변화하지 않는다면 언젠가는 그녀도 '나쁜 어른'이 되고 말 것이다.",
           TextMapId = "UI_CHAR_DATA_TEXT_23010305"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_23010401",
+    MaxKey = "UI_CHAR_DATA_TEXT_53010105",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_23010401 = {
           ContentKR = "어두운 밤하늘이 작은 복지원에 내려앉은 날, 타비사는 복도에서 조심스럽게 움직이고 있었다. 좁은 복도는 무엇이든 삼킬 수 있는 창자처럼 타비사를 빨아들이고 있었지만, 타비사의 창자는 오랫동안 음식을 흡수하지 못했다.\n주방, 주방, 빨리 주방에 가야 해. \n배고픔은 상상할 수 없는 용기를 가져다주었지만, 타비사는 이 길로 계속 가도 될지 망설이고 있었다. 보육원의 '나쁜 어른'을 마주칠까 봐서였다.\n보육원 직원들은 모두 '나쁜 어른'이었다. 타비사를 굶주리게 했고, 주먹을 휘두르며 상처 주는 말을 하곤 했다.\n하지만 배고픔이 공포심을 이겼다. 타비사는 한 번 해보기로 결심하고, 벽에 바싹 달라붙어 어둠과 하나가 되었다. 잠시나마 시멘트로 된 바다 위를 유영하며, 사냥터를 향해 헤엄치고 있다고 믿었다.\n그러나 마지막에 그녀를 기다리고 있던 것은 맛있는 사냥감이 아니라 야간 순찰을 돌고 있던 '나쁜 어른'이었다. 강한 타격이 연이어 가해졌다. '나쁜 어른'이 손에 든 냄비에는 낮에 그녀가 아무리 애원하고 소란을 피워도 맛볼 수 없었던 생선조림의 냄새가 남아 있었다. \n타비사는 주먹질과 욕설을 하나하나 가슴에 담아 곱씹으며, 굶주린 위를 채웠다. 기필코 언젠가 이곳을 떠나, 숨도 쉬어지지 않는 심해 같은 이 밤하늘에서 도망칠 거라고 맹세하면서.",
           TextMapId = "UI_CHAR_DATA_TEXT_23010401"
@@ -50823,7 +50619,7 @@ local Data = {
           TextMapId = "UI_CHAR_DATA_TEXT_31010201"
         },
         UI_CHAR_DATA_TEXT_31010202 = {
-          ContentKR = "신망이 두터운 지금과는 달리, 린은 군단에 입대할 당시만 해도 인기가 없었다. 린은 늘 혼자 지내는 데 익숙했고, 거친 행동과 말투 때문에 사관학교 출신 군인들 사이에서는 어울리지 않는 존재로 보였다. 군단의 병사를 죽인 잔인한 자인데, 도대체 어떤 수단으로 13군단에 들어온 건지 모르겠다는 수군거림도 있었다. 진위를 알 수 없는 이런 소문들 때문에 그녀에 대한 불만은 더욱 커져갔고, 린은 어디를 가든, 차가운 말과 비웃음을 들을 수 있었다.\n\"린? 아, 그 출세를 위해서라면 물불 안 가리는 건달에, 우리 동료를 살해한 망나니 말이지...\"",
+          ContentKR = "신망이 두터운 지금과는 달리, 린은 군단에 입대할 당시만 해도 인기가 없었다. 린은 늘 혼자 지내는 데 익숙했고, 거친 행동과 말투 때문에 사관학교 출신 군인들 사이에서는 어울리지 않는 존재로 보였다. 군단의 병사를 죽인 잔인한 자인데, 도대체 어떤 수단으로 13군단에 들어온 건지 모르겠다는 수군거림도 있었다. 진위를 알 수 없는 이런 소문들 때문에 그녀에 대한 불만은 더욱 커져갔고, 린은 어디를 가든, 차가운 말과 비웃음을 들을 수 있었다.\n\"린? 아, 그 출세를 위해서라면 물불 안 가리는 건달에, 우리 둉료를 살해한 망나니 말이지...\"",
           TextMapId = "UI_CHAR_DATA_TEXT_31010202"
         },
         UI_CHAR_DATA_TEXT_31010203 = {
@@ -51365,15 +51161,7 @@ local Data = {
         UI_CHAR_DATA_TEXT_43010203 = {
           ContentKR = "제국의 군단장들 사이에도 지위의 차이가 존재한다. 귀족 혈통에 기대어 실적은 평범한 이들도 있지만, 시빌라처럼 군 내 신망이 두텁고 정국에까지 영향력을 미치는 야심가도 있다.\n시빌라 메이슨이 평범한 군단장에서 지금의 위치로 급부상할 수 있었던 건 상당 부분 그녀의 놀라운 공적 덕분이었다. 그녀의 작전 수행 방식은 역대 어느 군단장보다도 유연했다.\n제국의 전통에 따르면, 군인이 전장에서 최고의 영예를 얻는 길은 정면 승부였다. 일반 병사들은 죽음을 두려워하지 않고 철벽같은 진형을 유지하며 전진한다. 적의 얼굴 모공까지 보일 정도로 가까이 다가가도 주저하지 않는다. 지휘관은 냉철한 눈으로 전장을 살피며, 늘어나는 전사자 수를 감내하면서, 모든 병력을 투입할 결정적인 순간을 기다린다. 운명이 섬뜩한 미소를 지을 때, 자신의 모든 패를 피로 물든 승부의 장에 던진다. \n얼마나 위대한 영광인가. 모든 군단장은 이런 거대하고 피비린내 나는 승리를 꿈꾸며, 자신의 이름이 한 척의 비행선이나 거리, 심지어는 도시의 이름이 되기를 소망했다.\n하지만 안타깝게도, 이런 영광들은 포세이큰 동맹의 반란 앞에서는 아무 소용이 없었다. '다이몬'을 주력으로 내세운 이 반군들은 좀처럼 군단과 정면으로 맞서지 않았다. 대신 그들은 다양한 마법과 뛰어난 개인 기동성을 이용해 어둠 속에 숨어 기습 공격을 거듭했고, 심지어 필토이드까지 무기로 삼았다. 군단의 통상적인 전투 방식은 모두 무력화되었고, 영광만을 공허하게 외치던 군단장들 대부분은 실패의 쓴잔을 마셔야 했다.\n하지만 시빌라는 달랐다. 거리에서 자란 그녀는 연금술과 카론 마법에 통달했고, 이 전례 없는 적들을 어떻게 상대해야 할지 잘 알고 있었다.\n- 가능한 한 많은 식량을 징발하여 반군이 보급을 받지 못하게 한다.\n- 카론들에게 거짓 항복을 명하고, 독이 든 음식을 보낸 뒤 공격을 가한다.\n- 퇴각하는 척하면서 남겨둔 물자에 폭탄을 숨겨 공포감을 조성한다. \n- 적에게 작위를 약속하고 충성 서약을 받아내지만, 승리 후에는 모든 적을 학살한다.\n......\n그녀는 이런 방식으로 전장에서 연이어 승리를 거두었다. 카론 출신이라는 점도 그녀의 발걸음을 늦추지 못했다.\n사람들은 그녀의 방식을 수치스럽고, 제국의 영광스러운 전통을 더럽히는 짓이라고 비난하며, 천한 카론에 걸맞다고 조롱했다. 하지만 모두가 인정할 수 없는 현실이 있었다. 시빌라는 지금 제국이 가장 의지하는 전략가였다. 적을 대할 때, 그녀는 자비, 도덕, 명예 같은 것들을 서슴없이 포기한다. 어떤 이들에겐 생명보다 더 중요한 것일지라도, 시빌라는 이를 버리고 승리를 얻는다.\n그러니, 누가 시빌라 군단장의 다음번 목표가 되고 싶겠는가?",
           TextMapId = "UI_CHAR_DATA_TEXT_43010203"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_43010204",
-    MaxKey = "UI_CMNpc_Name_Aima",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_43010204 = {
           ContentKR = "시빌라는 계속된 승리로 유명해졌지만, 제국 황제 폐하께서 그녀를 눈여겨 보고 군단장으로 발탁하도록 한 전투는, 역설적이게도 '실패'한 전투였다.\n역사학자들은 이 전투를 '신의 엘레지' 작전이라고 기록했다. 그 이름에 걸맞게 이는 인간과 신의 전쟁이었다. 골목길의 민요부터 고상한 오페라까지, 휘페르보레아의 신하들은 모두 이 위대한 정벌을 찬양했다. 비록 실패로 끝났지만, 이는 '대이동' 이후 처음으로 인간들이 엘리시안의 옛 땅을 다시 밟은 사건이었다. 그리고 이번에는 그들이 저 높은 탑에 올라 옛 신들을 향해 활시위를 당겼다.\n하지만, 이 전투의 상세한 내용은 거의 알려지지 않았다. 역사학자들은 아마 영원히 일차 사료를 얻지 못할 것이다. 그 탑에 올랐다 살아 돌아온 이가 단 두 명뿐이기 때문이다. 한 명은 시빌라지만, 그녀의 입에서 단 한마디도 들을 수 없었다. 다른 한 명은 처음부터 끝까지 수수께끼였다. 그는 전투 직전 갑자기 나타나 작전의 지휘관이 되었다가, 전투가 끝나자 홀연히 사라져, 마치 처음부터 존재하지 않았던 것처럼 자취를 감추었다.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010204"
@@ -51577,7 +51365,15 @@ local Data = {
         UI_CHAR_DATA_TEXT_53010105 = {
           ContentKR = "당신은 프시케를 위해 작은 돌무덤을 만들었다. 아무런 장식도 없는 앙상한 돌무덤이었다.\n활짝 핀 꽃을 두고 싶었지만, 꽃은 시들 것이다. 종이로 접은 나비를 놓고 싶었지만, 종이는 썩을 것이다.\n그렇다면 차라리 아무것도 놓지 말자. 당신의 그리움이 그녀와 함께할 테니까.\n돌무덤 앞에서 눈을 감자, 어렴풋이 초록색 빛이 시야에 나타났다. 빛은 나비처럼 춤추며 점점 멀어져갔다.",
           TextMapId = "UI_CHAR_DATA_TEXT_53010105"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_53010201",
+    MaxKey = "UI_CMNpc_Name_Jimu",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_53010201 = {
           ContentKR = "프시케는 여관 '히프노스의 집' 투숙객이자 안내원이다. 사실 말이 안내원이지 '히프노스의 집' 대문은 여태껏 사람들에게 개방되지 않아, 아이스레이크 시티를 오가는 여행객이 그녀의 접대 서비스를 받는 일은 극히 드물다. 다만 이른 아침에 여관 계단 아래에 서서 위를 바라보면, 나뭇가지와 넝쿨 뒤로 가녀린 그림자를 어렴풋이 볼 수 있다. 바로 프시케가 두꺼운 커튼을 열어 꽃에 모처럼 햇볕을 쬐고, 부드러운 잎사귀에 물을 뿌리고, 시든 꽃가지를 세심하게 다듬으며 바삐 일하는 모습이다. 짙은 회색 벽돌과 하얀 잔설이 어우러진 차디찬 저택 '히프노스의 집'에, 몇 줄기 희미한 온기를 가져다주는 건, 오직 프시케의 꽃들뿐이다.",
           TextMapId = "UI_CHAR_DATA_TEXT_53010201"
@@ -51659,23 +51455,23 @@ local Data = {
           TextMapId = "UI_CHAR_DATA_TEXT_54010105"
         },
         UI_CHAR_DATA_TEXT_54010201 = {
-          ContentKR = "리버랜드 병원의 진료 구역에서 병동으로 이동하려면 긴 복도를 지나야 한다.\n디즈마니아의 다른 병원과는 달리, 리버랜드 병원에 입원한 환자들은 대부분 고통스럽지만 치명적이지 않은 만성 질환을 앓고 있다. 이러한 질환은 생명을 위협하진 않지만, 시간이 흐를수록 의사들의 말처럼 사람을 '미치게' 만든다.\n나는 7살 때부터 그 복도를 분주하게 움직였다. 그때의 나는 대부분의 성인 솔라 간병인보다 훨씬 더 재빨랐고, 몸 뉠 곳과 주린 배를 채울 끼니만 있으면 되었기에, 머리에 뿔이 난 천한 소녀임에도 솔라들의 구역에서 일하는 것을 허락받을 수 있었다. 대단한 자비라도 되는 듯이 말이다. 내 일은 대부분 짐을 옮기는 일이었다. 더러워진 이불부터 환자가 깨뜨린 유리까지, 모두 깨끗하게 정리하고 세면실이나 쓰레기장으로 옮겨야 했다. 물론 간호사의 약품 운반 심부름도 흔했다. 따라서 대부분의 시간, 나는 내 키보다 더 큰 종이 상자를 안고 긴 복도를 가로지르곤 했다. 시야를 가리는 상자 탓에 바삐 오가는 사람들과 부딪히기 일쑤였고, 그러면 곧장 욕설이 쏟아졌다.\n언젠가 광장에서 한 음유시인의 불평을 들은 적이 있다. 모든 아트라시아인 중, 휘페르보레아 제국인이 가장 난폭하다는 것이었다. 그 말이 사실이라면, 내 보잘것없는 경험담으로 미루어 보건대, 리버랜드 병원의 사람들은 분노조절장애 중에서도 중증 환자일 것이다. 환자부터 의사, 간호사, 병문안을 온 가족들까지 전부 그랬다. 시간이 지나면서, 모두를 히스테릭하게 만든 건 바로 그 길고도 고통스러운 질환임을 깨달았지만, 난 그래도 내게 욕설을 퍼부은 사람들의 등 뒤에 가운뎃손가락을 세우곤 했다.\n다프네 세오도어는 나와 부딪힌 뒤 욕설 대신 오히려 사과를 건넨 유일한 사람이었다. 그날 오후는 또렷하게 기억난다. 평소처럼 시트를 들고 세면실로 향하던 중, 복도 모퉁이에서 젊은 금발 여성과 부딪혔다. 들고 있던 시트와 그녀의 꽃다발이 붕 뜨더니 이내 바닥으로 떨어졌다. 나는 바닥에 주저앉아 중증 통증 환자처럼 목이 터져라 울었다. 당연한 말이지만 부딪혀서 아픈 것도 아니었고, 일을 망쳤다는 사실 때문에 슬픈 것도 전혀 아니었다. 굳이 따지자면 내 작은 꼼수랄까? 내가 이렇게 엉엉 울어 버리면, 날 욕하거나 때리려던 어른들은 더러운 것이라도 본 것처럼, 황급히 자리를 피하곤 했기 때문이다.\n하지만 그 젊은 금발 여성은 예상과 달랐다. 그녀는 욕설을 퍼붓고 자리를 떠나기는커녕, 초조한 표정으로 쪼그리고 앉았다. 그리곤 내 등을 가볍게 어루만지며 어디를 다쳤는지, 아프진 않은지 물었다. 나보다 오히려 더 당황한 듯한 그 말투였다. 내가 아무런 반응이 없자, 그녀는 더 부드럽고 차분한 어조로 다시 한번 질문했지만, 손끝은 여전히 초조하게 떨리고 있었다.\n그녀의 질문에 뭐라고 대답을 했는지는 더 이상 기억 나지 않는다. 아마 \"안 아파요\"라고 하지 않았을까? 그렇지 않았다면, 그녀가 찌푸린 미간을 펴지 않았을 테니 말이다. 그녀는 날 일으켜 세우곤 나와 함께 바닥에 흩어진 시트와 꽃가지를 주웠다.\n\"미안.\" 그녀는 내 머리를 쓰다듬으며 물었다. \"꼬마야, 무슨 맛 사탕 좋아해? 다음에 올 때 가져다줄게. 응?\"\n\"딸기 맛이요.\" 사실 사과의 선물을 받을 처지가 아니었다. 방금 서로 부딪혔을 때, 상대를 보지 못한 쪽은 명백히 나였기 때문이다. 하지만 그 순간, 막 철이 들었을 무렵, 병석에 누워계신 어머니가 마지막으로 반복하시던 말이 떠올랐다. \"천장 서랍 안에 딸기 맛 사탕을 넣어뒀단다.\" 하지만 서랍을 열었을 때는 아무것도 남아있지 않았다. 식탐 많은 오빠가 사탕을 전부 가져갔던 것이다.\n\"딸기 맛 사탕, 기억해 둘게.\" 금발의 여성은 그렇게 말하며, 꽃다발을 들고 복도 끝을 향해 걸어갔다. 평균보다 키가 크고, 마른 편이었다. 오후의 햇살이 그녀의 매트한 질감의 머리핀을 희미한 금빛으로 물들이고 있었다.\n그녀의 이름을 몰랐기에, 나는 마음속으로 그녀를 '딸기 맛 사탕 아가씨'라고 불렀다. 어디가 아프냐고 내게 물어봐 준 사람은, 어머니를 제외하면 그녀가 유일했다.\n\n—— 티오리 스톤의 일기",
+          ContentKR = "리버랜드 병원의 진료 구역에서 병동으로 이동하려면 긴 복도를 지나야 한다.\n 디즈마니아의 다른 병원과는 달리, 리버랜드 병원에 입원한 환자들은 대부분 고통스럽지만 치명적이지 않은 만성 질환을 앓고 있다. 이러한 질환은 생명을 위협하진 않지만, 시간이 흐를수록 의사들의 말처럼 사람을 '미치게' 만든다.\n 나는 7살 때부터 그 복도를 분주하게 움직였다. 그때의 나는 대부분의 성인 솔라 간병인보다 훨씬 더 재빨랐고, 몸 뉠 곳과 주린 배를 채울 끼니만 있으면 되었기에, 머리에 뿔이 난 천한 소녀임에도 솔라들의 구역에서 일하는 것을 허락받을 수 있었다. 대단한 자비라도 되는 듯이 말이다. 내 일은 대부분 짐을 옮기는 일이었다. 더러워진 이불부터 환자가 깨뜨린 유리까지, 모두 깨끗하게 정리하고 세면실이나 쓰레기장으로 옮겨야 했다. 물론 간호사의 약품 운반 심부름도 흔했다. 따라서 대부분의 시간, 나는 내 키보다 더 큰 종이 상자를 안고 긴 복도를 가로지르곤 했다. 시야를 가리는 상자 탓에 바삐 오가는 사람들과 부딪히기 일쑤였고, 그러면 곧장 욕설이 쏟아졌다.\n 언젠가 광장에서 한 음유시인의 불평을 들은 적이 있다. 모든 아트라시아인 중, 휘페르보레아 제국인이 가장 난폭하다는 것이었다. 그 말이 사실이라면, 내 보잘것없는 경험담으로 미루어 보건대, 리버랜드 병원의 사람들은 분노조절장애 중에서도 중증 환자일 것이다. 환자부터 의사, 간호사, 병문안을 온 가족들까지 전부 그랬다. 시간이 지나면서, 모두를 히스테릭하게 만든 건 바로 그 길고도 고통스러운 질환임을 깨달았지만, 난 그래도 내게 욕설을 퍼부은 사람들의 등 뒤에 가운뎃손가락을 세우곤 했다.\n 다프네 세오도어는 나와 부딪힌 뒤 욕설 대신 오히려 사과를 건넨 유일한 사람이었다. 그날 오후는 또렷하게 기억난다. 평소처럼 시트를 들고 세면실로 향하던 중, 복도 모퉁이에서 젊은 금발 여성과 부딪혔다. 들고 있던 시트와 그녀의 꽃다발이 붕 뜨더니 이내 바닥으로 떨어졌다. 나는 바닥에 주저앉아 중증 통증 환자처럼 목이 터져라 울었다. 당연한 말이지만 부딪혀서 아픈 것도 아니었고, 일을 망쳤다는 사실 때문에 슬픈 것도 전혀 아니었다. 굳이 따지자면 내 작은 꼼수랄까? 내가 이렇게 엉엉 울어 버리면, 날 욕하거나 때리려던 어른들은 더러운 것이라도 본 것처럼, 황급히 자리를 피하곤 했기 때문이다.\n 하지만 그 젊은 금발 여성은 예상과 달랐다. 그녀는 욕설을 퍼붓고 자리를 떠나기는커녕, 초조한 표정으로 쪼그리고 앉았다. 그리곤 내 등을 가볍게 어루만지며 어디를 다쳤는지, 아프진 않은지 물었다. 나보다 오히려 더 당황한 듯한 그 말투였다. 내가 아무런 반응이 없자, 그녀는 더 부드럽고 차분한 어조로 다시 한번 질문했지만, 손끝은 여전히 초조하게 떨리고 있었다.\n 그녀의 질문에 뭐라고 대답을 했는지는 더 이상 기억 나지 않는다. 아마 \"안 아파요\"라고 하지 않았을까? 그렇지 않았다면, 그녀가 찌푸린 미간을 펴지 않았을 테니 말이다. 그녀는 날 일으켜 세우곤 나와 함께 바닥에 흩어진 시트와 꽃가지를 주웠다.\n \"미안.\" 그녀는 내 머리를 쓰다듬으며 물었다. \"꼬마야, 무슨 맛 사탕 좋아해? 다음에 올 때 가져다줄게. 응?\"\n \"딸기 맛이요.\" 사실 사과의 선물을 받을 처지가 아니었다. 방금 서로 부딪혔을 때, 상대를 보지 못한 쪽은 명백히 나였기 때문이다. 하지만 그 순간, 막 철이 들었을 무렵, 병석에 누워계신 어머니가 마지막으로 반복하시던 말이 떠올랐다. \"천장 서랍 안에 딸기 맛 사탕을 넣어뒀단다.\" 하지만 서랍을 열었을 때는 아무것도 남아있지 않았다. 식탐 많은 오빠가 사탕을 전부 가져갔던 것이다.\n \"딸기 맛 사탕, 기억해 둘게.\" 금발의 여성은 그렇게 말하며, 꽃다발을 들고 복도 끝을 향해 걸어갔다. 평균보다 키가 크고, 마른 편이었다. 오후의 햇살이 그녀의 매트한 질감의 머리핀을 희미한 금빛으로 물들이고 있었다.\n 그녀의 이름을 몰랐기에, 나는 마음속으로 그녀를 '딸기 맛 사탕 아가씨'라고 불렀다. 어디가 아프냐고 내게 물어봐 준 사람은, 어머니를 제외하면 그녀가 유일했다.\n \n —— 티오리 스톤의 일기",
           TextMapId = "UI_CHAR_DATA_TEXT_54010201"
         },
         UI_CHAR_DATA_TEXT_54010202 = {
-          ContentKR = "다프네 세오도어를 두 번째로 만난 날, 나는 매들린이라는 젊은 간호사에게 멱살을 잡힌 채 욕을 먹고 있었다. 팔 힘이 얼마나 좋은지, 매들린은 새끼 양을 들어 올리듯 나를 휙 일으켜 세우더니, 어째서 엉뚱한 약을 가져왔냐며 쏘아붙였다.\n난 글자는 몰라도, 약품 라벨에 적혀 있는 글자들의 형태와 그 신약이 어떤 색이었는지는 또렷이 기억하고 있었다. 파란색 약은 많아도, 액체 폭시코르처럼 맑고 예쁜 푸른빛의 약은 그것뿐이었으니까.\n내가 잘못한 게 없다고 버티자, 매들린이 손을 번쩍 치켜들었다. 나는 눈을 질끈 감고 조용히 있는 게 나을지, 차라리 우는 게 나을지, 어떻게 해야 뺨을 한 대라도 덜 맞을 수 있을지 머리를 굴리고 있었다. 그러나 따귀가 날아오는 대신, 멱살을 움켜쥔 손에 힘이 풀렸다. 눈을 뜨자, 가늘고 긴 손 하나가 매들린의 손목을 단단히 붙잡고 있었다.\n딸기 사탕 아가씨였다.\n\"죄송하지만, 어쩌다 보니 다투는 걸 듣게 돼서요. 이 카론 아이한테 뭐라고 하시기 전에, 제가 그 약 좀 봐도 될까요?\"\n매들린은 딸기 사탕 아가씨의 손을 뿌리치려 했지만, 보기보다 단단히 붙잡힌 모양인지 투덜거리며 약병을 건넸다.\n딸기 사탕 아가씨는 약병 하나를 꺼내 몇 번 흔든 후, 코르크 마개를 열고 가볍게 향을 맡았다.\n\"이 꼬마 아가씨가 맞게 가져왔네요. AP-1718이 확실해요. 라벨에도 그렇게 적혀 있고요. 글도 못 읽는 아이 앞에서 거짓말하시면 안 되죠.\"\n\"AP-1718은 이런 색이 아니거든요! 이 꼬맹이가 라벨을 바꿔치기한 거예요!\" 매들린이 악을 썼다. \"저번에 혼 좀 낸 걸 가지고, 절 골탕 먹이려는 거라니까요!\"\n\"연금원에서 얼마 전에 조합법을 변경해서, 새로 나온 약은 간호사님 기억이랑 조금 다를 수 있어요. 그래도 죄 없는 아이를 탓하기보단...\" 딸기 사탕 아가씨는 고개를 들고 분노에 찬 간호사의 눈을 바라보며 말했다. \"본인 업무에 조금 더 신경을 쓰시는 편이 좋겠네요.\"\n\"새로운 조합법이요? 환자 보호자가 뭘 안다고 그래요!\" 매들린의 얼굴이 시뻘게졌다. \"이 꼬맹이 편들어 주려고 그러는 거 아닌가요!\"\n\"모를 수가 없죠, 간호사님.\" 딸기 사탕 아가씨가 말을 이었다. \"전 다프네 세오도어예요. AP-1718은 제가 주도한 연구고, 이건 소드 연금원의 명찰이에요. 아마 아시겠지만요.\"\n\n—— 디올리 스톤의 일기",
+          ContentKR = "다프네 세오도어를 두 번째로 만난 날, 나는 매들린이라는 젊은 간호사에게 멱살을 잡힌 채 욕을 먹고 있었다. 팔 힘이 얼마나 좋은지, 매들린은 새끼 양을 들어 올리듯 나를 휙 일으켜 세우더니, 어째서 엉뚱한 약을 가져왔냐며 쏘아붙였다.\n난 글자는 몰라도, 약품 라벨에 적혀 있는 글자들의 형태와 그 신약이 어떤 색이었는지는 또렷이 기억하고 있었다. 파란색 약은 많아도, 액체 폭시코르처럼 맑고 예쁜 푸른빛의 약은 그것뿐이었으니까.\n내가 잘못한 게 없다고 버티자, 매들린이 손을 번쩍 치켜들었다. 나는 눈을 질끈 감고 조용히 있는 게 나을지, 차라리 우는 게 나을지, 어떻게 해야 뺨을 한 대라도 덜 맞을 수 있을지 머리를 굴리고 있었다. 그러나 따귀가 날아오는 대신, 멱살을 움켜쥔 손에 힘이 풀렸다. 눈을 뜨자, 가늘고 긴 손 하나가 매들린의 손목을 단단히 붙잡고 있었다.\n딸기 사탕 아가씨였다.\n\"죄송하지만, 어쩌다 보니 다투는 걸 듣게 돼서요. 이 카론 아이한테 뭐라고 하시기 전에, 제가 그 약 좀 봐도 될까요?\"\n매들린은 딸기 사탕 아가씨의 손을 뿌리치려 했지만, 보기보다 단단히 붙잡힌 모양인지 투덜거리며 약병을 건넸다.\n딸기 사탕 아가씨는 약병 하나를 꺼내 몇 번 흔든 후, 코르크 마개를 열고 가볍게 향을 맡았다.\n\"이 꼬마 아가씨가 맞게 가져왔네요. AP-1718이 확실해요. 라벨에도 그렇게 적혀 있고요. 글도 못 읽는 아이 앞에서 거짓말하시면 안 되죠.\"\n\"AP-1718은 이런 색이 아니거든요! 이 꼬맹이가 라벨을 바꿔치기한 거예요!\" 매들린이 악을 썼다. \"저번에 혼 좀 낸 걸 가지고, 절 골탕 먹이려는 거라니까요!\"\n\"연금원에서 얼마 전에 조합법을 변경해서, 새로 나온 약은 간호사님 기억이랑 조금 다를 수 있어요. 그래도 죄 없는 아이를 탓하기보단...\" 딸기 사탕 아가씨는 고개를 들고 분노에 찬 간호사의 눈을 바라보며 말했다. \"본인 업무에 조금 더 신경을 쓰시는 편이 좋겠네요.\"\n\"새로운 조합법이요? 환자 보호자가 뭘 안다고 그래요!\" 매들린의 얼굴이 시뻘게졌다. \"이 꼬맹이 편들어 주려고 그러는 거 아닌가요!\"\n\"모를 수가 없죠, 간호사님.\" 딸기 사탕 아가씨가 말을 이었다. \"전 다프네 세오도어예요. AP-1718은 제가 주도한 연구고, 이건 소드 연금원의 명찰이에요. 아마 아시겠지만요.\"\n \n—— 디올리 스톤의 일기",
           TextMapId = "UI_CHAR_DATA_TEXT_54010202"
         },
         UI_CHAR_DATA_TEXT_54010203 = {
-          ContentKR = "다프네 세오도어에게 도움을 받은 그날, 난 정말이지 날아갈 것같이 기분이 좋았다. 나는 세오도어가 건네준 사탕의 포장지를 북북 찢어 몇 개를 한입에 욱여넣고는, 머쓱하게 사라지는 매들린의 뒷모습을 향해 혀를 쏙 내밀었다.\n\"이름이 뭐니?\" 병동 아래층에 있는 벤치에 나란히 앉자, 그녀가 물었다.\n\"디올리요.\"\n\"쓸 줄 알아?\"\n내가 고개를 젓자, 세오도어는 나뭇가지 하나를 주워 모래 위에 글자를 적어 내렸다.\n\"이게 네 이름이야. '보라이슬꽃'이라는 뜻이지.\"\n내 이름은 사람들 입에 '망할 꼬마'나 '천한 것' 같은 단어들과 함께 오르내리는 경우가 많아서, 이렇게 예쁜 뜻이 담겨 있을 거라고는 전혀 예상하지 못했다.\n\"보라이슬꽃 꼬마야, 언니한테 글 배워 볼래?\" 그녀가 자그맣게 속삭였다.\n\"그걸 왜 배워야 해요?\" 나는 어리둥절해하며 물었다. 카론은 대부분 육체노동자로 살아가고, 내게는 계관카론이 될 만한 재능도 없다는 사실을 난 잘 알고 있었다.\n\"네가 글자를 알았다면, 오늘 같은 일을 겪지 않았을 수도 있으니까.\" 그녀가 부드럽게 웃었다. \"안다는 건, 우리를 지킬 수 있는 무기가 되어 준단다.\"\n무슨 말인지 이해할 수 없어 멍해진 나는 고개를 저었다가, 세오도어의 제안을 거절할 수 없어 이내 고개를 힘껏 끄덕였다.\n그날 오후, 세오도어는 내게 모든 글자를 가르쳐 주었고, 나는 그녀가 준 작은 공책에 삐뚤삐뚤하게 글자들을 옮겨 적었다. 세오도어가 돌아가기 전, 나는 머뭇거리며 그녀를 불러 세웠다.\n\"세오도어 씨.\" 나는 말을 이어갔다. \"세오도어 씨는, '연금술사'라 그랬죠?\"\n\"응.\"\n\"연금술이 뭐예요?\"\n\"사람들을 더 행복하게 만들어 주는 학문이야.\"\n그 말을 하는 세오도어의 눈동자는, 조금 전과는 달리 마치 불꽃이 타오르듯 밝게 빛나고 있었다.\n\"그럼 '연금원'은 '연금술'을 공부하는 곳이겠네요?\"\n\"...응.\"\n\"그럼 제가 글공부를 열심히 하면요...\" 내가 물었다. \"저도 연금원에 들어가서, 세오도어 씨랑 같이 있을 수 있어요?\"\n나는 언제나 내 주제를 알고 눈치도 빠른 아이였다. 그래서 굳이 묻지 않아도, 조금 전 매들린의 반응만으로도 연금원은 오르지 못할 나무라는 것을 잘 알고 있었다. 그렇지만 세오도어의 눈동자 속 불꽃을 본 순간, 나도 저 불꽃을 향해 나아갈 자격이 있을지도 모른다는 착각에 빠지고 말았다.\n그러나 내 기대와 달리, 세오도어의 눈동자 속 불꽃은 순식간에 사그라들었고, 그녀는 복잡한 표정을 지으며 내 시선을 피했다.\n\"아니, 디올리.\" 세오도어가 말했다 \"거긴 가지 마.\"\n\"휘페르보레아 제국의 연금원은 잘못된 길을 걷고 있어.\" 세오도어가 나지막이 말했다. \"거긴 이미 내가 꿈꾸던 탑이 아니야.\"\n\n—— 디올리 스톤의 일기\n\n",
+          ContentKR = "다프네 세오도어에게 도움을 받은 그날, 난 정말이지 날아갈 것같이 기분이 좋았다. 나는 세오도어가 건네준 사탕의 포장지를 북북 찢어 몇 개를 한입에 욱여넣고는, 머쓱하게 사라지는 매들린의 뒷모습을 향해 혀를 쏙 내밀었다.\n\"이름이 뭐니?\" 병동 아래층에 있는 벤치에 나란히 앉자, 그녀가 물었다.\n\"디올리요.\"\n\"쓸 줄 알아?\"\n내가 고개를 젓자, 세오도어는 나뭇가지 하나를 주워 모래 위에 글자를 적어 내렸다.\n\"이게 네 이름이야. '보라이슬꽃'이라는 뜻이지.\"\n내 이름은 사람들 입에 '망할 꼬마'나 '천한 것' 같은 단어들과 함께 오르내리는 경우가 많아서, 이렇게 예쁜 뜻이 담겨 있을 거라고는 전혀 예상하지 못했다.\n\"보라이슬꽃 꼬마야, 언니한테 글 배워 볼래?\" 그녀가 자그맣게 속삭였다.\n\"그걸 왜 배워야 해요?\" 나는 어리둥절해하며 물었다. 카론은 대부분 육체노동자로 살아가고, 내게는 계관카론이 될 만한 재능도 없다는 사실을 난 잘 알고 있었다.\n\"네가 글자를 알았다면, 오늘 같은 일을 겪지 않았을 수도 있으니까.\" 그녀가 부드럽게 웃었다. \"안다는 건, 우리를 지킬 수 있는 무기가 되어 준단다.\"\n무슨 말인지 이해할 수 없어 멍해진 나는 고개를 저었다가, 세오도어의 제안을 거절할 수 없어 이내 고개를 힘껏 끄덕였다.\n그날 오후, 세오도어는 내게 모든 글자를 가르쳐 주었고, 나는 그녀가 준 작은 공책에 삐뚤삐뚤하게 글자들을 옮겨 적었다. 세오도어가 돌아가기 전, 나는 머뭇거리며 그녀를 불러 세웠다.\n\"세오도어 씨.\" 나는 말을 이어갔다. \"세오도어 씨는, '연금술사'라 그랬죠?\"\n\"응.\"\n\"연금술이 뭐예요?\"\n\"사람들을 더 행복하게 만들어 주는 학문이야.\"\n그 말을 하는 세오도어의 눈동자는, 조금 전과는 달리 마치 불꽃이 타오르듯 밝게 빛나고 있었다.\n\"그럼 '연금원'은 '연금술'을 공부하는 곳이겠네요?\"\n\"...응.\"\n\"그럼 제가 글공부를 열심히 하면요...\" 내가 물었다. \"저도 연금원에 들어가서, 세오도어 씨랑 같이 있을 수 있어요?\"\n나는 언제나 내 주제를 알고 눈치도 빠른 아이였다. 그래서 굳이 묻지 않아도, 조금 전 매들린의 반응만으로도 연금원은 오르지 못할 나무라는 것을 잘 알고 있었다. 그렇지만 세오도어의 눈동자 속 불꽃을 본 순간, 나도 저 불꽃을 향해 나아갈 자격이 있을지도 모른다는 착각에 빠지고 말았다.\n그러나 내 기대와 달리, 세오도어의 눈동자 속 불꽃은 순식간에 사그라들었고, 그녀는 복잡한 표정을 지으며 내 시선을 피했다.\n\"아니, 디올리.\" 세오도어가 말했다 \"거긴 가지 마.\"\n\"휘페르보레아 제국의 연금원은 잘못된 길을 걷고 있어.\" 세오도어가 나지막이 말했다. \"거긴 이미 내가 꿈꾸던 탑이 아니야.\"\n \n—— 디올리 스톤의 일기",
           TextMapId = "UI_CHAR_DATA_TEXT_54010203"
         },
         UI_CHAR_DATA_TEXT_54010204 = {
-          ContentKR = "세오도어가 준 공책을 글씨로 가득 채우고 나서야, 나는 리버랜드 병원에서 그녀와 재회할 수 있었다.\n어차피 반드시 와 줄 거라고 믿고 있었지만.\n지난번에 만났을 때, 나는 세오도어에게 연금원에서 개리 스톤이라는 남자의 행방을 알아봐 달라고 부탁했었다. 나는 눈물까지 글썽이며, 개리는 이 세상에 딱 하나 남은 내 가족이며, 연금원으로 간 뒤에 연락이 끊겼다고 애원했다.\n그리고 내 예상대로, 세오도어는 단번에 자신이 확인해 보겠다며 약속해 주었다.\n사실, 내가 한 말은 대부분 사실이었다. 내가 개리 스톤을 눈곱만큼도 그리워하지 않는다는 사실 딱 하나만 빼면 말이다. 개리는 내 오빠였지만, 남매라고 해서 다 사이가 좋은 건 아니니까. 내 키가 개리의 허벅지 정도밖에 되지 않았을 무렵부터, 그 녀석은 내가 '자기' 음식을 훔쳐 먹었다는 이유만으로 내가 숨을 헐떡일 때까지 목을 조르던 인간이었다.\n개리의 행방 따위는 관심도 없었지만, 나는 세오도어를 다시 만나고 싶었다. 아마도 그녀는 아주 행복한 가정에서 자라서, 내가 오빠라는 이야기를 꺼내자마자 개리가 내게 굉장히 소중한 사람이라고 판단해 버렸겠지.\n\n세오도어는 개리 스톤의 소식을 가지고 돌아왔다.\n그러나 이번에는 눈 밑이 거뭇했고, 옅은 눈물 자국까지 보일 정도로 초췌해 보였다.\n복도 저편에서 한참을 서성이다 다가오는 세오도어를 보며, 나는 그녀가 아주 나쁜 소식을 전해 줄 것 같다고 짐작했다. 세오도어는 내게 끔찍한 소식을 전해 줘야 할지 망설이고 있던 걸까? 아니면 그 소식을 어떻게 전해야 할지 고민하고 있었던 걸까?\n\"디올리.\" 세오도어가 무릎을 꿇더니, 두 손으로 내 어깨를 꽉 쥐었다. \"네 오빠 소식을 알아냈어. 그런데... 약속해 줘. 꼭 이겨내겠다고, 응?\"\n아... 세오도어는 결국 내게 전부 말해 주기로 결심한 모양이었다. 아마도 거짓말에 서툴거나, 아이라도 진실을 알아야 한다고 생각했기 때문이겠지.\n\"개리 스톤은 이제 돌아오지 않을 거야.\" 세오도어가 잠긴 목소리로 말했다. \"어떤 연금술사가 일으킨 사건에 휘말렸어.\"\n마음속은 놀랍도록 평온했지만, 궁금한 건 몇 가지 있었다. 나는 개리의 최후가 아니라, 우리 같은 '쓰레기'들이 맞이하게 되는 결말이 어떤 것인지 알고 싶었다.\n\"...사고요? 누가 누굴 죽인 거예요?\"\n\"응.\"\n\"그 연금술사가 사람을 죽였어요?\"\n\"아니야.\"\n\"그러면 우리 오빠가 사람을 죽인 거예요?\"\n\"...그것도 아니야.\"\n\"그러면 범인이 누구예요?\"\n\"보이지 않는 유령일 수도, 우리 모두일 수도 있어.\"\n나는 도무지 이해할 수 없어 고개를 저었다.\n\"그러면요, 세오도어 씨.\" 나는 물었다. \"저도 언젠가는 오빠처럼 죽어요?\"\n\"제가 아는 단어도 많아지고, 세오도어 씨가 준 책들도 다 읽고 똑똑해져서 '연금술'까지 배우게 되면, 우리 오빠처럼 되지 않을 수 있어요?\"\n\"나도 예전엔 그렇게 믿었으니까, 네 말이 맞다고 얘기해 주고 싶어. 언니 주변에도 너처럼 지식을 발판 삼아 저 꼭대기에 올라간 사람이 많았거든.\" 세오도어는 내 뿔을 가볍게 어루만졌다. \"그런데 지금은 그러기도 전에 벼랑 밑으로 내던져져서 산산조각 나는 사람들을 훨씬 더 많이 봐.\"\n\"이거 하나만은 꼭 기억해 줘, 디올리.\" 세오도어가 또박또박, 힘주어 말했다. \"연금원하고 거리를 둬. 네가 연금술에 푹 빠지게 되더라도, 연금원엔 절대 다가가지 마.\"\n나는 진지하게 고개를 끄덕였다.\n세오도어는 몸을 일으키곤 공책 한 장을 찢었다. 이번에도 뭔가 적어 주려나 싶었지만, 그녀는 종이를 접어 작은 배 하나를 만들었다.\n\"카론들은 사람의 영혼은 물과 이어져 있다고 믿는다고 들었어. 이 배에다 네가 하고 싶은 말을 하고, 속삭임 강에 띄워 보내면, 네 마음도 오빠한테 전해질 거야.\"\n나는 자그마한 종이배를 받아 들고, 떠나는 세오도어의 뒷모습을 조용히 바라보았다. 그리고 그날 이후로 아주 오랫동안, 나는 그녀를 다시 만나지 못했다.\n그러던 어느 날, 나는 용기를 내어 병원에 약을 가져다주러 온 직원에게 다프네 세오도어는 어디 있냐고, 어째서 더는 오지 않는 거냐고 물었다.\n그러자 그 직원은 세오도어는 전장으로 향했고, 원래 전쟁터는 한번 가면 돌아오지 못할 수도 있는 곳이라, 어쩌면 두 번 다시 그녀를 만날 수 없을 거라고 말했다.\n손에 움켜쥐고 있던 딸기 사탕 상자가 바닥으로 떨어졌다.\n\n—— 디올리 스톤의 일기",
+          ContentKR = "세오도어가 준 공책을 글씨로 가득 채우고 나서야, 나는 리버랜드 병원에서 그녀와 재회할 수 있었다.\n어차피 반드시 와 줄 거라고 믿고 있었지만.\n지난번에 만났을 때, 나는 세오도어에게 연금원에서 개리 스톤이라는 남자의 행방을 알아봐 달라고 부탁했었다. 나는 눈물까지 글썽이며, 개리는 이 세상에 딱 하나 남은 내 가족이며, 연금원으로 간 뒤에 연락이 끊겼다고 애원했다.\n그리고 내 예상대로, 세오도어는 단번에 자신이 확인해 보겠다며 약속해 주었다.\n사실, 내가 한 말은 대부분 사실이었다. 내가 개리 스톤을 눈곱만큼도 그리워하지 않는다는 사실 딱 하나만 빼면 말이다. 개리는 내 오빠였지만, 남매라고 해서 다 사이가 좋은 건 아니니까. 내 키가 개리의 허벅지 정도밖에 되지 않았을 무렵부터, 그 녀석은 내가 '자기' 음식을 훔쳐 먹었다는 이유만으로 내가 숨을 헐떡일 때까지 목을 조르던 인간이었다.\n개리의 행방 따위는 관심도 없었지만, 나는 세오도어를 다시 만나고 싶었다. 아마도 그녀는 아주 행복한 가정에서 자라서, 내가 오빠라는 이야기를 꺼내자마자 개리가 내게 굉장히 소중한 사람이라고 판단해 버렸겠지.\n \n세오도어는 개리 스톤의 소식을 가지고 돌아왔다.\n그러나 이번에는 눈 밑이 거뭇했고, 옅은 눈물 자국까지 보일 정도로 초췌해 보였다.\n복도 저편에서 한참을 서성이다 다가오는 세오도어를 보며, 나는 그녀가 아주 나쁜 소식을 전해 줄 것 같다고 짐작했다. 세오도어는 내게 끔찍한 소식을 전해 줘야 할지 망설이고 있던 걸까? 아니면 그 소식을 어떻게 전해야 할지 고민하고 있었던 걸까?\n\"디올리.\" 세오도어가 무릎을 꿇더니, 두 손으로 내 어깨를 꽉 쥐었다. \"네 오빠 소식을 알아냈어. 그런데... 약속해 줘. 꼭 이겨내겠다고, 응?\"\n아... 세오도어는 결국 내게 전부 말해 주기로 결심한 모양이었다. 아마도 거짓말에 서툴거나, 아이라도 진실을 알아야 한다고 생각했기 때문이겠지.\n\"개리 스톤은 이제 돌아오지 않을 거야.\" 세오도어가 잠긴 목소리로 말했다. \"어떤 연금술사가 일으킨 사건에 휘말렸어.\"\n마음속은 놀랍도록 평온했지만, 궁금한 건 몇 가지 있었다. 나는 개리의 최후가 아니라, 우리 같은 '쓰레기'들이 맞이하게 되는 결말이 어떤 것인지 알고 싶었다.\n\"...사고요? 누가 누굴 죽인 거예요?\"\n\"응.\"\n\"그 연금술사가 사람을 죽였어요?\"\n\"아니야.\"\n\"그러면 우리 오빠가 사람을 죽인 거예요?\"\n\"...그것도 아니야.\"\n\"그러면 범인이 누구예요?\"\n\"보이지 않는 유령일 수도, 우리 모두일 수도 있어.\"\n나는 도무지 이해할 수 없어 고개를 저었다.\n\"그러면요, 세오도어 씨.\" 나는 물었다. \"저도 언젠가는 오빠처럼 죽어요?\"\n\"제가 아는 단어도 많아지고, 세오도어 씨가 준 책들도 다 읽고 똑똑해져서 '연금술'까지 배우게 되면, 우리 오빠처럼 되지 않을 수 있어요?\"\n\"나도 예전엔 그렇게 믿었으니까, 네 말이 맞다고 얘기해 주고 싶어. 언니 주변에도 너처럼 지식을 발판 삼아 저 꼭대기에 올라간 사람이 많았거든.\" 세오도어는 내 뿔을 가볍게 어루만졌다. \"그런데 지금은 그러기도 전에 벼랑 밑으로 내던져져서 산산조각 나는 사람들을 훨씬 더 많이 봐.\"\n\"이거 하나만은 꼭 기억해 줘, 디올리.\" 세오도어가 또박또박, 힘주어 말했다. \"연금원하고 거리를 둬. 네가 연금술에 푹 빠지게 되더라도, 연금원엔 절대 다가가지 마.\"\n나는 진지하게 고개를 끄덕였다.\n세오도어는 몸을 일으키곤 공책 한 장을 찢었다. 이번에도 뭔가 적어 주려나 싶었지만, 그녀는 종이를 접어 작은 배 하나를 만들었다.\n\"카론들은 사람의 영혼은 물과 이어져 있다고 믿는다고 들었어. 이 배에다 네가 하고 싶은 말을 하고, 속삭임 강에 띄워 보내면, 네 마음도 오빠한테 전해질 거야.\"\n나는 자그마한 종이배를 받아 들고, 떠나는 세오도어의 뒷모습을 조용히 바라보았다. 그리고 그날 이후로 아주 오랫동안, 나는 그녀를 다시 만나지 못했다.\n그러던 어느 날, 나는 용기를 내어 병원에 약을 가져다주러 온 직원에게 다프네 세오도어는 어디 있냐고, 어째서 더는 오지 않는 거냐고 물었다.\n그러자 그 직원은 세오도어는 전장으로 향했고, 원래 전쟁터는 한번 가면 돌아오지 못할 수도 있는 곳이라, 어쩌면 두 번 다시 그녀를 만날 수 없을 거라고 말했다.\n손에 움켜쥐고 있던 딸기 사탕 상자가 바닥으로 떨어졌다.\n \n—— 디올리 스톤의 일기",
           TextMapId = "UI_CHAR_DATA_TEXT_54010204"
         },
         UI_CHAR_DATA_TEXT_54010205 = {
-          ContentKR = "내가 신문을 더듬더듬 읽을 수 있게 되었을 무렵, 세오도어가 돌아왔다.\n예전처럼 꽃다발을 안고 있었지만, 바람이 불면 종잇장처럼 속삭임 강으로 날아가 버릴 만큼 그때보다 훨씬 더 마르고 초췌해져 있었다.\n세오도어가 복도 저편에서 걸어오자, 사람들은 약속이라도 한 것처럼 대화를 멈추고 증오, 혐오, 질투, 두려움 등이 담긴 눈으로 그녀를 쏘아보았다. 곧이어 누군가 카랑카랑한 목소리로 웃음을 터뜨리더니, 쥐어짜는 듯한 목소리로 '배신자'라고 외쳤고, 여기저기서 동조하는 말들이 들려왔다.\n아, 그랬지. 며칠 전 간호사들이 다프네 세오도어가 전쟁 중에 나라를 배신했다며 수다를 떠는 걸 들은 적 있었다.\n하지만... 그게 뭐 어쨌다는 거지?\n다프네 세오도어 같은 사람이 반역자로 내몰렸다면, 그건 이 나라가 잘못됐기 때문일 것이다.\n\n세오도어는 쏟아지는 비난 속에서도 아무 대꾸 없이, 사람들에게 눈길 한 번 주지 않은 채 깡마른 등을 꼿꼿이 세우고 병동을 향해 걸어왔다.\n\"개스톤 씨는 좀 어떠세요?\" 그녀가 당직 간호사에게 물었다.\n\"로저 개스톤 씨를 말하는 거라면...\" 간호사가 말했다. \"돌아가셨어요. 얼마 전에 통증이 도졌는데, 간호사가 잠깐 자리를 비운 사이에 유리컵을 깨서 팔목을 그으셨거든요.\"\n\"다른 사람한테 부탁해서 개스톤 씨를 치료할 약을 보냈잖아요!\" 세오도어가 이렇게까지 침착함을 잃은 모습은 처음이었다. 그녀는 절망에 찬 목소리로 외쳤다. \"AG-1899가 아무 효과도 없었던 거예요?\"\n\"한발 늦으신 거죠. 약이 도착하기 하루 전날 밤에 그렇게 된 거니까요.\" 간호사는 입가에 조소를 머금은 채 담담히 말했다. \"그런데, 개스톤 씨는 명예로운 퇴역 군인이셨으니까, 만약 그날 살아 계셨다 하더라도, 론샤 요새에서 그쪽이 이룩한 '쾌거'에 대해 듣고 그 약은 안 쓰셨을 거예요.\"\n세오도어의 얼굴이 새하얗게 질리더니, 엄지손톱이 살을 파고들 정도로 주먹을 꽉 쥐었다. \"아니에요! 전...\" 하지만 무언가 변명하려던 그녀는 끝내 입을 다물었다.\n세오도어가 주먹에서 힘을 빼도록 그녀의 손을 잡자, 영안실의 시체가 연상될 정도로 차가운 느낌이 들었다.\n\"세오도어 씨... 아니, 다프네 언니.\" 나는 처음으로 그녀를 언니라고 불렀다. 그러고는 거의 끌다시피 그녀를 아래층에 있는 벤치로 데려갔다. 예전에 세오도어가 내게 글자를 가르쳐 주었던 바로 그곳이었다.\n\"슬퍼하지 말아요.\"\n그리고 그녀의 손을 펼쳐, 그 위에 자그마한 종이배 하나를 올려 주었다.\n\"하고 싶은 말을 이 배에 전하고, 속삭임 강에 띄워요. 그러면 이 배가 언니 마음을 싣고, 아빠가 계신 곳에 전해 줄 거예요.\"\n그녀는 '아빠'라는 말에 흠칫 놀라더니, 금세 눈에 옅은 미소를 머금고 나를 바라보았다.\n\"고마워, 디올리.\" 그녀가 말했다. \"꼭 그렇게 할게.\" 그러고는 문득 무언가 생각난 듯, 가방에서 책 몇 권을 꺼내 내 품에 안겨 주었다. 세오도어는 책을 더 읽고 싶다고 했던 내 말을 기억하고 있었다. 벤치에 잠시 앉아 있던 그녀는, 이내 몸을 일으켜 붉은 석양 속으로 떠나갔다.\n\n내가 신문을 읽고 이해할 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n그녀에게 선물 받은 사탕 상자의 그림이 닳아 없어졌을 때도, 다프네 세오도어는 돌아오지 않았다.\n쿠션을 끌어안아도 시야가 가려지지 않을 만큼 키가 커졌을 때도, 다프네 세오도어는 돌아오지 않았다.\n가장 복잡한 연금술 책을 이해할 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n보라이슬꽃에서 약제를 추출할 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n돈을 모아 드디어 휘페르보레아를 떠나 이스엘로 유학을 갈 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n...그래, 만나러 오던 가족이 세상을 떠났으니까, 애초에 돌아올 이유가 없었겠지.\n나는 해 질 녘 복도에 서서 손을 흔들며, 20년 가까이 일하고 생활했던 병원에 작별을 고했다. 세오도어를 마지막으로 본 그날처럼 아름답게 물든 노을이었다.\n갑자기, 복도 저 끝에서 젊고 마른 금발의 소녀가 걸어오는 것만 같았다. 순간, 나는 손에 들고 있던 가방을 땅에 떨어뜨리고 말았다. 그러나 가방을 주워 들고 다시 복도 끝을 보았을 때, 그곳에는 아무도 없었다.\n\"아까 저기서 금발 여자애 못 봤어요?\" 나는 매들린에게 물었다. \"키 크고, 마르고, 금발에...\"\n\"금발 여자애라니?\" 매들린이 투덜거렸다. \"나이도 어린 게 어떻게 늙은 나보다도 눈이 더 어두워.\"\n\"아, 제가 잘못 봤나 봐요.\"\n나는 가방을 들고 계단을 내려가, 두 번 다시 뒤돌아보지 않았다.\n\n—— 디올리 스톤의 일기",
+          ContentKR = "내가 신문을 더듬더듬 읽을 수 있게 되었을 무렵, 세오도어가 돌아왔다.\n예전처럼 꽃다발을 안고 있었지만, 바람이 불면 종잇장처럼 속삭임 강으로 날아가 버릴 만큼 그때보다 훨씬 더 마르고 초췌해져 있었다.\n세오도어가 복도 저편에서 걸어오자, 사람들은 약속이라도 한 것처럼 대화를 멈추고 증오, 혐오, 질투, 두려움 등이 담긴 눈으로 그녀를 쏘아보았다. 곧이어 누군가 카랑카랑한 목소리로 웃음을 터뜨리더니, 쥐어짜는 듯한 목소리로 '배신자'라고 외쳤고, 여기저기서 동조하는 말들이 들려왔다.\n아, 그랬지. 며칠 전 간호사들이 다프네 세오도어가 전쟁 중에 나라를 배신했다며 수다를 떠는 걸 들은 적 있었다.\n하지만... 그게 뭐 어쨌다는 거지?\n다프네 세오도어 같은 사람이 반역자로 내몰렸다면, 그건 이 나라가 잘못됐기 때문일 것이다.\n \n세오도어는 쏟아지는 비난 속에서도 아무 대꾸 없이, 사람들에게 눈길 한 번 주지 않은 채 깡마른 등을 꼿꼿이 세우고 병동을 향해 걸어왔다.\n\"개스톤 씨는 좀 어떠세요?\" 그녀가 당직 간호사에게 물었다.\n\"로저 개스톤 씨를 말하는 거라면...\" 간호사가 말했다. \"돌아가셨어요. 얼마 전에 통증이 도졌는데, 간호사가 잠깐 자리를 비운 사이에 유리컵을 깨서 팔목을 그으셨거든요.\"\n\"다른 사람한테 부탁해서 개스톤 씨를 치료할 약을 보냈잖아요!\" 세오도어가 이렇게까지 침착함을 잃은 모습은 처음이었다. 그녀는 절망에 찬 목소리로 외쳤다. \"AG-1899가 아무 효과도 없었던 거예요?\"\n\"한발 늦으신 거죠. 약이 도착하기 하루 전날 밤에 그렇게 된 거니까요.\" 간호사는 입가에 조소를 머금은 채 담담히 말했다. \"그런데, 개스톤 씨는 명예로운 퇴역 군인이셨으니까, 만약 그날 살아 계셨다 하더라도, 론샤 요새에서 그쪽이 이룩한 '쾌거'에 대해 듣고 그 약은 안 쓰셨을 거예요.\"\n세오도어의 얼굴이 새하얗게 질리더니, 엄지손톱이 살을 파고들 정도로 주먹을 꽉 쥐었다. \"아니에요! 전...\" 하지만 무언가 변명하려던 그녀는 끝내 입을 다물었다.\n세오도어가 주먹에서 힘을 빼도록 그녀의 손을 잡자, 영안실의 시체가 연상될 정도로 차가운 느낌이 들었다.\n\"세오도어 씨... 아니, 다프네 언니.\" 나는 처음으로 그녀를 언니라고 불렀다. 그러고는 거의 끌다시피 그녀를 아래층에 있는 벤치로 데려갔다. 예전에 세오도어가 내게 글자를 가르쳐 주었던 바로 그곳이었다.\n\"슬퍼하지 말아요.\"\n그리고 그녀의 손을 펼쳐, 그 위에 자그마한 종이배 하나를 올려 주었다.\n\"하고 싶은 말을 이 배에 전하고, 속삭임 강에 띄워요. 그러면 이 배가 언니 마음을 싣고, 아빠가 계신 곳에 전해 줄 거예요.\"\n그녀는 '아빠'라는 말에 흠칫 놀라더니, 금세 눈에 옅은 미소를 머금고 나를 바라보았다.\n\"고마워, 디올리.\" 그녀가 말했다. \"꼭 그렇게 할게.\" 그러고는 문득 무언가 생각난 듯, 가방에서 책 몇 권을 꺼내 내 품에 안겨 주었다. 세오도어는 책을 더 읽고 싶다고 했던 내 말을 기억하고 있었다. 벤치에 잠시 앉아 있던 그녀는, 이내 몸을 일으켜 붉은 석양 속으로 떠나갔다.\n \n내가 신문을 읽고 이해할 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n그녀에게 선물 받은 사탕 상자의 그림이 닳아 없어졌을 때도, 다프네 세오도어는 돌아오지 않았다.\n쿠션을 끌어안아도 시야가 가려지지 않을 만큼 키가 커졌을 때도, 다프네 세오도어는 돌아오지 않았다.\n가장 복잡한 연금술 책을 이해할 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n보라이슬꽃에서 약제를 추출할 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n돈을 모아 드디어 휘페르보레아를 떠나 이스엘로 유학을 갈 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n...그래, 만나러 오던 가족이 세상을 떠났으니까, 애초에 돌아올 이유가 없었겠지.\n나는 해 질 녘 복도에 서서 손을 흔들며, 20년 가까이 일하고 생활했던 병원에 작별을 고했다. 세오도어를 마지막으로 본 그날처럼 아름답게 물든 노을이었다.\n갑자기, 복도 저 끝에서 젊고 마른 금발의 소녀가 걸어오는 것만 같았다. 순간, 나는 손에 들고 있던 가방을 땅에 떨어뜨리고 말았다. 그러나 가방을 주워 들고 다시 복도 끝을 보았을 때, 그곳에는 아무도 없었다.\n\"아까 저기서 금발 여자애 못 봤어요?\" 나는 매들린에게 물었다. \"키 크고, 마르고, 금발에...\"\n\"금발 여자애라니?\" 매들린이 투덜거렸다. \"나이도 어린 게 어떻게 늙은 나보다도 눈이 더 어두워.\"\n\"아, 제가 잘못 봤나 봐요.\"\n나는 가방을 들고 계단을 내려가, 두 번 다시 뒤돌아보지 않았다.\n \n—— 디올리 스톤의 일기",
           TextMapId = "UI_CHAR_DATA_TEXT_54010205"
         },
         UI_CHAR_DATA_TEXT_54010301 = {
@@ -51717,62 +51513,6 @@ local Data = {
         UI_CHAR_DATA_TEXT_54010405 = {
           ContentKR = "다프네는 아주 긴 꿈을 꾸었다.\n꿈속에서 거니는 디즈마니아의 거리는 현실처럼 축축하고 끈적였다. 가고일 석상의 입가를 타고 흘러내린 빗물이 벽에 짙은 얼룩을 남겼다.\n길 양옆으로, 장우산을 쓰고 있는 익숙한 사람들의 모습이 보였다.\n \n\"연금술은 사람들에게 행복을 가져다주는 학문이란다.\" 노부인이 말했다.\n\"다프네, 넌 내 자랑이 될 거야.\" 활기 넘치는 여인이 말했다.\n\"네가 행복했으면 좋겠다.\" 활짝 미소 짓는 남자가 말했다.\n가까이 다가가 기억 속의 그 사람들이 맞는지 확인해 보려고 했지만, 그들의 생김새는 마치 빗물에 번진 것처럼 흐릿했다.\n \n\"우리 덕에 고통받는 사람들의 삶이 조금이라도 나아질 수 있을까요?\" 젊은 연구원이 물었다.\n\"저도 아는 단어가 많아지고, 똑똑해져서 '연금술'까지 배우면, 우리 오빠처럼 되지 않을 수 있어요?\" 병원 유니폼을 입은 소녀가 물었다.\n\"디즈마니아는 여기서 너무 멀어요. 비도 퍼부어서 길까지 진창이잖아요. 우리, 돌아갈 수 있을까요?\" 죽어 가는 병사가 물었다.\n다프네는 당신들의 말이 맞다고 대답해 주려 했지만, 성대가 끊어진 것처럼 목이 메어 아무 말도 할 수 없었다.\n \n\"네 이상은 여전히 건재하니?\" 군단장의 시선이 내리꽂혔다.\n그 시선에 눈이 타는 듯 아파 본능적으로 도망치려 했지만, 돌아본 발밑은 끝이 보이지 않는 낭떠러지였다.\n\"일단 전투에서 살아남아야지.\" 은빛 머리칼과 붉은 눈동자의 전우가 그녀의 어깨를 붙잡았다. \"네가 했던 말을 기억해.\"\n함께 살아남는 것... 그것은 한때 다프네가 바랐던 소망이었다.\n \n\"다프네, 네가 어렸을 때 뭘 꿈꿨는지, 아직 기억해?\" 길모퉁이에서 앳된 목소리를 한, 자신과 꼭 닮은 얼굴의 소녀가 나타났다. 과거의 다프네 자신이었다.\n\"연금술로 사람들을 행복하게 만들어 주는 거.\" 다프네가 대답했다. \"한 번도 잊은 적 없어.\"\n\"하지만, 모든 이상엔 대가가 따르는 법이야.\" 등 뒤에서 지금껏 들어 본 적 없는 다프네 자신의 싸늘한 목소리가 들렸다. \"무언가를 얻으려면, 무언가를 버려야 해. 다프네, 이상은 강자의 특권이야.\"\n\"그러면 나보고 어떻게 하라는 거야?\" 다프네가 물었다.\n\"네 원칙과 이상을 버리고, 그들 속으로 들어가 하나가 돼야지.\" 차가운 목소리가 말했다.\n\"안 돼! 짐승과 어울리면서 짐승이 되지 않을 방법은 없는걸!\" 앳된 목소리가 말했다.\n\"모든 걸 바꿀 권리를 손에 넣고 싶다면, 가장 높은 곳에 서야만 해.\" 차가운 목소리가 말했다.\n\"그 길에 발을 들이면, 두 번 다시 돌아오지 못할 거야!\" 앳된 목소리가 말했다.\n끝없이 다투는 두 목소리에, 다프네는 깨질 듯한 두통을 느끼며 무릎을 꿇고 머리를 감싸 쥐었다. 서서히 목소리들이 잦아들었고, 이윽고 디즈마니아의 하늘에서 마지막 한 줄기 빛마저 사라졌다.\n \n다프네 세오도어는 자신의 침실에서 눈을 떴다. 창밖 담쟁이덩굴 잎사귀 위로, 비 갠 하늘의 햇살이 쏟아졌다.\n\"아가씨, 손님이 오셨어요.\" 하녀가 문을 두드렸다. \"군단 쪽 사람인데... 아가씨께 해를 입히려는 것 같진 않아요.\"\n다프네는 외투를 걸치고 정원으로 향했다. 정원에는 시빌라 메이슨의 부관이 서 있었다.\n\"세오도어 님, 시빌라 님의 명령으로 세오도어 양을 어떤 계획에 초대하러 왔습니다. 관심이 있으시다면 말이죠.\"\n\"계획의 이름은, '두 번째 새싹'입니다.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_54010405"
-        },
-        UI_CHAR_DATA_UNLOCK_20 = {
-          ContentKR = "캐릭터 레벨 Lv.20 도달",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_20"
-        },
-        UI_CHAR_DATA_UNLOCK_30 = {
-          ContentKR = "캐릭터 레벨 Lv.30 도달",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_30"
-        },
-        UI_CHAR_DATA_UNLOCK_40 = {
-          ContentKR = "캐릭터 레벨 Lv.40 도달",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_40"
-        },
-        UI_CHAR_DATA_UNLOCK_50 = {
-          ContentKR = "캐릭터 레벨 Lv.50 도달",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_50"
-        },
-        UI_CHAR_DATA_UNLOCK_60 = {
-          ContentKR = "캐릭터 레벨 Lv.60 도달",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_60"
-        },
-        UI_CHAR_DATA_UNLOCK_task01 = {
-          ContentKR = "캐릭터 레벨 Lv.50 도달\n퀘스트 [부드러운 바람을 타고] 완료",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task01"
-        },
-        UI_CHAR_DATA_UNLOCK_task02 = {
-          ContentKR = "캐릭터 레벨 Lv.60 도달\n퀘스트 [부드러운 바람을 타고] 완료",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task02"
-        },
-        UI_CHAR_DATA_UNLOCK_task03 = {
-          ContentKR = "캐릭터 레벨 Lv.50 도달\n퀘스트 [소녀에게 바치는 꽃다발] 완료",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task03"
-        },
-        UI_CHAR_DATA_UNLOCK_task04 = {
-          ContentKR = "캐릭터 레벨 Lv.40 도달\n퀘스트 [소녀에게 바치는 꽃다발] 완료",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task04"
-        },
-        UI_CHAR_DATA_UNLOCK_task05 = {
-          ContentKR = "캐릭터 레벨 Lv.40 도달\n퀘스트 [이름 없는 아이에게] 완료",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task05"
-        },
-        UI_CHAR_DATA_UNLOCK_task06 = {
-          ContentKR = "캐릭터 레벨 Lv.50 도달\n퀘스트 [이름 없는 아이에게] 완료",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task06"
-        },
-        UI_CHAR_DATA_UNLOCK_task07 = {
-          ContentKR = "캐릭터 레벨 Lv.60 도달\n퀘스트 [이름 없는 아이에게] 완료",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task07"
-        },
-        UI_CHAR_DATA_UNLOCK_task08 = {
-          ContentKR = "캐릭터 레벨 Lv.20 도달\n퀘스트 [이름 없는 아이에게] 완료",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task08"
-        },
-        UI_CHAR_DATA_UNLOCK_task09 = {
-          ContentKR = "캐릭터 레벨 Lv.30 도달\n퀘스트 [이름 없는 아이에게] 완료",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task09"
         },
         UI_CHAR_FORCE_1101 = {
           ContentKR = "없음",
@@ -52173,15 +51913,7 @@ local Data = {
         UI_CMNpc_Name_Aima = {
           ContentKR = "엠마",
           TextMapId = "UI_CMNpc_Name_Aima"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CMNpc_Name_Aimi",
-    MaxKey = "UI_COMMONPOP_TEXT_100090_11",
-    Loader = function()
-      return {
+        },
         UI_CMNpc_Name_Aimi = {
           ContentKR = "에밀리아",
           TextMapId = "UI_CMNpc_Name_Aimi"
@@ -52441,7 +52173,15 @@ local Data = {
         UI_CMNpc_Name_Jimu = {
           ContentKR = "짐",
           TextMapId = "UI_CMNpc_Name_Jimu"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMNpc_Name_JuYuan1",
+    MaxKey = "UI_COMMONPOP_TITLE_100054",
+    Loader = function()
+      return {
         UI_CMNpc_Name_JuYuan1 = {
           ContentKR = "열정적인 극단원",
           TextMapId = "UI_CMNpc_Name_JuYuan1"
@@ -52981,15 +52721,7 @@ local Data = {
         UI_COMMONPOP_TEXT_100090_11 = {
           ContentKR = "구체적인 설명",
           TextMapId = "UI_COMMONPOP_TEXT_100090_11"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_COMMONPOP_TEXT_100090_2",
-    MaxKey = "UI_CameraSystem_CameraModeSelfie",
-    Loader = function()
-      return {
+        },
         UI_COMMONPOP_TEXT_100090_2 = {
           ContentKR = "위반 유형",
           TextMapId = "UI_COMMONPOP_TEXT_100090_2"
@@ -53249,7 +52981,15 @@ local Data = {
         UI_COMMONPOP_TITLE_100054 = {
           ContentKR = "닉네임 변경",
           TextMapId = "UI_COMMONPOP_TITLE_100054"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_COMMONPOP_TITLE_100055",
+    MaxKey = "UI_Char_Data_Step_3",
+    Loader = function()
+      return {
         UI_COMMONPOP_TITLE_100055 = {
           ContentKR = "자기소개 변경",
           TextMapId = "UI_COMMONPOP_TITLE_100055"
@@ -53786,15 +53526,7 @@ local Data = {
         UI_CameraSystem_CameraModeSelfie = {
           ContentKR = "인물 카메라",
           TextMapId = "UI_CameraSystem_CameraModeSelfie"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CameraSystem_CameraReset",
-    MaxKey = "UI_Chat_TeammateList",
-    Loader = function()
-      return {
+        },
         UI_CameraSystem_CameraReset = {
           ContentKR = "카메라 초기화",
           TextMapId = "UI_CameraSystem_CameraReset"
@@ -54054,7 +53786,15 @@ local Data = {
         UI_Char_Data_Step_3 = {
           ContentKR = "3단계",
           TextMapId = "UI_Char_Data_Step_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Char_Data_Step_4",
+    MaxKey = "UI_DO_NOT_PASS_CONDITION",
+    Loader = function()
+      return {
         UI_Char_Data_Step_4 = {
           ContentKR = "4단계",
           TextMapId = "UI_Char_Data_Step_4"
@@ -54594,15 +54334,7 @@ local Data = {
         UI_Chat_TeammateList = {
           ContentKR = "파티 목록",
           TextMapId = "UI_Chat_TeammateList"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Chat_Yesterday",
-    MaxKey = "UI_DYNQUEST_SUCCESS",
-    Loader = function()
-      return {
+        },
         UI_Chat_Yesterday = {
           ContentKR = "어제",
           TextMapId = "UI_Chat_Yesterday"
@@ -54700,7 +54432,7 @@ local Data = {
           TextMapId = "UI_Consumable_Open_Count"
         },
         UI_Consume_Select_Skin = {
-          ContentKR = "선택 패키지로 해당 캐릭터 코스튬 획득",
+          ContentKR = "선택 패키지를 사용하여 해당 캐릭터 코스튬을 획득하세요.",
           TextMapId = "UI_Consume_Select_Skin"
         },
         UI_Content_SaiqiBossWarning = {
@@ -54859,7 +54591,15 @@ local Data = {
         UI_DO_NOT_PASS_CONDITION = {
           ContentKR = "현재 상태에서는 사용할 수 없습니다",
           TextMapId = "UI_DO_NOT_PASS_CONDITION"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DROP_LIST",
+    MaxKey = "UI_DispatchTag_Collect",
+    Loader = function()
+      return {
         UI_DROP_LIST = {
           ContentKR = "획득한 보상",
           TextMapId = "UI_DROP_LIST"
@@ -55241,7 +54981,7 @@ local Data = {
           TextMapId = "UI_DUNGEON_Enter"
         },
         UI_DUNGEON_GUIDE_DEFENCEMECHANISM = {
-          ContentKR = "보호 목표",
+          ContentKR = "목표 보호",
           TextMapId = "UI_DUNGEON_GUIDE_DEFENCEMECHANISM"
         },
         UI_DUNGEON_GUIDE_EXIT = {
@@ -55372,10 +55112,6 @@ local Data = {
           ContentKR = "각축전",
           TextMapId = "UI_DUNGEON_TYPE_SYNTHESIS"
         },
-        UI_DUNGEON_TYPE_TESTING = {
-          ContentKR = "격퇴",
-          TextMapId = "UI_DUNGEON_TYPE_TESTING"
-        },
         UI_DUNGEON_TYPE_TRAINING = {
           ContentKR = "모래 바다의 명상",
           TextMapId = "UI_DUNGEON_TYPE_TRAINING"
@@ -55399,15 +55135,7 @@ local Data = {
         UI_DYNQUEST_SUCCESS = {
           ContentKR = "완벽 클리어",
           TextMapId = "UI_DYNQUEST_SUCCESS"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DailyGoal_Activeness",
-    MaxKey = "UI_Dye_Exchange",
-    Loader = function()
-      return {
+        },
         UI_DailyGoal_Activeness = {
           ContentKR = "완성도",
           TextMapId = "UI_DailyGoal_Activeness"
@@ -55671,7 +55399,15 @@ local Data = {
         UI_DispatchTag_Collect = {
           ContentKR = "수집가",
           TextMapId = "UI_DispatchTag_Collect"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DispatchTag_Des_Battle",
+    MaxKey = "UI_Entrance_MeeleArchive",
+    Loader = function()
+      return {
         UI_DispatchTag_Des_Battle = {
           ContentKR = "전투에 뛰어나다.",
           TextMapId = "UI_DispatchTag_Des_Battle"
@@ -55865,7 +55601,7 @@ local Data = {
           TextMapId = "UI_Dispatch_Toast_RewardWarm"
         },
         UI_Dispatch_Toast_Unlock = {
-          ContentKR = "이제 %s에 파견할 수 있습니다.",
+          ContentKR = "%s을(를) 파견할 수 있습니다.",
           TextMapId = "UI_Dispatch_Toast_Unlock"
         },
         UI_Disptach_Ability = {
@@ -56207,15 +55943,7 @@ local Data = {
         UI_Dye_Exchange = {
           ContentKR = "교환 및 염색",
           TextMapId = "UI_Dye_Exchange"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Dye_HideUI",
-    MaxKey = "UI_Fishing_FishingLure",
-    Loader = function()
-      return {
+        },
         UI_Dye_HideUI = {
           ContentKR = "UI 숨기기/표시",
           TextMapId = "UI_Dye_HideUI"
@@ -56479,7 +56207,15 @@ local Data = {
         UI_Entrance_MeeleArchive = {
           ContentKR = "근접 무기",
           TextMapId = "UI_Entrance_MeeleArchive"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Entrance_RangedArchive",
+    MaxKey = "UI_Friend_SearchResTitle",
+    Loader = function()
+      return {
         UI_Entrance_RangedArchive = {
           ContentKR = "원거리 무기",
           TextMapId = "UI_Entrance_RangedArchive"
@@ -56645,11 +56381,11 @@ local Data = {
           TextMapId = "UI_Event_MidTerm_RepeatCount"
         },
         UI_Event_MidTerm_RepeatTask = {
-          ContentKR = "반복 대결",
+          ContentKR = "중복 대결",
           TextMapId = "UI_Event_MidTerm_RepeatTask"
         },
         UI_Event_MidTerm_Rule = {
-          ContentKR = "1. 말더듬이 강, 강도 루나가 준비한 일반 대결 완료 시 루나 포인트를 획득합니다.\n매일 서버 날짜가 갱신될 때마다, 루나 포인트에 따라 루나의 보물이 결산됩니다. 루나 포인트 최대치를 초과한 포인트는 일정 비율에 따라 쿠퍼로 전환됩니다.\n2. 일일 대결은 매일 서버 날짜가 갱신될 때, <highlight>4</>개의 새로운 대결이 리셋됩니다. 이전 날의 루나의 보물을 결산한 후, 새로운 일일 대결이 오픈됩니다. 반복 대결은 여러 번 완료할 수 있으며, 서버 날짜 갱신 시에도 진행도가 초기화되지 않습니다.\n3. 도전 대결을 완료하면 도전 포인트가 지급됩니다. 도전 포인트를 사용하여 말더듬이 강, 강도 루나의 도전 보물을 획득할 수 있습니다.\n4. 도전 대결은 <highlight>2</>단계로 나뉩니다. 말더듬이 강, 강도 루나는 2025년 11월 7일에 새로운 대결을 생각해 낼 것입니다.",
+          ContentKR = "1. 말더듬이 강, 강도 루나가 준비한 일반 대결 완료 시 루나 포인트를 획득합니다.\n매일 서버 날짜가 갱신될 때마다, 루나 포인트에 따라 루나의 보물이 결산됩니다. 루나 포인트 최대치를 초과한 포인트는 일정 비율에 따라 쿠퍼로 전환됩니다.\n2. 일일 대결은 매일 서버 날짜가 갱신될 때, <highlight>4</>개의 새로운 대결이 리셋됩니다. 이전 날의 루나의 보물을 결산한 후, 새로운 일일 대결이 오픈됩니다. 중복 대결은 여러 번 완료할 수 있으며, 서버 날짜 갱신 시에도 진행도가 초기화되지 않습니다.\n3. 도전 대결을 완료하면 도전 포인트가 지급됩니다. 도전 포인트를 사용하여 말더듬이 강, 강도 루나의 도전 보물을 획득할 수 있습니다.\n4. 도전 대결은 <highlight>2</>단계로 나뉩니다. 말더듬이 강, 강도 루나는 2025년 11월 7일에 새로운 대결을 생각해 낼 것입니다.",
           TextMapId = "UI_Event_MidTerm_Rule"
         },
         UI_Event_MidTerm_Settled = {
@@ -57012,15 +56748,7 @@ local Data = {
         UI_Fishing_FishingLure = {
           ContentKR = "미끼",
           TextMapId = "UI_Fishing_FishingLure"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Fishing_FishingNote_Empty",
-    MaxKey = "UI_HeadFrame_Des_10012",
-    Loader = function()
-      return {
+        },
         UI_Fishing_FishingNote_Empty = {
           ContentKR = "수록된 내용이 없습니다",
           TextMapId = "UI_Fishing_FishingNote_Empty"
@@ -57284,7 +57012,15 @@ local Data = {
         UI_Friend_SearchResTitle = {
           ContentKR = "검색 결과",
           TextMapId = "UI_Friend_SearchResTitle"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Friend_State_Offline",
+    MaxKey = "UI_JumpCommunity",
+    Loader = function()
+      return {
         UI_Friend_State_Offline = {
           ContentKR = "오프라인",
           TextMapId = "UI_Friend_State_Offline"
@@ -57820,15 +57556,7 @@ local Data = {
         UI_HeadFrame_Des_10012 = {
           ContentKR = "쉿… 그들을 놀라게 하지 마세요.",
           TextMapId = "UI_HeadFrame_Des_10012"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_HeadFrame_Des_10013",
-    MaxKey = "UI_Locked_Des_Match",
-    Loader = function()
-      return {
+        },
         UI_HeadFrame_Des_10013 = {
           ContentKR = "나의… 혼란스럽고 자유로운 모든 것.",
           TextMapId = "UI_HeadFrame_Des_10013"
@@ -58092,7 +57820,15 @@ local Data = {
         UI_JumpCommunity = {
           ContentKR = "이동",
           TextMapId = "UI_JumpCommunity"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Keyboard_DownSelect",
+    MaxKey = "UI_MECHANISM_10447",
+    Loader = function()
+      return {
         UI_Keyboard_DownSelect = {
           ContentKR = "아래 선택",
           TextMapId = "UI_Keyboard_DownSelect"
@@ -58625,15 +58361,7 @@ local Data = {
         UI_Locked_Des_Match = {
           ContentKR = "도전 매칭 기능이 해제되지 않았습니다.",
           TextMapId = "UI_Locked_Des_Match"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Locked_Des_MiniGame",
-    MaxKey = "UI_MiniGame_Morse_Password",
-    Loader = function()
-      return {
+        },
         UI_Locked_Des_MiniGame = {
           ContentKR = "기대해 주세요",
           TextMapId = "UI_Locked_Des_MiniGame"
@@ -58897,7 +58625,15 @@ local Data = {
         UI_MECHANISM_10447 = {
           ContentKR = "쓰레기통",
           TextMapId = "UI_MECHANISM_10447"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_MECHANISM_10448",
+    MaxKey = "UI_Mod_NotOwned_Weapon",
+    Loader = function()
+      return {
         UI_MECHANISM_10448 = {
           ContentKR = "발효 음료",
           TextMapId = "UI_MECHANISM_10448"
@@ -59415,7 +59151,7 @@ local Data = {
           TextMapId = "UI_MiniGame_Hint_LianXian_2"
         },
         UI_MiniGame_Hint_TiaoPin = {
-          ContentKR = "<img id=\"MiniGame_TiaoPin_L\"></><img id=\"MiniGame_TiaoPin_U\"></><img id=\"MiniGame_TiaoPin_R\"></><img id=\"MiniGame_TiaoPin_D\"></> 버튼을 눌러 <img id=\"MiniGame_TiaoPin_S\"></>를 <img id=\"MiniGame_TiaoPin_E\"></>로 이동",
+          ContentKR = "<img id=\"MiniGame_TiaoPin_L\"></><img id=\"MiniGame_TiaoPin_U\"></><img id=\"MiniGame_TiaoPin_R\"></><img id=\"MiniGame_TiaoPin_D\"></> 버튼을 눌러 <img id=\"MiniGame_TiaoPin_S\"></>를 올바른 <img id=\"MiniGame_TiaoPin_E\">로 옮기세요.</>",
           TextMapId = "UI_MiniGame_Hint_TiaoPin"
         },
         UI_MiniGame_Hint_ZhuanQuanQuan = {
@@ -59433,15 +59169,7 @@ local Data = {
         UI_MiniGame_Morse_Password = {
           ContentKR = "해독 필요",
           TextMapId = "UI_MiniGame_Morse_Password"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_MiniGame_Morse_Password_Clue",
-    MaxKey = "UI_Name_Walnut_151941",
-    Loader = function()
-      return {
+        },
         UI_MiniGame_Morse_Password_Clue = {
           ContentKR = "암호 대조표",
           TextMapId = "UI_MiniGame_Morse_Password_Clue"
@@ -59705,7 +59433,15 @@ local Data = {
         UI_Mod_NotOwned_Weapon = {
           ContentKR = "해당 무기 미보유",
           TextMapId = "UI_Mod_NotOwned_Weapon"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Mod_Not_Get",
+    MaxKey = "UI_Notice_None",
+    Loader = function()
+      return {
         UI_Mod_Not_Get = {
           ContentKR = "미보유",
           TextMapId = "UI_Mod_Not_Get"
@@ -59811,7 +59547,7 @@ local Data = {
           TextMapId = "UI_MonthlyCard_DateRemain"
         },
         UI_MonthlyCard_Detail_1 = {
-          ContentKR = "루나의 월간 주문은 30일마다 갱신됩니다. 새로운 주문은 최신 선물이 포함되어 있습니다. 이전 주문이 만료되면 계약할 수 없습니다",
+          ContentKR = "루나의 월간 주문은 30일마다 업데이트됩니다. 새로운 주문은 최신 선물이 포함되어 있습니다. 이전 주문이 만료되면 계약할 수 없습니다",
           TextMapId = "UI_MonthlyCard_Detail_1"
         },
         UI_MonthlyCard_Detail_2 = {
@@ -59868,7 +59604,7 @@ local Data = {
           TextMapId = "UI_Name_Walnut_1001"
         },
         UI_Name_Walnut_1002 = {
-          ContentKR = "편지·리사벨",
+          ContentKR = "편지·분노",
           TextMapId = "UI_Name_Walnut_1002"
         },
         UI_Name_Walnut_1003 = {
@@ -59940,7 +59676,7 @@ local Data = {
           TextMapId = "UI_Name_Walnut_1019"
         },
         UI_Name_Walnut_1020 = {
-          ContentKR = "편지·트러플과 헤이즐넛",
+          ContentKR = "편지·트러플",
           TextMapId = "UI_Name_Walnut_1020"
         },
         UI_Name_Walnut_1021 = {
@@ -60238,15 +59974,7 @@ local Data = {
         UI_Name_Walnut_151941 = {
           ContentKR = "편지·숨마누스의 파괴의 뇌운",
           TextMapId = "UI_Name_Walnut_151941"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Name_Walnut_151951",
-    MaxKey = "UI_Npc_Name_JT_Ex01_M",
-    Loader = function()
-      return {
+        },
         UI_Name_Walnut_151951 = {
           ContentKR = "편지·하스터의 향기로운 기운",
           TextMapId = "UI_Name_Walnut_151951"
@@ -60488,7 +60216,7 @@ local Data = {
           TextMapId = "UI_NewWalnut_Unlock"
         },
         UI_New_Content = {
-          ContentKR = "신규 콘텐츠",
+          ContentKR = "새로운 내용",
           TextMapId = "UI_New_Content"
         },
         UI_Next_Level_Attr = {
@@ -60510,7 +60238,15 @@ local Data = {
         UI_Notice_None = {
           ContentKR = "공지사항 없음",
           TextMapId = "UI_Notice_None"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_All",
+    MaxKey = "UI_Npc_Name_QiZhiShuLi",
+    Loader = function()
+      return {
         UI_Npc_All = {ContentKR = "전원", TextMapId = "UI_Npc_All"},
         UI_Npc_Aside = {
           ContentKR = "나레이션",
@@ -61043,15 +60779,7 @@ local Data = {
         UI_Npc_Name_JT_Ex01_M = {
           ContentKR = "'그리핀 소대' 검병",
           TextMapId = "UI_Npc_Name_JT_Ex01_M"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_Jack",
-    MaxKey = "UI_OPTION_CustomerService",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_Jack = {
           ContentKR = "잭",
           TextMapId = "UI_Npc_Name_Jack"
@@ -61315,7 +61043,15 @@ local Data = {
         UI_Npc_Name_QiZhiShuLi = {
           ContentKR = "담담한 여자",
           TextMapId = "UI_Npc_Name_QiZhiShuLi"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_Qiaomen",
+    MaxKey = "UI_OPTION_Language_Unload_Confirm",
+    Loader = function()
+      return {
         UI_Npc_Name_Qiaomen = {
           ContentKR = "문 다시 두들기기",
           TextMapId = "UI_Npc_Name_Qiaomen"
@@ -61851,15 +61587,7 @@ local Data = {
         UI_OPTION_CustomerService = {
           ContentKR = "고객 센터",
           TextMapId = "UI_OPTION_CustomerService"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_OPTION_DEFAULT",
-    MaxKey = "UI_PARTY_DES_70101",
-    Loader = function()
-      return {
+        },
         UI_OPTION_DEFAULT = {
           ContentKR = "기본값으로",
           TextMapId = "UI_OPTION_DEFAULT"
@@ -62123,7 +61851,15 @@ local Data = {
         UI_OPTION_Language_Unload_Confirm = {
           ContentKR = "%s 음성팩을 삭제하시겠습니까?",
           TextMapId = "UI_OPTION_Language_Unload_Confirm"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_OPTION_Language_Unload_Fail",
+    MaxKey = "UI_PersonalPage_Open",
+    Loader = function()
+      return {
         UI_OPTION_Language_Unload_Fail = {
           ContentKR = "삭제 실패",
           TextMapId = "UI_OPTION_Language_Unload_Fail"
@@ -62659,15 +62395,7 @@ local Data = {
         UI_PARTY_DES_70101 = {
           ContentKR = "장치의 작동 규칙을 관찰하며 전진하세요. 아이템에 닿으면 추가 효과를 얻을 수 있습니다.",
           TextMapId = "UI_PARTY_DES_70101"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PARTY_PARKOUR_ENDPOINT",
-    MaxKey = "UI_QUEST_CONDITION_FINISHQUEST",
-    Loader = function()
-      return {
+        },
         UI_PARTY_PARKOUR_ENDPOINT = {
           ContentKR = "목적지에 도착한 다른 플레이어가 있습니다. 서둘러 목적지로 이동하세요.",
           TextMapId = "UI_PARTY_PARKOUR_ENDPOINT"
@@ -62928,7 +62656,15 @@ local Data = {
         UI_PersonalPage_Open = {
           ContentKR = "전체 공개",
           TextMapId = "UI_PersonalPage_Open"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PersonalPage_Recount_Create",
+    MaxKey = "UI_REGISTER_TURN",
+    Loader = function()
+      return {
         UI_PersonalPage_Recount_Create = {
           ContentKR = "계정이 %s에 생성되었습니다.",
           TextMapId = "UI_PersonalPage_Recount_Create"
@@ -63464,15 +63200,7 @@ local Data = {
         UI_QUEST_CONDITION_FINISHQUEST = {
           ContentKR = "완료 필요 퀘스트: ",
           TextMapId = "UI_QUEST_CONDITION_FINISHQUEST"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_QUEST_CONDITION_PLAYERLEVEL",
-    MaxKey = "UI_Rougebag_BagSubTab_Name_0",
-    Loader = function()
-      return {
+        },
         UI_QUEST_CONDITION_PLAYERLEVEL = {
           ContentKR = "수련 레벨:",
           TextMapId = "UI_QUEST_CONDITION_PLAYERLEVEL"
@@ -63736,7 +63464,15 @@ local Data = {
         UI_REGISTER_TURN = {
           ContentKR = "회전",
           TextMapId = "UI_REGISTER_TURN"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_REGISTER_WHOLE",
+    MaxKey = "UI_SHOP_REMAINTIME_MINUTE",
+    Loader = function()
+      return {
         UI_REGISTER_WHOLE = {
           ContentKR = "전체 보기",
           TextMapId = "UI_REGISTER_WHOLE"
@@ -64251,15 +63987,7 @@ local Data = {
         UI_Rougebag_BagSubTab_Name_0 = {
           ContentKR = "모두",
           TextMapId = "UI_Rougebag_BagSubTab_Name_0"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Rougebag_BagSubTab_Name_101",
-    MaxKey = "UI_SUBREGION_NAME_104201",
-    Loader = function()
-      return {
+        },
         UI_Rougebag_BagSubTab_Name_101 = {
           ContentKR = "화롯불",
           TextMapId = "UI_Rougebag_BagSubTab_Name_101"
@@ -64523,7 +64251,15 @@ local Data = {
         UI_SHOP_REMAINTIME_MINUTE = {
           ContentKR = "%d분 ",
           TextMapId = "UI_SHOP_REMAINTIME_MINUTE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SHOP_REMAINTIME_SECOND",
+    MaxKey = "UI_SkinGacha_Cumulative_Wait",
+    Loader = function()
+      return {
         UI_SHOP_REMAINTIME_SECOND = {
           ContentKR = "%s초",
           TextMapId = "UI_SHOP_REMAINTIME_SECOND"
@@ -65059,15 +64795,7 @@ local Data = {
         UI_SUBREGION_NAME_104201 = {
           ContentKR = "사냥 장치 법진",
           TextMapId = "UI_SUBREGION_NAME_104201"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SUBREGION_NAME_104301",
-    MaxKey = "UI_Squad_Miss",
-    Loader = function()
-      return {
+        },
         UI_SUBREGION_NAME_104301 = {
           ContentKR = "과거의 틈",
           TextMapId = "UI_SUBREGION_NAME_104301"
@@ -65214,10 +64942,6 @@ local Data = {
           ContentKR = "월석의 싹 교환",
           TextMapId = "UI_Shop_JP_Exchange"
         },
-        UI_Shop_JP_Link = {
-          ContentKR = "자금결제법 ・특정상거래법",
-          TextMapId = "UI_Shop_JP_Link"
-        },
         UI_Shop_JP_Phoxene = {
           ContentKR = "월석의 싹 x %s",
           TextMapId = "UI_Shop_JP_Phoxene"
@@ -65329,7 +65053,15 @@ local Data = {
         UI_SkinGacha_Cumulative_Wait = {
           ContentKR = "미완료",
           TextMapId = "UI_SkinGacha_Cumulative_Wait"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SkinGacha_Gold",
+    MaxKey = "UI_TELEPORTPOINT_NAME_104101_1",
+    Loader = function()
+      return {
         UI_SkinGacha_Gold = {
           ContentKR = "금색 등급 확률 <highlight>%s%%</>",
           TextMapId = "UI_SkinGacha_Gold"
@@ -65555,7 +65287,7 @@ local Data = {
           TextMapId = "UI_Skin_Des_2101"
         },
         UI_Skin_Des_210102 = {
-          ContentKR = "겹겹이 쌓인 베일 아래, 속삭임으로 사랑을 말하고, 죽음으로 영원을 터치하라.",
+          ContentKR = "겹겹이 쌓인 커튼 아래, 속삭임으로 사랑을 말하고, 죽음으로 영원을 터치하라.",
           TextMapId = "UI_Skin_Des_210102"
         },
         UI_Skin_Des_2301 = {
@@ -65851,7 +65583,7 @@ local Data = {
           TextMapId = "UI_Squad_InputHint"
         },
         UI_Squad_ListName = {
-          ContentKR = "프리셋 설정{空格}",
+          ContentKR = "프리셋 설정",
           TextMapId = "UI_Squad_ListName"
         },
         UI_Squad_Max = {
@@ -65861,15 +65593,7 @@ local Data = {
         UI_Squad_Miss = {
           ContentKR = "라인업 구성 요소 누락",
           TextMapId = "UI_Squad_Miss"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Squad_Miss_Challenge",
-    MaxKey = "UI_TRAIN_CLOSE",
-    Loader = function()
-      return {
+        },
         UI_Squad_Miss_Challenge = {
           ContentKR = "라인업 구성 요소가 누락되어, 도전을 시작할 수 없습니다",
           TextMapId = "UI_Squad_Miss_Challenge"
@@ -66137,7 +65861,15 @@ local Data = {
         UI_TELEPORTPOINT_NAME_104101_1 = {
           ContentKR = "항구",
           TextMapId = "UI_TELEPORTPOINT_NAME_104101_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TELEPORTPOINT_NAME_104101_10",
+    MaxKey = "UI_Time_Day",
+    Loader = function()
+      return {
         UI_TELEPORTPOINT_NAME_104101_10 = {
           ContentKR = "고대 전장",
           TextMapId = "UI_TELEPORTPOINT_NAME_104101_10"
@@ -66667,17 +66399,9 @@ local Data = {
           TextMapId = "UI_TRAINING_FAIL_INTEAM"
         },
         UI_TRAIN_CLOSE = {
-          ContentKR = "빈 공간을 눌러 닫기",
+          ContentKR = "빈 공간을 눌러서 닫기",
           TextMapId = "UI_TRAIN_CLOSE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TREASURE_COMPLETE",
-    MaxKey = "UI_WEAPON_DESC_10598",
-    Loader = function()
-      return {
+        },
         UI_TREASURE_COMPLETE = {
           ContentKR = "발굴 완료",
           TextMapId = "UI_TREASURE_COMPLETE"
@@ -66945,7 +66669,15 @@ local Data = {
         UI_Time_Day = {
           ContentKR = "<highlight>%s</>일{空格}",
           TextMapId = "UI_Time_Day"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Time_Day_NotHighlight",
+    MaxKey = "UI_WEAPON_NAME_10301",
+    Loader = function()
+      return {
         UI_Time_Day_NotHighlight = {
           ContentKR = "%s일{空格}",
           TextMapId = "UI_Time_Day_NotHighlight"
@@ -67471,15 +67203,7 @@ local Data = {
         UI_WEAPON_DESC_10598 = {
           ContentKR = "최신 표면 마감 기술로 제작된 칼날 채찍. 난폭한 유혈자들이 주로 사용하는 무기다.",
           TextMapId = "UI_WEAPON_DESC_10598"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_DESC_10599",
-    MaxKey = "UI_WeaponAccessory_Name_10016",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_DESC_10599 = {
           ContentKR = "흔히 볼 수 있는 칼날 채찍. 가장 저렴한 금속으로 제작되어, 망가져도 전혀 아깝지 않다.",
           TextMapId = "UI_WEAPON_DESC_10599"
@@ -67747,7 +67471,15 @@ local Data = {
         UI_WEAPON_NAME_10301 = {
           ContentKR = "징벌의 지옥불",
           TextMapId = "UI_WEAPON_NAME_10301"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_NAME_10302",
+    MaxKey = "UI_Wiki_No_Content",
+    Loader = function()
+      return {
         UI_WEAPON_NAME_10302 = {
           ContentKR = "철의 주조자",
           TextMapId = "UI_WEAPON_NAME_10302"
@@ -68279,15 +68011,7 @@ local Data = {
         UI_WeaponAccessory_Name_10016 = {
           ContentKR = "날개·아이보리",
           TextMapId = "UI_WeaponAccessory_Name_10016"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WeaponAccessory_Name_10017",
-    MaxKey = "VoiceDes128",
-    Loader = function()
-      return {
+        },
         UI_WeaponAccessory_Name_10017 = {
           ContentKR = "삐약이",
           TextMapId = "UI_WeaponAccessory_Name_10017"
@@ -68555,7 +68279,15 @@ local Data = {
         UI_Wiki_No_Content = {
           ContentKR = "해제된 표제어 없음",
           TextMapId = "UI_Wiki_No_Content"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Wiki_RelatedEntry",
+    MaxKey = "WikiText_20100703",
+    Loader = function()
+      return {
         UI_Wiki_RelatedEntry = {
           ContentKR = "관련 표제어",
           TextMapId = "UI_Wiki_RelatedEntry"
@@ -69084,15 +68816,7 @@ local Data = {
         VoiceDes128 = {
           ContentKR = "의학에 관하여",
           TextMapId = "VoiceDes128"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "VoiceDes129",
-    MaxKey = "ZhiLiuEntrust_Resource",
-    Loader = function()
-      return {
+        },
         VoiceDes129 = {
           ContentKR = "연금원에 관하여",
           TextMapId = "VoiceDes129"
@@ -69360,7 +69084,15 @@ local Data = {
         WikiText_20100703 = {
           ContentKR = "17세에 침식 징후가 나타나 친부모와 떨어져 '히프노스의 집'에 머물게 되었다. 죽음이 가까워진 시점에 헨릭이 실험 중이던 침식 억제제를 복용하며 마지막 희망을 걸었지만, 약의 부작용으로 침식이 앞당겨져 필토이드로 변하고 말았다.\n아이스레이크 시티 외곽에서 {nickname}와(과) 마주쳐 싸우다가, {nickname}의 외침에 반응해 잠시 정신을 되찾는다. 그러나 괴물로 살아가기 싫다는 이유로 스스로 생을 마감하기로 결심하고, 임종 직전 도착한 방위대의 공격에 쓰러진다.",
           TextMapId = "WikiText_20100703"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_20100801",
+    MaxKey = "voice_ch_char_Baiheng_vo_topic_03_1",
+    Loader = function()
+      return {
         WikiText_20100801 = {
           ContentKR = "아이스레이크 시티의 쓰레기를 줍는 소녀. 성격은 밝고 명랑하며, 남을 잘 도우려 한다. 주운 물건으로 어려운 이웃을 자주 돕곤 했기에 빈민가 사람들은 그녀를 정겹게 '쓰레기통 공주'라 부른다. {nickname}이(가) 월석 사냥꾼으로 받은 첫 번째 의뢰가 바로 이 소녀의 도난당한 지갑을 되찾아주는 일이었다.",
           TextMapId = "WikiText_20100801"
@@ -69889,15 +69621,7 @@ local Data = {
         ZhiLiuEntrust_Resource = {
           ContentKR = "구매 리스트",
           TextMapId = "ZhiLiuEntrust_Resource"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Aote_vo_appear",
-    MaxKey = "voice_ch_char_Haier_vo_battleidle",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Aote_vo_appear = {
           ContentKR = "어려운 임무를 맡았나 봐? 예전처럼 반반씩 나눌까?",
           TextMapId = "voice_ch_char_Aote_vo_appear"
@@ -70165,7 +69889,15 @@ local Data = {
         voice_ch_char_Baiheng_vo_topic_03_1 = {
           ContentKR = "사람을 치료하는 곳이에요.",
           TextMapId = "voice_ch_char_Baiheng_vo_topic_03_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Baiheng_vo_topic_03_2",
+    MaxKey = "voice_ch_char_Heitao_vo_topic_04_3",
+    Loader = function()
+      return {
         voice_ch_char_Baiheng_vo_topic_03_2 = {
           ContentKR = "고영각의 사명은 그것뿐이에요. 다른 특별한 점을 말하자면... 고영각에 들어와 수행을 시작하는 의사들은 반드시 살구나무 한 그루를 손수 심어야 한다는 거예요. 다만 세월의 비바람이 몰아치고 난 지금은 절반도 채 남아있지 않아요.",
           TextMapId = "voice_ch_char_Baiheng_vo_topic_03_2"
@@ -70697,15 +70429,7 @@ local Data = {
         voice_ch_char_Haier_vo_battleidle = {
           ContentKR = "두렵다고? 넌 다른 죄수들과는 다를 줄 알았는데. 실망스럽군.",
           TextMapId = "voice_ch_char_Haier_vo_battleidle"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Haier_vo_battlestart",
-    MaxKey = "voice_ch_char_Lise_vo_topic_01_1",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Haier_vo_battlestart = {
           ContentKR = "모든 죄악을 태워라!",
           TextMapId = "voice_ch_char_Haier_vo_battlestart"
@@ -70973,7 +70697,15 @@ local Data = {
         voice_ch_char_Heitao_vo_topic_04_3 = {
           ContentKR = "...연옥도에서의 삶이 너무 평탄해서 난 우리가 평생 그렇게 살 수 있을 줄 알았어. 하지만 그날, 그들이 다시 나타난 후에야 난 그 감옥을 벗어난 적이 없다는 걸 깨달았지.",
           TextMapId = "voice_ch_char_Heitao_vo_topic_04_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Heitao_vo_topic_05_1",
+    MaxKey = "voice_ch_char_NanzhuLight_vo_appear",
+    Loader = function()
+      return {
         voice_ch_char_Heitao_vo_topic_05_1 = {
           ContentKR = "조금 시끄럽지. 그래도 싫지 않아. 네가 새로운 친구를 많이 사귀었잖아. 네가 잘 지내는 것 같아서 기뻐.",
           TextMapId = "voice_ch_char_Heitao_vo_topic_05_1"
@@ -71505,15 +71237,7 @@ local Data = {
         voice_ch_char_Lise_vo_topic_01_1 = {
           ContentKR = "어... 눈치채셨군요. 가족이 남겨준 하모니카가 하나 있습니다. 잘 간직하고 있지만 왠지 사라져 버릴까 불안해서 가끔 확인해 봅니다.",
           TextMapId = "voice_ch_char_Lise_vo_topic_01_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Lise_vo_topic_01_2",
-    MaxKey = "voice_ch_char_Shuimu_vo_idle",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Lise_vo_topic_01_2 = {
           ContentKR = "사실 한 곡밖에 못 합니다. 그것도 가족이 가르쳐 준 거죠. 빨리 배우는 편이 아니라서요. 음악처럼 감정의 변화가 필요한 건 잘 못합니다...",
           TextMapId = "voice_ch_char_Lise_vo_topic_01_2"
@@ -71781,7 +71505,15 @@ local Data = {
         voice_ch_char_NanzhuLight_vo_appear = {
           ContentKR = "연옥도 밖은 책에서 본 것보다 넓고... 훨씬 더 잔인했어. 이런 세상은 잘못된 거니까, 내가 뭘 해야 할지 생각하고 있어.",
           TextMapId = "voice_ch_char_NanzhuLight_vo_appear"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_NanzhuLight_vo_battleidle",
+    MaxKey = "voice_ch_char_Tuosi_vo_die_r02",
+    Loader = function()
+      return {
         voice_ch_char_NanzhuLight_vo_battleidle = {
           ContentKR = "그다음엔 어디로 가야 하지? 지도를 볼까... 음... 잘 모르겠네.",
           TextMapId = "voice_ch_char_NanzhuLight_vo_battleidle"
@@ -72030,62 +71762,6 @@ local Data = {
           ContentKR = "너구나, 내가 아끼는 아이. 내게 들려주고 싶은 이야기라도 있니?",
           TextMapId = "voice_ch_char_Nifu_vo_welcome"
         },
-        voice_ch_char_NvzhuLight_vo_appear = {
-          ContentKR = "연옥도 밖은 책에서 본 것보다 넓고... 훨씬 더 잔인했어. 이런 세상은 잘못된 거니까, 내가 뭘 해야 할지 생각하고 있어.",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_appear"
-        },
-        voice_ch_char_NvzhuLight_vo_battleidle = {
-          ContentKR = "그다음엔 어디로 가야 하지? 지도를 볼까... 음... 잘 모르겠네.",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_battleidle"
-        },
-        voice_ch_char_NvzhuLight_vo_battlestart = {
-          ContentKR = "이 검은, 아직 쓰일 곳이 있어.",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_battlestart"
-        },
-        voice_ch_char_NvzhuLight_vo_die_r01 = {
-          ContentKR = "아직... 여기서만은...",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_die_r01"
-        },
-        voice_ch_char_NvzhuLight_vo_die_r02 = {
-          ContentKR = "약속한 곳으로... 돌아가고 싶어...",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_die_r02"
-        },
-        voice_ch_char_NvzhuLight_vo_fail = {
-          ContentKR = "다음번엔, 반드시 대가를 치르게 될 거다.",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_fail"
-        },
-        voice_ch_char_NvzhuLight_vo_lvup = {
-          ContentKR = "이 길을 걸으며 이야기를 듣고, 수많은 사람들을 만나면서, 세상을 더 깊이 알게 됐어. 내 검도, 한층 더 날카로워졌지.",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_lvup"
-        },
-        voice_ch_char_NvzhuLight_vo_revive = {
-          ContentKR = "악몽을... 꾼 건가?",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_revive"
-        },
-        voice_ch_char_NvzhuLight_vo_skill01_r01 = {
-          ContentKR = "사라져라.",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_skill01_r01"
-        },
-        voice_ch_char_NvzhuLight_vo_skill01_r02 = {
-          ContentKR = "빛의 속도로.",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_skill01_r02"
-        },
-        voice_ch_char_NvzhuLight_vo_skill02_r01 = {
-          ContentKR = "이번엔 내가 지켜줄 차례야.",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r01"
-        },
-        voice_ch_char_NvzhuLight_vo_skill02_r02 = {
-          ContentKR = "내일을 향해.",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r02"
-        },
-        voice_ch_char_NvzhuLight_vo_skill02_r03 = {
-          ContentKR = "안개의 바다로 돌아가라.",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r03"
-        },
-        voice_ch_char_NvzhuLight_vo_victory = {
-          ContentKR = "또 한발 전진했어. 계속 나아간다면 반드시...",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_victory"
-        },
         voice_ch_char_Saiqi_vo_appear = {
           ContentKR = "역시 날 부를 줄 알았어.",
           TextMapId = "voice_ch_char_Saiqi_vo_appear"
@@ -72313,15 +71989,7 @@ local Data = {
         voice_ch_char_Shuimu_vo_idle = {
           ContentKR = "저와 함께 있고 싶어서 여기에 남으신 건가요... 후훗, 벌써 기대가 되는데요?",
           TextMapId = "voice_ch_char_Shuimu_vo_idle"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Shuimu_vo_lvup",
-    MaxKey = "voice_ch_char_Yeer_vo_be_hit_heavy_r01",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Shuimu_vo_lvup = {
           ContentKR = "이건 제 사랑에 대한 보상인가요?",
           TextMapId = "voice_ch_char_Shuimu_vo_lvup"
@@ -72645,7 +72313,15 @@ local Data = {
         voice_ch_char_Tuosi_vo_die_r02 = {
           ContentKR = "한 번도 본 적 없는 세상을... 노래했어...",
           TextMapId = "voice_ch_char_Tuosi_vo_die_r02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Tuosi_vo_fail",
+    MaxKey = "voice_ch_char_Zhangyu_vo_lvup",
+    Loader = function()
+      return {
         voice_ch_char_Tuosi_vo_fail = {
           ContentKR = "비극은 용자의 수난.",
           TextMapId = "voice_ch_char_Tuosi_vo_fail"
@@ -73121,15 +72797,7 @@ local Data = {
         voice_ch_char_Yeer_vo_be_hit_heavy_r01 = {
           ContentKR = "(올리버) 두고 보자.",
           TextMapId = "voice_ch_char_Yeer_vo_be_hit_heavy_r01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yeer_vo_be_hit_heavy_r02",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yeer_vo_be_hit_heavy_r02 = {
           ContentKR = "(예일) 때, 때리지 마세요!",
           TextMapId = "voice_ch_char_Yeer_vo_be_hit_heavy_r02"
@@ -73453,7 +73121,15 @@ local Data = {
         voice_ch_char_Zhangyu_vo_lvup = {
           ContentKR = "히힛, 다음에 또 술통으로 변했을 땐... 날 절대 못 찾을 걸!",
           TextMapId = "voice_ch_char_Zhangyu_vo_lvup"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Zhangyu_vo_revive",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Zhangyu_vo_revive = {
           ContentKR = "역시 게임은 끝나지 않아!",
           TextMapId = "voice_ch_char_Zhangyu_vo_revive"

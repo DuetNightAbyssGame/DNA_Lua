@@ -153,9 +153,6 @@ function Pet:CalcProvideExp()
   for i = 0, self.BreakNum do
     local MaxLevel = self.Level
     MaxLevel = i < self.BreakNum and BreakData and BreakData[i] and BreakData[i].PetBreakLevel or MaxLevel
-    if not BreakData[i + 1] then
-      MaxLevel = 1
-    end
     TotalValue = PetLvExp[MaxLevel] and TotalValue + PetLvExp[MaxLevel] or TotalValue
   end
   local ConsumePetBaseExpFix = self:PetConsumeExpFix()

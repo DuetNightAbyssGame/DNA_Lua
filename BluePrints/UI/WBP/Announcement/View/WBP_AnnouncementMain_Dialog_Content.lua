@@ -154,7 +154,6 @@ function M:Destruct()
   self.CurrUrl = nil
   self.List_Announcement.OnCreateEmptyContent:Unbind()
   M.Super.Destruct(self)
-  AnnouncementUtils:ClearAnnounceMainUI()
   self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
 end
 

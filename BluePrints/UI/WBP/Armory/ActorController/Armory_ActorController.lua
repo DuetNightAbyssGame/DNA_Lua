@@ -189,7 +189,6 @@ function M:OnOpened(Duration)
     local Controller = UE4.UGameplayStatics.GetPlayerController(self.ViewUI, 0)
     Controller:SetViewTargetWithBlend(self.ArmoryHelper, 0, UE4.EViewTargetBlendFunction.VTBlend_Linear, 0, false)
   end
-  GWorld.GameInstance:SetDynamicResolution(self.UIName, true)
 end
 
 function M:InitActors()
@@ -236,7 +235,6 @@ function M:CalcArmoryCameraTag(Type, Tag, Behavior, ExtraTag)
         CameraTag2 = Behavior
       else
         CameraTag2 = Tag
-        CameraTag3 = ExtraTag or ""
       end
     elseif Behavior == CommonConst.ArmoryTag.Files then
       CameraTag2 = Behavior
@@ -735,7 +733,6 @@ function M:OnDestruct()
     self.ArmoryHelper:K2_DestroyActor()
   end
   self.ViewUI = nil
-  GWorld.GameInstance:SetDynamicResolution(self.UIName, false)
 end
 
 function M:Component_OnDestruct()

@@ -8025,6 +8025,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "19151FFA",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           Subtitle = "This is my first time in Cocytus Province. Is this how the people here show their hospitality?",
           VoiceName = "voice/$Locale$/story/1001/100194/19151FFA"
         },
@@ -8035,6 +8036,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "19152024",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           Subtitle = "I don't want to bother you, I just want to... strike a small \"bargain\".",
           VoiceName = "voice/$Locale$/story/1001/100194/19152024"
         },
@@ -8045,6 +8047,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "1915204E",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           Subtitle = "I'll pay you whatever you want, and all you have to do, well, it will be a piece of cake.",
           VoiceName = "voice/$Locale$/story/1001/100194/1915204E"
         },
@@ -8054,6 +8057,7 @@ local Data = {
           Duration = 2.5,
           GUID = "19153057.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "???",
           VoiceName = "voice/$Locale$/story/1001/100195/19153057"
         },
         [10019502] = {
@@ -8062,6 +8066,7 @@ local Data = {
           Duration = 9,
           GUID = "19153058.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "???",
           VoiceName = "voice/$Locale$/story/1001/100195/19153058"
         },
         [10019503] = {
@@ -8071,6 +8076,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "19153059.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/19153059"
         },
         [10019504] = {
@@ -8079,6 +8085,7 @@ local Data = {
           Duration = 5,
           GUID = "19153060.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "???",
           VoiceName = "voice/$Locale$/story/1001/100195/19153060"
         },
         [10019505] = {
@@ -8088,6 +8095,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "19153061.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/19153061"
         },
         [10019506] = {
@@ -8097,6 +8105,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "19153062.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/19153062"
         },
         [10019507] = {
@@ -8106,6 +8115,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "1915308C",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/1915308C"
         },
         [10019508] = {
@@ -8115,6 +8125,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "191530B6",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/191530B6"
         },
         [10019509] = {
@@ -8124,6 +8135,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "191530E0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/191530E0"
         },
         [10019510] = {
@@ -8133,6 +8145,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "1915310A",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/1915310A"
         },
         [10025701] = {
@@ -85408,16 +85421,16 @@ PARA{
 LookAt{LookAtDescription{"100001:n(211001)"}},
 PlayFacial{ActorId{100001},FacialId{"Think01"}},
 CameraMoveTo{TargetPosition{"248.549805,8.369141,97.650635,0.000087,-0.798886,-25.276293,35.000008,233.008423,false,Manual,22.0"},duration{0}},
-CameraMoveTo{_delay{1},TargetPosition{"-1520.461914,1789.661133,1376.077393,0.00013,-27.800432,-38.476391,35.000015,126.223808,false,Manual,22.0"},duration{0}},
+CameraMoveTo{_delay{1},TargetPosition{"-1432.448242,1860.372559,1484.045166,0.000158,-31.201389,-47.272495,55.0,617.594727,false,Manual,22.0"},duration{0}},
 PlayFacial{ActorId{211001},FacialId{"Think01"}},
-CameraMoveTo{_delay{1.01},TargetPosition{"-1919.85498,2107.104492,1645.070557,0.000144,-27.800446,-38.478954,35.000015,126.223808,false,Manual,22.0"},duration{5}},
+CameraMoveTo{_delay{1.01},TargetPosition{"-1656.203613,2098.1604,1681.873047,0.000157,-31.401239,-45.472641,55.0,413.050079,false,Manual,22.0"},duration{5}},
 PlayAnimation{_delay{0},ActorId{211001},AnimationId{"TilteHead_End"},Duration{1}},
 MoveTo{ActorId{211001},TargetPoint{"simple1902"},MoveSpeed{75},Visibility{"Show"}},
 },
 PARA{
 PlayAnimation{_delay{0.5},ActorId{211012},AnimationId{"Confident_Start"},Duration{1}},
 LookAt{LookAtDescription{"211001:n(211012)"}},
-CameraMoveTo{_delay{2},TargetPosition{"-1751.672852,2006.095703,1540.945557,0.000161,28.799929,142.520599,35.000015,107.411423,false,Manual,1.4"},duration{0}}
+CameraMoveTo{_delay{2},TargetPosition{"-1465.969727,1959.334473,1561.481689,0.000213,22.198374,146.92598,55.0,137.552002,false,Manual,2.8"},duration{0}}
 }
 }]],
           VoiceName = "voice/$Locale$/story/1201/120113/1E1EF1F8"
@@ -132148,6 +132161,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "C8462C3A",
           GuideFacialId = "Smile",
           HeadIconType = "Npc",
+          NextDialogue = 80001002,
           SpeakNpcId = 700142,
           VoiceName = "voice/$Locale$/story/1201/120111/C8462C3A"
         },
@@ -132157,6 +132171,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "C8462C64",
           GuideFacialId = "Shock",
           HeadIconType = "Npc",
+          NextDialogue = 80001003,
           SpeakNpcId = 700142,
           VoiceName = "voice/$Locale$/story/1201/120111/C8462C64"
         },
@@ -142783,7 +142798,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           VoiceName = "voice/$Locale$/inv/Xibi/002/C87286AA"
         },
         [80070210] = {
-          Content = "进入高塔的十二名军官尽数战死。我若不是在塔外的飞艇里留守，恐怕如今也只是阵亡名单上的一个数字。",
+          Content = "进入高塔的十二人最终无人生还。我若不是在塔外的飞艇里留守，恐怕如今也只是阵亡名单上的一个数字。",
           DefaultLookAt = "TalkNpc",
           DialogueId = 80070210,
           GUID = "C87286D4",
@@ -143300,7 +143315,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
         },
         [80070318] = {
           Camera = "42.315338,214.12384,94.9375,-0.0,-0.600128,-103.201942,35.000015,384.64978,false,Manual,7.401211",
-          Content = "哦，我好像听兰迪说过，首席炼金术师已经过世了，和那个同门的关系也有点……复杂。",
+          Content = "哦，我好像听兰迪说过，首席炼金术师死掉有些年头了，和那个同门的关系也有点……复杂。",
           DialogueId = 80070318,
           GUID = "C872988C",
           NextDialogue = 80070319,
@@ -143347,7 +143362,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           VoiceName = "voice/$Locale$/inv/Xibi/003/C872990A"
         },
         [80070322] = {
-          Content = "放弃了地位与资源，将才华浪费在了我与老师截然不同的领域。",
+          Content = "放弃了地位与资源，为了一个人，将才华浪费在了我与老师截然不同的领域。",
           DialogueId = 80070322,
           GUID = "C8729934",
           NextDialogue = 80070323,

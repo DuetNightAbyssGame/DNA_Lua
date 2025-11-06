@@ -717,9 +717,6 @@ function M:OnCharCardLevelResourcesChanged(Rid, CharId, Uuid)
       if Content.Widget then
         Content.Widget:SetReddot(Content.RedDotType)
       end
-      if Char == self.ComparedChar and self.CurSubTab and self.CurSubTab.Type == CommonConst.ArmoryType.Char then
-        self:SubTabReddotFunc(ArmoryUtils.ArmorySubTabNames.Grade, nil, Content.Upgradeable)
-      end
     end
   else
     if not self.UnownedCharContentMap then

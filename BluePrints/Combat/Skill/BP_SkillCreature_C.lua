@@ -49,6 +49,18 @@ function BP_SkillCreature_C:GetControlRotation()
   return nil
 end
 
+function BP_SkillCreature_C:InitLastLocation()
+  self.CurLocation = self.LastLocation
+end
+
+function BP_SkillCreature_C:ReSetLastLocation()
+  if not IsDedicatedServer(self) then
+    return
+  end
+  self.LastLocation = self.CurLocation
+  self.CurLocation = self:K2_GetActorLocation()
+end
+
 function BP_SkillCreature_C:ClearPauseRemovableCreature()
   local ConfigData = DataMgr.SkillCreature[self.CreatureId]
   if not ConfigData or not ConfigData.Tags then

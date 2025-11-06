@@ -173788,7 +173788,6 @@ CameraMoveTo{TargetPosition{"25.619141,105.791016,140.636719,0.000142,55.800377,
           TalkActionId = {
             [1] = "81501:Agree"
           },
-          VoiceName = "voice/$Locale$/char/Baonu/vo_topic_03_4",
           bForbidSkipOptions = true
         },
         [90250400] = {

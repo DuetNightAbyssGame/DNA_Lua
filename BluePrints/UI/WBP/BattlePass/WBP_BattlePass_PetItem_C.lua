@@ -50,7 +50,6 @@ function M:InitUI(PetInfo)
   for i = 1, RarityDiff do
     self["Star_" .. i]:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
-  self.Text_NotGet:SetText(GText("UI_BattlePass_PetHasnotGot"))
   self.Text_Get:SetText(GText("UI_BattlePass_PetHasGot"))
   self.Num_Get:SetText(PetInfo.Num)
   self.Text_Ascend:SetText(GText("UI_BattlePass_PetHasCardUp"))

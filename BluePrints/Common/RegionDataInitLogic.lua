@@ -294,7 +294,7 @@ function M:InitSubRegionInfoByData(UnitData)
     DebugPrint("RecoverSubRegionDataCache 恢复这些manualitem", UnitData.ManualItemId, UnitData.SubRegionId, UnitData.UnitType, UnitData.UnitId)
     local ManualItemActor = GameMode.BPBornRegionActor:FindRef(UnitData.ManualItemId)
     if ManualItemActor then
-      if UnitData.IsDead and ManualItemActor:GetUnitRealType() == "RockTrap" then
+      if UnitData.IsDead then
         if ManualItemActor.EMActorDestroy then
           ManualItemActor:EMActorDestroy(EDestroyReason.RecoverSubRegionDataCacheButBpBornHasAlreadyDead)
         else

@@ -216,7 +216,7 @@ return {
             key = "1745756518937992",
             type = "ShowGuideButtonNode",
             name = "图鉴1",
-            pos = {x = 1099.5800295653535, y = 943.1280078269729},
+            pos = {x = 1101.5800295653535, y = 943.1280078269729},
             propsData = {
               ShowEnable = true,
               MessageId = 302407,
@@ -585,7 +585,7 @@ return {
             key = "17525489299613820389",
             type = "ShowGuideButtonNode",
             name = "点击图鉴",
-            pos = {x = 2114.6002544729786, y = 989.6296275332091},
+            pos = {x = 2098.6002544729786, y = 981.6296275332091},
             propsData = {
               ShowEnable = true,
               MessageId = 302411,
@@ -675,7 +675,7 @@ return {
             key = "17525497250623824673",
             type = "ShowGuideButtonNode",
             name = "点击魔之楔",
-            pos = {x = 1056.5312987079355, y = 1356.1123854130342},
+            pos = {x = 1144.5312987079355, y = 1272.1123854130342},
             propsData = {
               ShowEnable = true,
               MessageId = 302412,
@@ -685,8 +685,8 @@ return {
               IsControlPlayer = false,
               IsTimePause = true,
               IsShowCursor = true,
-              HighLightUIPath = "ModArchiveMain.Group_Page:2.List_ModArchive:1.List_Item:1",
-              UICompName = "Node_Widget",
+              HighLightUIPath = "ModArchiveMain.Group_Page:2.List_ModArchive:1.List_Item:1.Node_Widget:2",
+              UICompName = "",
               GamePadWidgetName = "",
               IsAutoClick = false,
               IsAutoClickByGamepad = false,

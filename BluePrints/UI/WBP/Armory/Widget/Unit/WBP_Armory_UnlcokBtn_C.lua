@@ -50,8 +50,6 @@ function M:Init(Params)
   self._OnClicked = Params.OnClicked
   self._OnAddedToFocusPath = Params.OnAddedToFocusPath
   self._OnRemovedFromFocusPath = Params.OnRemovedFromFocusPath
-  self.Add:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Num_Need:SetVisibility(UIConst.VisibilityOp.Collapsed)
   local Resource1 = Params.Resources[1] or {}
   if Resource1 then
     self.Icon_Piece:Init(Resource1)
@@ -59,12 +57,31 @@ function M:Init(Params)
       self.Num_Hold:SetText(Resource1.NeedCount)
     else
       self.Num_Hold:SetText(Resource1.Count)
-      if Resource1.NeedCount then
-        self.Add:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-        self.Num_Need:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-        self.Num_Need:SetText(Resource1.NeedCount)
-      end
     end
+  end
+  local Resource2 = Params.Resources[2]
+  if Resource2 and Resource2.NeedCount then
+    self.Num_Hold:SetColorAndOpacity(self.Color_Normal)
+  elseif Resource1 and Resource1.Count < Resource1.NeedCount then
+    self.Num_Hold:SetColorAndOpacity(self.Color_NotEnough)
+  else
+    self.Num_Hold:SetColorAndOpacity(self.Color_Normal)
+  end
+  if Resource2 and Resource2.NeedCount > 0 then
+    self.Com_ItemIcon_1:Init(Resource2)
+    self.Num_Extra:SetText(Resource2.NeedCount)
+    if Resource2.Count < Resource2.NeedCount then
+      self.Num_Extra:SetColorAndOpacity(self.Color_NotEnough)
+    else
+      self.Num_Extra:SetColorAndOpacity(self.Color_Normal)
+    end
+    self.Add:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.Num_Extra:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.Com_ItemIcon_1:SetVisibility(UIConst.VisibilityOp.Visible)
+  else
+    self.Add:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Com_ItemIcon_1:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Num_Extra:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self.Key_Consume:CreateCommonKey(Params.ResourceKeyInfos)
   self.Key_Unlock:CreateCommonKey(Params.KeyInfos)
@@ -85,6 +102,8 @@ function M:OnClicked()
 end
 
 function M:UpdateNavigationRules()
+  self.Icon_Piece:SetNavigationRuleExplicit(EUINavigation.Right, self.Com_ItemIcon_1)
+  self.Com_ItemIcon_1:SetNavigationRuleExplicit(EUINavigation.Left, self.Icon_Piece)
 end
 
 function M:OnAddedToFocusPath()

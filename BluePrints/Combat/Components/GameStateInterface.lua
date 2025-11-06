@@ -923,16 +923,6 @@ function Component:UpdateDungeonVote_Lua(VoteValues)
   end
   print(_G.LogTag, "LXZ  UpdateDungeonVote_Lua Load Vote bushiren")
   if not UIManager(self):GetUIObj("Vote") then
-    local NeedVote = false
-    for i = 1, self.DungeonEvent:Num() do
-      local Event = self.DungeonEvent:GetValueByIdx(i - 1)
-      if "OnDungeonVoteBegin" == Event then
-        NeedVote = true
-      end
-    end
-    if not NeedVote then
-      return
-    end
     for Eid, Value in pairs(VoteValues) do
       if Value ~= EVoteState.Wait then
         return

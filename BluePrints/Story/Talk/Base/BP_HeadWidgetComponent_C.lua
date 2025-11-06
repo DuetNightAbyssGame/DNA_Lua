@@ -203,9 +203,6 @@ local function CalculateBubbleTime(Text, bShortBubble)
 end
 
 function BP_HeadWidgetComponent_C:EnableBubbleWidget(TextMapId, Time, bShortBubble)
-  if string.startswith(TextMapId, "voice_ch_char_Saiqi01") then
-    return
-  end
   local WidgetName = "Long_Bubble"
   if bShortBubble then
     WidgetName = "Short_Bubble"

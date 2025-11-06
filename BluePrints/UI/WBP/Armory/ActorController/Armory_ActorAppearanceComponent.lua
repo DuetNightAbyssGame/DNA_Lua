@@ -23,7 +23,21 @@ function M:ChangeCharAppearance(AppearanceInfo)
     return
   end
   self.CurrentAppearanceInfo = AppearanceInfo
+  local SkinId = AppearanceInfo.SkinId
   self.ArmoryPlayer.CharacterFashion:InitAppearanceSuit(AppearanceInfo)
+  local PartMeshAccessoryId, PartMeshAccessoryType = self:GetSkinPartMeshInfo(SkinId)
+  local Skin = self.CurrentCharInfo:GetSkin(AppearanceInfo.SkinId, self:GetAvatar())
+  local IsShowPartMesh = Skin and Skin.IsShowPartMesh
+  local AppearanceSuit = self.CurrentCharInfo:GetAppearance()
+  local CurSkinId = AppearanceSuit and AppearanceSuit.SkinId
+  if CurSkinId == SkinId and PartMeshAccessoryType then
+    local AccessoryId = AppearanceSuit.Accessory[CommonConst.NewCharAccessoryTypes[PartMeshAccessoryType]]
+    IsShowPartMesh = AccessoryId <= 0
+  end
+  if PartMeshAccessoryId then
+    self:ShowPartMesh(IsShowPartMesh)
+  end
+  self:ChangeCharSkinColor(self.CurrentCharInfo:DumpColors(self:GetAvatar(), SkinId))
 end
 
 function M:GetSkinPartMeshInfo(SkinId)

@@ -4,7 +4,6 @@ local BP_LevelLoader_C = Class({
   "BluePrints.Common.TimerMgr"
 })
 local GMFunctionLibrary = require("BluePrints.UI.GMInterface.GMFunctionLibrary")
-local EMLuaConst = require("EMLuaConst")
 
 function BP_LevelLoader_C:ReceiveBeginPlay()
   self.Overridden.ReceiveBeginPlay(self)
@@ -12,10 +11,6 @@ function BP_LevelLoader_C:ReceiveBeginPlay()
     self.IsPC = true
   else
     self.IsPC = CommonUtils.GetDeviceTypeByPlatformName(self) == "PC"
-  end
-  if EMLuaConst and IsClient(self) then
-    self.UseCCDOldValue = EMLuaConst.UseCCDInPC
-    EMLuaConst.UseCCDInPC = false
   end
   self.PCScalabilityLevelNum = {
     [0] = 6,
@@ -121,9 +116,6 @@ function BP_LevelLoader_C:ReceiveBeginPlay()
 end
 
 function BP_LevelLoader_C:ReceiveEndPlay(reason)
-  if EMLuaConst and self.UseCCDOldValue ~= nil then
-    EMLuaConst.UseCCDInPC = self.UseCCDOldValue
-  end
   self.Overridden.ReceiveEndPlay(self, reason)
   EventManager:RemoveEvent(EventID.ElevatorMechanismCompleteNotify, self)
 end

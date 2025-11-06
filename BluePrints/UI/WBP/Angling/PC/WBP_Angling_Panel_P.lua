@@ -238,10 +238,8 @@ function M:CheckSkipFishingPet()
 end
 
 function M:Destruct()
-  local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
-  if Player then
-    Player:RemoveEffectCreature(30101)
-  end
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  Player:RemoveEffectCreature(30101)
   self.Super.Destruct(self)
 end
 

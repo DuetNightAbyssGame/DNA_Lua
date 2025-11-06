@@ -148,32 +148,32 @@ return {
     ["1920037"] = {
       CreatorId = 1920037,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8001001
     },
     ["1920114"] = {
       CreatorId = 1920114,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8002001
     },
     ["1920039"] = {
       CreatorId = 1920039,
       UnitType = "Monster",
-      UnitId = 8003001
+      UnitId = 8001001
     },
     ["1920115"] = {
       CreatorId = 1920115,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8002001
     },
     ["1920041"] = {
       CreatorId = 1920041,
       UnitType = "Monster",
-      UnitId = 8003001
+      UnitId = 8001001
     },
     ["1920116"] = {
       CreatorId = 1920116,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8002001
     },
     ["1920043"] = {
       CreatorId = 1920043,
@@ -183,22 +183,22 @@ return {
     ["1920117"] = {
       CreatorId = 1920117,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8002001
     },
     ["1920045"] = {
       CreatorId = 1920045,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8001001
     },
     ["1920118"] = {
       CreatorId = 1920118,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8002001
     },
     ["1920047"] = {
       CreatorId = 1920047,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8001001
     },
     ["1920119"] = {
       CreatorId = 1920119,
@@ -208,32 +208,32 @@ return {
     ["1920053"] = {
       CreatorId = 1920053,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8001001
     },
     ["1920055"] = {
       CreatorId = 1920055,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8001001
     },
     ["1920057"] = {
       CreatorId = 1920057,
       UnitType = "Monster",
-      UnitId = 8003001
+      UnitId = 8001001
     },
     ["1920059"] = {
       CreatorId = 1920059,
       UnitType = "Monster",
-      UnitId = 8003001
+      UnitId = 8001001
     },
     ["1920061"] = {
       CreatorId = 1920061,
       UnitType = "Monster",
-      UnitId = 8003001
+      UnitId = 8001001
     },
     ["1920063"] = {
       CreatorId = 1920063,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8001001
     },
     ["1920001"] = {
       CreatorId = 1920001,
@@ -298,27 +298,27 @@ return {
     ["1920107"] = {
       CreatorId = 1920107,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8002001
     },
     ["1920108"] = {
       CreatorId = 1920108,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8002001
     },
     ["1920109"] = {
       CreatorId = 1920109,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8002001
     },
     ["1920110"] = {
       CreatorId = 1920110,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8002001
     },
     ["1920111"] = {
       CreatorId = 1920111,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8002001
     },
     ["1920112"] = {
       CreatorId = 1920112,
@@ -558,32 +558,32 @@ return {
     ["1920168"] = {
       CreatorId = 1920168,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8001001
     },
     ["1920169"] = {
       CreatorId = 1920169,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8001001
     },
     ["1920170"] = {
       CreatorId = 1920170,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8001001
     },
     ["1920171"] = {
       CreatorId = 1920171,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8001001
     },
     ["1920172"] = {
       CreatorId = 1920172,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8001001
     },
     ["1920173"] = {
       CreatorId = 1920173,
       UnitType = "Monster",
-      UnitId = 8002061
+      UnitId = 8001001
     },
     ["1920084"] = {
       CreatorId = 1920084,

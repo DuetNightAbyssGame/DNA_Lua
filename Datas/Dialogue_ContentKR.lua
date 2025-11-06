@@ -4547,7 +4547,7 @@ local Data = {
           RougeTalkActorType = 3
         },
         [6201311] = {
-          ContentKR = "세 번째 꿈에선 당신과 똑같은 랜턴을 든 여행자가 보인다. 당신은 이 사람과 지금껏 3번 마주쳤다.\n{性别:남자|여자}가 내게서 멀어지며, 그윽한 어둠으로 발을 내딛는다.\n당신은 헐레벌떡 그 사람을 뒤쫓는다.",
+          ContentKR = "세 번째 꿈에선 당신과 똑같은 랜턴을 든 여행자가 보인다. 당신은 이 사람과 지금껏 3번 마주쳤다.\n{성별: 남자|여자}가 내게서 멀어지며, 그윽한 어둠으로 발을 내딛는다.\n당신은 헐레벌떡 그 사람을 뒤쫓는다.",
           DialogueId = 6201311,
           GUID = "0F863A96",
           NextDialogue = 6201312,
@@ -4562,7 +4562,7 @@ local Data = {
           SpeakNpcId = 910004
         },
         [6201313] = {
-          ContentKR = "\"미안해, ▇▇.\"\n{性别:남자|여자}가 고개를 돌리자, 흔들리는 불빛이 어렴풋이 {性别:그|그녀}의 얼굴을 비춘다.\n\"우리는 서로 <H>정반대의 길</>을 걸어야만 해. 그래서, 난 떠날 수밖에 없어.\"",
+          ContentKR = "\"미안해, ▇▇.\"\n{성별: 남자|여자}가 고개를 돌리자, 흔들리는 불빛이 어렴풋이 {성별: 그|그녀}의 얼굴을 비춘다.\n\"우리는 서로 <H>정반대의 길</>을 걸어야만 해. 그래서, 난 떠날 수밖에 없어.\"",
           DialogueId = 6201313,
           GUID = "0F863AEA",
           NextDialogue = 6201314,
@@ -4578,7 +4578,7 @@ local Data = {
           SpeakNpcId = 910004
         },
         [6201315] = {
-          ContentKR = "\"울지 마, ▇▇.\"\n{性别:남자|여자}가 당신의 뺨에 흐르는 눈물을 다정하게 닦아 주자, 그의 호흡과 인간의 따스한 체온이 느껴진다.\n\"우리의 여정은 결국 <H>하나의 원</>을 그리는 거야. 그러니까 서로 반대 방향으로 가더라도, 우린 꼭 다시 만날 수 있어.\"",
+          ContentKR = "\"울지 마, ▇▇.\"\n{성별: 남자|여자}가 당신의 뺨에 흐르는 눈물을 다정하게 닦아 주자, 그의 호흡과 인간의 따스한 체온이 느껴진다.\n\"우리의 여정은 결국 <H>하나의 원</>을 그리는 거야. 그러니까 서로 반대 방향으로 가더라도, 우린 꼭 다시 만날 수 있어.\"",
           DialogueId = 6201315,
           GUID = "0F863B3E",
           NextDialogue = 6201316,
@@ -4586,7 +4586,7 @@ local Data = {
           SpeakNpcName = "RougeLike_StoryShop_Char02"
         },
         [6201316] = {
-          ContentKR = "{性别:남자|여자}가 들고 있던 랜턴이 점점 밝아지며, 마치 은빛 실을 내뿜는 만월처럼, 눈부신 은빛 광채를 발한다...\n이윽고, 그 {性别:남자|여자}는 그 찬란한 은백색 빛 속으로 걸어 들어간다.\n......\n......\n당신은 산박하의 향기에 잠에서 깨어난다.",
+          ContentKR = "{성별: 남자|여자}가 들고 있던 랜턴이 점점 밝아지며, 마치 은빛 실을 내뿜는 만월처럼, 눈부신 은빛 광채를 발한다...\n이윽고, 그 {성별: 남자|여자}는 그 찬란한 은백색 빛 속으로 걸어 들어간다.\n......\n......\n당신은 산박하의 향기에 잠에서 깨어난다.",
           DialogueId = 6201316,
           GUID = "0F863B68",
           NextDialogue = 6201317,
@@ -27262,7 +27262,7 @@ SetLocation{ActorId{100304},TargetPoint{"lise_61_01"},Visibility{"Show"}}
         },
         [10036566] = {
           Camera = "98.539062,-775.041443,241.195312,0.0001,-18.813387,168.048386,35.000019,383.519501,false,Manual,6.0",
-          ContentKR = "진짜 블루스가, 아직... 살아 있는 거 맞아?",
+          ContentKR = "진짜 블루스가, 아직... 살아 있는 건가?",
           DialogueId = 10036566,
           GUID = "1920201C",
           LookAt = {
@@ -45591,6 +45591,7 @@ CameraMoveTo{_delay{6.8},TargetPosition{"116.96875,481.013184,111.717285,0.00045
         },
         [10108605] = {
           Camera = "-294.443359,996.944824,136.692383,0.00046,2.199457,-90.197632,50.0,334.402466,false,Manual,8.0",
+          ContentKR = "{空格}",
           DialogueId = 10108605,
           GUID = "194E4A85",
           LookAt = {
@@ -45608,6 +45609,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/01/bai_enter_water"
           Subtitle = "Snow, get back here. This water is freezing, even for a Charon."
         },
         [10108606] = {
+          ContentKR = "{空格}",
           DialogueId = 10108606,
           DisableMouth = 1,
           GUID = "194E4A86",
@@ -94456,7 +94458,7 @@ PlayAnimation{_delay{2},ActorId{200002},AnimationId{"Confident_Start"}}
         },
         [20005702] = {
           Camera = "508.414062,197.715576,181.711426,-0.000031,-9.197778,-175.56842,35.0,508.027344,false,Manual,12.0",
-          ContentKR = "앗, 스노우, 그리고 {性别:오빠|언니}, 안녕, 오랜만이네!",
+          ContentKR = "앗, 스노우, 그리고 {性别:오빠|언니}, 안녕, 오랫만이네!",
           DialogueId = 20005702,
           FinalCamera = "453.972656,194.084961,173.135742,-0.00003,-8.797789,-176.168381,35.0,508.027344,false,Manual,12.0",
           GUID = "3215097C",
@@ -94478,7 +94480,7 @@ PlayAnimation{_delay{4.1},ActorId{200074},AnimationId{"Explain02_Start"},Duratio
         },
         [20005703] = {
           Camera = "-112.980469,86.168457,117.201904,-0.00003,-4.197971,33.230522,35.000008,346.856049,false,Manual,4.5",
-          ContentKR = "오랜만이긴 하네! 집에 돌아간 줄 알았는데 아직도 아이스레이크 시티 밖에 있다고 해서 무슨 일인지 보러 왔어.",
+          ContentKR = "오랫만이긴 하네! 집에 돌아간 줄 알았는데 아직도 아이스레이크 시티 밖에 있다고 해서 무슨 일인지 보러 왔어.",
           DialogueId = 20005703,
           FinalCamera = "-109.616211,88.798828,117.168213,-0.000031,-4.597933,31.231554,35.000008,346.856049,false,Manual,4.5",
           GUID = "321509A6",
@@ -107544,11 +107546,20 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           DialogueId = 51005946,
           GUID = "7FB02304",
           LookAt = {
-            [1] = "700130:n(0)"
+            [1] = "700130:n(0)",
+            [2] = "700131:n(0)",
+            [3] = "700132:n(0)"
           },
           SpeakNpcName = "UI_CMNpc_Name_SanXiongdi",
+          TalkActionId = {
+            [1] = "700130:Agree",
+            [2] = "700131:Agree",
+            [3] = "700132:Agree"
+          },
           TurnTo = {
-            [1] = "700130:n(0)"
+            [1] = "700130:n(0)",
+            [2] = "700131:n(0)",
+            [3] = "700132:n(0)"
           }
         },
         [51006001] = {
@@ -109339,40 +109350,40 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 700230
         },
         [51006922] = {
-          ContentKR = "아직 손도 안 댔거든요!",
+          ContentKR = "전 쓰레기통 뒤지는 취미는 없어요.",
           DialogueId = 51006922,
           GUID = "7FB0C0DA",
           NextDialogue = 51006924
         },
         [51006923] = {
-          ContentKR = "전 쓰레기통 뒤지는 취미는 없어요.",
+          ContentKR = "어디서 발뺌이야. 내가 이 두 눈으로 똑똑히 봤다고.",
           DialogueId = 51006923,
           GUID = "7FB0C0DB",
           NextDialogue = 51006924
         },
         [51006924] = {
-          ContentKR = "어디서 발뺌이야. 내가 이 두 눈으로 똑똑히 봤다고.",
+          ContentKR = "어제 제복을 입은 어떤 여자가 울면서 그 상자를 여기 던져 버렸지. 어떤 넝마주이 할머니가 딱한 마음에 괜찮냐고 물었는데, 그 성질머리 더러운 여자가 남의 일에 신경 끄라고 쏴붙이더라니까.",
           DialogueId = 51006924,
           GUID = "7FB0C0DC",
           NextDialogue = 51006925,
           SpeakNpcId = 700230
         },
         [51006925] = {
-          ContentKR = "어제 제복을 입은 어떤 여자가 울면서 그 상자를 여기 던져 버렸지. 어떤 넝마주이 할머니가 딱한 마음에 괜찮냐고 물었는데, 그 성질머리 더러운 여자가 남의 일에 신경 끄라고 쏴붙이더라니까.",
+          ContentKR = "그래, 네가 들고 있는 그 상자 말하는 거야. 그런데도 쓰레기통에서 주운 게 아니라고?",
           DialogueId = 51006925,
           GUID = "7FB0C0DD",
           NextDialogue = 51006926,
           SpeakNpcId = 700230
         },
         [51006926] = {
-          ContentKR = "그래, 네가 들고 있는 그 상자 말하는 거야. 그런데도 쓰레기통에서 주운 게 아니라고?",
+          ContentKR = "제가 주운 게 아니... 설명하기도 귀찮네요. 어쨌든, 주인에 대한 단서를 주신 건 감사해요.",
           DialogueId = 51006926,
           GUID = "7FB0C0DE",
           NextDialogue = 51006927,
           SpeakNpcId = 700230
         },
         [51006927] = {
-          ContentKR = "제가 주운 게 아니... 설명하기도 귀찮네요. 어쨌든, 주인에 대한 단서를 주신 건 감사해요.",
+          ContentKR = "(제복을 입은 까칠한 여자라... 마르제한테 받은 '그 물건'하고 관련된 사람이려나?)",
           DialogueId = 51006927,
           GUID = "7FB0C0DF",
           NextDialogue = 51006928,
@@ -110336,7 +110347,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 700077
         },
         [51007308] = {
-          ContentKR = "(셜리는 존경 어린 눈빛으로, 규선생의 과거에 대해 쉬지 않고 이야기한다.)",
+          ContentKR = "(셜리의 존경 어린 눈빛으로, 규선생의 과거에 대해 쉬지 않고 이야기한다.)",
           DialogueId = 51007308,
           GUID = "7FB10278",
           NextDialogue = 51007309
@@ -114760,27 +114771,27 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 230003
         },
         [51009301] = {
-          ContentKR = "이번엔 핑크색 꽃으로 하자!",
+          Content = "这次就选粉红色的花吧！",
           DialogueId = 51009301,
           GUID = "7FB24972",
           NextDialogue = 51009302,
           SpeakNpcId = 700247
         },
         [51009302] = {
-          ContentKR = "(여자가 웃으며 정성껏 고른 핑크색 꽃송이를 손에 든다. 고개를 들어 보니 그녀가 날 발견한 듯하다.)",
+          Content = "（女子面带微笑地拿起她精心挑选的粉色花朵。抬起头来时，她注意到了你。）",
           DialogueId = 51009302,
           GUID = "7FB2499C",
           NextDialogue = 51009303
         },
         [51009303] = {
-          ContentKR = "안녕하세요? 그쪽도 꽃 사러 오셨나요?",
+          Content = "你好呀，你也是来买花的吗？",
           DialogueId = 51009303,
           GUID = "7FB249C6",
           NextDialogue = 51009304,
           SpeakNpcId = 700247
         },
         [51009304] = {
-          ContentKR = "이건 어때요? 핑크색 꽃은 흔하지 않거든요.",
+          Content = "要不要看看这一种，粉红色的花可不多见喔。",
           DialogueId = 51009304,
           GUID = "7FB249F0",
           NextOptions = {
@@ -114791,14 +114802,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009305] = {
-          ContentKR = "선물로 주실 수 있어요?",
+          Content = "可以送我吗？",
           DialogueId = 51009305,
           GUID = "7FB24A1A",
           ImprPlusId = 1001,
           NextDialogue = 51009306
         },
         [51009306] = {
-          ContentKR = "후후, 물론이죠!",
+          Content = "呵呵，当然可以！",
           DialogueId = 51009306,
           GUID = "7FB24A44",
           NextDialogue = 51009307,
@@ -114813,81 +114824,81 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
     Loader = function()
       return {
         [51009307] = {
-          ContentKR = "(여자는 진열대의 꽃을 몇 송이 가져와, 함께 계산한 뒤 건네준다.)",
+          Content = "（女子伸出手，轻巧地从货架上多取了几支花，一并结账后递给了你。）",
           DialogueId = 51009307,
           GUID = "7FB24A6E",
           NextDialogue = 51009308
         },
         [51009308] = {
-          ContentKR = "자, 받아요.",
+          Content = "来，收好了。",
           DialogueId = 51009308,
           GUID = "7FB24A98",
           NextDialogue = 51009309,
           SpeakNpcId = 700247
         },
         [51009309] = {
-          ContentKR = "나한테 고마워할 거 없어요. 다 그 친구 덕분이라고 생각해요.",
+          Content = "不用谢我，你就当作是沾了他的光吧。",
           DialogueId = 51009309,
           GUID = "7FB24AC2",
           NextDialogue = 51009317,
           SpeakNpcId = 700247
         },
         [51009310] = {
-          ContentKR = "고마워요. 제가 보기에도 예쁘네요.",
+          Content = "谢谢你，我也觉得很好看。",
           DialogueId = 51009310,
           GUID = "7FB24AEC",
           ImprPlusId = 1004,
           NextDialogue = 51009311
         },
         [51009311] = {
-          ContentKR = "마음에 든다면, 선물로 줄게요.",
+          Content = "如果你喜欢的话，我也可以送给你哦。",
           DialogueId = 51009311,
           GUID = "7FB24B16",
           NextDialogue = 51009312
         },
         [51009312] = {
-          ContentKR = "그 친구도 분명히 기뻐할 거예요.",
+          Content = "他一定也会很乐意的。",
           DialogueId = 51009312,
           GUID = "7FB24B40",
           NextDialogue = 51009317
         },
         [51009313] = {
-          ContentKR = "아니요, 전 핑크색이 싫어요!",
+          Content = "哦不，我讨厌粉红色！",
           DialogueId = 51009313,
           GUID = "7FB24B6A",
           ImprPlusId = 1005,
           NextDialogue = 51009314
         },
         [51009314] = {
-          ContentKR = "이런, 정말 미안해요.",
+          Content = "哎呀，那真是抱歉了。",
           DialogueId = 51009314,
           GUID = "7FB24B94",
           NextDialogue = 51009315,
           SpeakNpcId = 700247
         },
         [51009315] = {
-          ContentKR = "하긴, 모두가 핑크색을 좋아할 리는 없죠...",
+          Content = "也对，不是每个人都会喜欢粉红色的吧……",
           DialogueId = 51009315,
           GUID = "7FB24BBE",
           NextDialogue = 51009316,
           SpeakNpcId = 700247
         },
         [51009316] = {
-          ContentKR = "그렇다면 그 친구도 싫어할까요... 하지만 괜찮아요, 좋아한다고 치면 되죠.",
+          Content = "这么说来，或许他也不喜欢……不过没关系啦！就当做他喜欢好了。",
           DialogueId = 51009316,
           GUID = "7FB24BE8",
           NextDialogue = 51009317,
           SpeakNpcId = 700247
         },
         [51009317] = {
-          ContentKR = "이 꽃을 선물하려는 건가요?",
+          Content = "这花是用来送人的吗？",
           DialogueId = 51009317,
           GUID = "7FB24C12",
           NextDialogue = 51009318,
           SpeakNpcId = 100001
         },
         [51009318] = {
-          ContentKR = "네. 당신처럼 머리에 뿔이 달린 요정 친구가 있는데, 그 친구에게 선물할 거예요.",
+          Content = "是呀。我有一位和你一样头上长着角的精灵朋友，这花就是要送给他的。",
           DialogueId = 51009318,
           GUID = "7FB24C3C",
           NextOptions = {
@@ -114897,33 +114908,33 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009319] = {
-          ContentKR = "요정이요?",
+          Content = "“精灵？”",
           DialogueId = 51009319,
           GUID = "7FB24C66",
           NextDialogue = 51009320
         },
         [51009320] = {
-          ContentKR = "후후, 그 친구 말에 의하면 그래요.",
+          Content = "呵呵，那是他的说法。",
           DialogueId = 51009320,
           GUID = "7FB24C90",
           NextDialogue = 51009323,
           SpeakNpcId = 700247
         },
         [51009321] = {
-          ContentKR = "전 카론인데요.",
+          Content = "我是卡戎。",
           DialogueId = 51009321,
           GUID = "7FB24CBA",
           NextDialogue = 51009322
         },
         [51009322] = {
-          ContentKR = "네. '요정'은 그 친구 얘기예요.",
+          Content = "嗯，“精灵”是他的说法。",
           DialogueId = 51009322,
           GUID = "7FB24CE4",
           NextDialogue = 51009323,
           SpeakNpcId = 700247
         },
         [51009323] = {
-          ContentKR = "그러고 보니, 밖에 바람이 부나요?",
+          Content = "说起来，外面起风了吗？",
           DialogueId = 51009323,
           GUID = "7FB24D0E",
           NextOptions = {
@@ -114934,46 +114945,46 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009324] = {
-          ContentKR = "글쎄요, 따로 신경 쓰지 않아서...",
+          Content = "我没注意。",
           DialogueId = 51009324,
           GUID = "7FB24D38",
           NextDialogue = 51009325
         },
         [51009325] = {
-          ContentKR = "그런가요... 괜찮아요, 제가 이따가 나가서 확인해 볼게요.",
+          Content = "这样啊……没关系，我等会儿自己出去确认一下。",
           DialogueId = 51009325,
           GUID = "7FB24D62",
           NextDialogue = 51009330,
           SpeakNpcId = 700247
         },
         [51009326] = {
-          ContentKR = "네, 바람이 세게 불던데요.",
+          Content = "正在刮大风。",
           DialogueId = 51009326,
           GUID = "7FB24D8C",
           NextDialogue = 51009327
         },
         [51009327] = {
-          ContentKR = "그렇다면 잘됐네요.",
+          Content = "那就太好了。",
           DialogueId = 51009327,
           GUID = "7FB24DB6",
           NextDialogue = 51009330,
           SpeakNpcId = 700247
         },
         [51009328] = {
-          ContentKR = "바람이 없다면 바람을 만들면 되죠.",
+          Content = "没有风我也可以制造风。",
           DialogueId = 51009328,
           GUID = "7FB24DE0",
           NextDialogue = 51009329
         },
         [51009329] = {
-          ContentKR = "정말요? 정말 대단한 분이셨군요! 호의 감사해요.",
+          Content = "是吗，原来你这么厉害呀！谢谢你的好意。",
           DialogueId = 51009329,
           GUID = "7FB24E0A",
           NextDialogue = 51009330,
           SpeakNpcId = 700247
         },
         [51009330] = {
-          ContentKR = "바람이 불어야 그 친구한테 꽃을 선물할 수 있거든요.",
+          Content = "我得等到起风的时候，才能把花送给他呢。",
           DialogueId = 51009330,
           GUID = "7FB24E34",
           NextOptions = {
@@ -114984,53 +114995,53 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009331] = {
-          ContentKR = "왜 바람이 불어야 하죠?",
+          Content = "为什么一定要等起风？",
           DialogueId = 51009331,
           GUID = "7FB24E5E",
           NextDialogue = 51009332
         },
         [51009332] = {
-          ContentKR = "바람이 불어야 꽃이 공중에 흩날리니까요.",
+          Content = "因为起风的时候，花才会往空中飘呀。",
           DialogueId = 51009332,
           GUID = "7FB24E88",
           NextDialogue = 51009337,
           SpeakNpcId = 700247
         },
         [51009333] = {
-          ContentKR = "설마 친구분이 요정인가요?",
+          Content = "莫非你的朋友是风精灵吗？",
           DialogueId = 51009333,
           GUID = "7FB24EB2",
           NextDialogue = 51009334
         },
         [51009334] = {
-          ContentKR = "후후, 재미있는 생각이네요. 그럴 수도 있겠어요.",
+          Content = "呵呵，很有意思的想法！说不定真的是喔。",
           DialogueId = 51009334,
           GUID = "7FB24EDC",
           NextDialogue = 51009337,
           SpeakNpcId = 700247
         },
         [51009335] = {
-          ContentKR = "특수한 의식인 건가요?",
+          Content = "这是某种特殊的仪式吗？",
           DialogueId = 51009335,
           GUID = "7FB24F06",
           NextDialogue = 51009336
         },
         [51009336] = {
-          ContentKR = "음... 그리움을 전하는 의식이에요.",
+          Content = "嗯……是传递思念的仪式。",
           DialogueId = 51009336,
           GUID = "7FB24F30",
           NextDialogue = 51009337,
           SpeakNpcId = 700247
         },
         [51009337] = {
-          ContentKR = "제 친구는 몇 년 전에 하늘로 갔어요.",
+          Content = "我的那位朋友，在几年前就去天上啦。",
           DialogueId = 51009337,
           GUID = "7FB24F5A",
           NextDialogue = 51009338,
           SpeakNpcId = 700247
         },
         [51009338] = {
-          ContentKR = "오늘은 매년 돌아오는 기념일이에요.",
+          Content = "今天是每年一次的纪念日。",
           DialogueId = 51009338,
           GUID = "7FB24F84",
           NextOptions = {
@@ -115040,7 +115051,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009339] = {
-          ContentKR = "(그녀에게 카론의 풍습에 대해 알려 준다.)",
+          Content = "（提醒她卡戎人的习俗。）",
           DialogueId = 51009339,
           FailDialogue = 51009340,
           GUID = "7FB24FAE",
@@ -115048,46 +115059,46 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           NextDialogue = 51009341
         },
         [51009340] = {
-          ContentKR = "(풍습의 자세한 내용이 갑자기 기억나지 않는다.)",
+          Content = "（你一时记不起习俗的细节。）",
           DialogueId = 51009340,
           GUID = "7FB24FD8"
         },
         [51009341] = {
-          ContentKR = "카론은 영혼이 돌아가는 곳이 안개의 바다라고 믿어요. 만약 그분을 기념하고 싶다면 꽃을 물에 띄워 보내는 게 나을 거예요.",
+          Content = "在卡戎人的观念中，雾海才是灵魂的归去之地。如果要纪念他，将花送往水中更加合理。",
           DialogueId = 51009341,
           GUID = "7FB25002",
           NextDialogue = 51009342,
           SpeakNpcId = 100001
         },
         [51009342] = {
-          ContentKR = "음... 알아요. 하지만 그 친구는 달라요.",
+          Content = "嗯……我知道。但是，他不一样。",
           DialogueId = 51009342,
           GUID = "7FB2502C",
           NextDialogue = 51009343,
           SpeakNpcId = 700247
         },
         [51009343] = {
-          ContentKR = "(여자는 잠깐 말을 멈추고 그리움이 담긴 눈빛으로 창밖을 바라본다.)",
+          Content = "（女子沉默了片刻，看向窗外，眼神中流露着温柔的怀念。）",
           DialogueId = 51009343,
           GUID = "7FB25056",
           NextDialogue = 51009344
         },
         [51009344] = {
-          ContentKR = "그 친구를 처음 만난 건 성 밖이었어요. 우린 나이도 비슷하고 성격도 닮아서 금세 친구가 됐죠.",
+          Content = "我第一次遇见他是在城外。我们年纪相仿，性格也很像，所以很快就成了好朋友。",
           DialogueId = 51009344,
           GUID = "7FB25080",
           NextDialogue = 51009345,
           SpeakNpcId = 700247
         },
         [51009345] = {
-          ContentKR = "그 친구는 자기가 하늘에서 내려온 '요정'이라고 했어요... 후후, 사실 그가 카론이란 건 금방 알았지만, 그렇게 열심히 둘러대는데 아는척하기가 좀 그렇더라고요.",
+          Content = "他对我说自己从是天上来的“精灵”……呵呵，其实我早知道他是卡戎人，但每次看到他那么努力地圆谎，实在是舍不得戳穿。",
           DialogueId = 51009345,
           GUID = "7FB250AA",
           NextDialogue = 51009346,
           SpeakNpcId = 700247
         },
         [51009346] = {
-          ContentKR = "게다가 확실히 동화 속 요정처럼, 제가 모르는 것 신기한 이야기를 끊임없이 알려주기도 했고요.",
+          Content = "而且，他确实就像故事里的精灵一样，知道许多我不知道的事，永远有讲不完的新奇见闻。",
           DialogueId = 51009346,
           GUID = "7FB250D4",
           NextOptions = {
@@ -115097,61 +115108,61 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009347] = {
-          ContentKR = "아주 멋진 친구였나 보군요.",
+          Content = "听起来是个很棒的朋友。",
           DialogueId = 51009347,
           GUID = "7FB250FE",
           NextDialogue = 51009348
         },
         [51009348] = {
-          ContentKR = "맞아요! 최고의 친구였어요.",
+          Content = "嗯！他是最棒的朋友。",
           DialogueId = 51009348,
           GUID = "7FB25128",
           NextDialogue = 51009351,
           SpeakNpcId = 700247
         },
         [51009349] = {
-          ContentKR = "그러니까 어릴 때부터 쭉 요정인 척했다는 거군요?",
+          Content = "所以他从小到大一直在扮演精灵吗？",
           DialogueId = 51009349,
           GUID = "7FB25152",
           NextDialogue = 51009350
         },
         [51009350] = {
-          ContentKR = "후후, 좀 유치하죠?",
+          Content = "呵呵，听起来有点幼稚，对吧？",
           DialogueId = 51009350,
           GUID = "7FB2517C",
           NextDialogue = 51009351,
           SpeakNpcId = 700247
         },
         [51009351] = {
-          ContentKR = "저도 쭉 고민이었어요. 우리가 커서 동화를 당연하게 믿지 않을 나이가 되면, 이 이야기를 어떻게 해야 할지 말이에요.",
+          Content = "我心里一直都有些苦恼——等到我们都长大，过了能理所当然地相信童话的年纪以后，要怎么开口说破这件事？",
           DialogueId = 51009351,
           GUID = "7FB251A6",
           NextDialogue = 51009352,
           SpeakNpcId = 700247
         },
         [51009352] = {
-          ContentKR = "제가 먼저 말을 꺼내든 그 친구가 먼저 이야기하든, 어색한 건 마찬가지일 테니까요...",
+          Content = "无论是我先开口还是他先开口，想象一下都很尴尬呀……",
           DialogueId = 51009352,
           GUID = "7FB251D0",
           NextDialogue = 51009353,
           SpeakNpcId = 700247
         },
         [51009353] = {
-          ContentKR = "하지만 그 순간은 결국 오지 않았어요. 그 친구는 성년이 되기 전에 떠나버렸거든요.",
+          Content = "但最后我们并没有走到那个时间点。他在成年之前便离开了。",
           DialogueId = 51009353,
           GUID = "7FB251FA",
           NextDialogue = 51009354,
           SpeakNpcId = 700247
         },
         [51009354] = {
-          ContentKR = "혹시 그 친구가 그걸 알고, 일부러 그때 떠나버린 걸까요? 후... 정말 따뜻한 친구였거든요...",
+          Content = "你说，他会不会是想到了这一点，才故意选在那个时候离开的？呵呵，真是个温柔的人啊……",
           DialogueId = 51009354,
           GUID = "7FB25224",
           NextDialogue = 51009355,
           SpeakNpcId = 700247
         },
         [51009355] = {
-          ContentKR = "(여자는 꽃잎을 부드럽게 어루만지며 눈을 내리깐다. 그녀의 얼굴에서 표정을 읽을 수 없다.)",
+          Content = "（女子抚摸着柔软的花瓣，轻轻垂下了眼眸。你分辨不出她脸上的情绪。）",
           DialogueId = 51009355,
           GUID = "7FB2524E",
           NextOptions = {
@@ -115161,97 +115172,97 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           }
         },
         [51009356] = {
-          ContentKR = "죄송해요, 너무 마음 아파하지 마세요...",
+          Content = "抱歉，请节哀……",
           DialogueId = 51009356,
           GUID = "7FB25278",
           ImprPlusId = 1002,
           NextDialogue = 51009357
         },
         [51009357] = {
-          ContentKR = "괜찮아요. 벌써 몇 년이나 지났는걸요.",
+          Content = "没关系，已经过去很多年啦。",
           DialogueId = 51009357,
           GUID = "7FB252A2",
           NextDialogue = 51009362,
           SpeakNpcId = 700247
         },
         [51009358] = {
-          ContentKR = "두 분 모두 참 따뜻한 분이네요.",
+          Content = "你们都是非常温柔的人。",
           DialogueId = 51009358,
           GUID = "7FB252CC",
           ImprPlusId = 1004,
           NextDialogue = 51009359
         },
         [51009359] = {
-          ContentKR = "후후, 고마워요.",
+          Content = "呵呵，谢谢你。",
           DialogueId = 51009359,
           GUID = "7FB252F6",
           NextDialogue = 51009362,
           SpeakNpcId = 700247
         },
         [51009360] = {
-          ContentKR = "성년이 되기 전이라... 설마 침식의 조짐이 나타난 건 아닐까요?",
+          Content = "成年这个时间点……难道说，他是出现了秽蚀的征兆？",
           DialogueId = 51009360,
           GUID = "7FB25320",
           ImprPlusId = 1003,
           NextDialogue = 51009361
         },
         [51009361] = {
-          ContentKR = "네, 저도 그렇게 생각해요. 그 친구는 겨우 열여덟이 되기 직전에 떠났거든요.",
+          Content = "嗯，我也这么想。毕竟他离开的时候，刚好是快满十八岁。",
           DialogueId = 51009361,
           GUID = "7FB2534A",
           NextDialogue = 51009362,
           SpeakNpcId = 700247
         },
         [51009362] = {
-          ContentKR = "자신의 미래를 일찍부터 알고 있었던 것 같아요... 그 친구를 마지막으로 만났을 때, 하늘의 고향으로 돌아가게 돼서 앞으론 절 찾아오지 못할 거라고 했거든요.",
+          Content = "他早就预料到了自己的结局……最后见面的那次，他对我说，自己将要回到天上的故乡，从今往后不能再来找我。",
           DialogueId = 51009362,
           GUID = "7FB25374",
           NextDialogue = 51009363,
           SpeakNpcId = 700247
         },
         [51009363] = {
-          ContentKR = "그 친구치곤 아주 서투른 거짓말이었죠... 분명히 눈물이 흘러내리고 있는데도, 억지로 미소를 지으며 쾌활한 말투로 이렇게 말하더라고요.",
+          Content = "那是他撒谎撒得最拙劣的一次……明明眼泪已经在眼眶里打转了，还拼命挤出一副微笑的表情，用愉快的语调对我说——",
           DialogueId = 51009363,
           GUID = "7FB2539E",
           NextDialogue = 51009364,
           SpeakNpcId = 700247
         },
         [51009364] = {
-          ContentKR = "\"나 때문에 슬퍼하지 마. 앞으론 널 만날 수 없겠지만, 난 구름 위에서 쭉 널 지켜보고 있을 테니까...\"",
+          Content = "“请你不要感到难过。虽然我不能再来见你，但我会在云端之上一直、一直注视着你……”",
           DialogueId = 51009364,
           GUID = "7FB253C8",
           NextDialogue = 51009365,
           SpeakNpcId = 700247
         },
         [51009365] = {
-          ContentKR = "\"언제든지 고개를 들어 하늘을 바라보면, 네 그리움이 바람에 실려 내 곁으로 찾아올 거야.\"",
+          Content = "“无论何时，只要你抬头望向天空，你的思念就能够随风抵达我的身边。”",
           DialogueId = 51009365,
           GUID = "7FB253F2",
           NextDialogue = 51009366,
           SpeakNpcId = 700247
         },
         [51009366] = {
-          ContentKR = "(여자는 여기까지 말하곤 미소를 짓는다. 착각이었는지 모르지만 그녀의 눈에 한 줄기 빛이 은은하게 빛나는 듯하다. 그건 눈물이었을까, 아니면 유리창에서 쏟아진 햇살이었을까?)",
+          Content = "（说到这里，女子露出了微笑。不知是否是错觉，她的眼中隐约闪过了一丝光亮——那究竟是泪光，还是从玻璃窗中洒下的阳光呢？）",
           DialogueId = 51009366,
           GUID = "7FB2541C",
           NextDialogue = 51009367
         },
         [51009367] = {
-          ContentKR = "그래서 꽃을 하늘로 뿌리는 거군요...?",
+          Content = "所以，你才会把花撒向天空……？",
           DialogueId = 51009367,
           GUID = "7FB25446",
           NextDialogue = 51009368,
           SpeakNpcId = 100001
         },
         [51009368] = {
-          ContentKR = "네. 그 친구가 그렇게 말하고 싶었다면 전 그 말을 믿을래요. 그가 돌아갈 곳은 안개의 바다가 아니라 넓고 푸른 하늘이었다고요.",
+          Content = "嗯。既然那是他想要告诉我的故事，那么我也愿意相信，他的归处不是雾海，而是辽阔的蓝天。",
           DialogueId = 51009368,
           GUID = "7FB25470",
           NextDialogue = 51009369,
           SpeakNpcId = 700247
         },
         [51009369] = {
-          ContentKR = "꽃잎을 하늘로 뿌리면, 그 친구가 제 마음을 느낄 수 있을 거예요.",
+          Content = "只要将花瓣撒向天空，他就能感受到我的思念。",
           DialogueId = 51009369,
           GUID = "7FB2549A",
           NextOptions = {
@@ -115261,53 +115272,53 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009370] = {
-          ContentKR = "그분이 당신의 꽃을 받을 수 있다면 좋겠네요.",
+          Content = "如果他能收到你的花就好了。",
           DialogueId = 51009370,
           GUID = "7FB254C4",
           NextDialogue = 51009372
         },
         [51009371] = {
-          ContentKR = "그분은 당신의 꽃을 받을 수 있을 거예요.",
+          Content = "他一定会收到你的花的。",
           DialogueId = 51009371,
           GUID = "7FB254EE",
           NextDialogue = 51009372
         },
         [51009372] = {
-          ContentKR = "네, 고마워요!",
+          Content = "嗯，谢谢你！",
           DialogueId = 51009372,
           GUID = "7FB25518",
           NextDialogue = 51009373,
           SpeakNpcId = 700247
         },
         [51009373] = {
-          ContentKR = "지금 생각해 보면, 그 친구는 제가 자기 거짓말을 알아챈 걸 진작부터 알았을지도 몰라요.",
+          Content = "现在回想起来，他大概也早就知道我已经看穿了他的谎话吧。",
           DialogueId = 51009373,
           GUID = "7FB25542",
           NextDialogue = 51009374,
           SpeakNpcId = 700247
         },
         [51009374] = {
-          ContentKR = "거짓말로 지어낸 이야기가 거짓말로 끝을 맺다니... 정말 완벽하지 않나요?",
+          Content = "一个由谎言编织的故事，最后有了一个用谎言写就的结局……不也算是恰如其分吗？",
           DialogueId = 51009374,
           GUID = "7FB2556C",
           NextDialogue = 51009375,
           SpeakNpcId = 700247
         },
         [51009375] = {
-          ContentKR = "그럼 이제 어두워지기 전에 얼른 성 밖으로 나가서 그 친구와의 약속을 지켜야겠어요.",
+          Content = "好啦，我要趁天还没黑，去城外完成和他的约定。",
           DialogueId = 51009375,
           GUID = "7FB25596",
           NextDialogue = 51009376,
           SpeakNpcId = 700247
         },
         [51009376] = {
-          ContentKR = "잘 가요, 귀여운 요정님. 당신의 이야기에도 진실되고 아름다운 결말이 있기를 바라요!",
+          Content = "再见了，可爱的小精灵。祝愿你的故事有一个真实而美满的结局。",
           DialogueId = 51009376,
           GUID = "7FB255C0",
           SpeakNpcId = 700247
         },
         [51009377] = {
-          ContentKR = "오, 요정님. 또 만났네요! 오늘은 날이 참 좋죠?",
+          Content = "哎呀，小精灵，又见面了。今天的天色很美吧？",
           DialogueId = 51009377,
           GUID = "7FB255EA",
           SpeakNpcId = 700247
@@ -128173,7 +128184,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 818041
         },
         [71005101] = {
-          ContentKR = "물고기야~ 와라 와라~",
+          Content = "鱼来，鱼来。",
           DialogueId = 71005101,
           GUID = "B1C0EAA3",
           SpeakNpcId = 818045
@@ -128421,14 +128432,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 818045
         },
         [71005137] = {
-          ContentKR = "(남자는 당신을 가리켰다.)",
+          Content = "（男人说完指了指你。）",
           DialogueId = 71005137,
           GUID = "B1C0FEFC",
           NextDialogue = 71005138,
           SpeakNpcId = 800006
         },
         [71005138] = {
-          ContentKR = "낚시는 꼭 물고기만 낚는 게 아니에요. 말 몇 마디 흘리고, 이상한 짓 몇 번 하면— 미끼를 물고 달려드는 '물고기'는 생각보다 많거든요.",
+          Content = "钓鱼钓的也可以不是鱼。撒下几句话，做一些奇怪的事，就会有无数鱼争相咬钩。",
           DialogueId = 71005138,
           GUID = "B1C0FEFD",
           NextDialogue = 71005139,
@@ -128541,14 +128552,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 800006
         },
         [71005212] = {
-          ContentKR = "맞아요. 행복 동전이란 건 사실 그냥 우리가 가진 쿠퍼에요. 마법이 걸린 보물은 아니지만, 사람들의 선의가 담긴 거죠.",
+          Content = "是呀，幸福硬币就是我们手里的铜币。它不是魔法创造出来的宝贝，而是诞生自大家的善意。",
           DialogueId = 71005212,
           GUID = "B1C10B9F",
           NextDialogue = 71005213,
           SpeakNpcId = 818048
         },
         [71005213] = {
-          ContentKR = "행복 동전 하나로 그 아이의 웃음을 살 수 있다니— 이런 멋진 거래는 세상에 흔치 않아요.",
+          Content = "一枚幸福硬币就能买到她的笑容，这么轻松的买卖可不多见呀。",
           DialogueId = 71005213,
           GUID = "B1C10BA0",
           SpeakNpcId = 818048
@@ -130072,7 +130083,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72000202] = {
-          ContentKR = "야하, 날 찾아 냈네?",
+          ContentKR = "이야, 날 찾아 냈네?",
           DialogueId = 72000202,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -130702,7 +130713,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72001603] = {
-          ContentKR = "야하? 여기가 산이 아니라고? 그게 말이 돼?",
+          ContentKR = "어이? 여기가 산이 아니라고? 그게 말이 돼?",
           DialogueId = 72001603,
           FacialId = {
             [1] = "820000:PetPan_Speechless"
@@ -131179,7 +131190,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72002902] = {
-          ContentKR = "야하——! 그 상자 가져가지 말아 줘!",
+          Content = "咿呀——！请不要拿走这个宝箱。",
           DialogueId = 72002902,
           FacialId = {
             [1] = "820000:PetPan_Wink"
@@ -131189,7 +131200,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72002903] = {
-          ContentKR = "지금 쥐 떼가 우리 집을 점령했어. 그 돈으로 용감한 고양이를 고용해서 쥐 떼를 몰아낼 생각이었단 말이야!",
+          Content = "我的家被坏老鼠占领了，我正打算用这些钱去雇一只勇敢的小猫，帮我赶跑老鼠。",
           DialogueId = 72002903,
           FacialId = {
             [1] = "820000:PetPan_Dizzy"
@@ -131222,7 +131233,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72003002] = {
-          ContentKR = "와, 대단한걸! 몇 번 슬렁슬렁하더니 근처의 쥐 떼를 전부 퇴치해 버렸네.",
+          Content = "哇，你好厉害，唰唰——咻咻——几下就把附近的老鼠全消灭了。",
           DialogueId = 72003002,
           FacialId = {
             [1] = "820000:PetPan_Smile"
@@ -131232,7 +131243,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72003003] = {
-          ContentKR = "그럼 이 보물상자는 너한테 줄게.",
+          Content = "那么，这个宝箱就送给你啦。",
           DialogueId = 72003003,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131567,7 +131578,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [72003706] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "야하, 다시 한 번 세어봐.",
+          ContentKR = "으음, 다시 한 번 세어봐.",
           DialogueId = 72003706,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131666,7 +131677,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72003902] = {
-          ContentKR = "움직이는 새, 움직이지 않는 새, 움직이지 않는 사람은 다 여기에 있어.",
+          Content = "会动的鸟，不会动的鸟，还有不会动的人都还在这里。",
           DialogueId = 72003902,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131677,7 +131688,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72003903] = {
-          ContentKR = "하지만 움직일 줄 아는 사람은 전부 떠나 버렸어. 그들이 돌아올까?",
+          Content = "但是会动的人都离开了，他们还会回来吗？",
           DialogueId = 72003903,
           FacialId = {
             [1] = "820000:PetPan_Speechless"
@@ -131711,7 +131722,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004002] = {
-          ContentKR = "꺼진 램프 하나는 곧 집에 돌아오지 않은 사람 하나를 가리키지...",
+          Content = "每一盏熄灭的灯都是一个没有回家的人……",
           DialogueId = 72004002,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131721,7 +131732,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004003] = {
-          ContentKR = "그렇다면 불이 켜진 램프는 집에 돌아온 사람 하나인 건가?",
+          Content = "那么每一盏亮起的灯都会是一个回到了家的人吧？",
           DialogueId = 72004003,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131755,7 +131766,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004102] = {
-          ContentKR = "야하! 내 보금자리를 전부 부숴버렸잖아.",
+          Content = "咿呀！你怎么把我的小窝打碎了。",
           DialogueId = 72004102,
           FacialId = {
             [1] = "820000:PetPan_Dizzy"
@@ -131766,7 +131777,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004103] = {
-          ContentKR = "딱딱한 침대에서 자면 의지를 단련할 수 있다던데.",
+          Content = "据说睡在硬邦邦的床上可以磨炼意志力哦。",
           DialogueId = 72004103,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131800,7 +131811,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004202] = {
-          ContentKR = "상자를 뭐 하러 이렇게 높은 곳에 쌓아둔 거야?",
+          Content = "箱子堆在这么高的地方有什么用呢？",
           DialogueId = 72004202,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131811,7 +131822,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004203] = {
-          ContentKR = "차라리 방으로 쓰게 나한테 주지.",
+          Content = "不如就让给我当房子吧。",
           DialogueId = 72004203,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131845,7 +131856,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004302] = {
-          ContentKR = "둥둥, 나는 한 마리 자유로운 오리~",
+          Content = "飘啊飘，我是一只自由的小鸭子~",
           DialogueId = 72004302,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131856,7 +131867,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004303] = {
-          ContentKR = "야하, 내 수영장의 물을 빼 버리면 어떡해!",
+          Content = "咿呀！你怎么把我游泳池里的水放掉了？",
           DialogueId = 72004303,
           FacialId = {
             [1] = "820000:PetPan_Dizzy"
@@ -131890,7 +131901,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004402] = {
-          ContentKR = "야하, 버섯을 캐는 인간들 안녕~",
+          Content = "咿呀，采蘑菇的小人类你好~",
           DialogueId = 72004402,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131900,7 +131911,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004403] = {
-          ContentKR = "버섯은 맛있지만, 꼭 완전히 익혀 먹도록 해.",
+          Content = "蘑菇虽然美味，但一定要等完全煮熟以后再吃哦。",
           DialogueId = 72004403,
           FacialId = {
             [1] = "820000:PetPan_Cry"
@@ -131934,7 +131945,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004502] = {
-          ContentKR = "둥둥, 둥둥둥!",
+          Content = "咚咚，咚咚咚！",
           DialogueId = 72004502,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131944,7 +131955,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004503] = {
-          ContentKR = "난 이 파이프오르간 연주를 배우는 중이야.",
+          Content = "我正在学习演奏这台管道琴。",
           DialogueId = 72004503,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131978,7 +131989,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004602] = {
-          ContentKR = "야하, 내 비밀 기지를 찾아냈구나, 축하해!",
+          Content = "咿呀，恭喜你发现了我的秘密基地~",
           DialogueId = 72004602,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131988,7 +131999,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004603] = {
-          ContentKR = "여긴 덩굴, 수초, 연못, 그리고 나만의 아주 작은 생태계야.",
+          Content = "藤蔓、水草、池塘和我，是一个小小生态圈。",
           DialogueId = 72004603,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -177298,7 +177309,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           NextDialogue = 51005114
         },
         [510051151] = {
-          ContentKR = "(처방전 하나를 집는다. 위에 그다지 '친절'하지 않아 보이는 싯구가 적혀 있는 듯하다.)",
+          ContentKR = "역시 보는 눈이 있으시네요. 한 번에 이렇게 좋은 걸 알아보다니! 탐정 같은 예리함을 가진 것 같아요.",
           DialogueId = 510051151,
           FailDialogue = 51005116,
           GUID = "510051151.0",
@@ -177306,7 +177317,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           NextDialogue = 51005117
         },
         [510051152] = {
-          ContentKR = "(종이별이 담긴 상자를 집는다. 물건의 주인은 분명히 꼭 이루고 싶은 소망이 있을 것이다.)",
+          ContentKR = "탐정? 그게 무슨 소리야...",
           DialogueId = 510051152,
           FailDialogue = 51005116,
           GUID = "510051152.0",
@@ -177314,7 +177325,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           NextDialogue = 51005117
         },
         [510051153] = {
-          ContentKR = "(열쇠 하나를 집는다. 열쇠 모양이 왠지 눈에 익은 게, 헨릭의 집에서 본 것과 비슷한 듯하다.)",
+          ContentKR = "당신이 고른 것들은 가치가 없기도, 또 있기도 해요. 가치가 없다는 건 말 그대로 아무도 쳐다보지 않을 정도로 몇 푼 안 된다는 말이죠.",
           DialogueId = 510051153,
           FailDialogue = 51005116,
           GUID = "510051153.0",

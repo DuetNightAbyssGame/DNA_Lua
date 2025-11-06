@@ -7,7 +7,6 @@ M._components = {
 }
 
 function M:Construct()
-  self:AddInputMethodChangedListen()
   self.List_PayGift.OnCreateEmptyContent:Bind(self, function(self)
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.ShopId = nil
@@ -40,15 +39,6 @@ function M:InitPayGiftInfo(ShopItemsData)
         self.List_PayGift:SetFocus()
       end
     end)
-  end
-end
-
-function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
-  if CurInputDevice == ECommonInputType.Gamepad then
-    local ShopMain = UIManager(self):GetUIObj("ShopMain")
-    if (ShopMain and ShopMain:HasAnyFocus() or self:HasFocusedDescendants()) and not CommonUtils:IfExistSystemGuideUI(self) then
-      self.List_PayGift:SetFocus()
-    end
   end
 end
 

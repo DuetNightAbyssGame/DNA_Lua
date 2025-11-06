@@ -90,21 +90,7 @@ function M:OnExchangeBtnClicked()
 end
 
 function M:OnBuyBtnClicked()
-  local Avatar = GWorld:GetAvatar()
-  local UIUnlockRule = DataMgr.UIUnlockRule
-  if not UIUnlockRule or not UIUnlockRule.Shop then
-    DebugPrint("WBP_ShopExchangePart_C OnBuyBtnClicked UIUnlockRule or UIUnlockRule.Shop is nil")
-    return
-  end
-  local UIUnlockRuleId = UIUnlockRule.Shop.UIUnlockRuleId
-  if Avatar and UIUnlockRuleId then
-    local bUnlocked = Avatar:CheckUIUnlocked(UIUnlockRuleId)
-    if bUnlocked then
-      PageJumpUtils:JumpToShopPage(CommonConst.GachaJumpToShopMainTabId, nil, nil, "Shop")
-    else
-      UIManager(GWorld.GameInstance):ShowUITip(UIConst.Tip_CommonToast, UIUnlockRule.Shop.UIUnlockDesc)
-    end
-  end
+  PageJumpUtils:JumpToShopPage(CommonConst.GachaJumpToShopMainTabId, nil, nil, "Shop")
 end
 
 function M:MinusBtnCallback()

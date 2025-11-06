@@ -20,7 +20,6 @@ end
 function Component:UnbindForAnnouncement()
   self.Btn_Announcement:UnBindEventOnReleased(self, self.OnClickAnnoucement)
   ReddotManager.RemoveListener(ReddotNodeName, self)
-  AnnouncementUtils:TryCloseAnnounceMainUI()
 end
 
 function Component:UpdateAnnoucementReddot(Count)

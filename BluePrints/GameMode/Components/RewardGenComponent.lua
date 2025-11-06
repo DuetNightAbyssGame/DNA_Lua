@@ -224,7 +224,7 @@ function Component:HandleRewardDrop(Drops, Reason, Transform, ExtraInfo, OtherPa
   
   if ExtraInfo and ExtraInfo.MultiWave and self:IsInDungeon() then
     local Mechanism = Battle(self):GetEntity(ExtraInfo.ParentEid)
-    Mechanism:MultiWaveCreateDrop(Drops, CreateDrop)
+    Mechanism:MultiWaveCreateDrop(Drops, CreateDrop, OtherParams.Avatar)
   else
     for DropId, DropCountTable in pairs(Drops) do
       DropId = tonumber(DropId)

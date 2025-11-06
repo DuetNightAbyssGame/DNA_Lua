@@ -365,7 +365,7 @@ return ReadOnly("TextMap_I18n", {
   Abyss_Battle_RemainTime = {
     ContentEN = "Remaining Time:",
     ContentJP = "残り時間：",
-    ContentKR = "남은 시간:{空格}",
+    ContentKR = "남은 시간:",
     ContentTC = "剩餘時間：",
     TextMapContent = "剩余时间：",
     TextMapId = "Abyss_Battle_RemainTime"
@@ -557,7 +557,7 @@ and unlocked the next node level<H>%s</>. Proceed to the next node level?]],
     TextMapId = "Abyss_InfiniteReward_Title"
   },
   Abyss_LevelName = {
-    ContentEN = "Act %s{空格}",
+    ContentEN = "Act %s",
     ContentJP = "第%s幕",
     ContentKR = "제%s막{空格}",
     ContentTC = "第%s幕",
@@ -691,14 +691,6 @@ and unlocked the next node level<H>%s</>. Proceed to the next node level?]],
     ContentTC = "目前配置未達出戰要求",
     TextMapContent = "当前配置未达出战要求",
     TextMapId = "Abyss_PartySetup_ConditionsAreNot"
-  },
-  Abyss_PartyUnlock = {
-    ContentEN = "Team setup unlocked",
-    ContentJP = "編成がロック解除済",
-    ContentKR = "라인업이 해제되었습니다.",
-    ContentTC = "陣容已解鎖",
-    TextMapContent = "阵容已解锁",
-    TextMapId = "Abyss_PartyUnlock"
   },
   Abyss_Party_ConditionsAreNot = {
     ContentEN = "Please set up a team first",
@@ -1086,6 +1078,7 @@ and unlocked the next node level<H>%s</>. Proceed to the next node level?]],
   AnnouncementFixedTimeZone = {
     ContentJP = "(JST)",
     ContentKR = "(KST)",
+    ContentTC = "nan",
     TextMapId = "AnnouncementFixedTimeZone"
   },
   AnnouncementTimeFormatLong = {
@@ -1623,7 +1616,7 @@ and unlocked the next node level<H>%s</>. Proceed to the next node level?]],
   Attr_TriggerEsRate_Name = {
     ContentEN = "Shield Reduce on Bonus Effect: Slash",
     ContentJP = "切断追加効果発動時のシールドへの与ダメージ",
-    ContentKR = "베기 추가 효과 발동 시 실드에 대한 대미지",
+    ContentKR = "관통 추가 효과 발동 시 실드에 대한 대미지",
     ContentTC = "觸發切割額外效果時對護盾傷害",
     TextMapContent = "触发切割额外效果时对护盾伤害",
     TextMapId = "Attr_TriggerEsRate_Name"
@@ -12262,10 +12255,10 @@ Now's your chance to come up with a cool name for your new Phoxhunter team.]],
     TextMapId = "DUNGEON_SYNTHESIS_132"
   },
   DUNGEON_SYNTHESIS_133 = {
-    ContentEN = "Bounty commissions take time. Ensure you have enough time before proceeding. Continue? (Co-op recommended)",
-    ContentJP = "懸賞依頼は長時間を要します。時間に余裕があるときに行ってください。続けますか？(マルチプレイ推奨)",
-    ContentKR = "현상금 의뢰는 상당한 시간이 소요됩니다. 시간적 여유가 충분할 때 진행하시는 것을 권장합니다. 계속하시겠습니까? (파티 도전 권장)",
-    ContentTC = "懸賞委托耗時較長，請在保持時間充裕的情況下進行，是否繼續？（建議組隊挑戰）",
+    ContentEN = "Bounty commissions take time. Ensure you have enough time before proceeding. Continue?",
+    ContentJP = "懸賞依頼は長時間を要します。時間に余裕があるときに行ってください。続けますか？",
+    ContentKR = "현상금 의뢰는 상당한 시간이 소요됩니다. 시간적 여유가 충분할 때 진행하시는 것을 권장합니다. 계속하시겠습니까?",
+    ContentTC = "懸賞委托耗時較長，請在保持時間充裕的情況下進行，是否繼續？",
     TextMapContent = "悬赏委托耗时较长，请在保持时间充裕的情况下进行，是否继续？",
     TextMapId = "DUNGEON_SYNTHESIS_133"
   },
@@ -12473,7 +12466,7 @@ Now's your chance to come up with a cool name for your new Phoxhunter team.]],
     ContentEN = "Complete [Commission: Chase] <Highlight>1</> time",
     ContentJP = "依頼「競技」を<Highlight>1</>回完了する",
     ContentKR = "'각축전' 의뢰 <Highlight>1</>회 완료",
-    ContentTC = "完成<Highlight>1</>次「競逐」委託",
+    ContentTC = "完成<Highlight>1</>次「競逐」委托",
     TextMapContent = "完成<Highlight>1</>次“竞逐”委托",
     TextMapId = "DailyTaskDes_10000109"
   },
@@ -19950,24 +19943,24 @@ Complete any Phoxhunter Commission
     TextMapId = "Event_102001_QuestName4"
   },
   Event_Des_101001 = {
-    ContentEN = "Log in for 7 days to claim rewards",
-    ContentJP = "イベント期間中、7日間ログインして\nプレゼントを受け取る",
+    ContentEN = "Sign in for 7 days during the event to claim rewards",
+    ContentJP = "イベント期間中、7日間ログインしてボーナスをゲット",
     ContentKR = "이벤트 기간 중 7일 출석 시 선물 지급",
     ContentTC = "活動期間簽到7日領取贈禮",
     TextMapContent = "活动期间签到7日领取赠礼",
     TextMapId = "Event_Des_101001"
   },
   Event_Des_101002 = {
-    ContentEN = "Log in for 7 days to claim rewards",
-    ContentJP = "イベント期間中、7日間ログインして\nプレゼントを受け取る",
+    ContentEN = "Log in for 7 days during the event to claim rewards",
+    ContentJP = "イベント期間中、7日間ログインしてプレゼントを受け取る",
     ContentKR = "이벤트 기간 중 7일 출석 시 선물 지급",
     ContentTC = "活動期間簽到7日領取贈禮",
     TextMapContent = "活动期间签到7日领取赠礼",
     TextMapId = "Event_Des_101002"
   },
   Event_Des_101003 = {
-    ContentEN = "Log in for 7 days to claim rewards",
-    ContentJP = "イベント期間中、7日間ログインして\nプレゼントを受け取る",
+    ContentEN = "Log in for 7 days during the event to claim rewards",
+    ContentJP = "イベント期間中、7日間ログインしてプレゼント\nを受け取る",
     ContentKR = "이벤트 기간 중 7일 출석 시 선물 지급",
     ContentTC = "活動期間簽到7日領取贈禮",
     TextMapContent = "活动期间签到7日领取赠礼",
@@ -20054,10 +20047,10 @@ Complete any Phoxhunter Commission
     TextMapId = "Event_Des_103009001"
   },
   Event_Des_103010 = {
-    ContentEN = "When a young nightingale leaves its nest, it sees the vast skies and sweeps across soft meadows — but also faces cold rain and raging winds.\nBut the girl has made up her mind: no more turning back. With her magic brush, she'll paint a dream in every hue — and in this harsh, unforgiving world... find a sky forever warm and bright, just like the ones in her favourite fairytales.",
-    ContentJP = "小さなナイチンゲールが巣を飛び立つとき、広大な空を見上げ、柔らかな草原を越えるだろう。だがそれは同時に、冷たい雨や荒れ狂う風と出会う運命でもある。\nけれど少女はもう退くことを選ばない。彼女は魔法の筆で彩りの夢を描き、この残酷な現実の世界の中に、童話のように暖かく明るい空を見つけ出すのだ。",
+    ContentEN = "When a young nightingale leaves its nest, it sees the vast skies and sweeps across soft meadows — but also faces cold rain and raging winds.\n But the girl has made up her mind: no more turning back. With her magic brush, she'll paint a dream in every hue — and in this harsh, unforgiving world... find a sky forever warm and bright, just like the ones in her favourite fairytales.",
+    ContentJP = "小さなナイチンゲールが巣を飛び立つとき、広大な空を見上げ、柔らかな草原を越えるだろう。だがそれは同時に、冷たい雨や荒れ狂う風と出会う運命でもある。\n けれど少女はもう退くことを選ばない。彼女は魔法の筆で彩りの夢を描き、この残酷な現実の世界の中に、童話のように暖かく明るい空を見つけ出すのだ。",
     ContentKR = "둥지를 떠난 어린 나이팅게일은 넓은 하늘을 보고,\n부드러운 초원을 넘지만 차가운 빗방울과\n난폭한 바람을 맞이하게 된다.\n하지만 소녀는 더는 물러서지 않기로 결심했다.\n그녀는 마법의 붓으로 알록달록한 꿈을 그리고\n잔혹한 현실 세계에서 동화 속처럼 따뜻하고\n맑게 갠 하늘을 찾을 것이다.",
-    ContentTC = "當一隻小夜鶯飛出巢穴，它會見到廣闊的天空，掠過柔軟的草地，卻也注定會迎上冰冷的雨和狂暴的風。\n但少女已決心不再退卻，她將用魔法的畫筆描繪彩色的夢，在這依然殘酷的現實世界裡，尋得一片永遠如童話般溫暖明亮的晴天。",
+    ContentTC = "當一隻小夜鶯飛出巢穴，它會見到廣闊的天空，掠過柔軟的草地，卻也注定會迎上冰冷的雨和狂暴的風。\n 但少女已決心不再退卻，她將用魔法的畫筆描繪彩色的夢，在這依然殘酷的現實世界裡，尋得一片永遠如童話般溫暖明亮的晴天。",
     TextMapContent = "当一只小夜莺飞出巢穴，它会见到广阔的天空，掠过柔软的草地，却也注定会迎上冰冷的雨和狂暴的风。\n但少女已决心不再退却，她将用魔法的画笔描绘彩色的梦，在这依然残酷的现实世界里，寻得一片永远如童话般温暖明亮的晴天。",
     TextMapId = "Event_Des_103010"
   },
@@ -20088,7 +20081,7 @@ Complete any Phoxhunter Commission
   Event_Des_105102012 = {
     ContentEN = "A murmur of love through the silks, an eternity sealed in a fatal kiss.",
     ContentJP = "幾重にも重なる紗幕の下、囁きで愛を伝え、死をもって永遠に触れる。",
-    ContentKR = "겹겹이 쌓인 베일 아래, 속삭임으로 사랑을 말하고, 죽음으로 영원을 터치하라",
+    ContentKR = "겹겹이 쌓인 커튼 아래, 속삭임으로 사랑을 말하고, 죽음으로 영원을 터치하라",
     ContentTC = "重重紗幕之下，以輕語訴說愛意，用死亡觸碰永恒。",
     TextMapContent = "重重纱幕之下，以轻语诉说爱意，用死亡触碰永恒。",
     TextMapId = "Event_Des_105102012"
@@ -20128,7 +20121,7 @@ Complete any Phoxhunter Commission
   Event_Des_107002 = {
     ContentEN = "Log in on both PC and mobile to receive rewards, including the Silent Censer avatar frame and Pristine Hourglasses.",
     ContentJP = "月狩り人はPC版とモバイル版の両方にログインすると、アイコンフレーム「静寂の香炉」や「純白の砂時計」などを獲得できます。",
-    ContentKR = "PC 클라이언트와\n모바일 클라이언트로 모두 로그인 시\n프로필 프레임·고요한 향로, 순백의 모래시계 등\n보상을 수령할 수 있습니다.",
+    ContentKR = "PC 클라이언트 또는\n모바일 클라이언트로 로그인 시\n프로필 프레임·고요한 향로, 순백의 모래시계 등\n보상을 수령할 수 있습니다.",
     ContentTC = "狩月人完成PC端及移動端登錄後，可獲得頭像框·靜謐香爐和純白沙漏等獎勵。",
     TextMapContent = "狩月人完成PC端及移动端登录后，可获得头像框·静谧香炉和纯白沙漏等奖励。",
     TextMapId = "Event_Des_107002"
@@ -22750,7 +22743,7 @@ When in [Flamboyance] state, Psyche gains [Eclosion].
   Guide_Message_AbyssUI_1 = {
     ContentEN = "<H>Immersive Theatre</> is now available. Challenge performers posing as enemies and hone your battle skills.",
     ContentJP = "<H>体験型劇場</>が解放されたよ。ここでは敵役を演じる俳優たちとの戦闘を通じて、戦闘スキルを磨くことができる。",
-    ContentKR = "<H>몰입형 연극</>이 열렸어. 여기서 적으로 분장한 배우들과 싸우며 전투 기술을 연마할 수 있어.",
+    ContentKR = "<H>몰입형 연극</>이 열렸습니다. 여기서 적으로 분장한 배우들과 싸우며 전투 기술을 연마할 수 있어.",
     ContentTC = "<H>沉浸式戲劇</>已開放。可以在此與扮作敵人的演員對戰，磨練戰鬥技巧。",
     TextMapContent = "<H>沉浸式戏剧</>已开放。可以在此与扮作敌人的演员对战，磨练战斗技巧。",
     TextMapId = "Guide_Message_AbyssUI_1"
@@ -22816,7 +22809,7 @@ Press to select an Act]],
   Guide_Message_AbyssUI_8 = {
     ContentEN = "Select <H>Go</> to start the challenge",
     ContentJP = "<H>GO</>をタップすると、その幕の挑戦が開始されます。",
-    ContentKR = "<H>이동</>을 클릭하여 해당 막의 도전을 시작하세요.",
+    ContentKR = "<H>이동하기</>를 클릭하여 해당 막의 도전을 시작하세요.",
     ContentTC = "點擊<H>前往</>，開啟本幕挑戰。",
     TextMapContent = "点击<H>前往</>，开启本幕挑战。",
     TextMapId = "Guide_Message_AbyssUI_8"
@@ -23808,7 +23801,7 @@ Press to select an Act]],
   HomePianoDes_1004005 = {
     ContentEN = "Congratulations — you've won the chance of running into your {性别:brother from another mother|sister from another mister}.",
     ContentJP = "月狩り人のひとりが選ばれ、思いがけず異母（父）{性别:兄弟|姉妹}と出会う。",
-    ContentKR = "행운의 월석 사냥꾼 1명을 랜덤으로 추첨해 피보다 진한 {性别:형제|자매}를 만나게 한다.",
+    ContentKR = "행운의 월석 사냥꾼 1명을 랜덤으로 추첨해 피보다 진한 {성별: 형제|자매}를 만나게 한다.",
     ContentTC = "隨機抽取一位幸運狩月人偶遇與自己異父異母的{性别:親兄弟|親姐妹}。",
     TextMapContent = "随机抽取一位幸运狩月人偶遇与自己异父异母的{性别：亲兄弟|亲姐妹}。",
     TextMapId = "HomePianoDes_1004005"
@@ -30098,7 +30091,7 @@ Smash: Further weakens target's Stance.]],
   MOD_NAME_2511 = {
     ContentEN = "Pierce",
     ContentJP = "突貫",
-    ContentKR = "꿰뚫기",
+    ContentKR = "꿰뚫어 보기",
     ContentTC = "刺透",
     TextMapContent = "刺透",
     TextMapId = "MOD_NAME_2511"
@@ -30450,7 +30443,7 @@ Smash: Further weakens target's Stance.]],
   MOD_NAME_3511 = {
     ContentEN = "Pierce",
     ContentJP = "突貫",
-    ContentKR = "꿰뚫기",
+    ContentKR = "꿰뚫어 보기",
     ContentTC = "刺透",
     TextMapContent = "刺透",
     TextMapId = "MOD_NAME_3511"
@@ -30730,7 +30723,7 @@ Smash: Further weakens target's Stance.]],
   MOD_Tag_Type_Name_Fafnir01 = {
     ContentEN = "Fafnir (Ranged)",
     ContentJP = "ファフニール（遠隔）",
-    ContentKR = "파프니르 (원거리)",
+    ContentKR = "파브니르 (원거리)",
     ContentTC = "邪龍（遠程）",
     TextMapContent = "邪龙（远程）",
     TextMapId = "MOD_Tag_Type_Name_Fafnir01"
@@ -30912,7 +30905,7 @@ Smash: Further weakens target's Stance.]],
     TextMapId = "MOD_Type_Name_Fafnir01"
   },
   MOD_Type_Name_FeatheredSnake01 = {
-    ContentEN = "Feathered Serpent's{空格}",
+    ContentEN = "Feathered Serpent's",
     ContentJP = "ケツァルの",
     ContentKR = "쿠쿨칸의{空格}",
     ContentTC = "羽蛇之",
@@ -31173,10 +31166,6 @@ Your verification code: {Code}]],
     TextMapId = "Mail_Content_10012"
   },
   Mail_Content_10013 = {
-    ContentEN = "A little secret for you: today is super important! We've been waiting for this day for so long.\nThe moment the clock struck twelve, we rushed out to get your gift! We haggled with merchants and shooed away those noisy Filthoids, all to bring this little surprise to you!\nBecause we wanted to be the very first to say...\nHappy Birthday!\nOh! And you're supposed to make a wish now, right? Hmm... May your new year be full of adventures we share, more fun than we can imagine, and stories of us written all across Atlasia!\nWait, oops! That's our wish! Let's start over, quick, make a wish in your heart! Whatever it is, someday, it will surely come true!\n\n— With love,\nLunos of Atlasia",
-    ContentJP = "月狩り人様へ\nないしょ話だよ。今日はね、すっごく大事な日なの！ずーっとこの日を待ってたんだ。\n午前0時の鐘が鳴った瞬間、プレゼントを買いにダッシュ！ 商人さんと値切り合戦して、あの騒がしい穢獣を追い払いながら、君へのサプライズを抱えて帰ってきたよ。\n\nだって、いちばん最初に言いたかったから——\nお誕生日おめでとう！\n\nあっ、今って願いごとするタイミングだよね？\nうーん……君の新しい一年が、わたしたちの冒険でいっぱいになって、想像以上に楽しくて、アトラシア大陸のあちこちに「わたしたち」の物語が刻まれますように——\n\n……って、あれ？ それ、わたしたちの願いじゃん！ やり直し！\nさあ、心の中で願って？ どんな願いでも、いつかきっと叶うから。\n\n—アトラシアのルーナ族より",
-    ContentKR = "비밀 하나를 알려 줄게. 오늘은 우리가 아주 오랫동안 기다려온 아주 중요한 날이야.\n그래서 12시의 종이 울리자마자, 우리는 네 선물을 준비하기 위해 곧바로 뛰어나갔어. 상인과 흥정하고, 귀찮은 필토이드를 쫓아버려야 했지만, 그래도 무사히 이걸 네게 가져왔어.\n왜냐하면 제일 아끼는 네게 가장 먼저 이 말을 해주고 싶었거든...\n생일 축하해!\n헤헤... 아, 맞다! 이럴 때는 소원을 빌어야지. 음... 올해도 모험을 계속하면서 더 많은 즐거운 것들을 함께 발견하고, 아트라시아 대륙에 우리만의 이야기를 가득 써내려갈 수 있기를!\n아, 아니지, 아니지! 이러면 우리의 소원이 돼 버리잖아. 다시, 얼른 네 마음 속의 소원을 빌어봐! 그게 무엇이든, 미래의 어느날 반드시 이뤄질 테니까!\n——아트라시아의 루나 일동",
-    ContentTC = "告訴你一個秘密哦，今天是個很重要的日子，我們等這一天可是等了好久好久呢。\n所以午夜的鐘聲剛一敲響，我們就迫不及待地跑出去給你準備禮物啦。又是跟商人討價還價，又是趕跑那些吵鬧的穢獸，總算是把這份心意帶到你的面前啦！\n因為我們想第一時間，為最最親愛的你說上一聲……\n生日快樂！\n嘿嘿……對了對了，這種時候應該許個願望吧，嗯……希望在你新的一歲里，能繼續我們的冒險，一起發現更多好玩的事物，在阿特拉西亞大陸寫下滿滿的、屬於我們的故事！\n誒不對不對，怎麼變成我們許願了！重來重來，快快在你的心裡許下一個願望吧，無論是什麼，它終將在未來的某天實現！\n\n——阿特拉西亞的皎皎們 敬上",
     TextMapContent = "生日邮件正文内容（待包装）",
     TextMapId = "Mail_Content_10013"
   },
@@ -31193,10 +31182,10 @@ Dear Phoxhunter,
   Mail_Content_10016 = {
     ContentEN = [[
 Dear Phoxhunter,
-Please find the Thought of Rebecca's memory attached.]],
-    ContentJP = "親愛なる月狩り人様：\n以下はレベッカの記憶を宿した想いの欠片です。添付よりお受け取りください。",
+ Please find the Thought of Rebecca's memory attached.]],
+    ContentJP = "親愛なる月狩り人様：\n 以下はレベッカの記憶を宿した想いの欠片です。添付よりお受け取りください。",
     ContentKR = "월석 사냥꾼님께,\n첨부 아이템에서 레베카의 기억이 담긴 아이디어 조각을 수령해 주세요.",
-    ContentTC = "親愛的狩月人： \n以下為承載著麗蓓卡記憶的思緒片段，請於附件中領取。",
+    ContentTC = "親愛的狩月人： _x000D_\n以下為承載著麗蓓卡記憶的思緒片段，請於附件中領取。",
     TextMapContent = "亲爱的狩月人： \n以下为承载着丽蓓卡记忆的思绪片段，请于附件中领取。",
     TextMapId = "Mail_Content_10016"
   },
@@ -31220,35 +31209,14 @@ Dear Phoxhunter,
     TextMapId = "Mail_Content_100301"
   },
   Mail_Content_10031 = {
-    ContentEN = [[
-Dear Phoxhunter,
-
-Your Monthly Pass will expire at <H>{Time}</>, please claim your rewards in time to make sure you don't miss them out.]],
-    ContentJP = "親愛なる月狩り人様：\n月間オーダーは<H>{Time}</>後に期限切れになります。報酬の受け取り忘れにご注意ください。",
-    ContentKR = "월석 사냥꾼님께,\n월간 주문이 <H>{Time}</>에 만료됩니다. 만료 시간에 유의하여 보상 수령을 놓치지 마세요.",
-    ContentTC = "親愛的狩月人：\n月度訂單將於<H>{Time}</>結束，請留意結束時間，勿錯過獎勵領取。",
     TextMapContent = "月卡将于<H>{Time}</>到期（待包装）",
     TextMapId = "Mail_Content_10031"
   },
   Mail_Content_10032 = {
-    ContentEN = [[
-Dear Phoxhunter,
-
-This period's Bard's Tome will expire at <H>{Time}</>, please claim your rewards in time to make sure you don't miss them out.]],
-    ContentJP = "親愛なる月狩り人様：\n今期の詩歌集は<H>{Time}</>後に期限切れになります。報酬の受け取り忘れにご注意ください。",
-    ContentKR = "월석 사냥꾼님께,\n음유 시집이 <H>{Time}</>에 만료됩니다. 만료 시간에 유의하여 보상 수령을 놓치지 마세요.",
-    ContentTC = "親愛的狩月人：\n本期吟遊詩集將於<H>{Time}</>結束，請留意結束時間，勿錯過獎勵領取。",
     TextMapContent = "亲爱的狩月人：\n    本期吟游诗集将于<H>{Time}</>结束，请留意结束时间，勿错过奖励领取。",
     TextMapId = "Mail_Content_10032"
   },
   Mail_Content_10033 = {
-    ContentEN = [[
-Dear Phoxhunter,
-
-The [{EventName}] event will conclude at <H>{Time}</> (server time). Please claim your rewards in time to make sure you don't miss them out.]],
-    ContentJP = "親愛なる月狩り人様：\nイベント 「{EventName}」は <H>{Time}</>（サーバー時間）後に終了します。報酬の受け取り忘れにご注意ください。",
-    ContentKR = "월석 사냥꾼님께,\n「{EventName}」 이벤트가 <H>{Time}</>(서버 시간)에 만료됩니다. 만료 시간에 유의하여 보상 수령을 놓치지 마세요.",
-    ContentTC = "親愛的狩月人：\n「{EventName}」活動將於 <H>{Time}</>（伺服器時間）結束。請留意結束時間，勿錯過獎勵領取。",
     TextMapContent = "亲爱的狩月人：\n    「{EventName}」活动将于 <H>{Time}</>（服务器时间）结束。请留意结束时间，勿错过奖励领取。",
     TextMapId = "Mail_Content_10033"
   },
@@ -31256,7 +31224,7 @@ The [{EventName}] event will conclude at <H>{Time}</> (server time). Please clai
     ContentEN = "Dear Phoxhunter, The latest volume of the Bard's Tome is now complete. All unclaimed rewards have been sent to your mailbox. Don't forget to get them!",
     ContentJP = "親愛なる月狩り人様、今期の詩歌集の配布は終了しました。未受領の報酬はメールで配布いたしました。ご確認ください。",
     ContentKR = "월석 사냥꾼님, 이번 음유 시집 장정이 종료되었습니다. 모든 미수령한 보상은 우편을 통해 지급되었으니, 확인해 주세요",
-    ContentTC = "親愛的狩月人，本期吟遊詩集裝訂已經結束。所有尚未領取的獎勵已通過信件發放，請查收。",
+    ContentTC = "親愛的狩月人，本期吟遊詩集裝訂已經結束。所有尚未領取的獎勵已通過郵件發放，請查收。",
     TextMapContent = "亲爱的狩月人，本期吟游诗集装订已经结束。所有尚未领取的奖励已通过邮件发放，请查收。",
     TextMapId = "Mail_Content_100401"
   },
@@ -31282,10 +31250,10 @@ Dear Phoxhunter,
   Mail_Content_10056 = {
     ContentEN = [[
 Dear Phoxhunter,
-Thank you for participating the Mini Program events. Please claim your rewards from your mailbox.]],
+  Thank you for participating the Mini Program events. Please claim your rewards from your mailbox.]],
     ContentJP = "親愛なる月狩り人様、アプレットイベントに参加していただき、誠にありがとうございます。用意した報酬が全てメールで配布されました。どうぞご確認ください。",
     ContentKR = "월석 사냥꾼님, 미니 프로그램 이벤트에 참여해 주셔서 감사드립니다. 보상이 우편으로 지급되었으니 확인해 주세요.",
-    ContentTC = "親愛的狩月人 感謝您在小程序參與活動，獎勵已通過信件發放，請注意查收。",
+    ContentTC = "親愛的狩月人 感謝您在小程序參與活動，獎勵已通過郵件發放，請注意查收。",
     TextMapContent = "亲爱的狩月人 感谢您在小程序参与活动，奖励已通过邮件发放，请注意查收。",
     TextMapId = "Mail_Content_10056"
   },
@@ -31311,22 +31279,22 @@ Dear Phoxhunter,
   Mail_Content_101001 = {
     ContentEN = [[
 Dear Phoxhunter, 
-
-Your unclaimed rewards from the %s event have been sent to your mailbox. Don't forget to claim them!]],
-    ContentJP = "親愛なる月狩り人様、\n「%s」の未受け取りの報酬が全てメールで配布されました。ご確認ください。",
+ 
+ Your unclaimed rewards from the %s event have been sent to your mailbox. Don't forget to claim them!]],
+    ContentJP = "親愛なる月狩り人様、\n 「%s」の未受け取りの報酬が全てメールで配布されました。ご確認ください。",
     ContentKR = "월석 사냥꾼님께,\n'%s' 이벤트에서 미수령한 보상이 있습니다. 우편을 통해 지급되었으니, 확인해 주세요.",
-    ContentTC = "親愛的狩月人：\n您在「%s」活動中有未領取的獎勵內容，現已通過本信件發放，請注意查收。",
+    ContentTC = "親愛的狩月人：\n  您在「%s」活動中有未領取的獎勵內容，現已通過本郵件發放，請注意查收。",
     TextMapContent = "亲爱的狩月人：\n  您在“%s”活动中有未领取的奖励内容，现已通过本邮件发放，请注意查收。",
     TextMapId = "Mail_Content_101001"
   },
   Mail_Content_102001 = {
     ContentEN = [[
 Dear Phoxhunter, 
-
-Your unclaimed rewards from the [Beginner's Guide for Phoxhunters] event have been sent to your mailbox. Don't forget to claim them!]],
-    ContentJP = "親愛なる月狩り人様、\n「月狩り人の初心者ガイド」の未受領の報酬が全てメールで配布されました。ご確認ください。",
+ 
+ Your unclaimed rewards from the [Beginner's Guide for Phoxhunters] event have been sent to your mailbox. Don't forget to claim them!]],
+    ContentJP = "親愛なる月狩り人様、\n 「月狩り人の初心者ガイド」の未受領の報酬が全てメールで配布されました。ご確認ください。",
     ContentKR = "월석 사냥꾼님께,\n'월석 사냥꾼 입문 가이드' 이벤트에서 미수령한 보상이 있습니다. 우편을 통해 지급되었으니, 확인해 주세요.",
-    ContentTC = "親愛的狩月人：\n您在「狩月人入門指南」活動中有未領取的獎勵內容，現已通過本信件發放，請注意查收。",
+    ContentTC = "親愛的狩月人：\n  您在「狩月人入門指南」活動中有未領取的獎勵內容，現已通過本郵件發放，請注意查收。",
     TextMapContent = "亲爱的狩月人：\n  您在“狩月人入门指南”活动中有未领取的奖励内容，现已通过本邮件发放，请注意查收。",
     TextMapId = "Mail_Content_102001"
   },
@@ -31457,10 +31425,6 @@ Your unclaimed rewards from the [Beginner's Guide for Phoxhunters] event have be
     TextMapId = "Mail_Title_10012"
   },
   Mail_Title_10013 = {
-    ContentEN = "A Special Day",
-    ContentJP = "大事な日",
-    ContentKR = "특별한 오늘",
-    ContentTC = "重要的節日",
     TextMapContent = "生日邮件（待包装）",
     TextMapId = "Mail_Title_10013"
   },
@@ -31468,7 +31432,7 @@ Your unclaimed rewards from the [Beginner's Guide for Phoxhunters] event have be
     ContentEN = "Login Rewards",
     ContentJP = "ログイン報酬メール",
     ContentKR = "출석 보상 우편",
-    ContentTC = "簽到獎勵信件",
+    ContentTC = "簽到獎勵郵件",
     TextMapContent = "签到奖励邮件",
     TextMapId = "Mail_Title_10014"
   },
@@ -31476,7 +31440,7 @@ Your unclaimed rewards from the [Beginner's Guide for Phoxhunters] event have be
     ContentEN = "Thought Reward Mail",
     ContentJP = "想いの欠片報酬メール",
     ContentKR = "아이디어 조각 보상 우편",
-    ContentTC = "思緒片段獎勵信件",
+    ContentTC = "思緒片段獎勵郵件",
     TextMapContent = "思绪片段奖励邮件",
     TextMapId = "Mail_Title_10016"
   },
@@ -31497,18 +31461,10 @@ Your unclaimed rewards from the [Beginner's Guide for Phoxhunters] event have be
     TextMapId = "Mail_Title_100301"
   },
   Mail_Title_10031 = {
-    ContentEN = "Monthly Pass Expiry Notice",
-    ContentJP = "月間オーダー期限切れの通知",
-    ContentKR = "월간 주문 만료 알림",
-    ContentTC = "月度訂單到期提醒",
     TextMapContent = "月卡到期提醒（待包装）",
     TextMapId = "Mail_Title_10031"
   },
   Mail_Title_10032 = {
-    ContentEN = "Bard's Tome Expiry Notice",
-    ContentJP = "詩歌集期限切れの通知",
-    ContentKR = "음유 시집 만료 알림",
-    ContentTC = "吟遊詩集到期提醒",
     TextMapContent = "吟游诗集到期提醒",
     TextMapId = "Mail_Title_10032"
   },
@@ -32333,26 +32289,14 @@ Each weapon can be assigned to only 1 Combat Partner.]],
     TextMapId = "Message_Guide_Dispatch_09_Pad"
   },
   Message_Guide_Dispatch_10 = {
-    ContentEN = "Characters with the recommended Trait will significantly increase Expedition Success Rate.",
-    ContentJP = "おすすめ特性を持つキャラで派遣すると、派遣の成功率が大幅アップします。",
-    ContentKR = "추천 특성에 맞는 캐릭터를 선택하면 성공률을 크게 높일 수 있습니다.",
-    ContentTC = "選擇推薦特質的角色可大大提升派遣成功率。",
     TextMapContent = "选择推荐特质的角色可大大提升派遣成功率。",
     TextMapId = "Message_Guide_Dispatch_10"
   },
   Message_Guide_Dispatch_11 = {
-    ContentEN = "Select here to dispatch companions.",
-    ContentJP = "ここをタップして派遣を始めましょう。",
-    ContentKR = "여기를 눌러 파견을 시작하세요.",
-    ContentTC = "點擊此處開始派遣。",
     TextMapContent = "点击此处开始派遣。",
     TextMapId = "Message_Guide_Dispatch_11"
   },
   Message_Guide_Dispatch_12 = {
-    ContentEN = "Companions can only be dispatched to Dynamic Quests you have already completed once.",
-    ContentJP = "突発イベントを自分で一回完了しないと、代理人に頼めませんので、ご了承ください。",
-    ContentKR = "참고로, 이미 완료한 돌발 사건만 대리인을 파견할 수 있어. 새로운 돌발 사건은 직접 완료한 후에만 대리인을 파견할 수 있다는 점 잊지 마!",
-    ContentTC = "需要注意，伙伴只能代理已經完成過的突發事件。新的突發事件要我們親自完成後，才可以派遣代理人哦。",
     TextMapContent = "需要注意，伙伴只能代理已经完成过的突发事件。新的突发事件要我们亲自完成后，才可以派遣代理人哦。",
     TextMapId = "Message_Guide_Dispatch_12"
   },
@@ -32479,7 +32423,7 @@ Each weapon can be assigned to only 1 Combat Partner.]],
   Message_Guide_DungeonSec_8 = {
     ContentEN = "Here you can view the possible drops for the Covert Commission. Upon completion, three of the six rewards will be randomly presented. Choose one to claim.",
     ContentJP = "ここで、その依頼密書を完了した時に得られる可能性のある報酬内容を確認できます。任務を完了すると、その6種の中からランダムで3種が表示され、1つを選んで受け取ることができます。",
-    ContentKR = "해당 의뢰 편지 완료 시 획득 가능한 보상입니다. 의뢰 편지 퀘스트를 완료할 때마다 6종 중 랜덤 3종이 퀘스트 보상으로 제공되며, 그중 1개를 선택할 수 있습니다.",
+    ContentKR = "이곳에서는 해당 의뢰 편지를 완료 시 획득 가능한 보상을 확인할 수 있습니다. 의뢰 편지 퀘스트를 완료할 때마다 6종의 보상 중 랜덤으로 3종이 퀘스트 보상으로 제공되며, 그중 1개를 선택해 수령할 수 있습니다.",
     ContentTC = "此處可查看完成該委托密函後可能獲得的獎勵內容。每次完成委托密函任務後，將從6種報酬隨機3種作為任務獎勵，可從其中選擇1項領取。",
     TextMapContent = "此处可查看完成该委托密函后可能获得的奖励内容。每次完成委托密函任务后，将从6种报酬随机3种作为任务奖励，可从其中选择1项领取。",
     TextMapId = "Message_Guide_DungeonSec_8"
@@ -33192,7 +33136,7 @@ Each weapon can be assigned to only 1 Combat Partner.]],
     ContentEN = "You've received a new email.",
     ContentJP = "新しいメールが来たよ。",
     ContentKR = "새로운 우편이 도착했어!",
-    ContentTC = "收到了一封新信件。",
+    ContentTC = "收到了一封新郵件。",
     TextMapContent = "收到了一封新邮件。",
     TextMapId = "Message_Guide_Mail_1"
   },
@@ -33272,7 +33216,7 @@ Each weapon can be assigned to only 1 Combat Partner.]],
     ContentEN = "Open the Mail screen",
     ContentJP = "メール画面を開く",
     ContentKR = "우편 화면을 여세요",
-    ContentTC = "打開信件界面",
+    ContentTC = "打開郵件界面",
     TextMapContent = "打开邮件界面",
     TextMapId = "Message_Guide_Mail_3"
   },
@@ -33280,7 +33224,7 @@ Each weapon can be assigned to only 1 Combat Partner.]],
     ContentEN = "Select an email",
     ContentJP = "メールをタップ",
     ContentKR = "우편을 클릭하세요",
-    ContentTC = "點擊一封信件",
+    ContentTC = "點擊一封郵件",
     TextMapContent = "点击一封邮件",
     TextMapId = "Message_Guide_Mail_4"
   },
@@ -33320,7 +33264,7 @@ Each weapon can be assigned to only 1 Combat Partner.]],
     ContentEN = "Click anywhere to return to the Mailbox screen",
     ContentJP = "空白部分をタップしてメール画面に戻る",
     ContentKR = "빈 곳을 클릭하여 우편 화면으로 돌아가세요",
-    ContentTC = "點擊空白處返回信件界面",
+    ContentTC = "點擊空白處返回郵件界面",
     TextMapContent = "点击空白处返回邮件界面",
     TextMapId = "Message_Guide_Mail_9"
   },
@@ -33328,7 +33272,7 @@ Each weapon can be assigned to only 1 Combat Partner.]],
     ContentEN = "Press to return to the Mailbox screen",
     ContentJP = "ボタンを押してメール画面に戻る",
     ContentKR = "버튼을 눌러 우편 화면으로 돌아가세요",
-    ContentTC = "按下返回信件界面",
+    ContentTC = "按下返回郵件界面",
     TextMapContent = "按下返回邮件界面",
     TextMapId = "Message_Guide_Mail_9_Pad"
   },
@@ -36375,7 +36319,7 @@ Each weapon can be assigned to only 1 Combat Partner.]],
   ModArchive_Name_Range_3030 = {
     ContentEN = "Fafnir Ⅰ",
     ContentJP = "ファフニール I",
-    ContentKR = "파프니르 Ⅰ",
+    ContentKR = "파브니르 Ⅰ",
     ContentTC = "邪龍 Ⅰ",
     TextMapContent = "邪龙 Ⅰ",
     TextMapId = "ModArchive_Name_Range_3030"
@@ -36383,47 +36327,47 @@ Each weapon can be assigned to only 1 Combat Partner.]],
   ModArchive_Name_Range_3040 = {
     ContentEN = "Fafnir Ⅱ",
     ContentJP = "ファフニール II",
-    ContentKR = "파프니르 Ⅱ",
+    ContentKR = "파브니르 Ⅱ",
     ContentTC = "邪龍 Ⅱ",
     TextMapContent = "邪龙 Ⅱ",
     TextMapId = "ModArchive_Name_Range_3040"
   },
   ModArchive_Name_Range_3050 = {
-    ContentEN = "Lilith Ⅳ",
-    ContentJP = "リリス IV",
-    ContentKR = "릴리스 Ⅳ",
-    ContentTC = "夜魔 Ⅳ",
+    ContentEN = "Lilith Ⅲ",
+    ContentJP = "リリス III",
+    ContentKR = "릴리스 Ⅲ",
+    ContentTC = "夜魔 Ⅲ",
     TextMapContent = "夜魔 Ⅳ",
     TextMapId = "ModArchive_Name_Range_3050"
   },
   ModArchive_Name_Range_3060 = {
-    ContentEN = "Lilith Ⅴ",
-    ContentJP = "リリス V",
-    ContentKR = "릴리스 Ⅴ",
-    ContentTC = "夜魔 Ⅴ",
+    ContentEN = "Lilith Ⅳ",
+    ContentJP = "リリス IV",
+    ContentKR = "릴리스 Ⅳ",
+    ContentTC = "夜魔 Ⅳ",
     TextMapContent = "夜魔 Ⅴ",
     TextMapId = "ModArchive_Name_Range_3060"
   },
   ModArchive_Name_Range_3070 = {
-    ContentEN = "Fafnir Ⅲ",
-    ContentJP = "ファフニール III",
-    ContentKR = "파프니르 Ⅲ",
-    ContentTC = "邪龍 Ⅲ",
+    ContentEN = "Lilith Ⅴ",
+    ContentJP = "リリス V",
+    ContentKR = "릴리스 Ⅴ",
+    ContentTC = "夜魔 Ⅴ",
     TextMapContent = "邪龙 Ⅲ",
     TextMapId = "ModArchive_Name_Range_3070"
   },
   ModArchive_Name_Range_3080 = {
-    ContentEN = "Lilith Ⅵ",
-    ContentJP = "リリス VI",
-    ContentKR = "릴리스 Ⅵ",
-    ContentTC = "夜魔 Ⅵ",
+    ContentEN = "Fafnir Ⅲ",
+    ContentJP = "ファフニール III",
+    ContentKR = "파브니르 Ⅲ",
+    ContentTC = "邪龍 Ⅲ",
     TextMapContent = "夜魔 Ⅵ",
     TextMapId = "ModArchive_Name_Range_3080"
   },
   ModArchive_Name_Range_3090 = {
     ContentEN = "Fafnir Ⅳ",
     ContentJP = "ファフニール IV",
-    ContentKR = "파프니르 Ⅳ",
+    ContentKR = "파브니르 Ⅳ",
     ContentTC = "邪龍 Ⅳ",
     TextMapContent = "邪龙 Ⅳ",
     TextMapId = "ModArchive_Name_Range_3090"
@@ -36431,7 +36375,7 @@ Each weapon can be assigned to only 1 Combat Partner.]],
   ModArchive_Name_Range_3100 = {
     ContentEN = "Fafnir Ⅴ",
     ContentJP = "ファフニール V",
-    ContentKR = "파프니르 Ⅴ",
+    ContentKR = "파브니르 Ⅴ",
     ContentTC = "邪龍 Ⅴ",
     TextMapContent = "邪龙 Ⅴ",
     TextMapId = "ModArchive_Name_Range_3100"
@@ -36439,16 +36383,16 @@ Each weapon can be assigned to only 1 Combat Partner.]],
   ModArchive_Name_Range_3110 = {
     ContentEN = "Fafnir Ⅵ",
     ContentJP = "ファフニール VI",
-    ContentKR = "파프니르 Ⅵ",
+    ContentKR = "파브니르 Ⅵ",
     ContentTC = "邪龍 Ⅵ",
     TextMapContent = "邪龙 Ⅵ",
     TextMapId = "ModArchive_Name_Range_3110"
   },
   ModArchive_Name_Range_3120 = {
-    ContentEN = "Fafnir Ⅶ",
-    ContentJP = "ファフニール VII",
-    ContentKR = "파프니르 Ⅶ",
-    ContentTC = "邪龍 Ⅶ",
+    ContentEN = "Fafnir Ⅷ",
+    ContentJP = "ファフニール VIII",
+    ContentKR = "파브니르 Ⅷ",
+    ContentTC = "邪龍 Ⅷ",
     TextMapContent = "邪龙 Ⅶ",
     TextMapId = "ModArchive_Name_Range_3120"
   },
@@ -44999,7 +44943,7 @@ Lumino ATK +#1, Max HP +#2]],
   PET_426_SKILL = {
     ContentEN = "Deals Lumino DMG equal to #1 of the main character's ATK to nearby enemies, and grants +#2 Lumino bonus DMG to self and allies for #3s.",
     ContentJP = "周囲の敵にメインキャラの攻撃力#1に相当する光属性ダメージを与える。また、#3秒間自身と近くにいる味方に光属性追加ダメージの効果を#2付与する。",
-    ContentKR = "주변의 적에게 메인 캐릭터 공격력 #1의 빛 속성 대미지를 입히고, 자신과 팀원에게 #2의 빛 속성 추가 대미지를 부여한다. 지속 시간 #3초.",
+    ContentKR = "주변의 적에게 메인 캐릭터 공격력 #1의 빛 속성 대미지를 입히고, 자신과 팀원에게 #2의 빛 속성 추가 대미지를 입힌다. 지속 시간 #3초.",
     ContentTC = "對周圍的敵人造成主角色攻擊#1的光屬性傷害，並為自身和隊友附加#2光屬性追加傷害，持續#3秒。",
     TextMapContent = "对周围的敌人造成主角色攻击#1的光属性伤害，并为自身和队友附加#2光属性追加伤害，持续#3秒。",
     TextMapId = "PET_426_SKILL"
@@ -53549,7 +53493,7 @@ You can earn EXP by:
   QuestName_10020305 = {
     ContentEN = "Venture deep into Glevum Pit and search for Crystallo of Stella",
     ContentJP = "グルビューム廃坑を探索し、群星のジェムを探す",
-    ContentKR = "글로스터 폐광 깊숙히 들어가 반짝이는 수정 찾기",
+    ContentKR = "'히프노스의 집'으로 이동",
     ContentTC = "深入格雷姆廢礦，尋找群星綺晶",
     TextMapContent = "深入格雷姆废矿，寻找群星绮晶",
     TextMapId = "QuestName_10020305"
@@ -53661,7 +53605,7 @@ You can earn EXP by:
   QuestName_10020311 = {
     ContentEN = "Venture deep into Glevum Pit and search for Crystallo of Stella",
     ContentJP = "グルビューム廃坑を探索し、群星のジェムを探す",
-    ContentKR = "글로스터 폐광 깊숙히 들어가 반짝이는 수정 찾기",
+    ContentKR = "다른 투숙객에게서 단서 알아보기",
     ContentTC = "深入格雷姆廢礦，尋找群星綺晶",
     TextMapContent = "深入格雷姆废矿，寻找群星绮晶",
     TextMapId = "QuestName_10020311"
@@ -53677,7 +53621,7 @@ You can earn EXP by:
   QuestName_10020313 = {
     ContentEN = "Defeat the giant Filthoid dwelling in the depths of the pit",
     ContentJP = "廃坑の底に潜む巨大な穢獣を撃破する",
-    ContentKR = "폐광 깊숙히 도사리고 있는 거대 필토이드 처치하기",
+    ContentKR = "아웃사이더에게 조사 결과 보고",
     ContentTC = "擊敗盤踞在廢礦深處的巨型穢獸",
     TextMapContent = "击败盘踞在废矿深处的巨型秽兽",
     TextMapId = "QuestName_10020313"
@@ -53685,7 +53629,7 @@ You can earn EXP by:
   QuestName_10020314 = {
     ContentEN = "Collect the Crystallo of Stella",
     ContentJP = "群星のジェムを拾う",
-    ContentKR = "반짝이는 수정 줍기",
+    ContentKR = "아웃사이더에게 조사 결과 보고",
     ContentTC = "拾取群星綺晶",
     TextMapContent = "拾取群星绮晶",
     TextMapId = "QuestName_10020314"
@@ -53781,8 +53725,8 @@ You can earn EXP by:
   QuestName_10020410 = {
     ContentEN = "Wait for Henrik in the lobby",
     ContentJP = "ロビーでヘンリックを待つ",
-    ContentKR = "로비로 돌아가 헨릭 기다리기",
-    ContentTC = "返回大廳等待恩里克",
+    ContentKR = "아웃사이더 집 근처로 가서 그와 만나기",
+    ContentTC = "返回大廳等待恩裏克",
     TextMapContent = "返回大厅等待恩里克",
     TextMapId = "QuestName_10020410"
   },
@@ -53797,7 +53741,7 @@ You can earn EXP by:
   QuestName_10020412 = {
     ContentEN = "Inform Outsider of your findings",
     ContentJP = "アウトサイダーに調査結果を伝える",
-    ContentKR = "아웃사이더에게 조사 결과 보고하기",
+    ContentKR = "프시케의 안전 확인",
     ContentTC = "向奧特賽德報告調查結果",
     TextMapContent = "向奥特赛德报告调查结果",
     TextMapId = "QuestName_10020412"
@@ -53877,7 +53821,7 @@ You can earn EXP by:
   QuestName_10020601 = {
     ContentEN = "Meet Snow near the Hypnos' House",
     ContentJP = "「ヒュプノスの家」でスノウと合流する",
-    ContentKR = "'히프노스의 집' 근처로 가서 스노우와 만나기",
+    ContentKR = "???",
     ContentTC = "前往「修普諾斯之家」附近與白會合",
     TextMapContent = "前往“修普诺斯之家”附近与白会合",
     TextMapId = "QuestName_10020601"
@@ -55169,7 +55113,7 @@ You can earn EXP by:
   Quest_Tips_LeaveHintTrigger = {
     ContentEN = "Exiting the quest area",
     ContentJP = "まもなくクエストエリアから離脱します。",
-    ContentKR = "퀘스트 지역을 떠납니다",
+    ContentKR = "퀘스트 지역 떠나기",
     ContentTC = "即將離開任務區域",
     TextMapContent = "即将离开任务区域",
     TextMapId = "Quest_Tips_LeaveHintTrigger"
@@ -57158,7 +57102,7 @@ All glory to our Emperor.]],
   READ_TEXT_2000057 = {
     ContentEN = "Ⅰ. Overture\n\nHast thou ever heard of such a revelry,\n\nWhere profane soldiers and demon's progeny joined hand in hand?\n\nWhere the southerling and the nordling raised a song as one,\n\nTo hymn the silver peace ‘twixt Sola and Charon!\n\nTears of wax did drip from Sola's candlelight,\n\nUpon Charon's face, naught but carefree delight.\n\nThey twisted their waists, they swung limb and limb,\n\nWith steps of dance, their joy did brim.\n\nThrough joy they reached madness, a fevered state,\n\nThrough madness, forgot sorrow and fate.\n\nThrough sorrow, bestowed upon the past its weight,\n\nAnd at the end of past — a name to celebrate!\n\nSoranus Galea!\n\nHe who took an ancient name, yet defied the false god's claim,\n\nHe who inherited an armored surname, to aid the Emperor's frame.\n\nThe younger brother of His Majesty Dis Galea, departed from our world too soon,\n\nSoranus Galea!",
     ContentJP = "Ⅰ. 序曲\n聞け、この宴を！\n涜神の兵　悪魔の裔\n手に手を取り　輪を組む\n南の来客　北の住民\n声を一つに上げよ\nソラとカロン　平和を讃えよ\n\n万歳！シルバーピースに！\n\nソラの手に　蝋燭の涙\nカロンの頬に　歓喜の笑み\n腰をひねれ　腕を振れ\n一歩ごとに　歓びあふれよ\n\n歓びは狂気へ\n狂気は憂いを忘れさせ\n憂いは過去に重みを与え\nその果てに――讃え、ただ一つの名を\n\nオール・ハイル・ソラヌス・ゲレア！\n\nいにしえの名を掲げ　偽りの神の宣りを退けし者\n甲冑めく姓を継ぎ　帝皇の御身を支えし者\nディズ陛下の弟君　あまりにも早く世を去れり――\n\nオール・ハイル・ソラヌス・ゲレア！\n\n万歳！その名を掲げよ！",
-    ContentKR = "1. 서곡\n\n이런 광란의 축제를 들어본 적 있는가\n\n신을 모독하는 군사가 악마의 후예와 손잡고\n\n남쪽의 손님과 극북의 주민이 함께 노래하여\n\n솔라와 카론의 은빛 평화를 찬미하노라\n\n솔라는 등불을 든 채 눈물 흘리고\n\n카론은 걱정 없이 기쁘게 웃네\n\n허리를 돌려라, 손발을 흔들자\n\n춤추며 즐거움에 젖어라\n\n즐거움에 열광하라\n\n열광으로 슬픔을 지우고\n\n슬픔을 과거에 선물하라\n\n과거의 끝, 그곳에서 칭송할 성과 이름\n\n솔라누스 갈레아\n\n오랜 이름을 얻되 신에게 반기를 들어라\n\n갑주의 이름을 계승하여 제왕을 보필하라\n\n디스 갈레아 폐하의 너무 일찍 세상을 떠난 동생\n\n솔라누스 갈레아!",
+    ContentKR = "Ⅰ. 서곡\n\n이런 광란의 축제를 들어본 적 있는가\n\n신을 모독하는 군사가 악마의 후예와 손잡고\n\n남쪽의 손님과 극북의 주민이 함께 노래하여\n\n솔라와 카론의 은빛 평화를 찬미하노라\n\n솔라는 등불을 든 채 눈물 흘리고\n\n카론은 걱정 없이 기쁘게 웃네\n\n허리를 돌려라, 손발을 흔들자\n\n춤추며 즐거움에 젖어라\n\n즐거움에 열광하라\n\n열광으로 슬픔을 지우고\n\n슬픔을 과거에 선물하라\n\n과거의 끝, 그곳에서 칭송할 성과 이름\n\n솔라누스 갈레아\n\n오랜 이름을 얻되 신에게 반기를 들어라\n\n갑주의 이름을 계승하여 제왕을 보필하라\n\n디스 갈레아 폐하의 너무 일찍 세상을 떠난 동생\n\n솔라누스 갈레아!",
     ContentTC = "一、序曲\n\n你是否曾聽聞這樣一場狂歡\n\n瀆神軍士與惡魔後嗣拉起手\n\n南方來客與極北住民唱起歌\n\n歌頌索拉與卡戎的銀色和平\n\n索拉手中燭火垂淚\n\n卡戎面上歡笑無憂\n\n扭轉腰肢，擺動手腳\n\n以舞步踏出歡樂\n\n以歡樂抵達瘋狂\n\n以瘋狂忘記悲痛\n\n以悲痛贈予過往\n\n在過往的盡頭 是那需要稱頌的名與姓\n\n索拉努斯·蓋雷亞\n\n獲得古老的名字但反抗偽神\n\n繼承盔甲的姓氏而輔弼帝皇\n\n迪斯·蓋雷亞陛下那過早離開了人世的皇弟\n\n索拉努斯·蓋雷亞！",
     TextMapContent = "一、序曲\n\n你是否曾听闻这样一场狂欢\n\n渎神军士与恶魔后嗣拉起手\n\n南方来客与极北住民唱起歌\n\n歌颂索拉与卡戎的银色和平\n\n索拉手中烛火垂泪\n\n卡戎面上欢笑无忧\n\n扭转腰肢，摆动手脚\n\n以舞步踏出欢乐\n\n以欢乐抵达疯狂\n\n以疯狂忘记悲痛\n\n以悲痛赠予过往\n\n在过往的尽头 是那需要称颂的名与姓\n\n索拉努斯·盖雷亚\n\n获得古老的名字但反抗伪神\n\n继承盔甲的姓氏而辅弼帝皇\n\n迪斯·盖雷亚陛下那过早离开了人世的皇弟\n\n索拉努斯·盖雷亚！\"",
     TextMapId = "READ_TEXT_2000057"
@@ -59546,7 +59490,7 @@ The companionship might be fleeting, yet the friendship endures. Perhaps the nex
     ContentEN = "A single sheet of music, recording heroic epics passed among minstrels, filled with many handwritten annotations and modifications. To fully express their views, poets didn't hesitate to use tiny writing to exchange and debate in every blank space on the paper, where numerous perspectives are established and then overturned, making reading the entire piece a thrilling experience.",
     ContentJP = "楽譜。吟遊詩人たちの間で語り継がれる英雄譚が記されたもので、手書きの注釈や修正が無数に書き込まれている。自分の意見を主張するため、詩人たちは紙の隙間にアリのように小さな文字で議論を交わしている。その狭い空間に新たな観点が次々と生まれ、また反論が浮かび上がる様子が見て取れる。すべて読み終える頃には、その衝撃的な内容に心が揺さぶられることだろう。",
     ContentKR = "한 장의 악보. 음유시인들 사이에서 전해지는 영웅 서사시가 기록되어 있다. 손으로 쓴 주석과 수정이 많이 보존되어 있으며, 시인들은 자신의 의견을 충분히 말하기 위해 종이의 모든 여백에 깨알 같은 글씨로 의견을 주고받았다. 손바닥만한 공간에서 여러 가지 견해가 확립되고 뒤집히는 것을 볼 수 있으며, 전부 읽어본다면 충격적인 경험을 할 수 있을 것이다.",
-    ContentTC = "單頁樂譜，記錄著流傳於吟遊詩人間的英雄史詩，保存了很多手寫的批註與修改，為了完整陳述自己的意見，詩人們不惜用蠅頭小字在紙張的每一個空隙裡交流辯論，方寸之間可以看見若干種觀點被建立又被推翻，讀完全篇幾乎成了一種驚心動魄的體驗。",
+    ContentTC = "單頁樂譜，記錄著流傳於吟游詩人間的英雄史詩，保存了很多手寫的批註與修改，為了完整陳述自己的意見，詩人們不惜用蠅頭小字在紙張的每一個空隙裡交流辯論，方寸之間可以看見若干種觀點被建立又被推翻，讀完全篇幾乎成了一種驚心動魄的體驗。",
     TextMapContent = "单页乐谱，记录着流传于吟游诗人间的英雄史诗，保存了很多手写的批注与修改，为了完整陈述自己的意见，诗人们不惜用蝇头小字在纸张的每一个空隙里交流辩论，方寸之间可以看见若干种观点被建立又被推翻，读完全篇几乎成了一种惊心动魄的体验。",
     TextMapId = "RESOURCE_DESC_2011"
   },
@@ -60558,7 +60502,7 @@ IT'S TOXIC! HIGHLY TOXIC! EXTREMELY TOXIC!]],
     ContentEN = "A fish bearing a striking resemblance to Phoxene, with an uncanny texture that feels almost indistinguishable from the real thing. No two look quite the same — but they all share one unfortunate trait: flesh as tough as stone. It's rarely eaten except in times of true desperation.",
     ContentJP = "まるで月ノ石のような質感を持つ奇妙な魚。個体ごとに微妙な違いがあり、見た目は美しいが、食べるときはまるで石を噛んでいるよう。非常時以外に口にされることは少ない。",
     ContentKR = "월석처럼 생긴 어류, 질감이 신기하게도 진짜 월석과 똑같다. 개체마다 미묘하게 다르긴 하나 식감도 돌과 비슷해 정말 굶주린 게 아니라면 이걸 먹는 사람은 거의 없다.",
-    ContentTC = "一種狀如月石的魚類，質感奇異，摸起來和真的月石一般無二，每個個體之間都有著微妙的差異，但口感也和石頭十分接近，除了實在吃不上飯的時候，幾乎沒有人會以它為食。",
+    ContentTC = "一种状如月石的鱼类，质感奇异，摸起来和真的月石一般无二，每个个体之间都有着微妙的差异，但口感也和石头十分接近，除了实在吃不上饭的时候，几乎没有人会以它为食。",
     TextMapContent = "一种状如月石的鱼类，质感奇异，摸起来和真的月石一般无二，每个个体之间都有着微妙的差异，但口感也和石头十分接近，除了实在吃不上饭的时候，几乎没有人会以它为食。",
     TextMapId = "RESOURCE_DESC_5023010"
   },
@@ -61959,10 +61903,10 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
     TextMapId = "RESOURCE_NAME_1011104"
   },
   RESOURCE_NAME_1011501 = {
-    ContentEN = "Sigil: Lisbell",
+    ContentEN = "Sigil: Furyborne",
     ContentJP = "シジル・リズベル",
-    ContentKR = "인장·리사벨",
-    ContentTC = "印記·莉茲貝爾",
+    ContentKR = "인장·분노",
+    ContentTC = "印記·暴怒",
     TextMapContent = "印记·莉兹贝尔",
     TextMapId = "RESOURCE_NAME_1011501"
   },
@@ -64327,7 +64271,7 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
     TextMapId = "RESOURCE_NAME_30002"
   },
   RESOURCE_NAME_3001 = {
-    ContentEN = "D10 Die",
+    ContentEN = "d10",
     ContentJP = "十面ダイス",
     ContentKR = "십면 주사위",
     ContentTC = "十面骰",
@@ -66974,7 +66918,7 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
     ContentEN = "\"Through wilderness, thorns pierce his bare feet;\nStill, his haste unceased.\nIn search for the lost beloved,\nUntil his arms, aloft, turn to towering peaks,\nHis blood and tears bloom into crimson wreaths.\"\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\"",
     ContentJP = "「荒野の荊棘が彼の裸足を突き刺す。\nしかし、急ぐ足取りは一瞬たりとも止まることはなかった。\n彼は依然として、あの逝った者を探し続けている。\nその高く掲げた腕が、ついには雄大な山脈となるまで。\nその血と涙が、朱紅の花となるまで」\n\n――吟遊詩人 リリコ、『ニヴルヘイム紀行』",
     ContentKR = "\"황야의 가시가 그의 벌거벗은 두 발을 꿰뚫어도,\n그의 다급한 발걸음을 멈추지 못했네.\n그는 계속해서 떠난 이를 찾아 다닌다네.\n그가 들어올린 팔이 우뚝 솟은 산이 되고,\n그의 피와 눈물이 붉은 꽃으로 변할 때까지.\" \n\n—— 음유시인 리리코, <안개의 바다 기행>",
-    ContentTC = "「荒野的荊棘刺破他赤裸的雙足，\n卻未能讓他匆忙的腳步停駐。\n他仍找尋著那逝去的人兒，\n直到他高舉的手臂成為巍峨的山嶽，\n他的血和淚化作朱紅的花。」\n\n——吟遊詩人 莉莉蔻，《霧海紀》",
+    ContentTC = "「荒野的荊棘刺破他赤裸的雙足，\n卻未能讓他匆忙的腳步停駐。\n他仍找尋著那逝去的人兒，\n直到他高舉的手臂成為巍峨的山嶽，\n他的血和淚化作朱紅的花。」\n\n——吟游詩人 莉莉蔻，《霧海紀》",
     TextMapContent = "“荒野的荆棘刺破他赤裸的双足，\n却未能让他匆忙的脚步停驻。\n他仍找寻着那逝去的人儿，\n直到他高举的手臂成为巍峨的山岳，\n他的血和泪化作朱红的花。”\n\n——吟游诗人 莉莉蔻，《雾海纪》\n",
     TextMapId = "RESOURCE_TEXT_20009"
   },
@@ -67182,7 +67126,7 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
     ContentEN = "\"Take me to see the glacial blues of the North,\nBeneath the grey canopy of sky,\nWhere a vast ocean of stern, metallic hues lies.\"\n\n— Lirico, the Wandering Bard, in \"Tales of the Misty Sea\"",
     ContentJP = "「北方の蒼き氷河を一緒に見にいこう。\n灰色の空の下で、\nあの清冽な光沢のある色彩の広がりを見よう」\n\n――吟遊詩人 リリコ、『ニヴルヘイム紀行』",
     ContentKR = "\"북쪽의 푸른 빙하로 절 데려다 주세요.\n회색 하늘 아래.\n그 차가운 금속빛의 바다로.\" \n\n—— 음유시인 리리코, <안개의 바다 여행기>",
-    ContentTC = "「帶我去看北方的冰川藍吧，\n在灰色的天空下，\n那一泓冷峻的金屬色的汪洋。」\n\n——吟遊詩人 莉莉蔻，《霧海紀》",
+    ContentTC = "「帶我去看北方的冰川藍吧，\n在灰色的天空下，\n那一泓冷峻的金屬色的汪洋。」\n\n——吟游詩人 莉莉蔻，《霧海紀》",
     TextMapContent = "“带我去看北方的冰川蓝吧，\n在灰色的天空下，\n那一泓冷峻的金属色的汪洋。”\n\n——吟游诗人 莉莉蔻，《雾海纪》",
     TextMapId = "RESOURCE_TEXT_20032"
   },
@@ -68983,7 +68927,7 @@ Standing still for over <Highlight>2</>s increases Damage Dealt by <Highlight>$2
   RLBlessing_Desc_312 = {
     ContentEN = "Increases Skill Damage by <Highlight>#1</>.",
     ContentJP = "スキル威力が<Highlight>#1</>アップする",
-    ContentKR = "스킬 위력이 <Highlight>#1</> 상승한다.",
+    ContentKR = "스킬 위력이 <Highlight>$1</> 상승한다.",
     ContentTC = "技能威力提高<Highlight>#1</>。",
     TextMapContent = "技能威力提高<Highlight>#1</>。",
     TextMapId = "RLBlessing_Desc_312"
@@ -69199,7 +69143,7 @@ Standing still for over <Highlight>2</>s increases Damage Dealt by <Highlight>$2
   RLBlessing_Desc_509 = {
     ContentEN = "Increases Max Dodge Attempts by <Highlight>#1</>.",
     ContentJP = "最大回避回数が<Highlight>#1</>回増加する。",
-    ContentKR = "최대 회피 횟수가 <Highlight>#1</>회 증가한다.",
+    ContentKR = "최대 회피 횟수가 <Highlight>$1</>회 증가한다.",
     ContentTC = "最大閃避次數增加<Highlight>#1</>次。",
     TextMapContent = "最大闪避次数增加<Highlight>#1</>次。",
     TextMapId = "RLBlessing_Desc_509"
@@ -69239,7 +69183,7 @@ Standing still for over <Highlight>2</>s increases Damage Dealt by <Highlight>$2
   RLBlessing_Desc_514 = {
     ContentEN = "ATK Speed +<Highlight>$1</>.",
     ContentJP = "攻撃速度が<Highlight>$1</>アップ",
-    ContentKR = "공격 속도가 <Highlight>$1</> 상승한다.",
+    ContentKR = "공격 속도가 <Highlight>#1</> 상승한다.",
     ContentTC = "攻擊速度提高<Highlight>$1</>。",
     TextMapContent = "攻击速度提高<Highlight>$1</>。",
     TextMapId = "RLBlessing_Desc_514"
@@ -75495,16 +75439,16 @@ Restores Sanity after using a skill.
   RL_Event321_Select_2 = {
     ContentEN = "Obtain a random <Highlight>Blue</>-tier or <Highlight>Purple</>-tier [Lampwick].",
     ContentJP = "ランダムにレアリティが<Highlight>レア</>、または<Highlight>レジェンド</>の「キャンドルの芯」を獲得",
-    ContentKR = "<Highlight>파란색</> 또는 <Highlight>보라색</> [심지]를 랜덤으로 1개 획득한다.",
-    ContentTC = "獲得一個隨機<Highlight>藍色</>或<Highlight>紫色</>[燭芯]。\n\n",
+    ContentKR = "<Highlight>파란색</> 또는 <Highlight>보라색</> [잿불]을 랜덤으로 1개 획득한다.",
+    ContentTC = "獲得一個隨機<Highlight>藍色</>或<Highlight>紫色</>[燭芯]。\n \n ",
     TextMapContent = "获得一个随机<Highlight>蓝色</>或<Highlight>紫色</>[烛芯]。",
     TextMapId = "RL_Event321_Select_2"
   },
   RL_Event322_Select_1 = {
     ContentEN = "Win a battle to get a random <Highlight>Purple</>-tier [Lampwick].",
     ContentJP = "戦闘開始：勝利するとランダムにレアリティが<Highlight>レジェンド</>の「キャンドルの芯」を獲得",
-    ContentKR = "전투 시작 및 승리 후, <Highlight>보라색</> [심지]를 랜덤으로 1개 획득한다.",
-    ContentTC = "進入戰鬥，勝利後獲得一個隨機<Highlight>紫色</>[燭芯]。\n\n",
+    ContentKR = "전투 시작 및 승리 후,  <Highlight>보라색</> [잿불]을 랜덤으로 1개 획득한다.",
+    ContentTC = "進入戰鬥，勝利後獲得一個隨機<Highlight>紫色</>[燭芯]。\n \n ",
     TextMapContent = "进入战斗，胜利后获得一个随机<Highlight>紫色</>[烛芯]。",
     TextMapId = "RL_Event322_Select_1"
   },
@@ -75685,10 +75629,10 @@ Restores Sanity after using a skill.
     TextMapId = "Ranged"
   },
   Reading_Content_101223 = {
-    ContentEN = "(A journal recovered from Glevum Pit. Based on the writing style, it appears to belong to a scholar.)\n...\n16 April\nWe discovered a curious <H>yellow crystal cluster</> in this long-abandoned mine. Its composition suggests it is neither the Crystallo of Stella — said to lie hidden deep within the mountain caverns — nor residual Phoxene from past excavations. It appears to be an entirely undocumented mineral.\n...\n18 April\nTo our surprise, Bob observed that the dimly glowing yellow crystals had <H>grown</>. What was once no larger than a handspan had developed into squat, shrub-like clusters.\n...\n20 April\nThe clusters had grown again — this time into jagged, spire-like forms that blocked off several inner passageways. They seemed almost... alive. Fortunately, the crystals are extremely brittle; only a modest amount of <H>gunpowder</> is needed to blast them apart.\nBob has put forward a hypothesis: these formations may not be minerals at all, but a type of <H>Filthoid secretion</> — perhaps even a form of \"progeny.\" Like sponges left in water, they appear to swell and expand over time. It remains a bold theory, even for someone of Bob's expertise in Filthoid biology.\n...\n21 April\nTo test Bob's theory, we've decided to press deeper into the mine. If his conjecture proves correct, then somewhere within this forsaken pit lies a unique strain of Filthoid, distinct from those found in the wild — a <H>progenitor</>, perhaps...\n...",
-    ContentJP = "（グルビューム廃坑に残された手記。文体からして、どうやら学者のものだ。）\n……\n4月16日\nこの廃鉱で、奇妙な<H>黄色の結晶群</>を発見した。質感から判断するに、噂にある山の奥深い洞穴に眠る群星のジェムでも、廃鉱に残された月ノ石でもなく、未確認の鉱物らしい。\n……\n4月18日\nボブは驚きながら、このほの暗い光を放つこの黄色の結晶群が<H>大きくなっていた</>と報告した。手のひら大だったものが、低木のような群生へと育っている。\n……\n4月20日\n……結晶の群生はさらに「成長」し、棘状の結晶となって坑道の扉を塞いでしまった。まるで生き物のようだ。幸い、この黄色い結晶は脆く、触っただけで砕ける。少量の<H>火薬</>で爆破できる。\nボブは仮説を立てた。これは鉱物ではなく、何らかの<H>穢獣の分泌物</>——ひいては穢獣の「子体」なのではないか。時間とともに、水を吸ったスポンジのように膨張するという。ボブは穢獣生物学に通じているが、それでもやや大胆な仮説だ。\n……\n4月21日\nボブの仮説を検証するため、鉱道のさらに奥へ進むことにした。もし推測が正しければ、この廃鉱の深部には、野外で見かける穢獣とは異なる特別な穢獣の<H>母体</>が存在するはずだ。\n……",
-    ContentKR = "(글로스터 광산에 남겨져 있는 노트. 내용으로 보아, 어떤 학자가 쓴 듯하다.)\n......\n4월 16일\n우리는 이 폐광에서 특이한 <H>노란색 정동</>을 발견했다. 재질로 볼 때, 산속 깊은 동굴에 숨겨져 있다는 반짝이는 수정이나 폐광에 남겨진 월석은 아닌 듯하며, 아마도 현재까지 발견되지 않은 광물인 듯하다.\n......\n4월 18일\n놀랍게도, 이 은은한 빛을 내뿜는 노란 정동의 크기가 <H>커진</> 것을 밥이 발견했다. 분명히 손바닥만 하던 것이 덤불 크기만 한 결정 군락이 되어 있었다.\n......\n4월 20일\n...정동이 또 '자라났다'. 마치 살아있는 생물체처럼, 가시 모양의 수정체가 되어, 광갱 안의 통로를 막아버렸다. 다행히 재질이 약해서 쉽게 깨지기 때문에, 약간의 <H>화약</>만 있으면 폭파할 수 있다.\n밥이 이 결정은 광물이 아니라 어떤 <H>필토이드의 분비물</>, 또는 이를 모체로 한 생성물이며, 시간이 흐르면서 물에 젖은 스펀지처럼 팽창하는 것이 아닐까 하는 가설을 제시했다. 밥이 필토이드 생물학에 관해 조예가 깊기는 하지만, 아직까지는 대담한 가설에 불과하다.\n......\n4월 21일\n밥의 가설을 검증하기 위해, 광갱 깊숙히 들어가 보기로 했다. 만약 그의 추측이 맞다면, 이 폐광 깊은 곳에는 야외의 필트이드와 다른 특수한 필토이드 <H>모체</>가 반드시 존재할 것이다.\n.......",
-    ContentTC = "（遺留在格雷姆礦場的筆記，看行文口吻，似乎是某位學者。）\n……\n4月16日\n我們在這座廢棄的礦場裡發現了一種奇特的<H>黃色晶簇</>。從質地判斷，這並非傳聞裡山體深處洞穴埋藏的群星綺晶，也不是遺留在廢棄礦場中的月石，而是某種尚未發現的礦物。\n……\n4月18日\n鮑勃驚訝地發現，這些散發著幽暗光芒的黃色晶簇<H>變大了</>，從只有巴掌那麼大，長成了低矮灌木一樣的晶簇叢。\n……\n4月20日\n……晶簇叢又「長大」了，變成了尖刺狀晶體，把礦洞中的門都堵住了，簡直像是活物一樣。好在這些黃色晶體質地脆弱，一觸即碎，只需要少量<H>火藥</>就能爆破。\n鮑勃提出了一種假設：這種晶體並非礦物，而是某種<H>穢獸的分泌物</>——甚至可以說是穢獸的某種「子體」；隨著時間推移，它會像沾了水的海綿那樣膨脹。儘管鮑勃在穢獸生物學上頗有造詣，這依舊是一種有些大膽的假設。\n……\n4月21日\n為了驗證鮑勃的假設，我們決定向礦洞深處進發。如果他的推測為真，那麼在這個廢棄礦場深處，一定存在某個和這些野外穢獸不同的，特殊的穢獸<H>母體</>。\n……",
+    ContentEN = "(A journal recovered from Glevum Pit. Based on the writing style, it appears to belong to a scholar.)\n ...\n 16 April\n We discovered a curious <H>yellow crystal cluster</> in this long-abandoned mine. Its composition suggests it is neither the Crystallo of Stella — said to lie hidden deep within the mountain caverns — nor residual Phoxene from past excavations. It appears to be an entirely undocumented mineral.\n ...\n 18 April\n To our surprise, Bob observed that the dimly glowing yellow crystals had <H>grown</>. What was once no larger than a handspan had developed into squat, shrub-like clusters.\n ...\n 20 April\n The clusters had grown again — this time into jagged, spire-like forms that blocked off several inner passageways. They seemed almost... alive. Fortunately, the crystals are extremely brittle; only a modest amount of <H>gunpowder</> is needed to blast them apart.\n Bob has put forward a hypothesis: these formations may not be minerals at all, but a type of <H>Filthoid secretion</> — perhaps even a form of \"progeny.\" Like sponges left in water, they appear to swell and expand over time. It remains a bold theory, even for someone of Bob's expertise in Filthoid biology.\n ...\n 21 April\n To test Bob's theory, we've decided to press deeper into the mine. If his conjecture proves correct, then somewhere within this forsaken pit lies a unique strain of Filthoid, distinct from those found in the wild — a <H>progenitor</>, perhaps...\n ...",
+    ContentJP = "（グルビューム廃坑に残された手記。文体からして、どうやら学者のものだ。）\n ……\n 4月16日\n この廃鉱で、奇妙な<H>黄色の結晶群</>を発見した。質感から判断するに、噂にある山の奥深い洞穴に眠る群星のジェムでも、廃鉱に残された月ノ石でもなく、未確認の鉱物らしい。\n ……\n 4月18日\n ボブは驚きながら、このほの暗い光を放つこの黄色の結晶群が<H>大きくなっていた</>と報告した。手のひら大だったものが、低木のような群生へと育っている。\n ……\n 4月20日\n ……結晶の群生はさらに「成長」し、棘状の結晶となって坑道の扉を塞いでしまった。まるで生き物のようだ。幸い、この黄色い結晶は脆く、触っただけで砕ける。少量の<H>火薬</>で爆破できる。\n ボブは仮説を立てた。これは鉱物ではなく、何らかの<H>穢獣の分泌物</>——ひいては穢獣の「子体」なのではないか。時間とともに、水を吸ったスポンジのように膨張するという。ボブは穢獣生物学に通じているが、それでもやや大胆な仮説だ。\n ……\n 4月21日\n ボブの仮説を検証するため、鉱道のさらに奥へ進むことにした。もし推測が正しければ、この廃鉱の深部には、野外で見かける穢獣とは異なる特別な穢獣の<H>母体</>が存在するはずだ。\n ……",
+    ContentKR = "(글로스터 광산에 남겨져 있는 노트. 내용으로 보아, 어떤 학자가 쓴 듯하다.)\n......\n4월 16일\n우리는 이 폐광에서 특이한 <H>노란색 정동</H>을 발견했다. 재질로 볼 때, 산속 깊은 동굴에 숨겨져 있다는 반짝이는 수정이나 폐광에 남겨진 월석은 아닌 듯하며, 아마도 현재까지 발견되지 않은 광물인 듯하다.\n......\n4월 18일\n놀랍게도, 이 은은한 빛을 내뿜는 노란 정동의 크기가 <H>커진</H> 것을 밥이 발견했다. 분명히 손바닥만 하던 것이 덤불 크기만 한 결정 군락이 되어 있었다.\n......\n4월 20일\n...정동이 또 '자라났다'. 마치 살아있는 생물체처럼, 가시 모양의 수정체가 되어, 광갱 안의 통로를 막아버렸다. 다행히 재질이 약해서 쉽게 깨지기 때문에, 약간의 <H>화약</>만 있으면 폭파할 수 있다.\n 밥이 이 결정은 광물이 아니라 어떤 <H>필토이드의 분비물</>, 또는 이를 모체로 한 생성물이며, 시간이 흐르면서 물에 젖은 스펀지처럼 팽창하는 것이 아닐까 하는 가설을 제시했다. 밥이 필토이드 생물학에 관해 조예가 깊기는 하지만, 아직까지는 대담한 가설에 불과하다.\n......\n4월 21일\n밥의 가설을 검증하기 위해, 광갱 깊숙히 들어가 보기로 했다. 만약 그의 추측이 맞다면, 이 폐광 깊은 곳에는 야외의 필트이드와 다른 특수한 필토이드 <H>모체</>가 반드시 존재할 것이다.\n.......",
+    ContentTC = "（遺留在格雷姆礦場的筆記，看行文口吻，似乎是某位學者。）\n ……\n 4月16日\n 我們在這座廢棄的礦場裡發現了一種奇特的<H>黃色晶簇</>。從質地判斷，這並非傳聞裡山體深處洞穴埋藏的群星綺晶，也不是遺留在廢棄礦場中的月石，而是某種尚未發現的礦物。\n ……\n 4月18日\n 鮑勃驚訝地發現，這些散發著幽暗光芒的黃色晶簇<H>變大了</>，從只有巴掌那麼大，長成了低矮灌木一樣的晶簇叢。\n ……\n 4月20日\n ……晶簇叢又「長大」了，變成了尖刺狀晶體，把礦洞中的門都堵住了，簡直像是活物一樣。好在這些黃色晶體質地脆弱，一觸即碎，只需要少量<H>火藥</>就能爆破。\n 鮑勃提出了一種假設：這種晶體並非礦物，而是某種<H>穢獸的分泌物</>——甚至可以說是穢獸的某種「子體」；隨著時間推移，它會像沾了水的海綿那樣膨脹。儘管鮑勃在穢獸生物學上頗有造詣，這依舊是一種有些大膽的假設。\n ……\n 4月21日\n 為了驗證鮑勃的假設，我們決定向礦洞深處進發。如果他的推測為真，那麼在這個廢棄礦場深處，一定存在某個和這些野外穢獸不同的，特殊的穢獸<H>母體</>。\n ……",
     TextMapContent = "（遗留在格雷姆矿场的笔记，看行文口吻，似乎是某位学者。）\n……\n4月16日\n我们在这座废弃的矿场里发现了一种奇特的<H>黄色晶簇</>。从质地判断，这并非传闻里山体深处洞穴埋藏的群星绮晶，也不是遗留在废弃矿场中的月石，而是某种尚未发现的矿物。\n……\n4月18日\n鲍勃惊讶地发现，这些散发着幽暗光芒的黄色晶簇<H>变大了</>，从只有巴掌那么大，长成了低矮灌木一样的晶簇丛。\n……\n4月20日\n……晶簇丛又“长大”了，变成了尖刺状晶体，把矿洞中的门都堵住了，简直像是活物一样。好在这些黄色晶体质地脆弱，一触即碎，只需要少量<H>火药</>就能爆破。\n鲍勃提出了一种假设：这种晶体并非矿物，而是某种<H>秽兽的分泌物</>——甚至可以说是秽兽的某种“子体”；随着时间推移，它会像沾了水的海绵那样膨胀。尽管鲍勃在秽兽生物学上颇有造诣，这依旧是一种有些大胆的假设。\n……\n4月21日\n为了验证鲍勃的假设，我们决定向矿洞深处进发。如果他的推测为真，那么在这个废弃矿场深处，一定存在某个和这些野外秽兽不同的，特殊的秽兽<H>母体</>。\n……",
     TextMapId = "Reading_Content_101223"
   },
@@ -75767,7 +75711,7 @@ Restores Sanity after using a skill.
   RougeLike_GetBlessing = {
     ContentEN = "You've obtained a Lampwick!",
     ContentJP = "キャンドルの芯をゲットする！",
-    ContentKR = "심지 획득!",
+    ContentKR = "심지 얻다!",
     ContentTC = "獲得燭芯！",
     TextMapContent = "获得烛芯！",
     TextMapId = "RougeLike_GetBlessing"
@@ -76727,7 +76671,7 @@ Restores Sanity after using a skill.
     TextMapId = "SKILL_10301_DESC"
   },
   SKILL_10302_DESC = {
-    ContentEN = "CRIT Chance +<H>#1</>. When dealing damage with this weapon triggers Bonus Effect, there is a <H>#2</> chance to increase the Combo Level to maximum.",
+    ContentEN = "CRIT Chance +<H>#1</>. When dealing damage with this weapon triggers Bonus Effect, there is a <H>#1</> chance to increase the Combo Level to maximum.",
     ContentJP = "クリティカル率+<H>#1</>。この武器でダメージを与えて追加効果を発動すると、<H>#2</>の確率で自身のコンボレベルを最大までアップさせる。",
     ContentKR = "크리티컬 확률+<H>#1</>. 해당 무기로 대미지를 입혀 추가 효과 발동 시, <H>#2</> 확률로 자신의 콤보 레벨이 최대치에 도달한다.",
     ContentTC = "暴擊率+<H>#1</>。使用此武器造成傷害觸發額外效果時，有<H>#2</>概率令自身連擊等級達到最高。",
@@ -77059,9 +77003,9 @@ Increases ATK for self and Lumino allies.]],
     TextMapId = "SKILL_150101_NAME"
   },
   SKILL_150102_DESC = {
-    ContentEN = "Switches the user's melee weapon to [Samael], dealing Lumino DMG to enemies ahead. While wielding [Samael], use the skill is used again to withdraw [Samael].\nNormal Attacks with [Samael] chain up to 4 hits.\nWhile wielding [Samael], hold attack to charge — Sanity is consumed over time. While charging, gains [Impatience], generating combo points every 0.5s.\nReleasing attack, reaching max Combo Level, or running out of Sanity unleashes a powerful Charged Attack, dealing Lumino AoE DMG to enemies ahead.",
-    ContentJP = "近接武器を「サマエル」に切り替え、前方範囲の敵に光属性ダメージを与える。「サマエル」使用中にこのスキルを再発動すると「サマエル」は解除される。\n通常攻撃は最大4段の連続攻撃。\n溜め攻撃はSPを消費する。溜め中は「不堅忍」を得て、0.5秒ごとにコンボポイントを獲得する。\n長押しで溜め状態を維持し、終了時・SP不足時・最大コンボLv.時に放ち、前方範囲の敵に光属性ダメージを与える。",
-    ContentKR = "근접 무기를 [사마엘]로 전환하고 전방 범위 내의 적에게 빛 속성 대미지를 입힌다. [사마엘] 사용 기간, 해당 스킬을 다시 사용하면 [사마엘]이 회수된다.\n[사마엘]로 기본 공격 시전 시, 최대 4단계의 연속 공격을 발동한다.\n[사마엘]로 차지 공격 시전 시 정신력을 소모하며, 길게 눌러 차지 상태를 유지할 수 있다. 차지 기간 [못 참아]를 획득하고, 0.5초마다 정신력을 소모하여 콤보 포인트를 획득한다. \n길게 누르기 종료, 정신력 부족 또는 콤보 레벨이 최대에 도달하면 차지 공격을 발동하여, 전방 범위 내의 적에게 빛 속성 대미지를 입힌다.",
+    ContentEN = "Switches the user's melee weapon to [Samael], dealing Lumino DMG to enemies ahead. While wielding [Samael], Sanity drains continuously. When Sanity reaches 0 or the skill is used again, [Samael] is withdrawn.\n Normal Attacks with [Samael] chain up to 4 hits.\n While wielding [Samael], hold the skill button to charge — Sanity is consumed over time. Releasing the button, reaching max Combo Level, or running out of Sanity unleashes a powerful Charged Attack, dealing Lumino AoE DMG to enemies ahead.\n While charging, gains [Impatience], generating combo points every 0.5s.",
+    ContentJP = "近接武器を「サマエル」に切り替え、前方範囲の敵に光属性ダメージを与える。「サマエル」使用中はSPを継続消費し、SPが0になる、またはこのスキルを再発動すると「サマエル」は解除される。\n 通常攻撃は最大4段の連続攻撃。\n 溜め攻撃は長押しでSPを消費して維持し、終了時・SP不足時・最大コンボLv.時に放ち、前方範囲の敵に光属性ダメージ。\n 溜め中は「不堅忍」を得て、0.5秒ごとにコンボポイントを獲得する。",
+    ContentKR = "근접 무기를 [사마엘]로 전환하고 전방 범위 내의 적에게 빛 속성 대미지를 입힌다. [사마엘] 사용 기간, 자신의 정신력이 지속적으로 소모되며, 정신력이 0이 되거나 해당 스킬을 다시 사용할 때 [사마엘]을 회수한다.\n[사마엘]로 기본 공격 시전 시, 최대 4단계의 연속 공격을 발동한다.\n[사마엘]로 차지 공격 시전 시, 길게 누르면 정신력을 지속적으로 소모하여 차지 상태를 유지한다. 길게 누러 종료, 정신력 부족 또는 콤보 레벨이 최대에 도달하면 차지 공격을 발동하여 전방 범위 내의 적에게 빛 속성 대미지를 입힌다.\n차지 지속 기간, [못 참아]를 획득하고 0.5초마다 일정한 콤보 포인트를 획득한다.",
     ContentTC = "將近戰武器切換為[薩麥爾]並對面前範圍內的敵人造成光屬性傷害。使用[薩麥爾]期間再次使用此技能時收回[薩麥爾]。\n使用[薩麥爾]進行普通攻擊時，會進行最多四段的連續攻擊。\n使用[薩麥爾]進行蓄力攻擊需要消耗神智，可以長按維持蓄力狀態，蓄力期間獲得[不堅忍]，每0.5秒消耗神智並獲得連擊點數。\n長按結束、神智不足或連擊等級達到最高時釋放蓄力攻擊，對面前範圍內的敵人造成光屬性傷害。",
     TextMapContent = "将近战武器切换为[萨麦尔]并对面前范围内的敌人造成光属性伤害。使用[萨麦尔]期间再次使用此技能时收回[萨麦尔]。\n使用[萨麦尔]进行普通攻击时，会进行最多四段的连续攻击。\n使用[萨麦尔]进行蓄力攻击需要消耗神智，可以长按维持蓄力状态，蓄力期间获得[不坚忍]，每0.5秒消耗神智并获得连击点数。\n长按结束、神智不足或连击等级达到最高时释放蓄力攻击，对面前范围内的敌人造成光属性伤害。",
     TextMapId = "SKILL_150102_DESC"
@@ -77114,8 +77058,8 @@ When Combo Level increases, deals Lumino DMG to nearby enemies and enhances [Sam
 Enters [Funeral Rite] status. Upon entry, if the user's Skill Range exceeds 100%, the excess is converted into Skill Damage at a fixed ratio, and Skill Range is reduced to 100% for the duration.
 While under [Funeral Rite], gains Trigger Probability Increase for ranged weapons; [Lunar Hunt] and [Solar Eclipse] cost no Sanity; [Lunar Hunt] pulls enemies toward its centre; [Solar Eclipse] deals increased damage.
 [Funeral Rite] ends after a set duration or after casting a total of 6 [Lunar Hunt] and/or [Solar Eclipse].]],
-    ContentJP = "「葬送」状態になる。この時、自身のスキル範囲が100%以上の場合、超えた部分を一定比率でスキル威力に転換し、スキル範囲も100%まで狭まる。この効果は「葬送」状態が終わるまで持続する。\n「葬送」状態では、遠隔武器の発動確率がアップする。「日食」を発動する時にSPを消費しなくなり、ダメージ倍率もアップする。「月食」を発動する時にSPを消費しなくなり、目標を範囲中心に引き寄せる。\n一定時間経過、または「月食」と「日食」を6回発動すると、「葬送」状態が終わる。",
-    ContentKR = "[장송] 상태에 진입한다. 진입 시, 자신의 스킬 범위가 100%를 초과할 경우, 초과한 부분은 일정 비율에 따라 스킬 위력으로 전환되고, 스킬 범위는 100%가 된다. 효과는 [장송] 상태가 종료될 때까지 지속된다.\n[장송] 상태에서 원거리 무기의 발동 확률이 상승한다. [달 사냥] 시전 시 정신력을 소모하지 않고, 대미지 대상을 범위 중심으로 끌어당긴다. [일식] 시전 시 정신력을 소모하지 않으며, 대미지 배율이 증가한다.\n일정 시간이 지나거나 [달 사냥]과 [일식] 6회 시전 후 [장송] 상태는 종료된다.",
+    ContentJP = "「葬送」状態になる。この時、自身のスキル範囲が100%以上の場合、超えた部分を一定比率でスキル威力に転換し、スキル範囲も100%まで狭まる。この効果は「葬送」状態が終わるまで持続する。\n 「葬送」状態では、遠隔武器の発動確率がアップする。「日食」を発動する時にSPを消費しなくなり、ダメージ倍率もアップする。「月食」を発動する時にSPを消費しなくなり、目標を範囲中心に引き寄せる。\n 一定時間経過、または「月食」と「日食」を6回発動すると、「葬送」状態が終わる。",
+    ContentKR = "[장송] 상태에 진입한다. 진입 시, 자신의 스킬 범위가 100%를 초과할 경우, 초과한 부분은 일정 비율에 따라 스킬 위력으로 전환되고, 스킬 범위가 100%로 감소하면 [장송] 상태가 종료될 때까지 지속된다.\n[장송] 상태에서 원거리 무기의 발동 확률이 상승한다. [달 사냥] 시전 시 정신력을 소모하지 않고, 대미지 대상을 범위 중심으로 끌어당긴다. [일식] 시전 시 정신력을 소모하지 않으며, 대미지 배율이 증가한다.\n일정 시간이 지나거나 [달 사냥]과 [일식] 6회 시전 후 [장송] 상태를 종료한다.",
     ContentTC = "進入[送葬]狀態，進入時，如果自身技能範圍大於100%，將技能範圍超過100%的部分按一定比例轉化為技能威力，並將技能範圍降低至100%，持續到[送葬]狀態結束。\n[送葬]狀態中，遠程武器的觸發概率提高，釋放[月獵]時不消耗神智、並將傷害目標拉向範圍中心，釋放[日食]時不消耗神智、傷害倍率增加。\n持續一段時間或釋放6次[月獵]和[日食]後退出[送葬]狀態。",
     TextMapContent = "进入[送葬]状态，进入时，如果自身技能范围大于100%，将技能范围超过100%的部分按一定比例转化为技能威力，并将技能范围降低至100%，持续到[送葬]状态结束。\n[送葬]状态中，远程武器的触发概率提高，释放[月猎]时不消耗神智、并将伤害目标拉向范围中心，释放[日食]时不消耗神智、伤害倍率增加。\n持续一段时间或释放6次[月猎]和[日食]后退出[送葬]状态。",
     TextMapId = "SKILL_150202_DESC"
@@ -77407,7 +77351,7 @@ Increases Weapon DMG for self and allies proficient in Swords or Assault Rifles.
   SKILL_20101_DESC = {
     ContentEN = "Trigger Probability +<H>#1</>. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to <H>#2</> of its ATK.",
     ContentJP = "発動確率+<H>#1</>。この武器で射撃すると、武器の発動確率に応じて追加で1発の弾丸を発射する（弾薬を消費しない）。命中時、この武器の攻撃力<H>#2</>に相当する範囲ダメージを与える。",
-    ContentKR = "발동 확률+<H>#1</>. 해당 무기로 사격 시, 해당 무기의 발동 확률에 따라 1개의 탄환을 추가로 발사하며, 탄환을 소모하지 않는다. 명중 시 해당 무기 공격력 <H>#2</>의 범위 대미지를 입힌다.",
+    ContentKR = "캐릭터 공격력+<H>#1</>. 해당 무기로 사격 시, 해당 무기의 발동 확률에 따라 1개의 탄환을 추가로 발사하며, 탄환을 소모하지 않는다. 명중 시 해당 무기 공격력 <H>#2</>의 범위 대미지를 입힌다.",
     ContentTC = "觸發概率+<H>#1</>。使用此武器射擊時，基於該武器觸發概率，額外發射1枚子彈，不消耗備彈，命中時造成此武器攻擊<H>#2</>的範圍傷害。",
     TextMapContent = "触发概率+<H>#1</>。使用此武器射击时，基于该武器触发概率，额外发射1枚子弹，不消耗备弹，命中时造成此武器攻击<H>#2</>的范围伤害。",
     TextMapId = "SKILL_20101_DESC"
@@ -78239,7 +78183,7 @@ Each time a [Tot Popper] is deployed, Yale and Oliver gains 1 stack of [Bombing 
   SKILL_330101_DESC = {
     ContentEN = "Attack enemies within range in front, dealing Pyro Damage and stunning them. When using this skill by holding, Margie makes a continuous attack.",
     ContentJP = "自身の前方範囲内にいる複数の敵を攻撃して火属性ダメージを与え、スタン効果を付加する。 長押しでスキルを発動すると持続的に攻撃を行う。",
-    ContentKR = "전방 범위 내의 여러명의 적에게 불 속성 대미지를 입히고 기절 효과를 부여한다. 길게 누를 시 지속적인 공격을 가한다.",
+    ContentKR = "전방 범위 내의 여러명의 적에게 불 속성 대미지를 입히고 기절 효과를 부여한다. 길게 눌러 시 지속적인 공격을 가한다.",
     ContentTC = "攻擊自身面前範圍內的多名敵人，造成火屬性傷害並附加眩暈效果。長按時，持續釋放。",
     TextMapContent = "攻击自身周围范围内的多名敌人，造成火属性伤害并附加眩晕效果。长按时，持续释放。",
     TextMapId = "SKILL_330101_DESC"
@@ -78273,8 +78217,8 @@ When consuming 9 stacks of [Jackpot!]: Deals additional AoE Pyro Damage 2 times 
     TextMapId = "SKILL_330102_NAME"
   },
   SKILL_330103_DESC = {
-    ContentEN = "When the user or allies pick up loot, the user gains 1 stack of [Jackpot!], lasting for the rest of the battle. Each stack increases Skill DMG, up to 20 stacks.",
-    ContentJP = "自身と味方がアイテムを拾うと、自身はスキル威力を強化する「宝物ゲット！」を1スタック獲得（最大で20スタック）。",
+    ContentEN = "When the user or nearby allies pick up loot, the user gains 1 stack of [Jackpot!], lasting for the rest of the battle. Each stack increases Skill DMG, up to 20 stacks.",
+    ContentJP = "自身と周囲の味方がアイテムを拾うと、自身はスキル威力を強化する「宝物ゲット！」を1スタック獲得（最大で20スタック）。",
     ContentKR = "자신과 팀원이 드롭 아이템을 습득할 시 자신이 영구적인 [보물이다!] 1단계를 획득하여 스킬 위력이 상승한다. 최대 20단계 중첩.",
     ContentTC = "自身和隊友拾取掉落物時，自身獲得1層永續的[撿到寶了！]：技能威力提高，最多疊加20層。",
     TextMapContent = "自身和队友拾取掉落物时，自身获得1层永续的[捡到宝了！]：技能威力提高，最多叠加20层。",
@@ -78834,9 +78778,9 @@ Increases Resolve for self and allies if 2 or more characters on the team share 
     ContentEN = [[
 Enters [Stealth] state and exits [Relentless Hunt] state. 
 Generates 2 [Fang Spikes] to attack nearby enemies when exiting [Stealth] state or using [Stealthy Prowl] again in [Stealth] state.]],
-    ContentJP = "「潜行」状態となって、「狩猟」状態を解除する。\n自ら「潜行」状態を解除すると、もしくは「潜行」状態で再び「隠密」を発動する時、2本の「ファングスラスト」を生成し、周囲のランダムな敵を攻撃する",
+    ContentJP = "「潜行」状態に、「狩猟」状態を解除する。\n自ら「潜行」状態を解除すると、もしくは「潜行」状態で再び「隠密」を発動する時、2本の「ファングスラスト」を生成し、ランダムに周囲の敵を攻撃する。",
     ContentKR = "[종적 감추기] 상태에 진입하고, [쟁취] 상태에서 나간다. 자발적으로 [종적 감추기] 상태에서 나가거나 [종적 감추기] 상태에서 [은닉]을 다시 시전할 때, 2발의 [송곳니의 가시]를 생성해 주위의 랜덤 적을 공격한다.",
-    ContentTC = "進入「匿蹤」狀態，並退出「追獵」狀態。\n主動退出「匿蹤」狀態和在「匿蹤」狀態中再次釋放「隱匿」時，生成2枚「獠牙之刺」攻擊周圍的隨機敵人。",
+    ContentTC = "進入「匿蹤」狀態，並退出「追獵」狀態。\n 主動退出「匿蹤」狀態和在「匿蹤」狀態中再次釋放「隱匿」時，生成2枚「獠牙之刺」攻擊周圍的隨機敵人。",
     TextMapContent = "进入[匿踪]状态，并退出[追猎]状态。\n主动退出[匿踪]状态和在[匿踪]状态中再次释放[隐匿]时，生成2枚[獠牙之刺]攻击周围的随机敌人。",
     TextMapId = "SKILL_510201_DESC"
   },
@@ -81660,7 +81604,7 @@ per stack of [Poison of Love]]=],
     TextMapId = "SKILL_DESC_ShootingRate"
   },
   SKILL_DESC_ShootingRate2 = {
-    ContentEN = "Firing Interval - Phase 2",
+    ContentEN = "Hit Firing Interval - Phase 2",
     ContentJP = "2nd射撃間隔",
     ContentKR = "2급 사격 간격",
     ContentTC = "二階射擊間隔",
@@ -81676,10 +81620,6 @@ per stack of [Poison of Love]]=],
     TextMapId = "SKILL_DESC_ShootingRate3"
   },
   SKILL_DESC_ShootingRate4 = {
-    ContentEN = "Firing Interval - Phase 4",
-    ContentJP = "4th射撃間隔",
-    ContentKR = "4급 사격 간격",
-    ContentTC = "四階射擊間隔",
     TextMapContent = "四阶射击间隔",
     TextMapId = "SKILL_DESC_ShootingRate4"
   },
@@ -82391,7 +82331,7 @@ per stack of [Poison of Love]]=],
     ContentEN = "<Title>Guaranteed Golden-tier Item</>\n Current Weaves: <highlight>%d</>/90\n \n <Title>Standard Myriad Drop Rates</>\n The base drop rate per Weave for a Golden-tier item is <highlight>0.3%%</>. The overall rate, including guarantee, is <highlight>1.42%%</>. A Golden-tier item is guaranteed within <highlight>90</> Weaves. \n The drop rates for each item are as follows:\n Tideborn Rhapsody: <highlight>0.427%%</>\n Sunrise Scherzo: <highlight>0.427%%</>\n Veils and Whispers: <highlight>0.285%%</>\n Sunlit Gristmill: <highlight>0.285%%</>\n \n The base drop rate per Weave for a Purple-tier item is <highlight>5.1%%</>. The overall rate, including guarantee, is <highlight>12.46%%</>. A Purple-tier item is guaranteed within <highlight>10</> Weaves;\n When the guarantee triggers, the chance of receiving a Purple-tier item is <highlight>99.7%%</>, and a Golden-tier item is <highlight>0.3%%</>.\n In cases involving rate-ups or guarantees, please refer to the specific banner rules.\n \n <Title>About Duplicates</>\n \n On obtaining a skin you already own, it converts into Lucent Prism:\n Each duplicate Golden-tier character skin converts to Lucent Prism ×<highlight>60</>.\n Each duplicate Golden-tier weapon skin converts to Lucent Prism ×<highlight>40</>.\n Each duplicate Purple-tier skin converts to Lucent Prism ×<highlight>4</>.\n Each duplicate Blue-tier skin converts to Lucent Prism ×<highlight>1</>.\n \n <Title>About Pity System</>\n The count of Weaves for the <highlight> Starlight Rondo</> is tallied separately and does not carry over to other Myriad banners.",
     ContentJP = "<Title>必ずエピックレアリティのアイテムを獲得</>\n 進行中の探求 <highlight>%d</>/90\n \n <Title>常設万華の確率説明</>\n 探求でエピックアイテムを獲得する基礎確率は<Title>0.3%%</>、総合確率（保証を含む）は<highlight>1.42%%</>です。最大<Title>90</>回の探求で必ずエピックアイテムを獲得できます。\n 各アイテムの基礎確率は以下の通り：\n波踏みの舞曲：<highlight>0.427%%</>\n太陽を呼ぶプレスト：<highlight>0.427%%</>\n 紗幕と囁き：<highlight>0.285%%</>\n陽光の製粉所：<highlight>0.285%%</>\n 探求でレジェンドアイテムを獲得する基礎確率は<highlight>5.1%%</>、総合確率（保証を含む）は<highlight>12.46%%</>です。最大<highlight>10</>回の探求で必ずレジェンドアイテムを獲得できます。\n 保証によって獲得する場合、レジェンドアイテムの確率は<highlight>99.7%%</>、エピックアイテムの確率は<highlight>0.3%%</>となります。\n 確率アップや保証などが発動した場合の確率については、具体的な規則に従ってください。\n \n <Title>重複獲得に関する説明</>\n 所有しているスキンを重複して獲得した場合、水色のプリズムに変換されます。\n エピックのキャラ外見を重複獲得した場合：水色のプリズム*<highlight>60</>。\n エピックの武器外見を重複獲得した場合：水色のプリズム*<highlight>40</>。\n レジェンドスキンを重複獲得した場合：水色のプリズム*<highlight>4</>。\n レアスキンを重複獲得した場合：水色のプリズム*<highlight>1</>。\n \n <Title>万華引継に関する説明</>\n <highlight>「星の煌きは輪舞を描く歌」</>での探求の回数は独立してカウントされ、ほかのイベント探求とは合算されません。",
     ContentKR = "<Title>금색 등급 아이템 확정 획득</>\n 진행 중인 탐색 <highlight>%d</>/90\n \n<Title>상시 광채 확률 설명</>\n탐색을 통해 금색 등급 아이템을 획득할 기본 확률은 <highlight>0.3%%</>이며, 종합 확률은 <highlight>1.42%%</>입니다(확정 획득 포함). 탐색 <highlight>90</>회 이내에 금색 등급 아이템을 확정적으로 획득합니다.\n 각 아이템의 확률:\n 파도 타기 춤곡: <highlight>0.427%%</>\n 태양의 급보: <highlight>0.427%%</>\n 베일과 속삭임: <highlight>0.285%%</>\n 햇살 방앗간: <highlight>0.285%%</>\n \n탐색을 통해 보라색 등급의 아이템을 획득할 기본 확률은 <highlight>5.1%%</>이며, 종합 확률은 <highlight>12.46%%</>입니다(확정 획득 포함). 탐색 <highlight>10</>회 이내에 보라색 등급 이상의 아이템을 확정적으로 획득합니다. 이때, <highlight>99.7%%</> 확률로 보라색 등급 아이템을, <highlight>0.3%%</> 확률로 금색 등급 아이템을 획득합니다.\n확률 증가, 확정 획득 등이 적용될 경우, 해당 확률은 상세 규칙을 참고해 주시기 바랍니다.\n \n<Title>중복 획득 설명</>\n이미 보유한 코스튬을 중복 획득할 경우, 등급에 따라 다음과 같이 물빛 프리즘으로 전환됩니다.\n 금색 등급 캐릭터 코스튬: 물빛 프리즘*<highlight>60</>\n 금색 등급 무기 코스튬: 물빛 프리즘*<highlight>40</>\n 보라색 등급 코스튬: 물빛 프리즘*<highlight>4</>\n 파란색 등급 코스튬: 물빛 프리즘*<highlight>1</>。\n \n<Title>광채 계승 설명</>\n<highlight>별빛의 노래</> 내의 탐색 횟수는 독립적으로 계산되며, 다른 이벤트의 광채와 합산되지 않습니다.",
-    ContentTC = "<Title>必定獲取金色品質道具</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>常駐萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n踏浪舞曲：<highlight>0.427%%</>\n喚日急板：<highlight>0.427%%</>\n紗幕與耳語：<highlight>0.285%%</>\n陽光磨坊：<highlight>0.285%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n通過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取已擁有的外觀，將轉化為水色稜鏡；重複金色品質角色形象將轉化為水色稜鏡*<highlight>60</>，重複金色品質武器形象將轉化為水色稜鏡*<highlight>40</>，重複紫色品質外觀將轉化為水色稜鏡*<highlight>4</>，重複藍色品質外觀將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>星光回旋曲</>中的尋覓次數將獨立計算，不與其他活動萬華合並計算。",
+    ContentTC = "<Title>必定獲取金色品質道具</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>常駐萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n紗幕與耳語：<highlight>0.285%%</>\n陽光磨坊：<highlight>0.285%%</>\n踏浪舞曲：<highlight>0.427%%</>\n喚日急板：<highlight>0.427%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n通過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取已擁有的形象，將轉化為水色稜鏡；重複流光品質角色形象將轉化為水色稜鏡*<highlight>60</>，重複流光品質武器形象將轉化為水色稜鏡*<highlight>40</>，重複月華品質形象將轉化為水色稜鏡*<highlight>4</>，重複螢燭品質形象將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>星光回旋曲</>中的尋覓次數將獨立計算，不與其他活動萬華合並計算。",
     TextMapContent = "<Title>必定获取金色品质道具</>\n正在进行的寻觅 <highlight>%d</>/90\n\n<Title>常驻万华概率说明</>\n经由寻觅获取金色品质道具的基础概率为<highlight>0.3%%</>，综合概率（含保底）为<highlight>1.42%%</>，至多<highlight>90</>次寻觅必定获取金色品质道具，其中各道具概率如下：\n踏浪舞曲：<highlight>0.427%%</>\n唤日急板：<highlight>0.427%%</>\n纱幕与耳语：<highlight>0.285%%</>\n阳光磨坊：<highlight>0.285%%</>\n经由寻觅获取紫色品质道具的基础概率为<highlight>5.1%%</>，综合概率（含保底）为<highlight>12.46%%</>，至多<highlight>10</>次寻觅必定获取紫色品质道具；\n通过保底获取紫色品质道具的概率为<highlight>99.7%%</>，获取金色品质道具的概率为<highlight>0.3%%</>。\n当触发概率提升、保底等情况时的概率，请以具体规则为准。\n\n<Title>重复获取说明</>\n如果重复获取已拥有的外观，将转化为水色棱镜；重复金色品质角色形象将转化为水色棱镜*<highlight>60</>，重复金色品质武器形象将转化为水色棱镜*<highlight>40</>，重复紫色品质外观将转化为水色棱镜*<highlight>4</>，重复蓝色品质外观将转化为水色棱镜*<highlight>1</>。\n\n<Title>万华继承说明</>\n在<highlight>星光回旋曲</>中的寻觅次数将独立计算，不与其他活动万华合并计算。",
     TextMapId = "SkinGacha_Warning_Normal"
   },
@@ -82399,7 +82339,7 @@ per stack of [Poison of Love]]=],
     ContentEN = "<Title>Guaranteed Golden-tier Item</>\n Current Weaves: <highlight>%d</>/90\n \n <Title>Event-Exclusive Myriad Drop Rates</>\n The base drop rate per Weave for a Golden-tier item is <highlight>0.3%%</>. The overall drop rate, including guarantee, is <highlight>1.42%%</>. A Golden-tier item is guaranteed within <highlight>90</> Weaves. \n The drop rates for each item are as follows:\n Minuet Reverie：<highlight>0.641%%</>\n Iridescent Prism × 25: <highlight>0.641%%</>\n Iridescent Prism × 50：<highlight>0.142%%</>\n \n The base drop rate per Weave for a Purple-tier item is <highlight>5.1%%</>. The overall drop rate, including guarantee, is <highlight>12.46%%</>. A Purple-tier item is guaranteed within <highlight>10</> Weaves.\n When the guarantee triggers, the chance of receiving a Purple-tier item is <highlight>99.7%%</>, and a Golden- or higher-tier item is <highlight>0.3%%</>.\n In cases involving rate-ups or guarantees, please refer to the specific banner rules.\n \n <Title>About Duplicates</>\n On obtaining a Golden-tier skin: Minuet Reverie you already own, it converts into Iridescent Prism ×<highlight>25</>.\n On obtaining other skins you already own, they convert to Lucent Prism:\n Each duplicate Purple-tier skin converts to Lucent Prism ×<highlight>4</>.\n Each duplicate Blue-tier skin converts to Lucent Prism ×<highlight>1</>.\n \n <Title>About Pity System</>\n The count of Weaves for the <highlight>Summer Dreams Aflutter</> is tallied separately and does not carry over to other Myriad banners.",
     ContentJP = "<Title>必ずエピックレアリティのアイテムを獲得</>\n 進行中の探求 <highlight>%d</>/90\n \n <Title>イベント限定万華の確率説明</>\n 探求でエピックアイテムを獲得する基礎確率は<highlight>0.3%%</>、総合確率（保証を含む）は<highlight>1.42%%</>です。最大<Title>90</>回の探求で必ずエピックアイテムを獲得できます。\n 各アイテムの基礎確率は以下の通り：\n夢の舞踏会：<highlight>0.641%%</>\n虹色のプリズム*25：<highlight>0.641%%</>\n虹色のプリズム*50：<highlight>0.142%%</>\n 探求でレジェンドアイテムを獲得する基礎確率は<highlight>5.1%%</>、総合確率（保証を含む）は<highlight>12.46%%</>です。最大<highlight>10</>回の探求で必ずレジェンドアイテムを獲得できます。\n 保証によって獲得する場合、レジェンドアイテムの確率は<highlight>99.7%%</>、エピックアイテムの確率は<highlight>0.3%%</>となります。\n 確率アップや保証などが発動した場合の確率については、具体的な規則に従ってください。\n \n <Title>重複獲得に関する説明</>\n エピックレアリティの外見「夢の舞踏会」を重複して獲得した場合、虹色のプリズム*<highlight>25</>に変換されます。\n ほかの所有しているスキンを重複して獲得した場合、水色のプリズムに変換されます。\nレジェンドスキンを重複獲得した場合：水色のプリズム*<highlight>4</>。\nレアスキンを重複獲得した場合：水色のプリズム*<highlight>1</>。\n \n <Title>万華引継に関する説明</>\n <highlight>「真夏の夜の夢」</>での探求の回数は独立してカウントされ、ほかのイベント探求とは合算されません。",
     ContentKR = "<Title>금색 등급 아이템 확정 획득</>\n진행 중인 탐색 <highlight>%d</>/90\n \n<Title>이벤트 한정 광채 확률 설명</>\n탐색을 통해 금색 또는 금색 등급 이상의 아이템을 획득할 기본 확률은 <highlight>0.3%%</>이며, 종합 확률은 <highlight>1.42%%</>입니다(확정 획득 포함). 탐색 <highlight>90</>회 이내에 금색 등급 아이템을 확정 획득합니다.\n각 아이템의 확률:\n 꿈속의 무도회: <highlight>0.641%%</>\n 무지개빛 프리즘*25: <highlight>0.641%%</>\n 무지개빛 프리즘*50: <highlight>0.142%%</>\n \n탐색을 통해 보라색 등급의 아이템을 획득할 기본 확률은 <highlight>5.1%%</>이며, 종합 확률은 <highlight>12.46%%</>입니다(확정 획득 포함). 탐색 <highlight>10</>회 이내에 보라색 등급 이상의 아이템을 확정적으로 획득합니다. 이때, <highlight>99.7%%</> 확률로 보라색 등급 아이템을, <highlight>0.3%%</> 확률로 금색 등급의 아이템을 획득합니다.\n확률 증가, 확정 획득 등이 적용될 경우, 해당 확률은 상세 규칙을 참고해 주시기 바랍니다.\n \n<Title>중복 획득 설명</>\n금색 등급 코스튬 꿈속의 무도회를 중복 획득할 경우, 무지개빛 프리즘*<highlight>25</>로 전환됩니다.\n그 외의 코스튬을 중복 획득할 경우, 다음과 같이 물빛 프리즘으로 전환됩니다.\n 보라색 등급 코스튬: 물빛 프리즘*<highlight>4</>\n 파란색 등급 코스툼: 물빛 프리즘*<highlight>1</>\n \n<Title>광채 계승 설명</>\n<highlight>한여름 밤의 비상</> 내의 탐색 횟수는 독립적으로 계산되며, 다른 이벤트의 광채와 합산되지 않습니다.",
-    ContentTC = "<Title>活動限定萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n夢中的舞會：<highlight>0.641%%</>\n虹色稜鏡*25：<highlight>0.641%%</>\n虹色稜鏡*50：<highlight>0.142%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n通過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取金色品質形象·夢中的舞會，將轉化為虹色稜鏡*<highlight>25</>。\n如果重複獲取其餘已擁有的外觀，將轉化為水色稜鏡；重複紫色品質外觀將轉化為水色稜鏡*<highlight>4</>，重複藍色品質外觀將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>夏夢紛飛集</>中的尋覓次數將獨立計算，不與其他活動萬華合並計算。",
+    ContentTC = "<Title>必定獲取華彩砂礫</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>活動限定萬華概率說明</>\n經由尋覓獲取金色或金色以上品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取虹色稜鏡*<highlight>25</>；各道具概率如下：\n虹色稜鏡*25：<highlight>1.282%%</>\n虹色稜鏡*50：<highlight>0.071%%</>\n夢中的舞會：<highlight>0.071%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n通過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取流光品質形象·夢中的舞會，將轉化為虹色稜鏡*<highlight>50</>。\n如果重複獲取其餘已擁有的形象，將轉化為水色稜鏡；重複流光品質角色形象將轉化為水色稜鏡*<highlight>60</>，重複流光品質武器形象將轉化為水色稜鏡*<highlight>40</>，重複月華品質形象將轉化為水色稜鏡*<highlight>4</>，重複螢燭品質形象將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>夏夢紛飛集</>中的尋覓次數將獨立計算，不與其他活動萬華合並計算。",
     TextMapContent = "<Title>必定获取金色品质道具</>\n正在进行的寻觅 <highlight>%d</>/90\n\n<Title>活动限定万华概率说明</>\n经由寻觅获取金色品质道具的基础概率为<highlight>0.3%%</>，综合概率（含保底）为<highlight>1.42%%</>，至多<highlight>90</>次寻觅必定获取金色品质道具，其中各道具概率如下：\n梦中的舞会：<highlight>0.641%%</>\n虹色棱镜*25：<highlight>0.641%%</>\n虹色棱镜*50：<highlight>0.142%%</>\n经由寻觅获取紫色品质道具的基础概率为<highlight>5.1%%</>，综合概率（含保底）为<highlight>12.46%%</>，至多<highlight>10</>次寻觅必定获取紫色品质道具；\n通过保底获取紫色品质道具的概率为<highlight>99.7%%</>，获取金色品质道具的概率为<highlight>0.3%%</>。\n当触发概率提升、保底等情况时的概率，请以具体规则为准。\n\n<Title>重复获取说明</>\n如果重复获取金色品质形象梦中的舞会，将转化为虹色棱镜*<highlight>25</>。\n如果重复获取其余已拥有的外观，将转化为水色棱镜；重复紫色品质外观将转化为水色棱镜*<highlight>4</>，重复蓝色品质外观将转化为水色棱镜*<highlight>1</>。\n\n<Title>万华继承说明</>\n在<highlight>夏梦纷飞集</>中的寻觅次数将独立计算，不与其他活动万华合并计算。",
     TextMapId = "SkinGacha_Warning_Special"
   },
@@ -82534,7 +82474,7 @@ per stack of [Poison of Love]]=],
   StarterQuest_Des_102001_2_3 = {
     ContentEN = "Level up 2 character skills to Lv. 2",
     ContentJP = "キャラのスキルをLv.2まで2回強化する",
-    ContentKR = "임의의 캐릭터 스킬 2개 Lv.2 달성",
+    ContentKR = "임의의 캐릭터 스킬 2레벨 누적 2개 달성",
     ContentTC = "累計提升角色的任意2个技能至2級",
     TextMapContent = "累计提升角色的任意2个技能至2级",
     TextMapId = "StarterQuest_Des_102001_2_3"
@@ -82606,7 +82546,7 @@ per stack of [Poison of Love]]=],
   StarterQuest_Des_102001_4_2 = {
     ContentEN = "Level up 3 character skills to Lv. 3",
     ContentJP = "キャラのスキルをLv.3まで3回強化する",
-    ContentKR = "임의의 캐릭터 스킬 3개 Lv.3 달성",
+    ContentKR = "임의의 캐릭터 스킬 3레벨 누적 3개 달성",
     ContentTC = "累計提升角色的任意3个技能至3級",
     TextMapContent = "累计提升角色的任意3个技能至3级",
     TextMapId = "StarterQuest_Des_102001_4_2"
@@ -82622,7 +82562,6 @@ per stack of [Poison of Love]]=],
   StarterQuest_Des_102001_4_4 = {
     ContentEN = "Complete Lunoxplorer's challenge 1 time",
     ContentJP = "ルーナ族の探検家の挑戦を1回クリア",
-    ContentKR = "탐험가 루나의 도전 1회 완료",
     ContentTC = "完成1次探險家皎皎的挑戰",
     TextMapContent = "完成1次探险家皎皎的挑战",
     TextMapId = "StarterQuest_Des_102001_4_4"
@@ -82710,7 +82649,7 @@ per stack of [Poison of Love]]=],
   StarterQuest_Des_102001_6_3 = {
     ContentEN = "Level up 12 character skills to Lv. 3",
     ContentJP = "キャラのスキルをLv.3まで12回強化する",
-    ContentKR = "임의의 캐릭터 스킬 12개 Lv.3 달성",
+    ContentKR = "임의의 캐릭터 스킬 12레벨 누적 3개 달성",
     ContentTC = "累計提升角色的任意12个技能至3級",
     TextMapContent = "累计提升角色的任意12个技能至3级",
     TextMapId = "StarterQuest_Des_102001_6_3"
@@ -84579,10 +84518,10 @@ Detonates all [Tot Poppers] within range and the lab explodes to deal Pyro Damag
     TextMapId = "TERMEXP_3103_Skill02"
   },
   TERMEXP_3103_Summon01 = {
-    ContentEN = "When dealing damage, causes greater Stance reduction to the target(s). The greater the difference between Yale and Oliver's Skill Range and the Skill Damage, the higher the chance of deploying [Tot Popper: Yale's Make]. If the difference is no less than 50%, it's guaranteed to be a [Tot Popper: Yale's Make].",
-    ContentJP = "敵にダメージを与えると、通常より大きく体勢を崩させる。自身の「スキル威力-スキル範囲」の差が大きいほど、「キュートちゃん‐イェール式」を投げる確率が高くなる。差が50%以上の場合、必ず「キュートちゃん‐イェール式」を投げる",
-    ContentKR = "대미지를 입힐 시 전투 태세 약화 효과를 부여한다. 자신의 스킬 위력과 스킬 범위의 차이가 클수록 [귀요미·예일 제조]를 투척할 확률이 상승한다. 차이가 50% 이상일 경우 [귀요미·예일 제조]를 확정으로 투척한다.",
-    ContentTC = "造成傷害時，造成更大的戰姿削減。自身技能威力與技能範圍的差值越大，丟出「小可愛·耶爾製」的概率越大。差值大於等於50%時，必定丟出「小可愛·耶爾製」。",
+    ContentEN = "When dealing damage, causes greater Stance reduction to the target(s). The greater the difference between Yale and Oliver's Skill Range and the Skill Damage provided by equipped Demon Wedges, the higher the chance of deploying [Tot Popper: Yale's Make]. If the difference is no less than 50%, it's guaranteed to be a [Tot Popper: Yale's Make].",
+    ContentJP = "敵にダメージを与えると、通常より大きく体勢を崩させる。魔の楔による「スキル威力-スキル範囲」の差が大きいほど、「キュートちゃん‐イェール式」を投げる確率が高くなる。差が50%以上の場合、必ず「キュートちゃん‐イェール式」を投げる",
+    ContentKR = "대미지를 입힐 시 전투 태세 약화 효과를 부여한다. 악마의 쐐기가 제공하는 스킬 위력과 스킬 범위의 차이가 클수록 [귀요미·예일 제조]를 투척할 확률이 상승한다. 차이가 50% 이상일 경우 [귀요미·예일 제조]를 확정으로 투척한다.",
+    ContentTC = "造成傷害時，造成更大的戰姿削減。魔之楔提供的技能威力與技能範圍的差值越大，丟出「小可愛·耶爾製」的概率越大。差值大於等於50%時，必定丟出「小可愛·耶爾製」。",
     TextMapContent = "造成伤害时，造成更大的战姿削减。自身技能威力与技能范围的差值越大，丢出[小可爱·耶尔制]的概率越大。差值大于等于50%时，必定丢出[小可爱·耶尔制]。",
     TextMapId = "TERMEXP_3103_Summon01"
   },
@@ -86826,7 +86765,7 @@ While she fits the profile of a child, it's clear the popcorn beneath Buck's win
   TextMap_Inference_1003 = {
     ContentEN = "Where could the assailant be hiding? (Ⅰ)",
     ContentJP = "犯人が現れそうな場所はどこですか？Ⅰ",
-    ContentKR = "범인이 출몰할 가능성이 있는 장소는 어디인가? Ⅰ",
+    ContentKR = "범인이 출몰할 가능성이 있는 장소는 어디인가? I",
     ContentTC = "凶手可能出沒在哪裡？I",
     TextMapContent = "凶手可能出没在哪里？I",
     TextMapId = "TextMap_Inference_1003"
@@ -86858,7 +86797,7 @@ While she fits the profile of a child, it's clear the popcorn beneath Buck's win
   TextMap_Inference_2002 = {
     ContentEN = "{$Huozai04Tag$|Connect the dots and uncover the hidden truth: ？？？}",
     ContentJP = "{$Huozai04Tag$｜いくつかの出来事のつながりを思い出し、隠された真実を見つける：？？？}",
-    ContentKR = "{$Huozai04Tag$|사건 사이의 연관성을 떠올리고 숨겨진 진실 찾기: ???}",
+    ContentKR = "($Huozai04Tag$|사건 사이의 연관성을 떠올리고 숨겨진 진실 찾기: ???)",
     ContentTC = "{$Huozai04Tag$|回憶幾個事件間的聯係，找到隱藏的真相:？？？}",
     TextMapContent = "{$Huozai04Tag$|回忆几个事件间的联系，找到隐藏的真相:？？？}",
     TextMapId = "TextMap_Inference_2002"
@@ -86984,7 +86923,7 @@ You can earn Trial EXP by:
     ContentEN = "Server rewards will be sent via mail once unlocked",
     ContentJP = "全サーバー報酬達成後、報酬はメールで配布されます",
     ContentKR = "서버 보상 달성 후, 보상은 우편을 통해 발송됩니다.",
-    ContentTC = "全服獎勵達成後，獎勵將通過信件發送",
+    ContentTC = "全服獎勵達成後，獎勵將通過郵件發送",
     TextMapContent = "全服奖励达成后，奖励将通过邮件发送",
     TextMapId = "TheaterOnline_Donate_Explain"
   },
@@ -92951,10 +92890,6 @@ Lynn's Headpiece
     TextMapId = "UI_Accessory_Unlock_Condition"
   },
   UI_Accessory_Unlock_Exchange = {
-    ContentEN = "Available though Prism Exchange",
-    ContentJP = "プリズムの交換で獲得",
-    ContentKR = "프리즘 교환으로 획득",
-    ContentTC = "通過稜鏡兌換獲得",
     TextMapContent = "通过棱镜兑换获得",
     TextMapId = "UI_Accessory_Unlock_Exchange"
   },
@@ -92967,10 +92902,6 @@ Lynn's Headpiece
     TextMapId = "UI_Accessory_Unlock_Forge"
   },
   UI_Accessory_Unlock_Gacha = {
-    ContentEN = "Available though Myriad",
-    ContentJP = "万華で獲得",
-    ContentKR = "광채에서 획득",
-    ContentTC = "通過萬華獲得",
     TextMapContent = "通过万华获得",
     TextMapId = "UI_Accessory_Unlock_Gacha"
   },
@@ -101755,7 +101686,7 @@ Lynn's Headpiece
     TextMapId = "UI_Armory_WeaponPurchaseConfirm"
   },
   UI_Armory_Weapon_Adjust = {
-    ContentEN = "Weapon",
+    ContentEN = "Weapon Loadout",
     ContentJP = "武器の変更",
     ContentKR = "무기 조정",
     ContentTC = "調整武器",
@@ -102142,7 +102073,7 @@ Lynn's Headpiece
     ContentEN = "Selected weapons have <H>upgrades</>. Disassembling them won't refund costs. Proceed?",
     ContentJP = "現在の分解対象に<H>育成済み</>の武器が含まれています。分解すると消費した資源は返還されませんが、よろしいですか？",
     ContentKR = "현재 분해할 무기에 <H>이미 육성된</> 무기가 포함되어 있습니다. 분해 시 소모한 부분은 반환되지 않습니다. 계속하시겠습니까?",
-    ContentTC = "目前分解的武器中含有<H>已養成</>的武器，分解後不會返還消耗的資源，是否繼續？",
+    ContentTC = "目前分解的武器中含有<H>已培育</>的武器，分解後不會返還消耗的資源，是否繼續？",
     TextMapContent = "当前分解武器内含有<H>已养成</>的武器，分解后不会返还消耗，是否继续？",
     TextMapId = "UI_Bag_Decompose_Tip_2"
   },
@@ -102483,11 +102414,11 @@ Lynn's Headpiece
     TextMapId = "UI_Banner_SkinGacha_Goto"
   },
   UI_Banner_Tab_SaleForNew = {
-    ContentEN = "2930% Bonus Pack",
-    ContentJP = "2930%超お得セール",
-    ContentKR = "초특가 2930% 혜택",
-    ContentTC = "超値特惠2930%",
-    TextMapContent = "超值特惠2930%",
+    ContentEN = "760% Bonus Pack",
+    ContentJP = "760%超お得セール",
+    ContentKR = "초특가 760% 혜택",
+    ContentTC = "超値特惠760%",
+    TextMapContent = "超值特惠760%",
     TextMapId = "UI_Banner_Tab_SaleForNew"
   },
   UI_Banner_Tab_SpSale_10 = {
@@ -104692,7 +104623,7 @@ This word suffocates Lynn. She feels like a fisherman sailing against the curren
     ContentDE = "À l’inverse de la confiance qu’elle inspire aujourd’hui, Lynn n’était pas la bienvenue lorsqu’elle a rejoint la Légion. Habituée à marcher seule, avec une attitude franche et rebelle, elle jurait parmi ces soldats formés en académie militaire. On racontait même qu’elle avait tué des soldats de la Légion avec une cruauté sans nom, et qu’elle avait réussi à infiltrer la XIIIᵉ Légion par des moyens obscurs. Ces rumeurs, vraies ou fausses, alimentaient le mépris. Où qu’elle aille, les railleries la suivaient : \n« Lynn ? Ah, cette opportuniste. On raconte qu’elle a tué ses propres camarades... »",
     ContentEN = "Although Lynn is widely trusted in the Legion now, that was not the case at the very beginning. Accustomed to her solitary ways and having a streetwise demeanour, she stood out as an outsider among the military academy-trained soldiers. There were even rumours that she had brutally killed fellow soldiers within the Legion, and had somehow infiltrated the 13th Legion with whatever means necessary. These ambiguous rumours fuelled resentment against her over time. Wherever Lynn went, she would hear cold words and jeers. \"Lynn? Oh, that opportunist scumbag. They say she murdered her own comrades...\"",
     ContentJP = "現在の信頼されている状況とは対照的に、軍団に加入した当初のリーンはあまり歓迎されていなかった。\n彼女は孤独に慣れており、話し方や振るまいも庶民のそれだったので、士官学校出身の兵士たちのなかでは浮いている存在だった。おまけに彼女が帝国軍の兵士を殺したという噂があり、第十三軍団へ加わるために残忍な手段を使ったとまで言われている。真偽は定かでないが、そんな噂によって周囲は彼女への不信感をつのらせていた。\n行く先々で冷たい言葉と嘲笑がリーンの耳に入ってくる。\n「リーン？ああ、あの抜け目ないスラム出身者か。帝国兵を殺したとかいう噂の……」",
-    ContentKR = "신망이 두터운 지금과는 달리, 린은 군단에 입대할 당시만 해도 인기가 없었다. 린은 늘 혼자 지내는 데 익숙했고, 거친 행동과 말투 때문에 사관학교 출신 군인들 사이에서는 어울리지 않는 존재로 보였다. 군단의 병사를 죽인 잔인한 자인데, 도대체 어떤 수단으로 13군단에 들어온 건지 모르겠다는 수군거림도 있었다. 진위를 알 수 없는 이런 소문들 때문에 그녀에 대한 불만은 더욱 커져갔고, 린은 어디를 가든, 차가운 말과 비웃음을 들을 수 있었다.\n\"린? 아, 그 출세를 위해서라면 물불 안 가리는 건달에, 우리 동료를 살해한 망나니 말이지...\"",
+    ContentKR = "신망이 두터운 지금과는 달리, 린은 군단에 입대할 당시만 해도 인기가 없었다. 린은 늘 혼자 지내는 데 익숙했고, 거친 행동과 말투 때문에 사관학교 출신 군인들 사이에서는 어울리지 않는 존재로 보였다. 군단의 병사를 죽인 잔인한 자인데, 도대체 어떤 수단으로 13군단에 들어온 건지 모르겠다는 수군거림도 있었다. 진위를 알 수 없는 이런 소문들 때문에 그녀에 대한 불만은 더욱 커져갔고, 린은 어디를 가든, 차가운 말과 비웃음을 들을 수 있었다.\n\"린? 아, 그 출세를 위해서라면 물불 안 가리는 건달에, 우리 둉료를 살해한 망나니 말이지...\"",
     ContentTC = "與現在頗受信賴的處境相反，在琳恩加入軍團之初，她並不受歡迎。她習慣了獨來獨往，言行舉止又帶著市井之氣，在這些軍校出身的軍人中總是顯得格格不入。甚至有傳言稱，她曾殺害過軍團中的士兵，手段殘忍，不知道使了什麼手段，竟能混進第十三軍團。這些真假難辨的流言進一步加重了對她的不滿，無論琳恩走到哪裡，冷言和譏嘲總是會飄進她的耳中：「琳恩？哦，那個投機取巧的地痞流氓、殺害我們戰友的劊子手啊……」",
     TextMapContent = "与现在颇受信赖的处境相反，在琳恩加入军团之初，她并不受欢迎。她习惯了独来独往，言行举止又带着市井之气，在这些军校出身的军人中总是显得格格不入。甚至有传言称，她曾杀害过军团中的士兵，手段残忍，不知道使了什么手段，竟能混进第十三军团。这些真假难辨的流言进一步加重了对她的不满，无论琳恩走到哪里，冷言和讥嘲总是会飘进她的耳中：“琳恩？哦，那个投机取巧的地痞流氓、杀害我们战友的刽子手啊……”",
     TextMapId = "UI_CHAR_DATA_TEXT_31010202"
@@ -106692,42 +106623,42 @@ Instead, she rejoiced in having met you and in having lived a life that was trul
     TextMapId = "UI_CHAR_DATA_TEXT_54010105"
   },
   UI_CHAR_DATA_TEXT_54010201 = {
-    ContentEN = "To reach the wards from the treatment wing at Riverside Hospital, one had to walk a long, narrow corridor.\nUnlike the other hospitals in Dismania, Riverside housed mostly patients with lingering chronic illnesses — the sort that brought no swift end, only slow suffering. These were not ailments that made corpses of people overnight, but over long years turned them into what the doctors came to call \"madmen.\"\nSince the age of seven, I'd been running back and forth along that corridor. My hands were quick, my feet quicker — faster even than most grown Solarian orderlies. And because all I ever asked for was a meal and a place to sleep, they graciously allowed me — a lowborn little Charon girl with horns on her head — to work in their domain. My tasks were almost always the lowest sort: hauling off soiled bedding, sweeping up shards of glass dropped by patients, dragging them to the washroom or the refuse yard. Now and then, a passing nurse would shove a crate of medicine or a bundle of vials into my arms to deliver. Most of the time, you'd find me staggering down that corridor with boxes taller than I was. They blocked my view, so I often bumped into people rushing past — and every time, I'd catch a torrent of curses for it.\nI once heard a bard in the square say Hyperboreans were the most short-tempered folk in all of Atlasia. If that's true, then by my reckoning, the ones at Riverside Hospital were the angriest of the lot — patients, doctors, nurses, even the kin who came to visit. Later I came to understand it was those long, drawn-out illnesses that drove them to the edge. But still, whenever someone barked at me, I'd raise a defiant middle finger at their retreating back.\nOnly once did someone bump into me and not curse, but apologise. Her name, I would learn much later, was Daphne Theodore.\nI remember it clearly. One afternoon, I was carrying a stack of underpads to the washroom when I collided at the far corner of the corridor with a young blonde woman. My underpads and her flowers both went flying, then scattered across the floor. Without missing a beat, I squatted down and wailed at the top of my lungs — louder than the most tormented patient. I wasn't hurt, not even upset about the mess. It was just a trick: if I howled like that, the adults who might scold or strike me would flinch and back off, like they'd brushed up against something filthy.\nBut the blonde woman didn't curse and scurry off like I expected. Instead, she knelt beside me, stroked my back with a gentle hand, and asked in a worried voice if I was hurt. She sounded more unsettled than I was. When I didn't reply, she tried again — even softer this time — though the tremble in her fingers gave her away.\nI don't remember what I said in reply — perhaps only, \"It doesn't hurt.\" Whatever it was, it eased the crease in her brow. She helped me to my feet, and together we picked up the scattered underpads and crushed flowers.\n\"I'm sorry,\" she said, giving my head a light pat. \"Little one, what flavour of sweets do you like? I'll bring you some next time, shall I?\"\n\"Strawberry,\" I told her. I shouldn't have accepted her apology — after all, it was me who hadn't been looking. But her question stirred something in me. I remembered the last thing my bedridden mother had murmured before she died: that there were strawberry boiled sweets in the cupboard drawer. When I looked, there was nothing. Only later did I find out my greedy brother had taken them all.\n\"Strawberry. I'll remember.\" The blonde woman gathered up her flowers and walked on toward the far end of the corridor. She was of middling height, slim and slight. The afternoon sun caught her matte hairpin, and for a moment it shimmered with a faint golden glow.\nI never knew her name, so in my heart I gave her one: Miss Strawberry Sweets.\nOther than my mother, no one had ever asked me so gently if I was in pain.\n\n— From the diary of Dewiolee Stone",
-    ContentJP = "カカン病院では、診療区から病棟へ行くには長い連絡廊下を通らなければならない。\nこの病院に入院しているのは、ディズマニアの他の病院と違い、長く慢性的な病を抱えた患者ばかりだ。その病はすぐに命を奪うことはないが、時間をかけて心を蝕み、やがて医師たちが「狂気」と呼ぶものへと変えてしまう。\n七歳の頃から、私はその廊下を走り回っていた。手先が早く、大人よりも働きが速かったから、食べ物と寝床さえあれば満足な私は、角を持つ卑しい子どもでありながら、彼らに働くことを許されたのだ。\n仕事の大半は運搬だった。汚れた寝具や割れたガラス、薬剤の箱……背丈より高い荷物を抱え廊下を行き来するたび、前が見えずに人とぶつかり、そのたびに怒鳴り散らされた。\nある吟遊詩人が「ヒュペリア人はアトラシアでもっとも気性が荒い」と歌っていたが、もしそれが真実なら、カカン病院の人々はその中でも群を抜いていた。患者も、医師も、看護師も、見舞いに来る親族までもが、例外なく苛立ちを抱えていたのだ。後になって、それが長く続く病の苦痛ゆえだと理解するようになったけれど、罵られた直後の私は、彼らの背中に中指を突き立てるしかなかった。\nそんな中で、唯一私を罵らなかった人がいる。ダフネ・セオドールだった。\nある午後、洗濯物を抱えて廊下を曲がった瞬間、金髪の若い女性とぶつかり、私が持っていたシーツも、彼女が持っていた花束も宙を舞って落ちた。私は大げさに泣き叫んだ。痛くも悲しくもなかったけれど、そうすれば大人たちは毛嫌いして離れるとわかっていたからだ。\nだが、彼女は違った。しゃがみ込んで背中をさすり、「痛くないか」と慌てた声で尋ねてくれた。黙りこくった私に、今度は落ち着いた声で同じ問いを繰り返し、その手はかすかに震えていた。\n私は「痛くない」と言ったのだろう。彼女はほっとして微笑み、私を立たせ、一緒にシーツと花を拾い集めてくれた。\n「ごめんね」そう言って、私の頭を撫でたあとに尋ねた。\n「君、どんな味のキャンディが好き？」\n「いちご味」私は答えた。母が最後に言い残したのは、いちごのキャンディが戸棚にある、だったからだ。けれど実際には、そこには何も残っていなかった。兄が全部食べてしまったのだ。\n「いちごキャンディね。覚えておくわ」\nそう言って花を抱え、金髪の女性は去っていった。彼女の背丈はそれほど高くなく、体つきも細かった。午後の光が髪飾りに反射し、柔らかな金色をにじませていた。\n私はその人の名を知らなかった。だから心の中で、「いちごキャンディーのお嬢さん」と呼ぶことにした。母を除けば、あの人だけが私に「痛くないか」と声をかけてくれたのだから。\n——ティオリ・ストーンの日記",
-    ContentKR = "리버랜드 병원의 진료 구역에서 병동으로 이동하려면 긴 복도를 지나야 한다.\n디즈마니아의 다른 병원과는 달리, 리버랜드 병원에 입원한 환자들은 대부분 고통스럽지만 치명적이지 않은 만성 질환을 앓고 있다. 이러한 질환은 생명을 위협하진 않지만, 시간이 흐를수록 의사들의 말처럼 사람을 '미치게' 만든다.\n나는 7살 때부터 그 복도를 분주하게 움직였다. 그때의 나는 대부분의 성인 솔라 간병인보다 훨씬 더 재빨랐고, 몸 뉠 곳과 주린 배를 채울 끼니만 있으면 되었기에, 머리에 뿔이 난 천한 소녀임에도 솔라들의 구역에서 일하는 것을 허락받을 수 있었다. 대단한 자비라도 되는 듯이 말이다. 내 일은 대부분 짐을 옮기는 일이었다. 더러워진 이불부터 환자가 깨뜨린 유리까지, 모두 깨끗하게 정리하고 세면실이나 쓰레기장으로 옮겨야 했다. 물론 간호사의 약품 운반 심부름도 흔했다. 따라서 대부분의 시간, 나는 내 키보다 더 큰 종이 상자를 안고 긴 복도를 가로지르곤 했다. 시야를 가리는 상자 탓에 바삐 오가는 사람들과 부딪히기 일쑤였고, 그러면 곧장 욕설이 쏟아졌다.\n언젠가 광장에서 한 음유시인의 불평을 들은 적이 있다. 모든 아트라시아인 중, 휘페르보레아 제국인이 가장 난폭하다는 것이었다. 그 말이 사실이라면, 내 보잘것없는 경험담으로 미루어 보건대, 리버랜드 병원의 사람들은 분노조절장애 중에서도 중증 환자일 것이다. 환자부터 의사, 간호사, 병문안을 온 가족들까지 전부 그랬다. 시간이 지나면서, 모두를 히스테릭하게 만든 건 바로 그 길고도 고통스러운 질환임을 깨달았지만, 난 그래도 내게 욕설을 퍼부은 사람들의 등 뒤에 가운뎃손가락을 세우곤 했다.\n다프네 세오도어는 나와 부딪힌 뒤 욕설 대신 오히려 사과를 건넨 유일한 사람이었다. 그날 오후는 또렷하게 기억난다. 평소처럼 시트를 들고 세면실로 향하던 중, 복도 모퉁이에서 젊은 금발 여성과 부딪혔다. 들고 있던 시트와 그녀의 꽃다발이 붕 뜨더니 이내 바닥으로 떨어졌다. 나는 바닥에 주저앉아 중증 통증 환자처럼 목이 터져라 울었다. 당연한 말이지만 부딪혀서 아픈 것도 아니었고, 일을 망쳤다는 사실 때문에 슬픈 것도 전혀 아니었다. 굳이 따지자면 내 작은 꼼수랄까? 내가 이렇게 엉엉 울어 버리면, 날 욕하거나 때리려던 어른들은 더러운 것이라도 본 것처럼, 황급히 자리를 피하곤 했기 때문이다.\n하지만 그 젊은 금발 여성은 예상과 달랐다. 그녀는 욕설을 퍼붓고 자리를 떠나기는커녕, 초조한 표정으로 쪼그리고 앉았다. 그리곤 내 등을 가볍게 어루만지며 어디를 다쳤는지, 아프진 않은지 물었다. 나보다 오히려 더 당황한 듯한 그 말투였다. 내가 아무런 반응이 없자, 그녀는 더 부드럽고 차분한 어조로 다시 한번 질문했지만, 손끝은 여전히 초조하게 떨리고 있었다.\n그녀의 질문에 뭐라고 대답을 했는지는 더 이상 기억 나지 않는다. 아마 \"안 아파요\"라고 하지 않았을까? 그렇지 않았다면, 그녀가 찌푸린 미간을 펴지 않았을 테니 말이다. 그녀는 날 일으켜 세우곤 나와 함께 바닥에 흩어진 시트와 꽃가지를 주웠다.\n\"미안.\" 그녀는 내 머리를 쓰다듬으며 물었다. \"꼬마야, 무슨 맛 사탕 좋아해? 다음에 올 때 가져다줄게. 응?\"\n\"딸기 맛이요.\" 사실 사과의 선물을 받을 처지가 아니었다. 방금 서로 부딪혔을 때, 상대를 보지 못한 쪽은 명백히 나였기 때문이다. 하지만 그 순간, 막 철이 들었을 무렵, 병석에 누워계신 어머니가 마지막으로 반복하시던 말이 떠올랐다. \"천장 서랍 안에 딸기 맛 사탕을 넣어뒀단다.\" 하지만 서랍을 열었을 때는 아무것도 남아있지 않았다. 식탐 많은 오빠가 사탕을 전부 가져갔던 것이다.\n\"딸기 맛 사탕, 기억해 둘게.\" 금발의 여성은 그렇게 말하며, 꽃다발을 들고 복도 끝을 향해 걸어갔다. 평균보다 키가 크고, 마른 편이었다. 오후의 햇살이 그녀의 매트한 질감의 머리핀을 희미한 금빛으로 물들이고 있었다.\n그녀의 이름을 몰랐기에, 나는 마음속으로 그녀를 '딸기 맛 사탕 아가씨'라고 불렀다. 어디가 아프냐고 내게 물어봐 준 사람은, 어머니를 제외하면 그녀가 유일했다.\n\n—— 티오리 스톤의 일기",
-    ContentTC = "從河間醫院的診療區到病房區，要穿過一條長長的連廊。\n和迪斯瑪尼亞其他醫院不同，河間醫院住著的大多是一些長期慢性疾病患者。那些病通常痛苦卻不致命，它們不會快速讓人們變成屍體，卻在漫長的時間裡讓他們變成醫生們口中的「瘋子」。\n從7歲開始，我就在那條連廊上奔忙。由於我的手腳很勤快，比大多數索拉成年護工都快得多，再加上我只要有口飯有地方睡就好，所以他們仁慈地允許我——一個頭上長著角的卑賤小女孩在他們的地盤工作。我的工作通常是搬運——從弄髒的被褥到病人打翻的碎玻璃，都由我來打掃清理，再搬到盥洗室或垃圾場。也常有護士順手讓我幫他們搬運藥劑。所以絕大多數時間內，我都抱著比人還高的紙箱在連廊上穿行，它們遮蔽了我的視線，因此我時不時撞上同樣行色匆忙的人，隨之而來的便是一頓劈頭蓋臉的辱罵。\n我曾在廣場上聽一位旅行的吟遊詩人抱怨海伯利亞人是所有阿特拉西亞人中最暴躁的。如果這是事實，那麼在我貧瘠的見識中，河間醫院的人們就是暴躁狂中的暴躁狂，從病人，到醫生和護士，再到探視他們的親人，無一例外。儘管隨著時間的推移我逐漸明白，是那些漫長而痛苦的疾病讓所有人變得歇斯底裡，我還是會在被辱罵一頓後，朝他們的背影狠狠比中指。\n達芙涅·塞奧多爾是唯一一個與我撞上後沒有罵我，反而向我道歉的人。我清楚地記得那是一個下午，我熟練地搬著一疊布墊打算送去盥洗室時，在連廊盡頭的拐角處撞上了一個人——似乎是一位年輕的金發女士——我手裡的布墊和那人手裡的鮮花都在瞬間飛到天上，再重重落下。於是我蹲在地上扯著嗓子大哭起來，嚎叫得和最疼的病人一樣響亮。事實上我並沒有摔疼，也沒有因為搞砸了工作有一丁點兒的悲傷，這只是我的小小計倆：每當我這樣哭嚎起來的時候，那些原本想要辱罵或者毆打我的大人就會像碰到了不幹凈的東西一樣，不再與我糾纏。\n但年輕的金發女士並沒有像我想象中那樣，丟下一句惡毒的咒罵便快步離開。她蹲下來，輕撫著我的後背，焦急地問我摔到了哪兒，痛不痛。那語氣似乎比我更慌張；見我沒有反應，她又換了更溫柔平緩的語氣，重復了一遍她的問題，但焦急仍從她輕微顫抖的手指傳來。\n我已經忘了我是如何回答她的——大概是對她說了「不痛」吧，否則她不會舒展開緊皺的眉頭，扶我起來，再和我一起撿起散落在地的布墊和花枝。\n「對不起。」她摸摸我的頭，「小妹妹，你喜歡什麽味的糖果？下次我帶些來給你，好嗎？」\n「草莓味。」我說。事實上我不應該要她的賠禮，因為我清楚地知道在那場相撞的「事故」中，沒有看清來人的是我。但我想起了我剛記事時，病榻上的母親念叨的最後一件事是，草莓硬糖放在櫥櫃的抽屜裡。但我打開櫥櫃的時候那裡什麽都沒有，後來我知道是我貪吃的哥哥把它們全拿走了。\n「草莓硬糖，我會記住。」金發女士說，抱起她的鮮花，朝著連廊的盡頭走去。她的個子中等偏高，很清瘦。下午的太陽照在她啞光的發卡上，暈出淡淡的金黃。\n我不知道她的名字，所以我在心中默默取了一個名字，草莓硬糖小姐。除了我的母親，沒有人再像草莓硬糖小姐那樣，問過我痛不痛。\n——蒂奧莉·斯通的日記",
+    ContentEN = "To reach the wards from the treatment wing at Riverside Hospital, one had to walk a long, narrow corridor.\nUnlike the other hospitals in Dismania, Riverside housed mostly patients with lingering chronic illnesses — the sort that brought no swift end, only slow suffering. These were not ailments that made corpses of people overnight, but over long years turned them into what the doctors came to call \"madmen.\"\nSince the age of seven, I'd been running back and forth along that corridor. My hands were quick, my feet quicker — faster even than most grown Solarian orderlies. And because all I ever asked for was a meal and a place to sleep, they graciously allowed me — a lowborn little Charon girl with horns on her head — to work in their domain. My tasks were almost always the lowest sort: hauling off soiled bedding, sweeping up shards of glass dropped by patients, dragging them to the washroom or the refuse yard. Now and then, a passing nurse would shove a crate of medicine or a bundle of vials into my arms to deliver. Most of the time, you'd find me staggering down that corridor with boxes taller than I was. They blocked my view, so I often bumped into people rushing past — and every time, I'd catch a torrent of curses for it.\nI once heard a bard in the square say Hyperboreans were the most short-tempered folk in all of Atlasia. If that's true, then by my reckoning, the ones at Riverside Hospital were the angriest of the lot — patients, doctors, nurses, even the kin who came to visit. Later I came to understand it was those long, drawn-out illnesses that drove them to the edge. But still, whenever someone barked at me, I'd raise a defiant middle finger at their retreating back.\nOnly once did someone bump into me and not curse, but apologise. Her name, I would learn much later, was Daphne Theodore.\nI remember it clearly. One afternoon, I was carrying a stack of underpads to the washroom when I collided at the far corner of the corridor with a young blonde woman. My underpads and her flowers both went flying, then scattered across the floor. Without missing a beat, I squatted down and wailed at the top of my lungs — louder than the most tormented patient. I wasn't hurt, not even upset about the mess. It was just a trick: if I howled like that, the adults who might scold or strike me would flinch and back off, like they'd brushed up against something filthy.\nBut the blonde woman didn't curse and scurry off like I expected. Instead, she knelt beside me, stroked my back with a gentle hand, and asked in a worried voice if I was hurt. She sounded more unsettled than I was. When I didn't reply, she tried again — even softer this time — though the tremble in her fingers gave her away.\nI don't remember what I said in reply — perhaps only, \"It doesn't hurt.\" Whatever it was, it eased the crease in her brow. She helped me to my feet, and together we picked up the scattered underpads and crushed flowers.\n\"I'm sorry,\" she said, giving my head a light pat. \"Little one, what flavour of sweets do you like? I'll bring you some next time, shall I?\"\n\"Strawberry,\" I told her. I shouldn't have accepted her apology — after all, it was me who hadn't been looking. But her question stirred something in me. I remembered the last thing my bedridden mother had murmured before she died: that there were strawberry boiled sweets in the cupboard drawer. When I looked, there was nothing. Only later did I find out my greedy brother had taken them all.\n\"Strawberry. I'll remember.\" The blonde woman gathered up her flowers and walked on toward the far end of the corridor. She was of middling height, slim and slight. The afternoon sun caught her matte hairpin, and for a moment it shimmered with a faint golden glow.\nI never knew her name, so in my heart I gave her one: Miss Strawberry Sweets.\nOther than my mother, no one had ever asked me so gently if I was in pain.\n \n— From the diary of Tiori Stone",
+    ContentJP = "カカン病院では、診療区から病棟へ行くには長い連絡廊下を通らなければならない。\n この病院に入院しているのは、ディズマニアの他の病院と違い、長く慢性的な病を抱えた患者ばかりだ。その病はすぐに命を奪うことはないが、時間をかけて心を蝕み、やがて医師たちが「狂気」と呼ぶものへと変えてしまう。\n 七歳の頃から、私はその廊下を走り回っていた。手先が早く、大人よりも働きが速かったから、食べ物と寝床さえあれば満足な私は、角を持つ卑しい子どもでありながら、彼らに働くことを許されたのだ。\n 仕事の大半は運搬だった。汚れた寝具や割れたガラス、薬剤の箱……背丈より高い荷物を抱え廊下を行き来するたび、前が見えずに人とぶつかり、そのたびに怒鳴り散らされた。\n ある吟遊詩人が「ヒュペリア人はアトラシアでもっとも気性が荒い」と歌っていたが、もしそれが真実なら、カカン病院の人々はその中でも群を抜いていた。患者も、医師も、看護師も、見舞いに来る親族までもが、例外なく苛立ちを抱えていたのだ。後になって、それが長く続く病の苦痛ゆえだと理解するようになったけれど、罵られた直後の私は、彼らの背中に中指を突き立てるしかなかった。\n そんな中で、唯一私を罵らなかった人がいる。ダフネ・セオドールだった。\n ある午後、洗濯物を抱えて廊下を曲がった瞬間、金髪の若い女性とぶつかり、私が持っていたシーツも、彼女が持っていた花束も宙を舞って落ちた。私は大げさに泣き叫んだ。痛くも悲しくもなかったけれど、そうすれば大人たちは毛嫌いして離れるとわかっていたからだ。\n だが、彼女は違った。しゃがみ込んで背中をさすり、「痛くないか」と慌てた声で尋ねてくれた。黙りこくった私に、今度は落ち着いた声で同じ問いを繰り返し、その手はかすかに震えていた。\n 私は「痛くない」と言ったのだろう。彼女はほっとして微笑み、私を立たせ、一緒にシーツと花を拾い集めてくれた。\n 「ごめんね」そう言って、私の頭を撫でたあとに尋ねた。\n 「君、どんな味のキャンディが好き？」\n 「いちご味」私は答えた。母が最後に言い残したのは、いちごのキャンディが戸棚にある、だったからだ。けれど実際には、そこには何も残っていなかった。兄が全部食べてしまったのだ。\n 「いちごキャンディね。覚えておくわ」\n そう言って花を抱え、金髪の女性は去っていった。彼女の背丈はそれほど高くなく、体つきも細かった。午後の光が髪飾りに反射し、柔らかな金色をにじませていた。\n 私はその人の名を知らなかった。だから心の中で、「いちごキャンディーのお嬢さん」と呼ぶことにした。母を除けば、あの人だけが私に「痛くないか」と声をかけてくれたのだから。\n ——ティオリ・ストーンの日記",
+    ContentKR = "리버랜드 병원의 진료 구역에서 병동으로 이동하려면 긴 복도를 지나야 한다.\n 디즈마니아의 다른 병원과는 달리, 리버랜드 병원에 입원한 환자들은 대부분 고통스럽지만 치명적이지 않은 만성 질환을 앓고 있다. 이러한 질환은 생명을 위협하진 않지만, 시간이 흐를수록 의사들의 말처럼 사람을 '미치게' 만든다.\n 나는 7살 때부터 그 복도를 분주하게 움직였다. 그때의 나는 대부분의 성인 솔라 간병인보다 훨씬 더 재빨랐고, 몸 뉠 곳과 주린 배를 채울 끼니만 있으면 되었기에, 머리에 뿔이 난 천한 소녀임에도 솔라들의 구역에서 일하는 것을 허락받을 수 있었다. 대단한 자비라도 되는 듯이 말이다. 내 일은 대부분 짐을 옮기는 일이었다. 더러워진 이불부터 환자가 깨뜨린 유리까지, 모두 깨끗하게 정리하고 세면실이나 쓰레기장으로 옮겨야 했다. 물론 간호사의 약품 운반 심부름도 흔했다. 따라서 대부분의 시간, 나는 내 키보다 더 큰 종이 상자를 안고 긴 복도를 가로지르곤 했다. 시야를 가리는 상자 탓에 바삐 오가는 사람들과 부딪히기 일쑤였고, 그러면 곧장 욕설이 쏟아졌다.\n 언젠가 광장에서 한 음유시인의 불평을 들은 적이 있다. 모든 아트라시아인 중, 휘페르보레아 제국인이 가장 난폭하다는 것이었다. 그 말이 사실이라면, 내 보잘것없는 경험담으로 미루어 보건대, 리버랜드 병원의 사람들은 분노조절장애 중에서도 중증 환자일 것이다. 환자부터 의사, 간호사, 병문안을 온 가족들까지 전부 그랬다. 시간이 지나면서, 모두를 히스테릭하게 만든 건 바로 그 길고도 고통스러운 질환임을 깨달았지만, 난 그래도 내게 욕설을 퍼부은 사람들의 등 뒤에 가운뎃손가락을 세우곤 했다.\n 다프네 세오도어는 나와 부딪힌 뒤 욕설 대신 오히려 사과를 건넨 유일한 사람이었다. 그날 오후는 또렷하게 기억난다. 평소처럼 시트를 들고 세면실로 향하던 중, 복도 모퉁이에서 젊은 금발 여성과 부딪혔다. 들고 있던 시트와 그녀의 꽃다발이 붕 뜨더니 이내 바닥으로 떨어졌다. 나는 바닥에 주저앉아 중증 통증 환자처럼 목이 터져라 울었다. 당연한 말이지만 부딪혀서 아픈 것도 아니었고, 일을 망쳤다는 사실 때문에 슬픈 것도 전혀 아니었다. 굳이 따지자면 내 작은 꼼수랄까? 내가 이렇게 엉엉 울어 버리면, 날 욕하거나 때리려던 어른들은 더러운 것이라도 본 것처럼, 황급히 자리를 피하곤 했기 때문이다.\n 하지만 그 젊은 금발 여성은 예상과 달랐다. 그녀는 욕설을 퍼붓고 자리를 떠나기는커녕, 초조한 표정으로 쪼그리고 앉았다. 그리곤 내 등을 가볍게 어루만지며 어디를 다쳤는지, 아프진 않은지 물었다. 나보다 오히려 더 당황한 듯한 그 말투였다. 내가 아무런 반응이 없자, 그녀는 더 부드럽고 차분한 어조로 다시 한번 질문했지만, 손끝은 여전히 초조하게 떨리고 있었다.\n 그녀의 질문에 뭐라고 대답을 했는지는 더 이상 기억 나지 않는다. 아마 \"안 아파요\"라고 하지 않았을까? 그렇지 않았다면, 그녀가 찌푸린 미간을 펴지 않았을 테니 말이다. 그녀는 날 일으켜 세우곤 나와 함께 바닥에 흩어진 시트와 꽃가지를 주웠다.\n \"미안.\" 그녀는 내 머리를 쓰다듬으며 물었다. \"꼬마야, 무슨 맛 사탕 좋아해? 다음에 올 때 가져다줄게. 응?\"\n \"딸기 맛이요.\" 사실 사과의 선물을 받을 처지가 아니었다. 방금 서로 부딪혔을 때, 상대를 보지 못한 쪽은 명백히 나였기 때문이다. 하지만 그 순간, 막 철이 들었을 무렵, 병석에 누워계신 어머니가 마지막으로 반복하시던 말이 떠올랐다. \"천장 서랍 안에 딸기 맛 사탕을 넣어뒀단다.\" 하지만 서랍을 열었을 때는 아무것도 남아있지 않았다. 식탐 많은 오빠가 사탕을 전부 가져갔던 것이다.\n \"딸기 맛 사탕, 기억해 둘게.\" 금발의 여성은 그렇게 말하며, 꽃다발을 들고 복도 끝을 향해 걸어갔다. 평균보다 키가 크고, 마른 편이었다. 오후의 햇살이 그녀의 매트한 질감의 머리핀을 희미한 금빛으로 물들이고 있었다.\n 그녀의 이름을 몰랐기에, 나는 마음속으로 그녀를 '딸기 맛 사탕 아가씨'라고 불렀다. 어디가 아프냐고 내게 물어봐 준 사람은, 어머니를 제외하면 그녀가 유일했다.\n \n —— 티오리 스톤의 일기",
+    ContentTC = "從河間醫院的診療區到病房區，要穿過一條長長的連廊。\n和迪斯瑪尼亞其他醫院不同，河間醫院住著的大多是一些長期慢性疾病患者。那些病通常痛苦卻不致命，它們不會快速讓人們變成屍體，卻在漫長的時間裡讓他們變成醫生們口中的「瘋子」。\n從7歲開始，我就在那條連廊上奔忙。由於我的手腳很勤快，比大多數索拉成年護工都快得多，再加上我只要有口飯有地方睡就好，所以他們仁慈地允許我——一個頭上長著角的卑賤小女孩在他們的地盤工作。我的工作通常是搬運——從弄髒的被褥到病人打翻的碎玻璃，都由我來打掃清理，再搬到盥洗室或垃圾場。也常有護士順手讓我幫他們搬運藥劑。所以絕大多數時間內，我都抱著比人還高的紙箱在連廊上穿行，它們遮蔽了我的視線，因此我時不時撞上同樣行色匆忙的人，隨之而來的便是一頓劈頭蓋臉的辱罵。\n我曾在廣場上聽一位旅行的吟遊詩人抱怨海伯利亞人是所有阿特拉西亞人中最暴躁的。如果這是事實，那麼在我貧瘠的見識中，河間醫院的人們就是暴躁狂中的暴躁狂，從病人，到醫生和護士，再到探視他們的親人，無一例外。儘管隨著時間的推移我逐漸明白，是那些漫長而痛苦的疾病讓所有人變得歇斯底裡，我還是會在被辱罵一頓後，朝他們的背影狠狠比中指。\n達芙涅·塞奧多爾是唯一一個與我撞上後沒有罵我，反而向我道歉的人。我清楚地記得那是一個下午，我熟練地搬著一疊布墊打算送去盥洗室時，在連廊盡頭的拐角處撞上了一個人——似乎是一位年輕的金發女士——我手裡的布墊和那人手裡的鮮花都在瞬間飛到天上，再重重落下。於是我蹲在地上扯著嗓子大哭起來，嚎叫得和最疼的病人一樣響亮。事實上我並沒有摔疼，也沒有因為搞砸了工作有一丁點兒的悲傷，這只是我的小小計倆：每當我這樣哭嚎起來的時候，那些原本想要辱罵或者毆打我的大人就會像碰到了不乾淨的東西一樣，不再與我糾纏。\n但年輕的金發女士並沒有像我想象中那樣，丟下一句惡毒的咒罵便快步離開。她蹲下來，輕撫著我的後背，焦急地問我摔到了哪兒，痛不痛。那語氣似乎比我更慌張；見我沒有反應，她又換了更溫柔平緩的語氣，重複了一遍她的問題，但焦急仍從她輕微顫抖的手指傳來。\n我已經忘了我是如何回答她的——大概是對她說了「不痛」吧，否則她不會舒展開緊皺的眉頭，扶我起來，再和我一起撿起散落在地的布墊和花枝。\n「對不起。」她摸摸我的頭，「小妹妹，你喜歡什麼味的糖果？下次我帶些來給你，好嗎？」\n「草莓味。」我說。事實上我不應該要她的賠禮，因為我清楚地知道在那場相撞的「事故」中，沒有看清來人的是我。但我想起了我剛記事時，病榻上的母親念叨的最後一件事是，草莓硬糖放在櫥櫃的抽屜裡。但我打開櫥櫃的時候那裡什麼都沒有，後來我知道是我貪吃的哥哥把它們全拿走了。\n「草莓硬糖，我會記住。」金發女士說，抱起她的鮮花，朝著連廊的盡頭走去。她的個子中等偏高，很清瘦。下午的太陽照在她啞光的發卡上，暈出淡淡的金黃。\n我不知道她的名字，所以我在心中默默取了一個名字，草莓硬糖小姐。除了我的母親，沒有人再像草莓硬糖小姐那樣，問過我痛不痛。\n\n——蒂奧莉·斯通的日記",
     TextMapContent = "从河间医院的诊疗区到病房区，要穿过一条长长的连廊。\n和迪斯玛尼亚其他医院不同，河间医院住着的大多是一些长期慢性疾病患者。那些病通常痛苦却不致命，它们不会快速让人们变成尸体，却在漫长的时间里让他们变成医生们口中的“疯子”。\n从7岁开始，我就在那条连廊上奔忙。由于我的手脚很勤快，比大多数索拉成年护工都快得多，再加上我只要有口饭有地方睡就好，所以他们仁慈地允许我——一个头上长着角的卑贱小女孩在他们的地盘工作。我的工作通常是搬运——从弄脏的被褥到病人打翻的碎玻璃，都由我来打扫清理，再搬到盥洗室或垃圾场。也常有护士顺手让我帮他们搬运药剂。所以绝大多数时间内，我都抱着比人还高的纸箱在连廊上穿行，它们遮蔽了我的视线，因此我时不时撞上同样行色匆忙的人，随之而来的便是一顿劈头盖脸的辱骂。\n我曾在广场上听一位旅行的吟游诗人抱怨海伯利亚人是所有阿特拉西亚人中最暴躁的。如果这是事实，那么在我贫瘠的见识中，河间医院的人们就是暴躁狂中的暴躁狂，从病人，到医生和护士，再到探视他们的亲人，无一例外。尽管随着时间的推移我逐渐明白，是那些漫长而痛苦的疾病让所有人变得歇斯底里，我还是会在被辱骂一顿后，朝他们的背影狠狠比中指。\n达芙涅·塞奥多尔是唯一一个与我撞上后没有骂我，反而向我道歉的人。我清楚地记得那是一个下午，我熟练地搬着一叠布垫打算送去盥洗室时，在连廊尽头的拐角处撞上了一个人——似乎是一位年轻的金发女士——我手里的布垫和那人手里的鲜花都在瞬间飞到天上，再重重落下。于是我蹲在地上扯着嗓子大哭起来，嚎叫得和最疼的病人一样响亮。事实上我并没有摔疼，也没有因为搞砸了工作有一丁点儿的悲伤，这只是我的小小计俩：每当我这样哭嚎起来的时候，那些原本想要辱骂或者殴打我的大人就会像碰到了不干净的东西一样，不再与我纠缠。\n但年轻的金发女士并没有像我想象中那样，丢下一句恶毒的咒骂便快步离开。她蹲下来，轻抚着我的后背，焦急地问我摔到了哪儿，痛不痛。那语气似乎比我更慌张；见我没有反应，她又换了更温柔平缓的语气，重复了一遍她的问题，但焦急仍从她轻微颤抖的手指传来。\n我已经忘了我是如何回答她的——大概是对她说了“不痛”吧，否则她不会舒展开紧皱的眉头，扶我起来，再和我一起捡起散落在地的布垫和花枝。\n“对不起。”她摸摸我的头，“小妹妹，你喜欢什么味的糖果？下次我带些来给你，好吗？”\n“草莓味。”我说。事实上我不应该要她的赔礼，因为我清楚地知道在那场相撞的“事故”中，没有看清来人的是我。但我想起了我刚记事时，病榻上的母亲念叨的最后一件事是，草莓硬糖放在橱柜的抽屉里。但我打开橱柜的时候那里什么都没有，后来我知道是我贪吃的哥哥把它们全拿走了。\n“草莓硬糖，我会记住。”金发女士说，抱起她的鲜花，朝着连廊的尽头走去。她的个子中等偏高，很清瘦。下午的太阳照在她哑光的发卡上，晕出淡淡的金黄。\n我不知道她的名字，所以我在心中默默取了一个名字，草莓硬糖小姐。除了我的母亲，没有人再像草莓硬糖小姐那样，问过我痛不痛。\n\n——蒂奥莉·斯通的日记",
     TextMapId = "UI_CHAR_DATA_TEXT_54010201"
   },
   UI_CHAR_DATA_TEXT_54010202 = {
-    ContentEN = "The second time I met Daphne Theodore, I was being scolded by a young nurse named Madeleine. She grabbed me by the collar like I was some stray kitten, lifting me clean off the floor. I'd had no idea she was that strong. She shouted in my face, demanding to know why I'd brought her the wrong medicine.\nI couldn't read, but I remembered every label by the shape of its letters — and beyond that, I recognised each medicine by its colour. Lots of medicines were blue, but only this one had that bright, glassy blue — the same shade as Phoxichor.\nI denied the accusation, but Nurse Madeleine raised her hand to strike me. I shut my eyes, wondering whether silence or sobbing might spare me another slap. But the first one never came. When I opened my eyes, the hand clutching my collar had been pried loose — her wrist caught fast in a slender, elegant hand.\nIt was Miss Strawberry Sweets.\n\"Pardon me. I couldn't help but overhear your quarrel. Madam — before reproaching this Charon child, might I first see the medicine in question?\"\nNurse Madeleine tried to jerk her arm free, but Miss Strawberry Sweets's slender fingers held fast with surprising strength. With a muttered curse, the nurse shoved the vial into her hand.\nShe held it up, gave it a slow swirl, then pulled the stopper and took a careful sniff.\n\"There's no mistake. The girl gave you the correct medicine. This is AP-1718, as the label clearly states. You shouldn't lie in front of a child who cannot read.\"\n\"That's not the right colour for AP-1718! This little twerp switched the labels!\" Madeleine shrieked. \"She's been sulking ever since her last punishment — trying to trip me up!\"\n\"The Alchemy Academy recently revised the formula. The latest batch differs from what you remember.\" She lifted her gaze, meeting the nurse's furious stare. \"Rather than accusing an innocent child, Madam... perhaps you should spend more time familiarising yourself with your own medicines.\"\n\"What new formula? You're just here visiting someone — how would you know? Who's to say you're not just covering for this little twerp?\"\n\"Oh, I know very well,\" she replied calmly. \"My name is Daphne Theodore. AP-1718 was developed under my supervision. Here — this is my insignia from the Alchemy Academy. I trust you recognise it.\"\n\n— From the diary of Dewiolee Stone",
-    ContentJP = "二度目にダフネ・セオドールに出会ったとき、私は若い看護師マドレーヌに罵られていた。彼女は子羊をつかむみたいに私の襟首をつかんで持ち上げ、それまで彼女にそんな驚くべき腕力があるとは知らなかった。その時、彼女はどうして自分の求めた薬剤を取り違えたのかと私を詰問していた。\n私は字が読めない。だが、各薬品ラベルの文字がどんな形かはしっかり覚えている。まして、その薬剤の色ははっきり覚えていた。新薬で、青い薬剤はいろいろあるけれど、その薬だけは美しく澄み切った瑠璃色で、イコル液と同じ色だった。\n私が頑として自分の過失を否定すると、マドレーヌ看護師は腕を大きく振りかぶった。私は目をつむり、この場は黙るべきかそれとも大泣きするべきか、どちらが平手打ちを減らせるかを素早く考えた。けれど平手は落ちてこなかった。代わりに、私の襟をつかんでいた手が先に離れた。目を開けると、その平手は細く長い指の手にぎゅっとつかまれていた。\nいちごキャンディーのお嬢さん。\n「失礼、偶然お二人の口論が耳に入ってしまって。こちらのカロンの子を責める前に、あなたの薬剤を先に見せていただけますか？」\nマドレーヌ看護師は彼女を振りほどこうとしたが、いちごキャンディーのお嬢さんの痩せた手も意外に力が強いらしく、ぶつぶつ言いながら薬瓶を彼女に渡さざるをえなかった。\n彼女はそのうちの一本を取り出し、数度振ってからコルク栓を抜き、そっと匂いを確かめた。\n「疑いようもなく、この子があなたに渡した薬は正確です。AP-1718 です。ラベルにもきちんと書いてあります。字の読めない子の前で嘘をつくべきではありません。」\n「AP-1718 はこんな色じゃない！この小娘がラベルをすり替えたのよ！」とマドレーヌ看護師は甲高く叫んだ。「前に懲らしめられた腹いせで、わざと私を陥れてるの！」\n「錬金院が最近その処方を改良しました。だから新しいロットの薬剤の性状は、あなたの記憶しているものといくつも違っています。無辜の子を責めるより、私は――」彼女は顔を上げ、怒りに燃える看護師の目をまっすぐ見据えた。「ご自身の仕事の研鑽にもっと精力を注ぐべきだと思います。」\n「何の新処方よ、患者の家族のくせに、あなたに何がわかるの！」彼女は顔を真っ赤にした。「このガキをかばうための出まかせかもしれないじゃない！」\n「もちろん知っています、奥さま。」彼女は言った。「私はダフネ・セオドール。AP-1718 は私の主導で開発されました。これはサーベル錬金院の記章です。お見覚えがあるはずです。」\n\n——ティオリ・ストーンの日記",
-    ContentKR = "다프네 세오도어를 두 번째로 만난 날, 나는 매들린이라는 젊은 간호사에게 멱살을 잡힌 채 욕을 먹고 있었다. 팔 힘이 얼마나 좋은지, 매들린은 새끼 양을 들어 올리듯 나를 휙 일으켜 세우더니, 어째서 엉뚱한 약을 가져왔냐며 쏘아붙였다.\n난 글자는 몰라도, 약품 라벨에 적혀 있는 글자들의 형태와 그 신약이 어떤 색이었는지는 또렷이 기억하고 있었다. 파란색 약은 많아도, 액체 폭시코르처럼 맑고 예쁜 푸른빛의 약은 그것뿐이었으니까.\n내가 잘못한 게 없다고 버티자, 매들린이 손을 번쩍 치켜들었다. 나는 눈을 질끈 감고 조용히 있는 게 나을지, 차라리 우는 게 나을지, 어떻게 해야 뺨을 한 대라도 덜 맞을 수 있을지 머리를 굴리고 있었다. 그러나 따귀가 날아오는 대신, 멱살을 움켜쥔 손에 힘이 풀렸다. 눈을 뜨자, 가늘고 긴 손 하나가 매들린의 손목을 단단히 붙잡고 있었다.\n딸기 사탕 아가씨였다.\n\"죄송하지만, 어쩌다 보니 다투는 걸 듣게 돼서요. 이 카론 아이한테 뭐라고 하시기 전에, 제가 그 약 좀 봐도 될까요?\"\n매들린은 딸기 사탕 아가씨의 손을 뿌리치려 했지만, 보기보다 단단히 붙잡힌 모양인지 투덜거리며 약병을 건넸다.\n딸기 사탕 아가씨는 약병 하나를 꺼내 몇 번 흔든 후, 코르크 마개를 열고 가볍게 향을 맡았다.\n\"이 꼬마 아가씨가 맞게 가져왔네요. AP-1718이 확실해요. 라벨에도 그렇게 적혀 있고요. 글도 못 읽는 아이 앞에서 거짓말하시면 안 되죠.\"\n\"AP-1718은 이런 색이 아니거든요! 이 꼬맹이가 라벨을 바꿔치기한 거예요!\" 매들린이 악을 썼다. \"저번에 혼 좀 낸 걸 가지고, 절 골탕 먹이려는 거라니까요!\"\n\"연금원에서 얼마 전에 조합법을 변경해서, 새로 나온 약은 간호사님 기억이랑 조금 다를 수 있어요. 그래도 죄 없는 아이를 탓하기보단...\" 딸기 사탕 아가씨는 고개를 들고 분노에 찬 간호사의 눈을 바라보며 말했다. \"본인 업무에 조금 더 신경을 쓰시는 편이 좋겠네요.\"\n\"새로운 조합법이요? 환자 보호자가 뭘 안다고 그래요!\" 매들린의 얼굴이 시뻘게졌다. \"이 꼬맹이 편들어 주려고 그러는 거 아닌가요!\"\n\"모를 수가 없죠, 간호사님.\" 딸기 사탕 아가씨가 말을 이었다. \"전 다프네 세오도어예요. AP-1718은 제가 주도한 연구고, 이건 소드 연금원의 명찰이에요. 아마 아시겠지만요.\"\n\n—— 디올리 스톤의 일기",
-    ContentTC = "第二次遇到達芙涅·塞奧多爾時，我正在被一位年輕的護士瑪德琳辱罵。她像抓一隻小羊羔那樣抓著我的領子把我拎起來，在那之前我不知道她有如此驚人的臂力；彼時彼刻，她正在質問我，為什麼搬錯了她需要的藥劑。\n我不認識字，但我牢牢地記住了每一種藥品標籤上的文字是什麼圖形。更何況，我清楚地記得那種藥劑的顏色，那是一種新藥，雖然藍色的藥劑有很多，但只有那種藥劑是漂亮而澄澈的湛藍色，和月髓液是同樣的顏色。\n見我矢口否認自己的過失，瑪德琳護士掄圓了胳膊。我閉上眼，快速思考此時此刻是應該選擇沉默還是應該選擇大哭，哪個可以讓我少挨些耳光。但她的巴掌並沒有落下來，反而是揪著我衣領的那隻手先鬆開了。我睜開眼，她的巴掌被一隻纖細修長的手緊緊握住。\n草莓硬糖小姐。\n「抱歉，無意間聽到你們的爭執。女士，在責問這個卡戎小孩子前，可否讓我先看一下您的藥劑？」\n瑪德琳護士試圖甩開她，但草莓硬糖小姐消瘦的手似乎也有著不弱的力道，這讓她不得不嘟嘟囔囔著把藥劑瓶交給她。\n她拿出其中一瓶，搖晃了幾下，又打開木塞蓋子，輕輕嗅了嗅。\n「毫無疑問，這位小妹妹拿給您的藥劑準確無誤，它就是AP-1718。標籤上也好好地寫著，您不該在這個不識字的小孩子面前說謊。」\n「AP-1718不是這個顏色！是這小崽種調換了標籤！」瑪德琳護士尖聲，「她就是上次挨了教訓，就故意害我！」\n「煉金院最近改進了它的配方，所以新一批的藥劑性狀會與您記憶中的所有差異。女士，相比責怪無辜的孩子，我想……」她抬起頭，直視著護士冒著怒火的眼睛，「您應該把更多精力放在精進自己的工作上。」\n「什麼新配方，你一個病人家屬怎麼知道！」她漲紅了臉，「誰知道你是不是為了護著這個小崽子胡說八道！」\n「我當然知道，女士。」她說，「我叫達芙涅·塞奧多爾，AP-1718正是由我主導研發。這是佩劍煉金院的銘牌，想必您認得。」\n——蒂奧莉·斯通的日記",
+    ContentEN = "The second time I met Daphne Theodore, I was being scolded by a young nurse named Madeleine. She grabbed me by the collar like I was some stray kitten, lifting me clean off the floor. I'd had no idea she was that strong. She shouted in my face, demanding to know why I'd brought her the wrong medicine.\nI couldn't read, but I remembered every label by the shape of its letters — and beyond that, I recognised each medicine by its colour. Lots of medicines were blue, but only this one had that bright, glassy blue — the same shade as Phoxichor.\nI denied the accusation, but Nurse Madeleine raised her hand to strike me. I shut my eyes, wondering whether silence or sobbing might spare me another slap. But the first one never came. When I opened my eyes, the hand clutching my collar had been pried loose — her wrist caught fast in a slender, elegant hand.\nIt was Miss Strawberry Sweets.\n\"Pardon me. I couldn't help but overhear your quarrel. Madam — before reproaching this Charon child, might I first see the medicine in question?\"\nNurse Madeleine tried to jerk her arm free, but Miss Strawberry Sweets's slender fingers held fast with surprising strength. With a muttered curse, the nurse shoved the vial into her hand.\nShe held it up, gave it a slow swirl, then pulled the stopper and took a careful sniff.\n\"There's no mistake. The girl gave you the correct medicine. This is AP-1718, as the label clearly states. You shouldn't lie in front of a child who cannot read.\"\n\"That's not the right colour for AP-1718! This little twerp switched the labels!\" Madeleine shrieked. \"She's been sulking ever since her last punishment — trying to trip me up!\"\n\"The Alchemy Academy recently revised the formula. The latest batch differs from what you remember.\" She lifted her gaze, meeting the nurse's furious stare. \"Rather than accusing an innocent child, Madam... perhaps you should spend more time familiarising yourself with your own medicines.\"\n\"What new formula? You're just here visiting someone — how would you know? Who's to say you're not just covering for this little twerp?\"\n\"Oh, I know very well,\" she replied calmly. \"My name is Daphne Theodore. AP-1718 was developed under my supervision. Here — this is my insignia from the Alchemy Academy. I trust you recognise it.\"\n \n— From the diary of Tiori Stone",
+    ContentJP = "二度目にダフネ・セオドールに出会ったとき、私は若い看護師マドレーヌに罵られていた。彼女は子羊をつかむみたいに私の襟首をつかんで持ち上げ、それまで彼女にそんな驚くべき腕力があるとは知らなかった。その時、彼女はどうして自分の求めた薬剤を取り違えたのかと私を詰問していた。\n 私は字が読めない。だが、各薬品ラベルの文字がどんな形かはしっかり覚えている。まして、その薬剤の色ははっきり覚えていた。新薬で、青い薬剤はいろいろあるけれど、その薬だけは美しく澄み切った瑠璃色で、イコル液と同じ色だった。\n 私が頑として自分の過失を否定すると、マドレーヌ看護師は腕を大きく振りかぶった。私は目をつむり、この場は黙るべきかそれとも大泣きするべきか、どちらが平手打ちを減らせるかを素早く考えた。けれど平手は落ちてこなかった。代わりに、私の襟をつかんでいた手が先に離れた。目を開けると、その平手は細く長い指の手にぎゅっとつかまれていた。\n いちごキャンディーのお嬢さん。\n 「失礼、偶然お二人の口論が耳に入ってしまって。こちらのカロンの子を責める前に、あなたの薬剤を先に見せていただけますか？」\n マドレーヌ看護師は彼女を振りほどこうとしたが、いちごキャンディーのお嬢さんの痩せた手も意外に力が強いらしく、ぶつぶつ言いながら薬瓶を彼女に渡さざるをえなかった。\n 彼女はそのうちの一本を取り出し、数度振ってからコルク栓を抜き、そっと匂いを確かめた。\n 「疑いようもなく、この子があなたに渡した薬は正確です。AP-1718 です。ラベルにもきちんと書いてあります。字の読めない子の前で嘘をつくべきではありません。」\n 「AP-1718 はこんな色じゃない！この小娘がラベルをすり替えたのよ！」とマドレーヌ看護師は甲高く叫んだ。「前に懲らしめられた腹いせで、わざと私を陥れてるの！」\n 「錬金院が最近その処方を改良しました。だから新しいロットの薬剤の性状は、あなたの記憶しているものといくつも違っています。無辜の子を責めるより、私は――」彼女は顔を上げ、怒りに燃える看護師の目をまっすぐ見据えた。「ご自身の仕事の研鑽にもっと精力を注ぐべきだと思います。」\n 「何の新処方よ、患者の家族のくせに、あなたに何がわかるの！」彼女は顔を真っ赤にした。「このガキをかばうための出まかせかもしれないじゃない！」\n 「もちろん知っています、奥さま。」彼女は言った。「私はダフネ・セオドール。AP-1718 は私の主導で開発されました。これはサーベル錬金院の記章です。お見覚えがあるはずです。」\n \n ——ティオリ・ストーンの日記",
+    ContentKR = "다프네 세오도어를 두 번째로 만난 날, 나는 매들린이라는 젊은 간호사에게 멱살을 잡힌 채 욕을 먹고 있었다. 팔 힘이 얼마나 좋은지, 매들린은 새끼 양을 들어 올리듯 나를 휙 일으켜 세우더니, 어째서 엉뚱한 약을 가져왔냐며 쏘아붙였다.\n난 글자는 몰라도, 약품 라벨에 적혀 있는 글자들의 형태와 그 신약이 어떤 색이었는지는 또렷이 기억하고 있었다. 파란색 약은 많아도, 액체 폭시코르처럼 맑고 예쁜 푸른빛의 약은 그것뿐이었으니까.\n내가 잘못한 게 없다고 버티자, 매들린이 손을 번쩍 치켜들었다. 나는 눈을 질끈 감고 조용히 있는 게 나을지, 차라리 우는 게 나을지, 어떻게 해야 뺨을 한 대라도 덜 맞을 수 있을지 머리를 굴리고 있었다. 그러나 따귀가 날아오는 대신, 멱살을 움켜쥔 손에 힘이 풀렸다. 눈을 뜨자, 가늘고 긴 손 하나가 매들린의 손목을 단단히 붙잡고 있었다.\n딸기 사탕 아가씨였다.\n\"죄송하지만, 어쩌다 보니 다투는 걸 듣게 돼서요. 이 카론 아이한테 뭐라고 하시기 전에, 제가 그 약 좀 봐도 될까요?\"\n매들린은 딸기 사탕 아가씨의 손을 뿌리치려 했지만, 보기보다 단단히 붙잡힌 모양인지 투덜거리며 약병을 건넸다.\n딸기 사탕 아가씨는 약병 하나를 꺼내 몇 번 흔든 후, 코르크 마개를 열고 가볍게 향을 맡았다.\n\"이 꼬마 아가씨가 맞게 가져왔네요. AP-1718이 확실해요. 라벨에도 그렇게 적혀 있고요. 글도 못 읽는 아이 앞에서 거짓말하시면 안 되죠.\"\n\"AP-1718은 이런 색이 아니거든요! 이 꼬맹이가 라벨을 바꿔치기한 거예요!\" 매들린이 악을 썼다. \"저번에 혼 좀 낸 걸 가지고, 절 골탕 먹이려는 거라니까요!\"\n\"연금원에서 얼마 전에 조합법을 변경해서, 새로 나온 약은 간호사님 기억이랑 조금 다를 수 있어요. 그래도 죄 없는 아이를 탓하기보단...\" 딸기 사탕 아가씨는 고개를 들고 분노에 찬 간호사의 눈을 바라보며 말했다. \"본인 업무에 조금 더 신경을 쓰시는 편이 좋겠네요.\"\n\"새로운 조합법이요? 환자 보호자가 뭘 안다고 그래요!\" 매들린의 얼굴이 시뻘게졌다. \"이 꼬맹이 편들어 주려고 그러는 거 아닌가요!\"\n\"모를 수가 없죠, 간호사님.\" 딸기 사탕 아가씨가 말을 이었다. \"전 다프네 세오도어예요. AP-1718은 제가 주도한 연구고, 이건 소드 연금원의 명찰이에요. 아마 아시겠지만요.\"\n \n—— 디올리 스톤의 일기",
+    ContentTC = "第二次遇到達芙涅・塞奧多爾時，我正在被一位年輕的護士瑪德琳辱罵。她像抓一隻小羊羔那樣抓著我的領子把我拎起來，在那之前我不知道她有如此驚人的臂力；彼時彼刻，她正在質問我，為什麼搬錯了她需要的藥劑。\n我不認識字，但我牢牢地記住了每一種藥品標籤上的文字是什麼圖形。更何況，我清楚地記得那種藥劑的顏色，那是一種新藥，雖然藍色的藥劑有很多，但只有那種藥劑是漂亮而澄澈的湛藍色，和月髓液是同樣的顏色。\n見我矢口否認自己的過失，瑪德琳護士掄圓了胳膊。我閉上眼，快速思考此時此刻是應該選擇沉默還是應該選擇大哭，哪個可以讓我少挨些耳光。但她的巴掌並沒有落下來，反而是揪著我衣領的那隻手先鬆開了。我睜開眼，她的巴掌被一隻纖細修長的手緊緊握住。\n草莓硬糖小姐。\n「抱歉，無意間聽到你們的爭執。女士，在責問這個卡戎小孩子前，可否讓我先看一下您的藥劑？」\n瑪德琳護士試圖甩開她，但草莓硬糖小姐消瘦的手似乎也有著不弱的力道，這讓她不得不嘟嘟囔囔著把藥劑瓶交給她。\n她拿出其中一瓶，搖晃了幾下，又打開木塞蓋子，輕輕嗅了嗅。\n「毫無疑問，這位小妹妹拿給您的藥劑準確無誤，它就是 AP-1718。標籤上也好好地寫著，您不該在這個不識字的小孩子面前說謊。」\n「AP-1718 不是這個顏色！是這小崽種調換了標籤！」 瑪德琳護士尖聲，「她就是上次挨了教訓，就故意害我！」\n「煉金院最近改進了它的配方，所以新一批的藥劑性狀會與您記憶中的所有差異。女士，相比責怪無辜的孩子，我想……」她抬起頭，直視著護士冒著怒火的眼睛，「您應該把更多精力放在精進自己的工作上。」\n「什麼新配方，你一個病人家屬怎麼知道！」她漲紅了臉，「誰知道你是不是為了護著這個小崽子胡說八道！」\n「我當然知道，女士。」她說，「我叫達芙涅・塞奧多爾，AP-1718 正是由我主導研發。這是佩劍煉金院的銘牌，想必您認得。」\n\n—— 蒂奧莉・斯通的日記",
     TextMapContent = "第二次遇到达芙涅·塞奥多尔时，我正在被一位年轻的护士玛德琳辱骂。她像抓一只小羊羔那样抓着我的领子把我拎起来，在那之前我不知道她有如此惊人的臂力；彼时彼刻，她正在质问我，为什么搬错了她需要的药剂。\n我不认识字，但我牢牢地记住了每一种药品标签上的文字是什么图形。更何况，我清楚地记得那种药剂的颜色，那是一种新药，虽然蓝色的药剂有很多，但只有那种药剂是漂亮而澄澈的湛蓝色，和月髓液是同样的颜色。\n见我矢口否认自己的过失，玛德琳护士抡圆了胳膊。我闭上眼，快速思考此时此刻是应该选择沉默还是应该选择大哭，哪个可以让我少挨些耳光。但她的巴掌并没有落下来，反而是揪着我衣领的那只手先松开了。我睁开眼，她的巴掌被一只纤细修长的手紧紧握住。\n草莓硬糖小姐。\n“抱歉，无意间听到你们的争执。女士，在责问这个卡戎小孩子前，可否让我先看一下您的药剂？”\n玛德琳护士试图甩开她，但草莓硬糖小姐消瘦的手似乎也有着不弱的力道，这让她不得不嘟嘟囔囔着把药剂瓶交给她。\n她拿出其中一瓶，摇晃了几下，又打开木塞盖子，轻轻嗅了嗅。\n“毫无疑问，这位小妹妹拿给您的药剂准确无误，它就是AP-1718。标签上也好好地写着，您不该在这个不识字的小孩子面前说谎。”\n“AP-1718不是这个颜色！是这小崽种调换了标签！” 玛德琳护士尖声，“她就是上次挨了教训，就故意害我！”\n“炼金院最近改进了它的配方，所以新一批的药剂性状会与您记忆中的所有差异。女士，相比责怪无辜的孩子，我想……”她抬起头，直视着护士冒着怒火的眼睛，“您应该把更多精力放在精进自己的工作上。”\n“什么新配方，你一个病人家属怎么知道！”她涨红了脸，“谁知道你是不是为了护着这个小崽子胡说八道！”\n“我当然知道，女士。”她说，“我叫达芙涅·塞奥多尔，AP-1718正是由我主导研发。这是佩剑炼金院的铭牌，想必您认得。”\n\n——蒂奥莉·斯通的日记",
     TextMapId = "UI_CHAR_DATA_TEXT_54010202"
   },
   UI_CHAR_DATA_TEXT_54010203 = {
-    ContentEN = "The day Daphne Theodore saved me from the nasty nurse, I was so happy I thought I might burst. She gave me some boiled sweets — I tore off the wrappers, stuffed a few into my mouth, and pulled faces at Madeleine's back as she slunk away.\n\n\"What's your name?\" Daphne asked, as we sat together on the bench outside the ward.\n\"Dewiolee.\"\n\"Do you know how it's spelled?\"\nI shook my head. She picked up a twig and traced a few letters in the sand.\n\"This is your name. It means 'Dewiolet.'\"\nFor most of my life, my name had only ever come paired with words like \"twerp\" or \"lowborn wretch.\" I never imagined it could mean something so beautiful.\n\"Miss Dewiolet, may I teach you to write?\" she asked gently.\n\"Why should I learn to write?\" I said, confused. Most of us Charons could only ever do hard labour, and I had no special gift that might make me a Laurelled Charon someday. I knew that much.\n\"If you could read, what happened today might never have happened,\" Daphne replied, smiling softly. \"Knowledge is a kind of strength — a weapon to protect ourselves.\"\nI shook my head, still confused... then nodded, hard. I didn't understand what she meant, not really. But it was her advice — and that meant I couldn't say no.\nThat afternoon, Daphne Theodore taught me the whole alphabet. I copied it down into the little notepad she gave me — my letters crooked and uneven, but all my own. Before she left, I hesitated... then called out after her.\n\"Miss Theodore — I remember you said you were an alchemist.\"\n\"I am.\"\n\"What is alchemy?\"\n\"It's a study meant to make people's lives better.\"\nAs she spoke, her eyes lit up. It was as if some flame had kindled behind them, making them shine.\n\"So then... the Alchemy Academy is where people study alchemy?\"\n\"...Yes.\"\n\"If I learn to write well,\" I asked, \"could I go to the Academy too? Could I study alchemy with you, Miss Theodore?\"\nI'd always known my place. And I could read the way people looked at things. Even without asking, I could tell from the nurse's reaction that the Academy must be some grand, untouchable place. But just for a heartbeat — with the fire in Daphne's eyes — I let myself believe that maybe, just maybe, I had the right to walk towards it too.\nBut it wasn't what I imagined. That fire in her eyes vanished at once. Her expression grew distant... conflicted. She turned away, no longer meeting my gaze.\n\"No, Dewiolee,\" she said quietly. \"Don't go there.\"\n\"Hyperborea's Alchemy Academy has lost its way,\" she whispered. \"It's no longer the great tower I once dreamed of.\"\n\n— From the diary of Dewiolee Stone",
-    ContentJP = "ダフネ・セオドールに助けられたあの日、私はきっと有頂天になっていた。彼女の手からキャンディーを受け取って、包み紙を破りながらいくつも続けて口に放り込み、そそくさと立ち去るマドレーヌの背中に変顔をしてみせた。\n「あなた、名前は？」病棟の階下にあるベンチで肩を並べて座りながら、彼女はそう尋ねた。\n「ティオリ。」\n「どう書くか、わかる？」\n私は首を振った。彼女は小枝を拾い、砂地にいくつか文字を書いた。\n「これがあなたの名前。『ムラサキツユクサ』っていう意味よ」\nこれまでのほとんどの時間、私の名前はいつも「出来損ない」「下賤なガキ」みたいな言葉と結びついていて、こんなに美しい意味があるなんて考えもしなかった。\n「『ムラサキツユクサ』さん、字を教えてあげる。いい？」彼女はそっと囁いた。\n「どうして字なんか覚えるの？」私は戸惑って尋ねた。カロンの民のほとんどは肉体労働しかできず、しかも私には桂冠カロンになれそうな才は何ひとつなさそうに見えた。自分でもそれはわかっていた。\n「今日みたいなこと、もし字が読めたら起きなかったかもしれないわ」ダフネはふっと笑った。「知識は力。私たちを守る武器なの」\n私はきょとんとして首を横に振り、それから大きくうなずいた。そのときは彼女の言葉の意味がわからなかったけれど、彼女の勧めなら断れなかった。\nその日の午後、ダフネ・セオドールは私にアルファベットを一通り教えてくれ、私は彼女がくれた小さな冊子に、たどたどしい字でそれを書き写した。別れ際、私はためらいながらも彼女の名を呼んだ。\n「セオドールさん、」私は言った。「たしか、あなたは『錬金術師』だって」\n「ええ」\n「錬金術って、何？」\n「人をもっと幸福にするための学問よ」\nそう言ったとき、彼女の目つきが突然変わった。瞳の奥で何かの炎が燃え上がり、彼女の目はあんなにも明るくなったのだ。\n「じゃあ、『錬金院』って、錬金術を研究するところなんだね」\n「……ええ」\n「私がちゃんと字を勉強したら、」私は尋ねた。「私も錬金院に行って、セオドールさんと一緒にいられる？」\n私はいつも自分の身の程をわきまえているし、空気も読める。聞かなくたって、さっきの看護師の反応から察するに、錬金院はとても立派で、とても手の届かない場所なのだろう。でもその瞬間、ダフネの目に宿った炎を見て、私にもその炎へと歩み寄る権利があるような気がしてしまった。\nけれど、私の思いとはまるで違って——ダフネの瞳の炎は一瞬で消えた。彼女の表情はたちまち複雑になり、私から顔を背け、視線を合わせなくなった。\n「だめよ、ティオリ、」彼女は言った。「あそこへ行ってはだめ」\n「ヒュペリアの錬金院は、間違った道を進んでしまったの」彼女は静かに続けた。「もう、私の心の中にあるあの巨塔ではないのよ」\n\n——ティオリ・ストーンの日記",
-    ContentKR = "다프네 세오도어에게 도움을 받은 그날, 난 정말이지 날아갈 것같이 기분이 좋았다. 나는 세오도어가 건네준 사탕의 포장지를 북북 찢어 몇 개를 한입에 욱여넣고는, 머쓱하게 사라지는 매들린의 뒷모습을 향해 혀를 쏙 내밀었다.\n\"이름이 뭐니?\" 병동 아래층에 있는 벤치에 나란히 앉자, 그녀가 물었다.\n\"디올리요.\"\n\"쓸 줄 알아?\"\n내가 고개를 젓자, 세오도어는 나뭇가지 하나를 주워 모래 위에 글자를 적어 내렸다.\n\"이게 네 이름이야. '보라이슬꽃'이라는 뜻이지.\"\n내 이름은 사람들 입에 '망할 꼬마'나 '천한 것' 같은 단어들과 함께 오르내리는 경우가 많아서, 이렇게 예쁜 뜻이 담겨 있을 거라고는 전혀 예상하지 못했다.\n\"보라이슬꽃 꼬마야, 언니한테 글 배워 볼래?\" 그녀가 자그맣게 속삭였다.\n\"그걸 왜 배워야 해요?\" 나는 어리둥절해하며 물었다. 카론은 대부분 육체노동자로 살아가고, 내게는 계관카론이 될 만한 재능도 없다는 사실을 난 잘 알고 있었다.\n\"네가 글자를 알았다면, 오늘 같은 일을 겪지 않았을 수도 있으니까.\" 그녀가 부드럽게 웃었다. \"안다는 건, 우리를 지킬 수 있는 무기가 되어 준단다.\"\n무슨 말인지 이해할 수 없어 멍해진 나는 고개를 저었다가, 세오도어의 제안을 거절할 수 없어 이내 고개를 힘껏 끄덕였다.\n그날 오후, 세오도어는 내게 모든 글자를 가르쳐 주었고, 나는 그녀가 준 작은 공책에 삐뚤삐뚤하게 글자들을 옮겨 적었다. 세오도어가 돌아가기 전, 나는 머뭇거리며 그녀를 불러 세웠다.\n\"세오도어 씨.\" 나는 말을 이어갔다. \"세오도어 씨는, '연금술사'라 그랬죠?\"\n\"응.\"\n\"연금술이 뭐예요?\"\n\"사람들을 더 행복하게 만들어 주는 학문이야.\"\n그 말을 하는 세오도어의 눈동자는, 조금 전과는 달리 마치 불꽃이 타오르듯 밝게 빛나고 있었다.\n\"그럼 '연금원'은 '연금술'을 공부하는 곳이겠네요?\"\n\"...응.\"\n\"그럼 제가 글공부를 열심히 하면요...\" 내가 물었다. \"저도 연금원에 들어가서, 세오도어 씨랑 같이 있을 수 있어요?\"\n나는 언제나 내 주제를 알고 눈치도 빠른 아이였다. 그래서 굳이 묻지 않아도, 조금 전 매들린의 반응만으로도 연금원은 오르지 못할 나무라는 것을 잘 알고 있었다. 그렇지만 세오도어의 눈동자 속 불꽃을 본 순간, 나도 저 불꽃을 향해 나아갈 자격이 있을지도 모른다는 착각에 빠지고 말았다.\n그러나 내 기대와 달리, 세오도어의 눈동자 속 불꽃은 순식간에 사그라들었고, 그녀는 복잡한 표정을 지으며 내 시선을 피했다.\n\"아니, 디올리.\" 세오도어가 말했다 \"거긴 가지 마.\"\n\"휘페르보레아 제국의 연금원은 잘못된 길을 걷고 있어.\" 세오도어가 나지막이 말했다. \"거긴 이미 내가 꿈꾸던 탑이 아니야.\"\n\n—— 디올리 스톤의 일기\n\n",
-    ContentTC = "被達芙涅·塞奧多爾解圍的那一天，我一定開心壞了。從她手裡接過硬糖，我一邊撕開糖紙，連著拆了幾顆囫圇塞在嘴裡，一邊朝著瑪德琳訕訕離去的背影做著鬼臉。\n「你叫什麼名字？」我和達芙涅並肩坐在病房區樓下的長椅上，她這樣詢問。\n「蒂奧莉」。\n「你知道它怎麼寫嗎？」\n我搖頭。她撿起一根樹枝，在沙地上寫下幾個字。\n「這是你的名字。它的意思是『紫露花』。」\n在過去的大多數時間裡，我的名字總是和「崽種」、「下賤坯子」之類的詞聯繫在一起，我從未想過它會有如此好聽的含義。\n「紫露花小姐，我來教你寫字，好嗎？」她輕聲耳語。\n「為什麼要會寫字？」我茫然地問。卡戎之民大多只能從事體力活，並且我看起來並沒有任何有望成為桂冠卡戎的天分。我有這個自知之明。\n「今天那樣的事情，如果你識字，興許就不會發生。」達芙涅輕輕笑起來，「知識是一種力量，是保護我們的武器。」\n我茫然地搖搖頭，又重重地點點頭。那時的我不明白她話語中的含義，但如果那是她的建議，我無法拒絕。\n那個下午，達芙涅·塞奧多爾帶我學了整個字母表，我用歪歪扭扭的字跡把它們抄在她送給我的小冊子上。臨走前，我躊躇著開口，喊了她的名字。\n「塞奧多爾小姐，」我說，「我記得，您說您是一名『煉金術師』。」\n「是的。」\n「煉金術是什麼？」\n「是一種可以讓人們變得更加幸福的學問。」\n說這句話的時候，她的眼神突然變了。一定有某種火焰在她的瞳孔中燃燒，她的眼睛才會變得這樣明亮。\n「那麼，『煉金院』就是研究『煉金術』的嘍。」\n「……是的。」\n「如果我好好學寫字，」我問，「我也可以去煉金院，和塞奧多爾小姐一起嗎？」\n我一向有自知之明，也懂得察言觀色。就算不問，從剛才護士的反應我也能猜到，煉金院應該是一個很氣派、很高不可攀的地方。但是那一刻，達芙涅眼中的火焰讓我恍惚中覺得，我也可以有走向那束火焰的權利。\n但和我想的完全不一樣——達芙涅眼裡的火焰瞬間熄滅了。她的神色開始變得複雜，她別過臉去，不再和我對視。\n「不，蒂奧莉。」她說，「不要去那個地方。」\n「海伯利亞的煉金院走在了錯誤的道路上。」她輕聲，「它已經不再是我心中的那座巨塔。」\n——蒂奧莉·斯通的日記",
+    ContentEN = "The day Daphne Theodore saved me from the nasty nurse, I was so happy I thought I might burst. She gave me some boiled sweets — I tore off the wrappers, stuffed a few into my mouth, and pulled faces at Madeleine's back as she slunk away.\n \n\"What's your name?\" Daphne asked, as we sat together on the bench outside the ward.\n\"Tiori.\"\n\"Do you know how it's spelled?\"\nI shook my head. She picked up a twig and traced a few letters in the sand.\n\"This is your name. It means 'Dewiolet.'\"\nFor most of my life, my name had only ever come paired with words like \"twerp\" or \"lowborn wretch.\" I never imagined it could mean something so beautiful.\n\"Miss Dewiolet, may I teach you to write?\" she asked gently.\n\"Why should I learn to write?\" I said, confused. Most of us Charons could only ever do hard labour, and I had no special gift that might make me a Laurelled Charon someday. I knew that much.\n\"If you could read, what happened today might never have happened,\" Daphne replied, smiling softly. \"Knowledge is a kind of strength — a weapon to protect ourselves.\"\nI shook my head, still confused... then nodded, hard. I didn't understand what she meant, not really. But it was her advice — and that meant I couldn't say no.\nThat afternoon, Daphne Theodore taught me the whole alphabet. I copied it down into the little notepad she gave me — my letters crooked and uneven, but all my own. Before she left, I hesitated... then called out after her.\n\"Miss Theodore — I remember you said you were an alchemist.\"\n\"I am.\"\n\"What is alchemy?\"\n\"It's a study meant to make people's lives better.\"\nAs she spoke, her eyes lit up. It was as if some flame had kindled behind them, making them shine.\n\"So then... the Alchemy Academy is where people study alchemy?\"\n\"...Yes.\"\n\"If I learn to write well,\" I asked, \"could I go to the Academy too? Could I study alchemy with you, Miss Theodore?\"\nI'd always known my place. And I could read the way people looked at things. Even without asking, I could tell from the nurse's reaction that the Academy must be some grand, untouchable place. But just for a heartbeat — with the fire in Daphne's eyes — I let myself believe that maybe, just maybe, I had the right to walk towards it too.\nBut it wasn't what I imagined. That fire in her eyes vanished at once. Her expression grew distant... conflicted. She turned away, no longer meeting my gaze.\n\"No, Tiori,\" she said quietly. \"Don't go there.\"\n\"Hyperborea's Alchemy Academy has lost its way,\" she whispered. \"It's no longer the great tower I once dreamed of.\"\n \n— From the diary of Tiori Stone",
+    ContentJP = "ダフネ・セオドールに助けられたあの日、私はきっと有頂天になっていた。彼女の手からキャンディーを受け取って、包み紙を破りながらいくつも続けて口に放り込み、そそくさと立ち去るマドレーヌの背中に変顔をしてみせた。\n 「あなた、名前は？」病棟の階下にあるベンチで肩を並べて座りながら、彼女はそう尋ねた。\n 「ティオリ。」\n 「どう書くか、わかる？」\n 私は首を振った。彼女は小枝を拾い、砂地にいくつか文字を書いた。\n 「これがあなたの名前。『ムラサキツユクサ』っていう意味よ」\n これまでのほとんどの時間、私の名前はいつも「出来損ない」「下賤なガキ」みたいな言葉と結びついていて、こんなに美しい意味があるなんて考えもしなかった。\n 「『ムラサキツユクサ』さん、字を教えてあげる。いい？」彼女はそっと囁いた。\n 「どうして字なんか覚えるの？」私は戸惑って尋ねた。カロンの民のほとんどは肉体労働しかできず、しかも私には桂冠カロンになれそうな才は何ひとつなさそうに見えた。自分でもそれはわかっていた。\n 「今日みたいなこと、もし字が読めたら起きなかったかもしれないわ」ダフネはふっと笑った。「知識は力。私たちを守る武器なの」\n 私はきょとんとして首を横に振り、それから大きくうなずいた。そのときは彼女の言葉の意味がわからなかったけれど、彼女の勧めなら断れなかった。\n その日の午後、ダフネ・セオドールは私にアルファベットを一通り教えてくれ、私は彼女がくれた小さな冊子に、たどたどしい字でそれを書き写した。別れ際、私はためらいながらも彼女の名を呼んだ。\n 「セオドールさん、」私は言った。「たしか、あなたは『錬金術師』だって」\n 「ええ」\n 「錬金術って、何？」\n 「人をもっと幸福にするための学問よ」\n そう言ったとき、彼女の目つきが突然変わった。瞳の奥で何かの炎が燃え上がり、彼女の目はあんなにも明るくなったのだ。\n 「じゃあ、『錬金院』って、錬金術を研究するところなんだね」\n 「……ええ」\n 「私がちゃんと字を勉強したら、」私は尋ねた。「私も錬金院に行って、セオドールさんと一緒にいられる？」\n 私はいつも自分の身の程をわきまえているし、空気も読める。聞かなくたって、さっきの看護師の反応から察するに、錬金院はとても立派で、とても手の届かない場所なのだろう。でもその瞬間、ダフネの目に宿った炎を見て、私にもその炎へと歩み寄る権利があるような気がしてしまった。\n けれど、私の思いとはまるで違って——ダフネの瞳の炎は一瞬で消えた。彼女の表情はたちまち複雑になり、私から顔を背け、視線を合わせなくなった。\n 「だめよ、ティオリ、」彼女は言った。「あそこへ行ってはだめ」\n 「ヒュペリアの錬金院は、間違った道を進んでしまったの」彼女は静かに続けた。「もう、私の心の中にあるあの巨塔ではないのよ」\n \n ——ティオリ・ストーンの日記",
+    ContentKR = "다프네 세오도어에게 도움을 받은 그날, 난 정말이지 날아갈 것같이 기분이 좋았다. 나는 세오도어가 건네준 사탕의 포장지를 북북 찢어 몇 개를 한입에 욱여넣고는, 머쓱하게 사라지는 매들린의 뒷모습을 향해 혀를 쏙 내밀었다.\n\"이름이 뭐니?\" 병동 아래층에 있는 벤치에 나란히 앉자, 그녀가 물었다.\n\"디올리요.\"\n\"쓸 줄 알아?\"\n내가 고개를 젓자, 세오도어는 나뭇가지 하나를 주워 모래 위에 글자를 적어 내렸다.\n\"이게 네 이름이야. '보라이슬꽃'이라는 뜻이지.\"\n내 이름은 사람들 입에 '망할 꼬마'나 '천한 것' 같은 단어들과 함께 오르내리는 경우가 많아서, 이렇게 예쁜 뜻이 담겨 있을 거라고는 전혀 예상하지 못했다.\n\"보라이슬꽃 꼬마야, 언니한테 글 배워 볼래?\" 그녀가 자그맣게 속삭였다.\n\"그걸 왜 배워야 해요?\" 나는 어리둥절해하며 물었다. 카론은 대부분 육체노동자로 살아가고, 내게는 계관카론이 될 만한 재능도 없다는 사실을 난 잘 알고 있었다.\n\"네가 글자를 알았다면, 오늘 같은 일을 겪지 않았을 수도 있으니까.\" 그녀가 부드럽게 웃었다. \"안다는 건, 우리를 지킬 수 있는 무기가 되어 준단다.\"\n무슨 말인지 이해할 수 없어 멍해진 나는 고개를 저었다가, 세오도어의 제안을 거절할 수 없어 이내 고개를 힘껏 끄덕였다.\n그날 오후, 세오도어는 내게 모든 글자를 가르쳐 주었고, 나는 그녀가 준 작은 공책에 삐뚤삐뚤하게 글자들을 옮겨 적었다. 세오도어가 돌아가기 전, 나는 머뭇거리며 그녀를 불러 세웠다.\n\"세오도어 씨.\" 나는 말을 이어갔다. \"세오도어 씨는, '연금술사'라 그랬죠?\"\n\"응.\"\n\"연금술이 뭐예요?\"\n\"사람들을 더 행복하게 만들어 주는 학문이야.\"\n그 말을 하는 세오도어의 눈동자는, 조금 전과는 달리 마치 불꽃이 타오르듯 밝게 빛나고 있었다.\n\"그럼 '연금원'은 '연금술'을 공부하는 곳이겠네요?\"\n\"...응.\"\n\"그럼 제가 글공부를 열심히 하면요...\" 내가 물었다. \"저도 연금원에 들어가서, 세오도어 씨랑 같이 있을 수 있어요?\"\n나는 언제나 내 주제를 알고 눈치도 빠른 아이였다. 그래서 굳이 묻지 않아도, 조금 전 매들린의 반응만으로도 연금원은 오르지 못할 나무라는 것을 잘 알고 있었다. 그렇지만 세오도어의 눈동자 속 불꽃을 본 순간, 나도 저 불꽃을 향해 나아갈 자격이 있을지도 모른다는 착각에 빠지고 말았다.\n그러나 내 기대와 달리, 세오도어의 눈동자 속 불꽃은 순식간에 사그라들었고, 그녀는 복잡한 표정을 지으며 내 시선을 피했다.\n\"아니, 디올리.\" 세오도어가 말했다 \"거긴 가지 마.\"\n\"휘페르보레아 제국의 연금원은 잘못된 길을 걷고 있어.\" 세오도어가 나지막이 말했다. \"거긴 이미 내가 꿈꾸던 탑이 아니야.\"\n \n—— 디올리 스톤의 일기",
+    ContentTC = "被達芙涅・塞奧多爾解圍的那一天，我一定開心壞了。從她手裡接過硬糖，我一邊撕開糖紙，連著拆了幾顆囫圇塞在嘴裡，一邊朝著瑪德琳讪讪离去的背影做著鬼臉。\n「你叫什麼名字？」我和達芙涅併肩坐在病房區樓下的長椅上，她這樣詢問。\n「蒂奧莉」。\n「你知道它怎麼寫嗎？」\n我搖頭。她撿起一根樹枝，在沙地上寫下幾個字。\n「這是你的名字。它的意思是『紫露花』。」\n在過去的大多數時間裡，我的名字總是和「崽種」、「下賤坯子」之類的詞聯繫在一起，我從未想過它會有如此好聽的含義。\n「紫露花小姐，我來教你寫字，好嗎？」她輕聲耳語。\n「為什麼要會寫字？」我茫然地問。卡戎之民大多只能從事體力活，並且我看起來並沒有任何有望成為桂冠卡戎的天分。我有這個自知之明。\n「今天那樣的事情，如果你識字，或許就不會發生。」達芙涅輕輕笑起來，「知識是一種力量，是保護我們的武器。」\n我茫然地搖搖頭，又重重地點點頭。那時的我不明白她話語中的含義，但如果那是她的建議，我無法拒絕。\n那個下午，達芙涅・塞奧多爾帶我學了整個字母表，我用歪歪扭扭的字跡把它們抄在她送給我的小冊子上。臨走前，我踟躕著開口，喊了她的名字。\n「塞奧多爾小姐，」我說，「我記得，您說您是一名『煉金術師』。」\n「是的。」\n「煉金術是什麼？」\n「是一種可以讓人們變得更加幸福的學問。」\n說這句話的時候，她的眼神突然變了。一定有某種火焰在她的瞳孔中燃燒，她的眼睛才會變得這樣明亮。\n「那麼，『煉金院』就是研究『煉金術』的嘍。」\n「…… 是的。」\n「如果我好好學寫字，」我問，「我也可以去煉金院，和塞奧多爾小姐一起嗎？」\n我一向有自知之明，也懂得察言觀色。就算不問，從剛才護士的反應我也能猜到，煉金院應該是一個很氣派、很高不可攀的地方。但是那一刻，達芙涅眼中的火焰讓我恍惚中覺得，我也可以有走向那束火焰的權利。\n但和我想的完全不一樣 —— 達芙涅眼裡的火焰瞬間熄滅了。她的神色開始變得複雜，她別過臉去，不再和我對視。\n「不，蒂奧莉。」她說，「不要去那個地方。」\n「海伯利亞的煉金院走在了錯誤的道路上。」她輕聲，「它已經不再是我心中的那座巨塔。」\n\n—— 蒂奧莉・斯通的日記",
     TextMapContent = "\n被达芙涅·塞奥多尔解围的那一天，我一定开心坏了。从她手里接过硬糖，我一边撕开糖纸，连着拆了几颗囫囵塞在嘴里，一边朝着玛德琳讪讪离去的背影做着鬼脸。\n“你叫什么名字？”我和达芙涅并肩坐在病房区楼下的长椅上，她这样询问。\n“蒂奧莉”。\n“你知道它怎么写吗？”\n我摇头。她捡起一根树枝，在沙地上写下几个字。\n“这是你的名字。它的意思是‘紫露花’。”\n在过去的大多数时间里，我的名字总是和“崽种”、“下贱坯子”之类的词联系在一起，我从未想过它会有如此好听的含义。\n“紫露花小姐，我来教你写字，好吗？”她轻声耳语。\n“为什么要会写字？”我茫然地问。卡戎之民大多只能从事体力活，并且我看起来并没有任何有望成为桂冠卡戎的天分。我有这个自知之明。\n“今天那样的事情，如果你识字，兴许就不会发生。”达芙涅轻轻笑起来，“知识是一种力量，是保护我们的武器。”\n我茫然地摇摇头，又重重地点点头。那时的我不明白她话语中的含义，但如果那是她的建议，我无法拒绝。\n那个下午，达芙涅·塞奥多尔带我学了整个字母表，我用歪歪扭扭的字迹把它们抄在她送给我的小册子上。临走前，我踟蹰着开口，喊了她的名字。\n“塞奥多尔小姐，”我说，“我记得，您说您是一名‘炼金术师’。”\n“是的。”\n“炼金术是什么？”\n“是一种可以让人们变得更加幸福的学问。”\n说这句话的时候，她的眼神突然变了。一定有某种火焰在她的瞳孔中燃烧，她的眼睛才会变得这样明亮。\n“那么，‘炼金院’就是研究‘炼金术’的喽。”\n“……是的。”\n“如果我好好学写字，”我问，“我也可以去炼金院，和塞奥多尔小姐一起吗？”\n我一向有自知之明，也懂得察言观色。就算不问，从刚才护士的反应我也能猜到，炼金院应该是一个很气派、很高不可攀的地方。但是那一刻，达芙涅眼中的火焰让我恍惚中觉得，我也可以有走向那束火焰的权利。\n但和我想的完全不一样——达芙涅眼里的火焰瞬间熄灭了。她的神色开始变得复杂，她别过脸去，不再和我对视。\n“不，蒂奧莉。”她说，“不要去那个地方。”\n“海伯利亚的炼金院走在了错误的道路上。”她轻声，“它已经不再是我心中的那座巨塔。”\n\n——蒂奥莉·斯通的日记",
     TextMapId = "UI_CHAR_DATA_TEXT_54010203"
   },
   UI_CHAR_DATA_TEXT_54010204 = {
-    ContentEN = "After I filled up the notepad Daphne had given me, I finally saw her again at Riverside Hospital.\nI'd known she'd come back.\nThe last time we met, I'd begged her to help me find someone — a man named Gary Stone. I told her, tears in my eyes, that Gary was my brother — my only family in the world. I said I hadn't heard from him in ages, and that the last I knew, he'd gone to the Alchemy Academy.\nJust as I'd hoped, Daphne agreed without hesitation.\nMost of what I told her was true. But in one thing, I lied:\nI didn't miss Gary Stone at all. He was my brother, yes — but not all siblings are born to love each other. When I was still no taller than his thigh, Gary would grab me by the neck and squeeze until I couldn't breathe — all because I'd dared to steal a scrap of \"his\" food.\nI couldn't care less where Gary had gone. What I wanted was simply to see Daphne again. I thought she must've grown up in a loving family — because the moment she heard Gary was my brother, she assumed he must be someone dear to me.\n\nDaphne came back, bringing news about Gary Stone.\nBut this time, she looked exhausted. The dark circles under her eyes were plain to see, and it looked like she'd been crying — faint streaks still marked her cheeks.\nI saw her pacing at the far end of the corridor for ages before she finally walked over. I figured she must've brought bad news. Was she hesitating? Unsure whether to tell me? Or just trying to find the right way to say it?\n\"Dewiolee,\" she said, kneeling and gripping my shoulders, \"I found out what happened to your brother. Please... promise me you'll stay strong, no matter what. Will you?\"\nAh — so she was going to tell me everything after all. Maybe she wasn't any good at lying. Or maybe she just believed that even a child had the right to know the truth.\n\"Gary Stone won't be coming back,\" Daphne said, her voice hoarse. \"He was caught in an alchemical accident.\"\nI didn't feel a thing. But I still had questions. I didn't care about Gary — what I wanted to know was: What kinds of endings waited for people like us — the ones they treated like rubbish?\n\"...An accident? Did someone die?\"\n\"Yes.\"\n\"Did the alchemist kill them?\"\n\"No.\"\n\"Did Gary kill them?\"\n\"...No.\"\n\"Then who was the killer?\"\n\"It was a ghost no one could see,\" she said. \"Or perhaps... it was all of us.\"\nI shook my head. I didn't understand.\n\"Then... Miss Theodore,\" I asked, \"will I die like Gary someday too?\"\n\"If I learn enough words — enough to understand all the books you gave me, enough to master alchemy — will that keep me from ending up like my brother?\"\n\"I wish I could tell you yes. I used to believe it. I knew people like you — who rose from nothing, and climbed to the top through what they'd learned.\" Daphne said softly, brushing her hand over the horn on my head. \"But now... I've seen far more fall before they ever reached the peak — shattered to pieces on the way up. There are more of them than the ones who made it.\"\n\"There's one thing you must remember, Dewiolee,\" she said, enunciating every word. \"Stay away from the Academy. Even if you come to love alchemy — never go near that place.\"\nI nodded, slowly and with all the seriousness I could muster.\nDaphne rose and took out the notepad she always carried. She tore out a blank page.\nI thought she was going to write something — but instead, she folded the paper into a tiny boat.\n\"I've heard that among the Charon people, every soul is bound to the water. Tell this boat what you want to say, then set it adrift on the Whisper River. It will carry your thoughts to your brother.\"\nI held the little boat in both hands and watched her walk away. After that, a long time passed — and I never saw Daphne again.\nOne day, when an Academy staffer came to deliver medicine to Riverside Hospital, I gathered my courage and asked where she'd gone — why she never came anymore.\nHe told me she'd gone to the battlefield. A place where those who go may never return. Perhaps she would never come back.\nThe box of strawberry sweets slipped from my hand and fell to the floor.\n\n— From the diary of Dewiolee Stone",
-    ContentJP = "ダフネにもらったノートをいっぱいに書き終えたあと、私はようやくまたカカン病院で彼女に会えた。\n彼女はきっと来てくれると信じていた。\n前に会ったとき、私は彼女に錬金院で「ガリー・ストーン」という男のことを探ってほしいと頼んだ。泣きながら訴えた――ガリーは私の兄で、この世でたったひとりの肉親だと。もう長いこと消息がなく、最後に聞いたのは彼が錬金院へ行ったということだけだった。\n予想どおり、ダフネは二つ返事で引き受けてくれた。\n実のところ、彼女に話したことの大半は本当だが、ひとつだけ嘘をついた。私はガリー・ストーンを少しも恋しく思っていない。彼は私の兄だけれど、兄弟姉妹が必ずしも仲睦まじいとは限らない。私の背が彼の太ももほどしかなかったころでさえ、ガリーは私の首をきつく締め上げ、息が止まりそうになるまで放さなかった。たった「彼の」食べ物を一口つまみ食いしたというだけで。\n私はガリーの行方なんてどうでもよかった。ただ、もう一度ダフネに会いたかったのだ。きっとダフネはとても幸せな家庭で育ったのだろう。だから私がガリーは兄だと言ったとき、彼が私にとって何より大切な存在だとすぐ決めつけたのだと思う。\n\nダフネは来た。ガリー・ストーンの消息を携えて。\n今度の彼女はとてもやつれていて、目の下の隈ははっきり見え、うっすら涙の跡さえあった。\n彼女が回廊の向こう側で何度も行ったり来たりしたあと、やっとこちらへ歩いてくるのを見た。きっととても悪い知らせなのだ、と私は推測した。では、彼女は迷っているのだろうか？ その悪い知らせを私に告げるべきかどうか、あるいはどう告げるべきかを。\n「ティオリ、」彼女はしゃがみ込み、両手で私の肩をぎゅっとつかんだ。「あなたのお兄さんの消息がわかったわ。お願い……約束して。必ず耐えてね、いい？」\n――ああ、彼女はすべてを率直に告げる道を選んだのだ。おそらく嘘が苦手なのだろう。あるいは、たとえ子どもでも真実を知るべきだと考えたのかもしれない。\n「ガリー・ストーンはもう戻ってこない」ダフネはかすれ声で言った。「彼は錬金術師の事故に巻き込まれたの」\n私の内心は波立たなかったが、それでもいくつか疑問があった。私はガリーに関心はない。けれど、私たちのような「クズ」にどんな末路があり得るのかは知りたかった。\n「……事故？ 誰か殺されたの？」\n「ええ」\n「犯人はその錬金術師？」\n「違うわ」\n「犯人はガリー？」\n「……それも違う」\n「じゃあ、犯人は誰？」\n「目に見えない幽霊。あるいは、私たち一人ひとりよ」\n私は首を振った。理解できなかった。\n「じゃあ、セオドールさん」私はたずねた。「私はいつか、兄さんみたいに死ぬの？」\n「もし、いつか私がたくさんの言葉を知って、あなたがくれた本を全部読めるくらいになって、『錬金術』も学べたら、兄さんみたいにはならないでいられる？」\n「『そうよ』と言ってあげたい。かつては私もそう思っていたの。私の周りには、あなたのような子が知識の助けで頂にたどり着いた例がたくさんあったから」ダフネは私の頭の角をやさしく撫でた。「でも今は、登りきる前に崖から落ちて粉々になる人のほうを多く見るようになった。登りきる人より、はるかに多いの」\n「ただ一つだけ、ティオリ。必ず覚えていて」ダフネは一語一語、区切るように言った。「錬金院から離れなさい。たとえ錬金術を愛しても、錬金院には近づかないで」\n私は厳かにうなずいた。\nダフネは立ち上がり、携えていたノートを取り出して白い紙を一枚ちぎった。てっきりまた何か書くのだと思ったら、彼女はその白紙を小さな舟に折っただけだった。\n「聞いたの。カロンの民の信仰では、すべての人の魂は水と結びついているって。言いたいことをこの小舟に託して、ススルス川に浮かべなさい。あなたの想いを載せて、お兄さんのもとへ運んでくれるわ」\n私は紙で折った小舟を両手に抱え、去っていく彼女の背中を見送った。そのあと、長いあいだ私はダフネに会えなかった。\nやがてある日、錬金院の職員が薬剤をカカン病院に運びに来たとき、私は勇気を出して尋ねた。ダフネ・セオドールはどこへ行ったのか。どうしてもう来ないのか。\nその職員は言った。彼女は戦場へ向かったのだと。戦場は、行けば帰れないかもしれない場所だ。だから、彼女はもう戻らないかもしれないのだと。\n私の手の中のいちごキャンディーの箱が、ぱたりと床に落ちた。\n\n——ティオリ・ストーンの日記",
-    ContentKR = "세오도어가 준 공책을 글씨로 가득 채우고 나서야, 나는 리버랜드 병원에서 그녀와 재회할 수 있었다.\n어차피 반드시 와 줄 거라고 믿고 있었지만.\n지난번에 만났을 때, 나는 세오도어에게 연금원에서 개리 스톤이라는 남자의 행방을 알아봐 달라고 부탁했었다. 나는 눈물까지 글썽이며, 개리는 이 세상에 딱 하나 남은 내 가족이며, 연금원으로 간 뒤에 연락이 끊겼다고 애원했다.\n그리고 내 예상대로, 세오도어는 단번에 자신이 확인해 보겠다며 약속해 주었다.\n사실, 내가 한 말은 대부분 사실이었다. 내가 개리 스톤을 눈곱만큼도 그리워하지 않는다는 사실 딱 하나만 빼면 말이다. 개리는 내 오빠였지만, 남매라고 해서 다 사이가 좋은 건 아니니까. 내 키가 개리의 허벅지 정도밖에 되지 않았을 무렵부터, 그 녀석은 내가 '자기' 음식을 훔쳐 먹었다는 이유만으로 내가 숨을 헐떡일 때까지 목을 조르던 인간이었다.\n개리의 행방 따위는 관심도 없었지만, 나는 세오도어를 다시 만나고 싶었다. 아마도 그녀는 아주 행복한 가정에서 자라서, 내가 오빠라는 이야기를 꺼내자마자 개리가 내게 굉장히 소중한 사람이라고 판단해 버렸겠지.\n\n세오도어는 개리 스톤의 소식을 가지고 돌아왔다.\n그러나 이번에는 눈 밑이 거뭇했고, 옅은 눈물 자국까지 보일 정도로 초췌해 보였다.\n복도 저편에서 한참을 서성이다 다가오는 세오도어를 보며, 나는 그녀가 아주 나쁜 소식을 전해 줄 것 같다고 짐작했다. 세오도어는 내게 끔찍한 소식을 전해 줘야 할지 망설이고 있던 걸까? 아니면 그 소식을 어떻게 전해야 할지 고민하고 있었던 걸까?\n\"디올리.\" 세오도어가 무릎을 꿇더니, 두 손으로 내 어깨를 꽉 쥐었다. \"네 오빠 소식을 알아냈어. 그런데... 약속해 줘. 꼭 이겨내겠다고, 응?\"\n아... 세오도어는 결국 내게 전부 말해 주기로 결심한 모양이었다. 아마도 거짓말에 서툴거나, 아이라도 진실을 알아야 한다고 생각했기 때문이겠지.\n\"개리 스톤은 이제 돌아오지 않을 거야.\" 세오도어가 잠긴 목소리로 말했다. \"어떤 연금술사가 일으킨 사건에 휘말렸어.\"\n마음속은 놀랍도록 평온했지만, 궁금한 건 몇 가지 있었다. 나는 개리의 최후가 아니라, 우리 같은 '쓰레기'들이 맞이하게 되는 결말이 어떤 것인지 알고 싶었다.\n\"...사고요? 누가 누굴 죽인 거예요?\"\n\"응.\"\n\"그 연금술사가 사람을 죽였어요?\"\n\"아니야.\"\n\"그러면 우리 오빠가 사람을 죽인 거예요?\"\n\"...그것도 아니야.\"\n\"그러면 범인이 누구예요?\"\n\"보이지 않는 유령일 수도, 우리 모두일 수도 있어.\"\n나는 도무지 이해할 수 없어 고개를 저었다.\n\"그러면요, 세오도어 씨.\" 나는 물었다. \"저도 언젠가는 오빠처럼 죽어요?\"\n\"제가 아는 단어도 많아지고, 세오도어 씨가 준 책들도 다 읽고 똑똑해져서 '연금술'까지 배우게 되면, 우리 오빠처럼 되지 않을 수 있어요?\"\n\"나도 예전엔 그렇게 믿었으니까, 네 말이 맞다고 얘기해 주고 싶어. 언니 주변에도 너처럼 지식을 발판 삼아 저 꼭대기에 올라간 사람이 많았거든.\" 세오도어는 내 뿔을 가볍게 어루만졌다. \"그런데 지금은 그러기도 전에 벼랑 밑으로 내던져져서 산산조각 나는 사람들을 훨씬 더 많이 봐.\"\n\"이거 하나만은 꼭 기억해 줘, 디올리.\" 세오도어가 또박또박, 힘주어 말했다. \"연금원하고 거리를 둬. 네가 연금술에 푹 빠지게 되더라도, 연금원엔 절대 다가가지 마.\"\n나는 진지하게 고개를 끄덕였다.\n세오도어는 몸을 일으키곤 공책 한 장을 찢었다. 이번에도 뭔가 적어 주려나 싶었지만, 그녀는 종이를 접어 작은 배 하나를 만들었다.\n\"카론들은 사람의 영혼은 물과 이어져 있다고 믿는다고 들었어. 이 배에다 네가 하고 싶은 말을 하고, 속삭임 강에 띄워 보내면, 네 마음도 오빠한테 전해질 거야.\"\n나는 자그마한 종이배를 받아 들고, 떠나는 세오도어의 뒷모습을 조용히 바라보았다. 그리고 그날 이후로 아주 오랫동안, 나는 그녀를 다시 만나지 못했다.\n그러던 어느 날, 나는 용기를 내어 병원에 약을 가져다주러 온 직원에게 다프네 세오도어는 어디 있냐고, 어째서 더는 오지 않는 거냐고 물었다.\n그러자 그 직원은 세오도어는 전장으로 향했고, 원래 전쟁터는 한번 가면 돌아오지 못할 수도 있는 곳이라, 어쩌면 두 번 다시 그녀를 만날 수 없을 거라고 말했다.\n손에 움켜쥐고 있던 딸기 사탕 상자가 바닥으로 떨어졌다.\n\n—— 디올리 스톤의 일기",
-    ContentTC = "在我把達芙涅送我的筆記本寫滿後，我終於又在河間醫院看到了她。\n我相信她一定會來。\n上次見面的時候，我拜託她去煉金院打聽一個叫加里·斯通的男人。我聲淚俱下告訴她，加里是我的兄長，我在這個世界上唯一的親人。我已經很久沒有他的消息了，最後一次聽到他的消息是他去了煉金院。\n如我設想的那樣，達芙涅一口便答應了。\n事實上，我告訴她的話大部分都是真的，只有一點我說了謊，那就是我一丁點兒也不思念加里·斯通。他是我的哥哥，但並不是所有兄弟姐妹必然相親相愛。在我只到他大腿的身高時，加里就會狠狠地卡住我的脖子，直到我快要憋到沒氣時才放開，僅僅因為我偷吃了一份「他的」食物。\n我毫不關心加里的下落，但我希望再次見到達芙涅。我想，達芙涅定然是在一個非常幸福的家庭裡長大的吧，所以才會聽到我說出加里是我兄長時，立即判定他是對我極為重要的人。\n達芙涅來了，帶著加里·斯通的消息。\n這一次她看起來很憔悴，眼底的黑眼圈清晰可見，似乎還有淺淺的淚痕。\n我看到她在連廊的另一頭反复踱步了很久才朝這邊走來，我猜測她帶來的一定是一個很壞的消息。那麼，她是在猶豫嗎？是在猶豫要不要把這個很壞的消息告訴我？還是在猶豫怎麼告訴我？\n「蒂奧莉，」她蹲下來，雙手緊握住我的肩膀，「我打聽到了你哥哥的消息。請你……請你答應我，一定要撐住，好嗎？」\n——噢，她選擇直接告訴我一切。也許是因為她不擅長說謊，又或者她認為即使是一個小孩子也理應知道真相。\n「加里·斯通不會回來了。」達芙涅說，聲音喑啞，「他捲入了一場煉金術師的事故。」\n我的內心毫無波瀾，但仍有一些疑問。我並不關心加里，但我想知道我們這些「渣滓」可能的種種末路。\n「……事故？有人被殺掉了嗎？」\n「是的。」\n「兇手是那個煉金術師？」\n「不是。」\n「兇手是加里？」\n「……也不是。」\n「那兇手是誰？」\n「是一個看不見的幽靈，又或者是我們每一個人。」\n我搖搖頭，我不理解。\n「那麼，塞奧多爾小姐，」我問，「我有一天也會像加里一樣死掉嗎？」\n「如果有一天我認識的詞夠多，多到我把您送給我的那些書全都看懂，多到我也學會了『煉金術』，就可以不像哥哥那樣了嗎？」\n「我很想告訴你『是的』，曾經我也是這麼認為，因為我身邊有很多像你一樣的人借助知識攀登到頂峰。」達芙涅輕輕撫摸著我頭上的角，「但現在，我看到更多人還沒有爬上去便墜入山崖，摔得粉身碎骨。他們比爬上去的人多得多。」\n「只有一件事，蒂奧莉，你必須記住。」達芙涅一字一句地說，「遠離煉金院。即使是你愛上了煉金術，也不要靠近煉金院。」\n我鄭重地點了點頭。\n達芙涅站起身，取出隨身攜帶的筆記本，撕下一張白紙。我以為她又要寫些什麼，但她只是將白紙疊成了一隻小船。\n「我聽說卡戎之民的信仰裡，所有人的靈魂都與水相連。把你想說的話告訴這隻小船，然後把它放在絮語河裡吧，它會載著你的思念，去到你哥哥那裡。」\n我手捧著紙折的小船，目送著她的背影離去。那之後，很長的一段時間裡，我都沒有再見到達芙涅。\n終於有一天，當一位煉金院的工作人員來向河間醫院運送藥劑時，我鼓起勇氣問他，達芙涅·塞奧多爾去了哪兒，她為什麼不再來了。\n那個工作人員說，她上了戰場。戰場本就是一個可能有去無回的地方。所以，她也許再也不會回來了。\n我手中攥著的草莓硬糖盒子一下子掉在地上。\n——蒂奧莉·斯通的日記",
+    ContentEN = "After I filled up the notepad Daphne had given me, I finally saw her again at Riverside Hospital.\nI'd known she'd come back.\nThe last time we met, I'd begged her to help me find someone — a man named Gary Stone. I told her, tears in my eyes, that Gary was my brother — my only family in the world. I said I hadn't heard from him in ages, and that the last I knew, he'd gone to the Alchemy Academy.\nJust as I'd hoped, Daphne agreed without hesitation.\nMost of what I told her was true. But in one thing, I lied:\nI didn't miss Gary Stone at all. He was my brother, yes — but not all siblings are born to love each other. When I was still no taller than his thigh, Gary would grab me by the neck and squeeze until I couldn't breathe — all because I'd dared to steal a scrap of \"his\" food.\nI couldn't care less where Gary had gone. What I wanted was simply to see Daphne again. I thought she must've grown up in a loving family — because the moment she heard Gary was my brother, she assumed he must be someone dear to me.\n \nDaphne came back, bringing news about Gary Stone.\nBut this time, she looked exhausted. The dark circles under her eyes were plain to see, and it looked like she'd been crying — faint streaks still marked her cheeks.\nI saw her pacing at the far end of the corridor for ages before she finally walked over. I figured she must've brought bad news. Was she hesitating? Unsure whether to tell me? Or just trying to find the right way to say it?\n\"Tiori,\" she said, kneeling and gripping my shoulders, \"I found out what happened to your brother. Please... promise me you'll stay strong, no matter what. Will you?\"\nAh — so she was going to tell me everything after all. Maybe she wasn't any good at lying. Or maybe she just believed that even a child had the right to know the truth.\n\"Gary Stone won't be coming back,\" Daphne said, her voice hoarse. \"He was caught in an alchemical accident.\"\nI didn't feel a thing. But I still had questions. I didn't care about Gary — what I wanted to know was: What kinds of endings waited for people like us — the ones they treated like rubbish?\n\"...An accident? Did someone die?\"\n\"Yes.\"\n\"Did the alchemist kill them?\"\n\"No.\"\n\"Did Gary kill them?\"\n\"...No.\"\n\"Then who was the killer?\"\n\"It was a ghost no one could see,\" she said. \"Or perhaps... it was all of us.\"\nI shook my head. I didn't understand.\n\"Then... Miss Theodore,\" I asked, \"will I die like Gary someday too?\"\n\"If I learn enough words — enough to understand all the books you gave me, enough to master alchemy — will that keep me from ending up like my brother?\"\n\"I wish I could tell you yes. I used to believe it. I knew people like you — who rose from nothing, and climbed to the top through what they'd learned.\" Daphne said softly, brushing her hand over the horn on my head. \"But now... I've seen far more fall before they ever reached the peak — shattered to pieces on the way up. There are more of them than the ones who made it.\"\n\"There's one thing you must remember, Tiori,\" she said, enunciating every word. \"Stay away from the Academy. Even if you come to love alchemy — never go near that place.\"\nI nodded, slowly and with all the seriousness I could muster.\nDaphne rose and took out the notepad she always carried. She tore out a blank page.\nI thought she was going to write something — but instead, she folded the paper into a tiny boat.\n\"I've heard that among the Charon people, every soul is bound to the water. Tell this boat what you want to say, then set it adrift on the Whisper River. It will carry your thoughts to your brother.\"\nI held the little boat in both hands and watched her walk away. After that, a long time passed — and I never saw Daphne again.\nOne day, when an Academy staffer came to deliver medicine to Riverside Hospital, I gathered my courage and asked where she'd gone — why she never came anymore.\nHe told me she'd gone to the battlefield. A place where those who go may never return. Perhaps she would never come back.\nThe box of strawberry sweets slipped from my hand and fell to the floor.\n \n— From the diary of Tiori Stone",
+    ContentJP = "ダフネにもらったノートをいっぱいに書き終えたあと、私はようやくまたカカン病院で彼女に会えた。\n 彼女はきっと来てくれると信じていた。\n 前に会ったとき、私は彼女に錬金院で「ガリー・ストーン」という男のことを探ってほしいと頼んだ。泣きながら訴えた――ガリーは私の兄で、この世でたったひとりの肉親だと。もう長いこと消息がなく、最後に聞いたのは彼が錬金院へ行ったということだけだった。\n 予想どおり、ダフネは二つ返事で引き受けてくれた。\n 実のところ、彼女に話したことの大半は本当だが、ひとつだけ嘘をついた。私はガリー・ストーンを少しも恋しく思っていない。彼は私の兄だけれど、兄弟姉妹が必ずしも仲睦まじいとは限らない。私の背が彼の太ももほどしかなかったころでさえ、ガリーは私の首をきつく締め上げ、息が止まりそうになるまで放さなかった。たった「彼の」食べ物を一口つまみ食いしたというだけで。\n 私はガリーの行方なんてどうでもよかった。ただ、もう一度ダフネに会いたかったのだ。きっとダフネはとても幸せな家庭で育ったのだろう。だから私がガリーは兄だと言ったとき、彼が私にとって何より大切な存在だとすぐ決めつけたのだと思う。\n \n ダフネは来た。ガリー・ストーンの消息を携えて。\n 今度の彼女はとてもやつれていて、目の下の隈ははっきり見え、うっすら涙の跡さえあった。\n 彼女が回廊の向こう側で何度も行ったり来たりしたあと、やっとこちらへ歩いてくるのを見た。きっととても悪い知らせなのだ、と私は推測した。では、彼女は迷っているのだろうか？ その悪い知らせを私に告げるべきかどうか、あるいはどう告げるべきかを。\n 「ティオリ、」彼女はしゃがみ込み、両手で私の肩をぎゅっとつかんだ。「あなたのお兄さんの消息がわかったわ。お願い……約束して。必ず耐えてね、いい？」\n ――ああ、彼女はすべてを率直に告げる道を選んだのだ。おそらく嘘が苦手なのだろう。あるいは、たとえ子どもでも真実を知るべきだと考えたのかもしれない。\n 「ガリー・ストーンはもう戻ってこない」ダフネはかすれ声で言った。「彼は錬金術師の事故に巻き込まれたの」\n 私の内心は波立たなかったが、それでもいくつか疑問があった。私はガリーに関心はない。けれど、私たちのような「クズ」にどんな末路があり得るのかは知りたかった。\n 「……事故？ 誰か殺されたの？」\n 「ええ」\n 「犯人はその錬金術師？」\n 「違うわ」\n 「犯人はガリー？」\n 「……それも違う」\n 「じゃあ、犯人は誰？」\n 「目に見えない幽霊。あるいは、私たち一人ひとりよ」\n 私は首を振った。理解できなかった。\n 「じゃあ、セオドールさん」私はたずねた。「私はいつか、兄さんみたいに死ぬの？」\n 「もし、いつか私がたくさんの言葉を知って、あなたがくれた本を全部読めるくらいになって、『錬金術』も学べたら、兄さんみたいにはならないでいられる？」\n 「『そうよ』と言ってあげたい。かつては私もそう思っていたの。私の周りには、あなたのような子が知識の助けで頂にたどり着いた例がたくさんあったから」ダフネは私の頭の角をやさしく撫でた。「でも今は、登りきる前に崖から落ちて粉々になる人のほうを多く見るようになった。登りきる人より、はるかに多いの」\n 「ただ一つだけ、ティオリ。必ず覚えていて」ダフネは一語一語、区切るように言った。「錬金院から離れなさい。たとえ錬金術を愛しても、錬金院には近づかないで」\n 私は厳かにうなずいた。\n ダフネは立ち上がり、携えていたノートを取り出して白い紙を一枚ちぎった。てっきりまた何か書くのだと思ったら、彼女はその白紙を小さな舟に折っただけだった。\n 「聞いたの。カロンの民の信仰では、すべての人の魂は水と結びついているって。言いたいことをこの小舟に託して、ススルス川に浮かべなさい。あなたの想いを載せて、お兄さんのもとへ運んでくれるわ」\n 私は紙で折った小舟を両手に抱え、去っていく彼女の背中を見送った。そのあと、長いあいだ私はダフネに会えなかった。\n やがてある日、錬金院の職員が薬剤をカカン病院に運びに来たとき、私は勇気を出して尋ねた。ダフネ・セオドールはどこへ行ったのか。どうしてもう来ないのか。\n その職員は言った。彼女は戦場へ向かったのだと。戦場は、行けば帰れないかもしれない場所だ。だから、彼女はもう戻らないかもしれないのだと。\n 私の手の中のいちごキャンディーの箱が、ぱたりと床に落ちた。\n \n ——ティオリ・ストーンの日記",
+    ContentKR = "세오도어가 준 공책을 글씨로 가득 채우고 나서야, 나는 리버랜드 병원에서 그녀와 재회할 수 있었다.\n어차피 반드시 와 줄 거라고 믿고 있었지만.\n지난번에 만났을 때, 나는 세오도어에게 연금원에서 개리 스톤이라는 남자의 행방을 알아봐 달라고 부탁했었다. 나는 눈물까지 글썽이며, 개리는 이 세상에 딱 하나 남은 내 가족이며, 연금원으로 간 뒤에 연락이 끊겼다고 애원했다.\n그리고 내 예상대로, 세오도어는 단번에 자신이 확인해 보겠다며 약속해 주었다.\n사실, 내가 한 말은 대부분 사실이었다. 내가 개리 스톤을 눈곱만큼도 그리워하지 않는다는 사실 딱 하나만 빼면 말이다. 개리는 내 오빠였지만, 남매라고 해서 다 사이가 좋은 건 아니니까. 내 키가 개리의 허벅지 정도밖에 되지 않았을 무렵부터, 그 녀석은 내가 '자기' 음식을 훔쳐 먹었다는 이유만으로 내가 숨을 헐떡일 때까지 목을 조르던 인간이었다.\n개리의 행방 따위는 관심도 없었지만, 나는 세오도어를 다시 만나고 싶었다. 아마도 그녀는 아주 행복한 가정에서 자라서, 내가 오빠라는 이야기를 꺼내자마자 개리가 내게 굉장히 소중한 사람이라고 판단해 버렸겠지.\n \n세오도어는 개리 스톤의 소식을 가지고 돌아왔다.\n그러나 이번에는 눈 밑이 거뭇했고, 옅은 눈물 자국까지 보일 정도로 초췌해 보였다.\n복도 저편에서 한참을 서성이다 다가오는 세오도어를 보며, 나는 그녀가 아주 나쁜 소식을 전해 줄 것 같다고 짐작했다. 세오도어는 내게 끔찍한 소식을 전해 줘야 할지 망설이고 있던 걸까? 아니면 그 소식을 어떻게 전해야 할지 고민하고 있었던 걸까?\n\"디올리.\" 세오도어가 무릎을 꿇더니, 두 손으로 내 어깨를 꽉 쥐었다. \"네 오빠 소식을 알아냈어. 그런데... 약속해 줘. 꼭 이겨내겠다고, 응?\"\n아... 세오도어는 결국 내게 전부 말해 주기로 결심한 모양이었다. 아마도 거짓말에 서툴거나, 아이라도 진실을 알아야 한다고 생각했기 때문이겠지.\n\"개리 스톤은 이제 돌아오지 않을 거야.\" 세오도어가 잠긴 목소리로 말했다. \"어떤 연금술사가 일으킨 사건에 휘말렸어.\"\n마음속은 놀랍도록 평온했지만, 궁금한 건 몇 가지 있었다. 나는 개리의 최후가 아니라, 우리 같은 '쓰레기'들이 맞이하게 되는 결말이 어떤 것인지 알고 싶었다.\n\"...사고요? 누가 누굴 죽인 거예요?\"\n\"응.\"\n\"그 연금술사가 사람을 죽였어요?\"\n\"아니야.\"\n\"그러면 우리 오빠가 사람을 죽인 거예요?\"\n\"...그것도 아니야.\"\n\"그러면 범인이 누구예요?\"\n\"보이지 않는 유령일 수도, 우리 모두일 수도 있어.\"\n나는 도무지 이해할 수 없어 고개를 저었다.\n\"그러면요, 세오도어 씨.\" 나는 물었다. \"저도 언젠가는 오빠처럼 죽어요?\"\n\"제가 아는 단어도 많아지고, 세오도어 씨가 준 책들도 다 읽고 똑똑해져서 '연금술'까지 배우게 되면, 우리 오빠처럼 되지 않을 수 있어요?\"\n\"나도 예전엔 그렇게 믿었으니까, 네 말이 맞다고 얘기해 주고 싶어. 언니 주변에도 너처럼 지식을 발판 삼아 저 꼭대기에 올라간 사람이 많았거든.\" 세오도어는 내 뿔을 가볍게 어루만졌다. \"그런데 지금은 그러기도 전에 벼랑 밑으로 내던져져서 산산조각 나는 사람들을 훨씬 더 많이 봐.\"\n\"이거 하나만은 꼭 기억해 줘, 디올리.\" 세오도어가 또박또박, 힘주어 말했다. \"연금원하고 거리를 둬. 네가 연금술에 푹 빠지게 되더라도, 연금원엔 절대 다가가지 마.\"\n나는 진지하게 고개를 끄덕였다.\n세오도어는 몸을 일으키곤 공책 한 장을 찢었다. 이번에도 뭔가 적어 주려나 싶었지만, 그녀는 종이를 접어 작은 배 하나를 만들었다.\n\"카론들은 사람의 영혼은 물과 이어져 있다고 믿는다고 들었어. 이 배에다 네가 하고 싶은 말을 하고, 속삭임 강에 띄워 보내면, 네 마음도 오빠한테 전해질 거야.\"\n나는 자그마한 종이배를 받아 들고, 떠나는 세오도어의 뒷모습을 조용히 바라보았다. 그리고 그날 이후로 아주 오랫동안, 나는 그녀를 다시 만나지 못했다.\n그러던 어느 날, 나는 용기를 내어 병원에 약을 가져다주러 온 직원에게 다프네 세오도어는 어디 있냐고, 어째서 더는 오지 않는 거냐고 물었다.\n그러자 그 직원은 세오도어는 전장으로 향했고, 원래 전쟁터는 한번 가면 돌아오지 못할 수도 있는 곳이라, 어쩌면 두 번 다시 그녀를 만날 수 없을 거라고 말했다.\n손에 움켜쥐고 있던 딸기 사탕 상자가 바닥으로 떨어졌다.\n \n—— 디올리 스톤의 일기",
+    ContentTC = "在我把達芙涅送我的筆記本寫滿後，我終於又在河間醫院看到了她。\n我相信她一定會來。\n上次見面的時候，我拜託她去煉金院打聽一個叫加里・斯通的男人。我聲淚俱下告訴她，加里是我的兄長，我在這個世界上唯一的親人。我已經很久沒有他的消息了，最後一次聽到他的消息是他去了煉金院。\n如我設想的那樣，達芙涅一口便答應了。\n事實上，我告訴她的話大部分都是真的，只有一點我說了謊，那就是我一丁點兒也不思念加里・斯通。他是我的哥哥，但並不是所有兄弟姐妹必然相親相愛。在我只到他大腿的身高時，加里就會狠狠地卡住我的脖子，直到我快要憋到沒氣時才放開，僅僅因為我偷吃了一份「他的」食物。\n我毫不關心加里的下落，但我希望再次見到達芙涅。我想，達芙涅定然是在一個非常幸福的家庭裡長大的吧，所以才會聽到我說出加里是我兄長時，立即判定他是對我極為重要的人。\n\n達芙涅來了，帶著加里・斯通的消息。\n這一次她看起來很憔悴，眼底的黑眼圈清晰可見，似乎還有淺淺的淚痕。\n我看到她在連廊的另一頭反覆踱步了很久才朝這邊走來，我猜測她帶來的一定是一個很壞的消息。那麼，她是在猶豫嗎？是在猶豫要不要把這個很壞的消息告訴我？還是在猶豫怎麼告訴我？\n「蒂奧莉，」她蹲下來，雙手緊握住我的肩膀，「我打聽到了你哥哥的消息。請你…… 請你答應我，一定要撐住，好嗎？」\n—— 噢，她選擇直接告訴我一切。也許是因為她不善於說謊，又或者她認為即使是一個小孩子也理應知道真相。\n「加里・斯通不會回來了。」 達芙涅說，聲音喑啞，「他捲入了一場煉金術師的事故。」\n我的內心毫無波瀾，但仍有一些疑問。我並不關心加里，但我想知道我們這些「渣滓」可能的種種末路。\n「…… 事故？有人被殺掉了嗎？」\n「是的。」\n「凶手是那個煉金術師？」\n「不是。」\n「凶手是加里？」\n「…… 也不是。」\n「那凶手是誰？」\n「是一個看不見的幽靈，又或者是我們每一個人。」\n我搖搖頭，我不理解。\n「那麼，塞奧多爾小姐，」我問，「我有一天也會像加里一樣死掉嗎？」\n「如果有一天我認識的詞夠多，多到我把您送給我的那些書全都看懂，多到我也學會了『煉金術』，就可以不像哥哥那樣了嗎？」\n「我很想告訴你『是的』，曾經我也是這麼認為，因為我身邊有很多像你一樣的人藉助知識攀登到頂峰。」達芙涅輕輕撫摸著我頭上的角， 「但現在，我看到更多人還沒有爬上去便墜入山崖，摔得粉身碎骨。他們比爬上去的人多得多。」\n「只有一件事，蒂奧莉，你必須記住。」達芙涅一字一句地說，「遠離煉金院。即使是你愛上了煉金術，也不要靠近煉金院。」\n我鄭重地點了點頭。\n達芙涅站起身，取出隨身攜帶的筆記本，撕下一張白紙。我以為她又要寫些什麼，但她只是將白紙疊成了一隻小船。\n「我聽說卡戎之民的信仰裡，所有人的靈魂都與水相連。把你想說的話告訴這隻小船，然後把它放在絮語河裡吧，它會載著你的思念，去到你哥哥那裡。」\n我手捧著紙折的小船，目送著她的背影离去。那之後，很長的一段時間裡，我都沒有再見到達芙涅。\n終於有一天，當一位煉金院的工作人員來向河間醫院運送藥劑時，我鼓起勇氣問他，達芙涅・塞奧多爾去了哪兒，她為什麼不再來了。\n那個工作人員說，她上了戰場。戰場本就是一個可能有去無回的地方。所以，她也許再也不會回來了。\n我手中攥著的草莓硬糖盒子一下子掉在地上。\n\n—— 蒂奧莉・斯通的日記",
     TextMapContent = "在我把达芙涅送我的笔记本写满后，我终于又在河间医院看到了她。\n我相信她一定会来。\n上次见面的时候，我拜托她去炼金院打听一个叫加里·斯通的男人。我声泪俱下告诉她，加里是我的兄长，我在这个世界上唯一的亲人。我已经很久没有他的消息了，最后一次听到他的消息是他去了炼金院。\n如我设想的那样，达芙涅一口便答应了。\n事实上，我告诉她的话大部分都是真的，只有一点我说了谎，那就是我一丁点儿也不思念加里·斯通。他是我的哥哥，但并不是所有兄弟姐妹必然相亲相爱。在我只到他大腿的身高时，加里就会狠狠地卡住我的脖子，直到我快要憋到没气时才放开，仅仅因为我偷吃了一份“他的”食物。\n我毫不关心加里的下落，但我希望再次见到达芙涅。我想，达芙涅定然是在一个非常幸福的家庭里长大的吧，所以才会听到我说出加里是我兄长时，立即判定他是对我极为重要的人。\n\n达芙涅来了，带着加里·斯通的消息。\n这一次她看起来很憔悴，眼底的黑眼圈清晰可见，似乎还有浅浅的泪痕。\n我看到她在连廊的另一头反复踱步了很久才朝这边走来，我猜测她带来的一定是一个很坏的消息。那么，她是在犹豫吗？是在犹豫要不要把这个很坏的消息告诉我？还是在犹豫怎么告诉我？\n“蒂奧莉，”她蹲下来，双手紧握住我的肩膀，“我打听到了你哥哥的消息。请你……请你答应我，一定要撑住，好吗？”\n——噢，她选择直接告诉我一切。也许是因为她不擅长说谎，又或者她认为即使是一个小孩子也理应知道真相。\n“加里·斯通不会回来了。” 达芙涅说，声音喑哑，“他卷入了一场炼金术师的事故。”\n我的内心毫无波澜，但仍有一些疑问。我并不关心加里，但我想知道我们这些“渣滓”可能的种种末路。\n“……事故？有人被杀掉了吗？”\n“是的。”\n“凶手是那个炼金术师？”\n“不是。”\n“凶手是加里？”\n“……也不是。”\n“那凶手是谁？”\n“是一个看不见的幽灵，又或者是我们每一个人。”\n我摇摇头，我不理解。\n“那么，塞奥多尔小姐，”我问，“我有一天也会像加里一样死掉吗？”\n“如果有一天我认识的词够多，多到我把您送给我的那些书全都看懂，多到我也学会了‘炼金术’，就可以不像哥哥那样了吗？”\n“我很想告诉你‘是的’，曾经我也是这么认为，因为我身边有很多像你一样的人借助知识攀登到顶峰。”达芙涅轻轻抚摸着我头上的角， “但现在，我看到更多人还没有爬上去便坠入山崖，摔得粉身碎骨。他们比爬上去的人多得多。”\n“只有一件事，蒂奥莉，你必须记住。”达芙涅一字一句地说，“远离炼金院。即使是你爱上了炼金术，也不要靠近炼金院。”\n我郑重地点了点头。\n达芙涅站起身，取出随身携带的笔记本，撕下一张白纸。我以为她又要写些什么，但她只是将白纸叠成了一只小船。\n“我听说卡戎之民的信仰里，所有人的灵魂都与水相连。把你想说的话告诉这只小船，然后把它放在絮语河里吧，它会载着你的思念，去到你哥哥那里。”\n我手捧着纸折的小船，目送着她的背影离去。那之后，很长的一段时间里，我都没有再见到达芙涅。\n终于有一天，当一位炼金院的工作人员来向河间医院运送药剂时，我鼓起勇气问他，达芙涅·塞奥多尔去了哪儿，她为什么不再来了。\n那个工作人员说，她上了战场。战场本就是一个可能有去无回的地方。所以，她也许再也不会回来了。\n我手中攥着的草莓硬糖盒子一下子掉在地上。\n\n——蒂奥莉·斯通的日记",
     TextMapId = "UI_CHAR_DATA_TEXT_54010204"
   },
   UI_CHAR_DATA_TEXT_54010205 = {
-    ContentEN = "By the time I'd learned to read the simpler newspapers, Daphne came back.\nShe still held a bouquet of flowers — but this time, she looked gaunt, hollowed out. As if the lightest breeze could blow her straight into the Whisper River.\nAs she walked down the corridor, all talk ceased. Every gaze turned to her — full of hatred, disgust, envy, and fear. Then someone sneered, spitting out the word \"traitor.\" Others followed, repeating it.\nSo that was it. I'd overheard the nurses' gossip a few days ago — that Daphne Theodore was suspected of betraying her country in the war.\n—But so what?\nIf a country could drive someone like Daphne Theodore to betrayal, then surely the fault lies with the country... not with her.\n\nDaphne gave no reply to the slurs. She didn't even glance at them — only kept her thin back straight as she walked on towards the wards.\n\"How is Mr Gaston?\" she asked the nurse on duty.\n\"If you mean Roger Gaston — he's already dead,\" the nurse replied. \"Not long ago, after another bout of pain, he smashed a glass when no one was watching and slit his wrist.\"\n\"But I had the medicine sent — the one that could cure him!\" It was the first time I'd ever seen Daphne lose control. Her voice cracked with despair. \"Did AG-1899 not work?\"\n\"You were a little too late, Miss. He killed himself the night before it arrived.\" The nurse's voice was cool, with a mocking curl at her lips. \"And anyway... Mr Gaston was a decorated veteran. Even if he'd survived the night, once he heard of your 'heroics' at Lonza Fortress... he wouldn't have dared take your medicine.\"\nDaphne's face went even paler. The nail of her thumb dug deep into the flesh of her index finger.\n\"No! I didn't—\"\nShe looked ready to defend herself — but in the end, she said nothing.\nI reached out and took her hand, gently prising her fingers apart. Her skin was ice-cold — like a corpse in the morgue.\n\"Miss Theodore... no, Daphne.\"\nIt was the first time I'd ever called her that. I almost dragged her down to the bench below — the one where she once taught me to write.\nCopying her, I snapped off a twig and scratched two clumsy words into the dirt:\n\"Cheer up.\"\nThen I took her hand and placed something in it — a paper boat I had folded.\n\"Tell this boat what you want to say, then set it adrift on the Whisper River. It'll carry your thoughts to your father — let him know how much you miss him.\"\nAt the mention of her father, Daphne looked astonished. But then the shock softened in her green eyes... and became a faint smile.\n\"Thank you, Dewiolee,\" she said. \"I'll do that.\"\nSuddenly, as if remembering something, she rummaged through her backpack and pulled out a few books. She pressed them into my arms — she hadn't forgotten that I once told her I wanted to read more. We sat on the bench together for a while. Then she rose, and walked away into the crimson sunset.\n\nWhen I could read every section of the newspaper, Daphne Theodore still hadn't come back.\nWhen the design on the candy box she gave me had worn away, Daphne Theodore still hadn't come back.\nWhen I'd grown tall enough that the underpads I carried no longer hid my face, Daphne Theodore still hadn't come back.\nWhen I could read even the most complex alchemical texts, Daphne Theodore still hadn't come back.\nWhen I learned how to extract potion from Dewiolet blossoms, Daphne Theodore still hadn't come back.\nWhen I'd saved enough to leave Hyperborea and study in Aethyrie, Daphne Theodore still hadn't come back.\nWell... the family she came to visit was gone. She had no reason to return.\n\nAt dusk, I stood in the corridor, bidding farewell to the hospital where I had lived and worked for nearly twenty years. The dusk that day was a vivid crimson — just like the last time I saw Daphne.\nThen I saw a figure approaching from the far end of the corridor. She looked like a young, slender girl with blonde hair. My suitcase slipped from my hand. But when I bent to pick it up and looked again... there was no one there.\n\"Did you see a girl just now?\" I asked Nurse Madeleine. \"Tall, thin — blonde hair...\"\n\"What blonde girl?\" she muttered. \"And here I thought it was us old ladies who needed glasses.\"\n\"Oh. I must've been mistaken.\"\nI walked downstairs with my suitcase, and never looked back.\n\n— From the diary of Dewiolee Stone",
-    ContentJP = "私が簡単な新聞なら読めるようになったころ、ダフネが戻ってきた。\n彼女は相変わらず花束を抱えていた。けれど今回は、前よりいっそう痩せ細り、やつれていて、風が吹けば紙切れみたいにススルス川へ舞い落ちてしまいそうだった。\n回廊の端から彼女が歩いてくると、回廊の人々はふいにおしゃべりをやめ、いっせいに彼女をねめつけた。その視線には憎悪、嫌悪、嫉妬、恐れ……ほどなく、誰かが甲高く笑い、喉の奥から「裏切り者」と絞り出した。たちまち同調する声が相次いだ。\nああ、そういうことか。数日前、私は看護師たちの噂話で耳にしていた――ダフネ・セオドールはある戦争で寝返ったらしい、と。\n——でも、それがどうしたというの？\nもしダフネ・セオドールのような人に裏切りを選ばせる国なら、悪いのはきっとその国の側だ。\n人々の汚い言葉に、ダフネは一切反応しなかった。彼女は彼らを一瞥すらせず、やせた背筋をまっすぐに伸ばしたまま、病棟の方へとまっすぐ進んだ。\n「ジャストンさんの具合はよくなりましたか？」彼女は当番の看護師に尋ねた。\n「ロジェ・ジャストンさんのことでしたら、」看護師は言った。「もう亡くなりました。ついこの前、また痛みがぶり返したとき、看護師が目を離した隙にグラスを割って、自分の動脈を切りました」\n「でも、私は治せる薬を手配して送ったのに！」私が初めて見るほど、ダフネは取り乱し、絶望の叫び声をあげた。「まさかAG-1899に効果がなかったの？」\n「到着するのが遅すぎました。薬が届く前の晩に自殺したんです。」看護師は冷ややかに言い、口の端に嘲るような笑みを浮かべた。「ジャストンさんは誇り高い古参兵です。その日自殺しなかったとしても、あなたがロンザ要塞でやらかした『偉業』を耳にしたら、あなたの薬を使うことはなかったでしょうね」\nダフネの顔色はさらに青ざめ、親指が深く人差し指の肉に食い込んだ。「違う！ 私は……」彼女は弁解しようとしたようだが、結局何も言わなかった。\n私は彼女の手をつかみ、食い込んだ爪をそっとはがした。彼女の手は氷のように冷たく、まるで霊安室の遺体みたいだった。\n「セオドールさん……いいえ、ダフネお姉さん」私は初めてそう呼び、ほとんど彼女を引きずるようにして、階下のベンチへ連れていった。彼女がかつて私に字を教えてくれた場所だ。\n私は彼女の真似をして小枝を折り、地面にたどたどしい字で一行を書いた。\n「もう悲しまないで。」\nそれから彼女の手を取り、ひとつの物を握らせた。紙で折った小さな舟だ。\n「言いたいことをこの小舟に託して、ススルス川に浮かべて。あなたの想いを載せて、お父さんのところへ運んでくれるから」\n「お父さん」という言葉に、ダフネははっとしたようだった。やがて、その驚きは彼女の碧い瞳に広がり、淡い微笑みにほどけた。\n「ありがとう、ティオリ、」彼女は言った。「そうするわ。」彼女はふと何かを思い出し、背負っていた鞄を開けて本を数冊取り出し、私の腕に抱かせた。前に私がもっと本を読みたいと話したことを、彼女は覚えていてくれたのだ。ベンチにしばらく座ったあと、彼女は立ち上がり、朱に染まる夕陽のなかを歩き去った。\n\n私がすべての新聞を読めるようになっても、ダフネ・セオドールは戻ってこなかった。\n私がダフネからもらったキャンディーの箱の模様を撫でて擦り減らしてしまっても、ダフネ・セオドールは戻ってこなかった。\n抱えていた布の当て物が、もう私の視界を隠せなくなっても、ダフネ・セオドールは戻ってこなかった。\n最も難解な錬金術の書物が読めるようになっても、ダフネ・セオドールは戻ってこなかった。\nムラサキツユクサから薬剤を抽出できるようになっても、ダフネ・セオドールは戻ってこなかった。\nお金を貯めて、ヒュペリアを離れイーザーへ留学できるようになっても、ダフネ・セオドールは戻ってこなかった。\n——そう、彼女が見舞っていた肉親はすでに亡くなった。彼女が戻らないのは本来の成り行きなのだ。\n私は暮れなずむ空の下、回廊のこの区画で手を振り、ほぼ二十年暮らし働いたこの病院に別れを告げた。この日の黄昏は美しい朱色で、最後にダフネを見かけたときと同じだった。\nふいに、回廊のあちら側からひとつの人影が歩いてくるのが見えた。若くて痩せた金髪の少女のように思えた。私の手からスーツケースがするりと落ちた。けれど拾い上げて、もう一度回廊の果てを見やると、そこには何もなかった。\n「いま、若い女の子を見ませんでした？」私は看護師のマドレーヌに尋ねた。「背が高くて、細くて、金色の髪の……」\n「どこに金髪の娘なんていたの？」マドレーヌはぶつぶつ言った。「あんた若いくせに、どうしてこの年寄りの私より目が悪いのさ」\n「……私の見間違いね」\n私はスーツケースを提げて階段を降り、もう振り返らなかった。\n\n——ティオリ・ストーンの日記",
-    ContentKR = "내가 신문을 더듬더듬 읽을 수 있게 되었을 무렵, 세오도어가 돌아왔다.\n예전처럼 꽃다발을 안고 있었지만, 바람이 불면 종잇장처럼 속삭임 강으로 날아가 버릴 만큼 그때보다 훨씬 더 마르고 초췌해져 있었다.\n세오도어가 복도 저편에서 걸어오자, 사람들은 약속이라도 한 것처럼 대화를 멈추고 증오, 혐오, 질투, 두려움 등이 담긴 눈으로 그녀를 쏘아보았다. 곧이어 누군가 카랑카랑한 목소리로 웃음을 터뜨리더니, 쥐어짜는 듯한 목소리로 '배신자'라고 외쳤고, 여기저기서 동조하는 말들이 들려왔다.\n아, 그랬지. 며칠 전 간호사들이 다프네 세오도어가 전쟁 중에 나라를 배신했다며 수다를 떠는 걸 들은 적 있었다.\n하지만... 그게 뭐 어쨌다는 거지?\n다프네 세오도어 같은 사람이 반역자로 내몰렸다면, 그건 이 나라가 잘못됐기 때문일 것이다.\n\n세오도어는 쏟아지는 비난 속에서도 아무 대꾸 없이, 사람들에게 눈길 한 번 주지 않은 채 깡마른 등을 꼿꼿이 세우고 병동을 향해 걸어왔다.\n\"개스톤 씨는 좀 어떠세요?\" 그녀가 당직 간호사에게 물었다.\n\"로저 개스톤 씨를 말하는 거라면...\" 간호사가 말했다. \"돌아가셨어요. 얼마 전에 통증이 도졌는데, 간호사가 잠깐 자리를 비운 사이에 유리컵을 깨서 팔목을 그으셨거든요.\"\n\"다른 사람한테 부탁해서 개스톤 씨를 치료할 약을 보냈잖아요!\" 세오도어가 이렇게까지 침착함을 잃은 모습은 처음이었다. 그녀는 절망에 찬 목소리로 외쳤다. \"AG-1899가 아무 효과도 없었던 거예요?\"\n\"한발 늦으신 거죠. 약이 도착하기 하루 전날 밤에 그렇게 된 거니까요.\" 간호사는 입가에 조소를 머금은 채 담담히 말했다. \"그런데, 개스톤 씨는 명예로운 퇴역 군인이셨으니까, 만약 그날 살아 계셨다 하더라도, 론샤 요새에서 그쪽이 이룩한 '쾌거'에 대해 듣고 그 약은 안 쓰셨을 거예요.\"\n세오도어의 얼굴이 새하얗게 질리더니, 엄지손톱이 살을 파고들 정도로 주먹을 꽉 쥐었다. \"아니에요! 전...\" 하지만 무언가 변명하려던 그녀는 끝내 입을 다물었다.\n세오도어가 주먹에서 힘을 빼도록 그녀의 손을 잡자, 영안실의 시체가 연상될 정도로 차가운 느낌이 들었다.\n\"세오도어 씨... 아니, 다프네 언니.\" 나는 처음으로 그녀를 언니라고 불렀다. 그러고는 거의 끌다시피 그녀를 아래층에 있는 벤치로 데려갔다. 예전에 세오도어가 내게 글자를 가르쳐 주었던 바로 그곳이었다.\n\"슬퍼하지 말아요.\"\n그리고 그녀의 손을 펼쳐, 그 위에 자그마한 종이배 하나를 올려 주었다.\n\"하고 싶은 말을 이 배에 전하고, 속삭임 강에 띄워요. 그러면 이 배가 언니 마음을 싣고, 아빠가 계신 곳에 전해 줄 거예요.\"\n그녀는 '아빠'라는 말에 흠칫 놀라더니, 금세 눈에 옅은 미소를 머금고 나를 바라보았다.\n\"고마워, 디올리.\" 그녀가 말했다. \"꼭 그렇게 할게.\" 그러고는 문득 무언가 생각난 듯, 가방에서 책 몇 권을 꺼내 내 품에 안겨 주었다. 세오도어는 책을 더 읽고 싶다고 했던 내 말을 기억하고 있었다. 벤치에 잠시 앉아 있던 그녀는, 이내 몸을 일으켜 붉은 석양 속으로 떠나갔다.\n\n내가 신문을 읽고 이해할 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n그녀에게 선물 받은 사탕 상자의 그림이 닳아 없어졌을 때도, 다프네 세오도어는 돌아오지 않았다.\n쿠션을 끌어안아도 시야가 가려지지 않을 만큼 키가 커졌을 때도, 다프네 세오도어는 돌아오지 않았다.\n가장 복잡한 연금술 책을 이해할 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n보라이슬꽃에서 약제를 추출할 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n돈을 모아 드디어 휘페르보레아를 떠나 이스엘로 유학을 갈 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n...그래, 만나러 오던 가족이 세상을 떠났으니까, 애초에 돌아올 이유가 없었겠지.\n나는 해 질 녘 복도에 서서 손을 흔들며, 20년 가까이 일하고 생활했던 병원에 작별을 고했다. 세오도어를 마지막으로 본 그날처럼 아름답게 물든 노을이었다.\n갑자기, 복도 저 끝에서 젊고 마른 금발의 소녀가 걸어오는 것만 같았다. 순간, 나는 손에 들고 있던 가방을 땅에 떨어뜨리고 말았다. 그러나 가방을 주워 들고 다시 복도 끝을 보았을 때, 그곳에는 아무도 없었다.\n\"아까 저기서 금발 여자애 못 봤어요?\" 나는 매들린에게 물었다. \"키 크고, 마르고, 금발에...\"\n\"금발 여자애라니?\" 매들린이 투덜거렸다. \"나이도 어린 게 어떻게 늙은 나보다도 눈이 더 어두워.\"\n\"아, 제가 잘못 봤나 봐요.\"\n나는 가방을 들고 계단을 내려가, 두 번 다시 뒤돌아보지 않았다.\n\n—— 디올리 스톤의 일기",
-    ContentTC = "在我已經可以看懂簡單的報紙的時候，達芙涅回來了。\n她依舊抱著一束花，只是這次的她變得比上次更消瘦、更憔悴，彷彿風一吹，就要像紙片兒一樣飄進絮語河了似的。\n她從連廊盡頭走來，連廊的人突然都停止了交談，一起掃視著她，那目光裡包含著憎恨、嫌惡、嫉妒、恐懼……很快，我聽到有人尖利地笑了一聲，從嗓子尖裡擠出一聲「叛徒」。很快便紛紛有人附和。\n噢，是這樣的。幾天前，我就在護士們的閒言中聽說，達芙涅·塞奧多爾疑似在一場戰爭中叛變了。\n——但是，那又如何呢？\n如果一個國度讓達芙涅·塞奧多爾這樣的人選擇背叛，那也一定是這個國度的錯。\n面對人們的污言穢語，達芙涅沒有任何回應，她甚至沒有看他們一眼，只是依舊挺直著瘦削的脊背，徑直向病房區走來。\n「加斯頓先生好些了嗎？」她問當值的護士。\n「如果您指的是羅傑·加斯頓先生，」護士說，「他已經死了。就在不久前，又一次疼痛發作後，他趁護士不在時摔碎了玻璃杯，割斷了自己的動脈。」\n「可是我已經托人送來了可以治好他的藥劑！」我頭一次見達芙涅如此失態，她絕望地叫喊出聲，「難道AG-1899沒有藥效嗎？」\n「您晚了一步，他就是在藥劑送到的前一晚自殺的。」護士淡淡地說，嘴角牽出一絲嘲諷的笑，「不過我想，加斯頓先生是一名光榮的老兵，就算他那天沒自殺，聽聞您在龍莎要塞的『壯舉』後，也不會敢用您的藥劑的。」\n達芙涅的面孔變得更加蒼白，她的拇指深深嵌入食指的皮肉。「不！我沒有……」她似乎想辯解什麼，但終究什麼也沒說。\n我拉住她的手，把她的指甲掰開。她的手那樣冰涼，像太平間裡的屍體。\n「塞奧多爾小姐……不，達芙涅姐姐。」我第一次那樣喊她的名字，幾乎是拖著她，來到樓下的長椅。那是她曾教我寫字的地方。\n我學著她的樣子，折下一根樹枝，在地上歪歪扭扭地寫了一行字。\n「不要難過了」。\n然後我牽過她的手，把一件東西放在了她的手裡，那是一隻紙折的小船。\n「把你想說的話告訴這隻小船，然後把它放在絮語河裡吧，它會載著你的思念，去到你爸爸那裡。」\n聽到「你爸爸」時，達芙涅似是吃了一驚，而後，驚訝在她碧綠的眼睛裡暈開，化作淺淺的微笑。\n「謝謝你，蒂奧莉。」她說，「我會這麼做的。」她突然想到了什麼，打開背包，翻出幾本書，放進我懷裡。原來她還記得我上次對她說過，我想看更多書。在長椅上坐了片刻，她就站起身，在朱紅色的夕陽中走去了。\n在我能看懂所有報紙後，達芙涅·塞奧多爾沒有回來。\n在我把達芙涅送我的硬糖盒子圖案都摩挲掉後，達芙涅·塞奧多爾沒有回來。\n在我抱著的布墊已經不再能夠遮住我的視線後，達芙涅·塞奧多爾沒有回來。\n在我能看懂最複雜的煉金術書籍後，達芙涅·塞奧多爾沒有回來。\n在我已經可以從紫露花中萃取藥劑後，達芙涅·塞奧多爾沒有回來。\n在我攢夠了錢，可以離開海伯利亞前往伊瑟爾讀書後，達芙涅·塞奧多爾沒有回來。\n——是的，她探視的親人已經離世，她本就不該回來了。\n我在黃昏中站在連廊的這一段揮手，告別這座我生活和工作了近二十年的醫院。這一天的黃昏是漂亮的朱紅色，和我最後一次見到達芙涅時一樣。\n突然，我看到一個身影從連廊的那一側走來，那似乎是一個年輕而消瘦的金髮女孩。我手中的手提箱一下子落在地上。但當我撿起手提箱，再次朝連廊的盡頭望去，那兒什麼都沒有。\n「你剛才有沒有看到一個年輕女孩？」我問瑪德琳護士，「高高的，瘦瘦的，金色的頭髮……」\n「哪有什麼金髮女孩？」瑪德琳護士嘟囔了兩聲，「你一個年輕人怎麼比我這個老太婆眼神還差。」\n「噢，是我看錯了。」\n我拎著手提箱走下樓，不再回望。\n——蒂奧莉·斯通的日記",
+    ContentEN = "By the time I'd learned to read the simpler newspapers, Daphne came back.\nShe still held a bouquet of flowers — but this time, she looked gaunt, hollowed out. As if the lightest breeze could blow her straight into the Whisper River.\nAs she walked down the corridor, all talk ceased. Every gaze turned to her — full of hatred, disgust, envy, and fear. Then someone sneered, spitting out the word \"traitor.\" Others followed, repeating it.\nSo that was it. I'd overheard the nurses' gossip a few days ago — that Daphne Theodore was suspected of betraying her country in the war.\n—But so what?\nIf a country could drive someone like Daphne Theodore to betrayal, then surely the fault lies with the country... not with her.\n \nDaphne gave no reply to the slurs. She didn't even glance at them — only kept her thin back straight as she walked on towards the wards.\n\"How is Mr Gaston?\" she asked the nurse on duty.\n\"If you mean Roger Gaston — he's already dead,\" the nurse replied. \"Not long ago, after another bout of pain, he smashed a glass when no one was watching and slit his wrist.\"\n\"But I had the medicine sent — the one that could cure him!\" It was the first time I'd ever seen Daphne lose control. Her voice cracked with despair. \"Did AG-1899 not work?\"\n\"You were a little too late, Miss. He killed himself the night before it arrived.\" The nurse's voice was cool, with a mocking curl at her lips. \"And anyway... Mr Gaston was a decorated veteran. Even if he'd survived the night, once he heard of your 'heroics' at Lonza Fortress... he wouldn't have dared take your medicine.\"\nDaphne's face went even paler. The nail of her thumb dug deep into the flesh of her index finger.\n\"No! I didn't—\"\nShe looked ready to defend herself — but in the end, she said nothing.\nI reached out and took her hand, gently prising her fingers apart. Her skin was ice-cold — like a corpse in the morgue.\n\"Miss Theodore... no, Daphne.\"\nIt was the first time I'd ever called her that. I almost dragged her down to the bench below — the one where she once taught me to write.\nCopying her, I snapped off a twig and scratched two clumsy words into the dirt:\n\"Cheer up.\"\nThen I took her hand and placed something in it — a paper boat I had folded.\n\"Tell this boat what you want to say, then set it adrift on the Whisper River. It'll carry your thoughts to your father — let him know how much you miss him.\"\nAt the mention of her father, Daphne looked astonished. But then the shock softened in her green eyes... and became a faint smile.\n\"Thank you, Tiori,\" she said. \"I'll do that.\"\nSuddenly, as if remembering something, she rummaged through her backpack and pulled out a few books. She pressed them into my arms — she hadn't forgotten that I once told her I wanted to read more. We sat on the bench together for a while. Then she rose, and walked away into the crimson sunset.\n \nWhen I could read every section of the newspaper, Daphne Theodore still hadn't come back.\nWhen the design on the candy box she gave me had worn away, Daphne Theodore still hadn't come back.\nWhen I'd grown tall enough that the underpads I carried no longer hid my face, Daphne Theodore still hadn't come back.\nWhen I could read even the most complex alchemical texts, Daphne Theodore still hadn't come back.\nWhen I learned how to extract potion from Dewiolet blossoms, Daphne Theodore still hadn't come back.\nWhen I'd saved enough to leave Hyperborea and study in Aethyrie, Daphne Theodore still hadn't come back.\nWell... the family she came to visit was gone. She had no reason to return.\n \nAt dusk, I stood in the corridor, bidding farewell to the hospital where I had lived and worked for nearly twenty years. The dusk that day was a vivid crimson — just like the last time I saw Daphne.\nThen I saw a figure approaching from the far end of the corridor. She looked like a young, slender girl with blonde hair. My suitcase slipped from my hand. But when I bent to pick it up and looked again... there was no one there.\n\"Did you see a girl just now?\" I asked Nurse Madeleine. \"Tall, thin — blonde hair...\"\n\"What blonde girl?\" she muttered. \"And here I thought it was us old ladies who needed glasses.\"\n\"Oh. I must've been mistaken.\"\nI walked downstairs with my suitcase, and never looked back.\n \n— From the diary of Tiori Stone",
+    ContentJP = "私が簡単な新聞なら読めるようになったころ、ダフネが戻ってきた。\n 彼女は相変わらず花束を抱えていた。けれど今回は、前よりいっそう痩せ細り、やつれていて、風が吹けば紙切れみたいにススルス川へ舞い落ちてしまいそうだった。\n 回廊の端から彼女が歩いてくると、回廊の人々はふいにおしゃべりをやめ、いっせいに彼女をねめつけた。その視線には憎悪、嫌悪、嫉妬、恐れ……ほどなく、誰かが甲高く笑い、喉の奥から「裏切り者」と絞り出した。たちまち同調する声が相次いだ。\n ああ、そういうことか。数日前、私は看護師たちの噂話で耳にしていた――ダフネ・セオドールはある戦争で寝返ったらしい、と。\n ——でも、それがどうしたというの？\n もしダフネ・セオドールのような人に裏切りを選ばせる国なら、悪いのはきっとその国の側だ。\n 人々の汚い言葉に、ダフネは一切反応しなかった。彼女は彼らを一瞥すらせず、やせた背筋をまっすぐに伸ばしたまま、病棟の方へとまっすぐ進んだ。\n 「ジャストンさんの具合はよくなりましたか？」彼女は当番の看護師に尋ねた。\n 「ロジェ・ジャストンさんのことでしたら、」看護師は言った。「もう亡くなりました。ついこの前、また痛みがぶり返したとき、看護師が目を離した隙にグラスを割って、自分の動脈を切りました」\n 「でも、私は治せる薬を手配して送ったのに！」私が初めて見るほど、ダフネは取り乱し、絶望の叫び声をあげた。「まさかAG-1899に効果がなかったの？」\n 「到着するのが遅すぎました。薬が届く前の晩に自殺したんです。」看護師は冷ややかに言い、口の端に嘲るような笑みを浮かべた。「ジャストンさんは誇り高い古参兵です。その日自殺しなかったとしても、あなたがロンザ要塞でやらかした『偉業』を耳にしたら、あなたの薬を使うことはなかったでしょうね」\n ダフネの顔色はさらに青ざめ、親指が深く人差し指の肉に食い込んだ。「違う！ 私は……」彼女は弁解しようとしたようだが、結局何も言わなかった。\n 私は彼女の手をつかみ、食い込んだ爪をそっとはがした。彼女の手は氷のように冷たく、まるで霊安室の遺体みたいだった。\n 「セオドールさん……いいえ、ダフネお姉さん」私は初めてそう呼び、ほとんど彼女を引きずるようにして、階下のベンチへ連れていった。彼女がかつて私に字を教えてくれた場所だ。\n 私は彼女の真似をして小枝を折り、地面にたどたどしい字で一行を書いた。\n 「もう悲しまないで。」\n それから彼女の手を取り、ひとつの物を握らせた。紙で折った小さな舟だ。\n 「言いたいことをこの小舟に託して、ススルス川に浮かべて。あなたの想いを載せて、お父さんのところへ運んでくれるから」\n 「お父さん」という言葉に、ダフネははっとしたようだった。やがて、その驚きは彼女の碧い瞳に広がり、淡い微笑みにほどけた。\n 「ありがとう、ティオリ、」彼女は言った。「そうするわ。」彼女はふと何かを思い出し、背負っていた鞄を開けて本を数冊取り出し、私の腕に抱かせた。前に私がもっと本を読みたいと話したことを、彼女は覚えていてくれたのだ。ベンチにしばらく座ったあと、彼女は立ち上がり、朱に染まる夕陽のなかを歩き去った。\n \n 私がすべての新聞を読めるようになっても、ダフネ・セオドールは戻ってこなかった。\n 私がダフネからもらったキャンディーの箱の模様を撫でて擦り減らしてしまっても、ダフネ・セオドールは戻ってこなかった。\n 抱えていた布の当て物が、もう私の視界を隠せなくなっても、ダフネ・セオドールは戻ってこなかった。\n 最も難解な錬金術の書物が読めるようになっても、ダフネ・セオドールは戻ってこなかった。\n ムラサキツユクサから薬剤を抽出できるようになっても、ダフネ・セオドールは戻ってこなかった。\n お金を貯めて、ヒュペリアを離れイーザーへ留学できるようになっても、ダフネ・セオドールは戻ってこなかった。\n ——そう、彼女が見舞っていた肉親はすでに亡くなった。彼女が戻らないのは本来の成り行きなのだ。\n 私は暮れなずむ空の下、回廊のこの区画で手を振り、ほぼ二十年暮らし働いたこの病院に別れを告げた。この日の黄昏は美しい朱色で、最後にダフネを見かけたときと同じだった。\n ふいに、回廊のあちら側からひとつの人影が歩いてくるのが見えた。若くて痩せた金髪の少女のように思えた。私の手からスーツケースがするりと落ちた。けれど拾い上げて、もう一度回廊の果てを見やると、そこには何もなかった。\n 「いま、若い女の子を見ませんでした？」私は看護師のマドレーヌに尋ねた。「背が高くて、細くて、金色の髪の……」\n 「どこに金髪の娘なんていたの？」マドレーヌはぶつぶつ言った。「あんた若いくせに、どうしてこの年寄りの私より目が悪いのさ」\n 「……私の見間違いね」\n 私はスーツケースを提げて階段を降り、もう振り返らなかった。\n \n ——ティオリ・ストーンの日記",
+    ContentKR = "내가 신문을 더듬더듬 읽을 수 있게 되었을 무렵, 세오도어가 돌아왔다.\n예전처럼 꽃다발을 안고 있었지만, 바람이 불면 종잇장처럼 속삭임 강으로 날아가 버릴 만큼 그때보다 훨씬 더 마르고 초췌해져 있었다.\n세오도어가 복도 저편에서 걸어오자, 사람들은 약속이라도 한 것처럼 대화를 멈추고 증오, 혐오, 질투, 두려움 등이 담긴 눈으로 그녀를 쏘아보았다. 곧이어 누군가 카랑카랑한 목소리로 웃음을 터뜨리더니, 쥐어짜는 듯한 목소리로 '배신자'라고 외쳤고, 여기저기서 동조하는 말들이 들려왔다.\n아, 그랬지. 며칠 전 간호사들이 다프네 세오도어가 전쟁 중에 나라를 배신했다며 수다를 떠는 걸 들은 적 있었다.\n하지만... 그게 뭐 어쨌다는 거지?\n다프네 세오도어 같은 사람이 반역자로 내몰렸다면, 그건 이 나라가 잘못됐기 때문일 것이다.\n \n세오도어는 쏟아지는 비난 속에서도 아무 대꾸 없이, 사람들에게 눈길 한 번 주지 않은 채 깡마른 등을 꼿꼿이 세우고 병동을 향해 걸어왔다.\n\"개스톤 씨는 좀 어떠세요?\" 그녀가 당직 간호사에게 물었다.\n\"로저 개스톤 씨를 말하는 거라면...\" 간호사가 말했다. \"돌아가셨어요. 얼마 전에 통증이 도졌는데, 간호사가 잠깐 자리를 비운 사이에 유리컵을 깨서 팔목을 그으셨거든요.\"\n\"다른 사람한테 부탁해서 개스톤 씨를 치료할 약을 보냈잖아요!\" 세오도어가 이렇게까지 침착함을 잃은 모습은 처음이었다. 그녀는 절망에 찬 목소리로 외쳤다. \"AG-1899가 아무 효과도 없었던 거예요?\"\n\"한발 늦으신 거죠. 약이 도착하기 하루 전날 밤에 그렇게 된 거니까요.\" 간호사는 입가에 조소를 머금은 채 담담히 말했다. \"그런데, 개스톤 씨는 명예로운 퇴역 군인이셨으니까, 만약 그날 살아 계셨다 하더라도, 론샤 요새에서 그쪽이 이룩한 '쾌거'에 대해 듣고 그 약은 안 쓰셨을 거예요.\"\n세오도어의 얼굴이 새하얗게 질리더니, 엄지손톱이 살을 파고들 정도로 주먹을 꽉 쥐었다. \"아니에요! 전...\" 하지만 무언가 변명하려던 그녀는 끝내 입을 다물었다.\n세오도어가 주먹에서 힘을 빼도록 그녀의 손을 잡자, 영안실의 시체가 연상될 정도로 차가운 느낌이 들었다.\n\"세오도어 씨... 아니, 다프네 언니.\" 나는 처음으로 그녀를 언니라고 불렀다. 그러고는 거의 끌다시피 그녀를 아래층에 있는 벤치로 데려갔다. 예전에 세오도어가 내게 글자를 가르쳐 주었던 바로 그곳이었다.\n\"슬퍼하지 말아요.\"\n그리고 그녀의 손을 펼쳐, 그 위에 자그마한 종이배 하나를 올려 주었다.\n\"하고 싶은 말을 이 배에 전하고, 속삭임 강에 띄워요. 그러면 이 배가 언니 마음을 싣고, 아빠가 계신 곳에 전해 줄 거예요.\"\n그녀는 '아빠'라는 말에 흠칫 놀라더니, 금세 눈에 옅은 미소를 머금고 나를 바라보았다.\n\"고마워, 디올리.\" 그녀가 말했다. \"꼭 그렇게 할게.\" 그러고는 문득 무언가 생각난 듯, 가방에서 책 몇 권을 꺼내 내 품에 안겨 주었다. 세오도어는 책을 더 읽고 싶다고 했던 내 말을 기억하고 있었다. 벤치에 잠시 앉아 있던 그녀는, 이내 몸을 일으켜 붉은 석양 속으로 떠나갔다.\n \n내가 신문을 읽고 이해할 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n그녀에게 선물 받은 사탕 상자의 그림이 닳아 없어졌을 때도, 다프네 세오도어는 돌아오지 않았다.\n쿠션을 끌어안아도 시야가 가려지지 않을 만큼 키가 커졌을 때도, 다프네 세오도어는 돌아오지 않았다.\n가장 복잡한 연금술 책을 이해할 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n보라이슬꽃에서 약제를 추출할 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n돈을 모아 드디어 휘페르보레아를 떠나 이스엘로 유학을 갈 수 있게 됐을 때도, 다프네 세오도어는 돌아오지 않았다.\n...그래, 만나러 오던 가족이 세상을 떠났으니까, 애초에 돌아올 이유가 없었겠지.\n나는 해 질 녘 복도에 서서 손을 흔들며, 20년 가까이 일하고 생활했던 병원에 작별을 고했다. 세오도어를 마지막으로 본 그날처럼 아름답게 물든 노을이었다.\n갑자기, 복도 저 끝에서 젊고 마른 금발의 소녀가 걸어오는 것만 같았다. 순간, 나는 손에 들고 있던 가방을 땅에 떨어뜨리고 말았다. 그러나 가방을 주워 들고 다시 복도 끝을 보았을 때, 그곳에는 아무도 없었다.\n\"아까 저기서 금발 여자애 못 봤어요?\" 나는 매들린에게 물었다. \"키 크고, 마르고, 금발에...\"\n\"금발 여자애라니?\" 매들린이 투덜거렸다. \"나이도 어린 게 어떻게 늙은 나보다도 눈이 더 어두워.\"\n\"아, 제가 잘못 봤나 봐요.\"\n나는 가방을 들고 계단을 내려가, 두 번 다시 뒤돌아보지 않았다.\n \n—— 디올리 스톤의 일기",
+    ContentTC = "在我已經可以看懂簡單的報紙的時候，達芙涅回來了。\n她依舊抱著一束花，只是這次的她變得比上次更消瘦、更憔悴，彷彿風一吹，就要像紙片兒一樣飄進絮語河了似的。\n她從連廊盡頭走來，連廊的人突然都停止了交談，一起掃視著她，那目光裡包含著憎恨、嫌惡、嫉妒、恐懼…… 很快，我聽到有人尖利地笑了一聲，從嗓子尖裡擠出一聲「叛徒」。很快便紛紛有人附和。\n噢，是這樣的。幾天前，我就在護士們的閒言中聽說，達芙涅・塞奧多爾疑似在一場戰爭中叛變了。\n—— 但是，那又如何呢？\n如果一個國度讓達芙涅・塞奧多爾這樣的人選擇背叛，那也一定是這個國度的錯。\n\n面對人們的污言穢語，達芙涅沒有任何回應，她甚至沒有看他們一眼，只是依舊挺直著瘦削的脊背，徑直向病房區走來。\n「加斯顿先生好些了嗎？」她問當值的護士。\n「如果您指的是羅傑・加斯顿先生，」護士說，「他已經死了。就在不久前，又一次疼痛發作後，他趁護士不在時摔碎了玻璃杯，割斷了自己的動脈。」\n「可是我已經託人送來了可以治好他的藥劑！」我頭一次見達芙涅如此失態，她絕望地叫喊出聲，「難道 AG-1899 沒有藥效嗎？」\n「您晚了一步，他就是在藥劑送到的前一晚自殺的。」護士淡淡地說，嘴角牽出一絲嘲諷的笑，「不過我想，加斯顿先生是一名光榮的老兵，就算他那天沒自殺，聽聞您在龍莎要塞的『壯舉』後，也不會敢用您的藥劑的。」\n達芙涅的面孔變得更加蒼白，她的拇指深深嵌入食指的皮肉。「不！我沒有……」她似乎想辯解什麼，但終究什麼也沒說。\n我拉住她的手，把她的指甲掰開。她的手那樣冰涼，像太平間裡的屍體。\n「塞奧多爾小姐…… 不，達芙涅姐姐。」我第一次那樣喊她的名字，幾乎是拖著她，來到樓下的長椅。那是她曾教我寫字的地方。\n我學著她的樣子，折下一根樹枝，在地上歪歪扭扭地寫了一行字。\n「不要難過了」。\n然後我牽過她的手，把一件東西放在了她的手裡，那是一隻紙折的小船。\n「把你想說的話告訴這隻小船，然後把它放在絮語河裡吧，它會載著你的思念，去到你爸爸那裡。」\n聽到「你爸爸」時，達芙涅似是吃了一驚，而後，驚訝在她碧綠的眼睛裡暈開，化作淺淺的微笑。\n「謝謝你，蒂奧莉。」她說，「我會這麼做的。」她突然想到了什麼，打開背包，翻出幾本書，放進我懷裡。原來她還記得我上次對她說過，我想看更多書。在長椅上坐了片刻，她就站起身，在朱紅色的夕陽中走去了。\n\n在我能看懂所有報紙後，達芙涅・塞奧多爾沒有回來。\n在我把達芙涅送我的硬糖盒子圖案都摩挲掉後，達芙涅・塞奧多爾沒有回來。\n在我抱著的布墊已經不再能夠遮住我的視線後，達芙涅・塞奧多爾沒有回來。\n在我能看懂最複雜的煉金術書籍後，達芙涅・塞奧多爾沒有回來。\n在我已經可以從紫露花中萃取藥劑後，達芙涅・塞奧多爾沒有回來。\n在我攢夠了錢，可以離開海伯利亞前往伊瑟爾讀書後，達芙涅・塞奧多爾沒有回來。\n—— 是的，她探視的親人已經離世，她本就不該回來了。\n我在黃昏中站在連廊的這一段揮手，告別這座我生活和工作了近二十年的醫院。這一天的黃昏是漂亮的朱紅色，和我最後一次見到達芙涅時一樣。\n突然，我看到一個身影從連廊的那一側走來，那似乎是一個年輕而消瘦的金髮女孩。我手中的手提箱一下子掉在地上。但當我撿起手提箱，再次朝連廊的盡頭望去，那兒什麼都沒有。\n「你剛才有沒有看到一個年輕女孩？」我問瑪德琳護士，「高高的，瘦瘦的，金色的頭髮……」\n「哪有什麼金髮女孩？」瑪德琳護士嘟囔了兩聲，「你一個年輕人怎麼比我這個老太婆眼神還差。」\n「噢，是我看錯了。」\n我拎著手提箱走下樓，不再回望。\n\n—— 蒂奧莉・斯通的日記",
     TextMapContent = "在我已经可以看懂简单的报纸的时候，达芙涅回来了。\n她依旧抱着一束花，只是这次的她变得比上次更消瘦、更憔悴，仿佛风一吹，就要像纸片儿一样飘进絮语河了似的。\n她从连廊尽头走来，连廊的人突然都停止了交谈，一起扫视着她，那目光里包含着憎恨、嫌恶、嫉妒、恐惧……很快，我听到有人尖利地笑了一声，从嗓子尖里挤出一声 “叛徒”。很快便纷纷有人附和。\n噢，是这样的。几天前，我就在护士们的闲言中听说，达芙涅·塞奥多尔疑似在一场战争中叛变了。\n——但是，那又如何呢？\n如果一个国度让达芙涅·塞奥多尔这样的人选择背叛，那也一定是这个国度的错。\n\n面对人们的污言秽语，达芙涅没有任何回应，她甚至没有看他们一眼，只是依旧挺直着瘦削的脊背，径直向病房区走来。\n“加斯顿先生好些了吗？”她问当值的护士。\n“如果您指的是罗杰·加斯顿先生，”护士说，“他已经死了。就在不久前，又一次疼痛发作后，他趁护士不在时摔碎了玻璃杯，割断了自己的动脉。”\n“可是我已经托人送来了可以治好他的药剂！”我头一次见达芙涅如此失态，她绝望地叫喊出声，“难道AG-1899没有药效吗？”\n“您晚了一步，他就是在药剂送到的前一晚自杀的。”护士淡淡地说，嘴角牵出一丝嘲讽的笑，“不过我想，加斯顿先生是一名光荣的老兵，就算他那天没自杀，听闻您在龙莎要塞的‘壮举’后，也不会敢用您的药剂的。”\n达芙涅的面孔变得更加苍白，她的拇指深深嵌入食指的皮肉。“不！我没有……”她似乎想辩解什么，但终究什么也没说。\n我拉住她的手，把她的指甲掰开。她的手那样冰凉，像太平间里的尸体。\n“塞奥多尔小姐……不，达芙涅姐姐。”我第一次那样喊她的名字，几乎是拖着她，来到楼下的长椅。那是她曾教我写字的地方。\n我学着她的样子，折下一根树枝，在地上歪歪扭扭地写了一行字。\n“不要难过了”。\n然后我牵过她的手，把一件东西放在了她的手里，那是一只纸折的小船。\n“把你想说的话告诉这只小船，然后把它放在絮语河里吧，它会载着你的思念，去到你爸爸那里。”\n听到“你爸爸”时，达芙涅似是吃了一惊，而后，惊讶在她碧绿的眼睛里晕开，化作浅浅的微笑。\n“谢谢你，蒂奥莉。”她说，“我会这么做的。”她突然想到了什么，打开背包，翻出几本书，放进我怀里。原来她还记得我上次对她说过，我想看更多书。在长椅上坐了片刻，她就站起身，在朱红色的夕阳中走去了。\n\n在我能看懂所有报纸后，达芙涅·塞奥多尔没有回来。\n在我把达芙涅送我的硬糖盒子图案都摩挲掉后，达芙涅·塞奥多尔没有回来。\n在我抱着的布垫已经不再能够遮住我的视线后，达芙涅·塞奥多尔没有回来。\n在我能看懂最复杂的炼金术书籍后，达芙涅·塞奥多尔没有回来。\n在我已经可以从紫露花中萃取药剂后，达芙涅·塞奥多尔没有回来。\n在我攒够了钱，可以离开海伯利亚前往伊瑟尔读书后，达芙涅·塞奥多尔没有回来。\n——是的，她探视的亲人已经离世，她本就不该回来了。\n我在黄昏中站在连廊的这一段挥手，告别这座我生活和工作了近二十年的医院。这一天的黄昏是漂亮的朱红色，和我最后一次见到达芙涅时一样。\n突然，我看到一个身影从连廊的那一侧走来，那似乎是一个年轻而消瘦的金发女孩。我手中的手提箱一下子落在地上。但当我捡起手提箱，再次朝连廊的尽头望去，那儿什么都没有。\n“你刚才有没有看到一个年轻女孩？”我问玛德琳护士，“高高的，瘦瘦的，金色的头发……”\n“哪有什么金发女孩？”玛德琳护士嘟囔了两声，“你一个年轻人怎么比我这个老太婆眼神还差。”\n“噢，是我看错了。”\n我拎着手提箱走下楼，不再回望。\n\n——蒂奥莉·斯通的日记",
     TextMapId = "UI_CHAR_DATA_TEXT_54010205"
   },
@@ -111378,7 +111309,7 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
     TextMapId = "UI_CharTrial_AccessWalnut"
   },
   UI_CharTrial_CharIntro = {
-    ContentEN = "Character Info",
+    ContentEN = "Character Bio",
     ContentJP = "キャラクター紹介",
     ContentKR = "캐릭터 소개",
     ContentTC = "角色介紹",
@@ -112786,9 +112717,9 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
     TextMapId = "UI_Consumable_Open_Count"
   },
   UI_Consume_Select_Skin = {
-    ContentEN = "Consume the item to unlock",
+    ContentEN = "Consume your Choice Pack to unlock this skin",
     ContentJP = "選択パックを消費して外見を獲得",
-    ContentKR = "선택 패키지로 해당 캐릭터 코스튬 획득",
+    ContentKR = "선택 패키지를 사용하여 해당 캐릭터 코스튬을 획득하세요.",
     ContentTC = "消耗自選包獲得該角色形象",
     TextMapContent = "消耗自选包获得该角色形象",
     TextMapId = "UI_Consume_Select_Skin"
@@ -113879,7 +113810,7 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
   UI_DUNGEON_GUIDE_DEFENCEMECHANISM = {
     ContentEN = "Protect the target",
     ContentJP = "目標を守る",
-    ContentKR = "보호 목표",
+    ContentKR = "목표 보호",
     ContentTC = "保護目標",
     TextMapContent = "保护目标",
     TextMapId = "UI_DUNGEON_GUIDE_DEFENCEMECHANISM"
@@ -115101,7 +115032,7 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
     TextMapId = "UI_Dispatch_Toast_Overdate"
   },
   UI_Dispatch_Toast_RewardWarm = {
-    ContentEN = "Assign a character to earn Expedition rewards",
+    ContentEN = "Assign a character to complete the event and earn Expedition rewards",
     ContentJP = "代理人でイベントを完了すると派遣報酬を獲得。",
     ContentKR = "대리인을 통해 사건 완료 시 파견 보상을 수령 가능합니다.",
     ContentTC = "選擇代理人完成事件可獲得派遣獎勵",
@@ -115111,7 +115042,7 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
   UI_Dispatch_Toast_Unlock = {
     ContentEN = "%s is currently on Expedition",
     ContentJP = "%sは派遣可能",
-    ContentKR = "이제 %s에 파견할 수 있습니다.",
+    ContentKR = "%s을(를) 파견할 수 있습니다.",
     ContentTC = "%s已支持派遣",
     TextMapContent = "%s已支持派遣",
     TextMapId = "UI_Dispatch_Toast_Unlock"
@@ -116166,7 +116097,7 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
   },
   UI_ElementDes_General = {
     ContentEN = "Damage from advantaged elements is increased by <H>400%</>, while damage from <H>non-advantaged</> elements is reduced by <H>50%</>.",
-    ContentJP = "<H>有利</>属性で与えるダメージが<H>400%</>上昇し、<W>その他の</>属性で与えるダメージは<W>50%</>低下する。",
+    ContentJP = "<H>有利</>属性で与えるダメージが<H>400%</>上昇し、<W>不利</>属性で与えるダメージは<W>50%</>低下する。",
     ContentKR = "<H>카운터</> 속성이 입히는 대미지가 <H>400%</> 상승하고, <H>카운터 이외</>의 속성이 입히는 대미지가 <H>50%</> 감소한다.",
     ContentTC = "<H>克製</>屬性傷害提高<H>400%</>，<W>非克製</>屬性傷害降低<W>50%</>",
     TextMapContent = "<H>克制</>属性伤害提高<H>400%</>，<W>非克制</>属性伤害降低<W>50%</>",
@@ -116655,7 +116586,7 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
   UI_Event_MidTerm_RepeatTask = {
     ContentEN = "Repeatable Games",
     ContentJP = "繰り返しの賭け",
-    ContentKR = "반복 대결",
+    ContentKR = "중복 대결",
     ContentTC = "重複博弈",
     TextMapContent = "重复博弈",
     TextMapId = "UI_Event_MidTerm_RepeatTask"
@@ -116663,13 +116594,13 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
   UI_Event_MidTerm_Rule = {
     ContentEN = [[
 1. Complete Regular Games curated by Lulu Lunoloot to earn Luno Points.
-At each daily server reset, your Luno Collections are calculated based on your Luno Points. Any excess beyond the cap will be converted into Coins at a fixed rate.
-2. <highlight>Four</> Daily Games refresh with each daily server reset. After settling the previous day's Luno Collection, new Daily Games will unlock. Repeatable Games can be completed multiple times and do not reset daily.
-3. Complete Challenge Games to earn Challenge Points, which can be exchanged for Lulu Lunoloot's Challenge Collections.
-4. Challenge Games are released in <highlight>two</> phases. Lulu Lunoloot will unveil the next batch of her hard-crafted Games on 7 November 2025.]],
-    ContentJP = "1．天下御免の大泥棒が用意したノーマルな賭けをクリアすると、ルーナ族ポイントを獲得できます。\nサーバーの日付が更新されるたびにルーナ族ポイントが集計され、ルーナ族の秘蔵品が決算されます。上限を超えたポイントは一定の割合で銅貨に変換されます。\n2．デイリー賭けはサーバー日付が更新されるたびに<highlight>4</>件リセットされ、前日のルーナ族の秘蔵品が決算された後、新しいデイリー賭けが開放されます。繰り返しの賭けは繰り返し挑戦でき、進行度はサーバー更新でリセットされません。\n3．チャレンジの賭けをクリアするとチャレンジポイントを獲得でき、天下御免の大泥棒のチャレンジ秘蔵品と交換できます。\n4．チャレンジの賭けは<highlight>2</>段階に分かれており、天下御免の大泥棒は2025年11月7日に新たな賭け事をひねり出す予定です。",
-    ContentKR = "1. 말더듬이 강, 강도 루나가 준비한 일반 대결 완료 시 루나 포인트를 획득합니다.\n매일 서버 날짜가 갱신될 때마다, 루나 포인트에 따라 루나의 보물이 결산됩니다. 루나 포인트 최대치를 초과한 포인트는 일정 비율에 따라 쿠퍼로 전환됩니다.\n2. 일일 대결은 매일 서버 날짜가 갱신될 때, <highlight>4</>개의 새로운 대결이 리셋됩니다. 이전 날의 루나의 보물을 결산한 후, 새로운 일일 대결이 오픈됩니다. 반복 대결은 여러 번 완료할 수 있으며, 서버 날짜 갱신 시에도 진행도가 초기화되지 않습니다.\n3. 도전 대결을 완료하면 도전 포인트가 지급됩니다. 도전 포인트를 사용하여 말더듬이 강, 강도 루나의 도전 보물을 획득할 수 있습니다.\n4. 도전 대결은 <highlight>2</>단계로 나뉩니다. 말더듬이 강, 강도 루나는 2025년 11월 7일에 새로운 대결을 생각해 낼 것입니다.",
-    ContentTC = "1、完成打打打打打劫皎皎準備的常規博弈獲取皎皎積分。\n\n每天服務器日期更新時，根據皎皎積分結算皎皎珍藏，皎皎積分上限之外的超額積分將按照一定比例轉化為銅幣\n\n2、每日博弈將在每天服務器日期更新時刷新<highlight>4</>個，結算前一天的皎皎珍藏後，將開啟新的每日博弈；重複博弈可以多次完成，且重複博弈的進度不會隨著服務器日期更新而重置\n\n3、完成挑戰博弈可以獲得挑戰積分，用於獲得打打打打打劫皎皎的挑戰珍藏\n\n4、挑戰博弈分為<highlight>2</>個階段，打打打打打劫皎皎將會在2025年11月7日絞盡腦汁想出來新的博弈",
+ At each daily server reset, your Luno Collections are calculated based on your Luno Points. Any excess beyond the cap will be converted into Coins at a fixed rate.
+ 2. <highlight>Four</> Daily Games refresh with each daily server reset. After settling the previous day's Luno Collection, new Daily Games will unlock. Repeatable Games can be completed multiple times and do not reset daily.
+ 3. Complete Challenge Games to earn Challenge Points, which can be exchanged for Lulu Lunoloot's Challenge Collections.
+ 4. Challenge Games are released in <highlight>two</> phases. Lulu Lunoloot will unveil the next batch of her hard-crafted Games on 7 November 2025.]],
+    ContentJP = "1．天下御免の大泥棒が用意したノーマルな賭けをクリアすると、ルーナ族ポイントを獲得できます。\n サーバーの日付が更新されるたびにルーナ族ポイントが集計され、ルーナ族の秘蔵品が決算されます。上限を超えたポイントは一定の割合で銅貨に変換されます。\n 2．デイリー賭けはサーバー日付が更新されるたびに<highlight>4</>件リセットされ、前日のルーナ族の秘蔵品が決算された後、新しいデイリー賭けが開放されます。繰り返しの賭けは繰り返し挑戦でき、進行度はサーバー更新でリセットされません。\n 3．チャレンジの賭けをクリアするとチャレンジポイントを獲得でき、天下御免の大泥棒のチャレンジ秘蔵品と交換できます。\n 4．チャレンジの賭けは<highlight>2</>段階に分かれており、天下御免の大泥棒は2025年11月7日に新たな賭け事をひねり出す予定です。",
+    ContentKR = "1. 말더듬이 강, 강도 루나가 준비한 일반 대결 완료 시 루나 포인트를 획득합니다.\n매일 서버 날짜가 갱신될 때마다, 루나 포인트에 따라 루나의 보물이 결산됩니다. 루나 포인트 최대치를 초과한 포인트는 일정 비율에 따라 쿠퍼로 전환됩니다.\n2. 일일 대결은 매일 서버 날짜가 갱신될 때, <highlight>4</>개의 새로운 대결이 리셋됩니다. 이전 날의 루나의 보물을 결산한 후, 새로운 일일 대결이 오픈됩니다. 중복 대결은 여러 번 완료할 수 있으며, 서버 날짜 갱신 시에도 진행도가 초기화되지 않습니다.\n3. 도전 대결을 완료하면 도전 포인트가 지급됩니다. 도전 포인트를 사용하여 말더듬이 강, 강도 루나의 도전 보물을 획득할 수 있습니다.\n4. 도전 대결은 <highlight>2</>단계로 나뉩니다. 말더듬이 강, 강도 루나는 2025년 11월 7일에 새로운 대결을 생각해 낼 것입니다.",
+    ContentTC = "1、完成打打打打打劫皎皎準備的常規博弈獲取皎皎積分。_x000D_\n 每天服務器日期更新時，根據皎皎積分結算皎皎珍藏，皎皎積分上限之外的超額積分將按照一定比例轉化為銅幣_x000D_\n 2、每日博弈將在每天服務器日期更新時刷新<highlight>4</>個，結算前一天的皎皎珍藏後，將開啟新的每日博弈；重複博弈可以多次完成，且重複博弈的進度不會隨著服務器日期更新而重置_x000D_\n 3、完成挑戰博弈可以獲得挑戰積分，用於獲得打打打打打劫皎皎的挑戰珍藏_x000D_\n 4、挑戰博弈分為<highlight>2</>個階段，打打打打打劫皎皎將會在2025年11月7日絞盡腦汁想出來新的博弈",
     TextMapContent = "1、完成打打打打打劫皎皎准备的常规博弈获取皎皎积分。\n每天服务器日期更新时，根据皎皎积分结算皎皎珍藏，皎皎积分上限之外的超额积分将按照一定比例转化为铜币\n2、每日博弈将在每天服务器日期更新时刷新<highlight>4</>个，结算前一天的皎皎珍藏后，将开启新的每日博弈；重复博弈可以多次完成，且重复博弈的进度不会随着服务器日期更新而重置\n3、完成挑战博弈可以获得挑战积分，用于获得打打打打打劫皎皎的挑战珍藏\n4、挑战博弈分为<highlight>2</>个阶段，打打打打打劫皎皎将会在2025年11月7日绞尽脑汁想出来新的博弈",
     TextMapId = "UI_Event_MidTerm_Rule"
   },
@@ -118451,7 +118382,7 @@ At each daily server reset, your Luno Collections are calculated based on your L
     TextMapId = "UI_GameEvent_TrialToBeFinished"
   },
   UI_HARDBOSS_COMPLETE = {
-    ContentEN = "Challenge Complete!",
+    ContentEN = "Challenge complete",
     ContentJP = "チャレンジ成功",
     ContentKR = "도전 성공",
     ContentTC = "挑戰成功",
@@ -120155,7 +120086,7 @@ At each daily server reset, your Luno Collections are calculated based on your L
     ContentEN = "Deutsch",
     ContentJP = "Deutsch（ドイツ語）",
     ContentKR = "Deutsch",
-    ContentTC = "Deutsch（德文）",
+    ContentTC = "Deutsch（德語）",
     TextMapContent = "Deutsch（德语）",
     TextMapId = "UI_Language_Text_DE"
   },
@@ -120163,7 +120094,7 @@ At each daily server reset, your Luno Collections are calculated based on your L
     ContentEN = "English",
     ContentJP = "English（英語）",
     ContentKR = "English",
-    ContentTC = "English（英文）",
+    ContentTC = "English（英語）",
     TextMapContent = "English（英语）",
     TextMapId = "UI_Language_Text_EN"
   },
@@ -120171,7 +120102,7 @@ At each daily server reset, your Luno Collections are calculated based on your L
     ContentEN = "Español",
     ContentJP = "Español（スペイン語）",
     ContentKR = "Español",
-    ContentTC = "Español（西班牙文）",
+    ContentTC = "Español（西班牙語）",
     TextMapContent = "Español（西班牙语）",
     TextMapId = "UI_Language_Text_ES"
   },
@@ -120179,7 +120110,7 @@ At each daily server reset, your Luno Collections are calculated based on your L
     ContentEN = "Français",
     ContentJP = "Français（フランス語）",
     ContentKR = "Français",
-    ContentTC = "Français（法文）",
+    ContentTC = "Français（法語）",
     TextMapContent = "Français（法语）",
     TextMapId = "UI_Language_Text_FR"
   },
@@ -120187,7 +120118,7 @@ At each daily server reset, your Luno Collections are calculated based on your L
     ContentEN = "日本語",
     ContentJP = "日本語（日本語）",
     ContentKR = "日本語",
-    ContentTC = "日本語（日文）",
+    ContentTC = "日本語（日語）",
     TextMapContent = "日本語（日语）",
     TextMapId = "UI_Language_Text_JP"
   },
@@ -120443,6 +120374,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
   },
   UI_Loading_Warn_Content_KR = {
     ContentKR = "본 게임물은 12세 이용가 게임으로서 해당 연령 미만의 어린이나 청소년이 이용하기에 부적절합니다.",
+    ContentTC = "nan",
     TextMapId = "UI_Loading_Warn_Content_KR"
   },
   UI_Loading_Warn_Title = {
@@ -121964,7 +121896,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
     ContentEN = "Deleting this mail will result in the permanent loss of any unclaimed rewards contained within. Proceed?",
     ContentJP = "メール削除後、未受取の報酬は復元できません。削除しますか？",
     ContentKR = "우편 삭제 후 미수령한 보상은 복구할 수 없습니다. 정말 삭제하시겠습니까?",
-    ContentTC = "信件刪除後未領取的獎勵將無法恢復，是否確認刪除？",
+    ContentTC = "郵件刪除後未領取的獎勵將無法恢復，是否確認刪除？",
     TextMapContent = "邮件删除后未领取的奖励将不可恢复，是否确认删除？",
     TextMapId = "UI_Mail_Delete_Confirm_1"
   },
@@ -121972,7 +121904,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
     ContentEN = "Delete all read mail? (Excluding starred mail and mail with unclaimed rewards)",
     ContentJP = "すべての既読メールを削除しますか？（重要メールや報酬未受領のメールは除く）",
     ContentKR = "정말 모든 읽은 우편을 삭제하시겠습니까?\n(즐겨찾기 우편과 보상을 수령하지 않은 우편 제외)",
-    ContentTC = "是否確認刪除所有已讀信件？（不包含星標信件和未領取獎勵的信件）",
+    ContentTC = "是否確認刪除所有已讀郵件？（不包含星標郵件和未領取獎勵的郵件）",
     TextMapContent = "是否确认删除所有已读邮件？（不包括星标邮件和未领取奖励的邮件）",
     TextMapId = "UI_Mail_Delete_Confirm_2"
   },
@@ -122044,7 +121976,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
     ContentEN = "Unstar this mail? (It will be removed on daily refresh.)",
     ContentJP = "重要メール標記を取り消してもよろしいですか？（毎日の更新時に当該メールは完全削除）",
     ContentKR = "즐겨찾기한 우편을 취소하시겠습니까?\n(해당 즐겨찾기 우편은 매일 새로고침 시 삭제됩니다)",
-    ContentTC = "是否確認取消星標信件？（該星標信件將在每天更新時刪除）",
+    ContentTC = "是否確認取消星標郵件？（該星標郵件將在每天更新時刪除）",
     TextMapContent = "是否确认取消星标邮件？（该星标邮件将在每天刷新时删除）",
     TextMapId = "UI_Mail_Unstar_Confirm"
   },
@@ -122227,7 +122159,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
   UI_MiniGame_Hint_TiaoPin = {
     ContentEN = "Tap <img id=\"MiniGame_TiaoPin_L\"></><img id=\"MiniGame_TiaoPin_U\"></><img id=\"MiniGame_TiaoPin_R\"></><img id=\"MiniGame_TiaoPin_D\"></> to move <img id=\"MiniGame_TiaoPin_S\"></> to the correct position <img id=\"MiniGame_TiaoPin_E\"></>",
     ContentJP = "<img id=\"MiniGame_TiaoPin_L\"></><img id=\"MiniGame_TiaoPin_U\"></><img id=\"MiniGame_TiaoPin_R\"></><img id=\"MiniGame_TiaoPin_D\"></> をタップして<img id=\"MiniGame_TiaoPin_S\"></>を正しい<img id=\"MiniGame_TiaoPin_E\"></>まで移動させよう",
-    ContentKR = "<img id=\"MiniGame_TiaoPin_L\"></><img id=\"MiniGame_TiaoPin_U\"></><img id=\"MiniGame_TiaoPin_R\"></><img id=\"MiniGame_TiaoPin_D\"></> 버튼을 눌러 <img id=\"MiniGame_TiaoPin_S\"></>를 <img id=\"MiniGame_TiaoPin_E\"></>로 이동",
+    ContentKR = "<img id=\"MiniGame_TiaoPin_L\"></><img id=\"MiniGame_TiaoPin_U\"></><img id=\"MiniGame_TiaoPin_R\"></><img id=\"MiniGame_TiaoPin_D\"></> 버튼을 눌러 <img id=\"MiniGame_TiaoPin_S\"></>를 올바른 <img id=\"MiniGame_TiaoPin_E\">로 옮기세요.</>",
     ContentTC = "點擊<img id=\"MiniGame_TiaoPin_L\"></><img id=\"MiniGame_TiaoPin_U\"></><img id=\"MiniGame_TiaoPin_R\"></><img id=\"MiniGame_TiaoPin_D\"></>移動<img id=\"MiniGame_TiaoPin_S\"></>至正確的<img id=\"MiniGame_TiaoPin_E\"></>",
     TextMapContent = "点击<img id=\"MiniGame_TiaoPin_L\"></><img id=\"MiniGame_TiaoPin_U\"></><img id=\"MiniGame_TiaoPin_R\"></><img id=\"MiniGame_TiaoPin_D\"></>移动<img id=\"MiniGame_TiaoPin_S\"></>至正确的<img id=\"MiniGame_TiaoPin_E\"></>",
     TextMapId = "UI_MiniGame_Hint_TiaoPin"
@@ -123003,7 +122935,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
   UI_MonthlyCard_Detail_1 = {
     ContentEN = "Lunotress's Monthly Pass refreshes every 30 days, bringing brand-new exclusive gifts. Once this month's Pass is taken off shelf, it will no longer be available for purchase.",
     ContentJP = "ルーナ族のバーテンダーの月間オーダーは30日ごとに更新され、新しいオーダーには最新の特別特典が含まれます。旧オーダーは終了後、契約不可となります。",
-    ContentKR = "루나의 월간 주문은 30일마다 갱신됩니다. 새로운 주문은 최신 선물이 포함되어 있습니다. 이전 주문이 만료되면 계약할 수 없습니다",
+    ContentKR = "루나의 월간 주문은 30일마다 업데이트됩니다. 새로운 주문은 최신 선물이 포함되어 있습니다. 이전 주문이 만료되면 계약할 수 없습니다",
     ContentTC = "皎皎的月度訂單每30天更新，新的訂單將包含全新的獨特贈禮。舊訂單下架後將無法簽約。",
     TextMapContent = "皎皎的月度订单每30天更新，新的订单将包含全新的独特赠礼。旧订单下架后将无法签约。",
     TextMapId = "UI_MonthlyCard_Detail_1"
@@ -127222,7 +127154,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
   },
   UI_OPTION_DISPLAY = {
     ContentEN = "Display",
-    ContentJP = "グラフィック",
+    ContentJP = "表示",
     ContentKR = "그래픽",
     ContentTC = "顯示",
     TextMapContent = "显示",
@@ -130331,7 +130263,7 @@ Completing the trial in Co-Op Mode allows you to claim repeat-clear rewards. The
     TextMapId = "UI_PretextTasks"
   },
   UI_Preview_GestureItem = {
-    ContentEN = "Posture",
+    ContentEN = "Postures",
     ContentJP = "ジェスチャー",
     ContentKR = "전시 동작",
     ContentTC = "展示動作",
@@ -132574,7 +132506,7 @@ Completing the trial in Co-Op Mode allows you to claim repeat-clear rewards. The
     TextMapId = "UI_SHOP_REMAINTIME_SECOND"
   },
   UI_SHOP_ROGUE_ITEM = {
-    ContentEN = "Fortune's Favour",
+    ContentEN = "Fortune‘s Favour",
     ContentJP = "運命の賜物",
     ContentKR = "운명의 선물",
     ContentTC = "命運的饋贈",
@@ -132734,7 +132666,7 @@ Completing the trial in Co-Op Mode allows you to claim repeat-clear rewards. The
     TextMapId = "UI_SHOP_SUBTAB_NAME_YUESHI"
   },
   UI_SHOP_SUBTAB_NAME_YUESHIJINGPEI = {
-    ContentEN = "Plumule Exchange",
+    ContentEN = "Phoxene Plumule Exchange",
     ContentJP = "月ノ核交換",
     ContentKR = "월석의 싹 교환",
     ContentTC = "月石晶胚兌換",
@@ -134716,7 +134648,7 @@ Completing the trial in Co-Op Mode allows you to claim repeat-clear rewards. The
   UI_Skin_Des_210102 = {
     ContentEN = "A murmur of love through the silks, an eternity sealed in a fatal kiss.",
     ContentJP = "幾重にも重なる紗の奥、囁きで愛を語り、死によって永遠に触れ合う。",
-    ContentKR = "겹겹이 쌓인 베일 아래, 속삭임으로 사랑을 말하고, 죽음으로 영원을 터치하라.",
+    ContentKR = "겹겹이 쌓인 커튼 아래, 속삭임으로 사랑을 말하고, 죽음으로 영원을 터치하라.",
     ContentTC = "重重紗幕之下，以輕語訴說愛意，用死亡觸碰永恆。",
     TextMapContent = "重重纱幕之下，以轻语诉说爱意，用死亡触碰永恒。",
     TextMapId = "UI_Skin_Des_210102"
@@ -135325,7 +135257,7 @@ Completing the trial in Co-Op Mode allows you to claim repeat-clear rewards. The
   UI_Squad_ListName = {
     ContentEN = "Team Loadout{空格}",
     ContentJP = "プリセット設定",
-    ContentKR = "프리셋 설정{空格}",
+    ContentKR = "프리셋 설정",
     ContentTC = "預設配置",
     TextMapContent = "预设配置",
     TextMapId = "UI_Squad_ListName"
@@ -145242,7 +145174,7 @@ Well... I, a candidate of the Seven Virtues, order you to show me your anger! No
     TextMapId = "voice_ch_char_Feina_vo_revive"
   },
   voice_ch_char_Feina_vo_skill01_r01 = {
-    ContentEN = "♪ Starlight, shining bright~",
+    ContentEN = "♪ Hmm-hmm, shining bright~",
     ContentJP = "♪ ほっし～　ピカピカ",
     ContentKR = "♪ 별이~ 반짝반짝~",
     ContentTC = "♪ 星星～閃閃發亮～",
@@ -148066,118 +147998,6 @@ Should you ever feel lost, or simply wish to hear a story, my arms will always b
     ContentTC = "是你呀，親愛的孩子。日安，有什麼事想要講給我聽嗎？",
     TextMapContent = "是你呀，亲爱的孩子。日安，有什么事想要讲给我听吗？",
     TextMapId = "voice_ch_char_Nifu_vo_welcome"
-  },
-  voice_ch_char_NvzhuLight_vo_appear = {
-    ContentEN = "The world outside Purgatorio Island defies all accounts — more expansive, yet more brutal. This cannot be its true destiny. That's why a change must be made.",
-    ContentJP = "パーガトリー島の外の世界は、本の中よりもずっと広くて、そして残酷だった......こんな世界であっていいはずがない。だから{性别:僕|私}は動く。",
-    ContentKR = "연옥도 밖은 책에서 본 것보다 넓고... 훨씬 더 잔인했어. 이런 세상은 잘못된 거니까, 내가 뭘 해야 할지 생각하고 있어.",
-    ContentTC = "淨界島以外的世界，比書裡還要廣闊，也比書裡更殘酷。它不應該是這副模樣，所以，我想我應該做些什麼。",
-    TextMapContent = "净界岛以外的世界，比书里还要广阔，也比书里更残酷。它不应该是这副模样，所以，我想我应该做些什么。",
-    TextMapId = "voice_ch_char_NvzhuLight_vo_appear"
-  },
-  voice_ch_char_NvzhuLight_vo_battleidle = {
-    ContentEN = "Where's next? Let me check the map... Ugh... I know maps don't like me.",
-    ContentJP = "これからどこへ行く{性别:んだ|の}？ちょっと地図を確認させて......うん......読みにくい{性别:な|ね}。",
-    ContentKR = "그다음엔 어디로 가야 하지? 지도를 볼까... 음... 잘 모르겠네.",
-    ContentTC = "接下來該去哪裡？讓我看看地圖……嗯……好難認。",
-    TextMapContent = "接下来该去哪里？让我看看地图……嗯……好难认。",
-    TextMapId = "voice_ch_char_NvzhuLight_vo_battleidle"
-  },
-  voice_ch_char_NvzhuLight_vo_battlestart = {
-    ContentEN = "This sword still fulfils its duty.",
-    ContentJP = "この剣は、まだ役に立てる{性别:んだ|の}。",
-    ContentKR = "이 검은, 아직 쓰일 곳이 있어.",
-    ContentTC = "這把劍，依舊還在派上用場。",
-    TextMapContent = "这把剑，依旧还在派上用场。",
-    TextMapId = "voice_ch_char_NvzhuLight_vo_battlestart"
-  },
-  voice_ch_char_NvzhuLight_vo_die_r01 = {
-    ContentEN = "I can't stop... not now...",
-    ContentJP = "せめて……こんなところで……",
-    ContentKR = "아직... 여기서만은...",
-    ContentTC = "至少……不是在這裡……",
-    TextMapContent = "至少……不是在这里……",
-    TextMapId = "voice_ch_char_NvzhuLight_vo_die_r01"
-  },
-  voice_ch_char_NvzhuLight_vo_die_r02 = {
-    ContentEN = "If only... I could make it back to where we promised...",
-    ContentJP = "戻りたい{性别:な|ね}。……約束した場所に……",
-    ContentKR = "약속한 곳으로... 돌아가고 싶어...",
-    ContentTC = "好想回到……約定的地方……",
-    TextMapContent = "好想回到……约定的地方……",
-    TextMapId = "voice_ch_char_NvzhuLight_vo_die_r02"
-  },
-  voice_ch_char_NvzhuLight_vo_fail = {
-    ContentEN = "Next time, they will pay the price.",
-    ContentJP = "今度こそ、彼らに報いを受けさせる！",
-    ContentKR = "다음번엔, 반드시 대가를 치르게 될 거다.",
-    ContentTC = "下一次，他們必將付出代價。",
-    TextMapContent = "下一次，他们必将付出代价。",
-    TextMapId = "voice_ch_char_NvzhuLight_vo_fail"
-  },
-  voice_ch_char_NvzhuLight_vo_lvup = {
-    ContentEN = "Every step I've taken, every word I've heard, and every soul I've met — all have honed my view of this world and the edge of my sword.",
-    ContentJP = "今まで歩んできた道、聞いてきた話、出会ってきた人......それらすべてが、{性别:僕|私}にこの世界をもっと深く知らせ、{性别:僕|私}の剣を研ぎ澄ませてくれたものだ。",
-    ContentKR = "이 길을 걸으며 이야기를 듣고, 수많은 사람들을 만나면서, 세상을 더 깊이 알게 됐어. 내 검도, 한층 더 날카로워졌지.",
-    ContentTC = "我行過的每一步路、聽到的每一句話、遇見的每一個人，都讓我更加了解這個世界，讓我的劍更加鋒利。",
-    TextMapContent = "我行过的每一步路、听到的每一句话、遇见的每一个人，都让我更加了解这个世界，让我的剑更加锋利。",
-    TextMapId = "voice_ch_char_NvzhuLight_vo_lvup"
-  },
-  voice_ch_char_NvzhuLight_vo_revive = {
-    ContentEN = "Was that... just a nightmare?",
-    ContentJP = "さっきのは......悪夢だったの{性别:か|}？",
-    ContentKR = "악몽을... 꾼 건가?",
-    ContentTC = "剛剛是……一場噩夢？",
-    TextMapContent = "刚刚是……一场噩梦？",
-    TextMapId = "voice_ch_char_NvzhuLight_vo_revive"
-  },
-  voice_ch_char_NvzhuLight_vo_skill01_r01 = {
-    ContentEN = "Vanish.",
-    ContentJP = "消えて。",
-    ContentKR = "사라져라.",
-    ContentTC = "消散。",
-    TextMapContent = "消散。",
-    TextMapId = "voice_ch_char_NvzhuLight_vo_skill01_r01"
-  },
-  voice_ch_char_NvzhuLight_vo_skill01_r02 = {
-    ContentEN = "Light slash.",
-    ContentJP = "光よ、飛べ！",
-    ContentKR = "빛의 속도로.",
-    ContentTC = "飛光。",
-    TextMapContent = "飞光。",
-    TextMapId = "voice_ch_char_NvzhuLight_vo_skill01_r02"
-  },
-  voice_ch_char_NvzhuLight_vo_skill02_r01 = {
-    ContentEN = "This time, I will be the shield.",
-    ContentJP = "今度は、{性别:僕|私}が守ってあげる！",
-    ContentKR = "이번엔 내가 지켜줄 차례야.",
-    ContentTC = "這次，輪到我來保護別人。",
-    TextMapContent = "这次，轮到我来保护别人。",
-    TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r01"
-  },
-  voice_ch_char_NvzhuLight_vo_skill02_r02 = {
-    ContentEN = "For the future we shall face together.",
-    ContentJP = "明日を迎えるために",
-    ContentKR = "내일을 향해.",
-    ContentTC = "為了去往明天。",
-    TextMapContent = "为了去往明天。",
-    TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r02"
-  },
-  voice_ch_char_NvzhuLight_vo_skill02_r03 = {
-    ContentEN = "Return to the Misty Sea.",
-    ContentJP = "ニヴルヘイムに帰れ",
-    ContentKR = "안개의 바다로 돌아가라.",
-    ContentTC = "回歸霧海吧。",
-    TextMapContent = "回归雾海吧。",
-    TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r03"
-  },
-  voice_ch_char_NvzhuLight_vo_victory = {
-    ContentEN = "Another step forward. As long as I keep proceeding, I'll get there...",
-    ContentJP = "また一歩、前へ進んだ。こうして一歩ずつ重ねていけば、いつかきっと......",
-    ContentKR = "또 한발 전진했어. 계속 나아간다면 반드시...",
-    ContentTC = "又前進了一步。只要我走得足夠遠，就一定可以……",
-    TextMapContent = "又前进了一步。只要我走得足够远，就一定可以……",
-    TextMapId = "voice_ch_char_NvzhuLight_vo_victory"
   },
   voice_ch_char_Saiqi_vo_appear = {
     ContentEN = "I knew you'd bring me along.",

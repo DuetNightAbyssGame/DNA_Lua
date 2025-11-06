@@ -738,7 +738,7 @@ function GM_Command:ClientGM(WorldContextObject, FunctionName, Args)
                     return B:GetEntity(eid)
                 end
                 local ObjectId = function (obj_str)
-                    return CommonUtils.Str2ObjId("ObjectId(\""..obj_str.."\")")
+                    return CommonUtils.Str2ObjId("ObjectId(""..obj_str.."")")
                 end
             ]]
       local ExecStr = "return function(self) " .. LocalFunctionStr .. "return " .. FunctionName .. " end"

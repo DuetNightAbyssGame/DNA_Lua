@@ -9,29 +9,17 @@ function BP_MonsterSpawn_C:RealCreateUnits(UnitId, UnitNum, PresetTarget, Source
   DebugPrint("RealCreateUnits CreateUnitNew UnitId:", UnitId, "UnitNum:", UnitNum)
   local FrameCount = UE4.UKismetSystemLibrary.GetFrameCount()
   if self.PreFreameCount ~= FrameCount then
-    if self.RemainUnitNum ~= nil and self.RemainUnitNum > 0 then
-      return
-    end
-    self.RemainUnitNum = 0
-    self.TempLocations = self.Locations
-    self.TempLocationIndex = 0
     self.DelayFrameStartCount = 1
     self.PreFreameCount = FrameCount
   end
-  self.RemainUnitNum = self.RemainUnitNum + UnitNum
   for i = 1, UnitNum do
     self:AddDelayFrameFunc(function()
-      self.RemainUnitNum = self.RemainUnitNum - 1
       if "Main" == SourceType and not self:DetectMonsterSpawnTotalNum() then
         DebugPrint("BP_MonsterSpawn_C 刷怪过程中数量已达上限, 直接返回  MonsterSpawnId:", self.UnitSpawnId)
         return
       end
-      if 0 == self.TempLocations:Num() then
-        DebugPrint("Error: BP_MonsterSpawn_C No Locations MonsterSpawnId:", self.UnitSpawnId)
-        return
-      end
-      local Location = self.TempLocations[self.TempLocationIndex % self.TempLocations:Num() + 1]
-      self.TempLocationIndex = self.TempLocationIndex + 1
+      local Location = self.Locations[self.LocationIndex % self.Locations:Num() + 1]
+      self.LocationIndex = self.LocationIndex + 1
       local Context = AEventMgr.CreateUnitContext()
       Context.UnitType = "Monster"
       Context.UnitId = UnitId

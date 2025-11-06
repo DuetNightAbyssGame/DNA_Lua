@@ -340,10 +340,6 @@ local Data = {
           ContentTC = "目前配置未達出戰要求",
           TextMapId = "Abyss_PartySetup_ConditionsAreNot"
         },
-        Abyss_PartyUnlock = {
-          ContentTC = "陣容已解鎖",
-          TextMapId = "Abyss_PartyUnlock"
-        },
         Abyss_Party_ConditionsAreNot = {
           ContentTC = "請先配置陣容",
           TextMapId = "Abyss_Party_ConditionsAreNot"
@@ -533,6 +529,10 @@ local Data = {
           ContentTC = "(伺服器時間)",
           TextMapId = "AnnouncementAutoTimeZone"
         },
+        AnnouncementFixedTimeZone = {
+          ContentTC = "nan",
+          TextMapId = "AnnouncementFixedTimeZone"
+        },
         AnnouncementTimeFormatLong = {
           ContentTC = "{YY}年{MM}月{DD}日 {H}:{M}~{YY1}年{MM1}月{DD1}日 {H1}:{M1}",
           TextMapId = "AnnouncementTimeFormatLong"
@@ -545,7 +545,7 @@ local Data = {
           ContentTC = "{YY}年{MM}月{DD}日 {H}:{M}~{H1}:{M1}",
           TextMapId = "AnnouncementTimeFormatShort"
         },
-        Apostrophe = {ContentTC = "'", TextMapId = "Apostrophe"},
+        Apostrophe = {ContentTC = "nan", TextMapId = "Apostrophe"},
         ArchiveTitle_Char = {
           ContentTC = "角色",
           TextMapId = "ArchiveTitle_Char"
@@ -1325,7 +1325,7 @@ local Data = {
           TextMapId = "Buff_Content_203"
         },
         Buff_Content_211 = {
-          ContentTC = "敵方單位每3秒恢復最大護盾#1的護盾，帶有屬性額外觸發效果時，暫停恢復。",
+          ContentTC = "敵方單位每2秒恢復最大護盾#1的護盾，帶有屬性額外觸發效果時，暫停恢復。",
           TextMapId = "Buff_Content_211"
         },
         Buff_Content_30 = {
@@ -1671,7 +1671,7 @@ local Data = {
         CVName4021 = {ContentTC = "강시현", TextMapId = "CVName4021"},
         CVName4022 = {ContentTC = "이현진", TextMapId = "CVName4022"},
         CVName4023 = {ContentTC = "김수영", TextMapId = "CVName4023"},
-        Caesura = {ContentTC = "、", TextMapId = "Caesura"},
+        Caesura = {ContentTC = "nan", TextMapId = "Caesura"},
         Camp_Name_Diguo = {
           ContentTC = "海伯利亞帝國",
           TextMapId = "Camp_Name_Diguo"
@@ -5503,7 +5503,7 @@ local Data = {
           TextMapId = "DUNGEON_SYNTHESIS_132"
         },
         DUNGEON_SYNTHESIS_133 = {
-          ContentTC = "懸賞委托耗時較長，請在保持時間充裕的情況下進行，是否繼續？（建議組隊挑戰）",
+          ContentTC = "懸賞委托耗時較長，請在保持時間充裕的情況下進行，是否繼續？",
           TextMapId = "DUNGEON_SYNTHESIS_133"
         },
         DUNGEON_SYNTHESIS_134 = {
@@ -5607,7 +5607,7 @@ local Data = {
           TextMapId = "DailyTaskDes_10000108"
         },
         DailyTaskDes_10000109 = {
-          ContentTC = "完成<Highlight>1</>次「競逐」委託",
+          ContentTC = "完成<Highlight>1</>次「競逐」委托",
           TextMapId = "DailyTaskDes_10000109"
         },
         DailyTaskDes_10000110 = {
@@ -9020,7 +9020,7 @@ local Data = {
           TextMapId = "Event_Des_103009001"
         },
         Event_Des_103010 = {
-          ContentTC = "當一隻小夜鶯飛出巢穴，它會見到廣闊的天空，掠過柔軟的草地，卻也注定會迎上冰冷的雨和狂暴的風。\n但少女已決心不再退卻，她將用魔法的畫筆描繪彩色的夢，在這依然殘酷的現實世界裡，尋得一片永遠如童話般溫暖明亮的晴天。",
+          ContentTC = "當一隻小夜鶯飛出巢穴，它會見到廣闊的天空，掠過柔軟的草地，卻也注定會迎上冰冷的雨和狂暴的風。\n 但少女已決心不再退卻，她將用魔法的畫筆描繪彩色的夢，在這依然殘酷的現實世界裡，尋得一片永遠如童話般溫暖明亮的晴天。",
           TextMapId = "Event_Des_103010"
         },
         Event_Des_103012 = {
@@ -9180,7 +9180,7 @@ local Data = {
           TextMapId = "Event_Tab_107002"
         },
         Event_Tab_107003 = {
-          ContentTC = "交匯的足跡",
+          ContentTC = "交彙的足跡",
           TextMapId = "Event_Tab_107003"
         },
         Event_Tab_107101 = {
@@ -9264,7 +9264,7 @@ local Data = {
           TextMapId = "Event_Title_107002"
         },
         Event_Title_107003 = {
-          ContentTC = "交匯的足跡",
+          ContentTC = "交彙的足跡",
           TextMapId = "Event_Title_107003"
         },
         Event_Title_107101 = {
@@ -11893,7 +11893,7 @@ local Data = {
   },
   {
     MinKey = "MAINUIGUIDE_TITLE_TRAININGGROUND_2",
-    MaxKey = "MESSAGE_TITLE_LOADING_22_PC",
+    MaxKey = "MESSAGE_TITLE_LOADING_36_PC",
     Loader = function()
       return {
         MAINUIGUIDE_TITLE_TRAININGGROUND_2 = {
@@ -12401,18 +12401,6 @@ local Data = {
           ContentTC = "在摧毀邪惡的炸彈「大煙花」之後，可以藉助跳板更快到達撤離點。",
           TextMapId = "MESSAGE_LOADING_37_PC"
         },
-        MESSAGE_LOADING_38_PC = {
-          ContentTC = "在帝國要塞中，注意觀察不同顏色的線纜的延伸方向，有助於破解防禦機關。",
-          TextMapId = "MESSAGE_LOADING_38_PC"
-        },
-        MESSAGE_LOADING_39_PC = {
-          ContentTC = "按下&Avoid&可閃避，同時按下方向鍵則會向對應的方向閃避。",
-          TextMapId = "MESSAGE_LOADING_39_PC"
-        },
-        MESSAGE_LOADING_39_Phone = {
-          ContentTC = "點擊閃避按鈕可閃避，同時按下方向鍵則會向對應的方向閃避。",
-          TextMapId = "MESSAGE_LOADING_39_Phone"
-        },
         MESSAGE_LOADING_3_PC = {
           ContentTC = "滑行時點擊&Attack&，可快速突進，進行滑行攻擊。",
           TextMapId = "MESSAGE_LOADING_3_PC"
@@ -12421,57 +12409,9 @@ local Data = {
           ContentTC = "按住跳躍鍵向左滑動，可快速突進，進行滑行攻擊。",
           TextMapId = "MESSAGE_LOADING_3_Phone"
         },
-        MESSAGE_LOADING_40_PC = {
-          ContentTC = "可以使用染劑為角色皮膚與武器更換顏色。",
-          TextMapId = "MESSAGE_LOADING_40_PC"
-        },
-        MESSAGE_LOADING_41_PC = {
-          ContentTC = "可以為角色佩戴各種飾品，創造屬於自己的獨特裝扮。",
-          TextMapId = "MESSAGE_LOADING_41_PC"
-        },
-        MESSAGE_LOADING_42_PC = {
-          ContentTC = "可以在鐵匠皎皎處鍛造武器與一些道具。",
-          TextMapId = "MESSAGE_LOADING_42_PC"
-        },
-        MESSAGE_LOADING_43_PC = {
-          ContentTC = "世界探索時偶爾會遇到<H>魔靈</>，可消耗<H>罐罐</>投餵它們，與它們成為朋友。魔靈可以通過魔靈支援，在戰鬥中提供多種助力。",
-          TextMapId = "MESSAGE_LOADING_43_PC"
-        },
-        MESSAGE_LOADING_44_PC = {
-          ContentTC = "當釣起部分大尺寸的魚類時，會觸發<H>授漁以魚</>的機會，可選擇將本次釣起的漁獲作為魚餌重新拋竿，有機會釣起更加稀有的魚類。",
-          TextMapId = "MESSAGE_LOADING_44_PC"
-        },
-        MESSAGE_LOADING_45_PC = {
-          ContentTC = "完成特殊支線任務後，可以解鎖一些新的系統功能。",
-          TextMapId = "MESSAGE_LOADING_45_PC"
-        },
-        MESSAGE_LOADING_46_PC = {
-          ContentTC = "可在<Highlight>光陰集</>中查看一些角色在某段時期經歷的故事。",
-          TextMapId = "MESSAGE_LOADING_46_PC"
-        },
-        MESSAGE_LOADING_47_PC = {
-          ContentTC = "對一個或多個線索進行深入思考，可能會得到全新的線索。提交關鍵線索，可完成案件推理。",
-          TextMapId = "MESSAGE_LOADING_47_PC"
-        },
-        MESSAGE_LOADING_48_PC = {
-          ContentTC = "世界各地偶爾會出現一些突發事件，你的介入可能會影響這些事件的走向。部分突發事件中，你的選擇會影響大家對你的「印象」。",
-          TextMapId = "MESSAGE_LOADING_48_PC"
-        },
-        MESSAGE_LOADING_49_PC = {
-          ContentTC = "蛋蛋皎皎的商店中，售賣著大量有價值的物品。完成蛋蛋皎皎的各個維度的印象檢定後，即可獲得豐富的獎勵。",
-          TextMapId = "MESSAGE_LOADING_49_PC"
-        },
         MESSAGE_LOADING_4_PC = {
           ContentTC = "警報會吸引更多敵人。",
           TextMapId = "MESSAGE_LOADING_4_PC"
-        },
-        MESSAGE_LOADING_50_PC = {
-          ContentTC = "在世界探索、委託和夢魘殘聲中，可以召喚協戰同伴協助戰鬥。",
-          TextMapId = "MESSAGE_LOADING_50_PC"
-        },
-        MESSAGE_LOADING_51_PC = {
-          ContentTC = "魔靈潘神，最聰明的魔靈！可以在各處發現它們留下的痕跡。追蹤這些痕跡，找到它們，也許會獲得一些意外驚喜。",
-          TextMapId = "MESSAGE_LOADING_51_PC"
         },
         MESSAGE_LOADING_5_PC = {
           ContentTC = "如果遊玩過程中不小心被困在狹小處，可通過「設置」中的「脫離卡死」按鍵解除。",
@@ -12692,15 +12632,7 @@ local Data = {
         MESSAGE_TITLE_LOADING_22_PC = {
           ContentTC = "印象",
           TextMapId = "MESSAGE_TITLE_LOADING_22_PC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MESSAGE_TITLE_LOADING_23_PC",
-    MaxKey = "MOD_NAME_1401",
-    Loader = function()
-      return {
+        },
         MESSAGE_TITLE_LOADING_23_PC = {
           ContentTC = "護盾",
           TextMapId = "MESSAGE_TITLE_LOADING_23_PC"
@@ -12760,70 +12692,22 @@ local Data = {
         MESSAGE_TITLE_LOADING_36_PC = {
           ContentTC = "狩月人委託：追緝",
           TextMapId = "MESSAGE_TITLE_LOADING_36_PC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MESSAGE_TITLE_LOADING_37_PC",
+    MaxKey = "MOD_NAME_1721",
+    Loader = function()
+      return {
         MESSAGE_TITLE_LOADING_37_PC = {
           ContentTC = "狩月人委託：調停",
           TextMapId = "MESSAGE_TITLE_LOADING_37_PC"
         },
-        MESSAGE_TITLE_LOADING_38_PC = {
-          ContentTC = "帝國要塞中的線索",
-          TextMapId = "MESSAGE_TITLE_LOADING_38_PC"
-        },
-        MESSAGE_TITLE_LOADING_39_PC = {
-          ContentTC = "閃避",
-          TextMapId = "MESSAGE_TITLE_LOADING_39_PC"
-        },
         MESSAGE_TITLE_LOADING_3_PC = {
           ContentTC = "滑行攻擊",
           TextMapId = "MESSAGE_TITLE_LOADING_3_PC"
-        },
-        MESSAGE_TITLE_LOADING_40_PC = {
-          ContentTC = "來點顏色",
-          TextMapId = "MESSAGE_TITLE_LOADING_40_PC"
-        },
-        MESSAGE_TITLE_LOADING_41_PC = {
-          ContentTC = "裝點自己",
-          TextMapId = "MESSAGE_TITLE_LOADING_41_PC"
-        },
-        MESSAGE_TITLE_LOADING_42_PC = {
-          ContentTC = "擅長鍛造的鐵匠皎皎",
-          TextMapId = "MESSAGE_TITLE_LOADING_42_PC"
-        },
-        MESSAGE_TITLE_LOADING_43_PC = {
-          ContentTC = "喜歡罐罐的魔靈",
-          TextMapId = "MESSAGE_TITLE_LOADING_43_PC"
-        },
-        MESSAGE_TITLE_LOADING_44_PC = {
-          ContentTC = "大釣特釣",
-          TextMapId = "MESSAGE_TITLE_LOADING_44_PC"
-        },
-        MESSAGE_TITLE_LOADING_45_PC = {
-          ContentTC = "特殊支線",
-          TextMapId = "MESSAGE_TITLE_LOADING_45_PC"
-        },
-        MESSAGE_TITLE_LOADING_46_PC = {
-          ContentTC = "光陰集中點點滴滴",
-          TextMapId = "MESSAGE_TITLE_LOADING_46_PC"
-        },
-        MESSAGE_TITLE_LOADING_47_PC = {
-          ContentTC = "推理時刻",
-          TextMapId = "MESSAGE_TITLE_LOADING_47_PC"
-        },
-        MESSAGE_TITLE_LOADING_48_PC = {
-          ContentTC = "突發事件",
-          TextMapId = "MESSAGE_TITLE_LOADING_48_PC"
-        },
-        MESSAGE_TITLE_LOADING_49_PC = {
-          ContentTC = "蛋蛋皎皎的商店",
-          TextMapId = "MESSAGE_TITLE_LOADING_49_PC"
-        },
-        MESSAGE_TITLE_LOADING_50_PC = {
-          ContentTC = "協戰同伴",
-          TextMapId = "MESSAGE_TITLE_LOADING_50_PC"
-        },
-        MESSAGE_TITLE_LOADING_51_PC = {
-          ContentTC = "魔靈潘神",
-          TextMapId = "MESSAGE_TITLE_LOADING_51_PC"
         },
         MESSAGE_TITLE_SHOOT_PC = {
           ContentTC = "遠程攻擊",
@@ -12934,7 +12818,7 @@ local Data = {
           TextMapId = "MOD_DESC_1314"
         },
         MOD_DESC_1315 = {
-          ContentTC = "對戰姿失衡狀態中的敵人造成傷害後，使其因處於戰姿失衡狀態受到的傷害提高效果量提高#1。",
+          ContentTC = "對站姿失衡狀態中的敵人造成傷害後，使其因處於站姿失衡狀態受到的傷害提高效果量提高#1。",
           TextMapId = "MOD_DESC_1315"
         },
         MOD_DESC_1316 = {
@@ -13310,7 +13194,7 @@ local Data = {
           TextMapId = "MOD_NAME_101001"
         },
         MOD_NAME_101002 = {
-          ContentTC = "裂變劍域",
+          ContentTC = "nan",
           TextMapId = "MOD_NAME_101002"
         },
         MOD_NAME_1011 = {
@@ -13342,7 +13226,7 @@ local Data = {
           TextMapId = "MOD_NAME_102002"
         },
         MOD_NAME_102003 = {
-          ContentTC = "統禦穿刺",
+          ContentTC = "nan",
           TextMapId = "MOD_NAME_102003"
         },
         MOD_NAME_102004 = {
@@ -13362,7 +13246,7 @@ local Data = {
           TextMapId = "MOD_NAME_104001"
         },
         MOD_NAME_104002 = {
-          ContentTC = "刀尖把戲",
+          ContentTC = "nan",
           TextMapId = "MOD_NAME_104002"
         },
         MOD_NAME_106001 = {
@@ -13500,15 +13384,7 @@ local Data = {
         MOD_NAME_1401 = {
           ContentTC = "全盛·昂揚",
           TextMapId = "MOD_NAME_1401"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MOD_NAME_1402",
-    MaxKey = "MOD_Tag_Type_Name_Lilith02",
-    Loader = function()
-      return {
+        },
         MOD_NAME_1402 = {
           ContentTC = "全盛·背水",
           TextMapId = "MOD_NAME_1402"
@@ -13624,7 +13500,15 @@ local Data = {
         MOD_NAME_1721 = {
           ContentTC = "熾灼·涅槃",
           TextMapId = "MOD_NAME_1721"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MOD_NAME_1722",
+    MaxKey = "MOD_Type_Name_Suyi01",
+    Loader = function()
+      return {
         MOD_NAME_1722 = {
           ContentTC = "熾灼·權能",
           TextMapId = "MOD_NAME_1722"
@@ -14308,15 +14192,7 @@ local Data = {
         MOD_Tag_Type_Name_Lilith02 = {
           ContentTC = "異化夜魔（遠程同律）",
           TextMapId = "MOD_Tag_Type_Name_Lilith02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MOD_Tag_Type_Name_Mephisto01",
-    MaxKey = "Message_Guide_DungeonSec_6_Pad",
-    Loader = function()
-      return {
+        },
         MOD_Tag_Type_Name_Mephisto01 = {
           ContentTC = "契約者（角色）",
           TextMapId = "MOD_Tag_Type_Name_Mephisto01"
@@ -14432,7 +14308,15 @@ local Data = {
         MOD_Type_Name_Suyi01 = {
           ContentTC = "蘇乙配件",
           TextMapId = "MOD_Type_Name_Suyi01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MOD_Type_Name_Suyi02",
+    MaxKey = "Message_Guide_Fish05",
+    Loader = function()
+      return {
         MOD_Type_Name_Suyi02 = {
           ContentTC = "蘇乙配件",
           TextMapId = "MOD_Type_Name_Suyi02"
@@ -14493,16 +14377,12 @@ local Data = {
           ContentTC = " 親愛的狩月人，您好！_x000D_\n您通過觀看CHZZK直播獲得的掉落獎勵現已送達您的遊戲帳戶。_x000D_\n詳情請查看下方附件領取。_x000D_\n_x000D_\n感謝您的支持！_x000D_\n_x000D_\n《二重螺旋》運營團隊",
           TextMapId = "Mail_Content_10012"
         },
-        Mail_Content_10013 = {
-          ContentTC = "告訴你一個秘密哦，今天是個很重要的日子，我們等這一天可是等了好久好久呢。\n所以午夜的鐘聲剛一敲響，我們就迫不及待地跑出去給你準備禮物啦。又是跟商人討價還價，又是趕跑那些吵鬧的穢獸，總算是把這份心意帶到你的面前啦！\n因為我們想第一時間，為最最親愛的你說上一聲……\n生日快樂！\n嘿嘿……對了對了，這種時候應該許個願望吧，嗯……希望在你新的一歲里，能繼續我們的冒險，一起發現更多好玩的事物，在阿特拉西亞大陸寫下滿滿的、屬於我們的故事！\n誒不對不對，怎麼變成我們許願了！重來重來，快快在你的心裡許下一個願望吧，無論是什麼，它終將在未來的某天實現！\n\n——阿特拉西亞的皎皎們 敬上",
-          TextMapId = "Mail_Content_10013"
-        },
         Mail_Content_10014 = {
           ContentTC = "親愛的狩月人：_x000D_\n 您已在皎皎角完成簽到，請領取您的獎勵。",
           TextMapId = "Mail_Content_10014"
         },
         Mail_Content_10016 = {
-          ContentTC = "親愛的狩月人： \n以下為承載著麗蓓卡記憶的思緒片段，請於附件中領取。",
+          ContentTC = "親愛的狩月人： _x000D_\n以下為承載著麗蓓卡記憶的思緒片段，請於附件中領取。",
           TextMapId = "Mail_Content_10016"
         },
         Mail_Content_10021 = {
@@ -14513,20 +14393,8 @@ local Data = {
           ContentTC = "獎勵結算異常，巡回獎勵已發送至背包。",
           TextMapId = "Mail_Content_100301"
         },
-        Mail_Content_10031 = {
-          ContentTC = "親愛的狩月人：\n月度訂單將於<H>{Time}</>結束，請留意結束時間，勿錯過獎勵領取。",
-          TextMapId = "Mail_Content_10031"
-        },
-        Mail_Content_10032 = {
-          ContentTC = "親愛的狩月人：\n本期吟遊詩集將於<H>{Time}</>結束，請留意結束時間，勿錯過獎勵領取。",
-          TextMapId = "Mail_Content_10032"
-        },
-        Mail_Content_10033 = {
-          ContentTC = "親愛的狩月人：\n「{EventName}」活動將於 <H>{Time}</>（伺服器時間）結束。請留意結束時間，勿錯過獎勵領取。",
-          TextMapId = "Mail_Content_10033"
-        },
         Mail_Content_100401 = {
-          ContentTC = "親愛的狩月人，本期吟遊詩集裝訂已經結束。所有尚未領取的獎勵已通過信件發放，請查收。",
+          ContentTC = "親愛的狩月人，本期吟遊詩集裝訂已經結束。所有尚未領取的獎勵已通過郵件發放，請查收。",
           TextMapId = "Mail_Content_100401"
         },
         Mail_Content_100402 = {
@@ -14538,11 +14406,11 @@ local Data = {
           TextMapId = "Mail_Content_10055"
         },
         Mail_Content_10056 = {
-          ContentTC = "親愛的狩月人 感謝您在小程序參與活動，獎勵已通過信件發放，請注意查收。",
+          ContentTC = "親愛的狩月人 感謝您在小程序參與活動，獎勵已通過郵件發放，請注意查收。",
           TextMapId = "Mail_Content_10056"
         },
         Mail_Content_10058 = {
-          ContentTC = "親愛的狩月人， \n感謝你在DNArt二創大賽中留下的每一個按讚， \n你的支持讓創作者們的努力更加閃耀！ \n\n——《二重螺旋》運營團隊",
+          ContentTC = "nan",
           TextMapId = "Mail_Content_10058"
         },
         Mail_Content_10059 = {
@@ -14550,11 +14418,11 @@ local Data = {
           TextMapId = "Mail_Content_10059"
         },
         Mail_Content_101001 = {
-          ContentTC = "親愛的狩月人：\n您在「%s」活動中有未領取的獎勵內容，現已通過本信件發放，請注意查收。",
+          ContentTC = "親愛的狩月人：\n  您在「%s」活動中有未領取的獎勵內容，現已通過本郵件發放，請注意查收。",
           TextMapId = "Mail_Content_101001"
         },
         Mail_Content_102001 = {
-          ContentTC = "親愛的狩月人：\n您在「狩月人入門指南」活動中有未領取的獎勵內容，現已通過本信件發放，請注意查收。",
+          ContentTC = "親愛的狩月人：\n  您在「狩月人入門指南」活動中有未領取的獎勵內容，現已通過本郵件發放，請注意查收。",
           TextMapId = "Mail_Content_102001"
         },
         Mail_Content_19101 = {
@@ -14613,16 +14481,12 @@ local Data = {
           ContentTC = "CHZZK Drops獎勵已送達",
           TextMapId = "Mail_Title_10012"
         },
-        Mail_Title_10013 = {
-          ContentTC = "重要的節日",
-          TextMapId = "Mail_Title_10013"
-        },
         Mail_Title_10014 = {
-          ContentTC = "簽到獎勵信件",
+          ContentTC = "簽到獎勵郵件",
           TextMapId = "Mail_Title_10014"
         },
         Mail_Title_10016 = {
-          ContentTC = "思緒片段獎勵信件",
+          ContentTC = "思緒片段獎勵郵件",
           TextMapId = "Mail_Title_10016"
         },
         Mail_Title_10021 = {
@@ -14632,14 +14496,6 @@ local Data = {
         Mail_Title_100301 = {
           ContentTC = "結算獎勵尋回郵件",
           TextMapId = "Mail_Title_100301"
-        },
-        Mail_Title_10031 = {
-          ContentTC = "月度訂單到期提醒",
-          TextMapId = "Mail_Title_10031"
-        },
-        Mail_Title_10032 = {
-          ContentTC = "吟遊詩集到期提醒",
-          TextMapId = "Mail_Title_10032"
         },
         Mail_Title_10033 = {
           ContentTC = "「{EventName}」活動結束提醒",
@@ -14662,7 +14518,7 @@ local Data = {
           TextMapId = "Mail_Title_10056"
         },
         Mail_Title_10058 = {
-          ContentTC = "[DNArt 二創徵集大賽]感謝按讚支持，冒險因你更精彩！",
+          ContentTC = "nan",
           TextMapId = "Mail_Title_10058"
         },
         Mail_Title_10059 = {
@@ -15046,18 +14902,6 @@ local Data = {
           ContentTC = "按下自動選擇按鈕可一鍵選擇代理人。",
           TextMapId = "Message_Guide_Dispatch_09_Pad"
         },
-        Message_Guide_Dispatch_10 = {
-          ContentTC = "選擇推薦特質的角色可大大提升派遣成功率。",
-          TextMapId = "Message_Guide_Dispatch_10"
-        },
-        Message_Guide_Dispatch_11 = {
-          ContentTC = "點擊此處開始派遣。",
-          TextMapId = "Message_Guide_Dispatch_11"
-        },
-        Message_Guide_Dispatch_12 = {
-          ContentTC = "需要注意，伙伴只能代理已經完成過的突發事件。新的突發事件要我們親自完成後，才可以派遣代理人哦。",
-          TextMapId = "Message_Guide_Dispatch_12"
-        },
         Message_Guide_DungeonSec_1 = {
           ContentTC = "每種委託密函包含6種不同報酬，報酬有三種稀有度",
           TextMapId = "Message_Guide_DungeonSec_1"
@@ -15113,15 +14957,7 @@ local Data = {
         Message_Guide_DungeonSec_6_Pad = {
           ContentTC = "按下進入<H>委托密函</>界面。",
           TextMapId = "Message_Guide_DungeonSec_6_Pad"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Message_Guide_DungeonSec_7",
-    MaxKey = "Message_Guide_ReplaceChar_7",
-    Loader = function()
-      return {
+        },
         Message_Guide_DungeonSec_7 = {
           ContentTC = "選擇一份委托密函。",
           TextMapId = "Message_Guide_DungeonSec_7"
@@ -15277,7 +15113,15 @@ local Data = {
         Message_Guide_Fish05 = {
           ContentTC = "點擊此處拉起魚竿",
           TextMapId = "Message_Guide_Fish05"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Message_Guide_Forge_1",
+    MaxKey = "Message_Guide_Rouge_3",
+    Loader = function()
+      return {
         Message_Guide_Forge_1 = {
           ContentTC = "這裡是鑄造台。我們平時收集的材料，將在這裡被鑄造成各種武器和有用的道具！",
           TextMapId = "Message_Guide_Forge_1"
@@ -15487,7 +15331,7 @@ local Data = {
           TextMapId = "Message_Guide_MaerJ_Pad_2"
         },
         Message_Guide_Mail_1 = {
-          ContentTC = "收到了一封新信件。",
+          ContentTC = "收到了一封新郵件。",
           TextMapId = "Message_Guide_Mail_1"
         },
         Message_Guide_Mail_10 = {
@@ -15527,11 +15371,11 @@ local Data = {
           TextMapId = "Message_Guide_Mail_2_Phone"
         },
         Message_Guide_Mail_3 = {
-          ContentTC = "打開信件界面",
+          ContentTC = "打開郵件界面",
           TextMapId = "Message_Guide_Mail_3"
         },
         Message_Guide_Mail_4 = {
-          ContentTC = "點擊一封信件",
+          ContentTC = "點擊一封郵件",
           TextMapId = "Message_Guide_Mail_4"
         },
         Message_Guide_Mail_5 = {
@@ -15551,11 +15395,11 @@ local Data = {
           TextMapId = "Message_Guide_Mail_8"
         },
         Message_Guide_Mail_9 = {
-          ContentTC = "點擊空白處返回信件界面",
+          ContentTC = "點擊空白處返回郵件界面",
           TextMapId = "Message_Guide_Mail_9"
         },
         Message_Guide_Mail_9_Pad = {
-          ContentTC = "按下返回信件界面",
+          ContentTC = "按下返回郵件界面",
           TextMapId = "Message_Guide_Mail_9_Pad"
         },
         Message_Guide_ModLevelUp_1 = {
@@ -15921,15 +15765,7 @@ local Data = {
         Message_Guide_ReplaceChar_7 = {
           ContentTC = "提高角色等級讓可以讓我們的同伴更加強力。角色升級會消耗一定的<H>銅幣</>以及<H>戰鬥旋律</>。",
           TextMapId = "Message_Guide_ReplaceChar_7"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Message_Guide_ReplaceChar_8",
-    MaxKey = "Minigame_Textmap_BaiTips11",
-    Loader = function()
-      return {
+        },
         Message_Guide_ReplaceChar_8 = {
           ContentTC = "點擊<H>「+」按鈕</>，為<H>角色升級</>吧。",
           TextMapId = "Message_Guide_ReplaceChar_8"
@@ -16085,7 +15921,15 @@ local Data = {
         Message_Guide_Rouge_3 = {
           ContentTC = "點擊<H>「歧路足音」</>",
           TextMapId = "Message_Guide_Rouge_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Message_Guide_Rouge_3_Pad",
+    MaxKey = "ModArchive_Name_Char_1380",
+    Loader = function()
+      return {
         Message_Guide_Rouge_3_Pad = {
           ContentTC = "按下選中<H>「歧路足音」</>。",
           TextMapId = "Message_Guide_Rouge_3_Pad"
@@ -16729,15 +16573,7 @@ local Data = {
         Minigame_Textmap_BaiTips11 = {
           ContentTC = "這些線索組合一下會不會有什麼新發現呢？",
           TextMapId = "Minigame_Textmap_BaiTips11"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "ModArchive_Name_Char_1010",
-    MaxKey = "Mon_DesDetail_8510001",
-    Loader = function()
-      return {
+        },
         ModArchive_Name_Char_1010 = {
           ContentTC = "不死鳥 Ⅰ",
           TextMapId = "ModArchive_Name_Char_1010"
@@ -16893,7 +16729,15 @@ local Data = {
         ModArchive_Name_Char_1380 = {
           ContentTC = "人面獅 Ⅱ",
           TextMapId = "ModArchive_Name_Char_1380"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "ModArchive_Name_Char_1390",
+    MaxKey = "Mon_Guide_7015001_01",
+    Loader = function()
+      return {
         ModArchive_Name_Char_1390 = {
           ContentTC = "獅鷲 光",
           TextMapId = "ModArchive_Name_Char_1390"
@@ -17103,19 +16947,19 @@ local Data = {
           TextMapId = "ModArchive_Name_Range_3040"
         },
         ModArchive_Name_Range_3050 = {
-          ContentTC = "夜魔 Ⅳ",
+          ContentTC = "夜魔 Ⅲ",
           TextMapId = "ModArchive_Name_Range_3050"
         },
         ModArchive_Name_Range_3060 = {
-          ContentTC = "夜魔 Ⅴ",
+          ContentTC = "夜魔 Ⅳ",
           TextMapId = "ModArchive_Name_Range_3060"
         },
         ModArchive_Name_Range_3070 = {
-          ContentTC = "邪龍 Ⅲ",
+          ContentTC = "夜魔 Ⅴ",
           TextMapId = "ModArchive_Name_Range_3070"
         },
         ModArchive_Name_Range_3080 = {
-          ContentTC = "夜魔 Ⅵ",
+          ContentTC = "邪龍 Ⅲ",
           TextMapId = "ModArchive_Name_Range_3080"
         },
         ModArchive_Name_Range_3090 = {
@@ -17131,7 +16975,7 @@ local Data = {
           TextMapId = "ModArchive_Name_Range_3110"
         },
         ModArchive_Name_Range_3120 = {
-          ContentTC = "邪龍 Ⅶ",
+          ContentTC = "邪龍 Ⅷ",
           TextMapId = "ModArchive_Name_Range_3120"
         },
         ModArchive_Name_Range_3130 = {
@@ -17537,15 +17381,7 @@ local Data = {
         Mon_DesDetail_8510001 = {
           ContentTC = "以心鑄法，塵漠遮天。",
           TextMapId = "Mon_DesDetail_8510001"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_DesDetail_8511001",
-    MaxKey = "Mon_Name_6011021",
-    Loader = function()
-      return {
+        },
         Mon_DesDetail_8511001 = {
           ContentTC = "以理正法，萬界光寒。",
           TextMapId = "Mon_DesDetail_8511001"
@@ -17701,7 +17537,15 @@ local Data = {
         Mon_Guide_7015001_01 = {
           ContentTC = "<Highlight>警戒機</>被擊敗後產生爆炸，對範圍內的友方和敵對目標造成傷害。",
           TextMapId = "Mon_Guide_7015001_01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Guide_8501002_01",
+    MaxKey = "Mon_Name_6013301",
+    Loader = function()
+      return {
         Mon_Guide_8501002_01 = {
           ContentTC = "<Highlight>曆戰者</>凶戾異常，利用其異變的能力，在出現後會永不停息的追擊他的目標。",
           TextMapId = "Mon_Guide_8501002_01"
@@ -18345,15 +18189,7 @@ local Data = {
         Mon_Name_6011021 = {
           ContentTC = "舍身 疾衝穢獸Ⅱ",
           TextMapId = "Mon_Name_6011021"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_6011022",
-    MaxKey = "Mon_Name_7011024",
-    Loader = function()
-      return {
+        },
         Mon_Name_6011022 = {
           ContentTC = "轉雷 疾衝穢獸Ⅱ",
           TextMapId = "Mon_Name_6011022"
@@ -18509,7 +18345,15 @@ local Data = {
         Mon_Name_6013301 = {
           ContentTC = "猩紅·復仇·守護 飄浮穢獸Ⅱ",
           TextMapId = "Mon_Name_6013301"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_6014001",
+    MaxKey = "Mon_Name_7014012",
+    Loader = function()
+      return {
         Mon_Name_6014001 = {
           ContentTC = "暴徒穢獸Ⅱ",
           TextMapId = "Mon_Name_6014001"
@@ -19153,15 +18997,7 @@ local Data = {
         Mon_Name_7011024 = {
           ContentTC = "掠影 狙擊列兵Ⅱ",
           TextMapId = "Mon_Name_7011024"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_7011201",
-    MaxKey = "Mon_Name_9001014",
-    Loader = function()
-      return {
+        },
         Mon_Name_7011201 = {
           ContentTC = "轉雷·守護 狙擊列兵Ⅱ",
           TextMapId = "Mon_Name_7011201"
@@ -19317,7 +19153,15 @@ local Data = {
         Mon_Name_7014012 = {
           ContentTC = "爆破 突擊列兵Ⅱ",
           TextMapId = "Mon_Name_7014012"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_7014013",
+    MaxKey = "Mon_Name_9003019",
+    Loader = function()
+      return {
         Mon_Name_7014013 = {
           ContentTC = "侵蝕 突擊列兵Ⅱ",
           TextMapId = "Mon_Name_7014013"
@@ -19961,15 +19805,7 @@ local Data = {
         Mon_Name_9001014 = {
           ContentTC = "霹靂 野蜂利刃",
           TextMapId = "Mon_Name_9001014"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_9001015",
-    MaxKey = "Name_200208",
-    Loader = function()
-      return {
+        },
         Mon_Name_9001015 = {
           ContentTC = "猩紅 野蜂利刃",
           TextMapId = "Mon_Name_9001015"
@@ -20125,7 +19961,15 @@ local Data = {
         Mon_Name_9003019 = {
           ContentTC = "霜獄 「玩具家」",
           TextMapId = "Mon_Name_9003019"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_9003020",
+    MaxKey = "Name_400106",
+    Loader = function()
+      return {
         Mon_Name_9003020 = {
           ContentTC = "殘火 「玩具家」",
           TextMapId = "Mon_Name_9003020"
@@ -20766,15 +20610,7 @@ local Data = {
         Name_200208 = {
           ContentTC = "最後的契約",
           TextMapId = "Name_200208"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Name_200209",
-    MaxKey = "Pack_Name_Battle_Dispatch_8",
-    Loader = function()
-      return {
+        },
         Name_200209 = {
           ContentTC = "危險的藥方",
           TextMapId = "Name_200209"
@@ -20930,7 +20766,15 @@ local Data = {
         Name_400106 = {
           ContentTC = "狩獵委托·其六",
           TextMapId = "Name_400106"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Name_400107",
+    MaxKey = "Pack_Name_Dye_Orange_Shop",
+    Loader = function()
+      return {
         Name_400107 = {
           ContentTC = "狩獵委托·其七",
           TextMapId = "Name_400107"
@@ -21544,15 +21388,7 @@ local Data = {
         Pack_Name_Battle_Dispatch_8 = {
           ContentTC = "派遣的戰鬥獎勵包Lv.8",
           TextMapId = "Pack_Name_Battle_Dispatch_8"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Pack_Name_Battle_Dispatch_9",
-    MaxKey = "PartyReward_Description_310202",
-    Loader = function()
-      return {
+        },
         Pack_Name_Battle_Dispatch_9 = {
           ContentTC = "派遣的戰鬥獎勵包Lv.9",
           TextMapId = "Pack_Name_Battle_Dispatch_9"
@@ -21708,7 +21544,15 @@ local Data = {
         Pack_Name_Dye_Orange_Shop = {
           ContentTC = "基礎染劑套裝·沙丘",
           TextMapId = "Pack_Name_Dye_Orange_Shop"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Pack_Name_Dye_Purple_Shop",
+    MaxKey = "PartyReward_Name_110101",
+    Loader = function()
+      return {
         Pack_Name_Dye_Purple_Shop = {
           ContentTC = "基礎染劑套裝·雷雨",
           TextMapId = "Pack_Name_Dye_Purple_Shop"
@@ -22346,15 +22190,7 @@ local Data = {
         PartyReward_Description_310202 = {
           ContentTC = "裝扮不是魔法，是一種技術。它有著改變身份的妙用，也有著轉換心情的魔力。",
           TextMapId = "PartyReward_Description_310202"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "PartyReward_Description_310203",
-    MaxKey = "PartyTopic_Name_210104",
-    Loader = function()
-      return {
+        },
         PartyReward_Description_310203 = {
           ContentTC = "我們應當慶倖——女僕那握著剪刀的手只是朝著枯萎的花。",
           TextMapId = "PartyReward_Description_310203"
@@ -22510,7 +22346,15 @@ local Data = {
         PartyReward_Name_110101 = {
           ContentTC = "紅石榴",
           TextMapId = "PartyReward_Name_110101"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PartyReward_Name_110102",
+    MaxKey = "PartyTopic_Name_510102",
+    Loader = function()
+      return {
         PartyReward_Name_110102 = {
           ContentTC = "銳利的羽毛",
           TextMapId = "PartyReward_Name_110102"
@@ -23154,15 +22998,7 @@ local Data = {
         PartyTopic_Name_210104 = {
           ContentTC = "怦然心動",
           TextMapId = "PartyTopic_Name_210104"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "PartyTopic_Name_230101",
-    MaxKey = "Pet_Name_493",
-    Loader = function()
-      return {
+        },
         PartyTopic_Name_230101 = {
           ContentTC = "超級變變",
           TextMapId = "PartyTopic_Name_230101"
@@ -23318,7 +23154,15 @@ local Data = {
         PartyTopic_Name_510102 = {
           ContentTC = "「浪費」之罪",
           TextMapId = "PartyTopic_Name_510102"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PartyTopic_Name_510103",
+    MaxKey = "PhantomTalk_4301_Chest",
+    Loader = function()
+      return {
         PartyTopic_Name_510103 = {
           ContentTC = "並不特立獨行的豬",
           TextMapId = "PartyTopic_Name_510103"
@@ -23953,15 +23797,7 @@ local Data = {
         Pet_Name_493 = {
           ContentTC = "搖搖凍",
           TextMapId = "Pet_Name_493"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Pet_Name_4931",
-    MaxKey = "QuestDesc_10020608",
-    Loader = function()
-      return {
+        },
         Pet_Name_4931 = {
           ContentTC = "奇跡搖搖凍",
           TextMapId = "Pet_Name_4931"
@@ -24117,7 +23953,15 @@ local Data = {
         PhantomTalk_4301_Chest = {
           ContentTC = "散落的寶物？我對唾手可得的獵物不感興趣。",
           TextMapId = "PhantomTalk_4301_Chest"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PhantomTalk_5101_Chest",
+    MaxKey = "QuestDesc_10030111",
+    Loader = function()
+      return {
         PhantomTalk_5101_Chest = {
           ContentTC = "榛子找到什麼好東西啦？等一等，這個不能吃哦！",
           TextMapId = "PhantomTalk_5101_Chest"
@@ -24761,15 +24605,7 @@ local Data = {
         QuestDesc_10020608 = {
           ContentTC = "不知為何，賽琪的心情似乎不是很好，可恩里克表示賽琪只是身體抱恙。\n\n有些事情你需要單獨和賽琪談談，便邀請賽琪去淚湖邊散心。淚湖就在冰湖城郊外，陪同賽琪一起前往淚湖邊四處走走吧。",
           TextMapId = "QuestDesc_10020608"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "QuestDesc_10020609",
-    MaxKey = "QuestName_10020310",
-    Loader = function()
-      return {
+        },
         QuestDesc_10020609 = {
           ContentTC = "你發現賽琪的視力似乎出現了嚴重的問題，可她卻不願意多說。\n\n賽琪希望你能陪她前往淚湖畔的老樹根附近，那裡似乎承載著她童年時的一段回憶。",
           TextMapId = "QuestDesc_10020609"
@@ -24925,7 +24761,15 @@ local Data = {
         QuestDesc_10030111 = {
           ContentTC = "集中排練的劇團成員既無作案時間，也無作案動機，看來他們都跟卡戎狩獵沒什麼關係。既然劇院已經沒什麼值得調查的線索，那就先離開這裡，看看黎瑟在工廠那邊有沒有什麼發現吧。",
           TextMapId = "QuestDesc_10030111"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "QuestDesc_10030112",
+    MaxKey = "QuestName_10020611",
+    Loader = function()
+      return {
         QuestDesc_10030112 = {
           ContentTC = "從黎瑟口中，你得知了工廠近期發生了月髓液失竊並被替換成魚油的案件，這很可能與凶手身上沾的大量月髓液有關。於是你們將嫌疑鎖定在了漁業協會的漁夫身上。去霧區找找他們吧。",
           TextMapId = "QuestDesc_10030112"
@@ -25569,15 +25413,7 @@ local Data = {
         QuestName_10020310 = {
           ContentTC = "繼續前進",
           TextMapId = "QuestName_10020310"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "QuestName_10020311",
-    MaxKey = "READSERIES_1048",
-    Loader = function()
-      return {
+        },
         QuestName_10020311 = {
           ContentTC = "深入格雷姆廢礦，尋找群星綺晶",
           TextMapId = "QuestName_10020311"
@@ -25639,7 +25475,7 @@ local Data = {
           TextMapId = "QuestName_10020409"
         },
         QuestName_10020410 = {
-          ContentTC = "返回大廳等待恩里克",
+          ContentTC = "返回大廳等待恩裏克",
           TextMapId = "QuestName_10020410"
         },
         QuestName_10020411 = {
@@ -25733,7 +25569,15 @@ local Data = {
         QuestName_10020611 = {
           ContentTC = "在淚湖畔散步",
           TextMapId = "QuestName_10020611"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "QuestName_10020611_1",
+    MaxKey = "READ_DESC_2000035",
+    Loader = function()
+      return {
         QuestName_10020611_1 = {
           ContentTC = "使用照相機，為賽琪拍下值得銘記的瞬間",
           TextMapId = "QuestName_10020611_1"
@@ -26377,15 +26221,7 @@ local Data = {
         READSERIES_1048 = {
           ContentTC = "《紅葉反討秘話》",
           TextMapId = "READSERIES_1048"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "READSERIES_1057",
-    MaxKey = "READ_TEXT_2000041",
-    Loader = function()
-      return {
+        },
         READSERIES_1057 = {
           ContentTC = "《銀燭狂歡頌歌》",
           TextMapId = "READSERIES_1057"
@@ -26397,10 +26233,6 @@ local Data = {
         READSERIES_1070 = {
           ContentTC = "《枝葉銜月》",
           TextMapId = "READSERIES_1070"
-        },
-        READSERIES_1096 = {
-          ContentTC = "煉金術師的筆記",
-          TextMapId = "READSERIES_1096"
         },
         READSERIES_DESC_1039 = {
           ContentTC = "從檔案櫃眾多檔案中翻找出的，貼著孩子們照片的檔案，詳細地記著他們在修普諾斯之家度過的每一天。",
@@ -26545,7 +26377,15 @@ local Data = {
         READ_DESC_2000035 = {
           ContentTC = "神棄者同盟的一次交談記錄，內容有關占領要塞後加入他們的一位新成員。",
           TextMapId = "READ_DESC_2000035"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "READ_DESC_2000036",
+    MaxKey = "READ_TEXT_20617",
+    Loader = function()
+      return {
         READ_DESC_2000036 = {
           ContentTC = "神棄者同盟某位成員遺落的日記。從內容來看，其主人是一位治療師。",
           TextMapId = "READ_DESC_2000036"
@@ -26633,14 +26473,6 @@ local Data = {
         READ_DESC_2000070 = {
           ContentTC = "伊瑟爾的學者科涅娜所寫的歷史著作，頗為晦涩，且與海伯利亞帝國的官方歷史有一些出入，所以不太常見。屬於在書店中五年才能賣出一套的那種裝飾性大於實用性的書籍。",
           TextMapId = "READ_DESC_2000070"
-        },
-        READ_DESC_2000096 = {
-          ContentTC = "遺留在格雷姆礦場的筆記，看行文口吻，似乎是某位學者。",
-          TextMapId = "READ_DESC_2000096"
-        },
-        READ_DESC_2000097 = {
-          ContentTC = "遺留在格雷姆礦場深處的筆記，沾滿暗紅的汙漬。從字跡看，與前面撿到的筆記為同一人所寫。後半部分文字極為淩亂，似是在極度匆忙中寫下。",
-          TextMapId = "READ_DESC_2000097"
         },
         READ_DESC_20600 = {
           ContentTC = "偶然尋得並收集的神秘紙張。其中有些是精緻的獸皮捲軸，有些是油墨氣息尚存的印刷品，還有些似乎只是匆忙間從筆記本上撕下的殘頁。只是，無論其上的字跡是工整還是凌亂、記述的內容是清晰還是模糊，這些紙張之間都有一個明顯的共同點——它們都各自指向了一份「寶藏」的所在。",
@@ -26938,14 +26770,6 @@ local Data = {
           ContentTC = "枝葉銜月・起義前夜",
           TextMapId = "READ_NAME_2000071"
         },
-        READ_NAME_2000096 = {
-          ContentTC = "煉金術師的筆記·之一",
-          TextMapId = "READ_NAME_2000096"
-        },
-        READ_NAME_2000097 = {
-          ContentTC = "煉金術師的筆記·之二",
-          TextMapId = "READ_NAME_2000097"
-        },
         READ_NAME_20602 = {
           ContentTC = "凈界島·其一",
           TextMapId = "READ_NAME_20602"
@@ -27185,15 +27009,7 @@ local Data = {
         READ_TEXT_2000041 = {
           ContentTC = "姓名：賽琪·弗萊伊\n年齡：17\n症狀：間歇性失明\n\n……\n賽琪來的時候已是穢蝕中期，但她還是熱情地向每個人打招呼。我多麼希望診斷的結果是錯誤的，這樣我還能欺騙自己，賽琪並沒有出現穢蝕，她的人生還能回到正軌。\n……\n她將父母來看望時送的花都放在床頭，連落腳和睡覺的地方都被壓縮得很小很小。\n……\n我把二樓的空房收拾了出來，那邊採光更好，賽琪和她的花搬進去以後應該能待得更舒適一些。\n……\n她真的很喜歡花，每天仔細地打理花束，再分發給其他孩子們，如果不是因為穢蝕，她將來一定能將「牽念之花」打理得比她父母還要出色。\n……\n賽琪今天給我也送了支花，看著她恬靜的笑臉，我仿佛又見到了你……海莉……\n……\n我看著帳本發愁的樣子不小心被賽琪看到了，她纏著我詢問原因，我拗不過她，如實將修普諾斯之家財政上的問題說給了她聽。\n（批註：我得盡快給收購者回信，不能再讓孩子們擔心下去了。）\n……\n賽琪把老宅打掃了出來，還順勢租給個來路不明的小鬼……希望那個小鬼別給修普諾斯之家惹來什麼麻煩。\n……\n<H>她說想要活下去，哪怕能以人類的身份再多活一天也好，聽到這句話時我既欣慰又憤怒。</>\n<H>欣慰是因為她終於吐露了心聲，她故作堅強太久了。</>\n<H>憤怒是因為那個小鬼！我不知道那個小鬼對賽琪做了什麼，但給必死之人活下去的勇氣，太過殘忍了。</>\n<H>如果無法拯救，那就不要給予無意義的希望！</>\n（批註：穢蝕抑制藥物已經快要完成了。命運啊……求你，保佑治療成功吧……）\n……",
           TextMapId = "READ_TEXT_2000041"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "READ_TEXT_2000042",
-    MaxKey = "RESOURCE_DESC_12078",
-    Loader = function()
-      return {
+        },
         READ_TEXT_2000042 = {
           ContentTC = "姓名：艾麗莎·泰勒\n年齡：17\n症狀：味覺消退\n\n……\n不同于很多孩子終日哭泣，艾麗莎呈現出異常的冷靜——甚至是冷漠。當談及自己味覺喪失的症狀時，她說食物只是讓人類苟活的工具，有沒有味道自己都無所謂。她更是對母親直言，不必帶自己來這裡，即使是被士兵們一槍斃命，她也無所謂——她對一切都接受地如此坦然，仿佛她從出生開始就在等待死去的一天。\n……\n艾麗莎似乎很喜歡寫東西，她每日都在窗邊寫一些小詩。她那些詩有些晦澀難懂，但從用詞可以看出，她的精神狀態算不得好。\n……\n在一次與賽琪的長談後，艾麗莎罕見地笑了。在那之前，我一度以為疾病已經剝奪了艾麗莎笑的能力。\n……",
           TextMapId = "READ_TEXT_2000042"
@@ -27314,14 +27130,6 @@ local Data = {
           ContentTC = "聖塔歷 900~998 年：起義前夜\n聖塔歷 998 年，曾經穩如磐石的傳頌會爆發了一場聲勢浩大的起義，這場起義席捲了大陸南方的每一片土地。雖然最終沒能成功推翻傳頌會的統治，但是起義軍殘餘部分逃離了艾利西安，在大陸的北方建立了一系列國家。這一系列事件被統稱為「大遷徙」。\n傳頌會在此之前維持了千年之久的神權統治，無論是上層教士還是底層民眾，都認為這一套制度對外能夠阻止穢獸的進犯，對內能夠讓生活一日復一日的持續下去，可以直抵時間的盡頭。但是一輪又一輪的穢獸入侵不止讓民眾的內心產生畏懼，更加尊崇傳頌會，也在悄然地讓大地上的一切發生變化。\n穢獸浪潮給傳頌會不同階級的傳頌會居民帶來了不同的問題。\n首先是在歷次入侵中損失最為慘重的騎士團，在這次戰爭過後以令人驚異的速度恢復了規模。騎士們奮勇戰鬥的姿態感染了諸多平民，以及不少騎士竟然有幸能夠以肉眼目睹神明，這些都讓原本篤信神明的平民們對騎士團趨之若鶩，哪怕他們的大多數都無法成為一名騎士，只能成為普通的軍士，但是這都讓他們感到了與神明更加親近，乃至于自願將土地進獻給騎士團。\n於是這麼一來，本來更加偏向於軍事組織的騎士團成為了一個兼有軍事、商業、經濟、宗教功能的綜合組織，騎士團的成員們除了對於九神的崇信以外，還多了一份對於騎士團長個人的忠誠，而對個人的忠誠與龐大的產業融合而出的，便是一個此前未曾有過的群體，軍事貴族。\n之所以稱為貴族，是因為此前依靠神選、推舉或是比試而產生的騎士團長職位開始向世襲演化，而他們的親屬也開始在騎士團中擁有一官半職，用以管理財務、土地糾紛以及一些新產生的禮儀。傳聞在當時，一些最為跋扈的騎士團內召開的宴席的規模要超過敬神的儀式。儘管當時沒有人覺得這一切有什麼不妥，但是後來發生的事情很快證明，當人群對於某一個人的崇奉超越了神明，那就意味著這個人擁有了推翻神明的力量。\n其次發生變化的是自耕農，在穢獸入侵之前，他們多數聚集在城鎮附近，自給自足。但是穢獸的侵襲讓傳頌會的部分區域屢遭災禍，失去土地的自耕農被迫依附於擁有強大軍事力量的騎士團長，成為他們領地的佃農；而重建受災地域的進程又孕育了一個新的職業，商人。\n這裡提及的商人並非是傳統的行腳商和攤販，而是能夠以金錢收購某一地域的貨物，再運往重建地區進行統一銷售的人。他們所販賣貨物的種類多種多樣，而在這過程中他們卻可能沒有離開過自己豪宅的大門，完成這一切僅僅需要金錢的驅使，其餘自耕農則成為他們嚴密商業計劃中的一顆顆齒輪。\n最初這些商人還懾於傳頌會的誡命，只抽取應得的利益，但是一段時間過後，他們對於「應得的」這一詞彙的理解顯然發生了偏差，獲取了巨量的財富。\n而這樣的大商人的出現讓自耕農的生活更加困苦，而如果這位自耕農需要面對的大商人恰好是一位騎士團長，那麼他將會面臨經濟與武力的雙重困境，他很可能在某一個災年或者更早之前將土地賣給大商人，成為佃農，同時為了騎士團的種種儀式進獻物資，生活難以為繼。但他還會堅信這是神明的最好的安排，直到某一天在內心萌出一個疑問：為何神明會讓自己有如此不幸的遭遇？\n那麼神們自己又是如何呢？那些最接近神明的凡人，傳頌會的教士們依舊穩坐各地聖堂，聽從執行來自聖都的神諭，按理來說應該不受太大影響，實際也幾乎如此。但依舊有一些教士的想法產生了變化，並參與了後來的大起義與大遷徙，他們在起義軍中所占人數最少，但是造成的影響也最為巨大。\n歸根結底，神明是什麼？\n是一個完美又完整的統一存在，而這一至高存在將祂的神聖一分為九，成為九位不同的神明？\n是九位分別完美，但又有著基礎共識的神聖智慧，祂們一同成為了創世的基礎？\n九位神明的誕生是否有先後？如果有，那是否意味著有的神明比其他神明更神明？\n神明之上是否有神明？\n這些問題困擾著各地的神學家長達數百年，最終聖塔歷 480 年的第八次傳頌會普世會議中，達成了以下共識：\n神明是複雜的，神明的神識包含了世間萬物，而祂將自身的神識一分為九，成為九神，但九神平等，九神一體。\n神明是完美又完整的，世間發生的一切都是神明的完美安排，變化是，不變亦是。而神明是超越變化的不變存在，超越偶然的必然存在。\n神明是無限的，他伫立在時間的開始與終結，是萬物的初始的效因。\n傳頌會內的教士們前後爭吵了百餘年，勉強達成共識，但這些共識隨即便在 20 年後，聖塔歷 500 年的穢獸浪潮被打破。\n滿月與命運之神的降臨固然證明了神明确實存在，但也帶來了新的疑問，九神是否真的平等？\n如果世間萬物都是神明的安排，那麼穢獸浪潮也必然如此，可如果是這樣，那麼神明又為何要親自降臨終結獸潮？\n原本就對於普世會議結果不甚滿意的那些教士的心中產生了這樣的疑問，而這些疑問甚至與自耕農的那些疑問不謀而合：神明是否真的可信。\n而一旦篤信化作懷疑，那麼就會有一些教士開始去翻閱故紙堆，制定實驗，去試探神明是否真的存在。\n於是此前的八次傳頌會普世會議不僅沒能成為傳頌會各種概念的恆準，反而成為了教士們互相攻訐的依據。第一次會議的結論被第七次會議的結論推翻，第六次會議的聲明又宣告第二次會議決定的異端無罪。互相齟齬的句句文本彷彿要鏟平神明們存在的基石。\n於是傳頌會專門設立了名為經院司祭的職位，專門去解答教士們的疑惑，為他們糾正思想。至此，又經歷了數百年的光陰，傳頌會的內部的聲音才逐漸重新歸於一致。然而依舊有一些沉迷於故紙堆的教士，比起經院司祭的教誨，更偏愛流傳下來的會議記錄與思辨的文章。只是他們的數量太过稀少，傳頌會便只當他們是喜好鑽研的半癡之人。\n而在這些博覽而好問的教士中，有一位叫做萊克西斯的年輕人，想要寫就一本解決所有問題的恆久之書，以完善教義中的各種漏洞。於是他下定決心離開聖都，到傳頌會的各個教區去目睹神明究竟是如何將自己的恩澤散播於大地之上，並將所見所聞收集成冊，\n但他最終並沒有回到聖都，而是有了另一個名號 ——「智者」。他最終與三頭狼騎士團出身的迪斯・蓋雷亞一起率領起義軍，離開了傳頌會，揭開了歷史的新一頁。",
           TextMapId = "READ_TEXT_2000071"
         },
-        READ_TEXT_2000096 = {
-          ContentTC = "煉金術師的筆記·之一\n\n（遺留在格雷姆礦場的筆記，看行文口吻，似乎是某位學者。）\n……\n4月16日\n我們在這座廢棄的礦場裡發現了一種奇特的<H>黃色晶簇</>。從質地判斷，這並非傳聞裡山體深處洞穴埋藏的群星綺晶，也不是遺留在廢棄礦場中的月石，而是某種尚未發現的礦物。\n……\n4月18日\n鮑勃驚訝地發現，這些散發著幽暗光芒的黃色晶簇<H>變大了</>，從只有巴掌那麼大，長成了低矮灌木一樣的晶簇叢。\n……\n4月20日\n……晶簇叢又「長大」了，變成了尖刺狀晶體，把礦洞中的門都堵住了，簡直像是活物一樣。好在這些黃色晶體質地脆弱，一觸即碎，只需要少量<H>火藥</>就能爆破。\n鮑勃提出了一種假設：這種晶體並非礦物，而是某種<H>穢獸的分泌物</>——甚至可以說是穢獸的某種「子體」；隨著時間推移，它會像沾了水的海綿那樣膨脹。儘管鮑勃在穢獸生物學上頗有造詣，這依舊是一種有些大膽的假設。\n……\n4月21日\n為了驗證鮑勃的假設，我們決定向礦洞深處進發。如果他的推測為真，那麼在這個廢棄礦場深處，一定存在某個和這些野外穢獸不同的，特殊的穢獸<H>母體</>。\n……",
-          TextMapId = "READ_TEXT_2000096"
-        },
-        READ_TEXT_2000097 = {
-          ContentTC = "煉金術師的筆記·之二\n\n（遺留在格雷姆礦場深處的筆記，沾滿暗紅的汙漬。從字跡看，與前面撿到的筆記為同一人所寫。後半部分文字極為淩亂，似是在極度匆忙中寫下。）\n\n……\n4月23日\n如鮑勃所料，我們在山體深處的岩穴，也就是格雷姆礦場曾經的「禁地」裡，發現了那隻穢獸。\n它身長大約二十多公尺，是我迄今為止見過體型最大的穢獸。它狀如骸骨，黃色晶體不斷在它的各個肢體末端「生長」——我們可以肯定，它正是一路所見的那些黃色晶體的「母體」。\n我們決定潛伏在這裡，繼續觀察它的習性。\n……\n4月26日\n我們發現，和其他遊蕩的穢獸相比，除了體型更大外，這隻穢獸還存在明顯的特異性：它似乎對<H>發光的礦物</>充滿興趣。它時而前往廢棄礦坑遊蕩，不斷重複著單一的挖掘動作；一旦挖出發光的礦物——如礦場遺留的月石殘渣或山區的銀輝石，便會從肢體末端生長出黃色晶體，將這些發光的石頭包裹起來。\n鮑勃對這一習性充滿興趣：它對發光物的挖掘、收集和包裹行為看起來並非簡單的趨光性，這一連串的行為更像是某種「有意識」的產物。\n穢獸是否可能殘留有近似人類的意識？如果這一假設被證明為真，將會顛覆穢獸生物學目前已有的研究成果。\n……\n4月27日\n我們犯下了重大的錯誤。\n為了進一步驗證它的行為模式，鮑勃試圖用偷走它「藏品」的方式刺激它，觀察它的反應。\n但我們低估了它的反應速度。它以我們從未見過的速度撲向我們，試圖將我們這兩個不速之客撕成碎片。\n儘管鮑勃為我爭取了逃跑時間，讓我得以逃離它的洞穴，但我清楚地知道，剛剛的意外讓我受了致命傷。我無法活著走出這座廢礦了。\n如果有誰看到這本筆記，懇請您將它帶到迪斯瑪尼亞皇家佩劍煉金院。對這一穢獸——我們將其命名為「嗜晶者」——的研究，將為迄今為止的穢獸生物學帶來巨大變革。\n知識不應和我們一起埋葬在方寸岩穴之內。\n\n煉金術師 伊內絲·莫萊",
-          TextMapId = "READ_TEXT_2000097"
-        },
         READ_TEXT_20602 = {
           ContentTC = "1月1日\n 今天▇▇▇▇給了我一些月石碎片，說這是「零花錢」。她說皇都的孩子們在成年之前都可以定期從長輩那裡拿到「零花錢」，用來買自己想要的食物、玩具之類。\n 遺跡裡沒有商店，她說我可以先攢著，等什麽時候有了想要的東西或者想做的事時，可以用一定數量的「零花錢」作為交換，讓她來幫忙實現。\n 可是我沒有什麽想要的東西……\n \n 12日\n 我想到了，我可以給{nickname}送個「生日禮物」……就送書上說的，皇都的孩子在過生日時會吃的「蛋糕」好了！那好像是很珍貴的東西，不過，只要我多攢一些「零花錢」，拜託▇▇▇▇的話，她一定有辦法變出來的。\n 我在廚房裡找到了一個舊瓦罐，正好可以用來存放「零花錢」。\n \n 1月16日\n 今天玩捉迷藏的時候，{nickname}發現了我的瓦罐，差點就打開看了……我得找一個更安全的地方藏它。\n 明天溜進▇▇▇▇的煉金房看看好了。那個房間裡有很多厲害的裝置，▇▇▇▇是不會讓{nickname}進去玩的。\n \n 1月17日\n 我把存錢罐藏在<H>煉金房的瀑布旁邊</>了，這樣{nickname}和▇▇▇▇就都不會發現啦。\n \n ……\n \n ▇▇月▇▇日\n 很快就要到{nickname}的生日了，我已經存了滿滿一箱的「零花錢」，應該足夠換「蛋糕」了。不過，最近▇▇▇▇好像在擔心什麼事情，經常很晚才睡覺……也許，還是等明年再拜託她吧。\n 到那時我就可以許願要一個更大的蛋糕，我們三個人都可以吃得飽飽的。",
           TextMapId = "READ_TEXT_20602"
@@ -27377,7 +27185,15 @@ local Data = {
         READ_TEXT_20617 = {
           ContentTC = "……大家都說小雪帽很可怕、不能吃，真是天大的誤會！只要經過充分燉煮，加入合適的配料，小雪帽也能成為安全可口的佳餚！\n 但現在，小雪帽已經滿足不了我了……市面上的常見菌類更是早就吃膩了，不夠！遠遠不夠！\n 我要找到更厲害、更特別、更夢幻的——美味蘑菇之王！\n 我在下水道找了整整一天，終於在最深處<H>地底的閘門邊</>發現了一叢新品種的蘑菇……光是那漂亮的色澤就已經讓人口水直流啦！我打算先挖幾顆回去，研究一下新的食譜。\n \n 聽說古人會向神明上供祈求豐收，如果我在這叢蘑菇底下供奉點什麼，阿特拉西亞掌管蘑菇的神會不會保佑我找到更多更好吃的蘑菇呢？我身上只帶了一點私房錢和小零食，全獻出來了，希望蘑菇之神不會嫌少……",
           TextMapId = "READ_TEXT_20617"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "READ_TEXT_20620",
+    MaxKey = "RESOURCE_DESC_12123",
+    Loader = function()
+      return {
         READ_TEXT_20620 = {
           ContentTC = "\"要塞已經守不住了……別聽軍令傻傻地留在原地送死。你們不是登記在冊的士兵，不會被發現的。\n<H>飛艇附近</>有備用的軍需品，拿上，然後回家去吧！\n\n（紙張的下半部分沾上了大片暗紅色的污漬，難以辨認。）\"",
           TextMapId = "READ_TEXT_20620"
@@ -27399,7 +27215,7 @@ local Data = {
           TextMapId = "READ_TEXT_JailInves02"
         },
         RESOURCE_DESC_100 = {
-          ContentTC = "在月石晶胚的基礎上，經過分選的高品月石。\n它與貴金屬一樣，是阿特拉西亞大陸各地均可用於交易的通貨。",
+          ContentTC = "從天之樹上誕生的月石，具有極高價值，被人們廣泛使用在生活的各個領域，作為國家的戰略資源流通。",
           TextMapId = "RESOURCE_DESC_100"
         },
         RESOURCE_DESC_10001 = {
@@ -27993,15 +27809,7 @@ local Data = {
         RESOURCE_DESC_12078 = {
           ContentTC = "嚴格按照圖紙打造的銀白勒令部件。子彈從這裡傾泄而出，每到此時，槍管與戰士的心同樣滾燙。",
           TextMapId = "RESOURCE_DESC_12078"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_12079",
-    MaxKey = "RESOURCE_DESC_41007",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_12079 = {
           ContentTC = "嚴格按照圖紙打造的祈請淨火部件。一旦扣下扳機，子彈就不會回頭——就如同人下定決心的那一瞬。",
           TextMapId = "RESOURCE_DESC_12079"
@@ -28185,7 +27993,15 @@ local Data = {
         RESOURCE_DESC_12123 = {
           ContentTC = "嚴格按照圖紙打造的贅生部件。子彈從這裡傾泄而出，每到此時，槍管與戰士的心同樣滾燙。",
           TextMapId = "RESOURCE_DESC_12123"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_12124",
+    MaxKey = "RESOURCE_DESC_5025050",
+    Loader = function()
+      return {
         RESOURCE_DESC_12124 = {
           ContentTC = "嚴格按照圖紙打造的崩解部件。一旦扣下扳機，子彈就不會回頭——就如同人下定決心的那一瞬。",
           TextMapId = "RESOURCE_DESC_12124"
@@ -28435,7 +28251,7 @@ local Data = {
           TextMapId = "RESOURCE_DESC_201"
         },
         RESOURCE_DESC_2011 = {
-          ContentTC = "單頁樂譜，記錄著流傳於吟遊詩人間的英雄史詩，保存了很多手寫的批註與修改，為了完整陳述自己的意見，詩人們不惜用蠅頭小字在紙張的每一個空隙裡交流辯論，方寸之間可以看見若干種觀點被建立又被推翻，讀完全篇幾乎成了一種驚心動魄的體驗。",
+          ContentTC = "單頁樂譜，記錄著流傳於吟游詩人間的英雄史詩，保存了很多手寫的批註與修改，為了完整陳述自己的意見，詩人們不惜用蠅頭小字在紙張的每一個空隙裡交流辯論，方寸之間可以看見若干種觀點被建立又被推翻，讀完全篇幾乎成了一種驚心動魄的體驗。",
           TextMapId = "RESOURCE_DESC_2011"
         },
         RESOURCE_DESC_202 = {
@@ -28801,15 +28617,7 @@ local Data = {
         RESOURCE_DESC_41007 = {
           ContentTC = "反覆檢查武器的狀態，是增加勝率的有效方式之一。",
           TextMapId = "RESOURCE_DESC_41007"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_41008",
-    MaxKey = "RESOURCE_NAME_10101",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_41008 = {
           ContentTC = "反覆檢查武器的狀態，是增加勝率的有效方式之一。",
           TextMapId = "RESOURCE_DESC_41008"
@@ -28935,7 +28743,7 @@ local Data = {
           TextMapId = "RESOURCE_DESC_5022050"
         },
         RESOURCE_DESC_5023010 = {
-          ContentTC = "一種狀如月石的魚類，質感奇異，摸起來和真的月石一般無二，每個個體之間都有著微妙的差異，但口感也和石頭十分接近，除了實在吃不上飯的時候，幾乎沒有人會以它為食。",
+          ContentTC = "一种状如月石的鱼类，质感奇异，摸起来和真的月石一般无二，每个个体之间都有着微妙的差异，但口感也和石头十分接近，除了实在吃不上饭的时候，几乎没有人会以它为食。",
           TextMapId = "RESOURCE_DESC_5023010"
         },
         RESOURCE_DESC_5023020 = {
@@ -28993,7 +28801,15 @@ local Data = {
         RESOURCE_DESC_5025050 = {
           ContentTC = "一種棕褐色魚類，身側有三對魚鰭，游動時隨水波擺動，游速驚人，頭頂有一對觸鬚挺立 ，通常在水體上層覓食，觸鬚會像天線一樣伸出水面，對獵物窮追不捨，甚至會上岸追擊。",
           TextMapId = "RESOURCE_DESC_5025050"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_5110100",
+    MaxKey = "RESOURCE_NAME_103",
+    Loader = function()
+      return {
         RESOURCE_DESC_5110100 = {
           ContentTC = "由鐵匠皎皎出品的魚竿，附贈水面監測者烏烏一隻。烏烏會在魚兒上鉤的時候發出信號，然而據買家反饋，也有人盯著它走神以至於屢次空手而歸。",
           TextMapId = "RESOURCE_DESC_5110100"
@@ -29609,15 +29425,7 @@ local Data = {
         RESOURCE_NAME_10101 = {
           ContentTC = "棄絕怯懦之環",
           TextMapId = "RESOURCE_NAME_10101"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_10102",
-    MaxKey = "RESOURCE_NAME_12128",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_10102 = {
           ContentTC = "逃離困頓之環",
           TextMapId = "RESOURCE_NAME_10102"
@@ -29643,7 +29451,7 @@ local Data = {
           TextMapId = "RESOURCE_NAME_1011104"
         },
         RESOURCE_NAME_1011501 = {
-          ContentTC = "印記·莉茲貝爾",
+          ContentTC = "印記·暴怒",
           TextMapId = "RESOURCE_NAME_1011501"
         },
         RESOURCE_NAME_1011502 = {
@@ -29801,7 +29609,15 @@ local Data = {
         RESOURCE_NAME_103 = {
           ContentTC = "精力",
           TextMapId = "RESOURCE_NAME_103"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_104",
+    MaxKey = "RESOURCE_NAME_20027",
+    Loader = function()
+      return {
         RESOURCE_NAME_104 = {
           ContentTC = "一本樂譜",
           TextMapId = "RESOURCE_NAME_104"
@@ -30417,15 +30233,7 @@ local Data = {
         RESOURCE_NAME_12128 = {
           ContentTC = "嘶鳴的槍身",
           TextMapId = "RESOURCE_NAME_12128"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_12129",
-    MaxKey = "RESOURCE_NAME_4010009",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_12129 = {
           ContentTC = "嘶鳴的槍管",
           TextMapId = "RESOURCE_NAME_12129"
@@ -30609,7 +30417,15 @@ local Data = {
         RESOURCE_NAME_20027 = {
           ContentTC = "利刃藥劑",
           TextMapId = "RESOURCE_NAME_20027"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_20028",
+    MaxKey = "RESOURCE_NAME_5013021",
+    Loader = function()
+      return {
         RESOURCE_NAME_20028 = {
           ContentTC = "爆彈",
           TextMapId = "RESOURCE_NAME_20028"
@@ -31225,15 +31041,7 @@ local Data = {
         RESOURCE_NAME_4010009 = {
           ContentTC = "便攜供能裝置",
           TextMapId = "RESOURCE_NAME_4010009"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_4010010",
-    MaxKey = "RESOURCE_TEXT_11006",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_4010010 = {
           ContentTC = "隙中花",
           TextMapId = "RESOURCE_NAME_4010010"
@@ -31417,7 +31225,15 @@ local Data = {
         RESOURCE_NAME_5013021 = {
           ContentTC = "吧唧吧唧魚·異種",
           TextMapId = "RESOURCE_NAME_5013021"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_5013030",
+    MaxKey = "RESOURCE_TEXT_20020",
+    Loader = function()
+      return {
         RESOURCE_NAME_5013030 = {
           ContentTC = "長腿先生",
           TextMapId = "RESOURCE_NAME_5013030"
@@ -32033,15 +31849,7 @@ local Data = {
         RESOURCE_TEXT_11006 = {
           ContentTC = "「劍者，一心也。貫以全神，傾盡形意，則可仗一線白刃而破萬鈞之勢，平海斬鯨，亦不在話下矣。」\n\n——華胥無名劍士，《論劍》",
           TextMapId = "RESOURCE_TEXT_11006"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_TEXT_11007",
-    MaxKey = "RLBlessingGroup_Desc_201",
-    Loader = function()
-      return {
+        },
         RESOURCE_TEXT_11007 = {
           ContentTC = "「與眾不同有什麼不好！總有人在拼命做些什麼來證明自己的個性，而我，哈，我是天生的異類，我是被父神所厭棄、部落裡最奇異的裝飾品！」\n\n——神棄者同盟「渡鴉」 卡奧斯",
           TextMapId = "RESOURCE_TEXT_11007"
@@ -32171,7 +31979,7 @@ local Data = {
           TextMapId = "RESOURCE_TEXT_20008"
         },
         RESOURCE_TEXT_20009 = {
-          ContentTC = "「荒野的荊棘刺破他赤裸的雙足，\n卻未能讓他匆忙的腳步停駐。\n他仍找尋著那逝去的人兒，\n直到他高舉的手臂成為巍峨的山嶽，\n他的血和淚化作朱紅的花。」\n\n——吟遊詩人 莉莉蔻，《霧海紀》",
+          ContentTC = "「荒野的荊棘刺破他赤裸的雙足，\n卻未能讓他匆忙的腳步停駐。\n他仍找尋著那逝去的人兒，\n直到他高舉的手臂成為巍峨的山嶽，\n他的血和淚化作朱紅的花。」\n\n——吟游詩人 莉莉蔻，《霧海紀》",
           TextMapId = "RESOURCE_TEXT_20009"
         },
         RESOURCE_TEXT_2001 = {
@@ -32225,7 +32033,15 @@ local Data = {
         RESOURCE_TEXT_20020 = {
           ContentTC = "「榛子！這個雖然聞起來很甜，但吞下去的話會肚子痛痛！乖，乖……我們去找漿果和菌子好不好？」\n\n——艾利西安糧秣專員 松露",
           TextMapId = "RESOURCE_TEXT_20020"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_TEXT_20021",
+    MaxKey = "RLBlessing_Desc_108",
+    Loader = function()
+      return {
         RESOURCE_TEXT_20021 = {
           ContentTC = "「我等匍匐於銀月的光輝下點亮聖燭，\n致候那命運絲線的編織者。\n願聖燭之火不滅，\n如祂的光輝長明。」\n\n——艾利西安傳頌會祝禱詞",
           TextMapId = "RESOURCE_TEXT_20021"
@@ -32275,7 +32091,7 @@ local Data = {
           TextMapId = "RESOURCE_TEXT_20031"
         },
         RESOURCE_TEXT_20032 = {
-          ContentTC = "「帶我去看北方的冰川藍吧，\n在灰色的天空下，\n那一泓冷峻的金屬色的汪洋。」\n\n——吟遊詩人 莉莉蔻，《霧海紀》",
+          ContentTC = "「帶我去看北方的冰川藍吧，\n在灰色的天空下，\n那一泓冷峻的金屬色的汪洋。」\n\n——吟游詩人 莉莉蔻，《霧海紀》",
           TextMapId = "RESOURCE_TEXT_20032"
         },
         RESOURCE_TEXT_20033 = {
@@ -32841,15 +32657,7 @@ local Data = {
         RLBlessingGroup_Desc_201 = {
           ContentTC = "每一枚本套裝燭芯額外提供<Highlight>15%</>遠程武器暴擊率，<Highlight>15%</>遠程武器暴擊傷害。\n拾取範圍提高，每次拾取後<Highlight>3</>秒內，受到傷害時不會產生僵直。",
           TextMapId = "RLBlessingGroup_Desc_201"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessingGroup_Desc_202",
-    MaxKey = "RLBlessing_Name_412",
-    Loader = function()
-      return {
+        },
         RLBlessingGroup_Desc_202 = {
           ContentTC = "遠程武器造成傷害時，觸發[浮海月]效果並生成<Highlight>3</>枚[微型浮海月]，效果每<Highlight>10</>秒最多觸發1次。",
           TextMapId = "RLBlessingGroup_Desc_202"
@@ -33033,7 +32841,15 @@ local Data = {
         RLBlessing_Desc_108 = {
           ContentTC = "近戰武器<Highlight>暴擊傷害</>提高<Highlight>#1</>。",
           TextMapId = "RLBlessing_Desc_108"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLBlessing_Desc_109",
+    MaxKey = "RLBlessing_Name_713",
+    Loader = function()
+      return {
         RLBlessing_Desc_109 = {
           ContentTC = "近戰武器<Highlight>下落攻擊、蓄力攻擊、滑行攻擊傷害</>提高<Highlight>$1</>。",
           TextMapId = "RLBlessing_Desc_109"
@@ -33649,15 +33465,7 @@ local Data = {
         RLBlessing_Name_412 = {
           ContentTC = "自然的憤怒",
           TextMapId = "RLBlessing_Name_412"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessing_Name_413",
-    MaxKey = "RLBlessing_UnlockCon_408",
-    Loader = function()
-      return {
+        },
         RLBlessing_Name_413 = {
           ContentTC = "自然的厚重",
           TextMapId = "RLBlessing_Name_413"
@@ -33841,7 +33649,15 @@ local Data = {
         RLBlessing_Name_713 = {
           ContentTC = "汲取本能",
           TextMapId = "RLBlessing_Name_713"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLBlessing_Name_714",
+    MaxKey = "RLContract_Desc_105",
+    Loader = function()
+      return {
         RLBlessing_Name_714 = {
           ContentTC = "枯萎之種",
           TextMapId = "RLBlessing_Name_714"
@@ -34457,15 +34273,7 @@ local Data = {
         RLBlessing_UnlockCon_408 = {
           ContentTC = "燭芯尚未解鎖",
           TextMapId = "RLBlessing_UnlockCon_408"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessing_UnlockCon_409",
-    MaxKey = "RLTreasure_Desc_12102",
-    Loader = function()
-      return {
+        },
         RLBlessing_UnlockCon_409 = {
           ContentTC = "燭芯尚未解鎖",
           TextMapId = "RLBlessing_UnlockCon_409"
@@ -34649,7 +34457,15 @@ local Data = {
         RLContract_Desc_105 = {
           ContentTC = "敵人受到的傷害降低<Highlight>#1</>。",
           TextMapId = "RLContract_Desc_105"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLContract_Desc_106",
+    MaxKey = "RLTreasure_IPDesc_10301",
+    Loader = function()
+      return {
         RLContract_Desc_106 = {
           ContentTC = "普通敵人被擊敗後產生1次半徑<Highlight>4</>米的爆炸，造成傷害。",
           TextMapId = "RLContract_Desc_106"
@@ -35265,15 +35081,7 @@ local Data = {
         RLTreasure_Desc_12102 = {
           ContentTC = "神秘行商處的所有商品價格提高<Highlight>@1</>，通過<Highlight>@2</>層後結束該效果，並獲得<Highlight>@3</>餘燼。",
           TextMapId = "RLTreasure_Desc_12102"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLTreasure_Desc_12201",
-    MaxKey = "RLTreasure_SimpleDesc_14101",
-    Loader = function()
-      return {
+        },
         RLTreasure_Desc_12201 = {
           ContentTC = "傷害降低<Highlight>$1</>，通過<Highlight>@1</>層後結束該效果，並獲得<Highlight>@2</>餘燼。",
           TextMapId = "RLTreasure_Desc_12201"
@@ -35457,7 +35265,15 @@ local Data = {
         RLTreasure_IPDesc_10301 = {
           ContentTC = "水、乾糧、打火石，還有一張皺縮的地圖。它們的主人曾試圖用炭筆在地圖上記錄自己的行跡，直到線條交叉、重合，甚至超出地圖標注的邊界。筆跡在一次又一次原地打轉後徹底了迷失方向，中斷之處徒留一個歪斜的問號。",
           TextMapId = "RLTreasure_IPDesc_10301"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLTreasure_IPDesc_10302",
+    MaxKey = "RL_Event303_Select_2",
+    Loader = function()
+      return {
         RLTreasure_IPDesc_10302 = {
           ContentTC = "水、乾糧、打火石，還有一張皺縮的地圖。它們的主人曾試圖用炭筆在地圖上記錄自己的行跡，直到線條交叉、重合，甚至超出地圖標注的邊界。筆跡在一次又一次原地打轉後徹底了迷失方向，中斷之處徒留一個歪斜的問號。",
           TextMapId = "RLTreasure_IPDesc_10302"
@@ -36073,15 +35889,7 @@ local Data = {
         RLTreasure_SimpleDesc_14101 = {
           ContentTC = "以技能效益降低為代價換取造成的傷害提高。",
           TextMapId = "RLTreasure_SimpleDesc_14101"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLTreasure_SimpleDesc_14201",
-    MaxKey = "RougeLike_Room_B_Success",
-    Loader = function()
-      return {
+        },
         RLTreasure_SimpleDesc_14201 = {
           ContentTC = "以近戰武器傷害降低為代價換取造成的傷害提高。",
           TextMapId = "RLTreasure_SimpleDesc_14201"
@@ -36265,7 +36073,15 @@ local Data = {
         RL_Event303_Select_2 = {
           ContentTC = "獲得<Highlight>100</>[餘燼]。",
           TextMapId = "RL_Event303_Select_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RL_Event304_Select_1",
+    MaxKey = "SKILL_10403_DESC",
+    Loader = function()
+      return {
         RL_Event304_Select_1 = {
           ContentTC = "[-50餘燼]選取一個<Highlight>藍色</>或<Highlight>紫色</>[燭芯]。",
           TextMapId = "RL_Event304_Select_1"
@@ -36431,11 +36247,11 @@ local Data = {
           TextMapId = "RL_Event321_Select_1"
         },
         RL_Event321_Select_2 = {
-          ContentTC = "獲得一個隨機<Highlight>藍色</>或<Highlight>紫色</>[燭芯]。\n\n",
+          ContentTC = "獲得一個隨機<Highlight>藍色</>或<Highlight>紫色</>[燭芯]。\n \n ",
           TextMapId = "RL_Event321_Select_2"
         },
         RL_Event322_Select_1 = {
-          ContentTC = "進入戰鬥，勝利後獲得一個隨機<Highlight>紫色</>[燭芯]。\n\n",
+          ContentTC = "進入戰鬥，勝利後獲得一個隨機<Highlight>紫色</>[燭芯]。\n \n ",
           TextMapId = "RL_Event322_Select_1"
         },
         RL_Event322_Select_2 = {
@@ -36524,7 +36340,7 @@ local Data = {
         },
         Ranged = {ContentTC = "遠程", TextMapId = "Ranged"},
         Reading_Content_101223 = {
-          ContentTC = "（遺留在格雷姆礦場的筆記，看行文口吻，似乎是某位學者。）\n……\n4月16日\n我們在這座廢棄的礦場裡發現了一種奇特的<H>黃色晶簇</>。從質地判斷，這並非傳聞裡山體深處洞穴埋藏的群星綺晶，也不是遺留在廢棄礦場中的月石，而是某種尚未發現的礦物。\n……\n4月18日\n鮑勃驚訝地發現，這些散發著幽暗光芒的黃色晶簇<H>變大了</>，從只有巴掌那麼大，長成了低矮灌木一樣的晶簇叢。\n……\n4月20日\n……晶簇叢又「長大」了，變成了尖刺狀晶體，把礦洞中的門都堵住了，簡直像是活物一樣。好在這些黃色晶體質地脆弱，一觸即碎，只需要少量<H>火藥</>就能爆破。\n鮑勃提出了一種假設：這種晶體並非礦物，而是某種<H>穢獸的分泌物</>——甚至可以說是穢獸的某種「子體」；隨著時間推移，它會像沾了水的海綿那樣膨脹。儘管鮑勃在穢獸生物學上頗有造詣，這依舊是一種有些大膽的假設。\n……\n4月21日\n為了驗證鮑勃的假設，我們決定向礦洞深處進發。如果他的推測為真，那麼在這個廢棄礦場深處，一定存在某個和這些野外穢獸不同的，特殊的穢獸<H>母體</>。\n……",
+          ContentTC = "（遺留在格雷姆礦場的筆記，看行文口吻，似乎是某位學者。）\n ……\n 4月16日\n 我們在這座廢棄的礦場裡發現了一種奇特的<H>黃色晶簇</>。從質地判斷，這並非傳聞裡山體深處洞穴埋藏的群星綺晶，也不是遺留在廢棄礦場中的月石，而是某種尚未發現的礦物。\n ……\n 4月18日\n 鮑勃驚訝地發現，這些散發著幽暗光芒的黃色晶簇<H>變大了</>，從只有巴掌那麼大，長成了低矮灌木一樣的晶簇叢。\n ……\n 4月20日\n ……晶簇叢又「長大」了，變成了尖刺狀晶體，把礦洞中的門都堵住了，簡直像是活物一樣。好在這些黃色晶體質地脆弱，一觸即碎，只需要少量<H>火藥</>就能爆破。\n 鮑勃提出了一種假設：這種晶體並非礦物，而是某種<H>穢獸的分泌物</>——甚至可以說是穢獸的某種「子體」；隨著時間推移，它會像沾了水的海綿那樣膨脹。儘管鮑勃在穢獸生物學上頗有造詣，這依舊是一種有些大膽的假設。\n ……\n 4月21日\n 為了驗證鮑勃的假設，我們決定向礦洞深處進發。如果他的推測為真，那麼在這個廢棄礦場深處，一定存在某個和這些野外穢獸不同的，特殊的穢獸<H>母體</>。\n ……",
           TextMapId = "Reading_Content_101223"
         },
         Reading_Content_200208 = {
@@ -36869,15 +36685,7 @@ local Data = {
         RougeLike_Room_B_Success = {
           ContentTC = "幽影消散了",
           TextMapId = "RougeLike_Room_B_Success"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RougeLike_Room_EB_Fail",
-    MaxKey = "SKILL_310303_DESC",
-    Loader = function()
-      return {
+        },
         RougeLike_Room_EB_Fail = {
           ContentTC = "被幽影吞噬",
           TextMapId = "RougeLike_Room_EB_Fail"
@@ -37061,7 +36869,15 @@ local Data = {
         SKILL_10403_DESC = {
           ContentTC = "技能範圍+<H>#1</>。",
           TextMapId = "SKILL_10403_DESC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_10501_DESC",
+    MaxKey = "SKILL_410204_DESC",
+    Loader = function()
+      return {
         SKILL_10501_DESC = {
           ContentTC = "最大生命+<H>#1</>。使用此武器造成傷害觸發額外效果時，獲得1層最大生命提高<H>#2</>，持續<H>#3</>秒，最多疊加<H>#4</>層。",
           TextMapId = "SKILL_10501_DESC"
@@ -37677,15 +37493,7 @@ local Data = {
         SKILL_310303_DESC = {
           ContentTC = "丟出「小可愛」時，如果「小可愛」距離地面高度大於等於2米，落地時對其周圍的敵人造成火屬性傷害。",
           TextMapId = "SKILL_310303_DESC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_310303_NAME",
-    MaxKey = "SKILL_DESC_2101Skill02",
-    Loader = function()
-      return {
+        },
         SKILL_310303_NAME = {
           ContentTC = "正確遊玩方式",
           TextMapId = "SKILL_310303_NAME"
@@ -37869,7 +37677,15 @@ local Data = {
         SKILL_410204_DESC = {
           ContentTC = "自身和其他隊友造成雷屬性技能傷害時，自身獲得1層昂揚提高效果，最多疊加20層。",
           TextMapId = "SKILL_410204_DESC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_410204_NAME",
+    MaxKey = "SKILL_DESC_3301Skill01Num",
+    Loader = function()
+      return {
         SKILL_410204_NAME = {
           ContentTC = "相生",
           TextMapId = "SKILL_410204_NAME"
@@ -38035,7 +37851,7 @@ local Data = {
           TextMapId = "SKILL_510191_NAME"
         },
         SKILL_510201_DESC = {
-          ContentTC = "進入「匿蹤」狀態，並退出「追獵」狀態。\n主動退出「匿蹤」狀態和在「匿蹤」狀態中再次釋放「隱匿」時，生成2枚「獠牙之刺」攻擊周圍的隨機敵人。",
+          ContentTC = "進入「匿蹤」狀態，並退出「追獵」狀態。\n 主動退出「匿蹤」狀態和在「匿蹤」狀態中再次釋放「隱匿」時，生成2枚「獠牙之刺」攻擊周圍的隨機敵人。",
           TextMapId = "SKILL_510201_DESC"
         },
         SKILL_510201_NAME = {
@@ -38485,15 +38301,7 @@ local Data = {
         SKILL_DESC_2101Skill02 = {
           ContentTC = "每層「愛之毒」增加傷害倍率",
           TextMapId = "SKILL_DESC_2101Skill02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_DESC_2301Rate",
-    MaxKey = "SKILL_DESC_ExploreRadius2",
-    Loader = function()
-      return {
+        },
         SKILL_DESC_2301Rate = {
           ContentTC = "「召喚物·觸手」傷害提高",
           TextMapId = "SKILL_DESC_2301Rate"
@@ -38677,7 +38485,15 @@ local Data = {
         SKILL_DESC_3301Skill01Num = {
           ContentTC = "最大攻擊目標數量",
           TextMapId = "SKILL_DESC_3301Skill01Num"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_DESC_3301Skill01Radius",
+    MaxKey = "SKILL_DESC_SkillRangeUp",
+    Loader = function()
+      return {
         SKILL_DESC_3301Skill01Radius = {
           ContentTC = "生成「瑪爾潔的萬能尋寶鏟」索敵半徑",
           TextMapId = "SKILL_DESC_3301Skill01Radius"
@@ -39293,15 +39109,7 @@ local Data = {
         SKILL_DESC_ExploreRadius2 = {
           ContentTC = "二段爆炸半徑",
           TextMapId = "SKILL_DESC_ExploreRadius2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_DESC_ExploreRadius3",
-    MaxKey = "StoryEventName_13",
-    Loader = function()
-      return {
+        },
         SKILL_DESC_ExploreRadius3 = {
           ContentTC = "三段爆炸半徑",
           TextMapId = "SKILL_DESC_ExploreRadius3"
@@ -39458,10 +39266,6 @@ local Data = {
           ContentTC = "三階射擊間隔",
           TextMapId = "SKILL_DESC_ShootingRate3"
         },
-        SKILL_DESC_ShootingRate4 = {
-          ContentTC = "四階射擊間隔",
-          TextMapId = "SKILL_DESC_ShootingRate4"
-        },
         SKILL_DESC_SkillDmgUp = {
           ContentTC = "技能傷害提高",
           TextMapId = "SKILL_DESC_SkillDmgUp"
@@ -39489,7 +39293,15 @@ local Data = {
         SKILL_DESC_SkillRangeUp = {
           ContentTC = "技能範圍提高",
           TextMapId = "SKILL_DESC_SkillRangeUp"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_DESC_SkillSpeedUp",
+    MaxKey = "SubType_4_Region",
+    Loader = function()
+      return {
         SKILL_DESC_SkillSpeedUp = {
           ContentTC = "技能速度提高",
           TextMapId = "SKILL_DESC_SkillSpeedUp"
@@ -39803,11 +39615,11 @@ local Data = {
           TextMapId = "SkinGacha_Name_Special_1"
         },
         SkinGacha_Warning_Normal = {
-          ContentTC = "<Title>必定獲取金色品質道具</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>常駐萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n踏浪舞曲：<highlight>0.427%%</>\n喚日急板：<highlight>0.427%%</>\n紗幕與耳語：<highlight>0.285%%</>\n陽光磨坊：<highlight>0.285%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n通過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取已擁有的外觀，將轉化為水色稜鏡；重複金色品質角色形象將轉化為水色稜鏡*<highlight>60</>，重複金色品質武器形象將轉化為水色稜鏡*<highlight>40</>，重複紫色品質外觀將轉化為水色稜鏡*<highlight>4</>，重複藍色品質外觀將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>星光回旋曲</>中的尋覓次數將獨立計算，不與其他活動萬華合並計算。",
+          ContentTC = "<Title>必定獲取金色品質道具</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>常駐萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n紗幕與耳語：<highlight>0.285%%</>\n陽光磨坊：<highlight>0.285%%</>\n踏浪舞曲：<highlight>0.427%%</>\n喚日急板：<highlight>0.427%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n通過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取已擁有的形象，將轉化為水色稜鏡；重複流光品質角色形象將轉化為水色稜鏡*<highlight>60</>，重複流光品質武器形象將轉化為水色稜鏡*<highlight>40</>，重複月華品質形象將轉化為水色稜鏡*<highlight>4</>，重複螢燭品質形象將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>星光回旋曲</>中的尋覓次數將獨立計算，不與其他活動萬華合並計算。",
           TextMapId = "SkinGacha_Warning_Normal"
         },
         SkinGacha_Warning_Special = {
-          ContentTC = "<Title>活動限定萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n夢中的舞會：<highlight>0.641%%</>\n虹色稜鏡*25：<highlight>0.641%%</>\n虹色稜鏡*50：<highlight>0.142%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n通過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取金色品質形象·夢中的舞會，將轉化為虹色稜鏡*<highlight>25</>。\n如果重複獲取其餘已擁有的外觀，將轉化為水色稜鏡；重複紫色品質外觀將轉化為水色稜鏡*<highlight>4</>，重複藍色品質外觀將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>夏夢紛飛集</>中的尋覓次數將獨立計算，不與其他活動萬華合並計算。",
+          ContentTC = "<Title>必定獲取華彩砂礫</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>活動限定萬華概率說明</>\n經由尋覓獲取金色或金色以上品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取虹色稜鏡*<highlight>25</>；各道具概率如下：\n虹色稜鏡*25：<highlight>1.282%%</>\n虹色稜鏡*50：<highlight>0.071%%</>\n夢中的舞會：<highlight>0.071%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n通過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取流光品質形象·夢中的舞會，將轉化為虹色稜鏡*<highlight>50</>。\n如果重複獲取其餘已擁有的形象，將轉化為水色稜鏡；重複流光品質角色形象將轉化為水色稜鏡*<highlight>60</>，重複流光品質武器形象將轉化為水色稜鏡*<highlight>40</>，重複月華品質形象將轉化為水色稜鏡*<highlight>4</>，重複螢燭品質形象將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>夏夢紛飛集</>中的尋覓次數將獨立計算，不與其他活動萬華合並計算。",
           TextMapId = "SkinGacha_Warning_Special"
         },
         SkinTrialEvent_Title_Saiqi = {
@@ -40083,15 +39895,7 @@ local Data = {
         StoryEventName_13 = {
           ContentTC = "孤雛行於荒野·其二",
           TextMapId = "StoryEventName_13"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "StoryEventName_21",
-    MaxKey = "TERMEXP_3103_Summon01",
-    Loader = function()
-      return {
+        },
         StoryEventName_21 = {
           ContentTC = "飛鳥墜落深淵·其二",
           TextMapId = "StoryEventName_21"
@@ -40279,7 +40083,15 @@ local Data = {
         SubType_4_Region = {
           ContentTC = "地域",
           TextMapId = "SubType_4_Region"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SubType_4_Society",
+    MaxKey = "TERMEXP_Rou_10104_Lumiseed",
+    Loader = function()
+      return {
         SubType_4_Society = {
           ContentTC = "社會",
           TextMapId = "SubType_4_Society"
@@ -40886,17 +40698,9 @@ local Data = {
           TextMapId = "TERMEXP_3103_Skill02"
         },
         TERMEXP_3103_Summon01 = {
-          ContentTC = "造成傷害時，造成更大的戰姿削減。自身技能威力與技能範圍的差值越大，丟出「小可愛·耶爾製」的概率越大。差值大於等於50%時，必定丟出「小可愛·耶爾製」。",
+          ContentTC = "造成傷害時，造成更大的戰姿削減。魔之楔提供的技能威力與技能範圍的差值越大，丟出「小可愛·耶爾製」的概率越大。差值大於等於50%時，必定丟出「小可愛·耶爾製」。",
           TextMapId = "TERMEXP_3103_Summon01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TERMEXP_3103_Summon02",
-    MaxKey = "TextMap_AnswerDetail_100403",
-    Loader = function()
-      return {
+        },
         TERMEXP_3103_Summon02 = {
           ContentTC = "造成更高的傷害。魔之楔提供的技能範圍與技能威力的差值越大，丟出「小可愛·奧利弗製」的概率越大。差值大於等於50%時，必定丟出「小可愛·奧利弗製」。",
           TextMapId = "TERMEXP_3103_Summon02"
@@ -41084,7 +40888,15 @@ local Data = {
         TERMEXP_Rou_10104_Lumiseed = {
           ContentTC = "探测到周围<Highlight>3</>米范围内有敌人时自爆，造成<Highlight>600%</>攻击的伤害。持续时间<Highlight>10</>秒，同时最多存在10个。",
           TextMapId = "TERMEXP_Rou_10104_Lumiseed"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TERMEXP_Rou_10105_BladeWings",
+    MaxKey = "TextMap_AnswerName_100503",
+    Loader = function()
+      return {
         TERMEXP_Rou_10105_BladeWings = {
           ContentTC = "具有追蹤能力的大型飛彈。具有更強的戰姿削減效果。",
           TextMapId = "TERMEXP_Rou_10105_BladeWings"
@@ -41669,15 +41481,7 @@ local Data = {
         TextMap_AnswerDetail_100403 = {
           ContentTC = "案發當晚，你在凶手身上聞到了一股來自月髓液的刺刺鼻氣味，這說明凶手身上沾有大量的月髓液。能在冰湖城接觸到如此大量月髓液的地方十分有限，與其他線索組合後，也許就能進一步鎖定凶手活動過的場合了。",
           TextMapId = "TextMap_AnswerDetail_100403"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TextMap_AnswerDetail_100404",
-    MaxKey = "Title_20011",
-    Loader = function()
-      return {
+        },
         TextMap_AnswerDetail_100404 = {
           ContentTC = "凶手逃向了西南方，而西南方能接觸到大量月髓液的地方只有工廠。那裡會是凶手的藏身處嗎？無論如何，工廠都是一個值得調查的地方。",
           TextMapId = "TextMap_AnswerDetail_100404"
@@ -41865,7 +41669,15 @@ local Data = {
         TextMap_AnswerName_100503 = {
           ContentTC = "凶手哼唱的是一段歌劇唱段的旋律",
           TextMapId = "TextMap_AnswerName_100503"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TextMap_AnswerName_200101",
+    MaxKey = "Title_20058",
+    Loader = function()
+      return {
         TextMap_AnswerName_200101 = {
           ContentTC = "巴克先生沾一點酒精就會醉倒",
           TextMapId = "TextMap_AnswerName_200101"
@@ -42055,7 +41867,7 @@ local Data = {
           TextMapId = "Textmap_UnlockTitle"
         },
         TheaterOnline_Donate_Explain = {
-          ContentTC = "全服獎勵達成後，獎勵將通過信件發送",
+          ContentTC = "全服獎勵達成後，獎勵將通過郵件發送",
           TextMapId = "TheaterOnline_Donate_Explain"
         },
         TheaterOnline_Donate_Progress = {
@@ -42471,15 +42283,7 @@ local Data = {
         Title_20011 = {
           ContentTC = "魔靈大師",
           TextMapId = "Title_20011"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Title_20012",
-    MaxKey = "UIGuide_PetPan_01",
-    Loader = function()
-      return {
+        },
         Title_20012 = {
           ContentTC = "探險家",
           TextMapId = "Title_20012"
@@ -42667,7 +42471,15 @@ local Data = {
         Title_20058 = {
           ContentTC = "隱者",
           TextMapId = "Title_20058"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Title_20059",
+    MaxKey = "UIGuide_SpecialDestructible_3",
+    Loader = function()
+      return {
         Title_20059 = {
           ContentTC = "魔法師",
           TextMapId = "Title_20059"
@@ -43276,15 +43088,7 @@ local Data = {
         UIGuide_PetPan_01 = {
           ContentTC = "魔靈潘神，最聰明的魔靈！可以在各處發現它們留下的痕跡。",
           TextMapId = "UIGuide_PetPan_01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UIGuide_PetPan_02",
-    MaxKey = "UI_Accessory_Desc_10008",
-    Loader = function()
-      return {
+        },
         UIGuide_PetPan_02 = {
           ContentTC = "追蹤這些痕跡，找到它們，也許會獲得一些意外驚喜。",
           TextMapId = "UIGuide_PetPan_02"
@@ -43472,7 +43276,15 @@ local Data = {
         UIGuide_SpecialDestructible_3 = {
           ContentTC = "部分物體只有受到<H>特定的屬性額外效果</>或<H>特定的屬性技能傷害</>才可被破壞。\n部分儲物箱上附著的<H>暗藤</>，可以被<H>切割屬性額外效果、光屬性額外效果和光屬性技能傷害</>破壞。\n（角色與武器的<H>屬性</>及觸發額外效果的<H>機率</>可在整備介面檢視。）",
           TextMapId = "UIGuide_SpecialDestructible_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UIGuide_SpecialDestructible_4",
+    MaxKey = "UI_Accessory_Desc_30010",
+    Loader = function()
+      return {
         UIGuide_SpecialDestructible_4 = {
           ContentTC = "部分物體只有受到<H>特定的屬性額外效果</>或<H>特定的屬性技能傷害</>才可被破壞。 \n部分儲物箱上附著的<H>碎石</>，可以被<H>震盪屬性額外效果</>破壞。\n（角色與武器的<H>屬性</>及觸發額外效果的<H>機率</>可在整備介面檢視。）",
           TextMapId = "UIGuide_SpecialDestructible_4"
@@ -44075,15 +43887,7 @@ local Data = {
         UI_Accessory_Desc_10008 = {
           ContentTC = "今日心情如圖所示。",
           TextMapId = "UI_Accessory_Desc_10008"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Desc_10012",
-    MaxKey = "UI_Accessory_Name_50004",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Desc_10012 = {
           ContentTC = "帶上它將會變得格外擅長「鑽」研。",
           TextMapId = "UI_Accessory_Desc_10012"
@@ -44271,7 +44075,15 @@ local Data = {
         UI_Accessory_Desc_30010 = {
           ContentTC = "通過特殊活動獲得。",
           TextMapId = "UI_Accessory_Desc_30010"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Desc_30016",
+    MaxKey = "UI_Achievement_Des_1010",
+    Loader = function()
+      return {
         UI_Accessory_Desc_30016 = {
           ContentTC = "淬煉自圓月下的名刀。微微晃動，便能在刀身上看到流轉的月色。",
           TextMapId = "UI_Accessory_Desc_30016"
@@ -44883,15 +44695,7 @@ local Data = {
         UI_Accessory_Name_50004 = {
           ContentTC = "銀燭焰火",
           TextMapId = "UI_Accessory_Name_50004"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_60001",
-    MaxKey = "UI_Achievement_Des_4041",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_60001 = {
           ContentTC = "{空格}",
           TextMapId = "UI_Accessory_Name_60001"
@@ -45008,17 +44812,9 @@ local Data = {
           ContentTC = "【解鎖條件】",
           TextMapId = "UI_Accessory_Unlock_Condition"
         },
-        UI_Accessory_Unlock_Exchange = {
-          ContentTC = "通過稜鏡兌換獲得",
-          TextMapId = "UI_Accessory_Unlock_Exchange"
-        },
         UI_Accessory_Unlock_Forge = {
           ContentTC = "通過鑄造獲得",
           TextMapId = "UI_Accessory_Unlock_Forge"
-        },
-        UI_Accessory_Unlock_Gacha = {
-          ContentTC = "通過萬華獲得",
-          TextMapId = "UI_Accessory_Unlock_Gacha"
         },
         UI_Accessory_Unlock_Hardboss = {
           ContentTC = "通過夢魘殘聲獲得",
@@ -45087,7 +44883,15 @@ local Data = {
         UI_Achievement_Des_1010 = {
           ContentTC = "累計造成<highlight>#1</>點光屬性傷害",
           TextMapId = "UI_Achievement_Des_1010"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_101001",
+    MaxKey = "UI_Achievement_Des_505006",
+    Loader = function()
+      return {
         UI_Achievement_Des_101001 = {
           ContentTC = "找到探險家皎皎在「淨界島」留下的<highlight>#1</>個探險之證",
           TextMapId = "UI_Achievement_Des_101001"
@@ -45691,15 +45495,7 @@ local Data = {
         UI_Achievement_Des_4041 = {
           ContentTC = "煜明累計<highlight>#1</>次使用下落攻擊完成最後一擊",
           TextMapId = "UI_Achievement_Des_4041"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_4051",
-    MaxKey = "UI_Achievement_Des_9403",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_4051 = {
           ContentTC = "松露與榛子累計在[飽飽工作]狀態下移動<highlight>#1</>米",
           TextMapId = "UI_Achievement_Des_4051"
@@ -45895,7 +45691,15 @@ local Data = {
         UI_Achievement_Des_505006 = {
           ContentTC = "呼喚夢中的靈鳥記錄<highlight>#1</>個「淨界島」的地點",
           TextMapId = "UI_Achievement_Des_505006"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_505007",
+    MaxKey = "UI_Achievement_Name_1010304",
+    Loader = function()
+      return {
         UI_Achievement_Des_505007 = {
           ContentTC = "呼喚夢中的靈鳥記錄<highlight>#1</>個「冰湖城」的地點",
           TextMapId = "UI_Achievement_Des_505007"
@@ -46499,15 +46303,7 @@ local Data = {
         UI_Achievement_Des_9403 = {
           ContentTC = "[噬影蝶]燭芯累計造成<highlight>#1</>點傷害",
           TextMapId = "UI_Achievement_Des_9403"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_9404",
-    MaxKey = "UI_Achievement_Name_201702",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_9404 = {
           ContentTC = "[曳光蟲]燭芯單次造成的傷害達到<highlight>#1</>點",
           TextMapId = "UI_Achievement_Des_9404"
@@ -46703,7 +46499,15 @@ local Data = {
         UI_Achievement_Name_1010304 = {
           ContentTC = "往日之影",
           TextMapId = "UI_Achievement_Name_1010304"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_1010305",
+    MaxKey = "UI_Achievement_Name_3010103",
+    Loader = function()
+      return {
         UI_Achievement_Name_1010305 = {
           ContentTC = "西奧的研究伙伴",
           TextMapId = "UI_Achievement_Name_1010305"
@@ -47307,15 +47111,7 @@ local Data = {
         UI_Achievement_Name_201702 = {
           ContentTC = "升起的煙花Ⅱ",
           TextMapId = "UI_Achievement_Name_201702"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_201703",
-    MaxKey = "UI_Achievement_Name_506302",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_201703 = {
           ContentTC = "升起的煙花Ⅲ",
           TextMapId = "UI_Achievement_Name_201703"
@@ -47511,7 +47307,15 @@ local Data = {
         UI_Achievement_Name_3010103 = {
           ContentTC = "力量的秘密Ⅲ",
           TextMapId = "UI_Achievement_Name_3010103"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_3010104",
+    MaxKey = "UI_Achievement_Name_52010001",
+    Loader = function()
+      return {
         UI_Achievement_Name_3010104 = {
           ContentTC = "力量的秘密Ⅳ",
           TextMapId = "UI_Achievement_Name_3010104"
@@ -48115,15 +47919,7 @@ local Data = {
         UI_Achievement_Name_506302 = {
           ContentTC = "統統驅逐·神速Ⅱ",
           TextMapId = "UI_Achievement_Name_506302"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_506303",
-    MaxKey = "UI_ActionPoint_ChooseMethods",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_506303 = {
           ContentTC = "統統驅逐·神速Ⅲ",
           TextMapId = "UI_Achievement_Name_506303"
@@ -48319,7 +48115,15 @@ local Data = {
         UI_Achievement_Name_52010001 = {
           ContentTC = "專業物流",
           TextMapId = "UI_Achievement_Name_52010001"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_521001001",
+    MaxKey = "UI_Archive_Tab_AllianceEnemy",
+    Loader = function()
+      return {
         UI_Achievement_Name_521001001 = {
           ContentTC = "不服輸不滿足",
           TextMapId = "UI_Achievement_Name_521001001"
@@ -48923,15 +48727,7 @@ local Data = {
         UI_ActionPoint_ChooseMethods = {
           ContentTC = "選擇恢復方式",
           TextMapId = "UI_ActionPoint_ChooseMethods"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_ActionPoint_Consume",
-    MaxKey = "UI_Bag_Sell_Select",
-    Loader = function()
-      return {
+        },
         UI_ActionPoint_Consume = {
           ContentTC = "消耗體力",
           TextMapId = "UI_ActionPoint_Consume"
@@ -49124,7 +48920,15 @@ local Data = {
         UI_Archive_Tab_AllianceEnemy = {
           ContentTC = "神棄者同盟",
           TextMapId = "UI_Archive_Tab_AllianceEnemy"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Archive_Tab_BossEnemy",
+    MaxKey = "UI_BattlePass_PetHasnotGot",
+    Loader = function()
+      return {
         UI_Archive_Tab_BossEnemy = {
           ContentTC = "高危",
           TextMapId = "UI_Archive_Tab_BossEnemy"
@@ -49631,7 +49435,7 @@ local Data = {
           TextMapId = "UI_Bag_Decompose_Tip_1"
         },
         UI_Bag_Decompose_Tip_2 = {
-          ContentTC = "目前分解的武器中含有<H>已養成</>的武器，分解後不會返還消耗的資源，是否繼續？",
+          ContentTC = "目前分解的武器中含有<H>已培育</>的武器，分解後不會返還消耗的資源，是否繼續？",
           TextMapId = "UI_Bag_Decompose_Tip_2"
         },
         UI_Bag_Decompose_Tip_3 = {
@@ -49655,7 +49459,7 @@ local Data = {
           TextMapId = "UI_Bag_Equipped"
         },
         UI_Bag_Fish_Weight = {
-          ContentTC = "尺寸：",
+          ContentTC = "重量：",
           TextMapId = "UI_Bag_Fish_Weight"
         },
         UI_Bag_IgnoreEquipped = {
@@ -49725,15 +49529,7 @@ local Data = {
         UI_Bag_Sell_Select = {
           ContentTC = "已選擇",
           TextMapId = "UI_Bag_Sell_Select"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Bag_Sell_Total",
-    MaxKey = "UI_CHAR_DATA_TEXT_15020405",
-    Loader = function()
-      return {
+        },
         UI_Bag_Sell_Total = {
           ContentTC = "總計",
           TextMapId = "UI_Bag_Sell_Total"
@@ -49811,7 +49607,7 @@ local Data = {
           TextMapId = "UI_Banner_SkinGacha_Goto"
         },
         UI_Banner_Tab_SaleForNew = {
-          ContentTC = "超値特惠2930%",
+          ContentTC = "超値特惠760%",
           TextMapId = "UI_Banner_Tab_SaleForNew"
         },
         UI_Banner_Tab_SpSale_10 = {
@@ -49929,7 +49725,15 @@ local Data = {
         UI_BattlePass_PetHasnotGot = {
           ContentTC = "未持有",
           TextMapId = "UI_BattlePass_PetHasnotGot"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_BattlePass_PetReissueDetail",
+    MaxKey = "UI_CHAR_DATA_TEXT_23010202",
+    Loader = function()
+      return {
         UI_BattlePass_PetReissueDetail = {
           ContentTC = "上期詩集存在未領取魔靈，領取後方可開啟本期詩集",
           TextMapId = "UI_BattlePass_PetReissueDetail"
@@ -50533,15 +50337,7 @@ local Data = {
         UI_CHAR_DATA_TEXT_15020405 = {
           ContentTC = "密林深處，女孩在斑駁的陽光中醒來。兩顆漂亮的紅色漿果垂在她眼前，輕輕晃動著，晶瑩的露珠順著飽滿的果皮滴落。\n「咦？！」女孩瞬間清醒過來，一骨碌從草地上爬起，「打獵開始了嗎？」\n拈著漿果的父親笑了，「你呀，非要大清早就跟出來，結果沒到半路就趴我背上睡著了。打獵結束嘍，我們也該回家了。」\n「欸——我都沒看見……！」女孩賭氣似的噘起嘴巴，「你在開始前叫醒我不就好了嘛！」\n「好好好，下次一定。」父親一邊答應著，一邊再次晃了晃手中那兩顆色澤誘人的漿果，「這果子可甜了，你嚐嚐，消消氣。」\n女孩接過漿果，將信將疑地吃下一顆。夾雜著一絲酸澀的甜味在口腔中蔓延開，她的心情也隨之明朗起來。\n「這是什麼果子呀？」她問父親。\n「它叫『覆盆子』。森林中的野果很多，但只有少部份能吃，覆盆子就是最甜的。」\n女孩又從父親手中抓過一小把漿果，然後拉起他的手踏上了歸途。\n「爸爸，我還想吃……」\n「好吧，就兩顆……嗯，三顆吧。剩下的要留給媽媽。」\n「為什麼覆盆子的果實那麼小呢？如果能再大一些……」\n「那要等它長大了。覆盆子長大了呢，就會長成醋栗。醋栗長大了，就是蘋果。蘋果再長大，就是蜜瓜……」\n「哇……那我長大了，會變成什麼樣子呢？」\n父親摸摸她的腦袋，笑而不答。一座小小的木房子出現在路的盡頭。那便是女孩的家。母親站在門口，遠遠地朝兩人揮了揮手。於是少女立刻拋下父親，小跑步奔向了母親的懷抱。\n「你呀，嘴角怎麼還沾著果汁？」母親一邊接住女孩，一邊伸手將她的嘴角擦乾淨，「是不是在森林裡偷吃了什麼好東西？」\n「可沒有『偷吃』哦，」跟在女孩身後走來的父親笑著否認道。他從皮袋中掏出了用手帕包好的一捧漿果，遞給妻子，「我們也帶了你的份回來。」\n「嚯，真虧你能找到這麼好看的覆盆子，倒讓我有些不捨得吃了。」母親笑了。\n父親和母親一同說笑著走向了廚房，開始準備午餐。女孩則又轉身溜出了家門，來到附近的河流邊玩耍。她嘴裡念念有詞地複述著父親剛才說的一串植物，腦海中浮現出小山一樣的覆盆子、醋栗、蘋果和蜜瓜。\n「啊……！」\n忽然，女孩睜大了眼睛──就在她觸手可及的前方，一隻蜻蜓從空中盤旋著降落，停在含苞待放的睡蓮尖角，薄薄的翅膀將陽光反射得五彩斑斕。少女屏住了呼吸，一動不動地站在原地，生怕驚擾了這美麗的小小生靈。\n\n那時的她企盼著長大，目之所及的一切對她來說都是那麼新鮮和有趣，未知的廣闊世界更是充滿無窮的魅力。\n那時的她還不知道，自己終有一日將看盡世上所有的花、所有的樹、所有的人和事，以及，所有的生與死。\n那時的她，只是注視著停在花瓣尖尖角上的蜻蜓，眼中流露出喜悅的光，像一個普通的孩子那樣。",
           TextMapId = "UI_CHAR_DATA_TEXT_15020405"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_15030101",
-    MaxKey = "UI_CHAR_DATA_TEXT_43010104",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_15030101 = {
           ContentTC = "敬請期待",
           TextMapId = "UI_CHAR_DATA_TEXT_15030101"
@@ -50737,7 +50533,15 @@ local Data = {
         UI_CHAR_DATA_TEXT_23010202 = {
           ContentTC = "盜賊本不該奉還偷得的寶物，這是再平常不過的道理。但那個藍裙子娃娃，還是回到了失主的手上。\n那是塔比瑟第一次歸還從盜賊手中獲得的贓物，「惡魔大盜」將從小偷那偷得的娃娃，輕輕放在女孩的床頭，卻猶豫著沒有離開，她對著娃娃訴說了很多話語，起身又坐下，將娃娃拿起，又放下，直至太陽提醒她，該說再見了。\n裝睡的女孩在那些深情的話語中發現了一個事實，曾經有位藍裙子女孩是這位「惡魔大盜」最重要的人，是這份思念使得她尋來了這裡，又是這份思念使她沒有自私地留下娃娃，即使它很像她。",
           TextMapId = "UI_CHAR_DATA_TEXT_23010202"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_23010203",
+    MaxKey = "UI_CHAR_DATA_TEXT_51020403",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_23010203 = {
           ContentTC = "在成為「惡魔大盜」塔比瑟之前，她只是一個令當地商販們避之不及的小偷。\n談及塔比瑟時，他們會連連搖頭，苦不堪言，雖說丟的都是些食物，但塔比瑟每次行偷過後的捉弄，都叫人氣惱不已，久而久之，他們把塔比瑟稱作「惡魔」。\n後來「惡魔」變成了「惡魔大盜」，商販們再也沒有了被捉弄的困擾，他們猜測也許是塔比瑟失去了興趣，也許是某些事讓她轉變了性格，不論原因是什麼，他們切實感受到了塔比瑟的改變，不再稱呼她為「惡魔」，但這個名字卻以另一種意義，在小偷之間散播開來。",
           TextMapId = "UI_CHAR_DATA_TEXT_23010203"
@@ -51341,15 +51145,7 @@ local Data = {
         UI_CHAR_DATA_TEXT_43010104 = {
           ContentTC = "西比爾的睡眠向來不太穩定，中途醒來後經常難以入眠，因此她在深夜處理軍務的身影已經司空見慣。\n尤其在飛船上，她的神經始終緊繃，保持著高度警戒——這是多年前某場以失敗告終的戰爭給她留下的「疤痕」之一。",
           TextMapId = "UI_CHAR_DATA_TEXT_43010104"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_43010105",
-    MaxKey = "UI_CMNpc_KnockDoor",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_43010105 = {
           ContentTC = "“希望有一天，這個國度可以迎來和平。”\n迪斯瑪尼亞城郊老舊的磚石上印刻著這樣一行粗淺的字跡，歪歪扭扭，似是孩童所刻。磚石在風吹日曬下變得有些斑駁，但仍忠實地記錄著某個孩子的心願。\n西比爾哼笑了一聲，似是覺得有趣，又像是輕蔑。你並不贊同她的反應，認為這句話裡沒有任何可笑的地方，而西比爾對你的意見不置可否。\n“我的老師和一位同門也說過類似的話。很可惜，她們被自己的短視所累，註定被時代的巨輪碾成齏土。”\n你沉默以對。\n“但是，也許你不會相信——我認可這一理想。”\n西比爾不再停留，她將老舊的磚石化為粉芥，連帶著其中的心願一同滾落在塵土中，只剩最後半句話散在風裡，無人聽清。\n“並且，我一定會實現它。”",
           TextMapId = "UI_CHAR_DATA_TEXT_43010105"
@@ -51545,7 +51341,15 @@ local Data = {
         UI_CHAR_DATA_TEXT_51020403 = {
           ContentTC = "奧特賽德時常在雷聲中驚醒，環視四周，窗外並沒有傾瀉著毀滅彈幕的燃燒戰艦，窗內也沒有劃動著死亡軌跡的閃耀槍焰，雨水拍打窗戶的脆響取代了記憶中人體被軍靴踐踏的悶聲。一滴雨鑽過窗戶的縫隙濺到臉上，他伸手去擦，卻無法分辨自己擦掉的究竟是雨，還是無意識的淚。",
           TextMapId = "UI_CHAR_DATA_TEXT_51020403"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_51020404",
+    MaxKey = "UI_CMNpc_Name_Hesite",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_51020404 = {
           ContentTC = "留著血痂只會引起擔心，記憶中不止一次不止一人曾因此關注過他，所以奧特賽德從小就養成了摳掉它們的習慣。\n隨著這群人逐一離開奧特賽德，傷疤不再是被擔心的理由，而是虛弱的象徵。人們畏懼他的鮮血，撕咬他的傷口，一道傷疤蔓延成無數道傷疤，直到菲娜冰冷的手掌覆上，這無止盡的蔓延才得以終止，看著菲娜擔憂的眼神，奧特賽德才猛然驚覺，原來那承載著痛苦、屈辱、呐喊與抗爭的血淋淋的傷疤，已在此刻找回了最初擁有過的含義。",
           TextMapId = "UI_CHAR_DATA_TEXT_51020404"
@@ -51651,23 +51455,23 @@ local Data = {
           TextMapId = "UI_CHAR_DATA_TEXT_54010105"
         },
         UI_CHAR_DATA_TEXT_54010201 = {
-          ContentTC = "從河間醫院的診療區到病房區，要穿過一條長長的連廊。\n和迪斯瑪尼亞其他醫院不同，河間醫院住著的大多是一些長期慢性疾病患者。那些病通常痛苦卻不致命，它們不會快速讓人們變成屍體，卻在漫長的時間裡讓他們變成醫生們口中的「瘋子」。\n從7歲開始，我就在那條連廊上奔忙。由於我的手腳很勤快，比大多數索拉成年護工都快得多，再加上我只要有口飯有地方睡就好，所以他們仁慈地允許我——一個頭上長著角的卑賤小女孩在他們的地盤工作。我的工作通常是搬運——從弄髒的被褥到病人打翻的碎玻璃，都由我來打掃清理，再搬到盥洗室或垃圾場。也常有護士順手讓我幫他們搬運藥劑。所以絕大多數時間內，我都抱著比人還高的紙箱在連廊上穿行，它們遮蔽了我的視線，因此我時不時撞上同樣行色匆忙的人，隨之而來的便是一頓劈頭蓋臉的辱罵。\n我曾在廣場上聽一位旅行的吟遊詩人抱怨海伯利亞人是所有阿特拉西亞人中最暴躁的。如果這是事實，那麼在我貧瘠的見識中，河間醫院的人們就是暴躁狂中的暴躁狂，從病人，到醫生和護士，再到探視他們的親人，無一例外。儘管隨著時間的推移我逐漸明白，是那些漫長而痛苦的疾病讓所有人變得歇斯底裡，我還是會在被辱罵一頓後，朝他們的背影狠狠比中指。\n達芙涅·塞奧多爾是唯一一個與我撞上後沒有罵我，反而向我道歉的人。我清楚地記得那是一個下午，我熟練地搬著一疊布墊打算送去盥洗室時，在連廊盡頭的拐角處撞上了一個人——似乎是一位年輕的金發女士——我手裡的布墊和那人手裡的鮮花都在瞬間飛到天上，再重重落下。於是我蹲在地上扯著嗓子大哭起來，嚎叫得和最疼的病人一樣響亮。事實上我並沒有摔疼，也沒有因為搞砸了工作有一丁點兒的悲傷，這只是我的小小計倆：每當我這樣哭嚎起來的時候，那些原本想要辱罵或者毆打我的大人就會像碰到了不幹凈的東西一樣，不再與我糾纏。\n但年輕的金發女士並沒有像我想象中那樣，丟下一句惡毒的咒罵便快步離開。她蹲下來，輕撫著我的後背，焦急地問我摔到了哪兒，痛不痛。那語氣似乎比我更慌張；見我沒有反應，她又換了更溫柔平緩的語氣，重復了一遍她的問題，但焦急仍從她輕微顫抖的手指傳來。\n我已經忘了我是如何回答她的——大概是對她說了「不痛」吧，否則她不會舒展開緊皺的眉頭，扶我起來，再和我一起撿起散落在地的布墊和花枝。\n「對不起。」她摸摸我的頭，「小妹妹，你喜歡什麽味的糖果？下次我帶些來給你，好嗎？」\n「草莓味。」我說。事實上我不應該要她的賠禮，因為我清楚地知道在那場相撞的「事故」中，沒有看清來人的是我。但我想起了我剛記事時，病榻上的母親念叨的最後一件事是，草莓硬糖放在櫥櫃的抽屜裡。但我打開櫥櫃的時候那裡什麽都沒有，後來我知道是我貪吃的哥哥把它們全拿走了。\n「草莓硬糖，我會記住。」金發女士說，抱起她的鮮花，朝著連廊的盡頭走去。她的個子中等偏高，很清瘦。下午的太陽照在她啞光的發卡上，暈出淡淡的金黃。\n我不知道她的名字，所以我在心中默默取了一個名字，草莓硬糖小姐。除了我的母親，沒有人再像草莓硬糖小姐那樣，問過我痛不痛。\n——蒂奧莉·斯通的日記",
+          ContentTC = "從河間醫院的診療區到病房區，要穿過一條長長的連廊。\n和迪斯瑪尼亞其他醫院不同，河間醫院住著的大多是一些長期慢性疾病患者。那些病通常痛苦卻不致命，它們不會快速讓人們變成屍體，卻在漫長的時間裡讓他們變成醫生們口中的「瘋子」。\n從7歲開始，我就在那條連廊上奔忙。由於我的手腳很勤快，比大多數索拉成年護工都快得多，再加上我只要有口飯有地方睡就好，所以他們仁慈地允許我——一個頭上長著角的卑賤小女孩在他們的地盤工作。我的工作通常是搬運——從弄髒的被褥到病人打翻的碎玻璃，都由我來打掃清理，再搬到盥洗室或垃圾場。也常有護士順手讓我幫他們搬運藥劑。所以絕大多數時間內，我都抱著比人還高的紙箱在連廊上穿行，它們遮蔽了我的視線，因此我時不時撞上同樣行色匆忙的人，隨之而來的便是一頓劈頭蓋臉的辱罵。\n我曾在廣場上聽一位旅行的吟遊詩人抱怨海伯利亞人是所有阿特拉西亞人中最暴躁的。如果這是事實，那麼在我貧瘠的見識中，河間醫院的人們就是暴躁狂中的暴躁狂，從病人，到醫生和護士，再到探視他們的親人，無一例外。儘管隨著時間的推移我逐漸明白，是那些漫長而痛苦的疾病讓所有人變得歇斯底裡，我還是會在被辱罵一頓後，朝他們的背影狠狠比中指。\n達芙涅·塞奧多爾是唯一一個與我撞上後沒有罵我，反而向我道歉的人。我清楚地記得那是一個下午，我熟練地搬著一疊布墊打算送去盥洗室時，在連廊盡頭的拐角處撞上了一個人——似乎是一位年輕的金發女士——我手裡的布墊和那人手裡的鮮花都在瞬間飛到天上，再重重落下。於是我蹲在地上扯著嗓子大哭起來，嚎叫得和最疼的病人一樣響亮。事實上我並沒有摔疼，也沒有因為搞砸了工作有一丁點兒的悲傷，這只是我的小小計倆：每當我這樣哭嚎起來的時候，那些原本想要辱罵或者毆打我的大人就會像碰到了不乾淨的東西一樣，不再與我糾纏。\n但年輕的金發女士並沒有像我想象中那樣，丟下一句惡毒的咒罵便快步離開。她蹲下來，輕撫著我的後背，焦急地問我摔到了哪兒，痛不痛。那語氣似乎比我更慌張；見我沒有反應，她又換了更溫柔平緩的語氣，重複了一遍她的問題，但焦急仍從她輕微顫抖的手指傳來。\n我已經忘了我是如何回答她的——大概是對她說了「不痛」吧，否則她不會舒展開緊皺的眉頭，扶我起來，再和我一起撿起散落在地的布墊和花枝。\n「對不起。」她摸摸我的頭，「小妹妹，你喜歡什麼味的糖果？下次我帶些來給你，好嗎？」\n「草莓味。」我說。事實上我不應該要她的賠禮，因為我清楚地知道在那場相撞的「事故」中，沒有看清來人的是我。但我想起了我剛記事時，病榻上的母親念叨的最後一件事是，草莓硬糖放在櫥櫃的抽屜裡。但我打開櫥櫃的時候那裡什麼都沒有，後來我知道是我貪吃的哥哥把它們全拿走了。\n「草莓硬糖，我會記住。」金發女士說，抱起她的鮮花，朝著連廊的盡頭走去。她的個子中等偏高，很清瘦。下午的太陽照在她啞光的發卡上，暈出淡淡的金黃。\n我不知道她的名字，所以我在心中默默取了一個名字，草莓硬糖小姐。除了我的母親，沒有人再像草莓硬糖小姐那樣，問過我痛不痛。\n\n——蒂奧莉·斯通的日記",
           TextMapId = "UI_CHAR_DATA_TEXT_54010201"
         },
         UI_CHAR_DATA_TEXT_54010202 = {
-          ContentTC = "第二次遇到達芙涅·塞奧多爾時，我正在被一位年輕的護士瑪德琳辱罵。她像抓一隻小羊羔那樣抓著我的領子把我拎起來，在那之前我不知道她有如此驚人的臂力；彼時彼刻，她正在質問我，為什麼搬錯了她需要的藥劑。\n我不認識字，但我牢牢地記住了每一種藥品標籤上的文字是什麼圖形。更何況，我清楚地記得那種藥劑的顏色，那是一種新藥，雖然藍色的藥劑有很多，但只有那種藥劑是漂亮而澄澈的湛藍色，和月髓液是同樣的顏色。\n見我矢口否認自己的過失，瑪德琳護士掄圓了胳膊。我閉上眼，快速思考此時此刻是應該選擇沉默還是應該選擇大哭，哪個可以讓我少挨些耳光。但她的巴掌並沒有落下來，反而是揪著我衣領的那隻手先鬆開了。我睜開眼，她的巴掌被一隻纖細修長的手緊緊握住。\n草莓硬糖小姐。\n「抱歉，無意間聽到你們的爭執。女士，在責問這個卡戎小孩子前，可否讓我先看一下您的藥劑？」\n瑪德琳護士試圖甩開她，但草莓硬糖小姐消瘦的手似乎也有著不弱的力道，這讓她不得不嘟嘟囔囔著把藥劑瓶交給她。\n她拿出其中一瓶，搖晃了幾下，又打開木塞蓋子，輕輕嗅了嗅。\n「毫無疑問，這位小妹妹拿給您的藥劑準確無誤，它就是AP-1718。標籤上也好好地寫著，您不該在這個不識字的小孩子面前說謊。」\n「AP-1718不是這個顏色！是這小崽種調換了標籤！」瑪德琳護士尖聲，「她就是上次挨了教訓，就故意害我！」\n「煉金院最近改進了它的配方，所以新一批的藥劑性狀會與您記憶中的所有差異。女士，相比責怪無辜的孩子，我想……」她抬起頭，直視著護士冒著怒火的眼睛，「您應該把更多精力放在精進自己的工作上。」\n「什麼新配方，你一個病人家屬怎麼知道！」她漲紅了臉，「誰知道你是不是為了護著這個小崽子胡說八道！」\n「我當然知道，女士。」她說，「我叫達芙涅·塞奧多爾，AP-1718正是由我主導研發。這是佩劍煉金院的銘牌，想必您認得。」\n——蒂奧莉·斯通的日記",
+          ContentTC = "第二次遇到達芙涅・塞奧多爾時，我正在被一位年輕的護士瑪德琳辱罵。她像抓一隻小羊羔那樣抓著我的領子把我拎起來，在那之前我不知道她有如此驚人的臂力；彼時彼刻，她正在質問我，為什麼搬錯了她需要的藥劑。\n我不認識字，但我牢牢地記住了每一種藥品標籤上的文字是什麼圖形。更何況，我清楚地記得那種藥劑的顏色，那是一種新藥，雖然藍色的藥劑有很多，但只有那種藥劑是漂亮而澄澈的湛藍色，和月髓液是同樣的顏色。\n見我矢口否認自己的過失，瑪德琳護士掄圓了胳膊。我閉上眼，快速思考此時此刻是應該選擇沉默還是應該選擇大哭，哪個可以讓我少挨些耳光。但她的巴掌並沒有落下來，反而是揪著我衣領的那隻手先鬆開了。我睜開眼，她的巴掌被一隻纖細修長的手緊緊握住。\n草莓硬糖小姐。\n「抱歉，無意間聽到你們的爭執。女士，在責問這個卡戎小孩子前，可否讓我先看一下您的藥劑？」\n瑪德琳護士試圖甩開她，但草莓硬糖小姐消瘦的手似乎也有著不弱的力道，這讓她不得不嘟嘟囔囔著把藥劑瓶交給她。\n她拿出其中一瓶，搖晃了幾下，又打開木塞蓋子，輕輕嗅了嗅。\n「毫無疑問，這位小妹妹拿給您的藥劑準確無誤，它就是 AP-1718。標籤上也好好地寫著，您不該在這個不識字的小孩子面前說謊。」\n「AP-1718 不是這個顏色！是這小崽種調換了標籤！」 瑪德琳護士尖聲，「她就是上次挨了教訓，就故意害我！」\n「煉金院最近改進了它的配方，所以新一批的藥劑性狀會與您記憶中的所有差異。女士，相比責怪無辜的孩子，我想……」她抬起頭，直視著護士冒著怒火的眼睛，「您應該把更多精力放在精進自己的工作上。」\n「什麼新配方，你一個病人家屬怎麼知道！」她漲紅了臉，「誰知道你是不是為了護著這個小崽子胡說八道！」\n「我當然知道，女士。」她說，「我叫達芙涅・塞奧多爾，AP-1718 正是由我主導研發。這是佩劍煉金院的銘牌，想必您認得。」\n\n—— 蒂奧莉・斯通的日記",
           TextMapId = "UI_CHAR_DATA_TEXT_54010202"
         },
         UI_CHAR_DATA_TEXT_54010203 = {
-          ContentTC = "被達芙涅·塞奧多爾解圍的那一天，我一定開心壞了。從她手裡接過硬糖，我一邊撕開糖紙，連著拆了幾顆囫圇塞在嘴裡，一邊朝著瑪德琳訕訕離去的背影做著鬼臉。\n「你叫什麼名字？」我和達芙涅並肩坐在病房區樓下的長椅上，她這樣詢問。\n「蒂奧莉」。\n「你知道它怎麼寫嗎？」\n我搖頭。她撿起一根樹枝，在沙地上寫下幾個字。\n「這是你的名字。它的意思是『紫露花』。」\n在過去的大多數時間裡，我的名字總是和「崽種」、「下賤坯子」之類的詞聯繫在一起，我從未想過它會有如此好聽的含義。\n「紫露花小姐，我來教你寫字，好嗎？」她輕聲耳語。\n「為什麼要會寫字？」我茫然地問。卡戎之民大多只能從事體力活，並且我看起來並沒有任何有望成為桂冠卡戎的天分。我有這個自知之明。\n「今天那樣的事情，如果你識字，興許就不會發生。」達芙涅輕輕笑起來，「知識是一種力量，是保護我們的武器。」\n我茫然地搖搖頭，又重重地點點頭。那時的我不明白她話語中的含義，但如果那是她的建議，我無法拒絕。\n那個下午，達芙涅·塞奧多爾帶我學了整個字母表，我用歪歪扭扭的字跡把它們抄在她送給我的小冊子上。臨走前，我躊躇著開口，喊了她的名字。\n「塞奧多爾小姐，」我說，「我記得，您說您是一名『煉金術師』。」\n「是的。」\n「煉金術是什麼？」\n「是一種可以讓人們變得更加幸福的學問。」\n說這句話的時候，她的眼神突然變了。一定有某種火焰在她的瞳孔中燃燒，她的眼睛才會變得這樣明亮。\n「那麼，『煉金院』就是研究『煉金術』的嘍。」\n「……是的。」\n「如果我好好學寫字，」我問，「我也可以去煉金院，和塞奧多爾小姐一起嗎？」\n我一向有自知之明，也懂得察言觀色。就算不問，從剛才護士的反應我也能猜到，煉金院應該是一個很氣派、很高不可攀的地方。但是那一刻，達芙涅眼中的火焰讓我恍惚中覺得，我也可以有走向那束火焰的權利。\n但和我想的完全不一樣——達芙涅眼裡的火焰瞬間熄滅了。她的神色開始變得複雜，她別過臉去，不再和我對視。\n「不，蒂奧莉。」她說，「不要去那個地方。」\n「海伯利亞的煉金院走在了錯誤的道路上。」她輕聲，「它已經不再是我心中的那座巨塔。」\n——蒂奧莉·斯通的日記",
+          ContentTC = "被達芙涅・塞奧多爾解圍的那一天，我一定開心壞了。從她手裡接過硬糖，我一邊撕開糖紙，連著拆了幾顆囫圇塞在嘴裡，一邊朝著瑪德琳讪讪离去的背影做著鬼臉。\n「你叫什麼名字？」我和達芙涅併肩坐在病房區樓下的長椅上，她這樣詢問。\n「蒂奧莉」。\n「你知道它怎麼寫嗎？」\n我搖頭。她撿起一根樹枝，在沙地上寫下幾個字。\n「這是你的名字。它的意思是『紫露花』。」\n在過去的大多數時間裡，我的名字總是和「崽種」、「下賤坯子」之類的詞聯繫在一起，我從未想過它會有如此好聽的含義。\n「紫露花小姐，我來教你寫字，好嗎？」她輕聲耳語。\n「為什麼要會寫字？」我茫然地問。卡戎之民大多只能從事體力活，並且我看起來並沒有任何有望成為桂冠卡戎的天分。我有這個自知之明。\n「今天那樣的事情，如果你識字，或許就不會發生。」達芙涅輕輕笑起來，「知識是一種力量，是保護我們的武器。」\n我茫然地搖搖頭，又重重地點點頭。那時的我不明白她話語中的含義，但如果那是她的建議，我無法拒絕。\n那個下午，達芙涅・塞奧多爾帶我學了整個字母表，我用歪歪扭扭的字跡把它們抄在她送給我的小冊子上。臨走前，我踟躕著開口，喊了她的名字。\n「塞奧多爾小姐，」我說，「我記得，您說您是一名『煉金術師』。」\n「是的。」\n「煉金術是什麼？」\n「是一種可以讓人們變得更加幸福的學問。」\n說這句話的時候，她的眼神突然變了。一定有某種火焰在她的瞳孔中燃燒，她的眼睛才會變得這樣明亮。\n「那麼，『煉金院』就是研究『煉金術』的嘍。」\n「…… 是的。」\n「如果我好好學寫字，」我問，「我也可以去煉金院，和塞奧多爾小姐一起嗎？」\n我一向有自知之明，也懂得察言觀色。就算不問，從剛才護士的反應我也能猜到，煉金院應該是一個很氣派、很高不可攀的地方。但是那一刻，達芙涅眼中的火焰讓我恍惚中覺得，我也可以有走向那束火焰的權利。\n但和我想的完全不一樣 —— 達芙涅眼裡的火焰瞬間熄滅了。她的神色開始變得複雜，她別過臉去，不再和我對視。\n「不，蒂奧莉。」她說，「不要去那個地方。」\n「海伯利亞的煉金院走在了錯誤的道路上。」她輕聲，「它已經不再是我心中的那座巨塔。」\n\n—— 蒂奧莉・斯通的日記",
           TextMapId = "UI_CHAR_DATA_TEXT_54010203"
         },
         UI_CHAR_DATA_TEXT_54010204 = {
-          ContentTC = "在我把達芙涅送我的筆記本寫滿後，我終於又在河間醫院看到了她。\n我相信她一定會來。\n上次見面的時候，我拜託她去煉金院打聽一個叫加里·斯通的男人。我聲淚俱下告訴她，加里是我的兄長，我在這個世界上唯一的親人。我已經很久沒有他的消息了，最後一次聽到他的消息是他去了煉金院。\n如我設想的那樣，達芙涅一口便答應了。\n事實上，我告訴她的話大部分都是真的，只有一點我說了謊，那就是我一丁點兒也不思念加里·斯通。他是我的哥哥，但並不是所有兄弟姐妹必然相親相愛。在我只到他大腿的身高時，加里就會狠狠地卡住我的脖子，直到我快要憋到沒氣時才放開，僅僅因為我偷吃了一份「他的」食物。\n我毫不關心加里的下落，但我希望再次見到達芙涅。我想，達芙涅定然是在一個非常幸福的家庭裡長大的吧，所以才會聽到我說出加里是我兄長時，立即判定他是對我極為重要的人。\n達芙涅來了，帶著加里·斯通的消息。\n這一次她看起來很憔悴，眼底的黑眼圈清晰可見，似乎還有淺淺的淚痕。\n我看到她在連廊的另一頭反复踱步了很久才朝這邊走來，我猜測她帶來的一定是一個很壞的消息。那麼，她是在猶豫嗎？是在猶豫要不要把這個很壞的消息告訴我？還是在猶豫怎麼告訴我？\n「蒂奧莉，」她蹲下來，雙手緊握住我的肩膀，「我打聽到了你哥哥的消息。請你……請你答應我，一定要撐住，好嗎？」\n——噢，她選擇直接告訴我一切。也許是因為她不擅長說謊，又或者她認為即使是一個小孩子也理應知道真相。\n「加里·斯通不會回來了。」達芙涅說，聲音喑啞，「他捲入了一場煉金術師的事故。」\n我的內心毫無波瀾，但仍有一些疑問。我並不關心加里，但我想知道我們這些「渣滓」可能的種種末路。\n「……事故？有人被殺掉了嗎？」\n「是的。」\n「兇手是那個煉金術師？」\n「不是。」\n「兇手是加里？」\n「……也不是。」\n「那兇手是誰？」\n「是一個看不見的幽靈，又或者是我們每一個人。」\n我搖搖頭，我不理解。\n「那麼，塞奧多爾小姐，」我問，「我有一天也會像加里一樣死掉嗎？」\n「如果有一天我認識的詞夠多，多到我把您送給我的那些書全都看懂，多到我也學會了『煉金術』，就可以不像哥哥那樣了嗎？」\n「我很想告訴你『是的』，曾經我也是這麼認為，因為我身邊有很多像你一樣的人借助知識攀登到頂峰。」達芙涅輕輕撫摸著我頭上的角，「但現在，我看到更多人還沒有爬上去便墜入山崖，摔得粉身碎骨。他們比爬上去的人多得多。」\n「只有一件事，蒂奧莉，你必須記住。」達芙涅一字一句地說，「遠離煉金院。即使是你愛上了煉金術，也不要靠近煉金院。」\n我鄭重地點了點頭。\n達芙涅站起身，取出隨身攜帶的筆記本，撕下一張白紙。我以為她又要寫些什麼，但她只是將白紙疊成了一隻小船。\n「我聽說卡戎之民的信仰裡，所有人的靈魂都與水相連。把你想說的話告訴這隻小船，然後把它放在絮語河裡吧，它會載著你的思念，去到你哥哥那裡。」\n我手捧著紙折的小船，目送著她的背影離去。那之後，很長的一段時間裡，我都沒有再見到達芙涅。\n終於有一天，當一位煉金院的工作人員來向河間醫院運送藥劑時，我鼓起勇氣問他，達芙涅·塞奧多爾去了哪兒，她為什麼不再來了。\n那個工作人員說，她上了戰場。戰場本就是一個可能有去無回的地方。所以，她也許再也不會回來了。\n我手中攥著的草莓硬糖盒子一下子掉在地上。\n——蒂奧莉·斯通的日記",
+          ContentTC = "在我把達芙涅送我的筆記本寫滿後，我終於又在河間醫院看到了她。\n我相信她一定會來。\n上次見面的時候，我拜託她去煉金院打聽一個叫加里・斯通的男人。我聲淚俱下告訴她，加里是我的兄長，我在這個世界上唯一的親人。我已經很久沒有他的消息了，最後一次聽到他的消息是他去了煉金院。\n如我設想的那樣，達芙涅一口便答應了。\n事實上，我告訴她的話大部分都是真的，只有一點我說了謊，那就是我一丁點兒也不思念加里・斯通。他是我的哥哥，但並不是所有兄弟姐妹必然相親相愛。在我只到他大腿的身高時，加里就會狠狠地卡住我的脖子，直到我快要憋到沒氣時才放開，僅僅因為我偷吃了一份「他的」食物。\n我毫不關心加里的下落，但我希望再次見到達芙涅。我想，達芙涅定然是在一個非常幸福的家庭裡長大的吧，所以才會聽到我說出加里是我兄長時，立即判定他是對我極為重要的人。\n\n達芙涅來了，帶著加里・斯通的消息。\n這一次她看起來很憔悴，眼底的黑眼圈清晰可見，似乎還有淺淺的淚痕。\n我看到她在連廊的另一頭反覆踱步了很久才朝這邊走來，我猜測她帶來的一定是一個很壞的消息。那麼，她是在猶豫嗎？是在猶豫要不要把這個很壞的消息告訴我？還是在猶豫怎麼告訴我？\n「蒂奧莉，」她蹲下來，雙手緊握住我的肩膀，「我打聽到了你哥哥的消息。請你…… 請你答應我，一定要撐住，好嗎？」\n—— 噢，她選擇直接告訴我一切。也許是因為她不善於說謊，又或者她認為即使是一個小孩子也理應知道真相。\n「加里・斯通不會回來了。」 達芙涅說，聲音喑啞，「他捲入了一場煉金術師的事故。」\n我的內心毫無波瀾，但仍有一些疑問。我並不關心加里，但我想知道我們這些「渣滓」可能的種種末路。\n「…… 事故？有人被殺掉了嗎？」\n「是的。」\n「凶手是那個煉金術師？」\n「不是。」\n「凶手是加里？」\n「…… 也不是。」\n「那凶手是誰？」\n「是一個看不見的幽靈，又或者是我們每一個人。」\n我搖搖頭，我不理解。\n「那麼，塞奧多爾小姐，」我問，「我有一天也會像加里一樣死掉嗎？」\n「如果有一天我認識的詞夠多，多到我把您送給我的那些書全都看懂，多到我也學會了『煉金術』，就可以不像哥哥那樣了嗎？」\n「我很想告訴你『是的』，曾經我也是這麼認為，因為我身邊有很多像你一樣的人藉助知識攀登到頂峰。」達芙涅輕輕撫摸著我頭上的角， 「但現在，我看到更多人還沒有爬上去便墜入山崖，摔得粉身碎骨。他們比爬上去的人多得多。」\n「只有一件事，蒂奧莉，你必須記住。」達芙涅一字一句地說，「遠離煉金院。即使是你愛上了煉金術，也不要靠近煉金院。」\n我鄭重地點了點頭。\n達芙涅站起身，取出隨身攜帶的筆記本，撕下一張白紙。我以為她又要寫些什麼，但她只是將白紙疊成了一隻小船。\n「我聽說卡戎之民的信仰裡，所有人的靈魂都與水相連。把你想說的話告訴這隻小船，然後把它放在絮語河裡吧，它會載著你的思念，去到你哥哥那裡。」\n我手捧著紙折的小船，目送著她的背影离去。那之後，很長的一段時間裡，我都沒有再見到達芙涅。\n終於有一天，當一位煉金院的工作人員來向河間醫院運送藥劑時，我鼓起勇氣問他，達芙涅・塞奧多爾去了哪兒，她為什麼不再來了。\n那個工作人員說，她上了戰場。戰場本就是一個可能有去無回的地方。所以，她也許再也不會回來了。\n我手中攥著的草莓硬糖盒子一下子掉在地上。\n\n—— 蒂奧莉・斯通的日記",
           TextMapId = "UI_CHAR_DATA_TEXT_54010204"
         },
         UI_CHAR_DATA_TEXT_54010205 = {
-          ContentTC = "在我已經可以看懂簡單的報紙的時候，達芙涅回來了。\n她依舊抱著一束花，只是這次的她變得比上次更消瘦、更憔悴，彷彿風一吹，就要像紙片兒一樣飄進絮語河了似的。\n她從連廊盡頭走來，連廊的人突然都停止了交談，一起掃視著她，那目光裡包含著憎恨、嫌惡、嫉妒、恐懼……很快，我聽到有人尖利地笑了一聲，從嗓子尖裡擠出一聲「叛徒」。很快便紛紛有人附和。\n噢，是這樣的。幾天前，我就在護士們的閒言中聽說，達芙涅·塞奧多爾疑似在一場戰爭中叛變了。\n——但是，那又如何呢？\n如果一個國度讓達芙涅·塞奧多爾這樣的人選擇背叛，那也一定是這個國度的錯。\n面對人們的污言穢語，達芙涅沒有任何回應，她甚至沒有看他們一眼，只是依舊挺直著瘦削的脊背，徑直向病房區走來。\n「加斯頓先生好些了嗎？」她問當值的護士。\n「如果您指的是羅傑·加斯頓先生，」護士說，「他已經死了。就在不久前，又一次疼痛發作後，他趁護士不在時摔碎了玻璃杯，割斷了自己的動脈。」\n「可是我已經托人送來了可以治好他的藥劑！」我頭一次見達芙涅如此失態，她絕望地叫喊出聲，「難道AG-1899沒有藥效嗎？」\n「您晚了一步，他就是在藥劑送到的前一晚自殺的。」護士淡淡地說，嘴角牽出一絲嘲諷的笑，「不過我想，加斯頓先生是一名光榮的老兵，就算他那天沒自殺，聽聞您在龍莎要塞的『壯舉』後，也不會敢用您的藥劑的。」\n達芙涅的面孔變得更加蒼白，她的拇指深深嵌入食指的皮肉。「不！我沒有……」她似乎想辯解什麼，但終究什麼也沒說。\n我拉住她的手，把她的指甲掰開。她的手那樣冰涼，像太平間裡的屍體。\n「塞奧多爾小姐……不，達芙涅姐姐。」我第一次那樣喊她的名字，幾乎是拖著她，來到樓下的長椅。那是她曾教我寫字的地方。\n我學著她的樣子，折下一根樹枝，在地上歪歪扭扭地寫了一行字。\n「不要難過了」。\n然後我牽過她的手，把一件東西放在了她的手裡，那是一隻紙折的小船。\n「把你想說的話告訴這隻小船，然後把它放在絮語河裡吧，它會載著你的思念，去到你爸爸那裡。」\n聽到「你爸爸」時，達芙涅似是吃了一驚，而後，驚訝在她碧綠的眼睛裡暈開，化作淺淺的微笑。\n「謝謝你，蒂奧莉。」她說，「我會這麼做的。」她突然想到了什麼，打開背包，翻出幾本書，放進我懷裡。原來她還記得我上次對她說過，我想看更多書。在長椅上坐了片刻，她就站起身，在朱紅色的夕陽中走去了。\n在我能看懂所有報紙後，達芙涅·塞奧多爾沒有回來。\n在我把達芙涅送我的硬糖盒子圖案都摩挲掉後，達芙涅·塞奧多爾沒有回來。\n在我抱著的布墊已經不再能夠遮住我的視線後，達芙涅·塞奧多爾沒有回來。\n在我能看懂最複雜的煉金術書籍後，達芙涅·塞奧多爾沒有回來。\n在我已經可以從紫露花中萃取藥劑後，達芙涅·塞奧多爾沒有回來。\n在我攢夠了錢，可以離開海伯利亞前往伊瑟爾讀書後，達芙涅·塞奧多爾沒有回來。\n——是的，她探視的親人已經離世，她本就不該回來了。\n我在黃昏中站在連廊的這一段揮手，告別這座我生活和工作了近二十年的醫院。這一天的黃昏是漂亮的朱紅色，和我最後一次見到達芙涅時一樣。\n突然，我看到一個身影從連廊的那一側走來，那似乎是一個年輕而消瘦的金髮女孩。我手中的手提箱一下子落在地上。但當我撿起手提箱，再次朝連廊的盡頭望去，那兒什麼都沒有。\n「你剛才有沒有看到一個年輕女孩？」我問瑪德琳護士，「高高的，瘦瘦的，金色的頭髮……」\n「哪有什麼金髮女孩？」瑪德琳護士嘟囔了兩聲，「你一個年輕人怎麼比我這個老太婆眼神還差。」\n「噢，是我看錯了。」\n我拎著手提箱走下樓，不再回望。\n——蒂奧莉·斯通的日記",
+          ContentTC = "在我已經可以看懂簡單的報紙的時候，達芙涅回來了。\n她依舊抱著一束花，只是這次的她變得比上次更消瘦、更憔悴，彷彿風一吹，就要像紙片兒一樣飄進絮語河了似的。\n她從連廊盡頭走來，連廊的人突然都停止了交談，一起掃視著她，那目光裡包含著憎恨、嫌惡、嫉妒、恐懼…… 很快，我聽到有人尖利地笑了一聲，從嗓子尖裡擠出一聲「叛徒」。很快便紛紛有人附和。\n噢，是這樣的。幾天前，我就在護士們的閒言中聽說，達芙涅・塞奧多爾疑似在一場戰爭中叛變了。\n—— 但是，那又如何呢？\n如果一個國度讓達芙涅・塞奧多爾這樣的人選擇背叛，那也一定是這個國度的錯。\n\n面對人們的污言穢語，達芙涅沒有任何回應，她甚至沒有看他們一眼，只是依舊挺直著瘦削的脊背，徑直向病房區走來。\n「加斯顿先生好些了嗎？」她問當值的護士。\n「如果您指的是羅傑・加斯顿先生，」護士說，「他已經死了。就在不久前，又一次疼痛發作後，他趁護士不在時摔碎了玻璃杯，割斷了自己的動脈。」\n「可是我已經託人送來了可以治好他的藥劑！」我頭一次見達芙涅如此失態，她絕望地叫喊出聲，「難道 AG-1899 沒有藥效嗎？」\n「您晚了一步，他就是在藥劑送到的前一晚自殺的。」護士淡淡地說，嘴角牽出一絲嘲諷的笑，「不過我想，加斯顿先生是一名光榮的老兵，就算他那天沒自殺，聽聞您在龍莎要塞的『壯舉』後，也不會敢用您的藥劑的。」\n達芙涅的面孔變得更加蒼白，她的拇指深深嵌入食指的皮肉。「不！我沒有……」她似乎想辯解什麼，但終究什麼也沒說。\n我拉住她的手，把她的指甲掰開。她的手那樣冰涼，像太平間裡的屍體。\n「塞奧多爾小姐…… 不，達芙涅姐姐。」我第一次那樣喊她的名字，幾乎是拖著她，來到樓下的長椅。那是她曾教我寫字的地方。\n我學著她的樣子，折下一根樹枝，在地上歪歪扭扭地寫了一行字。\n「不要難過了」。\n然後我牽過她的手，把一件東西放在了她的手裡，那是一隻紙折的小船。\n「把你想說的話告訴這隻小船，然後把它放在絮語河裡吧，它會載著你的思念，去到你爸爸那裡。」\n聽到「你爸爸」時，達芙涅似是吃了一驚，而後，驚訝在她碧綠的眼睛裡暈開，化作淺淺的微笑。\n「謝謝你，蒂奧莉。」她說，「我會這麼做的。」她突然想到了什麼，打開背包，翻出幾本書，放進我懷裡。原來她還記得我上次對她說過，我想看更多書。在長椅上坐了片刻，她就站起身，在朱紅色的夕陽中走去了。\n\n在我能看懂所有報紙後，達芙涅・塞奧多爾沒有回來。\n在我把達芙涅送我的硬糖盒子圖案都摩挲掉後，達芙涅・塞奧多爾沒有回來。\n在我抱著的布墊已經不再能夠遮住我的視線後，達芙涅・塞奧多爾沒有回來。\n在我能看懂最複雜的煉金術書籍後，達芙涅・塞奧多爾沒有回來。\n在我已經可以從紫露花中萃取藥劑後，達芙涅・塞奧多爾沒有回來。\n在我攢夠了錢，可以離開海伯利亞前往伊瑟爾讀書後，達芙涅・塞奧多爾沒有回來。\n—— 是的，她探視的親人已經離世，她本就不該回來了。\n我在黃昏中站在連廊的這一段揮手，告別這座我生活和工作了近二十年的醫院。這一天的黃昏是漂亮的朱紅色，和我最後一次見到達芙涅時一樣。\n突然，我看到一個身影從連廊的那一側走來，那似乎是一個年輕而消瘦的金髮女孩。我手中的手提箱一下子掉在地上。但當我撿起手提箱，再次朝連廊的盡頭望去，那兒什麼都沒有。\n「你剛才有沒有看到一個年輕女孩？」我問瑪德琳護士，「高高的，瘦瘦的，金色的頭髮……」\n「哪有什麼金髮女孩？」瑪德琳護士嘟囔了兩聲，「你一個年輕人怎麼比我這個老太婆眼神還差。」\n「噢，是我看錯了。」\n我拎著手提箱走下樓，不再回望。\n\n—— 蒂奧莉・斯通的日記",
           TextMapId = "UI_CHAR_DATA_TEXT_54010205"
         },
         UI_CHAR_DATA_TEXT_54010301 = {
@@ -51709,62 +51513,6 @@ local Data = {
         UI_CHAR_DATA_TEXT_54010405 = {
           ContentTC = "達芙涅做了一個漫長的夢。\n在夢中，她走過迪斯瑪尼亞的街道，這裡的天氣依舊潮濕黏膩。雨滴沿著石像鬼的嘴角滑落，在牆體上勾勒出深褐色紋路。\n路兩邊站著很多熟悉的人影，他們都撐著長柄傘。\n\n「煉金術是給人們帶來幸福的學問。」老婦人說。\n「達芙涅，你會成為我的驕傲。」神采飛揚的女人說。\n「但我只希望你快樂就好。」笑容可掬的男人說。\n她想走得近些，以確認他們是不是自己記憶中的容顏。但他們的五官像是被雨水浸濕一般，氤氲模糊，看不真切。\n\n「那些被疼痛折磨的人，會因為我們而變得好過一些嗎？」年輕的研究員問。\n「如果有一天我認識的詞夠多，多到我也學會了『煉金術』，我就可以不像哥哥那樣了嗎？」穿著醫院制服的小女孩問。\n「迪斯瑪尼亞太遠了，雨那麼急，路上滿是泥濘，我們還能回去嗎？」瀕死的士兵問。\n她張張嘴，想做出肯定的回答。但她哽住了，聲帶似是被扯斷一般，她無法再說下去。\n\n「你的理想依舊在嗎？」軍團長的視線自高處垂落。\n那視線灼痛了她的雙眼，她本能地想逃，但回過頭，腳下却是一道深不見底的溝渠。\n「戰鬥下去，活下去。」銀髮紅瞳的戰友扶住她的肩膀，「記得你說過的話。」\n是的…… 一起活下去。那是她曾經的渴求。\n\n「達芙涅，你還記得兒時的理想麼？」小女孩從街角走出來，她聲音稚嫩，眉眼和自己如此相似 —— 是了，那便是兒時的自己。\n「以煉金術，為人們帶來幸福。」她回答，「我從來不曾忘記。」\n「但是，所有理想都標註著價格。」又一個聲音從背後響起。那同樣是她自己的聲音，但确是從未有過的冰冷，「想要得到什麼，就必須要捨棄什麼。達芙涅，理想也是強者的特權。」\n「那我要怎麼辦呢？」達芙涅問。\n「拋去你的原則和伪善，到他們之中去，成為他們的一員。」冰冷的聲音說。\n「不行！與野獸做朋友的人如何防止自己也變成野獸？」稚嫩的聲音說。\n「站在足夠高的位置，你才有權力改變一切。」冰冷的聲音說。\n「如果踏出了這一步，你就無法再回頭！」稚嫩的聲音說。\n她們喋喋不休地爭吵著。達芙涅頭疼欲裂，她覺得自己要被撕裂成兩半了。她蹲下身去，雙手抱住頭。漸漸地，那些聲音弱了下去，直到最後一絲天光消失在迪斯瑪尼亞的天穹。\n\n達芙涅・塞奧多爾在自己的臥室醒來。雨停了，陽光照射在窗外的常春藤葉上。\n「小姐，有人找您。」女僕敲開了她的門，「是軍團那邊的。似乎…… 沒有惡意。」\n於是達芙涅披上外套，走入庭院。一個軍官模樣的人正站在庭院中。她認出，那是西比爾・梅森的副官。\n「塞奧多爾小姐，西比爾大人命我前來邀請您參加一項計劃 —— 如果您有興趣。」\n「計劃的名字是 ——『第二新枝』。」",
           TextMapId = "UI_CHAR_DATA_TEXT_54010405"
-        },
-        UI_CHAR_DATA_UNLOCK_20 = {
-          ContentTC = "角色等級達到20級",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_20"
-        },
-        UI_CHAR_DATA_UNLOCK_30 = {
-          ContentTC = "角色等級達到30級",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_30"
-        },
-        UI_CHAR_DATA_UNLOCK_40 = {
-          ContentTC = "角色等級達到40級",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_40"
-        },
-        UI_CHAR_DATA_UNLOCK_50 = {
-          ContentTC = "角色等級達到50級",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_50"
-        },
-        UI_CHAR_DATA_UNLOCK_60 = {
-          ContentTC = "角色等級達到60級",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_60"
-        },
-        UI_CHAR_DATA_UNLOCK_task01 = {
-          ContentTC = "角色等級達到50級\n完成任務：乘著輕柔的風",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task01"
-        },
-        UI_CHAR_DATA_UNLOCK_task02 = {
-          ContentTC = "角色等級達到60級\n完成任務：乘著輕柔的風",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task02"
-        },
-        UI_CHAR_DATA_UNLOCK_task03 = {
-          ContentTC = "角色等級達到50級\n完成任務：獻給一位少女的花束",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task03"
-        },
-        UI_CHAR_DATA_UNLOCK_task04 = {
-          ContentTC = "角色等級達到40級\n完成任務：獻給一位少女的花束",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task04"
-        },
-        UI_CHAR_DATA_UNLOCK_task05 = {
-          ContentTC = "角色等級達到40級\n完成任務：致無名者的安魂曲",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task05"
-        },
-        UI_CHAR_DATA_UNLOCK_task06 = {
-          ContentTC = "角色等級達到50級\n完成任務：致無名者的安魂曲",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task06"
-        },
-        UI_CHAR_DATA_UNLOCK_task07 = {
-          ContentTC = "角色等級達到60級\n完成任務：致無名者的安魂曲",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task07"
-        },
-        UI_CHAR_DATA_UNLOCK_task08 = {
-          ContentTC = "角色等級達到20級\n完成任務：致無名者的安魂曲",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task08"
-        },
-        UI_CHAR_DATA_UNLOCK_task09 = {
-          ContentTC = "角色等級達到30級\n完成任務：致無名者的安魂曲",
-          TextMapId = "UI_CHAR_DATA_UNLOCK_task09"
         },
         UI_CHAR_FORCE_1101 = {
           ContentTC = "無",
@@ -52149,15 +51897,7 @@ local Data = {
         UI_CMNpc_KnockDoor = {
           ContentTC = "敲門",
           TextMapId = "UI_CMNpc_KnockDoor"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CMNpc_Name_Adu",
-    MaxKey = "UI_COMMONPOP_TEXT_100076",
-    Loader = function()
-      return {
+        },
         UI_CMNpc_Name_Adu = {
           ContentTC = "阿杜諾",
           TextMapId = "UI_CMNpc_Name_Adu"
@@ -52409,7 +52149,15 @@ local Data = {
         UI_CMNpc_Name_Hesite = {
           ContentTC = "赫斯特",
           TextMapId = "UI_CMNpc_Name_Hesite"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMNpc_Name_Hotheart",
+    MaxKey = "UI_COMMONPOP_TITLE_100026",
+    Loader = function()
+      return {
         UI_CMNpc_Name_Hotheart = {
           ContentTC = "熱心腸的市民",
           TextMapId = "UI_CMNpc_Name_Hotheart"
@@ -52957,15 +52705,7 @@ local Data = {
         UI_COMMONPOP_TEXT_100076 = {
           ContentTC = "是否拉黑該用戶？",
           TextMapId = "UI_COMMONPOP_TEXT_100076"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_COMMONPOP_TEXT_100076_2",
-    MaxKey = "UI_CameraSystem_CameraAdjust",
-    Loader = function()
-      return {
+        },
         UI_COMMONPOP_TEXT_100076_2 = {
           ContentTC = "拉黑後將解除好友關系",
           TextMapId = "UI_COMMONPOP_TEXT_100076_2"
@@ -53217,7 +52957,15 @@ local Data = {
         UI_COMMONPOP_TITLE_100026 = {
           ContentTC = "暫停下載",
           TextMapId = "UI_COMMONPOP_TITLE_100026"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_COMMONPOP_TITLE_100027",
+    MaxKey = "UI_CharTrial_TrialGoal",
+    Loader = function()
+      return {
         UI_COMMONPOP_TITLE_100027 = {
           ContentTC = "次數不足",
           TextMapId = "UI_COMMONPOP_TITLE_100027"
@@ -53762,15 +53510,7 @@ local Data = {
         UI_CameraSystem_CameraAdjust = {
           ContentTC = "調整視角",
           TextMapId = "UI_CameraSystem_CameraAdjust"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CameraSystem_CameraFocalLength",
-    MaxKey = "UI_Chat_Send",
-    Loader = function()
-      return {
+        },
         UI_CameraSystem_CameraFocalLength = {
           ContentTC = "焦距",
           TextMapId = "UI_CameraSystem_CameraFocalLength"
@@ -54022,7 +53762,15 @@ local Data = {
         UI_CharTrial_TrialGoal = {
           ContentTC = "擊敗敵人",
           TextMapId = "UI_CharTrial_TrialGoal"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CharVoice_Battle",
+    MaxKey = "UI_DGNpc_Name_NPC_ZhiliuTake",
+    Loader = function()
+      return {
         UI_CharVoice_Battle = {
           ContentTC = "戰鬥",
           TextMapId = "UI_CharVoice_Battle"
@@ -54570,15 +54318,7 @@ local Data = {
         UI_Chat_Send = {
           ContentTC = "發送",
           TextMapId = "UI_Chat_Send"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Chat_SendMsg",
-    MaxKey = "UI_DUNGEON_TYPE_TRAINING",
-    Loader = function()
-      return {
+        },
         UI_Chat_SendMsg = {
           ContentTC = "發送消息",
           TextMapId = "UI_Chat_SendMsg"
@@ -54827,7 +54567,15 @@ local Data = {
         UI_DGNpc_Name_NPC_ZhiliuTake = {
           ContentTC = "止流",
           TextMapId = "UI_DGNpc_Name_NPC_ZhiliuTake"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DGNpc_Name_ScalperBoy",
+    MaxKey = "UI_Disabled_Des_Temple",
+    Loader = function()
+      return {
         UI_DGNpc_Name_ScalperBoy = {
           ContentTC = "疑似黃牛的男孩",
           TextMapId = "UI_DGNpc_Name_ScalperBoy"
@@ -55368,22 +55116,10 @@ local Data = {
           ContentTC = "競逐",
           TextMapId = "UI_DUNGEON_TYPE_SYNTHESIS"
         },
-        UI_DUNGEON_TYPE_TESTING = {
-          ContentTC = "驅離",
-          TextMapId = "UI_DUNGEON_TYPE_TESTING"
-        },
         UI_DUNGEON_TYPE_TRAINING = {
           ContentTC = "沙海冥想",
           TextMapId = "UI_DUNGEON_TYPE_TRAINING"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_WARDEN",
-    MaxKey = "UI_Dye_Compare",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_WARDEN = {
           ContentTC = "巡邏單位",
           TextMapId = "UI_DUNGEON_WARDEN"
@@ -55639,7 +55375,15 @@ local Data = {
         UI_Disabled_Des_Temple = {
           ContentTC = "靈鳥試煉暫不可用",
           TextMapId = "UI_Disabled_Des_Temple"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Disabled_Des_WalnutBag",
+    MaxKey = "UI_Enter_Topic",
+    Loader = function()
+      return {
         UI_Disabled_Des_WalnutBag = {
           ContentTC = "委託密函暫不可用",
           TextMapId = "UI_Disabled_Des_WalnutBag"
@@ -56183,15 +55927,7 @@ local Data = {
         UI_Dye_Compare = {
           ContentTC = "對比",
           TextMapId = "UI_Dye_Compare"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Dye_Default",
-    MaxKey = "UI_Fishing_FishEscape",
-    Loader = function()
-      return {
+        },
         UI_Dye_Default = {
           ContentTC = "默認顏色",
           TextMapId = "UI_Dye_Default"
@@ -56329,7 +56065,7 @@ local Data = {
           TextMapId = "UI_EVENT_FEINA_LeftCheck"
         },
         UI_EVENT_FEINA_RightClick = {
-          ContentTC = "按下遠程攻擊鍵，使用繪夢顏料為童話世界上色",
+          ContentTC = "nan",
           TextMapId = "UI_EVENT_FEINA_RightClick"
         },
         UI_EXPLORE_BOX_1 = {
@@ -56447,7 +56183,15 @@ local Data = {
         UI_Enter_Topic = {
           ContentTC = "停駐光陰",
           TextMapId = "UI_Enter_Topic"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Entertainment_Minigame",
+    MaxKey = "UI_Friend_RemarkInputHint",
+    Loader = function()
+      return {
         UI_Entertainment_Minigame = {
           ContentTC = "兔子洞",
           TextMapId = "UI_Entertainment_Minigame"
@@ -56645,7 +56389,7 @@ local Data = {
           TextMapId = "UI_Event_MidTerm_RepeatTask"
         },
         UI_Event_MidTerm_Rule = {
-          ContentTC = "1、完成打打打打打劫皎皎準備的常規博弈獲取皎皎積分。\n\n每天服務器日期更新時，根據皎皎積分結算皎皎珍藏，皎皎積分上限之外的超額積分將按照一定比例轉化為銅幣\n\n2、每日博弈將在每天服務器日期更新時刷新<highlight>4</>個，結算前一天的皎皎珍藏後，將開啟新的每日博弈；重複博弈可以多次完成，且重複博弈的進度不會隨著服務器日期更新而重置\n\n3、完成挑戰博弈可以獲得挑戰積分，用於獲得打打打打打劫皎皎的挑戰珍藏\n\n4、挑戰博弈分為<highlight>2</>個階段，打打打打打劫皎皎將會在2025年11月7日絞盡腦汁想出來新的博弈",
+          ContentTC = "1、完成打打打打打劫皎皎準備的常規博弈獲取皎皎積分。_x000D_\n 每天服務器日期更新時，根據皎皎積分結算皎皎珍藏，皎皎積分上限之外的超額積分將按照一定比例轉化為銅幣_x000D_\n 2、每日博弈將在每天服務器日期更新時刷新<highlight>4</>個，結算前一天的皎皎珍藏後，將開啟新的每日博弈；重複博弈可以多次完成，且重複博弈的進度不會隨著服務器日期更新而重置_x000D_\n 3、完成挑戰博弈可以獲得挑戰積分，用於獲得打打打打打劫皎皎的挑戰珍藏_x000D_\n 4、挑戰博弈分為<highlight>2</>個階段，打打打打打劫皎皎將會在2025年11月7日絞盡腦汁想出來新的博弈",
           TextMapId = "UI_Event_MidTerm_Rule"
         },
         UI_Event_MidTerm_Settled = {
@@ -56988,15 +56732,7 @@ local Data = {
         UI_Fishing_FishEscape = {
           ContentTC = "魚溜了……",
           TextMapId = "UI_Fishing_FishEscape"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Fishing_FishType_2",
-    MaxKey = "UI_HeadFrame_Des_10007",
-    Loader = function()
-      return {
+        },
         UI_Fishing_FishType_2 = {
           ContentTC = "異種",
           TextMapId = "UI_Fishing_FishType_2"
@@ -57252,7 +56988,15 @@ local Data = {
         UI_Friend_RemarkInputHint = {
           ContentTC = "請輸入好友備註",
           TextMapId = "UI_Friend_RemarkInputHint"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Friend_Remove",
+    MaxKey = "UI_Interact_Player",
+    Loader = function()
+      return {
         UI_Friend_Remove = {
           ContentTC = "移除好友",
           TextMapId = "UI_Friend_Remove"
@@ -57796,15 +57540,7 @@ local Data = {
         UI_HeadFrame_Des_10007 = {
           ContentTC = "我的聰慧與洞察。",
           TextMapId = "UI_HeadFrame_Des_10007"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_HeadFrame_Des_10008",
-    MaxKey = "UI_Locked_Des_Invite",
-    Loader = function()
-      return {
+        },
         UI_HeadFrame_Des_10008 = {
           ContentTC = "我的品格與原則。",
           TextMapId = "UI_HeadFrame_Des_10008"
@@ -57838,7 +57574,7 @@ local Data = {
           TextMapId = "UI_HeadFrame_Des_10015"
         },
         UI_HeadFrame_Des_10016 = {
-          ContentTC = "用羽毛寫下，夢想與希望。",
+          ContentTC = "nan",
           TextMapId = "UI_HeadFrame_Des_10016"
         },
         UI_HeadFrame_Frame = {
@@ -57910,7 +57646,7 @@ local Data = {
           TextMapId = "UI_HeadFrame_Name_10015"
         },
         UI_HeadFrame_Name_10016 = {
-          ContentTC = "白羽毛",
+          ContentTC = "nan",
           TextMapId = "UI_HeadFrame_Name_10016"
         },
         UI_HeadFrame_None = {
@@ -58060,7 +57796,15 @@ local Data = {
         UI_Interact_Player = {
           ContentTC = "與%s交互",
           TextMapId = "UI_Interact_Player"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Interact_Test",
+    MaxKey = "UI_MECHANISM_10440",
+    Loader = function()
+      return {
         UI_Interact_Test = {
           ContentTC = "交互測試",
           TextMapId = "UI_Interact_Test"
@@ -58367,23 +58111,23 @@ local Data = {
           TextMapId = "UI_Language_Text_CN"
         },
         UI_Language_Text_DE = {
-          ContentTC = "Deutsch（德文）",
+          ContentTC = "Deutsch（德語）",
           TextMapId = "UI_Language_Text_DE"
         },
         UI_Language_Text_EN = {
-          ContentTC = "English（英文）",
+          ContentTC = "English（英語）",
           TextMapId = "UI_Language_Text_EN"
         },
         UI_Language_Text_ES = {
-          ContentTC = "Español（西班牙文）",
+          ContentTC = "Español（西班牙語）",
           TextMapId = "UI_Language_Text_ES"
         },
         UI_Language_Text_FR = {
-          ContentTC = "Français（法文）",
+          ContentTC = "Français（法語）",
           TextMapId = "UI_Language_Text_FR"
         },
         UI_Language_Text_JP = {
-          ContentTC = "日本語（日文）",
+          ContentTC = "日本語（日語）",
           TextMapId = "UI_Language_Text_JP"
         },
         UI_Language_Text_KR = {
@@ -58510,6 +58254,10 @@ local Data = {
           ContentTC = "在電子遊戲中會出現一些閃光或圖形的視覺影像,這可能會使極少數人出現癲癇癥狀,甚至不具備癲癇病史的人也有可能因此出現類似癲癇的癥狀。癲癇癥狀包括四肢抽搐暈眩昏厥、痙攣、肢體麻木、視力異常等等。如您或您的家人曾有癲癇病史或出現過類似癥狀,請一定要在進行遊戲前諮詢醫生。如您在遊戲過程中出現了類似癲癇癥狀,或者感到身體有些不適,請立即停止遊戲。如在短暫休息後,癥狀仍未有緩解,請您立即就醫並遵循醫囑進行診療。",
           TextMapId = "UI_Loading_Warn_Content"
         },
+        UI_Loading_Warn_Content_KR = {
+          ContentTC = "nan",
+          TextMapId = "UI_Loading_Warn_Content_KR"
+        },
         UI_Loading_Warn_Title = {
           ContentTC = "光敏性癲癇警告",
           TextMapId = "UI_Loading_Warn_Title"
@@ -58601,15 +58349,7 @@ local Data = {
         UI_Locked_Des_Invite = {
           ContentTC = "入駐暫未解鎖",
           TextMapId = "UI_Locked_Des_Invite"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Locked_Des_InviteTopic",
-    MaxKey = "UI_MiniGame_Hint_TiaoPin",
-    Loader = function()
-      return {
+        },
         UI_Locked_Des_InviteTopic = {
           ContentTC = "當前角色暫無可停駐光陰，敬請期待",
           TextMapId = "UI_Locked_Des_InviteTopic"
@@ -58861,7 +58601,15 @@ local Data = {
         UI_MECHANISM_10440 = {
           ContentTC = "發酵飲品",
           TextMapId = "UI_MECHANISM_10440"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_MECHANISM_10441",
+    MaxKey = "UI_Mod_EditPolarity",
+    Loader = function()
+      return {
         UI_MECHANISM_10441 = {
           ContentTC = "腳印",
           TextMapId = "UI_MECHANISM_10441"
@@ -59275,11 +59023,11 @@ local Data = {
           TextMapId = "UI_Mail_Delete_All"
         },
         UI_Mail_Delete_Confirm_1 = {
-          ContentTC = "信件刪除後未領取的獎勵將無法恢復，是否確認刪除？",
+          ContentTC = "郵件刪除後未領取的獎勵將無法恢復，是否確認刪除？",
           TextMapId = "UI_Mail_Delete_Confirm_1"
         },
         UI_Mail_Delete_Confirm_2 = {
-          ContentTC = "是否確認刪除所有已讀信件？（不包含星標信件和未領取獎勵的信件）",
+          ContentTC = "是否確認刪除所有已讀郵件？（不包含星標郵件和未領取獎勵的郵件）",
           TextMapId = "UI_Mail_Delete_Confirm_2"
         },
         UI_Mail_Delete_Success = {
@@ -59315,7 +59063,7 @@ local Data = {
           TextMapId = "UI_Mail_Tab_Star"
         },
         UI_Mail_Unstar_Confirm = {
-          ContentTC = "是否確認取消星標信件？（該星標信件將在每天更新時刪除）",
+          ContentTC = "是否確認取消星標郵件？（該星標郵件將在每天更新時刪除）",
           TextMapId = "UI_Mail_Unstar_Confirm"
         },
         UI_MainTitle_Archive = {
@@ -59409,15 +59157,7 @@ local Data = {
         UI_MiniGame_Hint_TiaoPin = {
           ContentTC = "點擊<img id=\"MiniGame_TiaoPin_L\"></><img id=\"MiniGame_TiaoPin_U\"></><img id=\"MiniGame_TiaoPin_R\"></><img id=\"MiniGame_TiaoPin_D\"></>移動<img id=\"MiniGame_TiaoPin_S\"></>至正確的<img id=\"MiniGame_TiaoPin_E\"></>",
           TextMapId = "UI_MiniGame_Hint_TiaoPin"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_MiniGame_Hint_ZhuanQuanQuan",
-    MaxKey = "UI_Name_Walnut_151911",
-    Loader = function()
-      return {
+        },
         UI_MiniGame_Hint_ZhuanQuanQuan = {
           ContentTC = "按下$點亮白色區域啟動機關",
           TextMapId = "UI_MiniGame_Hint_ZhuanQuanQuan"
@@ -59669,7 +59409,15 @@ local Data = {
         UI_Mod_EditPolarity = {
           ContentTC = "調整當前槽位趨向",
           TextMapId = "UI_Mod_EditPolarity"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Mod_EquipPreview",
+    MaxKey = "UI_Need_Preceding_Node",
+    Loader = function()
+      return {
         UI_Mod_EquipPreview = {
           ContentTC = "裝配後屬性",
           TextMapId = "UI_Mod_EquipPreview"
@@ -60211,15 +59959,7 @@ local Data = {
         UI_Name_Walnut_151911 = {
           ContentTC = "密函：審判者之虛妄獻祭",
           TextMapId = "UI_Name_Walnut_151911"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Name_Walnut_151921",
-    MaxKey = "UI_Npc_Name_Hunhun",
-    Loader = function()
-      return {
+        },
         UI_Name_Walnut_151921 = {
           ContentTC = "密函：巨鯨之水霧彌散",
           TextMapId = "UI_Name_Walnut_151921"
@@ -60471,7 +60211,15 @@ local Data = {
         UI_Need_Preceding_Node = {
           ContentTC = "需要點亮上一級節點",
           TextMapId = "UI_Need_Preceding_Node"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_NewWalnut_Unlock",
+    MaxKey = "UI_Npc_Name_PanTuokun",
+    Loader = function()
+      return {
         UI_NewWalnut_Unlock = {
           ContentTC = "新增委託密函",
           TextMapId = "UI_NewWalnut_Unlock"
@@ -60502,7 +60250,7 @@ local Data = {
         },
         UI_Npc_All = {ContentTC = "全員", TextMapId = "UI_Npc_All"},
         UI_Npc_Aside = {
-          ContentTC = "{空格}",
+          ContentTC = "ㅤ",
           TextMapId = "UI_Npc_Aside"
         },
         UI_Npc_AwaAndMe = {
@@ -61016,15 +60764,7 @@ local Data = {
         UI_Npc_Name_Hunhun = {
           ContentTC = "陰影中的聲音",
           TextMapId = "UI_Npc_Name_Hunhun"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_Hunhun1",
-    MaxKey = "UI_OPTION_ChildPrivacy",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_Hunhun1 = {
           ContentTC = "埋伏的無賴",
           TextMapId = "UI_Npc_Name_Hunhun1"
@@ -61276,7 +61016,15 @@ local Data = {
         UI_Npc_Name_PanTuokun = {
           ContentTC = "脫困的魔靈",
           TextMapId = "UI_Npc_Name_PanTuokun"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_Pan_Common",
+    MaxKey = "UI_OPTION_Language_Download_Pausing",
+    Loader = function()
+      return {
         UI_Npc_Name_Pan_Common = {
           ContentTC = "魔靈潘神",
           TextMapId = "UI_Npc_Name_Pan_Common"
@@ -61286,7 +61034,7 @@ local Data = {
           TextMapId = "UI_Npc_Name_Pan_Empty"
         },
         UI_Npc_Name_Pangbai = {
-          ContentTC = "{空格}",
+          ContentTC = "ㅤ",
           TextMapId = "UI_Npc_Name_Pangbai"
         },
         UI_Npc_Name_Paxi = {
@@ -61824,15 +61572,7 @@ local Data = {
         UI_OPTION_ChildPrivacy = {
           ContentTC = "兒童隱私保護協議",
           TextMapId = "UI_OPTION_ChildPrivacy"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_OPTION_ContentPerformance",
-    MaxKey = "UI_Option_Dropdown_8",
-    Loader = function()
-      return {
+        },
         UI_OPTION_ContentPerformance = {
           ContentTC = "遊戲內容性能",
           TextMapId = "UI_OPTION_ContentPerformance"
@@ -62084,7 +61824,15 @@ local Data = {
         UI_OPTION_Language_Download_Pausing = {
           ContentTC = "已暫停下載",
           TextMapId = "UI_OPTION_Language_Download_Pausing"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_OPTION_Language_Downloaded",
+    MaxKey = "UI_PersonInfo_Saved",
+    Loader = function()
+      return {
         UI_OPTION_Language_Downloaded = {
           ContentTC = "已下載",
           TextMapId = "UI_OPTION_Language_Downloaded"
@@ -62632,15 +62380,7 @@ local Data = {
         UI_Option_Dropdown_8 = {
           ContentTC = "0.9",
           TextMapId = "UI_Option_Dropdown_8"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Option_Dropdown_9",
-    MaxKey = "UI_Preview_SwitchtoInit",
-    Loader = function()
-      return {
+        },
         UI_Option_Dropdown_9 = {
           ContentTC = "1",
           TextMapId = "UI_Option_Dropdown_9"
@@ -62889,7 +62629,15 @@ local Data = {
         UI_PersonInfo_Saved = {
           ContentTC = "保存成功",
           TextMapId = "UI_PersonInfo_Saved"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PersonInfo_Select_Appearance",
+    MaxKey = "UI_REGISTER_BACK",
+    Loader = function()
+      return {
         UI_PersonInfo_Select_Appearance = {
           ContentTC = "選擇形象方案",
           TextMapId = "UI_PersonInfo_Select_Appearance"
@@ -63437,15 +63185,7 @@ local Data = {
         UI_Preview_SwitchtoInit = {
           ContentTC = "切換至初始",
           TextMapId = "UI_Preview_SwitchtoInit"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Preview_SwitchtoMax",
-    MaxKey = "UI_Rouge_Talent_CantActive",
-    Loader = function()
-      return {
+        },
         UI_Preview_SwitchtoMax = {
           ContentTC = "切換至滿級",
           TextMapId = "UI_Preview_SwitchtoMax"
@@ -63697,7 +63437,15 @@ local Data = {
         UI_REGISTER_BACK = {
           ContentTC = "上一步",
           TextMapId = "UI_REGISTER_BACK"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_REGISTER_BANNEDINPUT",
+    MaxKey = "UI_SHOP_MAINTAB_SKIN",
+    Loader = function()
+      return {
         UI_REGISTER_BANNEDINPUT = {
           ContentTC = "不能包含敏感詞",
           TextMapId = "UI_REGISTER_BANNEDINPUT"
@@ -64242,15 +63990,7 @@ local Data = {
         UI_Rouge_Talent_CantActive = {
           ContentTC = "探索中無法點亮提燈",
           TextMapId = "UI_Rouge_Talent_CantActive"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Rouge_Talent_HaveActive",
-    MaxKey = "UI_SUBREGION_NAME_104103",
-    Loader = function()
-      return {
+        },
         UI_Rouge_Talent_HaveActive = {
           ContentTC = "已點亮",
           TextMapId = "UI_Rouge_Talent_HaveActive"
@@ -64500,9 +64240,17 @@ local Data = {
           TextMapId = "UI_SHOP_MAINTAB_PAY"
         },
         UI_SHOP_MAINTAB_SKIN = {
-          ContentTC = "外觀",
+          ContentTC = "形象",
           TextMapId = "UI_SHOP_MAINTAB_SKIN"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SHOP_MAX",
+    MaxKey = "UI_SkinGacha_Again_One",
+    Loader = function()
+      return {
         UI_SHOP_MAX = {
           ContentTC = "最大",
           TextMapId = "UI_SHOP_MAX"
@@ -64640,7 +64388,7 @@ local Data = {
           TextMapId = "UI_SHOP_SUBTAB_NAME_YUESHITAB"
         },
         UI_SHOP_SUBTAB_SKIN = {
-          ContentTC = "形象",
+          ContentTC = "nan",
           TextMapId = "UI_SHOP_SUBTAB_SKIN"
         },
         UI_SHOP_TAB_ExploreBadge_Chapter01 = {
@@ -65050,15 +64798,7 @@ local Data = {
         UI_SUBREGION_NAME_104103 = {
           ContentTC = "潮聲岩穴",
           TextMapId = "UI_SUBREGION_NAME_104103"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SUBREGION_NAME_104104",
-    MaxKey = "UI_Squad_DeleteReConfirm",
-    Loader = function()
-      return {
+        },
         UI_SUBREGION_NAME_104104 = {
           ContentTC = "幽明澗",
           TextMapId = "UI_SUBREGION_NAME_104104"
@@ -65237,10 +64977,6 @@ local Data = {
           ContentTC = "兌換月石晶胚",
           TextMapId = "UI_Shop_JP_Exchange"
         },
-        UI_Shop_JP_Link = {
-          ContentTC = "資金結算法・特定商業交易法",
-          TextMapId = "UI_Shop_JP_Link"
-        },
         UI_Shop_JP_Phoxene = {
           ContentTC = "月石晶胚 X %s",
           TextMapId = "UI_Shop_JP_Phoxene"
@@ -65308,7 +65044,15 @@ local Data = {
         UI_SkinGacha_Again_One = {
           ContentTC = "再次尋覓",
           TextMapId = "UI_SkinGacha_Again_One"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SkinGacha_Again_Ten",
+    MaxKey = "UI_TELEPORTPOINT_NAME_101301_1",
+    Loader = function()
+      return {
         UI_SkinGacha_Again_Ten = {
           ContentTC = "再次尋覓十次",
           TextMapId = "UI_SkinGacha_Again_Ten"
@@ -65852,15 +65596,7 @@ local Data = {
         UI_Squad_DeleteReConfirm = {
           ContentTC = "是否確定刪除預設陣容：<highlight>%s</>？",
           TextMapId = "UI_Squad_DeleteReConfirm"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Squad_DeleteSuccess",
-    MaxKey = "UI_TEMPLE_SUCRULE_COUNTDOWN_1",
-    Loader = function()
-      return {
+        },
         UI_Squad_DeleteSuccess = {
           ContentTC = "已刪除",
           TextMapId = "UI_Squad_DeleteSuccess"
@@ -66116,7 +65852,15 @@ local Data = {
         UI_TELEPORTPOINT_NAME_101301_1 = {
           ContentTC = "格雷姆廢礦底層",
           TextMapId = "UI_TELEPORTPOINT_NAME_101301_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TELEPORTPOINT_NAME_101304_1",
+    MaxKey = "UI_Temple_MonsterIn",
+    Loader = function()
+      return {
         UI_TELEPORTPOINT_NAME_101304_1 = {
           ContentTC = "格雷姆廢礦深處",
           TextMapId = "UI_TELEPORTPOINT_NAME_101304_1"
@@ -66660,15 +66404,7 @@ local Data = {
         UI_TEMPLE_SUCRULE_COUNTDOWN_1 = {
           ContentTC = "在%d秒內完成試煉",
           TextMapId = "UI_TEMPLE_SUCRULE_COUNTDOWN_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TEMPLE_SUCRULE_SCORE",
-    MaxKey = "UI_WEAPON_DESC_10304",
-    Loader = function()
-      return {
+        },
         UI_TEMPLE_SUCRULE_SCORE = {
           ContentTC = "通關時獲得積分達到",
           TextMapId = "UI_TEMPLE_SUCRULE_SCORE"
@@ -66924,7 +66660,15 @@ local Data = {
         UI_Temple_MonsterIn = {
           ContentTC = "敵人到達終點，<Warning>積分減少</>",
           TextMapId = "UI_Temple_MonsterIn"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Temple_NormalPattern",
+    MaxKey = "UI_WEAPON_NAME_10104",
+    Loader = function()
+      return {
         UI_Temple_NormalPattern = {
           ContentTC = "圖案匹配，<Gold>獲得積分</>",
           TextMapId = "UI_Temple_NormalPattern"
@@ -67462,15 +67206,7 @@ local Data = {
         UI_WEAPON_DESC_10304 = {
           ContentTC = "斷亙古回響，開萬世太平。",
           TextMapId = "UI_WEAPON_DESC_10304"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_DESC_10398",
-    MaxKey = "UI_WeaponAccessory_Name_10004",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_DESC_10398 = {
           ContentTC = "應用了最新表面處理工藝製造而成的重劍，是沉默的侍從們慣用的武器。",
           TextMapId = "UI_WEAPON_DESC_10398"
@@ -67726,7 +67462,15 @@ local Data = {
         UI_WEAPON_NAME_10104 = {
           ContentTC = "慧謀的攻守",
           TextMapId = "UI_WEAPON_NAME_10104"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_NAME_10105",
+    MaxKey = "UI_Weapons_Carried",
+    Loader = function()
+      return {
         UI_WEAPON_NAME_10105 = {
           ContentTC = "流浪的薔薇",
           TextMapId = "UI_WEAPON_NAME_10105"
@@ -68270,15 +68014,7 @@ local Data = {
         UI_WeaponAccessory_Name_10004 = {
           ContentTC = "音符·白櫻",
           TextMapId = "UI_WeaponAccessory_Name_10004"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WeaponAccessory_Name_10005",
-    MaxKey = "VoiceDes116",
-    Loader = function()
-      return {
+        },
         UI_WeaponAccessory_Name_10005 = {
           ContentTC = "蝴蝶結·墨玉",
           TextMapId = "UI_WeaponAccessory_Name_10005"
@@ -68534,7 +68270,15 @@ local Data = {
         UI_Weapons_Carried = {
           ContentTC = "武器已裝配",
           TextMapId = "UI_Weapons_Carried"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WeeklyDungeon_ChancesRemain",
+    MaxKey = "WikiText_10100801",
+    Loader = function()
+      return {
         UI_WeeklyDungeon_ChancesRemain = {
           ContentTC = "本周魔之楔設計稿獲得次數：",
           TextMapId = "UI_WeeklyDungeon_ChancesRemain"
@@ -69075,15 +68819,7 @@ local Data = {
         VoiceDes116 = {
           ContentTC = "關於故鄉",
           TextMapId = "VoiceDes116"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "VoiceDes117",
-    MaxKey = "ZhiLiuEntrustGrandRewardTips",
-    Loader = function()
-      return {
+        },
         VoiceDes117 = {
           ContentTC = "關於霧海",
           TextMapId = "VoiceDes117"
@@ -69339,7 +69075,15 @@ local Data = {
         WikiText_10100801 = {
           ContentTC = "海伯利亞帝國的行政中樞，成員均由皇帝親自選定，主要職責是輔佐皇帝處理各類政務。與幾乎完全由貴族把控的元老院不同，樞密院的成員中不乏出身普通卻憑藉出眾的能力而獲得皇帝提拔之人。",
           TextMapId = "WikiText_10100801"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_10100901",
+    MaxKey = "voice_ch_char_Baiheng_vo_gain_2",
+    Loader = function()
+      return {
         WikiText_10100901 = {
           ContentTC = "位於阿特拉西亞大陸南部的神權國家，以一座據說曾有九位神靈顯聖的「塔」為中心建立，是最早的人類國度。艾利西安人信奉以九神為崇拜對象的艾利西安正教，國內一切事務均由代行神諭的艾利西安傳頌會管理。\n艾利西安正教宣揚公允與平等的幸福，生活在傳頌會統治下的各種族千年來始終保持著和平共處的狀態。",
           TextMapId = "WikiText_10100901"
@@ -69880,15 +69624,7 @@ local Data = {
         ZhiLiuEntrustGrandRewardTips = {
           ContentTC = "完成全部委托後可領取",
           TextMapId = "ZhiLiuEntrustGrandRewardTips"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "ZhiLiuEntrustText01",
-    MaxKey = "voice_ch_char_Feina_vo_topic_02_3",
-    Loader = function()
-      return {
+        },
         ZhiLiuEntrustText01 = {
           ContentTC = "這是今天的采購清單，可以幫我收集一些嗎？",
           TextMapId = "ZhiLiuEntrustText01"
@@ -70144,7 +69880,15 @@ local Data = {
         voice_ch_char_Baiheng_vo_gain_2 = {
           ContentTC = "華胥藥師，扶疏。雖說仍在見習，但大可放心將傷口託付於我，就算我學問不精，也總有治癒的辦法。",
           TextMapId = "voice_ch_char_Baiheng_vo_gain_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Baiheng_vo_idle",
+    MaxKey = "voice_ch_char_Heitao_vo_lvup",
+    Loader = function()
+      return {
         voice_ch_char_Baiheng_vo_idle = {
           ContentTC = "晨間打掃後通風，午後四處噴灑烈酒，薄暮時再點幾支香驅散蚊蟲，只有這樣才能保持室內潔淨。",
           TextMapId = "voice_ch_char_Baiheng_vo_idle"
@@ -70688,15 +70432,7 @@ local Data = {
         voice_ch_char_Feina_vo_topic_02_3 = {
           ContentTC = "嗯……如果你能吃下讓人變得很小很小的糖果，就可以進去玩啦。不過，這個盒子裡到處都是白色的，你要小心，別在裡面迷路哦。",
           TextMapId = "voice_ch_char_Feina_vo_topic_02_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Feina_vo_topic_02_4",
-    MaxKey = "voice_ch_char_Lise_vo_die_r02",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Feina_vo_topic_02_4 = {
           ContentTC = "讓我想想……如果你迷路了，菲娜就把麵包掰成一小塊一小塊，連成一條路……這樣，你只要沿著麵包屑向前走，就能找到出口啦！",
           TextMapId = "voice_ch_char_Feina_vo_topic_02_4"
@@ -70952,7 +70688,15 @@ local Data = {
         voice_ch_char_Heitao_vo_lvup = {
           ContentTC = "你覺得怎麼樣？",
           TextMapId = "voice_ch_char_Heitao_vo_lvup"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Heitao_vo_revive",
+    MaxKey = "voice_ch_char_Maer_vo_topic_02_1",
+    Loader = function()
+      return {
         voice_ch_char_Heitao_vo_revive = {
           ContentTC = "還沒有結束。",
           TextMapId = "voice_ch_char_Heitao_vo_revive"
@@ -71496,15 +71240,7 @@ local Data = {
         voice_ch_char_Lise_vo_die_r02 = {
           ContentTC = "這樣……也不錯……",
           TextMapId = "voice_ch_char_Lise_vo_die_r02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Lise_vo_fail",
-    MaxKey = "voice_ch_char_Shuimu_vo_be_hit_heavy_r01",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Lise_vo_fail = {
           ContentTC = "這一次……我還是沒能保護好同伴……",
           TextMapId = "voice_ch_char_Lise_vo_fail"
@@ -71760,7 +71496,15 @@ local Data = {
         voice_ch_char_Maer_vo_topic_02_1 = {
           ContentTC = "噓噓噓，這可是拾荒者的最高機密！要不是你幫我抓過賊，才不會輕易透露給你呢！",
           TextMapId = "voice_ch_char_Maer_vo_topic_02_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Maer_vo_topic_02_2",
+    MaxKey = "voice_ch_char_Tuosi02_skill01_r01",
+    Loader = function()
+      return {
         voice_ch_char_Maer_vo_topic_02_2 = {
           ContentTC = "這張圖標明了冰湖城所有垃圾桶的位置，我在上面標了好東西最多的幾個，不僅把那邊的垃圾桶換成了大號，就連什麼時候去進貨都經過我嚴密的計算！",
           TextMapId = "voice_ch_char_Maer_vo_topic_02_2"
@@ -72069,62 +71813,6 @@ local Data = {
           ContentTC = "是你呀，親愛的孩子。日安，有什麼事想要講給我聽嗎？",
           TextMapId = "voice_ch_char_Nifu_vo_welcome"
         },
-        voice_ch_char_NvzhuLight_vo_appear = {
-          ContentTC = "淨界島以外的世界，比書裡還要廣闊，也比書裡更殘酷。它不應該是這副模樣，所以，我想我應該做些什麼。",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_appear"
-        },
-        voice_ch_char_NvzhuLight_vo_battleidle = {
-          ContentTC = "接下來該去哪裡？讓我看看地圖……嗯……好難認。",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_battleidle"
-        },
-        voice_ch_char_NvzhuLight_vo_battlestart = {
-          ContentTC = "這把劍，依舊還在派上用場。",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_battlestart"
-        },
-        voice_ch_char_NvzhuLight_vo_die_r01 = {
-          ContentTC = "至少……不是在這裡……",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_die_r01"
-        },
-        voice_ch_char_NvzhuLight_vo_die_r02 = {
-          ContentTC = "好想回到……約定的地方……",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_die_r02"
-        },
-        voice_ch_char_NvzhuLight_vo_fail = {
-          ContentTC = "下一次，他們必將付出代價。",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_fail"
-        },
-        voice_ch_char_NvzhuLight_vo_lvup = {
-          ContentTC = "我行過的每一步路、聽到的每一句話、遇見的每一個人，都讓我更加了解這個世界，讓我的劍更加鋒利。",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_lvup"
-        },
-        voice_ch_char_NvzhuLight_vo_revive = {
-          ContentTC = "剛剛是……一場噩夢？",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_revive"
-        },
-        voice_ch_char_NvzhuLight_vo_skill01_r01 = {
-          ContentTC = "消散。",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_skill01_r01"
-        },
-        voice_ch_char_NvzhuLight_vo_skill01_r02 = {
-          ContentTC = "飛光。",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_skill01_r02"
-        },
-        voice_ch_char_NvzhuLight_vo_skill02_r01 = {
-          ContentTC = "這次，輪到我來保護別人。",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r01"
-        },
-        voice_ch_char_NvzhuLight_vo_skill02_r02 = {
-          ContentTC = "為了去往明天。",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r02"
-        },
-        voice_ch_char_NvzhuLight_vo_skill02_r03 = {
-          ContentTC = "回歸霧海吧。",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r03"
-        },
-        voice_ch_char_NvzhuLight_vo_victory = {
-          ContentTC = "又前進了一步。只要我走得足夠遠，就一定可以……",
-          TextMapId = "voice_ch_char_NvzhuLight_vo_victory"
-        },
         voice_ch_char_Saiqi_vo_appear = {
           ContentTC = "我知道的，你會帶我一起去。",
           TextMapId = "voice_ch_char_Saiqi_vo_appear"
@@ -72304,15 +71992,7 @@ local Data = {
         voice_ch_char_Shuimu_vo_be_hit_heavy_r01 = {
           ContentTC = "好狠心。",
           TextMapId = "voice_ch_char_Shuimu_vo_be_hit_heavy_r01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Shuimu_vo_be_hit_heavy_r02",
-    MaxKey = "voice_ch_char_Xier_vo_topic_05_3",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Shuimu_vo_be_hit_heavy_r02 = {
           ContentTC = "真冷漠！",
           TextMapId = "voice_ch_char_Shuimu_vo_be_hit_heavy_r02"
@@ -72624,7 +72304,15 @@ local Data = {
         voice_ch_char_Tuosi02_skill01_r01 = {
           ContentTC = "逃不掉。",
           TextMapId = "voice_ch_char_Tuosi02_skill01_r01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Tuosi02_vo_be_hit_heavy_r01",
+    MaxKey = "voice_ch_char_Zhangyu_vo_battleidle",
+    Loader = function()
+      return {
         voice_ch_char_Tuosi02_vo_be_hit_heavy_r01 = {
           ContentTC = "又是這樣……",
           TextMapId = "voice_ch_char_Tuosi02_vo_be_hit_heavy_r01"
@@ -73112,15 +72800,7 @@ local Data = {
         voice_ch_char_Xier_vo_topic_05_3 = {
           ContentTC = "並沒有，她很重要。僭越地說，芙羅拉小姐對我而言，除了主人以外，尚有其他身份，所以……",
           TextMapId = "voice_ch_char_Xier_vo_topic_05_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Xier_vo_topic_05_4",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Xier_vo_topic_05_4 = {
           ContentTC = "可惜我並不是吟游詩人，無法找到一個詞彙，能夠兼有朋友與親人的含義。",
           TextMapId = "voice_ch_char_Xier_vo_topic_05_4"
@@ -73432,7 +73112,15 @@ local Data = {
         voice_ch_char_Zhangyu_vo_battleidle = {
           ContentTC = "哈，真無聊。",
           TextMapId = "voice_ch_char_Zhangyu_vo_battleidle"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Zhangyu_vo_battlestart",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Zhangyu_vo_battlestart = {
           ContentTC = "嘻嘻，惡魔大盜塔比瑟閃亮登場！",
           TextMapId = "voice_ch_char_Zhangyu_vo_battlestart"

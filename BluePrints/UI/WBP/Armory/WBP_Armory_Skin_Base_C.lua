@@ -167,9 +167,6 @@ function M:OnNewCharAccessoryObtained(AccessoryId)
 end
 
 function M:OnNewAccessoryObtained(AccessoryId)
-  if not self.Map_AccessoryContents then
-    return
-  end
   local Content = self.Map_AccessoryContents[AccessoryId]
   if not Content then
     return
@@ -762,6 +759,7 @@ end
 
 function M:UpdateActorAppearance(SkinId)
   self:UpdateActorSkin(SkinId)
+  self:UpdatePartMesh(SkinId)
   self:UpdateActorColors(SkinId)
 end
 
@@ -786,7 +784,7 @@ function M:UpdateActorSkin(SkinId)
     if SkinId ~= self.LastCharSkinId then
       self.ActorController.DelayFrame = 30
       self.ActorController.bPlaySameMontage = true
-      self.ActorController:SetMontageAndCamera(CommonConst.ArmoryType.Char, "", "", "")
+      self.ActorController:SetMontageAndCamera(CommonConst.ArmoryType.Char)
     end
     self.LastCharSkinId = SkinId
   else
@@ -806,7 +804,7 @@ function M:InitCharSkin()
   if self.ActorController then
     self.ActorController.DelayFrame = 1
     self.ActorController.bNoDisappearFX = true
-    self.ActorController:SetMontageAndCamera(CommonConst.ArmoryType.Char, "", "", "")
+    self.ActorController:SetMontageAndCamera(CommonConst.ArmoryType.Char)
     self.ActorController:HidePlayerActor(self.UIName, false)
   end
   local SkinId = self.JumpToSkinId or self.SelectedSkinId
@@ -2073,7 +2071,6 @@ end
 
 function M:Destruct()
   M.Super.Destruct(self)
-  self:RemoveAccessoryTabReddotListen()
   if self.ActorController then
     self.ActorController:HidePlayerActor(self.UIName, false)
   end

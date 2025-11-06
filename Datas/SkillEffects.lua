@@ -16069,7 +16069,7 @@ return ReadOnly("SkillEffects", {
           DEF = 0,
           ES = 0,
           MaxES = 0,
-          MaxHp = 100000,
+          MaxHp = 30000,
           SkillIntensity = 1
         },
         Camp = "Enemy",

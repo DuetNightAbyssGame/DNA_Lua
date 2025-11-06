@@ -83,9 +83,7 @@ end
 function Component:NotifyCharacterStartSync()
   local GameInstance = GWorld.GameInstance
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GameInstance, 0)
-  if Player then
-    Player:EnableRegionSync(true)
-  end
+  Player:EnableRegionSync(true)
   local OldState = self.IsInRegionOnline
   EventManager:FireEvent(EventID.OnlineRegionChange, OldState, true)
 end
@@ -93,9 +91,7 @@ end
 function Component:NotifyCharacterEndSync(...)
   local GameInstance = GWorld.GameInstance
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GameInstance, 0)
-  if Player then
-    Player:EnableRegionSync(false)
-  end
+  Player:EnableRegionSync(false)
   local OldState = self.IsInRegionOnline
   EventManager:FireEvent(EventID.OnlineRegionChange, OldState, false)
 end
@@ -195,7 +191,7 @@ function Component:HandleSwitchWeapon(ObjId, Message, Type)
   local TempWeaponInfo = {}
   Player:FormatWeaponInfo(TempWeaponInfo, Message.WeaponInfo)
   print(_G.LogTag, " HandleChangeUsingWeaponType", "ServerSetUp" .. Type .. "Weapon", Player["ServerSetUp" .. Type .. "Weapon"])
-  Player["ServerSetUp" .. Type .. "Weapon"](Player, TempWeaponInfo, TempWeaponInfo)
+  Player["ServerSetUp" .. Type .. "Weapon"](Player, TempWeaponInfo)
   Player:ChangeUsingWeaponByType("Melee")
 end
 

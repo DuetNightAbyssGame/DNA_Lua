@@ -2,10 +2,6 @@ require("UnLua")
 local BloodBarUtils = require("BluePrints.UI.BloodBar.BloodBarUtils")
 local WBP_Teammate_PC_C = Class("BluePrints.UI.BP_UIState_C")
 
-function WBP_Teammate_PC_C:PreConstruct(IsDesignTime)
-  WBP_Teammate_PC_C.Super.PreConstruct(self, IsDesignTime)
-end
-
 function WBP_Teammate_PC_C:Initialize(Initializer)
   self.Super.Initialize(self)
   self.MaxHp = 0

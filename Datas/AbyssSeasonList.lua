@@ -7,7 +7,7 @@ return ReadOnly("AbyssSeasonList", {
     AbyssEndTime = 1764018000,
     AbyssSeasonId = 1001,
     AbyssSeasonName = "Event_STitle_103002",
-    AbyssStartTime = 1761512400,
+    AbyssStartTime = 1761523200,
     CharId = 5301,
     EventId = 103002
   },

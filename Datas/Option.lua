@@ -182,7 +182,6 @@ return ReadOnly("Option", {
       1,
       1,
       1,
-      1,
       1
     },
     SubOptionName = "UI_OPTION_DLSSOption",
@@ -203,7 +202,6 @@ return ReadOnly("Option", {
       "UI_OPTION_DLSSQuality_3",
       "UI_OPTION_DLSSQuality_2",
       "UI_OPTION_DLSSQuality_5",
-      "UI_OPTION_DLSSQuality_6",
       "UI_Option_Dropdown_20"
     }
   },
@@ -624,6 +622,7 @@ return ReadOnly("Option", {
     HideOnPhone = true,
     Region = 1,
     SortId = 72,
+    SpecialHide = 99,
     SwitchText = T.RT_1,
     Tag = "Other",
     TagID = 6,

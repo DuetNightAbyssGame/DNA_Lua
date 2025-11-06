@@ -70,7 +70,6 @@ function M:Construct()
   self.Btn_Pause:AddEventOnCheckStateChanged(self, self.NotifyGamePauseChange)
   self.Text_Pause:SetText(GText("UI_CameraSystem_PauseGame"))
   self.GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
-  GWorld.GameInstance:SetDynamicResolution("PhotoCameraMain", true)
 end
 
 function M:InitConstValue()
@@ -825,7 +824,6 @@ function M:Close()
 end
 
 function M:Destruct()
-  GWorld.GameInstance:SetDynamicResolution("PhotoCameraMain", false)
   self:SetCharHiddengState(0)
   self.Player:SetActorHideTag("CameraScreenshotTick", false)
   self:RecoverActorTickableState()

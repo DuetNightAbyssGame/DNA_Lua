@@ -387,13 +387,13 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_100103_1"
   },
   BP_HardBoss_PlayerStart = {
-    X = 18740.771484,
-    Y = 29407.501953,
-    Z = -10683.178711,
+    X = -8779.003906,
+    Y = 41930.003906,
+    Z = -13296.642578,
     R = 0.0,
-    SubRegionId = 101304,
-    FloorId = -2,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    SubRegionId = 101103,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101103_2"
   },
   QuestPoint10504 = {
     X = 22284.402344,
@@ -675,22 +675,22 @@ local QuestGuidePointLoc = {
     TeleportPointName = ""
   },
   BP_StaticCreateActor = {
-    X = 3299.998535,
-    Y = 15800.0,
-    Z = -5820.999023,
+    X = -100.0,
+    Y = 5980.0,
+    Z = 311.0,
     R = 0.0,
-    SubRegionId = 101305,
+    SubRegionId = 210101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   BP_StaticCreateActor3 = {
-    X = 1799.998657,
-    Y = 14900.0,
-    Z = -6420.999023,
+    X = 8.0,
+    Y = 2498.0,
+    Z = 0.0,
     R = 0.0,
-    SubRegionId = 101305,
+    SubRegionId = 210101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   BP_StaticCreateActor35 = {
     X = 29814.226562,
@@ -744,7 +744,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   QuestTrigger10411 = {
     X = 22229.951172,
@@ -1476,13 +1476,13 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_100101_1"
   },
   BP_StaticCreateActor2 = {
-    X = 3299.998291,
-    Y = 18200.0,
-    Z = -5220.999023,
+    X = 124.0,
+    Y = 2532.0,
+    Z = 0.0,
     R = 0.0,
-    SubRegionId = 101305,
+    SubRegionId = 210101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   Monster34 = {
     X = 7419.763184,
@@ -10872,9 +10872,9 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
   },
   Mechanism_Switch_1270037 = {
-    X = -276.276245,
-    Y = 7521.0,
-    Z = -4990.365234,
+    X = -1153.276245,
+    Y = 7828.874023,
+    Z = -4977.679199,
     R = 0.0,
     SubRegionId = 101301,
     FloorId = 0,
@@ -10896,7 +10896,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   QuestPoint_Part02_QuestCheck = {
     X = 2929.0,
@@ -10905,7 +10905,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   TriggerBox_01 = {
     X = 2899.998779,
@@ -10923,7 +10923,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   Mechanism_SpecialQuest_Kill_1380018 = {
     X = 1199.998535,
@@ -10941,7 +10941,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Mechanism_QuestTrigger_1380019 = {
     X = -723.0,
@@ -10959,7 +10959,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   TargetPoint_Road6_2_Shijingzhe = {
     X = 10369.977539,
@@ -14373,9 +14373,9 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestPoint_Part01_QuestCheck_11 = {
-    X = -276.276245,
-    Y = 7519.0,
-    Z = -4779.997559,
+    X = -1153.276245,
+    Y = 7826.874023,
+    Z = -4767.311523,
     R = 0.0,
     SubRegionId = 101301,
     FloorId = 0,
@@ -14598,13 +14598,13 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_102101_3"
   },
   BP_NewTargetPoint = {
-    X = -465.595459,
-    Y = -5673.075684,
-    Z = 4811.42041,
+    X = -4660.0,
+    Y = -11770.0,
+    Z = -5080.0,
     R = 0.0,
-    SubRegionId = 101301,
+    SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestPoint_LizhanBossBattle = {
     X = 33537.019531,
@@ -16164,13 +16164,13 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_102102_3"
   },
   BP_NewTargetPoint2 = {
-    X = -523.02063,
-    Y = -6148.672363,
-    Z = 4850.517578,
+    X = -15720.0,
+    Y = -890.0,
+    Z = -1036.088867,
     R = 0.0,
-    SubRegionId = 101301,
+    SubRegionId = 102102,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_102102_2"
   },
   BP_NewTargetPoint3 = {
     X = -15460.0,
@@ -17988,7 +17988,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   QuestPoint_EX01 = {
     X = 1690.0,
@@ -23064,7 +23064,7 @@ local QuestGuidePointLoc = {
     R = 4000.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   QuestPoint_Part01_QuestCheck_fake_2 = {
     X = 3791.0,
@@ -25098,7 +25098,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Drop_Dyn_1380047 = {
     X = 4874.949707,
@@ -25107,7 +25107,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   Drop_Dyn_1380048 = {
     X = 1604.936157,
@@ -25116,7 +25116,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   Mechanism_Dyn_1380033 = {
     X = 1650.607666,
@@ -25152,7 +25152,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   Mechanism_Dyn_1380049 = {
     X = 2971.090332,
@@ -25161,7 +25161,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   Mechanism_Dyn_1380050 = {
     X = 4026.016113,
@@ -25170,7 +25170,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   Mechanism_DynTrigger_1380042 = {
     X = 3365.089844,
@@ -25179,7 +25179,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   Mechanism_DynTrigger_1380043 = {
     X = 3462.976562,
@@ -25188,7 +25188,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Mechanism_DynTrigger_1380051 = {
     X = 3450.0,
@@ -25197,7 +25197,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   Monster_Dyn_1380032 = {
     X = 656.217957,
@@ -25479,27 +25479,27 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
   },
   Mechanism_Dyn_1440104 = {
-    X = 24267.171875,
-    Y = 35177.3125,
-    Z = -7780.259277,
+    X = 24107.171875,
+    Y = 34757.3125,
+    Z = -7665.125488,
     R = 0.0,
     SubRegionId = 101304,
     FloorId = -2,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
   },
   Mechanism_Dyn_1440105 = {
-    X = 24015.398438,
-    Y = 35177.3125,
-    Z = -7715.373047,
+    X = 23855.398438,
+    Y = 34757.3125,
+    Z = -7634.645508,
     R = 0.0,
     SubRegionId = 101304,
     FloorId = -2,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
   },
   Mechanism_Dyn_1440106 = {
-    X = 24015.398438,
-    Y = 35351.722656,
-    Z = -7730.410156,
+    X = 23855.398438,
+    Y = 34931.722656,
+    Z = -7653.616211,
     R = 0.0,
     SubRegionId = 101304,
     FloorId = -2,
@@ -25551,9 +25551,9 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
   },
   Mechanism_Dyn_1440112 = {
-    X = 24143.074219,
-    Y = 35211.042969,
-    Z = -4827.394043,
+    X = 23997.121094,
+    Y = 34809.664062,
+    Z = -4908.720215,
     R = 0.0,
     SubRegionId = 101304,
     FloorId = -1,
@@ -34863,7 +34863,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Mechanism_Exp_1380078 = {
     X = 2156.286377,
@@ -34872,7 +34872,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Mechanism_ExpAirwall_1380079 = {
     X = 1971.323975,
@@ -34953,7 +34953,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Mechanism_Dyn_1310057 = {
     X = 7674.588867,
@@ -35088,7 +35088,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Exp_NpcPoint = {
     X = 3887.699951,
@@ -35097,7 +35097,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Mechanism_101131ButterFly_1240396 = {
     X = -6154.859863,
@@ -37476,9 +37476,9 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
   },
   Dyn_CollectOre_Targetpoint_2 = {
-    X = 24143.074219,
-    Y = 35211.042969,
-    Z = -7637.394043,
+    X = 23953.074219,
+    Y = 34831.042969,
+    Z = -7537.394043,
     R = 400.0,
     SubRegionId = 101304,
     FloorId = -2,
@@ -46477,8 +46477,8 @@ local QuestGuidePointLoc = {
   },
   Npc_Dyn_1270167 = {
     X = -1617.524902,
-    Y = -5360.407715,
-    Z = 4827.468262,
+    Y = -5020.407715,
+    Z = 4809.007812,
     R = 0.0,
     SubRegionId = 101301,
     FloorId = 0,
@@ -48795,7 +48795,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Npc_SSS_Dajie_1380109 = {
     X = 1292.485596,
@@ -48804,7 +48804,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Npc_SSS_Dajie_1380110 = {
     X = 2047.485596,
@@ -48822,7 +48822,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Npc_SSS_Nvzhu_1380111 = {
     X = 1895.45813,
@@ -48840,7 +48840,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   QuestPoint_DJ = {
     X = 1591.378418,
@@ -48849,7 +48849,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   QuestPoint_DJMove = {
     X = 1592.485596,
@@ -48858,7 +48858,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   QuestPoint_Tiesi = {
     X = 991.653442,
@@ -48867,7 +48867,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Mechanism_QuestTrigger_2040002 = {
     X = 17598.804688,
@@ -49164,7 +49164,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Npc_SSS_Nvzhu_1380112 = {
     X = 1895.45813,
@@ -49173,7 +49173,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Npc_eastxiaonvhaidad1200_1191095 = {
     X = -1863.546631,
@@ -52634,7 +52634,7 @@ local QuestGuidePointLoc = {
   Drop_Book_1270180 = {
     X = -2696.449951,
     Y = -3852.800049,
-    Z = -4308.043945,
+    Z = -4299.899902,
     R = 0.0,
     SubRegionId = 101301,
     FloorId = 0,
@@ -52697,7 +52697,7 @@ local QuestGuidePointLoc = {
   Npc_101223EmptyNpc_1270181 = {
     X = -2685.565918,
     Y = -3863.141357,
-    Z = -4308.043945,
+    Z = -4300.96582,
     R = 0.0,
     SubRegionId = 101301,
     FloorId = 0,
@@ -52706,7 +52706,7 @@ local QuestGuidePointLoc = {
   Npc_101223Nvzhu_1270178 = {
     X = -2683.448975,
     Y = -3960.127441,
-    Z = -4387.936035,
+    Z = -4296.650879,
     R = 0.0,
     SubRegionId = 101301,
     FloorId = 0,
@@ -52715,7 +52715,7 @@ local QuestGuidePointLoc = {
   Npc_101223Saiqi_1270179 = {
     X = -2630.567139,
     Y = -3962.600586,
-    Z = -4403.530273,
+    Z = -4315.520996,
     R = 0.0,
     SubRegionId = 101301,
     FloorId = 0,
@@ -52728,7 +52728,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   Mechanism_Lamp01_1380123 = {
     X = 4394.750488,
@@ -52737,7 +52737,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   Mechanism_Lamp01_1380124 = {
     X = 2799.089355,
@@ -52746,7 +52746,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Mechanism_QuestTrigger_1380018 = {
     X = 2116.998535,
@@ -52755,7 +52755,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Mechanism_WoodBoard_1380125 = {
     X = -1323.666504,
@@ -52764,7 +52764,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Monster_AroundPet_1380126 = {
     X = 811.338318,
@@ -52773,7 +52773,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Monster_AroundPet_1380127 = {
     X = 215.490112,
@@ -52782,7 +52782,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Monster_AroundPet_1380128 = {
     X = 668.572144,
@@ -52791,7 +52791,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Monster_AroundPet_1380129 = {
     X = 228.663757,
@@ -52800,7 +52800,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Monster_AroundPet_1380130 = {
     X = 1146.608154,
@@ -52809,7 +52809,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   Monster_AroundPet_1380134 = {
     X = 564.020325,
@@ -52818,7 +52818,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Monster_AroundPet_1380135 = {
     X = 471.37149,
@@ -52827,7 +52827,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Monster_AroundPet_1380136 = {
     X = 966.573303,
@@ -52836,7 +52836,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Pet_1380132 = {
     X = -24.255789,
@@ -56319,7 +56319,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Pet_Quest_1380132 = {
     X = -24.255789,
@@ -56328,7 +56328,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Pet_Quest_1380133 = {
     X = 1.096762,
@@ -56337,7 +56337,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Mechanism__HardBossMechanism_1440167 = {
     X = 18751.626953,
@@ -75507,52 +75507,52 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   BP_StaticCreateActor_1420101 = {
-    X = 2010.0,
-    Y = 13530.0,
-    Z = -5810.0,
+    X = 1987.209595,
+    Y = 13484.851562,
+    Z = -5815.009766,
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   BP_StaticCreateActor_1420201 = {
     X = 1987.209595,
     Y = 13554.851562,
-    Z = -5805.009766,
+    Z = -5815.009766,
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Npc_101313Nvzhu_1380169 = {
-    X = 1956.062256,
-    Y = 13336.098633,
+    X = 2757.431641,
+    Y = 14089.730469,
     Z = -5800.382324,
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Npc_101313Bai_1380168 = {
-    X = 2062.744873,
-    Y = 13299.892578,
+    X = 2754.966309,
+    Y = 14202.362305,
     Z = -5800.382324,
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Npc_101313Saiqi_1380170 = {
-    X = 1870.212402,
-    Y = 13364.774414,
+    X = 2759.847168,
+    Y = 13999.25,
     Z = -5800.382324,
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Drop_TalkInteractiveDoor_1270222 = {
     X = 1987.209595,
@@ -75615,7 +75615,7 @@ local QuestGuidePointLoc = {
     R = 3000.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   P_101313Player = {
     X = 1987.209595,
@@ -75624,16 +75624,16 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   P_101313Bomb = {
-    X = 2011.092896,
-    Y = 13526.751953,
+    X = 1987.209595,
+    Y = 13484.851562,
     Z = -5653.519043,
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   P101054_BaiMove1 = {
     X = 20535.632812,
@@ -76470,7 +76470,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   P_10020305Player = {
     X = 117.746895,
@@ -76491,13 +76491,13 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
   },
   P_101313Player2 = {
-    X = 1954.487549,
-    Y = 13285.855469,
-    Z = -5807.071777,
+    X = 3264.487549,
+    Y = 13725.855469,
+    Z = -5819.061035,
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Mechanism_QuestTrigger_1980116 = {
     X = -7941.484375,
@@ -78810,7 +78810,7 @@ local QuestGuidePointLoc = {
     R = 3000.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Mechanism_SQTrigger_Feina01_1191869 = {
     X = -3070.479004,
@@ -86442,7 +86442,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Mechanism_Zhayao02_1380177 = {
     X = 2010.0,
@@ -86451,7 +86451,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Npc_Pan720041_1380172 = {
     X = 5045.24707,
@@ -86460,7 +86460,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
+    TeleportPointName = ""
   },
   BP_JingtiLookat = {
     X = 2190.0,
@@ -86469,7 +86469,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101305,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
+    TeleportPointName = ""
   },
   Npc_1191931 = {
     X = -4610.0,
@@ -88108,78 +88108,6 @@ local QuestGuidePointLoc = {
     SubRegionId = 101101,
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
-  },
-  Pet_Dyn_1270228 = {
-    X = 1436.890259,
-    Y = -310.922729,
-    Z = -4174.697266,
-    R = 0.0,
-    SubRegionId = 101301,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
-  },
-  Npc_Pan720040_1270224 = {
-    X = 10283.993164,
-    Y = 4184.836914,
-    Z = -4809.493164,
-    R = 0.0,
-    SubRegionId = 101301,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
-  },
-  Drop_ChaYinhuishi_1380178 = {
-    X = 1987.209595,
-    Y = 13554.851562,
-    Z = -5805.009766,
-    R = 0.0,
-    SubRegionId = 101305,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
-  },
-  Mechanism_Zhuayin_1310151 = {
-    X = 7470.0,
-    Y = 26130.0,
-    Z = -6330.0,
-    R = 0.0,
-    SubRegionId = 101303,
-    FloorId = -1,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
-  },
-  Pet_Dyn_1440188 = {
-    X = 24938.234375,
-    Y = 31286.568359,
-    Z = -9529.108398,
-    R = 0.0,
-    SubRegionId = 101304,
-    FloorId = -2,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
-  },
-  Mechanism_OB_1440190 = {
-    X = 9060.0,
-    Y = 30170.0,
-    Z = -6660.0,
-    R = 0.0,
-    SubRegionId = 101303,
-    FloorId = -1,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
-  },
-  Npc_Pan720042_1440186 = {
-    X = 17193.009766,
-    Y = 34023.621094,
-    Z = -3940.493164,
-    R = 0.0,
-    SubRegionId = 101304,
-    FloorId = -1,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1"
-  },
-  BP_DoorLookat01 = {
-    X = -460.0,
-    Y = 8000.0,
-    Z = -4830.0,
-    R = 0.0,
-    SubRegionId = 101301,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1"
   }
 }
 return QuestGuidePointLoc

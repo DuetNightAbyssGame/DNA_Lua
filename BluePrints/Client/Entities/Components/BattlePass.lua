@@ -285,24 +285,23 @@ end
 function Component:_OnPropChangeBattlePassPetClaimed()
   DebugPrint("BattlePass Component:_OnPropChangeBattlePassPetClaimed", self.BattlePassPetClaimed)
   if self.BattlePassPetClaimed then
+    EventManager:FireEvent(EventID.BattlePassPetClaimed)
     local TreeNode = ReddotManager.GetTreeNode("BattlePassPetSelection")
     if not TreeNode or 0 == TreeNode.Count then
-      EventManager:FireEvent(EventID.BattlePassPetClaimed)
       return
     end
     ReddotManager.ClearLeafNodeCount("BattlePassPetSelection", true)
-    EventManager:FireEvent(EventID.BattlePassPetClaimed)
   end
 end
 
 function Component:_OnPropChangeBattlePassPetCanClaim(Keys)
-  if not ReddotManager.GetTreeNode("BattlePassPetSelection") then
-    ReddotManager.AddNode("BattlePassPetSelection")
-  end
-  ReddotManager.ClearLeafNodeCount("BattlePassPetSelection")
   if self.BattlePassPetCanClaim and not self.BattlePassPetClaimed then
-    ReddotManager.IncreaseLeafNodeCount("BattlePassPetSelection", 1)
     EventManager:FireEvent(EventID.BattlePassPetCanClaim)
+    local TreeNode = ReddotManager.GetTreeNode("BattlePassPetSelection")
+    TreeNode = TreeNode or ReddotManager.AddNode("BattlePassPetSelection")
+    if 0 == TreeNode.Count then
+      ReddotManager.IncreaseLeafNodeCount("BattlePassPetSelection", 1)
+    end
   end
 end
 

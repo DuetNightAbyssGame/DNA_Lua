@@ -7556,7 +7556,7 @@ and you managed to open the hidden path "by chance"... Is that really your story
           VoiceName = "voice/$Locale$/story/1001/100121/191072D0"
         },
         [10012110] = {
-          ContentEN = "Come to think of it, {性别:his|her} face was...",
+          ContentEN = "Come to think of it, the appearance of that brat just now was...",
           DialogueId = 10012110,
           GUID = "191072D1",
           NextDialogue = 10012105,
@@ -8390,6 +8390,7 @@ and you managed to open the hidden path "by chance"... Is that really your story
           ExStoryInfo = "EXPlayer",
           GUID = "19151FFA",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           Subtitle = "This is my first time in Cocytus Province. Is this how the people here show their hospitality?",
           VoiceName = "voice/$Locale$/story/1001/100194/19151FFA"
         },
@@ -8400,6 +8401,7 @@ and you managed to open the hidden path "by chance"... Is that really your story
           ExStoryInfo = "EXPlayer",
           GUID = "19152024",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           Subtitle = "I don't want to bother you, I just want to... strike a small \"bargain\".",
           VoiceName = "voice/$Locale$/story/1001/100194/19152024"
         },
@@ -8410,6 +8412,7 @@ and you managed to open the hidden path "by chance"... Is that really your story
           ExStoryInfo = "EXPlayer",
           GUID = "1915204E",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           Subtitle = "I'll pay you whatever you want, and all you have to do, well, it will be a piece of cake.",
           VoiceName = "voice/$Locale$/story/1001/100194/1915204E"
         },
@@ -8419,6 +8422,7 @@ and you managed to open the hidden path "by chance"... Is that really your story
           Duration = 2.5,
           GUID = "19153057.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "???",
           VoiceName = "voice/$Locale$/story/1001/100195/19153057"
         },
         [10019502] = {
@@ -8427,6 +8431,7 @@ and you managed to open the hidden path "by chance"... Is that really your story
           Duration = 9,
           GUID = "19153058.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "???",
           VoiceName = "voice/$Locale$/story/1001/100195/19153058"
         },
         [10019503] = {
@@ -8436,6 +8441,7 @@ and you managed to open the hidden path "by chance"... Is that really your story
           ExStoryInfo = "EXPlayer",
           GUID = "19153059.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/19153059"
         },
         [10019504] = {
@@ -8444,6 +8450,7 @@ and you managed to open the hidden path "by chance"... Is that really your story
           Duration = 5,
           GUID = "19153060.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "???",
           VoiceName = "voice/$Locale$/story/1001/100195/19153060"
         },
         [10019505] = {
@@ -8453,6 +8460,7 @@ and you managed to open the hidden path "by chance"... Is that really your story
           ExStoryInfo = "EXPlayer",
           GUID = "19153061.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/19153061"
         },
         [10019506] = {
@@ -8462,6 +8470,7 @@ and you managed to open the hidden path "by chance"... Is that really your story
           ExStoryInfo = "EXPlayer",
           GUID = "19153062.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/19153062"
         },
         [10019507] = {
@@ -8471,6 +8480,7 @@ and you managed to open the hidden path "by chance"... Is that really your story
           ExStoryInfo = "EXPlayer",
           GUID = "1915308C",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/1915308C"
         },
         [10019508] = {
@@ -8480,6 +8490,7 @@ and you managed to open the hidden path "by chance"... Is that really your story
           ExStoryInfo = "EXPlayer",
           GUID = "191530B6",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/191530B6"
         },
         [10019509] = {
@@ -8489,6 +8500,7 @@ and you managed to open the hidden path "by chance"... Is that really your story
           ExStoryInfo = "EXPlayer",
           GUID = "191530E0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/191530E0"
         },
         [10019510] = {
@@ -8498,6 +8510,7 @@ and you managed to open the hidden path "by chance"... Is that really your story
           ExStoryInfo = "EXPlayer",
           GUID = "1915310A",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/1915310A"
         },
         [10025701] = {
@@ -16099,7 +16112,7 @@ PlayAnimation{_delay{1.5},ActorId{100304},AnimationId{"Explain02_Start"},Duratio
           VoiceName = "voice/$Locale$/story/1003/100336/191E3B24"
         },
         [10033611] = {
-          ContentEN = "Hmm? Weren't there supposed to be soldiers meeting us here? Where are they?",
+          Content = "咦？不是说有人在这儿接我们吗，他们人呢？",
           DialogueId = 10033611,
           GUID = "191E3B25",
           NextDialogue = 10033612,
@@ -20339,7 +20352,7 @@ PlayAnimation{_delay{0.5},ActorId{100304},AnimationId{"Talk02_Start"},Duration{1
           VoiceName = "voice/$Locale$/story/1003/100346/191EDF60"
         },
         [10034613] = {
-          ContentEN = "(The ground is blockaded by soldiers... Maybe try another way — what about the rooftops?)",
+          Content = "（<H>地面都被士兵封锁了</>……或许可以试试别的路——比如<H>楼顶</>？）",
           DialogueId = 10034613,
           GUID = "191EDF61",
           SpeakNpcId = 100001,
@@ -23981,7 +23994,7 @@ PlayAnimation{_delay{0},ActorId{100327},AnimationId{"Tuosi02_Story_Find02_Start"
           VoiceName = "voice/$Locale$/story/1003/100355/191F71B6"
         },
         [10035504] = {
-          ContentEN = "(Ah, this glare... Where am I? I remember passing the tests, being assigned to the 6th Legion's alchemy academy, and then...)",
+          ContentEN = "(This glare... Where am I? I remember passing the tests, being assigned to the 6th Legion's alchemy academy, and then...)",
           DialogueId = 10035504,
           GUID = "191F71E0",
           RelatedWikiId = {
@@ -24018,8 +24031,7 @@ It seems to be in great pain. Should I administer another dose of anaesthetic?]]
         [10035508] = {
           ContentEN = [[
 Professor, the data is in. This one shows exceptional resistance among this batch of augmented subjects. 
-The current test failed to breach the secondary heart you implanted, while fire has damaged its synthetic skin,
-causing its body temperature to spike far beyond normal limits.]],
+The current test failed to breach the secondary heart you implanted, while fire has damaged its synthetic skin, causing its body temperature to spike far beyond normal limits.]],
           DialogueId = 10035508,
           GUID = "191F7288",
           SpeakNpcName = "Cp2CharacterName05",
@@ -24033,9 +24045,7 @@ causing its body temperature to spike far beyond normal limits.]],
           VoiceName = "voice/$Locale$/story/1003/100355/191F72B2"
         },
         [10035510] = {
-          ContentEN = [[
-Do not waste your compassion on these demons.
-Administer the sedative, secure its limbs, and prepare for the next enhancement experiment.]],
+          ContentEN = "Do not waste your compassion on these demons. Administer the sedative, secure its limbs, and prepare for the next enhancement experiment.",
           DialogueId = 10035510,
           GUID = "191F72DC",
           SpeakNpcName = "Cp2CharacterName04",
@@ -46000,6 +46010,7 @@ CameraMoveTo{_delay{6.8},TargetPosition{"116.96875,481.013184,111.717285,0.00045
         },
         [10108605] = {
           Camera = "-294.443359,996.944824,136.692383,0.00046,2.199457,-90.197632,50.0,334.402466,false,Manual,8.0",
+          ContentEN = "{空格}",
           DialogueId = 10108605,
           GUID = "194E4A85",
           LookAt = {
@@ -46017,6 +46028,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/01/bai_enter_water"
           Subtitle = "Snow, get back here. This water is freezing, even for a Charon."
         },
         [10108606] = {
+          ContentEN = "{空格}",
           DialogueId = 10108606,
           DisableMouth = 1,
           GUID = "194E4A86",
@@ -51455,7 +51467,7 @@ PlayAnimation{_delay{4},ActorId{200006},AnimationId{"Explain02_End"},Duration{1}
           VoiceName = "voice/$Locale$/story/1002/101123/1950A9E0"
         },
         [10112305] = {
-          ContentEN = "Stand up... Don't yield to this cold, unfeeling world!",
+          ContentEN = "Don't yield to this cold, unfeeling world!",
           DialogueId = 10112305,
           Duration = 2,
           ExStoryInfo = "Player",
@@ -55826,12 +55838,12 @@ LookAt{LookAtDescription{"200006:p(Plamp01)"}}
           IsBlack = 1
         },
         [10123404] = {
-          ContentEN = "Henrik has vanished... Looks like the trail has gone cold.",
+          Content = "恩里克消失在了视线外……似乎是跟丢了。",
           DialogueId = 10123404,
           GUID = "1957C6A5"
         },
         [10123405] = {
-          ContentEN = "Henrik stepped into a flower shop, and you decided to wait at a nearby café.",
+          Content = "恩里克走进了一间花店，你们决定在一旁的咖啡厅稍作等待。",
           DialogueId = 10123405,
           GUID = "1957C6A6"
         },
@@ -58688,7 +58700,7 @@ PlayAnimation{_delay{3.5},ActorId{200006},AnimationId{"Special_Start"},Duration{
         },
         [10130304] = {
           Camera = "-353.71582,-276.680176,199.59375,0.000172,-9.398859,23.610058,20.0,407.218628,false,DoNotOverride,4.0",
-          ContentEN = "Well, nothing pairs with a good view like a good drink! We've got all kinds of coffee, Icelake's own Borealberry Juice... Oh! And how about our newest special — rich, creamy Pickled Herring Soup?",
+          ContentEN = "Well, nothing pairs with a good view like a good drink! We've got all kinds of coffee, Icelake's own Borealberry Juice... Oh! Or how about our newest special — rich, creamy Pickled Herring Soup?",
           DefaultLookAt = "TalkNpc",
           DialogueId = 10130304,
           GUID = "195BD026",
@@ -59070,7 +59082,7 @@ CameraMoveTo{TargetPosition{"50.077148,-329.630371,240.10498,0.000181,-16.799314
           DialogueId = 10131004,
           GUID = "195BD051",
           NextDialogue = 10131005,
-          SpeakNpcName = "MESSAGE_TITLE_LOADING_14_PC",
+          SpeakNpcName = "低沉的吼声",
           VoiceName = "voice/$Locale$/story/1002/101310/195BD051"
         },
         [10131005] = {
@@ -59100,7 +59112,7 @@ CameraMoveTo{TargetPosition{"50.077148,-329.630371,240.10498,0.000181,-16.799314
           DialogueId = 10131201,
           GUID = "195BD055",
           NextDialogue = 10131202,
-          SpeakNpcName = "MESSAGE_TITLE_LOADING_14_PC",
+          SpeakNpcName = "低沉的吼声",
           VoiceName = "voice/$Locale$/story/1002/101312/195BD055"
         },
         [10131202] = {
@@ -66658,7 +66670,7 @@ PlayNormalSound{_delay{2},EventPath{"eevent:/sfx/common/story/ex01/kill"},PlayAs
           VoiceName = "voice/$Locale$/story/1002/110125/1B9193C2"
         },
         [11012510] = {
-          ContentEN = "STOP! NOOOO! Captain! Commander Avar! The Captain's gone mad!",
+          ContentEN = "Captain! Commander Avar! The Captain's gone mad! Stay away from me! Help! STOP! NOOOO!",
           DialogueId = 11012510,
           Duration = 3,
           GUID = "1B9193EC",
@@ -77237,21 +77249,21 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
           GUID = "1B9600CA"
         },
         [11019420] = {
-          ContentEN = "You have made the confession of guilt, and a far sterner retribution now lies in wait.",
+          Content = "你向典狱长承认了罪行，等待你的将是更为严酷的裁决。",
           DialogueId = 11019420,
           Duration = 4,
           GUID = "1B9600CB",
           NextDialogue = 11019421
         },
         [11019421] = {
-          ContentEN = "You hear her scornful laugh — she once believed you were unbreakable, but now sees you as no different from the other prisoners she has judged.",
+          Content = "你听见她的嗤笑——她曾认为你坚强无匹，但如今看来，你和她审判过的其他囚犯也并无分别。",
           DialogueId = 11019421,
           Duration = 4,
           GUID = "1B9600CC",
           NextDialogue = 11019422
         },
         [11019422] = {
-          ContentEN = "You find yourself plunging into an abyss of darkness — and you begin to wonder, if only your resolve had been firmer, would things have ended differently?",
+          Content = "你意识到自己正在坠入漆黑的深渊——你开始思索，如果当时你的意志能够更坚定一些，结局会不会有所不同？",
           DialogueId = 11019422,
           Duration = 4,
           GUID = "1B9600CD"
@@ -85831,16 +85843,16 @@ PARA{
 LookAt{LookAtDescription{"100001:n(211001)"}},
 PlayFacial{ActorId{100001},FacialId{"Think01"}},
 CameraMoveTo{TargetPosition{"248.549805,8.369141,97.650635,0.000087,-0.798886,-25.276293,35.000008,233.008423,false,Manual,22.0"},duration{0}},
-CameraMoveTo{_delay{1},TargetPosition{"-1520.461914,1789.661133,1376.077393,0.00013,-27.800432,-38.476391,35.000015,126.223808,false,Manual,22.0"},duration{0}},
+CameraMoveTo{_delay{1},TargetPosition{"-1432.448242,1860.372559,1484.045166,0.000158,-31.201389,-47.272495,55.0,617.594727,false,Manual,22.0"},duration{0}},
 PlayFacial{ActorId{211001},FacialId{"Think01"}},
-CameraMoveTo{_delay{1.01},TargetPosition{"-1919.85498,2107.104492,1645.070557,0.000144,-27.800446,-38.478954,35.000015,126.223808,false,Manual,22.0"},duration{5}},
+CameraMoveTo{_delay{1.01},TargetPosition{"-1656.203613,2098.1604,1681.873047,0.000157,-31.401239,-45.472641,55.0,413.050079,false,Manual,22.0"},duration{5}},
 PlayAnimation{_delay{0},ActorId{211001},AnimationId{"TilteHead_End"},Duration{1}},
 MoveTo{ActorId{211001},TargetPoint{"simple1902"},MoveSpeed{75},Visibility{"Show"}},
 },
 PARA{
 PlayAnimation{_delay{0.5},ActorId{211012},AnimationId{"Confident_Start"},Duration{1}},
 LookAt{LookAtDescription{"211001:n(211012)"}},
-CameraMoveTo{_delay{2},TargetPosition{"-1751.672852,2006.095703,1540.945557,0.000161,28.799929,142.520599,35.000015,107.411423,false,Manual,1.4"},duration{0}}
+CameraMoveTo{_delay{2},TargetPosition{"-1465.969727,1959.334473,1561.481689,0.000213,22.198374,146.92598,55.0,137.552002,false,Manual,2.8"},duration{0}}
 }
 }]],
           VoiceName = "voice/$Locale$/story/1201/120113/1E1EF1F8"
@@ -97152,12 +97164,12 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           VoiceName = "voice/$Locale$/story/2001/200071/3215EFD4"
         },
         [20007107] = {
-          ContentEN = "Several deep gouges, as if left by some jagged object.",
+          Content = "若干道深深的刻痕，似是某周尖锐物体留下的痕迹。",
           DialogueId = 20007107,
           GUID = "3215EFD5"
         },
         [20007108] = {
-          ContentEN = "A sign reading \"Danger: No Entry\" was piled up with multiple layers, as if a new one was posted each time the old one faded. The latest was dated 1004 — twenty years ago — suggesting Glevum Pit was abandoned around that time.",
+          Content = "写着“禁区危险，严禁通行”的告示。贴了厚厚一叠，似乎是当老告示变旧了就会贴一张新告示上去。最新的一张告示落款是新历1004年，也就是二十年前——格雷姆矿场应当就是在那时彻底废弃的。",
           DialogueId = 20007108,
           GUID = "3215EFD6"
         },
@@ -99639,7 +99651,7 @@ We'd always have one by our side underground to help detect whether the tunnels 
 (It's unclear whether it's a tribute to a fallen comrade or a lament for the changing times.)]]
         },
         [51001212] = {
-          ContentEN = "The elder watched a dark speck in the sky with a soft gaze. You looked out and saw a distant flock of birds. The conversation resumed only after the last one had vanished.",
+          Content = "老人温柔地注视着空中的一小片黑点，你顺着他的视线远眺，看到了一群离去的飞鸟。待到所有鸟群飞走后，老人才转身继续与你交谈。",
           DialogueId = 51001212,
           GUID = "7FAD188B",
           NextOptions = {
@@ -101336,7 +101348,9 @@ Back then, his craftsmanship almost won him the title of Laurelled Charon.]],
         },
         [51001935] = {
           Camera = "122.0,278.0,139.0,0.000007,0.0,-95.0,35.0,200.0,false,Manual,2.8",
-          ContentEN = "(You pop open the last keg. Glancing back, you see Wells already raising a glass, his grin wide and familiar as ever.)",
+          ContentEN = [[
+(And yet... beneath the laughter, his fingers curl around the broken pocket watch, a quiet sorrow flickering beneath the surface.)
+(Like the shattered timepiece, a part of him is no longer easily mended.) ]],
           DialogueId = 51001935,
           FinalCamera = "102.0,278.0,139.0,0.000007,0.0,-95.0,35.0,350.0,false,Manual,2.8",
           GUID = "7FAD907A",
@@ -103824,7 +103838,7 @@ will be as thrilling as he predicts.]],
           SpeakNpcId = 700206
         },
         [51003712] = {
-          ContentEN = "(It took some effort, but the wire is still intact. By the time you look up again, Lulu Lunoloot has already vanished.)",
+          ContentEN = "(It took some effort, but you managed to recover the wire — thankfully, it's still intact. By the time you look up again, Lulu Lunoloot has already vanished without a trace.)",
           DialogueId = 51003712,
           Duration = 5,
           GUID = "7FAEA5C4",
@@ -103836,7 +103850,7 @@ will be as thrilling as he predicts.]],
           GUID = "7FAEA5C5"
         },
         [51003721] = {
-          ContentEN = "Lulu Lunoloot has escaped. Quest failed, please try again.",
+          Content = "打打打打打劫皎皎已逃走，任务失败，请重新开始。",
           DialogueId = 51003721,
           Duration = 3,
           GUID = "7FAEA5C6"
@@ -106855,13 +106869,13 @@ It is best to leave her undisturbed for a while.]],
           SpeakNpcId = 100001
         },
         [51005314] = {
-          ContentEN = "Caught it. Time to go back to Marcus.",
+          Content = "钓到了，回去找马库斯吧。",
           DialogueId = 51005314,
           GUID = "7FAFBB54",
           SpeakNpcId = 100001
         },
         [51005315] = {
-          ContentEN = "Caught it. Time to go back to Marcus.",
+          Content = "钓到了，回去找马库斯吧。",
           DialogueId = 51005315,
           GUID = "7FAFBB7E",
           SpeakNpcId = 100001
@@ -107995,11 +108009,20 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           DialogueId = 51005946,
           GUID = "7FB02304",
           LookAt = {
-            [1] = "700130:n(0)"
+            [1] = "700130:n(0)",
+            [2] = "700131:n(0)",
+            [3] = "700132:n(0)"
           },
           SpeakNpcName = "UI_CMNpc_Name_SanXiongdi",
+          TalkActionId = {
+            [1] = "700130:Agree",
+            [2] = "700131:Agree",
+            [3] = "700132:Agree"
+          },
           TurnTo = {
-            [1] = "700130:n(0)"
+            [1] = "700130:n(0)",
+            [2] = "700131:n(0)",
+            [3] = "700132:n(0)"
           }
         },
         [51006001] = {
@@ -109119,7 +109142,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51006732] = {
           Camera = "-20.024414,-347.564941,170.543701,0.000067,-13.199791,66.207527,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentEN = "Now that you have the name, head back to The Asphodel and tell the waiter there when you have the time.",
+          ContentEN = "Now that you have the name, head back to The Asphodel and tell the waiter there when you have the time. I look forward to the day when \"The Noctoyagers\" top the board.",
           DialogueId = 51006732,
           GUID = "7FB0A3F8",
           NextDialogue = 51006733,
@@ -109127,7 +109150,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 700146
         },
         [51006733] = {
-          ContentEN = "Right, take this.",
+          Content = "啊，对了，拿着这个。",
           DialogueId = 51006733,
           DialoguePanelType = "{type:showpic;dir:Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_ExploreBadge_Beibao_Chapter01.T_ExploreBadge_Beibao_Chapter01'}",
           GUID = "7FB0A3F9",
@@ -109161,7 +109184,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51006736] = {
           Camera = "38.65332,-125.365479,127.959717,0.000135,-12.798094,77.399048,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentEN = "I know the continent too well to need them now.",
+          Content = "但是现在我对这片大陆的每一处角落都已经铭记于心，不再需要这些标记引路啦。",
           DialogueId = 51006736,
           GUID = "7FB0A3FC",
           NextDialogue = 51006737,
@@ -109172,7 +109195,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51006737] = {
           Camera = "-156.711914,-582.082031,262.790527,0.000124,-17.197691,64.395233,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentEN = "If you find any on your journeys, do return them to me. Consider each one proof of your skill as a Phoxhunter. Your reward will reflect your success.",
+          Content = "所以，要是你在四处探险的时候，遇到这些标记，就帮我把它们带回来吧。带回来的越多，就越能证明你是优秀的狩月人，报酬当然也少不了。",
           DialogueId = 51006737,
           GUID = "7FB0A3FD",
           NextDialogue = 51006738,
@@ -109180,7 +109203,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51006738] = {
           Camera = "-156.711914,-582.082031,262.790527,0.000124,-17.197691,64.395233,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentEN = "I have high hopes for you. Looking forward to seeing \"Noctoyagers\" carved at the very top of the board!",
+          Content = "加油哦，初出茅庐的狩月人，我期待“夜航者”这三个字被写在看板顶端的那一天。",
           DialogueId = 51006738,
           GUID = "7FB0A3FE",
           NextDialogue = 51006739,
@@ -109204,7 +109227,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51006740] = {
           Camera = "80.842773,-51.764648,173.552246,0.000151,-10.797237,-94.405273,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentEN = "What's this?",
+          Content = "这个是？",
           DialogueId = 51006740,
           GUID = "7FB0A3FA",
           NextDialogue = 51006741,
@@ -109215,7 +109238,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51006741] = {
           Camera = "38.65332,-125.365479,127.959717,0.000135,-12.798094,77.399048,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentEN = "Looks familiar? If it does, it means you're no stranger to adventure. If not, don't concern yourself. These are my old trail markers.",
+          Content = "觉得眼熟吗？眼熟的话就说明你还挺喜欢探险的，没见过的话也没关系！这是我特制的标记，当我外出探险的时候，会用它来标记走过的路。",
           DialogueId = 51006741,
           GUID = "7FB0A3FB",
           NextDialogue = 51006736,
@@ -109790,40 +109813,40 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 700230
         },
         [51006922] = {
-          ContentEN = "I haven't even touched anything!",
+          ContentEN = "Bin diving's not really my thing, thanks.",
           DialogueId = 51006922,
           GUID = "7FB0C0DA",
           NextDialogue = 51006924
         },
         [51006923] = {
-          ContentEN = "Bin diving's not really my thing, thanks.",
+          ContentEN = "Don't play dumb, kid.",
           DialogueId = 51006923,
           GUID = "7FB0C0DB",
           NextDialogue = 51006924
         },
         [51006924] = {
-          ContentEN = "Don't play dumb, kid.",
+          ContentEN = "Yesterday, some woman in uniform came by — sobbing her eyes out. She chucked a box right into the bin. Some nice old lady picking through scraps tried to ask if she was okay... got yelled at, real nasty. Told her to shove off and mind her own business.",
           DialogueId = 51006924,
           GUID = "7FB0C0DC",
           NextDialogue = 51006925,
           SpeakNpcId = 700230
         },
         [51006925] = {
-          ContentEN = "Yesterday, some woman in uniform came by — sobbing her eyes out. She chucked a box right into the bin. Some nice old lady picking through scraps tried to ask if she was okay... got yelled at, real nasty. Told her to shove off and mind her own business.",
+          ContentEN = "And that box you're holding? Yeah, that one. So... still wanna say you didn't dig through the bin?",
           DialogueId = 51006925,
           GUID = "7FB0C0DD",
           NextDialogue = 51006926,
           SpeakNpcId = 700230
         },
         [51006926] = {
-          ContentEN = "And that box you're holding? Yeah, that one. So... still wanna say you didn't dig through the bin?",
+          ContentEN = "It wasn't— ...you know what, forget it. Thanks for the info anyway.",
           DialogueId = 51006926,
           GUID = "7FB0C0DE",
           NextDialogue = 51006927,
           SpeakNpcId = 700230
         },
         [51006927] = {
-          ContentEN = "It wasn't— ...you know what, forget it. Thanks for the info anyway.",
+          ContentEN = "(A woman in uniform... Could she have something to do with one of the items Margie gave me?)",
           DialogueId = 51006927,
           GUID = "7FB0C0DF",
           NextDialogue = 51006928,
@@ -110749,7 +110772,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           bForbidSkipOptions = true
         },
         [51007303] = {
-          ContentEN = "That's an interesting take. Can you help me get what passion really means?",
+          ContentEN = "That’s an interesting take. Can you help me get what passion really means?",
           DialogueId = 51007303,
           GUID = "7FB101A6",
           NextOptions = {
@@ -110759,14 +110782,14 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 700077
         },
         [51007304] = {
-          ContentEN = "I am a researcher with the Imperial Branch of Archaeological Society of Atlasia. Lately, the research reports I've submitted keeps being returned with the same remark — no passion can be felt within.",
+          ContentEN = "I am a researcher with the Imperial Branch of Archaeological Society of Atlasia. Lately, the research reports I’ve submitted keeps being returned with the same remark — no passion can be felt within.",
           DialogueId = 51007304,
           GUID = "7FB101D0",
           NextDialogue = 51007305,
           SpeakNpcId = 700077
         },
         [51007305] = {
-          ContentEN = "Ugh... I just don't get what the investor want...",
+          ContentEN = "Ugh... I just don’t get what the investor want...",
           DialogueId = 51007305,
           GUID = "7FB101FA",
           NextDialogue = 51007306,
@@ -110780,14 +110803,14 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 100001
         },
         [51007307] = {
-          ContentEN = "Mr Qiu isn't just some investor. He is the investor who uncovered the century-sunken ships in the Republic of Luca, the ruins in Elysium buried for thousands years, and the battlefield in Hyperborea lost to time. Each stands a milestone in the annals of archaeology.",
+          ContentEN = "Mr Qiu isn’t just some investor. He is the investor who uncovered the century-sunken ships in the Republic of Luca, the ruins in Elysium buried for thousands years, and the battlefield in Hyperborea lost to time. Each stands a milestone in the annals of archaeology.",
           DialogueId = 51007307,
           GUID = "7FB1024E",
           NextDialogue = 51007308,
           SpeakNpcId = 700077
         },
         [51007308] = {
-          ContentEN = "(With eyes brimming with reverence, Shirley poured forth tale after tale of Mr Qiu's past.)",
+          ContentEN = "(With eyes brimming with reverence, Shirley poured forth tale after tale of Mr Qiu’s past.)",
           DialogueId = 51007308,
           GUID = "7FB10278",
           NextDialogue = 51007309
@@ -110800,14 +110823,14 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 700077
         },
         [51007310] = {
-          ContentEN = "If it weren't for his backing, the Archaeological Society wouldn't have developed into such a a huge organization spreading across the continent today.",
+          ContentEN = "If it weren’t for his backing, the Archaeological Society wouldn’t have developed into such a a huge organization spreading across the continent today.",
           DialogueId = 51007310,
           GUID = "7FB102CC",
           NextDialogue = 51007311,
           SpeakNpcId = 700077
         },
         [51007311] = {
-          ContentEN = "Ugh... He never really cared before, so why's he suddenly clinging to us now? Is life in retirement truly so idle in Huaxu?",
+          ContentEN = "Ugh... He never really cared before, so why’s he suddenly clinging to us now? Is life in retirement truly so idle in Huaxu?",
           DialogueId = 51007311,
           GUID = "7FB102F6",
           NextDialogue = 51007312,
@@ -110821,7 +110844,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 100001
         },
         [51007313] = {
-          ContentEN = "Of course! A Brief Analysis of the Customer Flow in Icelake's Taverns, The Craft and Evolution of Drink-Brewing in Asphodel, or Observational Records of the Luno Naming Itself the Demon King. Which one would you like to read?",
+          ContentEN = "Of course! A Brief Analysis of the Customer Flow in Icelake’s Taverns, The Craft and Evolution of Drink-Brewing in Asphodel, or Observational Records of the Luno Naming Itself the Demon King. Which one would you like to read?",
           DialogueId = 51007313,
           GUID = "7FB1034A",
           NextOptions = {
@@ -110848,13 +110871,13 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           NextDialogue = 510073152
         },
         [51007316] = {
-          ContentEN = "Please don't give up on me!",
+          ContentEN = "Please don’t give up on me!",
           DialogueId = 51007316,
           GUID = "7FB103C8",
           SpeakNpcId = 700077
         },
         [51007317] = {
-          ContentEN = "This sewer is a real maze. I'd certainly get lost if you didn't lead me in.",
+          ContentEN = "This sewer is a real maze. I’d certainly get lost if you didn’t lead me in.",
           DialogueId = 51007317,
           GUID = "7FB103F2",
           NextDialogue = 51007318,
@@ -110875,7 +110898,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 700172
         },
         [51007320] = {
-          ContentEN = "By the records of the Hyperborean Empire's official chronicles, it was in Icelake that the nation first took root. Perhaps that's why the sewers here are almost as big as the city on the surface.",
+          ContentEN = "By the records of the Hyperborean Empire’s official chronicles, it was in Icelake that the nation first took root. Perhaps that’s why the sewers here are almost as big as the city on the surface.",
           DialogueId = 51007320,
           GUID = "7FB10447",
           NextDialogue = 51007321,
@@ -110889,7 +110912,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 100001
         },
         [51007322] = {
-          ContentEN = "Probably it was expanded with Icelake's growth. I heard that Icelake itself began only as a settlement of Charons.",
+          ContentEN = "Probably it was expanded with Icelake’s growth. I heard that Icelake itself began only as a settlement of Charons.",
           DialogueId = 51007322,
           GUID = "7FB1049A",
           NextDialogue = 51007323,
@@ -110903,14 +110926,14 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 700172
         },
         [51007325] = {
-          ContentEN = "Aaaahhhh, this is way too high! I can't tell if it's higher than the Hall of Adjudication in Huaxu... No, my fear of heights is back...",
+          ContentEN = "Aaaahhhh, this is way too high! I can’t tell if it’s higher than the Hall of Adjudication in Huaxu... No, my fear of heights is back...",
           DialogueId = 51007325,
           GUID = "7FB10542",
           NextDialogue = 51007326,
           SpeakNpcId = 700173
         },
         [51007326] = {
-          ContentEN = "Don't look out there yet. Just stare at your feet and calm down.",
+          ContentEN = "Don’t look out there yet. Just stare at your feet and calm down.",
           DialogueId = 51007326,
           GUID = "7FB1056C",
           NextDialogue = 51007327,
@@ -110952,7 +110975,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 700173
         },
         [51007333] = {
-          ContentEN = "That's why Dis Ⅰ believed that Charons were demons, and led his knights to subdue them, declaring the so-called \"Silverpeace.\"",
+          ContentEN = "That’s why Dis Ⅰ believed that Charons were demons, and led his knights to subdue them, declaring the so-called \"Silverpeace.\"",
           DialogueId = 51007333,
           GUID = "7FB10692",
           NextDialogue = 51007334,
@@ -110987,7 +111010,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 700173
         },
         [51007340] = {
-          ContentEN = "Without you, I'd probably still think Icelake held no archaeological values and write those superficial reports, like a fool overlooking all that matters.",
+          ContentEN = "Without you, I’d probably still think Icelake held no archaeological values and write those superficial reports, like a fool overlooking all that matters.",
           DialogueId = 51007340,
           GUID = "7FB107B8",
           NextDialogue = 51007341,
@@ -111032,7 +111055,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           NextDialogue = 51007346
         },
         [51007346] = {
-          ContentEN = "Master, these are the latest volumes of the Official Chronicles of the Hyperborean Empire, Volume ⅩⅩⅩⅡ, newly received by the Archaeological Society. A humble token of gratitude — hope you won't find it unworthy.",
+          ContentEN = "Master, these are the latest volumes of the Official Chronicles of the Hyperborean Empire, Volume ⅩⅩⅩⅡ, newly received by the Archaeological Society. A humble token of gratitude — hope you won’t find it unworthy.",
           DialogueId = 51007346,
           GUID = "7FB108B4",
           NextDialogue = 51007347,
@@ -115211,27 +115234,27 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 230003
         },
         [51009301] = {
-          ContentEN = "This time, I'll go with pink ones!",
+          Content = "这次就选粉红色的花吧！",
           DialogueId = 51009301,
           GUID = "7FB24972",
           NextDialogue = 51009302,
           SpeakNpcId = 700247
         },
         [51009302] = {
-          ContentEN = "(The woman smiles as she picks up the carefully chosen pink blooms. Looking up, she notices you.)",
+          Content = "（女子面带微笑地拿起她精心挑选的粉色花朵。抬起头来时，她注意到了你。）",
           DialogueId = 51009302,
           GUID = "7FB2499C",
           NextDialogue = 51009303
         },
         [51009303] = {
-          ContentEN = "Hello there. Are you here to buy flowers too?",
+          Content = "你好呀，你也是来买花的吗？",
           DialogueId = 51009303,
           GUID = "7FB249C6",
           NextDialogue = 51009304,
           SpeakNpcId = 700247
         },
         [51009304] = {
-          ContentEN = "Take a look? Pink flowers like these are quite rare, you know.",
+          Content = "要不要看看这一种，粉红色的花可不多见喔。",
           DialogueId = 51009304,
           GUID = "7FB249F0",
           NextOptions = {
@@ -115242,14 +115265,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009305] = {
-          ContentEN = "Could I have them?",
+          Content = "可以送我吗？",
           DialogueId = 51009305,
           GUID = "7FB24A1A",
           ImprPlusId = 1001,
           NextDialogue = 51009306
         },
         [51009306] = {
-          ContentEN = "Hehe, of course!",
+          Content = "呵呵，当然可以！",
           DialogueId = 51009306,
           GUID = "7FB24A44",
           NextDialogue = 51009307,
@@ -115264,81 +115287,81 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
     Loader = function()
       return {
         [51009307] = {
-          ContentEN = "(She reaches out, deftly takes a few more stems from the shelf, pays for them along with her own, and hands them to you.)",
+          Content = "（女子伸出手，轻巧地从货架上多取了几支花，一并结账后递给了你。）",
           DialogueId = 51009307,
           GUID = "7FB24A6E",
           NextDialogue = 51009308
         },
         [51009308] = {
-          ContentEN = "Here you are.",
+          Content = "来，收好了。",
           DialogueId = 51009308,
           GUID = "7FB24A98",
           NextDialogue = 51009309,
           SpeakNpcId = 700247
         },
         [51009309] = {
-          ContentEN = "No need to thank me. Just think of it as you sharing in his good fortune.",
+          Content = "不用谢我，你就当作是沾了他的光吧。",
           DialogueId = 51009309,
           GUID = "7FB24AC2",
           NextDialogue = 51009317,
           SpeakNpcId = 700247
         },
         [51009310] = {
-          ContentEN = "Thank you, I think they're lovely too.",
+          Content = "谢谢你，我也觉得很好看。",
           DialogueId = 51009310,
           GUID = "7FB24AEC",
           ImprPlusId = 1004,
           NextDialogue = 51009311
         },
         [51009311] = {
-          ContentEN = "You can have them if you like.",
+          Content = "如果你喜欢的话，我也可以送给你哦。",
           DialogueId = 51009311,
           GUID = "7FB24B16",
           NextDialogue = 51009312
         },
         [51009312] = {
-          ContentEN = "I'm sure he wouldn't have minded either.",
+          Content = "他一定也会很乐意的。",
           DialogueId = 51009312,
           GUID = "7FB24B40",
           NextDialogue = 51009317
         },
         [51009313] = {
-          ContentEN = "Oh no, I can't stand pink!",
+          Content = "哦不，我讨厌粉红色！",
           DialogueId = 51009313,
           GUID = "7FB24B6A",
           ImprPlusId = 1005,
           NextDialogue = 51009314
         },
         [51009314] = {
-          ContentEN = "Oh dear, I'm so sorry to hear that.",
+          Content = "哎呀，那真是抱歉了。",
           DialogueId = 51009314,
           GUID = "7FB24B94",
           NextDialogue = 51009315,
           SpeakNpcId = 700247
         },
         [51009315] = {
-          ContentEN = "Well, it's true. Not everyone likes pink, I suppose...",
+          Content = "也对，不是每个人都会喜欢粉红色的吧……",
           DialogueId = 51009315,
           GUID = "7FB24BBE",
           NextDialogue = 51009316,
           SpeakNpcId = 700247
         },
         [51009316] = {
-          ContentEN = "Now that you mention it, perhaps he didn't either... But never mind! Let's just pretend he did.",
+          Content = "这么说来，或许他也不喜欢……不过没关系啦！就当做他喜欢好了。",
           DialogueId = 51009316,
           GUID = "7FB24BE8",
           NextDialogue = 51009317,
           SpeakNpcId = 700247
         },
         [51009317] = {
-          ContentEN = "Are these flowers for someone?",
+          Content = "这花是用来送人的吗？",
           DialogueId = 51009317,
           GUID = "7FB24C12",
           NextDialogue = 51009318,
           SpeakNpcId = 100001
         },
         [51009318] = {
-          ContentEN = "Yes. I have a faerie friend, much like you with horns, and these are for him.",
+          Content = "是呀。我有一位和你一样头上长着角的精灵朋友，这花就是要送给他的。",
           DialogueId = 51009318,
           GUID = "7FB24C3C",
           NextOptions = {
@@ -115348,33 +115371,33 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009319] = {
-          ContentEN = "Faerie?",
+          Content = "“精灵？”",
           DialogueId = 51009319,
           GUID = "7FB24C66",
           NextDialogue = 51009320
         },
         [51009320] = {
-          ContentEN = "Oh, that's what he called himself.",
+          Content = "呵呵，那是他的说法。",
           DialogueId = 51009320,
           GUID = "7FB24C90",
           NextDialogue = 51009323,
           SpeakNpcId = 700247
         },
         [51009321] = {
-          ContentEN = "I'm Charon.",
+          Content = "我是卡戎。",
           DialogueId = 51009321,
           GUID = "7FB24CBA",
           NextDialogue = 51009322
         },
         [51009322] = {
-          ContentEN = "Well, \"faerie\" was his word for it.",
+          Content = "嗯，“精灵”是他的说法。",
           DialogueId = 51009322,
           GUID = "7FB24CE4",
           NextDialogue = 51009323,
           SpeakNpcId = 700247
         },
         [51009323] = {
-          ContentEN = "Speaking of which,has the wind picked up outside?",
+          Content = "说起来，外面起风了吗？",
           DialogueId = 51009323,
           GUID = "7FB24D0E",
           NextOptions = {
@@ -115385,46 +115408,46 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009324] = {
-          ContentEN = "I didn't notice.",
+          Content = "我没注意。",
           DialogueId = 51009324,
           GUID = "7FB24D38",
           NextDialogue = 51009325
         },
         [51009325] = {
-          ContentEN = "I see... No matter, I'll check for myself later.",
+          Content = "这样啊……没关系，我等会儿自己出去确认一下。",
           DialogueId = 51009325,
           GUID = "7FB24D62",
           NextDialogue = 51009330,
           SpeakNpcId = 700247
         },
         [51009326] = {
-          ContentEN = "It's quite windy.",
+          Content = "正在刮大风。",
           DialogueId = 51009326,
           GUID = "7FB24D8C",
           NextDialogue = 51009327
         },
         [51009327] = {
-          ContentEN = "That's wonderful.",
+          Content = "那就太好了。",
           DialogueId = 51009327,
           GUID = "7FB24DB6",
           NextDialogue = 51009330,
           SpeakNpcId = 700247
         },
         [51009328] = {
-          ContentEN = "I can make wind, even if there isn't any.",
+          Content = "没有风我也可以制造风。",
           DialogueId = 51009328,
           GUID = "7FB24DE0",
           NextDialogue = 51009329
         },
         [51009329] = {
-          ContentEN = "Really? You're that powerful? That's very kind of you.",
+          Content = "是吗，原来你这么厉害呀！谢谢你的好意。",
           DialogueId = 51009329,
           GUID = "7FB24E0A",
           NextDialogue = 51009330,
           SpeakNpcId = 700247
         },
         [51009330] = {
-          ContentEN = "I need to wait for the wind to pick up before I can give him the flowers.",
+          Content = "我得等到起风的时候，才能把花送给他呢。",
           DialogueId = 51009330,
           GUID = "7FB24E34",
           NextOptions = {
@@ -115435,53 +115458,53 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009331] = {
-          ContentEN = "Why do you need the wind?",
+          Content = "为什么一定要等起风？",
           DialogueId = 51009331,
           GUID = "7FB24E5E",
           NextDialogue = 51009332
         },
         [51009332] = {
-          ContentEN = "Because when the wind blows, the flowers can float up into the sky.",
+          Content = "因为起风的时候，花才会往空中飘呀。",
           DialogueId = 51009332,
           GUID = "7FB24E88",
           NextDialogue = 51009337,
           SpeakNpcId = 700247
         },
         [51009333] = {
-          ContentEN = "Is your friend a wind faerie, by any chance?",
+          Content = "莫非你的朋友是风精灵吗？",
           DialogueId = 51009333,
           GUID = "7FB24EB2",
           NextDialogue = 51009334
         },
         [51009334] = {
-          ContentEN = "An interesting thought! Perhaps he is.",
+          Content = "呵呵，很有意思的想法！说不定真的是喔。",
           DialogueId = 51009334,
           GUID = "7FB24EDC",
           NextDialogue = 51009337,
           SpeakNpcId = 700247
         },
         [51009335] = {
-          ContentEN = "Is this some special kind of ritual?",
+          Content = "这是某种特殊的仪式吗？",
           DialogueId = 51009335,
           GUID = "7FB24F06",
           NextDialogue = 51009336
         },
         [51009336] = {
-          ContentEN = "Well... it's a ritual for sending thoughts to someone.",
+          Content = "嗯……是传递思念的仪式。",
           DialogueId = 51009336,
           GUID = "7FB24F30",
           NextDialogue = 51009337,
           SpeakNpcId = 700247
         },
         [51009337] = {
-          ContentEN = "That friend of mine... he went up to the sky several years ago.",
+          Content = "我的那位朋友，在几年前就去天上啦。",
           DialogueId = 51009337,
           GUID = "7FB24F5A",
           NextDialogue = 51009338,
           SpeakNpcId = 700247
         },
         [51009338] = {
-          ContentEN = "Today is the annual day of remembrance.",
+          Content = "今天是每年一次的纪念日。",
           DialogueId = 51009338,
           GUID = "7FB24F84",
           NextOptions = {
@@ -115491,7 +115514,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009339] = {
-          ContentEN = "(Remind her of Charon customs.)",
+          Content = "（提醒她卡戎人的习俗。）",
           DialogueId = 51009339,
           FailDialogue = 51009340,
           GUID = "7FB24FAE",
@@ -115499,46 +115522,46 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           NextDialogue = 51009341
         },
         [51009340] = {
-          ContentEN = "(For a moment, you can't quite recall the details of the custom.)",
+          Content = "（你一时记不起习俗的细节。）",
           DialogueId = 51009340,
           GUID = "7FB24FD8"
         },
         [51009341] = {
-          ContentEN = "In Charon belief, the Misty Sea is where souls go. If you wish to remember him, sending the flowers onto the water would make more sense.",
+          Content = "在卡戎人的观念中，雾海才是灵魂的归去之地。如果要纪念他，将花送往水中更加合理。",
           DialogueId = 51009341,
           GUID = "7FB25002",
           NextDialogue = 51009342,
           SpeakNpcId = 100001
         },
         [51009342] = {
-          ContentEN = "Well... I know. But he was different.",
+          Content = "嗯……我知道。但是，他不一样。",
           DialogueId = 51009342,
           GUID = "7FB2502C",
           NextDialogue = 51009343,
           SpeakNpcId = 700247
         },
         [51009343] = {
-          ContentEN = "(The woman falls silent, gazing out the window, her eyes filled with a gentle nostalgia.)",
+          Content = "（女子沉默了片刻，看向窗外，眼神中流露着温柔的怀念。）",
           DialogueId = 51009343,
           GUID = "7FB25056",
           NextDialogue = 51009344
         },
         [51009344] = {
-          ContentEN = "I first met him outside the city. We were the same age, and our personalities just clicked, so we became fast friends.",
+          Content = "我第一次遇见他是在城外。我们年纪相仿，性格也很像，所以很快就成了好朋友。",
           DialogueId = 51009344,
           GUID = "7FB25080",
           NextDialogue = 51009345,
           SpeakNpcId = 700247
         },
         [51009345] = {
-          ContentEN = "He told me he was a \"faerie\" from the sky... Hehe, truthfully, I knew all along he was Charon. But every time I saw him trying so hard to keep up the story, I couldn't bear to spoil it for him.",
+          Content = "他对我说自己从是天上来的“精灵”……呵呵，其实我早知道他是卡戎人，但每次看到他那么努力地圆谎，实在是舍不得戳穿。",
           DialogueId = 51009345,
           GUID = "7FB250AA",
           NextDialogue = 51009346,
           SpeakNpcId = 700247
         },
         [51009346] = {
-          ContentEN = "Besides, he really was just like a faerie from the stories — he knew so many things I didn't, and always had endless fascinating tales to tell.",
+          Content = "而且，他确实就像故事里的精灵一样，知道许多我不知道的事，永远有讲不完的新奇见闻。",
           DialogueId = 51009346,
           GUID = "7FB250D4",
           NextOptions = {
@@ -115548,61 +115571,61 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009347] = {
-          ContentEN = "Sounds like a wonderful friend.",
+          Content = "听起来是个很棒的朋友。",
           DialogueId = 51009347,
           GUID = "7FB250FE",
           NextDialogue = 51009348
         },
         [51009348] = {
-          ContentEN = "Yes! He's the best friend ever.",
+          Content = "嗯！他是最棒的朋友。",
           DialogueId = 51009348,
           GUID = "7FB25128",
           NextDialogue = 51009351,
           SpeakNpcId = 700247
         },
         [51009349] = {
-          ContentEN = "So he was playing the part of a faerie his whole life?",
+          Content = "所以他从小到大一直在扮演精灵吗？",
           DialogueId = 51009349,
           GUID = "7FB25152",
           NextDialogue = 51009350
         },
         [51009350] = {
-          ContentEN = "Sounds a bit childish when you put it like that, doesn't it?",
+          Content = "呵呵，听起来有点幼稚，对吧？",
           DialogueId = 51009350,
           GUID = "7FB2517C",
           NextDialogue = 51009351,
           SpeakNpcId = 700247
         },
         [51009351] = {
-          ContentEN = "It always bothered me a little... wondering how we would finally talk about it, once we grew up and passed the age where believing in fairy tales came naturally.",
+          Content = "我心里一直都有些苦恼——等到我们都长大，过了能理所当然地相信童话的年纪以后，要怎么开口说破这件事？",
           DialogueId = 51009351,
           GUID = "7FB251A6",
           NextDialogue = 51009352,
           SpeakNpcId = 700247
         },
         [51009352] = {
-          ContentEN = "Whether I brought it up or he did, just imagining it felt so awkward...",
+          Content = "无论是我先开口还是他先开口，想象一下都很尴尬呀……",
           DialogueId = 51009352,
           GUID = "7FB251D0",
           NextDialogue = 51009353,
           SpeakNpcId = 700247
         },
         [51009353] = {
-          ContentEN = "But in the end, we never reached that point. He left before we came of age.",
+          Content = "但最后我们并没有走到那个时间点。他在成年之前便离开了。",
           DialogueId = 51009353,
           GUID = "7FB251FA",
           NextDialogue = 51009354,
           SpeakNpcId = 700247
         },
         [51009354] = {
-          ContentEN = "Do you think... he might have chosen to leave at that precise time because he knew? What a gentle soul he was...",
+          Content = "你说，他会不会是想到了这一点，才故意选在那个时候离开的？呵呵，真是个温柔的人啊……",
           DialogueId = 51009354,
           GUID = "7FB25224",
           NextDialogue = 51009355,
           SpeakNpcId = 700247
         },
         [51009355] = {
-          ContentEN = "(The woman strokes the soft petals, gently lowering her gaze. You can't quite decipher the emotion on her face.)",
+          Content = "（女子抚摸着柔软的花瓣，轻轻垂下了眼眸。你分辨不出她脸上的情绪。）",
           DialogueId = 51009355,
           GUID = "7FB2524E",
           NextOptions = {
@@ -115612,97 +115635,97 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           }
         },
         [51009356] = {
-          ContentEN = "Sorry for your loss.",
+          Content = "抱歉，请节哀……",
           DialogueId = 51009356,
           GUID = "7FB25278",
           ImprPlusId = 1002,
           NextDialogue = 51009357
         },
         [51009357] = {
-          ContentEN = "It's okay. It's been years.",
+          Content = "没关系，已经过去很多年啦。",
           DialogueId = 51009357,
           GUID = "7FB252A2",
           NextDialogue = 51009362,
           SpeakNpcId = 700247
         },
         [51009358] = {
-          ContentEN = "You're both incredibly kind people.",
+          Content = "你们都是非常温柔的人。",
           DialogueId = 51009358,
           GUID = "7FB252CC",
           ImprPlusId = 1004,
           NextDialogue = 51009359
         },
         [51009359] = {
-          ContentEN = "Then... thank you.",
+          Content = "呵呵，谢谢你。",
           DialogueId = 51009359,
           GUID = "7FB252F6",
           NextDialogue = 51009362,
           SpeakNpcId = 700247
         },
         [51009360] = {
-          ContentEN = "Coming of age... Did he start showing signs of Deterioration?",
+          Content = "成年这个时间点……难道说，他是出现了秽蚀的征兆？",
           DialogueId = 51009360,
           GUID = "7FB25320",
           ImprPlusId = 1003,
           NextDialogue = 51009361
         },
         [51009361] = {
-          ContentEN = "Well, that's what I thought. After all, he left just before he turned eighteen.",
+          Content = "嗯，我也这么想。毕竟他离开的时候，刚好是快满十八岁。",
           DialogueId = 51009361,
           GUID = "7FB2534A",
           NextDialogue = 51009362,
           SpeakNpcId = 700247
         },
         [51009362] = {
-          ContentEN = "He had foreseen his own fate. The last time we met, he told me he was returning to his homeland in the sky and wouldn't be able to visit me anymore.",
+          Content = "他早就预料到了自己的结局……最后见面的那次，他对我说，自己将要回到天上的故乡，从今往后不能再来找我。",
           DialogueId = 51009362,
           GUID = "7FB25374",
           NextDialogue = 51009363,
           SpeakNpcId = 700247
         },
         [51009363] = {
-          ContentEN = "It was the most poorly told lie of his life... His eyes were already brimming with tears, yet he forced a smile and said to me in the cheeriest voice—",
+          Content = "那是他撒谎撒得最拙劣的一次……明明眼泪已经在眼眶里打转了，还拼命挤出一副微笑的表情，用愉快的语调对我说——",
           DialogueId = 51009363,
           GUID = "7FB2539E",
           NextDialogue = 51009364,
           SpeakNpcId = 700247
         },
         [51009364] = {
-          ContentEN = "\"Please don't be sad. Even though I can't come to see you anymore, I'll be watching over you from above the clouds, always...\"",
+          Content = "“请你不要感到难过。虽然我不能再来见你，但我会在云端之上一直、一直注视着你……”",
           DialogueId = 51009364,
           GUID = "7FB253C8",
           NextDialogue = 51009365,
           SpeakNpcId = 700247
         },
         [51009365] = {
-          ContentEN = "\"Whenever you look up at the sky, your thoughts will reach me on the wind.\"",
+          Content = "“无论何时，只要你抬头望向天空，你的思念就能够随风抵达我的身边。”",
           DialogueId = 51009365,
           GUID = "7FB253F2",
           NextDialogue = 51009366,
           SpeakNpcId = 700247
         },
         [51009366] = {
-          ContentEN = "(As she says this, the woman smiles. Is it a trick of the light, or is there a faint glimmer in her eyes—a tear, or perhaps a reflection from the sun through the window pane?)",
+          Content = "（说到这里，女子露出了微笑。不知是否是错觉，她的眼中隐约闪过了一丝光亮——那究竟是泪光，还是从玻璃窗中洒下的阳光呢？）",
           DialogueId = 51009366,
           GUID = "7FB2541C",
           NextDialogue = 51009367
         },
         [51009367] = {
-          ContentEN = "So, that's why you cast the flowers into the sky?",
+          Content = "所以，你才会把花撒向天空……？",
           DialogueId = 51009367,
           GUID = "7FB25446",
           NextDialogue = 51009368,
           SpeakNpcId = 100001
         },
         [51009368] = {
-          ContentEN = "Indeed. Since that was the story he wanted to tell me, I choose to believe that his final resting place isn't the Misty Sea, but the vast blue sky.",
+          Content = "嗯。既然那是他想要告诉我的故事，那么我也愿意相信，他的归处不是雾海，而是辽阔的蓝天。",
           DialogueId = 51009368,
           GUID = "7FB25470",
           NextDialogue = 51009369,
           SpeakNpcId = 700247
         },
         [51009369] = {
-          ContentEN = "As long as I scatter the petals to the wind, he'll feel my thoughts.",
+          Content = "只要将花瓣撒向天空，他就能感受到我的思念。",
           DialogueId = 51009369,
           GUID = "7FB2549A",
           NextOptions = {
@@ -115712,53 +115735,53 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009370] = {
-          ContentEN = "I hope he receives your flowers.",
+          Content = "如果他能收到你的花就好了。",
           DialogueId = 51009370,
           GUID = "7FB254C4",
           NextDialogue = 51009372
         },
         [51009371] = {
-          ContentEN = "I'm sure he will receive them.",
+          Content = "他一定会收到你的花的。",
           DialogueId = 51009371,
           GUID = "7FB254EE",
           NextDialogue = 51009372
         },
         [51009372] = {
-          ContentEN = "...Thank you.",
+          Content = "嗯，谢谢你！",
           DialogueId = 51009372,
           GUID = "7FB25518",
           NextDialogue = 51009373,
           SpeakNpcId = 700247
         },
         [51009373] = {
-          ContentEN = "Looking back now, I think he probably knew all along that I had seen through his little charade.",
+          Content = "现在回想起来，他大概也早就知道我已经看穿了他的谎话吧。",
           DialogueId = 51009373,
           GUID = "7FB25542",
           NextDialogue = 51009374,
           SpeakNpcId = 700247
         },
         [51009374] = {
-          ContentEN = "A story woven from lies, ending with a lie... doesn't that seem rather fitting, in a way?",
+          Content = "一个由谎言编织的故事，最后有了一个用谎言写就的结局……不也算是恰如其分吗？",
           DialogueId = 51009374,
           GUID = "7FB2556C",
           NextDialogue = 51009375,
           SpeakNpcId = 700247
         },
         [51009375] = {
-          ContentEN = "Right, I'd best be off outside the city walls to keep my promise to him before it gets dark.",
+          Content = "好啦，我要趁天还没黑，去城外完成和他的约定。",
           DialogueId = 51009375,
           GUID = "7FB25596",
           NextDialogue = 51009376,
           SpeakNpcId = 700247
         },
         [51009376] = {
-          ContentEN = "Goodbye, little faerie. May your own story have a true and happy ending.",
+          Content = "再见了，可爱的小精灵。祝愿你的故事有一个真实而美满的结局。",
           DialogueId = 51009376,
           GUID = "7FB255C0",
           SpeakNpcId = 700247
         },
         [51009377] = {
-          ContentEN = "Hello again, little faerie. Lovely weather we're having, isn't it?",
+          Content = "哎呀，小精灵，又见面了。今天的天色很美吧？",
           DialogueId = 51009377,
           GUID = "7FB255EA",
           SpeakNpcId = 700247
@@ -117047,7 +117070,7 @@ TurnTo{TurnToDescription{"700306:n(700300)"}}
           }
         },
         [51009513] = {
-          ContentEN = "(A kidnapping appears to be unfolding. Though Violetta has decided to turn to the Escort, perhaps you should keep an eye.)",
+          ContentEN = "(A kidnapping appears to be unfolding before your eyes. Though Violetta has decided to turn to the Escort, perhaps you should keep an eye on the case and see how it plays out.)",
           DialogueId = 51009513,
           GUID = "7FB26C3A",
           Scripts = "PlayOrStopBGM{_delay{10},PlayType{\"Stop\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/cbt02/0043_story_empire\"}}"
@@ -122773,7 +122796,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1002/510104/7FB2FF10"
         },
         [51010409] = {
-          ContentEN = "Still — I was lucky to arrive just in time for the Silvercandle Carnival. It's the city's one day when even paupers like me can step through the theatre doors for free. Tragic, though... to hear there'd been a shootout inside. Absolutely dreadful.",
+          ContentEN = "Still — I was lucky to arrive just in time for the Silvercandle Carnival. It's the city's one day when even paupers like me can step through the theatre doors for free. Unlucky, though... to hear there'd been a shootout inside. Absolutely dreadful.",
           DialogueId = 51010409,
           GUID = "7FB2FF3A",
           NextDialogue = 51010410,
@@ -124355,7 +124378,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 700338
         },
         [51011601] = {
-          ContentEN = "The end draws near... it draws near...",
+          Content = "末日将至啊……末日将至……",
           DialogueId = 51011601,
           GUID = "7FB3C2CA",
           SpeakNpcId = 700337
@@ -124445,7 +124468,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           NextDialogue = 51012109
         },
         [51012109] = {
-          ContentEN = "You remembered my scent, didn't you? And, brought me a gift in return?",
+          ContentEN = "You remembered my scent, didn’t you? And, brought me a gift in return?",
           DialogueId = 51012109,
           GUID = "7FB41622",
           NextDialogue = 51012110,
@@ -124482,7 +124505,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           NextDialogue = 51012114
         },
         [51012114] = {
-          ContentEN = "(The cat nods and bounces away. You may not know what it'll bring you next time, yet you know you'll see it around at the Sanctuary for a long while.)",
+          ContentEN = "(The cat nods and bounces away. You may not know what it’ll bring you next time, yet you know you’ll see it around at the Sanctuary for a long while.)",
           DialogueId = 51012114,
           GUID = "7FB416F4"
         },
@@ -124505,7 +124528,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           NextDialogue = 51012204
         },
         [51012204] = {
-          ContentEN = "{catname} it is! That'll be your name from now on!",
+          ContentEN = "{catname} it is! That’ll be your name from now on!",
           DialogueId = 51012204,
           GUID = "7FB425B8",
           SpeakNpcId = 100001
@@ -128750,7 +128773,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           SpeakNpcId = 818041
         },
         [71005101] = {
-          ContentEN = "Come, fish. Come.",
+          Content = "鱼来，鱼来。",
           DialogueId = 71005101,
           GUID = "B1C0EAA3",
           SpeakNpcId = 818045
@@ -128998,14 +129021,14 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           SpeakNpcId = 818045
         },
         [71005137] = {
-          ContentEN = "(He points at you.)",
+          Content = "（男人说完指了指你。）",
           DialogueId = 71005137,
           GUID = "B1C0FEFC",
           NextDialogue = 71005138,
           SpeakNpcId = 800006
         },
         [71005138] = {
-          ContentEN = "Not every fish has fins, you know. Sometimes all it takes is a few cryptic words and a strange act or two... And something always bites.",
+          Content = "钓鱼钓的也可以不是鱼。撒下几句话，做一些奇怪的事，就会有无数鱼争相咬钩。",
           DialogueId = 71005138,
           GUID = "B1C0FEFD",
           NextDialogue = 71005139,
@@ -129118,14 +129141,14 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           SpeakNpcId = 800006
         },
         [71005212] = {
-          ContentEN = "Yup. Because they are both lucky coins. Not made by magic — made by kindness.",
+          Content = "是呀，幸福硬币就是我们手里的铜币。它不是魔法创造出来的宝贝，而是诞生自大家的善意。",
           DialogueId = 71005212,
           GUID = "B1C10B9F",
           NextDialogue = 71005213,
           SpeakNpcId = 818048
         },
         [71005213] = {
-          ContentEN = "Just a few spare coins for a little girl's smile. Honestly? That might be one of the best trades you'll ever find.",
+          Content = "一枚幸福硬币就能买到她的笑容，这么轻松的买卖可不多见呀。",
           DialogueId = 71005213,
           GUID = "B1C10BA0",
           SpeakNpcId = 818048
@@ -131756,7 +131779,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           bAllowClickSkipScript = false
         },
         [72002902] = {
-          ContentEN = "Eek! Please don't take that treasure chest!",
+          Content = "咿呀——！请不要拿走这个宝箱。",
           DialogueId = 72002902,
           FacialId = {
             [1] = "820000:PetPan_Wink"
@@ -131766,7 +131789,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           SpeakNpcId = 820000
         },
         [72002903] = {
-          ContentEN = "My home's been taken over by nasty rats! I was gonna use these coins to hire a brave little cat to chase them away.",
+          Content = "我的家被坏老鼠占领了，我正打算用这些钱去雇一只勇敢的小猫，帮我赶跑老鼠。",
           DialogueId = 72002903,
           FacialId = {
             [1] = "820000:PetPan_Dizzy"
@@ -131799,7 +131822,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           bAllowClickSkipScript = false
         },
         [72003002] = {
-          ContentEN = "Whoa, you're amazing! Whoosh—swish—BAM! You wiped out all the rats!",
+          Content = "哇，你好厉害，唰唰——咻咻——几下就把附近的老鼠全消灭了。",
           DialogueId = 72003002,
           FacialId = {
             [1] = "820000:PetPan_Smile"
@@ -131809,7 +131832,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           SpeakNpcId = 820000
         },
         [72003003] = {
-          ContentEN = "Thank you, you can have this chest!",
+          Content = "那么，这个宝箱就送给你啦。",
           DialogueId = 72003003,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -132243,7 +132266,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           bAllowClickSkipScript = false
         },
         [72003902] = {
-          ContentEN = "The birds that move, the birds that don't, and the people who don't move are all still here.",
+          Content = "会动的鸟，不会动的鸟，还有不会动的人都还在这里。",
           DialogueId = 72003902,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -132254,7 +132277,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           SpeakNpcId = 820000
         },
         [72003903] = {
-          ContentEN = "But the people who moved are all gone... Will they ever come back?",
+          Content = "但是会动的人都离开了，他们还会回来吗？",
           DialogueId = 72003903,
           FacialId = {
             [1] = "820000:PetPan_Speechless"
@@ -132288,7 +132311,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           bAllowClickSkipScript = false
         },
         [72004002] = {
-          ContentEN = "Every light that goes out is someone who didn't make it home...",
+          Content = "每一盏熄灭的灯都是一个没有回家的人……",
           DialogueId = 72004002,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -132298,7 +132321,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           SpeakNpcId = 820000
         },
         [72004003] = {
-          ContentEN = "Then every light that turns on must be someone who found their way back, right?",
+          Content = "那么每一盏亮起的灯都会是一个回到了家的人吧？",
           DialogueId = 72004003,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -132332,7 +132355,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           bAllowClickSkipScript = false
         },
         [72004102] = {
-          ContentEN = "Eeeek! You broke my little house!",
+          Content = "咿呀！你怎么把我的小窝打碎了。",
           DialogueId = 72004102,
           FacialId = {
             [1] = "820000:PetPan_Dizzy"
@@ -132343,7 +132366,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           SpeakNpcId = 820000
         },
         [72004103] = {
-          ContentEN = "They say sleeping on a super hard bed can help train your willpower!",
+          Content = "据说睡在硬邦邦的床上可以磨炼意志力哦。",
           DialogueId = 72004103,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -132377,7 +132400,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           bAllowClickSkipScript = false
         },
         [72004202] = {
-          ContentEN = "What's the point of stacking boxes so high?",
+          Content = "箱子堆在这么高的地方有什么用呢？",
           DialogueId = 72004202,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -132388,7 +132411,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           SpeakNpcId = 820000
         },
         [72004203] = {
-          ContentEN = "You should just let me have them for my house!",
+          Content = "不如就让给我当房子吧。",
           DialogueId = 72004203,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -132422,7 +132445,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           bAllowClickSkipScript = false
         },
         [72004302] = {
-          ContentEN = "Floaty float, I'm a free little ducky!",
+          Content = "飘啊飘，我是一只自由的小鸭子~",
           DialogueId = 72004302,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -132433,7 +132456,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           SpeakNpcId = 820000
         },
         [72004303] = {
-          ContentEN = "Eek! Why did you drain my swimming pool?",
+          Content = "咿呀！你怎么把我游泳池里的水放掉了？",
           DialogueId = 72004303,
           FacialId = {
             [1] = "820000:PetPan_Dizzy"
@@ -132467,7 +132490,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           bAllowClickSkipScript = false
         },
         [72004402] = {
-          ContentEN = "Hiiii, little mushroom-picking human!",
+          Content = "咿呀，采蘑菇的小人类你好~",
           DialogueId = 72004402,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -132477,7 +132500,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           SpeakNpcId = 820000
         },
         [72004403] = {
-          ContentEN = "Mushrooms are yummy, but you have to make sure they're fully cooked, okay?",
+          Content = "蘑菇虽然美味，但一定要等完全煮熟以后再吃哦。",
           DialogueId = 72004403,
           FacialId = {
             [1] = "820000:PetPan_Cry"
@@ -132511,7 +132534,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           bAllowClickSkipScript = false
         },
         [72004502] = {
-          ContentEN = "Dum-dum, dum-dum-dum!",
+          Content = "咚咚，咚咚咚！",
           DialogueId = 72004502,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -132521,7 +132544,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           SpeakNpcId = 820000
         },
         [72004503] = {
-          ContentEN = "I'm learning to play this pipe organ!",
+          Content = "我正在学习演奏这台管道琴。",
           DialogueId = 72004503,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -132555,7 +132578,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           bAllowClickSkipScript = false
         },
         [72004602] = {
-          ContentEN = "Ta-daa! Congrats on finding my secret base!",
+          Content = "咿呀，恭喜你发现了我的秘密基地~",
           DialogueId = 72004602,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -132565,7 +132588,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           SpeakNpcId = 820000
         },
         [72004603] = {
-          ContentEN = "The vines, the water plants, the pond, and me... we're our own little ecosystem!",
+          Content = "藤蔓、水草、池塘和我，是一个小小生态圈。",
           DialogueId = 72004603,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -132721,6 +132744,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           GUID = "C8462C3A",
           GuideFacialId = "Smile",
           HeadIconType = "Npc",
+          NextDialogue = 80001002,
           SpeakNpcId = 700142,
           VoiceName = "voice/$Locale$/story/1201/120111/C8462C3A"
         },
@@ -132730,6 +132754,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           GUID = "C8462C64",
           GuideFacialId = "Shock",
           HeadIconType = "Npc",
+          NextDialogue = 80001003,
           SpeakNpcId = 700142,
           VoiceName = "voice/$Locale$/story/1201/120111/C8462C64"
         },
@@ -132939,7 +132964,7 @@ PlayAnimation{_delay{1.5},ActorId{211001},AnimationId{"Feina_Story_Wish_End"},Du
         },
         [80001024] = {
           Camera = "-4.021118,-147.850586,140.854248,0.000064,-3.469995,89.231857,35.0,160.025635,false,Manual,12.0",
-          ContentEN = "(Still missing some feathers... Should we head back and search again?)",
+          Content = "（好像还没有把小夜莺的羽毛收集全……要再回去找找看吗？）",
           DialogueId = 80001024,
           Duration = 12,
           GUID = "C8462FD7",
@@ -140717,7 +140742,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           VoiceName = "voice/$Locale$/inv/Feina/004/C865DD1E"
         },
         [80050452] = {
-          ContentEN = "Even though the endings were normally good... why must they experience sadness first? Why couldn't they be happy all the time?",
+          ContentEN = "Even though the endings were normally good... but why must they experience sadness first? Why couldn't they be happy all the time?",
           DialogueId = 80050452,
           GUID = "C865DD48",
           NextOptions = {
@@ -143314,7 +143339,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
         },
         [80070206] = {
           Camera = "-63.979523,366.17868,112.912109,0.000001,-2.799961,-78.5989,35.000008,100000.0,false,DoNotOverride,2.8",
-          ContentEN = "You mean the \"Divine Elegy\" offensive against the Elysian Church more than 20 years ago, right? In that battle, the 13th Legion stormed their tower in prototype airships. That's a story even kids in the street can sing a verse or two about.",
+          ContentEN = "You mean the Divine Elegy offensive against the Elysian Church 23 years ago, right? In that battle, the 13th Legion stormed their tower in prototype airships. That's a story even kids in the street can sing a verse or two about.",
           DefaultLookAt = "TalkNpc",
           DialogueId = 80070206,
           GUID = "C872862C",
@@ -143381,7 +143406,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           VoiceName = "voice/$Locale$/inv/Xibi/002/C87286FE"
         },
         [80070212] = {
-          ContentEN = "My last memory of that battle is piloting an out-of-control airship, weaving through relentless artillery fire and magical barrages across the border.",
+          ContentEN = "My last memory of that battle is piloting an out-of-control airship, carrying a severely wounded comrade, weaving through relentless artillery fire and magical barrages across the border.",
           DefaultLookAt = "TalkNpc",
           DialogueId = 80070212,
           GUID = "C8728728",
@@ -163626,7 +163651,7 @@ Kindly acknowledge receipt at your earliest convenience."]],
           VoiceName = "voice/$Locale$/inv/Dafu/002/C8B90B1E"
         },
         [80180244] = {
-          ContentEN = "{空格}",
+          Content = "（子弹上膛声）",
           DialogueId = 80180244,
           GUID = "C8B90B48",
           IsBlack = 1,
@@ -174387,7 +174412,6 @@ Ah, an original composition of yours... Such an enviable gift. Might I have the 
           TalkActionId = {
             [1] = "81501:Agree"
           },
-          VoiceName = "voice/$Locale$/char/Baonu/vo_topic_03_4",
           bForbidSkipOptions = true
         },
         [90250400] = {
@@ -178278,7 +178302,7 @@ However, her teacher is displeased with her momentary distraction.]],
           NextDialogue = 510073026
         },
         [510073024] = {
-          ContentEN = "I don't even know what I really want...",
+          ContentEN = "I don’t even know what I really want...",
           DialogueId = 510073024,
           GUID = "7FB1017D",
           NextDialogue = 51007303,
@@ -178292,7 +178316,7 @@ However, her teacher is displeased with her momentary distraction.]],
           SpeakNpcId = 700077
         },
         [510073026] = {
-          ContentEN = "Oh, I see! No wonder I didn't get it.",
+          ContentEN = "Oh, I see! No wonder I didn’t get it.",
           DialogueId = 510073026,
           GUID = "7FB1017F",
           NextDialogue = 51007303,
@@ -178311,7 +178335,7 @@ However, her teacher is displeased with her momentary distraction.]],
           Scripts = "SetOutport{FinishType{\"Fail\"}}"
         },
         [510073131] = {
-          ContentEN = "For an academic report, it doesn't really sound that academic.",
+          ContentEN = "For an academic report, it doesn’t really sound that academic.",
           DialogueId = 510073131,
           GUID = "510073131.0",
           ImprPlusId = 1005,
@@ -178325,7 +178349,7 @@ However, her teacher is displeased with her momentary distraction.]],
           NextDialogue = 51007314
         },
         [510073141] = {
-          ContentEN = "That's it — you see nothing up top and give up right away. No wonder the investor said he can't feel any passion.",
+          ContentEN = "That’s it — you see nothing up top and give up right away. No wonder the investor said he can’t feel any passion.",
           DialogueId = 510073141,
           GUID = "510073141.0",
           ImprPlusId = 1002,
@@ -178333,7 +178357,7 @@ However, her teacher is displeased with her momentary distraction.]],
           SpeakNpcId = 100001
         },
         [510073142] = {
-          ContentEN = "It's not like I want it this way! Passion, what is it? I am sure haven't found it here in Icelake.",
+          ContentEN = "It’s not like I want it this way! Passion, what is it? I am sure haven’t found it here in Icelake.",
           DialogueId = 510073142,
           GUID = "510073142.0",
           NextOptions = {
@@ -178343,27 +178367,27 @@ However, her teacher is displeased with her momentary distraction.]],
           SpeakNpcId = 700077
         },
         [510073151] = {
-          ContentEN = "Ugh... if I had one, do you think I'd still be stuck here worrying?",
+          ContentEN = "Ugh... if I had one, do you think I’d still be stuck here worrying?",
           DialogueId = 510073151,
           GUID = "510073151.0",
           SpeakNpcId = 700077
         },
         [510073152] = {
-          ContentEN = "I can't find one. Phoxhunters here only care about fights and drinks. I once asked if there were any historic ruins nearby, only to be asked back whether their stewpots counted as relics.",
+          ContentEN = "I can’t find one. Phoxhunters here only care about fights and drinks. I once asked if there were any historic ruins nearby, only to be asked back whether their stewpots counted as relics.",
           DialogueId = 510073152,
           GUID = "510073152",
           NextDialogue = 510073156,
           SpeakNpcId = 700077
         },
         [510073153] = {
-          ContentEN = "Alright, let's see if we can dig up some inspiration for you.",
+          ContentEN = "Alright, let’s see if we can dig up some inspiration for you.",
           DialogueId = 510073153,
           GUID = "510073153",
           ImprPlusId = 1004,
           NextDialogue = 51007316
         },
         [510073154] = {
-          ContentEN = "Pay up, and I'll help you brainstorm.",
+          ContentEN = "Pay up, and I’ll help you brainstorm.",
           DialogueId = 510073154,
           GUID = "510073154",
           ImprPlusId = 1001,
@@ -178395,7 +178419,7 @@ However, her teacher is displeased with her momentary distraction.]],
           SpeakNpcId = 700172
         },
         [510073232] = {
-          ContentEN = "I could probably write a report on this. It's kind of more like urban history... I wonder if anyone has already worked on it.",
+          ContentEN = "I could probably write a report on this. It’s kind of more like urban history... I wonder if anyone has already worked on it.",
           DialogueId = 510073232,
           GUID = "7FB104C6",
           NextDialogue = 510073233,
@@ -178415,7 +178439,7 @@ However, her teacher is displeased with her momentary distraction.]],
           NextDialogue = 51007344
         },
         [510073412] = {
-          ContentEN = "I'm just an ordinary Phoxhunter passing by.",
+          ContentEN = "I’m just an ordinary Phoxhunter passing by.",
           DialogueId = 510073412,
           GUID = "510073412.0",
           ImprPlusId = 1002,
@@ -178429,7 +178453,7 @@ However, her teacher is displeased with her momentary distraction.]],
           NextDialogue = 51007342
         },
         [510073441] = {
-          ContentEN = "I get it. You're trying to keep your identity secret from others.",
+          ContentEN = "I get it. You’re trying to keep your identity secret from others.",
           DialogueId = 510073441,
           GUID = "510073441.0",
           NextDialogue = 51007342,
@@ -178631,7 +178655,7 @@ However, her teacher is displeased with her momentary distraction.]],
           NextDialogue = 51009486
         },
         [510095121] = {
-          ContentEN = "…",
+          Content = "……",
           DialogueId = 510095121,
           GUID = "510095121.0",
           NextOptions = {

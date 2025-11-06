@@ -870,7 +870,7 @@ function M:SetAllUIVisibility(IsHide)
   if UIManger then
     UIManger:HideAllUI_EX({
       self:GetName()
-    }, IsHide, self.HideUITag, false)
+    }, IsHide, self.HideUITag, true)
   end
   local BattleWarningUI = UIManger:GetUIObj(UIConst.DestroyAlarmName)
   if BattleWarningUI then

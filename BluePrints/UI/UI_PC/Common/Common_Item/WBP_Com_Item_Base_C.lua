@@ -39,7 +39,6 @@ function M:InitData(Content)
   self.bShowNotHaveStyle = Content.bShowNotHaveStyle
   self.PetEntryId = Content.PetEntryId
   self.CountTextRed = Content.CountTextRed
-  self.CountTextWhite = Content.CountTextWhite
   self.ItemName = Content.ItemName
   self.Level = Content.Level
   self.NotInteractive = Content.NotInteractive
@@ -595,7 +594,7 @@ function M:SetCount(Count, NeedCount, MaxCount, bNotCountFormat, bShowNotHaveSty
       self.CountWidget = self:CreateWidgetAsync("ComItemNeedCount", CoroutineObj)
       self.CountWidget.Text_Hold:SetText(FormatNumber(Count, bCountFormat))
       self.CountWidget.Text_Total:SetText("/" .. tostring(FormatNumber(NeedCount, bCountFormat)))
-      if Count >= NeedCount or self.CountTextWhite then
+      if Count >= NeedCount then
         self.CountWidget.Text_Hold:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("FFFFFFFF"))
       else
         self.CountWidget.Text_Hold:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("D82E30FF"))

@@ -314,16 +314,7 @@ function WBP_Abyss_Select_C:InitLevelInfo(AbyssId, LevelIndex)
       return
     end
     for _, TeamInfo in ipairs(LevelInfo.AbyssCacheTeamList) do
-      local TempTeamInfo = {}
-      TempTeamInfo.Char = TeamInfo.Char
-      TempTeamInfo.MeleeWeapon = TeamInfo.MeleeWeapon
-      TempTeamInfo.RangedWeapon = TeamInfo.RangedWeapon
-      TempTeamInfo.Pet = TeamInfo.Pet
-      TempTeamInfo.Phantom1 = TeamInfo.Phantom1
-      TempTeamInfo.Phantom2 = TeamInfo.Phantom2
-      TempTeamInfo.PhantomWeapon1 = TeamInfo.PhantomWeapon1
-      TempTeamInfo.PhantomWeapon2 = TeamInfo.PhantomWeapon2
-      table.insert(self.TeamInfos, TempTeamInfo)
+      table.insert(self.TeamInfos, TeamInfo)
     end
     self.Panel_Lock:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.TeamMetConditon = self:CheckTeamCondition(self.TeamInfos)
@@ -435,7 +426,7 @@ function WBP_Abyss_Select_C:InitDetailPanels()
           Rarity = UnitData.Rarity or UnitData[DataType .. "Rarity"],
           GachaIcon = UnitData.GachaIcon
         }
-        if Content and "Weapon" == DataType then
+        if "Weapon" == DataType then
           local Tags = {
             CommonConst.ArmoryTag.Melee,
             CommonConst.ArmoryTag.Ranged

@@ -84,15 +84,6 @@ function Menu_Portrait_List_PC_C:Refresh()
   else
     self.WidgetSwitcher_List:SetActiveWidgetIndex(0)
     self.List_Item:SetFocus()
-    local AllItemCount = self.List_Item:GetNumItems()
-    for i = 0, AllItemCount - 1 do
-      local Item = self.List_Item:GetItemAt(i)
-      if Item.PortraitId == self.HeadIconId then
-        self:RefreshItemClick(Item)
-        Item.SelfWidget:PlayAnimation(Item.SelfWidget.Click)
-        Item.SelfWidget.IsSelect = true
-      end
-    end
   end
   self.Switcher_Btn:SetActiveWidgetIndex(1)
   local Avatar = GWorld:GetAvatar()

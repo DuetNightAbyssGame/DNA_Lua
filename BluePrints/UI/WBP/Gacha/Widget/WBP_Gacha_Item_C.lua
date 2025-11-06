@@ -14,7 +14,9 @@ function M:Init(Content)
     self.New:SetVisibility(ESlateVisibility.Collapsed)
   end
   self.bConvert = Content.bConvert
-  self:StopAnimation(self.Convert)
+  if not self.bConvert then
+    self:StopAnimation(self.Convert)
+  end
   if 6 == Content.Rarity then
     self:PlayAnimation(self.In_Red)
   elseif 5 == Content.Rarity then

@@ -3318,6 +3318,18 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "17524907281546101120",
+            startPort = "Out",
+            endQuest = "17524908524516101653",
+            endPort = "In"
+          },
+          {
+            startQuest = "17524908524516101653",
+            startPort = "Out",
+            endQuest = "170417835022081455",
+            endPort = "Fail"
+          },
+          {
             startQuest = "170417835022081466",
             startPort = "Out",
             endQuest = "17561930523131911456",
@@ -3411,7 +3423,7 @@ return {
             key = "170417835022081460",
             type = "GoToNode",
             name = "goto检查站前",
-            pos = {x = 193.79579406922107, y = 199.41135237913267},
+            pos = {x = 200.99579406922106, y = 270.2113523791327},
             propsData = {
               GuideUIEnable = false,
               StaticCreatorId = 1180034,
@@ -3430,7 +3442,7 @@ return {
             key = "170417835022081463",
             type = "TalkNode",
             name = "快到检查站",
-            pos = {x = 607.0802064902942, y = 127.91800414987202},
+            pos = {x = 519.807479217567, y = 314.73618596805386},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 10100501,
@@ -3447,7 +3459,7 @@ return {
             key = "170417835022081465",
             type = "GoToNode",
             name = "goto检查站",
-            pos = {x = 173.89413872174546, y = 413.88353908765805},
+            pos = {x = 203.18504781265455, y = 474.9744481785671},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 1180130,
@@ -3606,7 +3618,7 @@ return {
             key = "17235567657274772184",
             type = "ChangeStaticCreatorNode",
             name = "销毁小白和终点的卡米拉",
-            pos = {x = 539.2241632865265, y = 321.9599200365333},
+            pos = {x = 517.4059814683446, y = 493.77810185471515},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = false,
@@ -3757,7 +3769,7 @@ return {
             key = "1744793016659816311",
             type = "ShowOrHideTaskIndicatorNode",
             name = "目标点指引点",
-            pos = {x = 552.5309690309688, y = 495.8166833166832},
+            pos = {x = 495.2582417582415, y = 648.543956043956},
             propsData = {
               IsShow = false,
               GuideType = "M",
@@ -3788,11 +3800,23 @@ return {
               FirstDialogueId = 10120601,
               FlowAssetPath = "",
               TalkType = "Guide",
-              bIsStandalone = true,
+              bIsStandalone = false,
               GuideMeshIndexList = {},
               IsPlayStartSound = false,
               GuideTalkStyle = "Normal",
               OverrideFailBlend = false
+            }
+          },
+          ["17524908524516101653"] = {
+            key = "17524908524516101653",
+            type = "SkipRegionNode",
+            name = "跨区域传送设置玩家位置",
+            pos = {x = 956.1381976305082, y = 828.1109862362052},
+            propsData = {
+              ModeType = 1,
+              Id = 101103,
+              StartIndex = 37,
+              IsWhite = false
             }
           },
           ["17527478434325140549"] = {

@@ -164,18 +164,18 @@ function SettingUtils.InitMobileResolution(GameOverallPerformance)
   elseif "IOS" == PlatformName then
     MobileResolutionList = {
       [1] = {
-        55,
-        55,
+        75,
+        75,
         0
       },
       [2] = {
-        60,
-        60,
+        80,
+        80,
         0
       },
       [3] = {
-        85,
-        85,
+        115,
+        115,
         0
       }
     }
@@ -202,84 +202,6 @@ function SettingUtils.InitMobileResolution(GameOverallPerformance)
   local MobileResolution = MobileResolutionList[OptionIndex]
   if MobileResolution then
     GWorld.GameInstance.SetScreenPercentageLevel(MobileResolution[1], MobileResolution[2], MobileResolution[3])
-  end
-end
-
-function SettingUtils.ResetMobileResolution()
-  local OptionName = "OverallPreset"
-  local GameOverallPerformanceCache = EMCache:Get(OptionName)
-  if -1 == GameOverallPerformanceCache then
-    local NowGameOverallPerformance = GWorld.GameInstance:GetOverallScalabilityLevel()
-    SettingUtils.InitMobileResolution(GameOverallPerformanceCache or NowGameOverallPerformance)
-  else
-    if rawget(SettingUtils, "DefaultMobileResolution") == nil then
-      local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(GWorld.GameInstance)
-      if "Android" == PlatformName then
-        rawset(SettingUtils, "DefaultMobileResolution", {
-          [0] = {
-            80,
-            60,
-            576
-          },
-          [1] = {
-            85,
-            65,
-            612
-          },
-          [2] = {
-            90,
-            70,
-            648
-          },
-          [3] = {
-            85,
-            75,
-            684
-          },
-          [4] = {
-            115,
-            80,
-            900
-          }
-        })
-      elseif "IOS" == PlatformName then
-        rawset(SettingUtils, "DefaultMobileResolution", {
-          [0] = {
-            55,
-            55,
-            0
-          },
-          [1] = {
-            55,
-            55,
-            0
-          },
-          [2] = {
-            60,
-            60,
-            0
-          },
-          [3] = {
-            65,
-            65,
-            0
-          },
-          [4] = {
-            85,
-            85,
-            0
-          }
-        })
-      else
-        return
-      end
-    end
-    local GameUserSettings = UE4.UGameUserSettings:GetGameUserSettings()
-    if GameUserSettings then
-      local AntiAliasingQuality = GameUserSettings:GetAntiAliasingQuality()
-      local DefaultResolution = SettingUtils.DefaultMobileResolution[AntiAliasingQuality] or SettingUtils.DefaultMobileResolution[4]
-      GWorld.GameInstance.SetScreenPercentageLevel(DefaultResolution[1], DefaultResolution[2], DefaultResolution[3])
-    end
   end
 end
 

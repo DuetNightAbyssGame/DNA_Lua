@@ -83,9 +83,6 @@ end
 
 function WalnutComponent:GetLastChooseWalnutId(AvatarEidStr)
   if 0 == self.EMGameState.NextWalnutPlayer:Length() then
-    if not self.AvatarInfos[AvatarEidStr] then
-      return nil
-    end
     return self.AvatarInfos[AvatarEidStr].PlayerInfo.Walnuts.WalnutId
   else
     return self.EMGameState.NextWalnutPlayer:Find(AvatarEidStr)

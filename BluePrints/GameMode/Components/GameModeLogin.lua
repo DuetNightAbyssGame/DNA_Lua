@@ -156,7 +156,6 @@ function GameModeLogin:OnAvatarLogout(AvatarEidStr)
     local DSEntity = GWorld:GetDSEntity()
     if DSEntity then
       DSEntity.AvatarInfos[AvatarEidStr] = nil
-      DSEntity.PersistPlayerInfos[AvatarEidStr] = nil
     end
   end
   if GWorld.bDebugServer then

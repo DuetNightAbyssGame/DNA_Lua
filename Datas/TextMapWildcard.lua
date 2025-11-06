@@ -2,10 +2,6 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("TextMapWildcard", {
-  Abyss_Battle_RemainTime = {
-    TextMapId = "Abyss_Battle_RemainTime",
-    WildcardClassification = "Story"
-  },
   Abyss_LevelName = {
     TextMapId = "Abyss_LevelName",
     WildcardClassification = "Story"
@@ -542,6 +538,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_ActionPoint_RemainPurchaseTimes",
     WildcardClassification = "Story"
   },
+  UI_Armory_ClickEmpty = {
+    TextMapId = "UI_Armory_ClickEmpty",
+    WildcardClassification = "Story"
+  },
   UI_Banner_Remain_Buy = {
     TextMapId = "UI_Banner_Remain_Buy",
     WildcardClassification = "Story"
@@ -718,10 +718,6 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_ModGuideBook_Task_Collecting",
     WildcardClassification = "Story"
   },
-  UI_Npc_Aside = {
-    TextMapId = "UI_Npc_Aside",
-    WildcardClassification = "Story"
-  },
   UI_Npc_AwaAndMe = {
     TextMapId = "UI_Npc_AwaAndMe",
     WildcardClassification = "Story"
@@ -740,10 +736,6 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_Npc_Name_Nvzhu = {
     TextMapId = "UI_Npc_Name_Nvzhu",
-    WildcardClassification = "Story"
-  },
-  UI_Npc_Name_Pangbai = {
-    TextMapId = "UI_Npc_Name_Pangbai",
     WildcardClassification = "Story"
   },
   UI_Pet_Skill_CD = {
@@ -788,10 +780,6 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_TEMPLE_LIMIT_TIME_Reverse = {
     TextMapId = "UI_TEMPLE_LIMIT_TIME_Reverse",
-    WildcardClassification = "Story"
-  },
-  UI_TEMPLE_MEASURE_COUNT = {
-    TextMapId = "UI_TEMPLE_MEASURE_COUNT",
     WildcardClassification = "Story"
   },
   UI_Time_Day = {

@@ -8025,6 +8025,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "19151FFA",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           Subtitle = "This is my first time in Cocytus Province. Is this how the people here show their hospitality?",
           VoiceName = "voice/$Locale$/story/1001/100194/19151FFA"
         },
@@ -8035,6 +8036,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "19152024",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           Subtitle = "I don't want to bother you, I just want to... strike a small \"bargain\".",
           VoiceName = "voice/$Locale$/story/1001/100194/19152024"
         },
@@ -8045,6 +8047,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "1915204E",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           Subtitle = "I'll pay you whatever you want, and all you have to do, well, it will be a piece of cake.",
           VoiceName = "voice/$Locale$/story/1001/100194/1915204E"
         },
@@ -8054,6 +8057,7 @@ local Data = {
           Duration = 2.5,
           GUID = "19153057.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "???",
           VoiceName = "voice/$Locale$/story/1001/100195/19153057"
         },
         [10019502] = {
@@ -8062,6 +8066,7 @@ local Data = {
           Duration = 9,
           GUID = "19153058.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "???",
           VoiceName = "voice/$Locale$/story/1001/100195/19153058"
         },
         [10019503] = {
@@ -8071,6 +8076,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "19153059.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/19153059"
         },
         [10019504] = {
@@ -8079,6 +8085,7 @@ local Data = {
           Duration = 5,
           GUID = "19153060.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "???",
           VoiceName = "voice/$Locale$/story/1001/100195/19153060"
         },
         [10019505] = {
@@ -8088,6 +8095,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "19153061.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/19153061"
         },
         [10019506] = {
@@ -8097,6 +8105,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "19153062.0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/19153062"
         },
         [10019507] = {
@@ -8106,6 +8115,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "1915308C",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/1915308C"
         },
         [10019508] = {
@@ -8115,6 +8125,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "191530B6",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/191530B6"
         },
         [10019509] = {
@@ -8124,6 +8135,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "191530E0",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/191530E0"
         },
         [10019510] = {
@@ -8133,6 +8145,7 @@ local Data = {
           ExStoryInfo = "EXPlayer",
           GUID = "1915310A",
           SpeakNpcId = 100012,
+          SpeakNpcName = "神秘人",
           VoiceName = "voice/$Locale$/story/1001/100195/1915310A"
         },
         [10025701] = {
@@ -11653,7 +11666,7 @@ CameraMoveTo{_delay{10.1},TargetPosition{"63.268066,-21.932739,125.937256,0.0000
           VoiceName = "voice/$Locale$/story/1003/100319/191D243C"
         },
         [10032001] = {
-          ContentJP = "<H>銀燭祭り</>は予定通り、ガレア劇場で開催されます。参加者はお好きな衣装を用意し、ご自分の演じたい役を選んでください。さあ、職業や種族、争いごとを忘れ、ここに集いましょう。\n皇帝の恩寵を浴び、皇帝の仁徳をたたえるために！皇帝に栄光あれ！",
+          ContentJP = "<H>銀燭祭り</>は予定通り、ガレア劇場で開催されます。参加者はお好きな衣装を用意し、ご自分の演じたい役を選んでください。\nさあ、職業や種族、争いごとを忘れ、ここに集いましょう。\n皇帝の恩寵を浴び、皇帝の仁徳をたたえるために！\n皇帝に栄光あれ！",
           DialogueId = 10032001,
           GUID = "191D332A",
           VoiceName = "voice/$Locale$/story/1003/100320/191D332A"
@@ -15703,7 +15716,7 @@ PlayAnimation{_delay{1.5},ActorId{100304},AnimationId{"Explain02_Start"},Duratio
           VoiceName = "voice/$Locale$/story/1003/100336/191E3B24"
         },
         [10033611] = {
-          ContentJP = "あれ？ここでお迎えが待ってるんじゃなかったの？誰もいないじゃん。",
+          Content = "咦？不是说有人在这儿接我们吗，他们人呢？",
           DialogueId = 10033611,
           GUID = "191E3B25",
           NextDialogue = 10033612,
@@ -19566,7 +19579,7 @@ PlayAnimation{_delay{0.5},ActorId{100304},AnimationId{"Talk02_Start"},Duration{1
         },
         [10034532] = {
           Camera = "379.26709,-408.699371,228.950928,0.000039,-18.000458,96.800278,35.000011,544.895874,false,Manual,22.0",
-          ContentJP = "ところでリズムはどこに？この時間はたいてい駐車場で待ってるはずなのに。",
+          ContentJP = "ところでリズムはどこに？この時間帯はたいてい駐車場で待ってるはずなのに。",
           DialogueId = 10034532,
           FacialId = {
             [1] = "200021:None",
@@ -19605,7 +19618,7 @@ PlayAnimation{_delay{0.5},ActorId{100304},AnimationId{"Talk02_Start"},Duration{1
         },
         [10034534] = {
           Camera = "240.401016,109.887741,127.815674,0.00013,3.595767,-46.793732,35.000011,296.605652,false,Manual,4.0",
-          ContentJP = "あの几帳面が場所を変えるなんて、なんかあったんじゃないか？辺りを探してみようぜ。",
+          ContentJP = "あの几帳面が場所を位置を変えるなんて、なんかあったんじゃないか？辺りを探してみようぜ。",
           DialogueId = 10034534,
           GUID = "191ED2BC",
           LookAt = {
@@ -19938,7 +19951,7 @@ PlayAnimation{_delay{0.5},ActorId{100304},AnimationId{"Talk02_Start"},Duration{1
           VoiceName = "voice/$Locale$/story/1003/100346/191EDF60"
         },
         [10034613] = {
-          ContentJP = "（<H>地面は兵士に封鎖されてる</>……別の道を試すしかない。たとえば――<H>屋上</>とか？）",
+          Content = "（<H>地面都被士兵封锁了</>……或许可以试试别的路——比如<H>楼顶</>？）",
           DialogueId = 10034613,
           GUID = "191EDF61",
           SpeakNpcId = 100001,
@@ -22231,7 +22244,7 @@ PlayAnimation{_delay{3},ActorId{100304},AnimationId{"Explain02_Start"},Duration{
           NextDialogue = 10035235
         },
         [10035234] = {
-          ContentJP = "{性别:僕たち|私たち}たちだけで？",
+          ContentJP = "私たちだけで？",
           DialogueId = 10035234,
           GUID = "191F4594",
           ImprPlusId = 1006,
@@ -45591,6 +45604,7 @@ CameraMoveTo{_delay{6.8},TargetPosition{"116.96875,481.013184,111.717285,0.00045
         },
         [10108605] = {
           Camera = "-294.443359,996.944824,136.692383,0.00046,2.199457,-90.197632,50.0,334.402466,false,Manual,8.0",
+          ContentJP = "{空格}",
           DialogueId = 10108605,
           GUID = "194E4A85",
           LookAt = {
@@ -45608,6 +45622,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/01/bai_enter_water"
           Subtitle = "Snow, get back here. This water is freezing, even for a Charon."
         },
         [10108606] = {
+          ContentJP = "{空格}",
           DialogueId = 10108606,
           DisableMouth = 1,
           GUID = "194E4A86",
@@ -48687,7 +48702,7 @@ PlayAnimation{_delay{5},ActorId{200004},AnimationId{"Think_End"},Duration{1}},
           VoiceName = "voice/$Locale$/story/1002/101013/19499D06"
         },
         [10110234] = {
-          ContentJP = "ごめんなさい……！急に目がかすんじゃって……あいつに気づかれた……",
+          ContentJP = "ごめんなさい……！急に見えなくなっちゃって……あいつに気づかれた……",
           DialogueId = 10110234,
           GUID = "10110234.0",
           GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_10110234.T_Story_Recall_10110234'",
@@ -51046,7 +51061,7 @@ PlayAnimation{_delay{4},ActorId{200006},AnimationId{"Explain02_End"},Duration{1}
           VoiceName = "voice/$Locale$/story/1002/101123/1950A9E0"
         },
         [10112305] = {
-          ContentJP = "……この冷たい世界に負けないで！",
+          Content = "不要向这个冷冰冰的世界投降！",
           DialogueId = 10112305,
           Duration = 2,
           ExStoryInfo = "Player",
@@ -55417,12 +55432,12 @@ LookAt{LookAtDescription{"200006:p(Plamp01)"}}
           IsBlack = 1
         },
         [10123404] = {
-          ContentJP = "ヘンリックは視界から消えた…見失ってしまったらしい。",
+          Content = "恩里克消失在了视线外……似乎是跟丢了。",
           DialogueId = 10123404,
           GUID = "1957C6A5"
         },
         [10123405] = {
-          ContentJP = "ヘンリックは花屋に入った。あなたたちは、すぐ隣の喫茶店で彼を待つことにした。",
+          Content = "恩里克走进了一间花店，你们决定在一旁的咖啡厅稍作等待。",
           DialogueId = 10123405,
           GUID = "1957C6A6"
         },
@@ -58661,7 +58676,7 @@ CameraMoveTo{TargetPosition{"50.077148,-329.630371,240.10498,0.000181,-16.799314
           DialogueId = 10131004,
           GUID = "195BD051",
           NextDialogue = 10131005,
-          SpeakNpcName = "MESSAGE_TITLE_LOADING_14_PC",
+          SpeakNpcName = "低沉的吼声",
           VoiceName = "voice/$Locale$/story/1002/101310/195BD051"
         },
         [10131005] = {
@@ -58691,7 +58706,7 @@ CameraMoveTo{TargetPosition{"50.077148,-329.630371,240.10498,0.000181,-16.799314
           DialogueId = 10131201,
           GUID = "195BD055",
           NextDialogue = 10131202,
-          SpeakNpcName = "MESSAGE_TITLE_LOADING_14_PC",
+          SpeakNpcName = "低沉的吼声",
           VoiceName = "voice/$Locale$/story/1002/101312/195BD055"
         },
         [10131202] = {
@@ -76820,21 +76835,21 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
           GUID = "1B9600CA"
         },
         [11019420] = {
-          ContentJP = "あなたは典獄に罪を認めた。この先にはより苛酷な裁決が来るのであろう。",
+          Content = "你向典狱长承认了罪行，等待你的将是更为严酷的裁决。",
           DialogueId = 11019420,
           Duration = 4,
           GUID = "1B9600CB",
           NextDialogue = 11019421
         },
         [11019421] = {
-          ContentJP = "彼女のせせら笑いが耳に刺さる.。かつて彼女は、あなたは決して折れぬ者だと信じていたけれど、今では、これまで裁いてきた囚人たちと何も変わらぬ存在にしか見えていない。",
+          Content = "你听见她的嗤笑——她曾认为你坚强无匹，但如今看来，你和她审判过的其他囚犯也并无分别。",
           DialogueId = 11019421,
           Duration = 4,
           GUID = "1B9600CC",
           NextDialogue = 11019422
         },
         [11019422] = {
-          ContentJP = "奈落の闇へと沈んでいく時、あなたは考え始めた。もしあの頃は、覚悟がもう少し強かったなら、結末は違っていたのだろうか、と。",
+          Content = "你意识到自己正在坠入漆黑的深渊——你开始思索，如果当时你的意志能够更坚定一些，结局会不会有所不同？",
           DialogueId = 11019422,
           Duration = 4,
           GUID = "1B9600CD"
@@ -85412,16 +85427,16 @@ PARA{
 LookAt{LookAtDescription{"100001:n(211001)"}},
 PlayFacial{ActorId{100001},FacialId{"Think01"}},
 CameraMoveTo{TargetPosition{"248.549805,8.369141,97.650635,0.000087,-0.798886,-25.276293,35.000008,233.008423,false,Manual,22.0"},duration{0}},
-CameraMoveTo{_delay{1},TargetPosition{"-1520.461914,1789.661133,1376.077393,0.00013,-27.800432,-38.476391,35.000015,126.223808,false,Manual,22.0"},duration{0}},
+CameraMoveTo{_delay{1},TargetPosition{"-1432.448242,1860.372559,1484.045166,0.000158,-31.201389,-47.272495,55.0,617.594727,false,Manual,22.0"},duration{0}},
 PlayFacial{ActorId{211001},FacialId{"Think01"}},
-CameraMoveTo{_delay{1.01},TargetPosition{"-1919.85498,2107.104492,1645.070557,0.000144,-27.800446,-38.478954,35.000015,126.223808,false,Manual,22.0"},duration{5}},
+CameraMoveTo{_delay{1.01},TargetPosition{"-1656.203613,2098.1604,1681.873047,0.000157,-31.401239,-45.472641,55.0,413.050079,false,Manual,22.0"},duration{5}},
 PlayAnimation{_delay{0},ActorId{211001},AnimationId{"TilteHead_End"},Duration{1}},
 MoveTo{ActorId{211001},TargetPoint{"simple1902"},MoveSpeed{75},Visibility{"Show"}},
 },
 PARA{
 PlayAnimation{_delay{0.5},ActorId{211012},AnimationId{"Confident_Start"},Duration{1}},
 LookAt{LookAtDescription{"211001:n(211012)"}},
-CameraMoveTo{_delay{2},TargetPosition{"-1751.672852,2006.095703,1540.945557,0.000161,28.799929,142.520599,35.000015,107.411423,false,Manual,1.4"},duration{0}}
+CameraMoveTo{_delay{2},TargetPosition{"-1465.969727,1959.334473,1561.481689,0.000213,22.198374,146.92598,55.0,137.552002,false,Manual,2.8"},duration{0}}
 }
 }]],
           VoiceName = "voice/$Locale$/story/1201/120113/1E1EF1F8"
@@ -96712,12 +96727,12 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           VoiceName = "voice/$Locale$/story/2001/200071/3215EFD4"
         },
         [20007107] = {
-          ContentJP = "ぎざぎざの何かで抉られたような、深い傷跡がいくつも残っている。",
+          Content = "若干道深深的刻痕，似是某周尖锐物体留下的痕迹。",
           DialogueId = 20007107,
           GUID = "3215EFD5"
         },
         [20007108] = {
-          ContentJP = "「危険!立入禁止」と書かれた掲示が、何枚も分厚く重ねて貼られている。\n古い掲示が色あせるたびに上から足してきたのだろう。いちばん新しい一枚の日付は新暦1004年――およそ二十年前。グルビューム鉱山はその頃に廃棄されたらしい。",
+          Content = "写着“禁区危险，严禁通行”的告示。贴了厚厚一叠，似乎是当老告示变旧了就会贴一张新告示上去。最新的一张告示落款是新历1004年，也就是二十年前——格雷姆矿场应当就是在那时彻底废弃的。",
           DialogueId = 20007108,
           GUID = "3215EFD6"
         },
@@ -99197,7 +99212,7 @@ We'd always have one by our side underground to help detect whether the tunnels 
 (It's unclear whether it's a tribute to a fallen comrade or a lament for the changing times.)]]
         },
         [51001212] = {
-          ContentJP = "老人は、空に浮かぶ小さな黒点を優しい目で見つめていた。あなたも視線を上げると、はるか遠く空へ飛ぶ鳥の群れが見えた。最後の一羽が消えたのち、老人はようやくこっちに向き直った。",
+          Content = "老人温柔地注视着空中的一小片黑点，你顺着他的视线远眺，看到了一群离去的飞鸟。待到所有鸟群飞走后，老人才转身继续与你交谈。",
           DialogueId = 51001212,
           GUID = "7FAD188B",
           NextOptions = {
@@ -100894,7 +100909,7 @@ Back then, his craftsmanship almost won him the title of Laurelled Charon.]],
         },
         [51001935] = {
           Camera = "122.0,278.0,139.0,0.000007,0.0,-95.0,35.0,200.0,false,Manual,2.8",
-          ContentJP = "目の前の酒樽をすべて開け、ふと振り返ると──ウェルズはいつもの気さくな笑顔に戻り、グラスを掲げていた。",
+          ContentJP = "けれど、その笑顔の奥に隠された寂しげな表情は、\nまるで壊れた懐中時計のように──簡単には修復できないものなのかもしれない。",
           DialogueId = 51001935,
           FinalCamera = "102.0,278.0,139.0,0.000007,0.0,-95.0,35.0,350.0,false,Manual,2.8",
           GUID = "7FAD907A",
@@ -103389,7 +103404,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           GUID = "7FAEA5C5"
         },
         [51003721] = {
-          ContentJP = "天下御免の大泥棒が逃げてしまった。クエスト失敗、再チャレンジしてください。",
+          Content = "打打打打打劫皎皎已逃走，任务失败，请重新开始。",
           DialogueId = 51003721,
           Duration = 3,
           GUID = "7FAEA5C6"
@@ -106404,13 +106419,13 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           SpeakNpcId = 100001
         },
         [51005314] = {
-          ContentJP = "釣れたよ。マーカスのところへ戻ろう。",
+          Content = "钓到了，回去找马库斯吧。",
           DialogueId = 51005314,
           GUID = "7FAFBB54",
           SpeakNpcId = 100001
         },
         [51005315] = {
-          ContentJP = "釣れたよ。マーカスのところへ戻ろう。",
+          Content = "钓到了，回去找马库斯吧。",
           DialogueId = 51005315,
           GUID = "7FAFBB7E",
           SpeakNpcId = 100001
@@ -107309,7 +107324,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51005928] = {
           Camera = "-397.066406,36.696777,151.856934,0.000385,-6.203246,11.162275,50.000008,1.5,false,Disable,1.2",
-          ContentJP = "なんだ悪かねえじゃん！じゃあこれからあんたらをおやじって呼ぶから、あんたらは俺らを「長男」「次男」「三男」って呼んでくれや。おい、次男、三男、いいよな？",
+          ContentJP = "なんだ悪かねえじゃん！じゃあこれからあんたらを大兄貴って呼ぶから、あんたらは俺らを「長男」「次男」「三男」って呼んでくれや。おい、次男、三男、いいよな？",
           DialogueId = 51005928,
           GUID = "7FB02010",
           NextDialogue = 51005929,
@@ -107320,7 +107335,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           }
         },
         [51005929] = {
-          ContentJP = "おやじ！",
+          ContentJP = "大兄貴！",
           DialogueId = 51005929,
           GUID = "7FB0203A",
           NextDialogue = 51005930,
@@ -107415,7 +107430,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51005937] = {
           Camera = "94.544922,-72.209961,230.001465,0.000072,-21.18392,156.51619,41.357956,1.5,false,Disable,1.2",
-          ContentJP = "ゴホン、俺にはおやじとして寛大な心ってもんがある。箱を{nickname}に返して、俺の用事を少し手伝ってくれるなら、お前ら見逃してやってもいいぞ。",
+          ContentJP = "ゴホン、俺には大兄貴として寛大な心ってもんがある。箱を{nickname}に返して、俺の用事を少し手伝ってくれるなら、お前ら見逃してやってもいいぞ。",
           DialogueId = 51005937,
           GUID = "7FB0218A",
           LookAt = {
@@ -107472,7 +107487,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 700126
         },
         [51005941] = {
-          ContentJP = "おやじたち、あざっした！",
+          ContentJP = "大兄貴たち、あざっした！",
           DialogueId = 51005941,
           GUID = "7FB02232",
           NextDialogue = 51005942,
@@ -107540,15 +107555,24 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           }
         },
         [51005946] = {
-          ContentJP = "ちっす！おやじ！",
+          ContentJP = "大兄貴！",
           DialogueId = 51005946,
           GUID = "7FB02304",
           LookAt = {
-            [1] = "700130:n(0)"
+            [1] = "700130:n(0)",
+            [2] = "700131:n(0)",
+            [3] = "700132:n(0)"
           },
           SpeakNpcName = "UI_CMNpc_Name_SanXiongdi",
+          TalkActionId = {
+            [1] = "700130:Agree",
+            [2] = "700131:Agree",
+            [3] = "700132:Agree"
+          },
           TurnTo = {
-            [1] = "700130:n(0)"
+            [1] = "700130:n(0)",
+            [2] = "700131:n(0)",
+            [3] = "700132:n(0)"
           }
         },
         [51006001] = {
@@ -108668,7 +108692,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51006732] = {
           Camera = "-20.024414,-347.564941,170.543701,0.000067,-13.199791,66.207527,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "チーム名が決まったなら、時間のあるときにアスフォデロスに戻ってバーテンダーに知らせるといい。",
+          ContentJP = "チーム名が決まったなら、時間のあるときにアスフォデロスに戻ってウェイターに知らせるといい。あの掲示板の一番上に「ノクトボイジャー」と書かれる日を楽しみにしているぞ。",
           DialogueId = 51006732,
           GUID = "7FB0A3F8",
           NextDialogue = 51006733,
@@ -108676,7 +108700,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 700146
         },
         [51006733] = {
-          ContentJP = "そうだ。これ、持ってろよ。",
+          Content = "啊，对了，拿着这个。",
           DialogueId = 51006733,
           DialoguePanelType = "{type:showpic;dir:Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_ExploreBadge_Beibao_Chapter01.T_ExploreBadge_Beibao_Chapter01'}",
           GUID = "7FB0A3F9",
@@ -108710,7 +108734,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51006736] = {
           Camera = "38.65332,-125.365479,127.959717,0.000135,-12.798094,77.399048,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "けど今の俺にゃ、道標なんて要らねえ。この大陸のことは骨の髄まで知ってるから。",
+          Content = "但是现在我对这片大陆的每一处角落都已经铭记于心，不再需要这些标记引路啦。",
           DialogueId = 51006736,
           GUID = "7FB0A3FC",
           NextDialogue = 51006737,
@@ -108721,7 +108745,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51006737] = {
           Camera = "-156.711914,-582.082031,262.790527,0.000124,-17.197691,64.395233,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "まぁ、旅の途中でこれを見つけたら俺に返してくれ。一つ一つが、お前の腕の証だ。報酬は成果に見合うだけ出す。",
+          Content = "所以，要是你在四处探险的时候，遇到这些标记，就帮我把它们带回来吧。带回来的越多，就越能证明你是优秀的狩月人，报酬当然也少不了。",
           DialogueId = 51006737,
           GUID = "7FB0A3FD",
           NextDialogue = 51006738,
@@ -108729,7 +108753,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51006738] = {
           Camera = "-156.711914,-582.082031,262.790527,0.000124,-17.197691,64.395233,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "頑張ろうよ、新入り。あの掲示板の一番上に「ノクトボイジャー」と書かれる日を楽しみにしているぞ。",
+          Content = "加油哦，初出茅庐的狩月人，我期待“夜航者”这三个字被写在看板顶端的那一天。",
           DialogueId = 51006738,
           GUID = "7FB0A3FE",
           NextDialogue = 51006739,
@@ -108753,7 +108777,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51006740] = {
           Camera = "80.842773,-51.764648,173.552246,0.000151,-10.797237,-94.405273,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "これは？",
+          Content = "这个是？",
           DialogueId = 51006740,
           GUID = "7FB0A3FA",
           NextDialogue = 51006741,
@@ -108764,7 +108788,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51006741] = {
           Camera = "38.65332,-125.365479,127.959717,0.000135,-12.798094,77.399048,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "見覚えあるか？あるなら、お前はもう冒険慣れってことだ。なくても気にすんな。これは、俺が昔作った道標なんだ。冒険の途中で通った道を記録するためにな。",
+          Content = "觉得眼熟吗？眼熟的话就说明你还挺喜欢探险的，没见过的话也没关系！这是我特制的标记，当我外出探险的时候，会用它来标记走过的路。",
           DialogueId = 51006741,
           GUID = "7FB0A3FB",
           NextDialogue = 51006736,
@@ -109339,40 +109363,40 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           SpeakNpcId = 700230
         },
         [51006922] = {
-          ContentJP = "まだ何もしてない！",
+          ContentJP = "別に、ゴミ箱をあさる趣味はないけど？",
           DialogueId = 51006922,
           GUID = "7FB0C0DA",
           NextDialogue = 51006924
         },
         [51006923] = {
-          ContentJP = "別に、ゴミ箱をあさる趣味はないけど？",
+          ContentJP = "とぼけたってムダだぜ、ちゃんと見てたからな。",
           DialogueId = 51006923,
           GUID = "7FB0C0DB",
           NextDialogue = 51006924
         },
         [51006924] = {
-          ContentJP = "とぼけたってムダだぜ、ちゃんと見てたからな。",
+          ContentJP = "昨日な、制服着た女が泣きながらこの箱を捨てていったんだよ。親切なおばあさんが声かけたら、逆ギレして怒鳴りつけてさ。ったく、ろくな奴じゃなかったな。",
           DialogueId = 51006924,
           GUID = "7FB0C0DC",
           NextDialogue = 51006925,
           SpeakNpcId = 700230
         },
         [51006925] = {
-          ContentJP = "昨日な、制服着た女が泣きながらこの箱を捨てていったんだよ。親切なおばあさんが声かけたら、逆ギレして怒鳴りつけてさ。ったく、ろくな奴じゃなかったな。",
+          ContentJP = "で、今お前が持ってるのがその箱ってわけだ。まだ白を切るつもりか？",
           DialogueId = 51006925,
           GUID = "7FB0C0DD",
           NextDialogue = 51006926,
           SpeakNpcId = 700230
         },
         [51006926] = {
-          ContentJP = "で、今お前が持ってるのがその箱ってわけだ。まだ白を切るつもりか？",
+          ContentJP = "……違うけど、もういいや。教えてくれてありがとう。",
           DialogueId = 51006926,
           GUID = "7FB0C0DE",
           NextDialogue = 51006927,
           SpeakNpcId = 700230
         },
         [51006927] = {
-          ContentJP = "……違うけど、もういいや。教えてくれてありがとう。",
+          ContentJP = "（制服の女……もしかして、マギーが言ってた「例のモノ」と関係があるのかな？）",
           DialogueId = 51006927,
           GUID = "7FB0C0DF",
           NextDialogue = 51006928,
@@ -114760,27 +114784,27 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 230003
         },
         [51009301] = {
-          ContentJP = "今度はピンクの花にいたしましょうか。",
+          Content = "这次就选粉红色的花吧！",
           DialogueId = 51009301,
           GUID = "7FB24972",
           NextDialogue = 51009302,
           SpeakNpcId = 700247
         },
         [51009302] = {
-          ContentJP = "(女性は丁寧に選んだピンクの花を笑顔で手に取り、顔を上げると、あなたに気づく)",
+          Content = "（女子面带微笑地拿起她精心挑选的粉色花朵。抬起头来时，她注意到了你。）",
           DialogueId = 51009302,
           GUID = "7FB2499C",
           NextDialogue = 51009303
         },
         [51009303] = {
-          ContentJP = "ご機嫌よう。あなた様もお花をお求めに？",
+          Content = "你好呀，你也是来买花的吗？",
           DialogueId = 51009303,
           GUID = "7FB249C6",
           NextDialogue = 51009304,
           SpeakNpcId = 700247
         },
         [51009304] = {
-          ContentJP = "でしたら、こちらなどいかが？ ピンクの花は少し珍しいの。",
+          Content = "要不要看看这一种，粉红色的花可不多见喔。",
           DialogueId = 51009304,
           GUID = "7FB249F0",
           NextOptions = {
@@ -114791,14 +114815,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009305] = {
-          ContentJP = "これ、もらっていい{性别:か|}？",
+          Content = "可以送我吗？",
           DialogueId = 51009305,
           GUID = "7FB24A1A",
           ImprPlusId = 1001,
           NextDialogue = 51009306
         },
         [51009306] = {
-          ContentJP = "ふふ……もちろん、よろしければ。",
+          Content = "呵呵，当然可以！",
           DialogueId = 51009306,
           GUID = "7FB24A44",
           NextDialogue = 51009307,
@@ -114813,81 +114837,81 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
     Loader = function()
       return {
         [51009307] = {
-          ContentJP = "(女性は手を伸ばし、棚からさらに数輪の花をそっと取り出した。会計を済ませた後、ピンク色の花をあなたに手渡した。）",
+          Content = "（女子伸出手，轻巧地从货架上多取了几支花，一并结账后递给了你。）",
           DialogueId = 51009307,
           GUID = "7FB24A6E",
           NextDialogue = 51009308
         },
         [51009308] = {
-          ContentJP = "はい、どうぞお受け取りになって。",
+          Content = "来，收好了。",
           DialogueId = 51009308,
           GUID = "7FB24A98",
           NextDialogue = 51009309,
           SpeakNpcId = 700247
         },
         [51009309] = {
-          ContentJP = "お礼は要りませんわ。これも「彼」のためですもの。",
+          Content = "不用谢我，你就当作是沾了他的光吧。",
           DialogueId = 51009309,
           GUID = "7FB24AC2",
           NextDialogue = 51009317,
           SpeakNpcId = 700247
         },
         [51009310] = {
-          ContentJP = "ありがとう、めちゃ綺麗な花だ。",
+          Content = "谢谢你，我也觉得很好看。",
           DialogueId = 51009310,
           GUID = "7FB24AEC",
           ImprPlusId = 1004,
           NextDialogue = 51009311
         },
         [51009311] = {
-          ContentJP = "もし気に入ってもらえたら、あなた様にあげてもいいです。",
+          Content = "如果你喜欢的话，我也可以送给你哦。",
           DialogueId = 51009311,
           GUID = "7FB24B16",
           NextDialogue = 51009312
         },
         [51009312] = {
-          ContentJP = "「彼」も喜んでくれるでしょう。",
+          Content = "他一定也会很乐意的。",
           DialogueId = 51009312,
           GUID = "7FB24B40",
           NextDialogue = 51009317
         },
         [51009313] = {
-          ContentJP = "ピンク色はちょっと…",
+          Content = "哦不，我讨厌粉红色！",
           DialogueId = 51009313,
           GUID = "7FB24B6A",
           ImprPlusId = 1005,
           NextDialogue = 51009314
         },
         [51009314] = {
-          ContentJP = "あら、失礼いたしました。",
+          Content = "哎呀，那真是抱歉了。",
           DialogueId = 51009314,
           GUID = "7FB24B94",
           NextDialogue = 51009315,
           SpeakNpcId = 700247
         },
         [51009315] = {
-          ContentJP = "そうね……誰もがピンクをお好みとは限りませんものね。",
+          Content = "也对，不是每个人都会喜欢粉红色的吧……",
           DialogueId = 51009315,
           GUID = "7FB24BBE",
           NextDialogue = 51009316,
           SpeakNpcId = 700247
         },
         [51009316] = {
-          ContentJP = "もしかすると「彼」も……まぁまぁ、そういうことにしておきましょう。",
+          Content = "这么说来，或许他也不喜欢……不过没关系啦！就当做他喜欢好了。",
           DialogueId = 51009316,
           GUID = "7FB24BE8",
           NextDialogue = 51009317,
           SpeakNpcId = 700247
         },
         [51009317] = {
-          ContentJP = "誰かへのプレゼントなのか？",
+          Content = "这花是用来送人的吗？",
           DialogueId = 51009317,
           GUID = "7FB24C12",
           NextDialogue = 51009318,
           SpeakNpcId = 100001
         },
         [51009318] = {
-          ContentJP = "ええ。わたしの友だちに、あなた様と同じく角を持つ「妖精さん」がいました。この花は、その彼のためのものなんです。",
+          Content = "是呀。我有一位和你一样头上长着角的精灵朋友，这花就是要送给他的。",
           DialogueId = 51009318,
           GUID = "7FB24C3C",
           NextOptions = {
@@ -114897,33 +114921,33 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009319] = {
-          ContentJP = "妖精？",
+          Content = "“精灵？”",
           DialogueId = 51009319,
           GUID = "7FB24C66",
           NextDialogue = 51009320
         },
         [51009320] = {
-          ContentJP = "ふふ、彼がそう言ったんです。",
+          Content = "呵呵，那是他的说法。",
           DialogueId = 51009320,
           GUID = "7FB24C90",
           NextDialogue = 51009323,
           SpeakNpcId = 700247
         },
         [51009321] = {
-          ContentJP = "{性别:僕|私}はカロンだよ。",
+          Content = "我是卡戎。",
           DialogueId = 51009321,
           GUID = "7FB24CBA",
           NextDialogue = 51009322
         },
         [51009322] = {
-          ContentJP = "ええ、そう言い張っていたのは彼のほうだけれど。",
+          Content = "嗯，“精灵”是他的说法。",
           DialogueId = 51009322,
           GUID = "7FB24CE4",
           NextDialogue = 51009323,
           SpeakNpcId = 700247
         },
         [51009323] = {
-          ContentJP = "ところで、外は風が強いかしら？",
+          Content = "说起来，外面起风了吗？",
           DialogueId = 51009323,
           GUID = "7FB24D0E",
           NextOptions = {
@@ -114934,46 +114958,46 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009324] = {
-          ContentJP = "気づかなかった。",
+          Content = "我没注意。",
           DialogueId = 51009324,
           GUID = "7FB24D38",
           NextDialogue = 51009325
         },
         [51009325] = {
-          ContentJP = "そう……大丈夫。あとで確かめてまいりますわ。",
+          Content = "这样啊……没关系，我等会儿自己出去确认一下。",
           DialogueId = 51009325,
           GUID = "7FB24D62",
           NextDialogue = 51009330,
           SpeakNpcId = 700247
         },
         [51009326] = {
-          ContentJP = "強風が吹いているよ。",
+          Content = "正在刮大风。",
           DialogueId = 51009326,
           GUID = "7FB24D8C",
           NextDialogue = 51009327
         },
         [51009327] = {
-          ContentJP = "ああ、良かったわ。",
+          Content = "那就太好了。",
           DialogueId = 51009327,
           GUID = "7FB24DB6",
           NextDialogue = 51009330,
           SpeakNpcId = 700247
         },
         [51009328] = {
-          ContentJP = "風がなくても大丈夫。{性别:僕|私}なら作れるよ。",
+          Content = "没有风我也可以制造风。",
           DialogueId = 51009328,
           GUID = "7FB24DE0",
           NextDialogue = 51009329
         },
         [51009329] = {
-          ContentJP = "そうなの。すごいわね……ありがとうございます。",
+          Content = "是吗，原来你这么厉害呀！谢谢你的好意。",
           DialogueId = 51009329,
           GUID = "7FB24E0A",
           NextDialogue = 51009330,
           SpeakNpcId = 700247
         },
         [51009330] = {
-          ContentJP = "でも……風が強くなるまで待たないと、彼に花を贈れないんです。",
+          Content = "我得等到起风的时候，才能把花送给他呢。",
           DialogueId = 51009330,
           GUID = "7FB24E34",
           NextOptions = {
@@ -114984,53 +115008,53 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009331] = {
-          ContentJP = "なんで？",
+          Content = "为什么一定要等起风？",
           DialogueId = 51009331,
           GUID = "7FB24E5E",
           NextDialogue = 51009332
         },
         [51009332] = {
-          ContentJP = "風が強いほど、花びらは空へと舞い上がるから。",
+          Content = "因为起风的时候，花才会往空中飘呀。",
           DialogueId = 51009332,
           GUID = "7FB24E88",
           NextDialogue = 51009337,
           SpeakNpcId = 700247
         },
         [51009333] = {
-          ContentJP = "もしかして、あなたのお友達は風の妖精？",
+          Content = "莫非你的朋友是风精灵吗？",
           DialogueId = 51009333,
           GUID = "7FB24EB2",
           NextDialogue = 51009334
         },
         [51009334] = {
-          ContentJP = "ふふ、とても素敵な考えね。もしかしたら本当に、そうなのかもしれないわ。",
+          Content = "呵呵，很有意思的想法！说不定真的是喔。",
           DialogueId = 51009334,
           GUID = "7FB24EDC",
           NextDialogue = 51009337,
           SpeakNpcId = 700247
         },
         [51009335] = {
-          ContentJP = "それは、何か特別な儀式なのか？",
+          Content = "这是某种特殊的仪式吗？",
           DialogueId = 51009335,
           GUID = "7FB24F06",
           NextDialogue = 51009336
         },
         [51009336] = {
-          ContentJP = "ええ……わたしにとっては、想いを届ける儀式なんです。",
+          Content = "嗯……是传递思念的仪式。",
           DialogueId = 51009336,
           GUID = "7FB24F30",
           NextDialogue = 51009337,
           SpeakNpcId = 700247
         },
         [51009337] = {
-          ContentJP = "「彼」は……数年前に天に召されました。",
+          Content = "我的那位朋友，在几年前就去天上啦。",
           DialogueId = 51009337,
           GUID = "7FB24F5A",
           NextDialogue = 51009338,
           SpeakNpcId = 700247
         },
         [51009338] = {
-          ContentJP = "今日はちょうど、年に一度の記念日ですから。",
+          Content = "今天是每年一次的纪念日。",
           DialogueId = 51009338,
           GUID = "7FB24F84",
           NextOptions = {
@@ -115040,7 +115064,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009339] = {
-          ContentJP = "(カロンの習わしを教える）。",
+          Content = "（提醒她卡戎人的习俗。）",
           DialogueId = 51009339,
           FailDialogue = 51009340,
           GUID = "7FB24FAE",
@@ -115048,46 +115072,46 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           NextDialogue = 51009341
         },
         [51009340] = {
-          ContentJP = "(習わしの内容は思い出せない）",
+          Content = "（你一时记不起习俗的细节。）",
           DialogueId = 51009340,
           GUID = "7FB24FD8"
         },
         [51009341] = {
-          ContentJP = "カロン族にとって、魂の行き先はニヴルヘイムなんだ。彼のためなら、花を水に入れたほうがいいと思う。",
+          Content = "在卡戎人的观念中，雾海才是灵魂的归去之地。如果要纪念他，将花送往水中更加合理。",
           DialogueId = 51009341,
           GUID = "7FB25002",
           NextDialogue = 51009342,
           SpeakNpcId = 100001
         },
         [51009342] = {
-          ContentJP = "ええ……存じています。けれど、彼は違うの……。",
+          Content = "嗯……我知道。但是，他不一样。",
           DialogueId = 51009342,
           GUID = "7FB2502C",
           NextDialogue = 51009343,
           SpeakNpcId = 700247
         },
         [51009343] = {
-          ContentJP = "(わずかな沈黙。女性は懐かしさと切なさをたたえた目で窓の外を眺める）。",
+          Content = "（女子沉默了片刻，看向窗外，眼神中流露着温柔的怀念。）",
           DialogueId = 51009343,
           GUID = "7FB25056",
           NextDialogue = 51009344
         },
         [51009344] = {
-          ContentJP = "彼と初めて出会ったのは城の外でした。年も近く、気質も似ていて、すぐに打ち解けましたの。",
+          Content = "我第一次遇见他是在城外。我们年纪相仿，性格也很像，所以很快就成了好朋友。",
           DialogueId = 51009344,
           GUID = "7FB25080",
           NextDialogue = 51009345,
           SpeakNpcId = 700247
         },
         [51009345] = {
-          ContentJP = "彼は「自分は天から降りてきた妖精だ」と語っていました……わたしは、彼がカロンの出だととうに知っていたのだけれど、あの子が懸命に嘘を繕うのを見るたび、指摘する気にはなれなかった。",
+          Content = "他对我说自己从是天上来的“精灵”……呵呵，其实我早知道他是卡戎人，但每次看到他那么努力地圆谎，实在是舍不得戳穿。",
           DialogueId = 51009345,
           GUID = "7FB250AA",
           NextDialogue = 51009346,
           SpeakNpcId = 700247
         },
         [51009346] = {
-          ContentJP = "それに、彼は物語の妖精のように、わたしの知らないことをたくさん知っていて、面白いことをいくつも教えてくれました。",
+          Content = "而且，他确实就像故事里的精灵一样，知道许多我不知道的事，永远有讲不完的新奇见闻。",
           DialogueId = 51009346,
           GUID = "7FB250D4",
           NextOptions = {
@@ -115097,61 +115121,61 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009347] = {
-          ContentJP = "素晴らしい友人のようだ。",
+          Content = "听起来是个很棒的朋友。",
           DialogueId = 51009347,
           GUID = "7FB250FE",
           NextDialogue = 51009348
         },
         [51009348] = {
-          ContentJP = "ええ、最高の友人でしたわ。",
+          Content = "嗯！他是最棒的朋友。",
           DialogueId = 51009348,
           GUID = "7FB25128",
           NextDialogue = 51009351,
           SpeakNpcId = 700247
         },
         [51009349] = {
-          ContentJP = "つまり、彼はいつも「妖精さん」を演じていた{性别:んだ|の}？",
+          Content = "所以他从小到大一直在扮演精灵吗？",
           DialogueId = 51009349,
           GUID = "7FB25152",
           NextDialogue = 51009350
         },
         [51009350] = {
-          ContentJP = "ふふ……少し子どもじみていたのでしょうね。",
+          Content = "呵呵，听起来有点幼稚，对吧？",
           DialogueId = 51009350,
           GUID = "7FB2517C",
           NextDialogue = 51009351,
           SpeakNpcId = 700247
         },
         [51009351] = {
-          ContentJP = "わたしたちが大人になって、おとぎ話を素直に信じていられない年ごろになったら、どう切り出せばよいのか――いつも悩んでいました。",
+          Content = "我心里一直都有些苦恼——等到我们都长大，过了能理所当然地相信童话的年纪以后，要怎么开口说破这件事？",
           DialogueId = 51009351,
           GUID = "7FB251A6",
           NextDialogue = 51009352,
           SpeakNpcId = 700247
         },
         [51009352] = {
-          ContentJP = "先に口を開くのがわたしか彼か、想像するだけで気まずくて……。",
+          Content = "无论是我先开口还是他先开口，想象一下都很尴尬呀……",
           DialogueId = 51009352,
           GUID = "7FB251D0",
           NextDialogue = 51009353,
           SpeakNpcId = 700247
         },
         [51009353] = {
-          ContentJP = "けれど結局、その時期には間に合いませんでした。彼は大人になる前に逝ってしまったのです。",
+          Content = "但最后我们并没有走到那个时间点。他在成年之前便离开了。",
           DialogueId = 51009353,
           GUID = "7FB251FA",
           NextDialogue = 51009354,
           SpeakNpcId = 700247
         },
         [51009354] = {
-          ContentJP = "ひょっとすると彼も同じことを思って、あの時期を選んで旅立ったのかしら。……本当に、優しい人でした......。",
+          Content = "你说，他会不会是想到了这一点，才故意选在那个时候离开的？呵呵，真是个温柔的人啊……",
           DialogueId = 51009354,
           GUID = "7FB25224",
           NextDialogue = 51009355,
           SpeakNpcId = 700247
         },
         [51009355] = {
-          ContentJP = "(女性は柔らかな花びらを撫で、そっと目を伏せる。その表情から感情は読み取れない)",
+          Content = "（女子抚摸着柔软的花瓣，轻轻垂下了眼眸。你分辨不出她脸上的情绪。）",
           DialogueId = 51009355,
           GUID = "7FB2524E",
           NextOptions = {
@@ -115161,97 +115185,97 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           }
         },
         [51009356] = {
-          ContentJP = "…ご愁傷様です。",
+          Content = "抱歉，请节哀……",
           DialogueId = 51009356,
           GUID = "7FB25278",
           ImprPlusId = 1002,
           NextDialogue = 51009357
         },
         [51009357] = {
-          ContentJP = "大丈夫、もう何年も……経ちましたから……",
+          Content = "没关系，已经过去很多年啦。",
           DialogueId = 51009357,
           GUID = "7FB252A2",
           NextDialogue = 51009362,
           SpeakNpcId = 700247
         },
         [51009358] = {
-          ContentJP = "お二人ともとても優しい人だ。",
+          Content = "你们都是非常温柔的人。",
           DialogueId = 51009358,
           GUID = "7FB252CC",
           ImprPlusId = 1004,
           NextDialogue = 51009359
         },
         [51009359] = {
-          ContentJP = "ふふ……ありがとうございます。",
+          Content = "呵呵，谢谢你。",
           DialogueId = 51009359,
           GUID = "7FB252F6",
           NextDialogue = 51009362,
           SpeakNpcId = 700247
         },
         [51009360] = {
-          ContentJP = "時期って.....もしかして、穢蝕の前触れが現れたの{性别:か|}？",
+          Content = "成年这个时间点……难道说，他是出现了秽蚀的征兆？",
           DialogueId = 51009360,
           GUID = "7FB25320",
           ImprPlusId = 1003,
           NextDialogue = 51009361
         },
         [51009361] = {
-          ContentJP = "ええ、わたしもそう思いますよ。彼が旅立ったのは、十八歳になろうという頃でした。",
+          Content = "嗯，我也这么想。毕竟他离开的时候，刚好是快满十八岁。",
           DialogueId = 51009361,
           GUID = "7FB2534A",
           NextDialogue = 51009362,
           SpeakNpcId = 700247
         },
         [51009362] = {
-          ContentJP = "自らの結末を悟っていたのでしょう。最後に会ったとき、間もなく天へ帰るから、もう二度とわたしのもとへは戻れない、と。",
+          Content = "他早就预料到了自己的结局……最后见面的那次，他对我说，自己将要回到天上的故乡，从今往后不能再来找我。",
           DialogueId = 51009362,
           GUID = "7FB25374",
           NextDialogue = 51009363,
           SpeakNpcId = 700247
         },
         [51009363] = {
-          ContentJP = "あれほど下手な嘘は見たことがありません。目にはもう涙がのぼっているのに、必死に笑顔を作って、楽しげにそう言うのですもの。",
+          Content = "那是他撒谎撒得最拙劣的一次……明明眼泪已经在眼眶里打转了，还拼命挤出一副微笑的表情，用愉快的语调对我说——",
           DialogueId = 51009363,
           GUID = "7FB2539E",
           NextDialogue = 51009364,
           SpeakNpcId = 700247
         },
         [51009364] = {
-          ContentJP = "「僕のことで、どうか悲しまないで。もう会いに行くことはできないけれど、雲の上から、ずっとずっと君を見守っているよ......\"",
+          Content = "“请你不要感到难过。虽然我不能再来见你，但我会在云端之上一直、一直注视着你……”",
           DialogueId = 51009364,
           GUID = "7FB253C8",
           NextDialogue = 51009365,
           SpeakNpcId = 700247
         },
         [51009365] = {
-          ContentJP = "「空を見上げるたび、君の想いは風に乗って、僕のところへ届くから」",
+          Content = "“无论何时，只要你抬头望向天空，你的思念就能够随风抵达我的身边。”",
           DialogueId = 51009365,
           GUID = "7FB253F2",
           NextDialogue = 51009366,
           SpeakNpcId = 700247
         },
         [51009366] = {
-          ContentJP = "（やがて、女性は笑みを浮かべた。気のせいだろうか？彼女の目にはかすかなきらめきがあるーそれは涙なのか、それともガラス窓から差し込む陽の光なのか......)",
+          Content = "（说到这里，女子露出了微笑。不知是否是错觉，她的眼中隐约闪过了一丝光亮——那究竟是泪光，还是从玻璃窗中洒下的阳光呢？）",
           DialogueId = 51009366,
           GUID = "7FB2541C",
           NextDialogue = 51009367
         },
         [51009367] = {
-          ContentJP = "なるほど…だから花を空に散らす{性别:んだ|の}",
+          Content = "所以，你才会把花撒向天空……？",
           DialogueId = 51009367,
           GUID = "7FB25446",
           NextDialogue = 51009368,
           SpeakNpcId = 100001
         },
         [51009368] = {
-          ContentJP = "ええ、信じたいの。彼の行き先は「霧の海」ではなく、「広い空」なのだと。",
+          Content = "嗯。既然那是他想要告诉我的故事，那么我也愿意相信，他的归处不是雾海，而是辽阔的蓝天。",
           DialogueId = 51009368,
           GUID = "7FB25470",
           NextDialogue = 51009369,
           SpeakNpcId = 700247
         },
         [51009369] = {
-          ContentJP = "だから空へ花びらを放てば、きっとわたしの想いは、彼に届くはず。",
+          Content = "只要将花瓣撒向天空，他就能感受到我的思念。",
           DialogueId = 51009369,
           GUID = "7FB2549A",
           NextOptions = {
@@ -115261,53 +115285,53 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           SpeakNpcId = 700247
         },
         [51009370] = {
-          ContentJP = "どうか、彼のもとへ届けるように。",
+          Content = "如果他能收到你的花就好了。",
           DialogueId = 51009370,
           GUID = "7FB254C4",
           NextDialogue = 51009372
         },
         [51009371] = {
-          ContentJP = "きっと、彼のもとへ届けるよ。",
+          Content = "他一定会收到你的花的。",
           DialogueId = 51009371,
           GUID = "7FB254EE",
           NextDialogue = 51009372
         },
         [51009372] = {
-          ContentJP = "…………はい、ありがとうございます。",
+          Content = "嗯，谢谢你！",
           DialogueId = 51009372,
           GUID = "7FB25518",
           NextDialogue = 51009373,
           SpeakNpcId = 700247
         },
         [51009373] = {
-          ContentJP = "今にして思えば、わたしが彼の嘘に気づいていたことも、彼はとうにわかっていたのでしょう。",
+          Content = "现在回想起来，他大概也早就知道我已经看穿了他的谎话吧。",
           DialogueId = 51009373,
           GUID = "7FB25542",
           NextDialogue = 51009374,
           SpeakNpcId = 700247
         },
         [51009374] = {
-          ContentJP = "嘘で編んだ物語が、嘘の言葉で幕を引く――それもまた、ふさわしい結末だと思いませんこと？……。",
+          Content = "一个由谎言编织的故事，最后有了一个用谎言写就的结局……不也算是恰如其分吗？",
           DialogueId = 51009374,
           GUID = "7FB2556C",
           NextDialogue = 51009375,
           SpeakNpcId = 700247
         },
         [51009375] = {
-          ContentJP = "あら、暗くなる前に参りませんと。これから城の外へ行って、彼との約束を果たしますの。",
+          Content = "好啦，我要趁天还没黑，去城外完成和他的约定。",
           DialogueId = 51009375,
           GUID = "7FB25596",
           NextDialogue = 51009376,
           SpeakNpcId = 700247
         },
         [51009376] = {
-          ContentJP = "さらば、かわいい妖精。どうかその物語が、真実で、幸せな結末に至りますように。",
+          Content = "再见了，可爱的小精灵。祝愿你的故事有一个真实而美满的结局。",
           DialogueId = 51009376,
           GUID = "7FB255C0",
           SpeakNpcId = 700247
         },
         [51009377] = {
-          ContentJP = "あら、妖精さん。またお会いできましたわね。今日はいいお天気。",
+          Content = "哎呀，小精灵，又见面了。今天的天色很美吧？",
           DialogueId = 51009377,
           GUID = "7FB255EA",
           SpeakNpcId = 700247
@@ -121873,7 +121897,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1002/510102/7FB2DD98"
         },
         [51010205] = {
-          ContentJP = "ごめんなさい！でも、あちらの衛兵さんに確認したわ。この広場では、吟遊詩人が歌ってはいけないお触れなんて、なかったと思うけど……",
+          ContentJP = "ごめんなさい！でも、あちらの衛兵さんに確認わ。この広場では、吟遊詩人が歌ってはいけないお触れなんて、なかったと思うけど……",
           DialogueId = 51010205,
           GUID = "7FB2DDC2",
           NextDialogue = 51010206,
@@ -123527,7 +123551,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           NextDialogue = 51011115
         },
         [51011114] = {
-          ContentJP = "くそっ、同じように崖から落ちたのに、どうして{性别:僕|私}にはこういう幸運が回ってこない{性别:んだ|の}！",
+          ContentJP = "くそっ、同じように崖から落ちたのに、どうして私にはこういう幸運が回ってこない{性別:んだ|の}！",
           DialogueId = 51011114,
           GUID = "7FB372E4",
           NextDialogue = 51011115
@@ -126281,7 +126305,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [70016107] = {
           Camera = "-71.794922,628.722656,135.195312,0.000076,12.199674,-90.596268,17.78793,100000.0,false,Manual,22.0",
-          ContentJP = "※「<Default note=\"text:ナーファル\">一角鯨</>」隊の兵士ケイルムの証言\n「中央制御室から{nickname2}隊長が一人で▇▇▇から出てくるのを見た。胸に大量の▇▇▇▇が付いていた」\n「{性别2:彼|彼女}は『▇▇▇▇で待機せよ』と指示し、自分は▇▇▇▇に潜む同盟メンバーを探すと言った」\n「数分後、警報が鳴ったため▇▇▇▇に戻った。そこには血まみれのアヴァール隊長が倒れており、▇▇▇▇が起動していた」",
+          ContentJP = "\n※「<Default note=\"text:ナーファル\">一角鯨</>」隊の兵士ケイルムの証言\n「中央制御室から{nickname2}隊長が一人で▇▇▇から出てくるのを見た。胸に大量の▇▇▇▇が付いていた」\n「{性别2:彼|彼女}は『▇▇▇▇で待機せよ』と指示し、自分は▇▇▇▇に潜む同盟メンバーを探すと言った」\n「数分後、警報が鳴ったため▇▇▇▇に戻った。そこには血まみれのアヴァール隊長が倒れており、▇▇▇▇が起動していた」",
           DialogueId = 70016107,
           GUID = "AF47298E"
         },
@@ -128173,7 +128197,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 818041
         },
         [71005101] = {
-          ContentJP = "魚、来い！来い！",
+          Content = "鱼来，鱼来。",
           DialogueId = 71005101,
           GUID = "B1C0EAA3",
           SpeakNpcId = 818045
@@ -128421,14 +128445,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 818045
         },
         [71005137] = {
-          ContentJP = "男性はそう言いながら、あなたを指さした。",
+          Content = "（男人说完指了指你。）",
           DialogueId = 71005137,
           GUID = "B1C0FEFC",
           NextDialogue = 71005138,
           SpeakNpcId = 800006
         },
         [71005138] = {
-          ContentJP = "釣りってのは、魚だけに限る必要はない。ちょっとした言葉を撒き餌に、奇妙な行為をしてやれば、色んな奴が勝手に食いついてくるもんだ。",
+          Content = "钓鱼钓的也可以不是鱼。撒下几句话，做一些奇怪的事，就会有无数鱼争相咬钩。",
           DialogueId = 71005138,
           GUID = "B1C0FEFD",
           NextDialogue = 71005139,
@@ -128541,14 +128565,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 800006
         },
         [71005212] = {
-          ContentJP = "そう、ラッキーコインっていうのは、僕たちの手にある銅貨と同じだ。魔法のかかった宝物なんかじゃない。みんなの優しさから生まれた、本当の「幸せ」なんだ。",
+          Content = "是呀，幸福硬币就是我们手里的铜币。它不是魔法创造出来的宝贝，而是诞生自大家的善意。",
           DialogueId = 71005212,
           GUID = "B1C10B9F",
           NextDialogue = 71005213,
           SpeakNpcId = 818048
         },
         [71005213] = {
-          ContentJP = "たった一枚のラッキーコインで、あの子の笑顔が見られるんだ。こんな気前のいい取り引き、そうそうあるもんじゃない。",
+          Content = "一枚幸福硬币就能买到她的笑容，这么轻松的买卖可不多见呀。",
           DialogueId = 71005213,
           GUID = "B1C10BA0",
           SpeakNpcId = 818048
@@ -131179,7 +131203,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72002902] = {
-          ContentJP = "ひー——！！！この宝箱をとらないで。",
+          Content = "咿呀——！请不要拿走这个宝箱。",
           DialogueId = 72002902,
           FacialId = {
             [1] = "820000:PetPan_Wink"
@@ -131189,7 +131213,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72002903] = {
-          ContentJP = "うちの家は悪いネズミたちに奪い取れた。この金で勇敢な子猫ちゃんを雇おうと思ってたんだ。",
+          Content = "我的家被坏老鼠占领了，我正打算用这些钱去雇一只勇敢的小猫，帮我赶跑老鼠。",
           DialogueId = 72002903,
           FacialId = {
             [1] = "820000:PetPan_Dizzy"
@@ -131222,7 +131246,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72003002] = {
-          ContentJP = "うゎー！ すごい！ちゃちゃっと近くのネズミたちを片付けた。",
+          Content = "哇，你好厉害，唰唰——咻咻——几下就把附近的老鼠全消灭了。",
           DialogueId = 72003002,
           FacialId = {
             [1] = "820000:PetPan_Smile"
@@ -131232,7 +131256,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72003003] = {
-          ContentJP = "じゃあ、この宝箱はあんたにあげるね。",
+          Content = "那么，这个宝箱就送给你啦。",
           DialogueId = 72003003,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131666,7 +131690,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72003902] = {
-          ContentJP = "動く鳥、動かない鳥、そして動かない人もまだここにいる。",
+          Content = "会动的鸟，不会动的鸟，还有不会动的人都还在这里。",
           DialogueId = 72003902,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131677,7 +131701,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72003903] = {
-          ContentJP = "しかし、動く人はもういない、いつか戻って来るの？",
+          Content = "但是会动的人都离开了，他们还会回来吗？",
           DialogueId = 72003903,
           FacialId = {
             [1] = "820000:PetPan_Speechless"
@@ -131711,7 +131735,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004002] = {
-          ContentJP = "…消えた灯火の一つ一つは、家に帰れない人なの。",
+          Content = "每一盏熄灭的灯都是一个没有回家的人……",
           DialogueId = 72004002,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131721,7 +131745,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004003] = {
-          ContentJP = "つまり…光った灯火の一つ一つは、家に帰れた人ってことね。",
+          Content = "那么每一盏亮起的灯都会是一个回到了家的人吧？",
           DialogueId = 72004003,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131755,7 +131779,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004102] = {
-          ContentJP = "ひゃっ！？うちの家がーー！ラブリーマイホームが…どうして…",
+          Content = "咿呀！你怎么把我的小窝打碎了。",
           DialogueId = 72004102,
           FacialId = {
             [1] = "820000:PetPan_Dizzy"
@@ -131766,7 +131790,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004103] = {
-          ContentJP = "硬いベッドで眠ることは体に意志力が鍛えられると言われるんだよ。",
+          Content = "据说睡在硬邦邦的床上可以磨炼意志力哦。",
           DialogueId = 72004103,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131800,7 +131824,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004202] = {
-          ContentJP = "あんな高い場所に積まれて、何の意味があるの？",
+          Content = "箱子堆在这么高的地方有什么用呢？",
           DialogueId = 72004202,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131811,7 +131835,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004203] = {
-          ContentJP = "私に譲って。マイホームにするよ。",
+          Content = "不如就让给我当房子吧。",
           DialogueId = 72004203,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131845,7 +131869,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004302] = {
-          ContentJP = "ひらひら～わがはいは自由なアヒルである。",
+          Content = "飘啊飘，我是一只自由的小鸭子~",
           DialogueId = 72004302,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131856,7 +131880,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004303] = {
-          ContentJP = "ひゃっ！？なんでプールの水を抜いたんだよ！",
+          Content = "咿呀！你怎么把我游泳池里的水放掉了？",
           DialogueId = 72004303,
           FacialId = {
             [1] = "820000:PetPan_Dizzy"
@@ -131890,7 +131914,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004402] = {
-          ContentJP = "ありゃ、キノコを採ってるの？",
+          Content = "咿呀，采蘑菇的小人类你好~",
           DialogueId = 72004402,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131900,7 +131924,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004403] = {
-          ContentJP = "美味しいけど、しっかり加熱しなきゃダメよ。",
+          Content = "蘑菇虽然美味，但一定要等完全煮熟以后再吃哦。",
           DialogueId = 72004403,
           FacialId = {
             [1] = "820000:PetPan_Cry"
@@ -131934,7 +131958,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004502] = {
-          ContentJP = "ドンドン、ドンドンドン！",
+          Content = "咚咚，咚咚咚！",
           DialogueId = 72004502,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131944,7 +131968,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004503] = {
-          ContentJP = "パイプ・オルガンの練習をしてるんだ。",
+          Content = "我正在学习演奏这台管道琴。",
           DialogueId = 72004503,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131978,7 +132002,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           bAllowClickSkipScript = false
         },
         [72004602] = {
-          ContentJP = "ありゃ、見つかっちゃった。うちの秘密基地へようこそ。",
+          Content = "咿呀，恭喜你发现了我的秘密基地~",
           DialogueId = 72004602,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -131988,7 +132012,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           SpeakNpcId = 820000
         },
         [72004603] = {
-          ContentJP = "ツタ、水草、池、そして私。小っちゃい生物圏ではないか。",
+          Content = "藤蔓、水草、池塘和我，是一个小小生态圈。",
           DialogueId = 72004603,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -132144,6 +132168,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "C8462C3A",
           GuideFacialId = "Smile",
           HeadIconType = "Npc",
+          NextDialogue = 80001002,
           SpeakNpcId = 700142,
           VoiceName = "voice/$Locale$/story/1201/120111/C8462C3A"
         },
@@ -132153,6 +132178,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "C8462C64",
           GuideFacialId = "Shock",
           HeadIconType = "Npc",
+          NextDialogue = 80001003,
           SpeakNpcId = 700142,
           VoiceName = "voice/$Locale$/story/1201/120111/C8462C64"
         },
@@ -142737,7 +142763,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
         },
         [80070206] = {
           Camera = "-63.979523,366.17868,112.912109,0.000001,-2.799961,-78.5989,35.000008,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "20年前の礼賛会に対してやった「『神の挽歌』の攻勢」ですかね。第十三軍団が試作型飛行船で礼賛会の塔に突入した戦い……そこらの道端にいる子供でも二言三言は謡えるぐらい有名なヤツです。",
+          ContentJP = "２３年前の礼賛会に対してやった「『神の挽歌』の攻勢」ですかね。第十三軍団が試作型飛行船で礼賛会の塔に突入した戦い……そこらの道端にいる子供でも二言三言は謡えるぐらい有名なヤツです。",
           DefaultLookAt = "TalkNpc",
           DialogueId = 80070206,
           GUID = "C872862C",
@@ -163042,7 +163068,7 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
           VoiceName = "voice/$Locale$/inv/Dafu/002/C8B90B1E"
         },
         [80180244] = {
-          ContentJP = "{空格}",
+          Content = "（子弹上膛声）",
           DialogueId = 80180244,
           GUID = "C8B90B48",
           IsBlack = 1,
@@ -173789,7 +173815,6 @@ CameraMoveTo{TargetPosition{"25.619141,105.791016,140.636719,0.000142,55.800377,
           TalkActionId = {
             [1] = "81501:Agree"
           },
-          VoiceName = "voice/$Locale$/char/Baonu/vo_topic_03_4",
           bForbidSkipOptions = true
         },
         [90250400] = {
@@ -177568,7 +177593,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           NextDialogue = 51005938
         },
         [510059372] = {
-          ContentJP = "足りない{性别:ぞ|よ}。あるもの全部出しておやじに孝行しないと{性别:な|ね}。",
+          ContentJP = "足りない{性别:ぞ|よ}。あるもの全部出して大兄貴に孝行しないと{性别:な|ね}。",
           DialogueId = 510059372,
           GUID = "510059372.0",
           ImprPlusId = 1005,
@@ -178027,7 +178052,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           NextDialogue = 51009486
         },
         [510095121] = {
-          ContentJP = "……",
+          Content = "……",
           DialogueId = 510095121,
           GUID = "510095121.0",
           NextOptions = {

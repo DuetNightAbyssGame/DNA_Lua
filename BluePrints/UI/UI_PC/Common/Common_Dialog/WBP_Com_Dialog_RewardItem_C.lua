@@ -249,7 +249,7 @@ function M:InitBreakStartCount(BreakStarCount)
     local Star = self["Star_" .. i]
     if Star then
       Star.Main:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-      if i <= BreakStarCount then
+      if i < BreakStarCount then
         Star.Switcher_Star:SetActiveWidgetIndex(0)
       end
     end

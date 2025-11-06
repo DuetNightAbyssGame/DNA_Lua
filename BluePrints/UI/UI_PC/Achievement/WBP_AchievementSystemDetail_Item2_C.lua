@@ -222,7 +222,6 @@ function M:OnListItemObjectSet(Content)
   end
   self.List_ItemRewards:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
   self.List_ItemRewards:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
-  self:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
 end
 
 function M:NewItemContent(ItemType, ItemId, Count)
@@ -251,13 +250,8 @@ function M:NewItemContent(ItemType, ItemId, Count)
 end
 
 function M:OnMenuOpenChanged(bIsOpen, Obj)
-  if Obj.SelfWidget and UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
-    if false == bIsOpen then
-      Obj.SelfWidget.Item:PlayAnimation(Obj.SelfWidget.Item.Hover)
-      self.AchievementSystem.Com_Tab_P:SetBottomKeyInfoVisible(true)
-    else
-      self.AchievementSystem.Com_Tab_P:SetBottomKeyInfoVisible(false)
-    end
+  if Obj.SelfWidget and false == bIsOpen and UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
+    Obj.SelfWidget.Item:PlayAnimation(Obj.SelfWidget.Item.Hover)
   end
 end
 
@@ -285,7 +279,6 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
     self.Common_RewardsBtn_PC.Img_GamePad:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.AchievementSystem.Com_Tab_P.Com_KeyTips.Panel_Key:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self["Achievement_SystemDetail_Item2Condition_PC_" .. 1].Key_Condition:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.AchievementSystem:UpdateComTab(nil, true)
   end
   return self.ID
 end
@@ -323,34 +316,23 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
   if "Gamepad_LeftThumbstick" == InKeyName then
-    local Widget = URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.List_ItemRewards, 0)
-    if Widget then
-      self.List_ItemRewards:ScrollIndexIntoView(0)
-      Widget:SetFocus()
-      self.AchievementSystem.OpenRewardDetail = true
-    end
+    self.List_ItemRewards:SetFocus()
     IsEventHandled = true
-  elseif "Gamepad_FaceButton_Left" == InKeyName then
-    if self.PreAchvUrl[1] then
-      local InUrl = Split(self.PreAchvUrl[1], ".")
-      local Id = tonumber(InUrl[1])
-      local TypeId = tonumber(InUrl[2])
-      if not (DataMgr.Achievement[Id] and DataMgr.AchievementType[TypeId]) or self.ID ~= tonumber(InUrl[3]) then
-        return
-      end
-      if self.AchievementSystem.CurrentTypeId == TypeId and self.AchievementSystem.Id2Item[Id] then
-        self.AchievementSystem.Achievement_Root.List_Item:NavigateToIndex(self.AchievementSystem.Id2Index[Id])
-        self:AddTimer(0.01, function()
-          self.AchievementSystem.Id2Item[Id]:PlayAnimation(self.AchievementSystem.Id2Item[Id].scanline)
-        end, false, 0, nil, true)
-        AudioManager(self):PlayUISound(self, "event:/ui/common/achieve_active", "", nil)
-      else
-      end
-      IsEventHandled = true
+  elseif "Gamepad_FaceButton_Left" == InKeyName and self.PreAchvUrl[1] then
+    local InUrl = Split(self.PreAchvUrl[1], ".")
+    local Id = tonumber(InUrl[1])
+    local TypeId = tonumber(InUrl[2])
+    if not (DataMgr.Achievement[Id] and DataMgr.AchievementType[TypeId]) or self.ID ~= tonumber(InUrl[3]) then
+      return
     end
-  elseif "Gamepad_FaceButton_Right" == InKeyName and self.AchievementSystem.OpenRewardDetail then
-    self:SetFocus()
-    self.AchievementSystem.OpenRewardDetail = false
+    if self.AchievementSystem.CurrentTypeId == TypeId and self.AchievementSystem.Id2Item[Id] then
+      self.AchievementSystem.Achievement_Root.List_Item:NavigateToIndex(self.AchievementSystem.Id2Index[Id])
+      self:AddTimer(0.01, function()
+        self.AchievementSystem.Id2Item[Id]:PlayAnimation(self.AchievementSystem.Id2Item[Id].scanline)
+      end, false, 0, nil, true)
+      AudioManager(self):PlayUISound(self, "event:/ui/common/achieve_active", "", nil)
+    else
+    end
     IsEventHandled = true
   end
   if IsEventHandled then

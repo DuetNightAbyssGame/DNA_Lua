@@ -32,12 +32,12 @@ function Component:Initialize()
     "OnExchangeCodeClicked"
   }
   local Avatar = GWorld:GetAvatar()
-  if Avatar and self.IsPersonInfoPage then
+  if Avatar then
     local AvatarBirth = {}
     AvatarBirth[1], AvatarBirth[2], AvatarBirth[3] = Avatar:GetAvatarBirthday()
     if AvatarBirth[3] <= 0 then
-      table.remove(self.BtnName, 6)
-      table.remove(self.ClickFunction, 6)
+      table.remove(self.BtnName, 5)
+      table.remove(self.ClickFunction, 5)
       self.BirthDayRemoved = true
     end
   end
@@ -425,8 +425,8 @@ function Component:OnAvatarBirthdayChanged(Res)
       self.Text_Birth:SetText(GDate("Date_MD", {Month = Month, Day = Day}))
     end
     if not self.BirthDayRemoved then
-      table.remove(self.BtnName, 5)
-      table.remove(self.ClickFunction, 5)
+      table.remove(self.BtnName, 4)
+      table.remove(self.ClickFunction, 4)
       self:InitBtnList()
     end
   end

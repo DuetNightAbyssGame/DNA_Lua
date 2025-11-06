@@ -18,8 +18,7 @@ local Language2ESystemLanguage = {
   ContentES = ESystemLanguage.ContentES
 }
 local BP_EMGameInstance_C = Class({
-  "BluePrints.Common.TimerMgr",
-  "BluePrints.Common.DelayFrameComponent"
+  "BluePrints.Common.TimerMgr"
 })
 
 function BP_EMGameInstance_C:Initialize(Initializer)
@@ -155,21 +154,8 @@ function BP_EMGameInstance_C:HandleDSConnect(GroupId)
     DebugNetPrint("HandleDSConnect error with no BattleServerInfo", GroupId)
     return
   end
-  local TargetIp, TargetPort
-  local Ip = ServerInfo.ip
-  if type(Ip) == "string" then
-    TargetIp = Ip
-  else
-    TargetIp = Ip[math.random(1, #Ip)]
-  end
-  local Port = ServerInfo.port
-  if type(Port) == "number" then
-    TargetPort = Port
-  else
-    TargetPort = Port[math.random(1, #Port)]
-  end
-  DebugNetPrint("HandleDSConnect", Host, TargetIp, TargetPort)
-  GWorld.NetworkMgr:ConnectServer(Host, TargetIp, TargetPort)
+  DebugNetPrint("HandleDSConnect", Host, ServerInfo.ip, ServerInfo.port)
+  GWorld.NetworkMgr:ConnectServer(Host, ServerInfo.ip, ServerInfo.port)
 end
 
 function BP_EMGameInstance_C:IsNullDungeonId(DungeonId)
@@ -194,14 +180,6 @@ function BP_EMGameInstance_C:HandleNetworkError(FailureType, bIsServer)
   print(_G.LogTag, "HandleNetworkError", FailureType, bIsServer)
   if not bIsServer and not self.bHandleNetError then
     self.bHandleNetError = true
-    if 4 == FailureType then
-      print(_G.LogTag, "HandleNetworkError ConnectTimeout")
-      local Avatar = GWorld:GetAvatar()
-      if Avatar then
-        Avatar:HandleNetworkError_ConnectTimeout()
-        return
-      end
-    end
     GWorld.NetworkMgr:DisconnectAndReturnLogin()
   elseif bIsServer then
     self:CloseDS()
@@ -846,11 +824,11 @@ function BP_EMGameInstance_C:CheckMaintenanceInfo(RequestHotNum, Callback)
 end
 
 function BP_EMGameInstance_C:JumpToHomepage(RequestHotNum)
-  local function CheckCbChannel(ChannelId, ImgChannelId, Data)
+  local function CheckCbChannel(ChannelId, Data)
     if not Data then
       return false
     end
-    if -1 == ChannelId and -1 == ImgChannelId then
+    if -1 == ChannelId then
       return true
     end
     if Data.medium then
@@ -861,8 +839,13 @@ function BP_EMGameInstance_C:JumpToHomepage(RequestHotNum)
       end
     end
     if Data.channel_ids then
-      local ChannelInfo = DataMgr.ChannelInfo[ChannelId]
-      local Provider = ChannelInfo and ChannelInfo.Provider
+      local Provider
+      for Id, ChannelInfo in pairs(DataMgr.ChannelInfo) do
+        if Id == ChannelId then
+          Provider = ChannelInfo.Provider
+          break
+        end
+      end
       if Provider then
         for _, ChannelInfo in ipairs(Data.channel_ids) do
           if Provider == ChannelInfo or Provider == ChannelInfo.code then
@@ -872,8 +855,13 @@ function BP_EMGameInstance_C:JumpToHomepage(RequestHotNum)
       end
     end
     if Data.img_channel_id then
-      local ImgChannelInfo = DataMgr.ImgChannelInfo[ImgChannelId]
-      local Provider = ImgChannelInfo and ImgChannelInfo.Provider
+      local Provider
+      for Id, ChannelInfo in pairs(DataMgr.ImgChannelInfo) do
+        if Id == ChannelId then
+          Provider = ChannelInfo.Provider
+          break
+        end
+      end
       if Provider then
         for _, ChannelInfo in ipairs(Data.img_channel_id) do
           if Provider == ChannelInfo or Provider == ChannelInfo.code then
@@ -889,9 +877,8 @@ function BP_EMGameInstance_C:JumpToHomepage(RequestHotNum)
     local JumpURL
     if InterceptUrl and InterceptUrl.mediumList then
       local ChannelId = Utils.HeroUSDKSubsystem():GetChannelId()
-      local ImgChannelId = Utils.HeroUSDKSubsystem():GetMirrorChannelId()
       for _, Data in ipairs(InterceptUrl.mediumList) do
-        if CheckCbChannel(ChannelId, ImgChannelId, Data) then
+        if CheckCbChannel(ChannelId, Data) then
           JumpURL = Data.content and Data.content[1] and Data.content[1].url
           local SystemLanguage = EMCache:Get("SystemLanguage")
           for _, InfoContent in ipairs(Data.content) do
@@ -1234,20 +1221,8 @@ function BP_EMGameInstance_C:ReceiveShutdown()
   if IsDedicatedServer(self) then
     return
   end
-  local ShundownCount = EMCache:Get("ShundownCount") or 0
-  EMCache:Set("ShundownCount", ShundownCount + 1)
-  ShundownCount = EMCache:Get("ShundownCount") or 0
   ReddotManager._Close()
   EMCache:SaveAll(true)
-  if Const.bNullNetWorkMgr then
-    self.NetworkManager = nil
-  end
-  if not URuntimeCommonFunctionLibrary.IsPlayInEditor(self) then
-    local Platform = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
-    if "Windows" == Platform and ShundownCount > 3 then
-      UEMGameInstance.ForceQuitGame()
-    end
-  end
 end
 
 function BP_EMGameInstance_C:InitGameSetting()
@@ -1349,16 +1324,11 @@ function BP_EMGameInstance_C:SetUsdkLanguage()
 end
 
 function BP_EMGameInstance_C:InitGameSystemVoice()
-  if IsDedicatedServer(self) then
-    return
-  end
   local SystemVoice = EMCache:Get("SystemVoice")
   if nil ~= SystemVoice then
     CommonConst.SystemVoice = SystemVoice
   end
-  self:AddDelayFrameFunc(function()
-    AudioManager(self):RecoverSavedData()
-  end, 1)
+  AudioManager(self):RecoverSavedData()
   self:OnSystemVoiceLanguageChanged()
 end
 
@@ -1371,8 +1341,7 @@ function BP_EMGameInstance_C:InitGameInterfaceMode()
     return
   end
   local OptionName = "InterfaceMode"
-  local OptionCacheName = "InterfaceModeCacheName"
-  local GameInterfaceMode = EMCache:Get(OptionCacheName)
+  local GameInterfaceMode = EMCache:Get(OptionName)
   if nil == GameInterfaceMode then
     local SceneManager = self:GetSceneManager()
     if nil == SceneManager then
@@ -1392,8 +1361,7 @@ function BP_EMGameInstance_C:InitGameInterfaceMode()
       end
     end
     SceneManager:ResizeWindow(DefaultMode)
-    EMCache:Set(OptionCacheName, DefaultMode)
-    DebugPrint("初始化显示模式 包体首次登陆时设置成无边框窗口化 InitGameInterfaceMode DefaultMode:" .. DefaultMode)
+    EMCache:Set(OptionName, DefaultMode)
   end
 end
 
@@ -1892,80 +1860,6 @@ function BP_EMGameInstance_C:InitFloatVerifyArray()
     self.FloatVerifyArray:Add(TotalValues.SkillIntensity)
     self.FloatVerifyArray:Add(TotalValues.SkillSustain)
     self.FloatVerifyArray:Add(TotalValues.SkillRange)
-  end
-end
-
-function BP_EMGameInstance_C:SetDynamicResolution(Tag, bEnable)
-  if not Const.bUseDynamicResolution then
-    return
-  end
-  local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
-  if "PC" == PlatformName then
-    return
-  end
-  if UEMGameInstance.IsLowMemoryDevice() then
-    return
-  end
-  if not rawget(self, "DynamicResolution") then
-    if "Android" == PlatformName then
-      rawset(self, "DynamicResolution", {
-        [1] = {
-          100,
-          80,
-          648
-        },
-        [2] = {
-          110,
-          90,
-          720
-        },
-        [3] = {
-          150,
-          100,
-          1260
-        }
-      })
-    elseif "IOS" == PlatformName then
-      rawset(self, "DynamicResolution", {
-        [1] = {
-          75,
-          75,
-          0
-        },
-        [2] = {
-          80,
-          80,
-          0
-        },
-        [3] = {
-          105,
-          105,
-          0
-        }
-      })
-    else
-      return
-    end
-  end
-  if not rawget(self, "DynamicResolutionTags") then
-    rawset(self, "DynamicResolutionTags", {})
-  end
-  self.DynamicResolutionTags[Tag] = bEnable and true or nil
-  if 0 ~= CommonUtils.TableLength(self.DynamicResolutionTags) then
-    local CacheName = "MobileResolution"
-    local OptionIndex = EMCache:Get(CacheName)
-    if nil == OptionIndex then
-      local OptionInfo = DataMgr.Option[CacheName]
-      OptionIndex = tonumber(OptionInfo.DefaultValue)
-    end
-    local ResolutionInfo = self.DynamicResolution[OptionIndex]
-    if not ResolutionInfo then
-      OptionIndex = 3
-    end
-    ResolutionInfo = self.DynamicResolution[OptionIndex]
-    GWorld.GameInstance.SetScreenPercentageLevel(ResolutionInfo[1], ResolutionInfo[2], ResolutionInfo[3])
-  else
-    SettingUtils.ResetMobileResolution()
   end
 end
 

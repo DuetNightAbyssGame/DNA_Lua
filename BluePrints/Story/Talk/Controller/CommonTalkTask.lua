@@ -60,7 +60,6 @@ function CommonTalkTask:Start(TalkTaskData, TaskFinishedCallback)
     UKismetSystemLibrary.ExecuteConsoleCommand(GWorld.GameInstance, "r.MobilePostProcessFogOrVertexFog 0")
   end
   UKismetSystemLibrary.ExecuteConsoleCommand(GWorld.GameInstance, "r.AllowOcclusionQueries 0")
-  GWorld.GameInstance:SetDynamicResolution("Talk", true)
   self:InitUI()
   if not self:CheckResource() then
     self:TryFireEndingCallback(0, 0)
@@ -112,7 +111,6 @@ function CommonTalkTask:End(TalkNodeFinishType, OptionIndex)
     UKismetSystemLibrary.ExecuteConsoleCommand(GWorld.GameInstance, "r.MobilePostProcessFogOrVertexFog 1")
   end
   UKismetSystemLibrary.ExecuteConsoleCommand(GWorld.GameInstance, "r.AllowOcclusionQueries 1")
-  GWorld.GameInstance:SetDynamicResolution("Talk", false)
   self.Player:PreExitStory()
   self:Clear()
   self:OnTalkEnd()

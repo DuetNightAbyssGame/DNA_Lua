@@ -623,6 +623,7 @@ function WBP_Experience_Main_C:UpdateSelectedInfo(ExperienceItem, Speed, isDragS
   self:UpdateNodeInfo()
   self:UpdateRewardInfo()
   self:AddTimer(0.01, function()
+    self:OnRefreshListLater()
     self.List_Item:ScrollToTop()
   end, false, 0, "OnRefreshListLater", true)
   self:UpdateArrow()
@@ -732,6 +733,21 @@ function WBP_Experience_Main_C:UpdateNodeInfo()
     end
     self:InitNormalTab()
   end
+end
+
+function WBP_Experience_Main_C:OnRefreshListLater()
+  self.List_Item:RegenerateAllEntries()
+  self.List_Item:SetRenderOpacity(0)
+  self:AddTimer(0.1, function()
+    self.List_Item:SetRenderOpacity(1)
+    local DisplayedEntries = self.List_Item:GetDisplayedEntryWidgets()
+    for i = 1, DisplayedEntries:Length() do
+      local Entry = DisplayedEntries:GetRef(i)
+      Entry:SetVisibility(UIConst.VisibilityOp.Visible)
+      Entry:StopAllAnimations()
+      Entry:PlayAnimation(Entry.In)
+    end
+  end, false, 0, "OnRefreshListLater", true)
 end
 
 function WBP_Experience_Main_C:UpdateArrow()

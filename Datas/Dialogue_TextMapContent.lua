@@ -58658,7 +58658,7 @@ CameraMoveTo{TargetPosition{"50.077148,-329.630371,240.10498,0.000181,-16.799314
           DialogueId = 10131004,
           GUID = "195BD051",
           NextDialogue = 10131005,
-          SpeakNpcName = "低沉的吼声",
+          SpeakNpcName = "MESSAGE_TITLE_LOADING_14_PC",
           VoiceName = "voice/$Locale$/story/1002/101310/195BD051"
         },
         [10131005] = {
@@ -58688,7 +58688,7 @@ CameraMoveTo{TargetPosition{"50.077148,-329.630371,240.10498,0.000181,-16.799314
           DialogueId = 10131201,
           GUID = "195BD055",
           NextDialogue = 10131202,
-          SpeakNpcName = "低沉的吼声",
+          SpeakNpcName = "MESSAGE_TITLE_LOADING_14_PC",
           VoiceName = "voice/$Locale$/story/1002/101312/195BD055"
         },
         [10131202] = {
@@ -173788,6 +173788,7 @@ CameraMoveTo{TargetPosition{"25.619141,105.791016,140.636719,0.000142,55.800377,
           TalkActionId = {
             [1] = "81501:Agree"
           },
+          VoiceName = "voice/$Locale$/char/Baonu/vo_topic_03_4",
           bForbidSkipOptions = true
         },
         [90250400] = {

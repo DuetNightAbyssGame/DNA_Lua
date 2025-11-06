@@ -330,8 +330,20 @@ function S:RefreshOptionOnClick(SelectOptionId)
     self.Parent:ChangeUnfoldListSelection(SelectOptionId)
     IsNeedSave = true
   end
-  self.NowOptionId = SelectOptionId
-  self.Text_Current:SetText(GText(self.UnFoldTextList[self.NowOptionId]))
+  local bNeedSetText = true
+  if self.CacheName == "AntiAliasing" and URuntimeCommonFunctionLibrary.IsDLSSSupported() then
+    local NowDLSS = 1
+    if UDLSSLibrary then
+      NowDLSS = UDLSSLibrary.GetDLSSMode()
+    end
+    if 0 ~= NowDLSS then
+      bNeedSetText = false
+    end
+  end
+  if bNeedSetText then
+    self.NowOptionId = SelectOptionId
+    self.Text_Current:SetText(GText(self.UnFoldTextList[self.NowOptionId]))
+  end
   self:OnClickSubOptionList()
   if IsNeedSave then
     self:SaveOptionSetting()
@@ -982,33 +994,8 @@ end
 
 function S:SaveAntiAliasingOptionSetting()
   self.OptionCache = self.AntiAliasingList[self.NowOptionId]
-  URuntimeCommonFunctionLibrary.SetAntiAliasingMethodType(self.OptionCache)
+  UKismetSystemLibrary.ExecuteConsoleCommand(self, "r.DefaultFeature.AntiAliasing " .. self.OptionCache)
   self:SaveEMCache(self.EMCacheName, self.EMCacheKey, self.OptionCache)
-end
-
-function S:SetAntiAliasingMiniOptionId()
-  local GameUserSettings = UE4.UGameUserSettings:GetGameUserSettings()
-  local NowAntiAliasingQuality = GameUserSettings:GetAntiAliasingQuality()
-  self.AntiAliasingQualityList = {
-    [1] = 0,
-    [2] = 1,
-    [3] = 2,
-    [4] = 3,
-    [5] = 4
-  }
-  self.NowMiniOptionId = self:SetOldOptionId(self.AntiAliasingQualityList, NowAntiAliasingQuality, false)
-end
-
-function S:RestoreDefaultMiniOptionAntiAliasing()
-  self:SaveAntiAliasingMiniOptionSetting()
-end
-
-function S:SaveAntiAliasingMiniOptionSetting()
-  local MiniOptionCache = self.AntiAliasingQualityList[self.NowMiniOptionId]
-  self:SaveEMCache("GameUserSettings", "AntiAliasingQuality", MiniOptionCache)
-  local GameUserSettings = UE4.UGameUserSettings:GetGameUserSettings()
-  GameUserSettings:SetAntiAliasingQuality(MiniOptionCache)
-  GameUserSettings:ApplySettings(true)
 end
 
 function S:SetMaterialQualityOldOptionId()

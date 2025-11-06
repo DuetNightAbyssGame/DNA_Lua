@@ -45,11 +45,6 @@ function M:Construct()
   self:AddDispatcher(EventID.CurrentSquadChange, self, self.OnCurrentSquadChange)
   self:AddDispatcher(EventID.FoucsDungeonSelectLevel, self, self.OnSelectCellFocus)
   self:AddDispatcher(EventID.OnDisableEscOnDungeonLoading, self, self.DisableEscOnDungeonLoading)
-  TeamController:RegisterEvent(self, function(self, EventId, ...)
-    if EventId == TeamCommon.EventId.TeamOnInit or EventId == TeamCommon.EventId.TeamLeave then
-      self:RefreshBtnState()
-    end
-  end)
   self.List_Prop.OnCreateEmptyContent:Bind(self, self.CreateAndAddEmptyItem)
   self.List_Event.OnCreateEmptyContent:Bind(self, self.CreateEventAndAddEmptyItem)
   self.HB_Cost:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -106,7 +101,6 @@ function M:Destruct()
   self.Button_Multi:UnBindEventOnClickedByObj(self)
   self.Button_Solo:UnBindEventOnClickedByObj(self)
   self.Button_DoubleMod:UnBindEventOnClickedByObj(self)
-  TeamController:UnRegisterEvent(self)
 end
 
 function M:InitLevelList(DungeonList, SelectDungeonId, DeputeType, WalnutId)
@@ -1970,18 +1964,18 @@ function M:IsFocusList()
 end
 
 function M:OnForbiddenRightBtnClicked()
-  UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_REGISTER_COMINGSOON"))
+  UIManager(self):ShowUITip(UIConst.Tip_CommonToast, "UI_REGISTER_COMINGSOON")
 end
 
 function M:OnForbiddenLeftBtnClicked()
   if self.IsComMissing and self.DefaultList:GetVisibility() == ESlateVisibility.SelfHitTestInvisible then
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Squad_Miss_Challenge"))
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, "UI_Squad_Miss_Challenge")
   end
 end
 
 function M:OnForbiddenDoubleModBtnClicked()
   if self.IsDoubleMod and self.ContinuousCombat then
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Event_ModDrop_Exhausted"))
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, "UI_Event_ModDrop_Exhausted")
   end
 end
 
@@ -2057,7 +2051,6 @@ function M:RefreshBtnState(bInIsMatching)
   if nil == IsMatching then
     IsMatching = self:IsMatching()
   end
-  local bIsInTeam = Avatar:IsInTeam()
   self.ContinuousCombat = EMCache:Get("Is_DoubleMod_SwitchTab", true) or false
   local _, IsEliteRushDungeon = self:CheckDungeonType(self.CurSelectedDungeonId)
   local ShowDouble = not IsMultiDungeon and self.IsDoubleMod and IsEliteRushDungeon and self.ContinuousCombat
@@ -2077,8 +2070,7 @@ function M:RefreshBtnState(bInIsMatching)
     tostring(self.DeputeType),
     tostring(IsComMissing),
     tostring(ShowDouble or false),
-    tostring(RemainOK),
-    tostring(bIsInTeam)
+    tostring(RemainOK)
   }, "|")
   if self._Btn_sig == Sig then
     return
@@ -2116,9 +2108,9 @@ function M:RefreshBtnState(bInIsMatching)
       self.Button_Multi:SetVisibility(bIsUnlock and ESlateVisibility.Visible or ESlateVisibility.Collapsed)
     end
     self.Button_Multi:ForbidBtn(not IsMultiDungeon)
-    self.Button_Solo:ForbidBtn(not IsMultiDungeon and bIsInTeam)
     self.Button_Multi:UnBindEventOnClickedByObj(self)
     self.Button_Solo:UnBindEventOnClickedByObj(self)
+    self.Button_Solo:ForbidBtn(false)
     self.Button_Multi:SetDefaultGamePadImg("X")
     self.Button_Solo:SetDefaultGamePadImg("Y")
     self.Button_DoubleMod:SetDefaultGamePadImg("Y")
@@ -2126,11 +2118,6 @@ function M:RefreshBtnState(bInIsMatching)
     self.Button_Solo:BindEventOnClicked(self, self.ShowDialogChar)
     self.Button_Multi:BindForbidStateExecuteEvent(self, self.OnForbiddenRightBtnClicked)
     self.Button_DoubleMod:BindForbidStateExecuteEvent(self, self.OnForbiddenDoubleModBtnClicked)
-    self.Button_Solo:BindForbidStateExecuteEvent(self, function()
-      if not IsMultiDungeon and bIsInTeam then
-        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Team_CanNotEnterDungeon"))
-      end
-    end)
   end
   if IsComMissing then
     self.Button_Multi:ForbidBtn(true)
@@ -2178,7 +2165,6 @@ end
 
 function M.HandleEnterDungeonRetCode(RetCode, ...)
   DebugPrint("gmy@M.EnterDungeonCallback RetCode", RetCode)
-  ErrorCode:Check(RetCode)
   if RetCode == ErrorCode.RET_SUCCESS then
     return true
   else

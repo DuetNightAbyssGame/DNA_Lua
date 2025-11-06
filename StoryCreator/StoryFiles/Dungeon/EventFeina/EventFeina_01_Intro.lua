@@ -82,6 +82,12 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "175729891414533598586",
+            startPort = "Out",
+            endQuest = "175729891414533598585",
+            endPort = "In"
+          },
+          {
             startQuest = "1754637134437299565",
             startPort = "Out",
             endQuest = "175729892419333598783",
@@ -98,18 +104,6 @@ return {
             startPort = "Out",
             endQuest = "1754637109257299014",
             endPort = "Success"
-          },
-          {
-            startQuest = "175729891414533598586",
-            startPort = "Out",
-            endQuest = "1760621620248521",
-            endPort = "In"
-          },
-          {
-            startQuest = "1760621620248521",
-            startPort = "Out",
-            endQuest = "175729891414533598585",
-            endPort = "In"
           }
         },
         nodeData = {
@@ -210,25 +204,8 @@ return {
             key = "175729892419333598783",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 1560.1052631578948, y = 293.89473684210526},
+            pos = {x = 1568, y = 316},
             propsData = {WaitTime = 1}
-          },
-          ["1760621620248521"] = {
-            key = "1760621620248521",
-            type = "TalkNode",
-            name = "对话节点",
-            pos = {x = 2168.835526315789, y = 279.2631578947368},
-            propsData = {
-              IsNpcNode = false,
-              FirstDialogueId = 80001003,
-              FlowAssetPath = "",
-              TalkType = "Guide",
-              bIsStandalone = false,
-              GuideMeshIndexList = {},
-              IsPlayStartSound = false,
-              GuideTalkStyle = "Normal",
-              OverrideFailBlend = false
-            }
           }
         },
         commentData = {}
