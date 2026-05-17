@@ -1,23 +1,29 @@
-require("UnLua")
+--
+-- DESCRIPTION
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
+require "UnLua"
+
+---@type WBP_Com_ArrowBtn_L_C|Common_Button_PC
 local M = Class("BluePrints.UI.UI_PC.Common.Common_Button.Common_Button_PC")
 
 function M:Construct()
-  self.UnHover = self.Unhover
-  self.Super.Construct(self, self.Btn)
+    self.UnHover = self.Unhover
+    self.Super.Construct(self, self.Btn)
 end
 
 function M:Destruct()
-  self.Super.Destruct(self)
+    self.Super.Destruct(self)
 end
-
 function M:SwitchNormalAnimation()
-  self:StopAllAnimations()
-  self:PlayAnimation(self.Normal)
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Normal)
 end
-
 function M:ForbidBtn(IsForbid)
-  self.Super.ForbidBtn(self, IsForbid)
-  self.Btn:SetForbidden(IsForbid)
+    self.Super.ForbidBtn(self, IsForbid)
+    self.Btn:SetForbidden(IsForbid)
 end
-
 return M

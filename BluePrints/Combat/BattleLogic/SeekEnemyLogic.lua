@@ -1,2 +1,109 @@
+
 local Component = {}
+-- 已全部移到C++
+--function Component:FindSeekEnemyTarget(Character, R, H, D, TotalTime, Debug)
+--    -- R: 索敌范围半径
+--    -- H: 索敌高度
+--    -- D: 索敌攻击距离
+--    -- return: 索敌目标
+--    self.Overridden.FindSeekEnemyTarget(self, Character, R, H, D, TotalTime, Debug)
+--    -- print("寻找索敌目标.."..tostring(Character)..R..H..tostring(Debug))
+--    local CenterPos = Character:K2_GetActorLocation()
+--    local ObjectTypes = self:GetEffectTargetObjectTypes()
+--    local IsTargetInRange = false
+--    local TargetLocation = nil
+--    local CameraRotationComponent = Character.CameraRotationComponent
+--    local CurLockOnInfo = CameraRotationComponent and CameraRotationComponent.CurLockOnInfo
+--    if IsValid(CurLockOnInfo) then
+--        -- 锁骨骼有非常多问题，用胶囊体临时处理一下
+--        local BonePos = CurLockOnInfo.Actor["MonsterHitedCapsule"]:K2_GetComponentLocation()
+--        --local Bone = CurLockOnInfo.Bone
+--        --local BonePos = CurLockOnInfo.Actor.Mesh:GetSocketLocation(Bone)
+--        local CenterPos2D = UE4.UKismetMathLibrary.Conv_VectorToVector2D(CenterPos)
+--        local BonePos2D = UE4.UKismetMathLibrary.Conv_VectorToVector2D(BonePos)
+--        local HorizonDist = UE4.UKismetMathLibrary.VSize2D(CenterPos2D - BonePos2D)
+--        local VerticalDist = UE4.UKismetMathLibrary.Abs(CenterPos.Z - BonePos.Z)
+--        if HorizonDist <= R * Const.RangeMultiplier and VerticalDist <= H / 2.0 then
+--            IsTargetInRange = true
+--            TargetLocation = BonePos
+--        end
+--    end
+--
+--    if not IsTargetInRange then
+--        local Targets, CollisionComps = self:CheckCylinderHit(Character, CenterPos, ObjectTypes, R, H, nil, nil, Debug)
+--        if((not Targets) or Targets:Length() == 0)then
+--            return false
+--        end
+--
+--        Targets = self:FilterTargetIsCharacterOrMechanismSummon(Targets)
+--        Targets = self:FilterTargetNotDead(Targets)
+--        self:FilterTargetsByCamp(Character, Targets, ECampFilter.Enemy)
+--        if (Character:IsPlayer()) then
+--            Targets = self:FilterTargetIgnoreSeekEnemy(Targets)
+--        end
+--        if Targets:Num() <= 0 then
+--            return false
+--        end
+--        TargetLocation = self:GetEnemyTargetLocation(Character, Targets, CollisionComps, R, H, D)
+--    end
+--    self:SeekEnemyToTarget(Character, TargetLocation, D, TotalTime)
+--    Character.bGotTarget = true
+--    return true
+--end
+--
+--function Component:GetEnemyTargetLocation(Character, Targets, CollisionComps, R, H, D)
+--    -- 获取所有胶囊体并判断权重
+--    local CapsuleTargets = {}
+--    for _, Target in pairs(Targets) do
+--        if Target.Eid then
+--            local Result = CollisionComps:Find(Target.Eid)
+--            if Result then
+--                for _, CollisionComp in pairs(Result.Collisions:ToTable()) do
+--                    table.insert(CapsuleTargets, CollisionComp)
+--                end
+--            end
+--        end
+--    end
+--    local Phantom = Character:IsPhantom()
+--    local MoveInput = nil
+--    local Rotation = nil
+--    local IgnoreCamera = nil
+--    if Phantom then
+--        MoveInput = FVector(0, 0, 0)
+--        Rotation = Character:K2_GetActorRotation()
+--        IgnoreCamera = true
+--    else
+--        MoveInput = Character.MoveInput
+--        Rotation = Character:GetControlRotation()
+--        IgnoreCamera = false
+--    end
+--
+--    local Weights = TArray(0.0)
+--    local WeightTargets = TArray(USceneComponent)
+--    for _, Target in pairs(CapsuleTargets) do
+--        local Weight = self:CalcSeekEnemyWeight(Character, Target, MoveInput, Rotation, R, H, D, IgnoreCamera)
+--        WeightTargets:Add(Target)
+--        Weights:Add(Weight)
+--    end
+--    local Target = UE4.UFormulaFunctionLibrary.GetMaxItem(WeightTargets, Weights)
+--    return Target:K2_GetComponentLocation()
+--end
+--
+--function Component:FilterTargetIsCharacterOrMechanismSummon(Targets)
+--    local NewTargets = {}
+--    for _, Target in pairs(Targets) do
+--        -- 筛选Character对象
+--        if Target and Target.IsCharacter and Target:IsCharacter() then
+--            table.insert(NewTargets, Target)
+--        end
+--        -- 筛选允许被索敌的机关创生物
+--        if Target and Target.IsMechanismSummon and Target:IsMechanismSummon() then
+--            if Target.UnitId and DataMgr.MechanismSummon[Target.UnitId] and DataMgr.MechanismSummon[Target.UnitId].IsSeekEnemyEnable then
+--                table.insert(NewTargets, Target)
+--            end
+--        end
+--    end
+--    return NewTargets
+--end
+
 return Component

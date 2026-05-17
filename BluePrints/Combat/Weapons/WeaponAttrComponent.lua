@@ -1,2 +1,79 @@
+
 local Component = {}
+
+--function Component:PickUpBullet(ChangeBullet)
+--	ChangeBullet = math.floor(ChangeBullet * self:GetAttr("BulletConver"))
+--	self:AddBullet(ChangeBullet)
+--end
+--
+--function Component:AddBullet(ChangeBullet)
+--	local BulletMax = self:GetAttr("BulletMax")
+--	if BulletMax == -1 then
+--		return
+--	end
+--	local MagazineCapacity = self:GetAttr("MagazineCapacity")
+--	local BeforeBulletNum = self:GetAttr("BulletNum")
+--    local Bullet = math.max(0, math.min(BulletMax - MagazineCapacity, self:GetAttr("BulletNum") + ChangeBullet))
+--    self:SetAttr("BulletNum", Bullet)
+--    self:GetAttributesSet():OnRep_BulletNum()
+--	Battle(self):TriggerBattleEvent(BattleEventName.OnConsumeBullet, self:GetOwner(), BeforeBulletNum, self:GetAttr("BulletNum"))
+--end
+--
+--function Component:AddMagazineBullet(ChangeBullet)
+--	local MagazineCapacity = self:GetAttr("MagazineCapacity")
+--	if MagazineCapacity == -1 then
+--		return
+--	end
+--	local Bullet = math.max(0, math.min(MagazineCapacity, self:GetAttr("MagazineBulletNum") + ChangeBullet))
+--	self:SetAttr("MagazineBulletNum", Bullet)
+--	self:GetAttributesSet():OnRep_MagazineBulletNum()
+--	if Bullet == 0 then
+--		Battle(self):TriggerBattleEvent(BattleEventName.OnMagazineBulletCleared, self:GetOwner())
+--	end
+--end
+--
+--function Component:IsBulletEnough(CostBullet)
+--	local SurplusBulletCount
+--	if self:GetAttr("MagazineCapacity") and self:GetAttr("MagazineCapacity") > 0 then
+--		SurplusBulletCount = self:GetAttr("MagazineBulletNum")
+--	elseif self:GetAttr("BulletMax") and self:GetAttr("BulletMax") > 0 then
+--		SurplusBulletCount = self:GetAttr("BulletNum")
+--	end
+--	if not SurplusBulletCount then
+--		return true
+--	else
+--		return SurplusBulletCount >= CostBullet
+--	end
+--end
+--
+--function Component:UpdateBullet(CostBullet)
+--	if self:GetAttr("MagazineCapacity") and self:GetAttr("MagazineCapacity") > 0 then
+--		self:AddMagazineBullet(CostBullet)
+--	elseif self:GetAttr("BulletMax") and self:GetAttr("BulletMax") > 0 then
+--		self:AddBullet(CostBullet)
+--	end
+--end
+--
+--function Component:GetBulletNum()
+--	return self:GetAttr("BulletNum")
+--end
+--
+--function Component:ChargeBullet(ChargeAmount, IsConsumeBullet)
+--	if not self:GetAttr("MagazineCapacity") or self:GetAttr("MagazineCapacity") <= 0 then return end
+--	ChargeAmount = ChargeAmount and ChargeAmount or -1
+--	local CurMagazineNum = self:GetAttr("MagazineBulletNum")
+--	local MagazineCapacity = self:GetAttr("MagazineCapacity")
+--	local IntervalNum = MagazineCapacity - CurMagazineNum
+--	local CurBulletNum = self:GetAttr("BulletNum")
+--	local RealChargeBulletNum = (ChargeAmount < 0 or ChargeAmount >= IntervalNum) and IntervalNum or ChargeAmount
+--	local MinNum = CurBulletNum == -1 and RealChargeBulletNum or math.min(CurBulletNum, RealChargeBulletNum)
+--	if MinNum == 0 then
+--		return
+--	end
+--	if IsConsumeBullet or IsConsumeBullet == nil then
+--		self:AddBullet(-MinNum)
+--	end
+--	self:AddMagazineBullet(MinNum)
+--end
+
 return Component

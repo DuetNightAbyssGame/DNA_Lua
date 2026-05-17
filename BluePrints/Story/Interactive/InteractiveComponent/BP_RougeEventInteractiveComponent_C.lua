@@ -1,31 +1,46 @@
-local RougeConst = require("BluePrints.UI.UI_PC.RougeLike.RougeAchive.RougeConst")
-require("UnLua")
+--
+-- DESCRIPTION
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
+local RougeConst = require "BluePrints.UI.UI_PC.RougeLike.RougeAchive.RougeConst"
+require "UnLua"
+
 local M = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_HomeInteractiveComponent_C")
+-- function M:Initialize(Initializer)
+-- end
+
+-- function M:ReceiveBeginPlay()
+-- end
+
+-- function M:ReceiveEndPlay()
+-- end
+
+-- function M:ReceiveTick(DeltaSeconds)
+-- end
 
 function M:LoadUI()
-  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-  local UIManager = GameInstance:GetGameUIManager()
-  local RougeLikeManager = GWorld.RougeLikeManager
-  if not RougeLikeManager then
-    return
-  end
-  if 0 == RougeLikeManager.RoomId then
-    return
-  end
-  local ShopStoryId = DataMgr.RougeLikeRoom[RougeLikeManager.RoomId].ShopStoryId
-  if not ShopStoryId then
-    return
-  end
-  UIManager:LoadUINew("Rouge_Event_Main", {
-    nil,
-    ShopStoryId,
-    nil,
-    true
-  })
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar.RougeLike:IsManualUnlocked(RougeConst.ArchiveType.Story, DataMgr.RougeLikeStoryEvent[ShopStoryId].RLArchiveSubId) then
-    Avatar:NotifyTriggerRougeLikeStoryEvent(ShopStoryId)
-  end
+    -- self.Overridden.LoadUI(self)
+    local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+    local UIManager = GameInstance:GetGameUIManager()
+    local RougeLikeManager = GWorld.RougeLikeManager
+    if not RougeLikeManager then
+        return
+    end
+    if RougeLikeManager.RoomId == 0 then
+        return
+    end
+    local ShopStoryId = DataMgr.RougeLikeRoom[RougeLikeManager.RoomId].ShopStoryId
+    if not ShopStoryId then
+        return
+    end
+    UIManager:LoadUINew("Rouge_Event_Main", {nil, ShopStoryId, nil, true})
+    local Avatar = GWorld:GetAvatar()
+    if not Avatar.RougeLike:IsManualUnlocked(RougeConst.ArchiveType.Story, DataMgr.RougeLikeStoryEvent[ShopStoryId].RLArchiveSubId) then
+        Avatar:NotifyTriggerRougeLikeStoryEvent(ShopStoryId)
+    end
 end
 
 return M

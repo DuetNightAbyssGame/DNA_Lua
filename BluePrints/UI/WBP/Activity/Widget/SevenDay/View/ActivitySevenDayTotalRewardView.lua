@@ -1,58 +1,61 @@
-require("UnLua")
-local EnumPlayerSignRewardState = require("Blueprints.UI.WBP.Activity.ActivityUtils").EnumPlayerSignRewardState
+--
+-- DESCRIPTION
+-- 活动系统签到奖励总Item （PC、移动端公用）
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
+
+require "UnLua"
+
+local EnumPlayerSignRewardState = require "Blueprints.UI.WBP.Activity.ActivityUtils".EnumPlayerSignRewardState
+
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
 function M:InitRewardInfo(PageConfigData, ParentWidget)
-  local AllDays = PageConfigData.LoginDuration
-  for i = 1, AllDays do
-    if i == AllDays then
-      local SpRewardWidget = self.HighItem
-      SpRewardWidget:InitSpecialReward(i, {
-        ActivityId = PageConfigData.EventId,
-        RewardId = PageConfigData.EventReward[i],
-        CharId = PageConfigData.CharInfo
-      }, ParentWidget)
-    else
-      local NorRewardWidget = self["LowItem_" .. i]
-      NorRewardWidget:InitNormalReward(i, {
-        ActivityId = PageConfigData.EventId,
-        RewardId = PageConfigData.EventReward[i]
-      }, ParentWidget)
+    local AllDays = PageConfigData.LoginDuration
+    for i = 1, AllDays, 1 do
+        if (i == AllDays) then
+            local SpRewardWidget = self.HighItem
+            SpRewardWidget:InitSpecialReward(i, {ActivityId=PageConfigData.EventId, RewardId=PageConfigData.EventReward[i], CharId=PageConfigData.CharInfo, bComeBackEvent = PageConfigData.bComeBackEvent}, ParentWidget)
+        else
+            local NorRewardWidget = self["LowItem_"..i]
+            NorRewardWidget:InitNormalReward(i, {ActivityId=PageConfigData.EventId, RewardId=PageConfigData.EventReward[i], bComeBackEvent = PageConfigData.bComeBackEvent}, ParentWidget)
+        end
     end
-  end
-  self.AllDays = AllDays
-  self.LowItem_1:SetNavigationRuleCustom(EUINavigation.Left, {
-    ParentWidget,
-    ParentWidget.LeaveRewardViewMode
-  })
-  self.LowItem_4:SetNavigationRuleCustom(EUINavigation.Left, {
-    ParentWidget,
-    ParentWidget.LeaveRewardViewMode
-  })
+    self.AllDays = AllDays
+
+    -- 设置手柄导航
+    self.LowItem_1:SetNavigationRuleCustom(EUINavigation.Left, {ParentWidget,ParentWidget.LeaveRewardViewMode})
+    self.LowItem_4:SetNavigationRuleCustom(EUINavigation.Left, {ParentWidget,ParentWidget.LeaveRewardViewMode})
 end
 
 function M:BP_GetDesiredFocusTarget()
-  local NeedFocusWidget
-  for i = 1, self.AllDays do
-    local RewardWidget = i == self.AllDays and self.HighItem or self["LowItem_" .. i]
-    if RewardWidget:GetRewardState() == EnumPlayerSignRewardState.SignedNotRecv then
-      NeedFocusWidget = RewardWidget
-      break
+    local NeedFocusWidget = nil
+    for i = 1, self.AllDays, 1 do
+        -- 尝试聚焦已签到但未领取奖励
+        local RewardWidget = i == self.AllDays and self.HighItem or self["LowItem_"..i]
+        if (RewardWidget:GetRewardState() == EnumPlayerSignRewardState.SignedNotRecv) then
+            NeedFocusWidget = RewardWidget
+            break
+        end
     end
-  end
-  if nil == NeedFocusWidget then
-    for i = 1, self.AllDays do
-      local RewardWidget = i == self.AllDays and self.HighItem or self["LowItem_" .. i]
-      if RewardWidget:GetRewardState() == EnumPlayerSignRewardState.NotSign then
-        NeedFocusWidget = RewardWidget
-        break
-      end
+    if (NeedFocusWidget == nil) then
+        -- 尝试聚焦第一个未领取的奖励的奖励
+        for i = 1, self.AllDays, 1 do
+            local RewardWidget = i == self.AllDays and self.HighItem or self["LowItem_"..i]
+            if (RewardWidget:GetRewardState() == EnumPlayerSignRewardState.NotSign) then
+                NeedFocusWidget = RewardWidget
+                break
+            end
+        end
     end
-  end
-  if nil == NeedFocusWidget then
-    NeedFocusWidget = self.LowItem_1
-  end
-  return NeedFocusWidget
+
+    if (NeedFocusWidget == nil) then
+        -- 如果所有奖励都已领取，则聚焦第一个奖励
+        NeedFocusWidget = self.LowItem_1
+    end
+    return NeedFocusWidget
 end
 
 return M

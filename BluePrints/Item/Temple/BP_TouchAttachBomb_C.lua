@@ -1,11 +1,20 @@
-require("UnLua")
+--
+-- DESCRIPTION
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
+
+---@type BP_TouchAttachBomb_C
+require "UnLua"
 local M = Class({
-  "BluePrints.Item.Temple.BP_TouchBomb_C"
+    "BluePrints.Item.Temple.BP_TouchBomb_C"
 })
 
 function M:ActiveCombat()
-  self.ChestInteractiveComponent.bCanUsed = false
-  self:OnAttach()
+    self.ChestInteractiveComponent.bCanUsed = false
+    self:OnAttach()
 end
 
 return M

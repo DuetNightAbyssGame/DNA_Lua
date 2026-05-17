@@ -1,73 +1,89 @@
-require("UnLua")
-local BP_TalkObjectInteractiveComponent_C = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
-local StoryInteractiveController = require("BluePrints.UI.WBP.StoryInteractive.StoryInteractiveController")
-local StoryInterActiveModel = require("BluePrints.UI.WBP.StoryInteractive.StoryInteractiveModel")
+require "UnLua"
 
+local LuaConst = require("EMLuaConst")
+local BP_TalkObjectInteractiveComponent_C = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
+local StoryInteractiveController = require ("BluePrints.UI.WBP.StoryInteractive.StoryInteractiveController")
+local StoryInterActiveModel = require ("BluePrints.UI.WBP.StoryInteractive.StoryInteractiveModel")
 function BP_TalkObjectInteractiveComponent_C:SetInteractiveInfo(Info)
-  self.Info = Info
-  self.InteractiveDistance = Info.InteractiveDistance
-  self.Owner = self:GetOwner()
-  self:SetInteractiveName(Info.InteractiveId)
-  self:ProcessRawInfo()
+    self.Info = Info
+    self:SetInteractiveDistance(Info.InteractiveDistance)
+    self.Owner = self:GetOwner()
+
+    self:SetInteractiveName(Info.InteractiveId)
+    self:ProcessRawInfo()
 end
 
 function BP_TalkObjectInteractiveComponent_C:ProcessRawInfo()
-  self.bEnableDistanceCheck = self.InteractiveDistance and self.InteractiveDistance > 0
+    self.bEnableDistanceCheck = self.InteractiveDistance and self.InteractiveDistance > 0
 end
 
 function BP_TalkObjectInteractiveComponent_C:BtnClicked(PlayerActor, InPressTimeSeconds)
-  DebugPrint("BP_TalkObjectInteractiveComponent_C:StartInteractive")
-  PlayerActor:SetCharacterTag("Idle")
-  PlayerActor:SetCharacterTag(self.InteractiveTag)
-  PlayerActor:SetCanInteractiveTrigger(false, "TalkInteractive")
-  self.bIsInInteractive = true
-  self.PlayerActor = PlayerActor
-  local Exist = StoryInterActiveModel:HasAnyInteractive(self.Owner.NpcId)
-  if Exist then
-    StoryInteractiveController:TryStartInteractive(self.Owner.NpcId, self.Owner, PlayerActor, {
-      Obj = self,
-      Func = self.EndInteractive
-    })
-  end
+    DebugPrint("BP_TalkObjectInteractiveComponent_C:StartInteractive")
+    PlayerActor:SetCharacterTag("Idle")
+    PlayerActor:SetCharacterTag(self.InteractiveTag)
+    PlayerActor:SetCanInteractiveTrigger(false, "TalkInteractive")
+    self.bIsInInteractive = true
+    self.PlayerActor = PlayerActor
+
+    -- if GWorld.StoryMgr:ExistedNPCInteractiveTalk(self.Owner.NpcId) then
+    --     GWorld.StoryMgr:TryExecNPCInteractiveTalk(self.Owner.NpcId, self.Owner, {Obj = self, Func = self.EndInteractive})
+    -- end
+    local Exist = StoryInterActiveModel:HasAnyInteractive(self.Owner.NpcId)
+    if Exist then
+        StoryInteractiveController:TryStartInteractive(self.Owner.NpcId, self.Owner, 
+            PlayerActor, {Obj = self, Func = self.EndInteractive})
+    end
 end
 
 function BP_TalkObjectInteractiveComponent_C:EndInteractive()
-  DebugPrint("BP_TalkObjectInteractiveComponent_C:EndInteractive", self:IsInInteractive())
-  if not self:IsInInteractive() then
-    return
-  end
-  DebugPrint("BP_TalkObjectInteractiveComponent_C:EndInteractive")
-  self.PlayerActor:SetCanInteractiveTrigger(true, "TalkInteractive")
-  self.bIsInInteractive = false
-  self.PlayerActor:SetCharacterTag("Idle")
-  self.PlayerActor = nil
+    DebugPrint("BP_TalkObjectInteractiveComponent_C:EndInteractive", self:IsInInteractive())
+    if not self:IsInInteractive() then
+        return
+    end
+    DebugPrint("BP_TalkObjectInteractiveComponent_C:EndInteractive")
+    self.PlayerActor:SetCanInteractiveTrigger(true, "TalkInteractive")
+    self.bIsInInteractive = false
+    self.PlayerActor:SetCharacterTag("Idle")
+    self.PlayerActor = nil
 end
 
 function BP_TalkObjectInteractiveComponent_C:IsInInteractive()
-  return self.bIsInInteractive
+    return self.bIsInInteractive
 end
 
 function BP_TalkObjectInteractiveComponent_C:TriggerEnter(PlayerActor)
-  local InteractiveName = StoryInterActiveModel:GetInteractiveName(self.Owner.NpcId)
-  if InteractiveName ~= self.InteractiveName then
-    self:SetInteractiveName(InteractiveName)
-  end
-  self.Overridden.TriggerEnter(self, PlayerActor)
+    local InteractiveName = StoryInterActiveModel:GetInteractiveName(self.Owner.NpcId)
+    if InteractiveName ~= self.InteractiveName then
+        self:SetInteractiveName(InteractiveName)
+    end
+    self.Overridden.TriggerEnter(self, PlayerActor)
 end
 
 function BP_TalkObjectInteractiveComponent_C:IsCanInteractive(PlayerActor)
-  local bRes = true
-  local Exist = StoryInterActiveModel:HasAnyInteractive(self.Owner.NpcId)
-  bRes = self.bEnableDistanceCheck and bRes and self.DistanceCheck(self.Owner, PlayerActor, self.InteractiveDistance) and Exist
-  return bRes
+    local bRes = true
+    local Exist = StoryInterActiveModel:HasAnyInteractive(self.Owner.NpcId)
+    if LuaConst.OpenComputeInteractive then
+        if self.bEnableDistanceCheck then
+            -- bRes = bRes and self.DistanceCheck(self.Owner, PlayerActor, self.InteractiveDistance)
+            bRes = bRes and self:GetDistanceCheckResult()
+            and Exist
+        end
+    else
+        if self.bEnableDistanceCheck then
+            bRes = bRes and self.DistanceCheck(self.Owner, PlayerActor, self.InteractiveDistance)
+            and Exist
+        end
+    end
+    
+    return bRes
 end
 
 function BP_TalkObjectInteractiveComponent_C:GetSpecialQuestID()
-  return StoryInterActiveModel:GetNowInteractiveSpecialQuestId(self.Owner.NpcId)
+    return StoryInterActiveModel:GetNowInteractiveSpecialQuestId(self.Owner.NpcId)
 end
 
 function BP_TalkObjectInteractiveComponent_C:GetQuestID()
-  return StoryInterActiveModel:GetNowInteractiveQuestChainId(self.Owner.NpcId)
+    return StoryInterActiveModel:GetNowInteractiveQuestChainId(self.Owner.NpcId)
 end
 
 return BP_TalkObjectInteractiveComponent_C

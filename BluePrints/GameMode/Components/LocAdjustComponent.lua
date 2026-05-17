@@ -1,0 +1,188 @@
+
+-- require "UnLua"
+
+-- local Component = {}
+
+-- function Component:InitComponent()
+-- 	if self:IsInRegion() then
+-- 		return
+-- 	end
+-- 	self.FallingCheckTime = 5
+-- 	self.FallingRemainTime = self.FallingCheckTime
+-- 	if not self.DungeonId then
+-- 		return
+-- 	end
+-- 	self.AdjustData = DataMgr.Dungeon[self.DungeonId]
+-- 	if not self.AdjustData or not self.AdjustData.LocAdjustDetectTime or not self.AdjustData.LocAdjustDis then 
+-- 		self.AdjustData = nil
+-- 		return
+-- 	end
+-- 	self.AdjustInfo = {}  -- {eid: num}
+-- 	-- 尝试用一下RemainTime,可以有效受到timedelition的影响，并且不会考虑定时器的问题
+-- 	self.RemainTime = self.AdjustData.LocAdjustDetectTime
+-- 	self.ThresholdDistance = self.AdjustData.LocAdjustDis
+-- 	self.NearestPlayer = {} -- {monster eid : player}
+-- end
+
+-- function Component:TickComponent(DeltaSeconds)
+-- 	if self.UseCPPAIBattleComponent then
+-- 		return
+-- 	end
+-- 	if self:IsInRegion() then
+-- 		return
+-- 	end
+-- 	-- 掉落位置检测
+-- 	self.FallingRemainTime = self.FallingRemainTime - DeltaSeconds
+-- 	if self.FallingRemainTime <= 0 then
+-- 		self:UpdateFallingMonsterLoc()
+-- 		self.FallingRemainTime = self.FallingCheckTime
+-- 	end
+
+-- 	-- 移怪检测
+-- 	if not self.AdjustData then 
+-- 		return
+-- 	end
+-- 	if not self.TacMapManager then 
+-- 		return 
+-- 	end
+-- 	self.RemainTime = self.RemainTime - DeltaSeconds
+-- 	if self.RemainTime <= 0 then
+-- 		self:UpdateMonsterLoc()
+-- 		self.RemainTime = self.AdjustData.LocAdjustDetectTime
+-- 	end
+-- 	self.NearestPlayer = {}
+-- end
+
+-- function Component:UpdateFallingMonsterLoc()
+-- 	-- 处理怪物掉落死亡
+-- 	local MonsterMapCopy = CommonUtils.Copy(self.EMGameState.MonsterMap)
+-- 	for _, Monster in pairs(MonsterMapCopy) do
+-- 		if IsValid(Monster) and not Monster:IsDead() and Monster:IsRealMonster() then
+-- 			if Monster.BornPos and math.abs(Monster.BornPos.Z - Monster:K2_GetActorLocation().Z) > 100000 then
+-- 				DebugPrint("Monster BornPos Dis >100000  Dead ==== Monster->UnitId:"..Monster.UnitId.." Monster->Eid:   " .. Monster.Eid.." Monster->CreatorId:   " .. Monster.CreatorId.." Monster->CreatorType:   " .. Monster.CreatorType.." Monster->Bornpos:   " , Monster.BornPos)
+-- 				Battle(self):BattleOnDead(Monster.Eid, Monster.Eid, 0, EDeathReason.Falling)
+-- 			end
+-- 		end
+-- 	end
+-- end
+
+-- function Component:UpdateMonsterLoc()
+-- 	-- 处理动态怪物距离过远移怪
+-- 	local DetectMonsters = self:GetDetectMonster()
+-- 	-- local Res = self.TacMapManager:GetDistanceInfoFromPlayerToMonsters(DetectMonsters)
+-- 	for i = 1, #DetectMonsters do
+-- 		local Monster = DetectMonsters[i]
+-- 		local MinDistance = self:GetMinDistance(Monster)
+-- 		if MinDistance > self.ThresholdDistance then
+-- 			if self.AdjustInfo[Monster.Eid] then
+-- 				self.AdjustInfo[Monster.Eid] = self.AdjustInfo[Monster.Eid] + 1
+-- 			else
+-- 				self.AdjustInfo[Monster.Eid] = 1
+-- 			end
+-- 		else
+-- 			self.AdjustInfo[Monster.Eid] = 0
+-- 		end
+-- 	end
+
+-- --[[for Monster, Dis in pairs(Res) do
+-- 		if Dis > self.AdjustData.LocAdjustDis then
+-- 			if self.AdjustInfo[Monster.Eid] then
+-- 				self.AdjustInfo[Monster.Eid] = self.AdjustInfo[Monster.Eid] + 1
+-- 			else
+-- 				self.AdjustInfo[Monster.Eid] = 1
+-- 			end
+-- 		else
+-- 			self.AdjustInfo[Monster.Eid] = 0
+-- 		end
+-- 	end--]]
+
+-- 	for Eid, Num in pairs(self.AdjustInfo) do
+-- 		if Num == 0 then
+-- 			self.AdjustInfo[Eid] = nil
+-- 		end
+-- 		if Num >= 2 then
+-- 			local Monster = Battle(self):GetEntity(Eid)
+-- 			if self:CheckMonsterResetEnable(Monster) then
+-- 				self:ResetMonsterInfo(Monster)
+-- 				self.AdjustInfo[Eid] = nil
+-- 			end
+-- 		end
+-- 	end
+-- 	-- 待定
+-- 	self:UpdateMonsterSpawnInfo(Monster.CreatorId, Monster.UnitId)
+-- end
+
+-- function Component:CheckMonsterResetEnable(Monster)
+-- 	if not IsValid(Monster) then
+-- 		return false
+-- 	end
+-- 	if Monster:IsDead() then
+-- 		return false
+-- 	end
+-- 	if not IsValid(self.NearestPlayer[Monster.Eid]) then
+-- 		return false
+-- 	end
+
+-- --[[	if self.TacMapManager:GetVisibleInfoFromPlayerToMonster(Monster)then 
+-- 		return false
+-- 	end--]]
+
+-- 	if self:CheckLineTraceEnable(Monster) then
+-- 		return false
+-- 	end
+-- 	return true
+-- end
+
+-- function Component:CheckLineTraceEnable(Monster)
+-- 	local Player = self.NearestPlayer[Monster.Eid]
+-- 	local StartPos = Monster:K2_GetActorLocation()
+-- 	local EndPos = Player:K2_GetActorLocation()
+-- 	local HitResult = FHitResult()
+-- 	local bHit = UE4.UKismetSystemLibrary.LineTraceSingle(self, StartPos, EndPos, ETraceTypeQuery.TraceEnemyVision, false, nil, 0, HitResult, true)
+-- 	if bHit and HitResult.Actor and HitResult.Actor.Eid == Player.Eid then
+-- 		return true
+-- 	end
+--     return false
+-- end
+
+-- function Component:ResetMonsterInfo(Monster)
+-- 	Monster:EMActorDestroy(EDestroyReason.MonsterSpawnAdjust)
+-- --[[	if 1 then
+-- 		Monster:EMActorDestroy(false, EDestroyReason.MonsterSpawnAdjust)
+-- 	else
+-- 		Monster:ResetTacMapLoc()
+-- 	end--]]
+-- end
+
+-- function Component:GetDetectMonster()
+-- 	local DetectMonster = {}
+-- 	for _, Monster in pairs(self.EMGameState.MonsterMap) do
+-- 		if IsValid(Monster) and not Monster:IsDead() and Monster.CreatorType == "MonsterSpawn" then
+-- 			table.insert(DetectMonster, Monster)
+-- 		end
+-- 	end
+-- 	return DetectMonster
+-- end
+
+-- function Component:GetMinDistance(Monster)
+-- 	-- 返回当前怪物与距离最近的玩家之间的距离，并记录这名玩家到NearestPlayer中
+-- 	local NearestPlayer = nil
+-- 	local MinDistance = 9999999
+-- 	for i = 0, self:GetPlayerNum() - 1 do
+-- 		local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, i)
+-- 		if IsValid(Player) then
+-- 			local Distance = Player:GetDistanceTo(Monster)
+-- 			if Distance < MinDistance then
+-- 				MinDistance = Distance
+-- 				NearestPlayer = Player
+-- 			end
+-- 		end
+-- 	end
+-- 	if IsValid(NearestPlayer) then
+-- 		self.NearestPlayer[Monster.Eid] = NearestPlayer
+-- 	end
+-- 	return MinDistance
+-- end
+
+
+-- return Component

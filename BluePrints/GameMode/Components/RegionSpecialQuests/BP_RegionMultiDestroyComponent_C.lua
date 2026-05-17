@@ -1,18 +1,28 @@
-require("UnLua")
+--
+-- DESCRIPTION
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
+require "UnLua"
+
+---@type BP_RegionMultiDestroyComponent_C
 local BP_RegionMultiDestroyComponent_C = Class({
-  "BluePrints.Common.TimerMgr"
+	"BluePrints.Common.TimerMgr",
 })
 
 function BP_RegionMultiDestroyComponent_C:InitRegionMultiDestroyComponent()
-  DebugPrint("RegionMultiDestroyComponent: Init!")
-  self.GameMode = self:GetOwner()
+    DebugPrint("RegionMultiDestroyComponent: Init!")
+	self.GameMode = self:GetOwner()
 end
 
 function BP_RegionMultiDestroyComponent_C:SetProgressUIState(UIIndex, NewState)
-  local ProgressUI = UIManager(self):GetUIObj("RegionMultiDestroyProgress")
-  if ProgressUI then
-    ProgressUI:SetPointState(UIIndex, NewState)
-  end
+    local ProgressUI = UIManager(self):GetUIObj("RegionMultiDestroyProgress")
+    if ProgressUI then
+        ProgressUI:SetPointState(UIIndex, NewState)
+    end
 end
+
 
 return BP_RegionMultiDestroyComponent_C

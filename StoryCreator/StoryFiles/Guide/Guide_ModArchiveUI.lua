@@ -1,832 +1,1206 @@
 return {
-  storyName = "Home",
-  storyDescription = "",
-  lineData = {
-    {
-      startStory = "17454761535622279977",
-      startPort = "StoryStart",
-      endStory = "17454761535622279979",
-      endPort = "In"
-    },
-    {
-      startStory = "17454761535622279979",
-      startPort = "Success",
-      endStory = "17454761535622279978",
-      endPort = "StoryEnd"
-    }
-  },
-  storyNodeData = {
-    ["17454761535622279977"] = {
-      isStoryNode = true,
-      key = "17454761535622279977",
-      type = "StoryStartNode",
-      name = "StoryStart",
-      pos = {x = 800, y = 300},
-      propsData = {QuestChainId = 0},
-      questNodeData = {
-        lineData = {},
-        nodeData = {},
-        commentData = {}
-      }
-    },
-    ["17454761535622279978"] = {
-      isStoryNode = true,
-      key = "17454761535622279978",
-      type = "StoryEndNode",
-      name = "StoryEnd",
-      pos = {x = 1697.1999999999998, y = 409.2},
-      propsData = {},
-      questNodeData = {
-        lineData = {},
-        nodeData = {},
-        commentData = {}
-      }
-    },
-    ["17454761535622279979"] = {
-      isStoryNode = true,
-      key = "17454761535622279979",
-      type = "StoryNode",
-      name = "任务节点",
-      pos = {x = 1300.1701736030377, y = 313.3160100029196},
-      propsData = {
-        QuestId = 0,
-        QuestDescriptionComment = "",
-        QuestDescription = "",
-        QuestDeatil = "",
-        TaskRegionReName = "",
-        TaskSubRegionReName = "",
-        RecommendLevel = -1,
-        bIsStartQuest = false,
-        bIsEndQuest = false,
-        bIsNotifyGameMode = true,
-        bIsStartChapter = false,
-        bIsEndChapter = false,
-        bIsShowOnComplete = true,
-        bIsPlayBlackScreenOnComplete = false,
-        bIsPlayBlackScreenOnFail = false,
-        bIsDynamicEvent = false,
-        ResurgencePoint = "",
-        bUseQuestCoordinate = false,
-        bDeadTriggerQuestFail = false,
-        IsFairyLand = false,
-        SubRegionId = 0,
-        StoryGuideType = "Point",
-        StoryGuidePointName = ""
-      },
-      questNodeData = {
-        lineData = {
-          {
-            startQuest = "1745756518938993",
-            startPort = "Out",
-            endQuest = "1745756518937992",
-            endPort = "In"
-          },
-          {
-            startQuest = "17457604044594400939",
-            startPort = "Out",
-            endQuest = "1745756518938993",
-            endPort = "In"
-          },
-          {
-            startQuest = "1745756518937992",
-            startPort = "Out",
-            endQuest = "17457582203761104624",
-            endPort = "In"
-          },
-          {
-            startQuest = "17457582203761104624",
-            startPort = "Out",
-            endQuest = "17525484941103818937",
-            endPort = "In"
-          },
-          {
-            startQuest = "17525484941103818937",
-            startPort = "Out",
-            endQuest = "17525489299613820389",
-            endPort = "In"
-          },
-          {
-            startQuest = "17525489299613820389",
-            startPort = "Out",
-            endQuest = "17525497250623824673",
-            endPort = "In"
-          },
-          {
-            startQuest = "17525490305223821337",
-            startPort = "Out",
-            endQuest = "17525491262363822991",
-            endPort = "In"
-          },
-          {
-            startQuest = "17454761535622279985",
-            startPort = "QuestStart",
-            endQuest = "1745756518938995",
-            endPort = "In"
-          },
-          {
-            startQuest = "1745756518938998",
-            startPort = "Out",
-            endQuest = "17457604044594400939",
-            endPort = "In"
-          },
-          {
-            startQuest = "1745756518938999",
-            startPort = "Out",
-            endQuest = "17457604044594400939",
-            endPort = "In"
-          },
-          {
-            startQuest = "17525491262363822991",
-            startPort = "Out",
-            endQuest = "17563708528562202",
-            endPort = "In"
-          },
-          {
-            startQuest = "17563708528562202",
-            startPort = "Out",
-            endQuest = "17454761535622279986",
-            endPort = "Success"
-          },
-          {
-            startQuest = "1745756518938995",
-            startPort = "Out",
-            endQuest = "17563708991701269501",
-            endPort = "Input"
-          },
-          {
-            startQuest = "17563708991701269501",
-            startPort = "Gamepad",
-            endQuest = "17563709142101269944",
-            endPort = "In"
-          },
-          {
-            startQuest = "17563708991701269501",
-            startPort = "MouseAndKeyboard",
-            endQuest = "1745756518938998",
-            endPort = "In"
-          },
-          {
-            startQuest = "17563708991701269501",
-            startPort = "Touch",
-            endQuest = "1745756518938999",
-            endPort = "In"
-          },
-          {
-            startQuest = "17563709142101269944",
-            startPort = "Out",
-            endQuest = "17563709338981270267",
-            endPort = "In"
-          },
-          {
-            startQuest = "17563709338981270267",
-            startPort = "Out",
-            endQuest = "17457604044594400939",
-            endPort = "In"
-          },
-          {
-            startQuest = "17525497250623824673",
-            startPort = "Out",
-            endQuest = "17525490305223821337",
-            endPort = "In"
-          }
-        },
-        nodeData = {
-          ["17454761535622279985"] = {
-            key = "17454761535622279985",
-            type = "QuestStartNode",
-            name = "QuestStart",
-            pos = {x = 680.9913043478261, y = 294.67826086956524},
-            propsData = {ModeType = 0}
-          },
-          ["17454761535622279986"] = {
-            key = "17454761535622279986",
-            type = "QuestSuccessNode",
-            name = "QuestSuccess",
-            pos = {x = 2678.829887688297, y = 1299.983331413133},
-            propsData = {ModeType = 0}
-          },
-          ["17454761535622279987"] = {
-            key = "17454761535622279987",
-            type = "QuestFailNode",
-            name = "QuestFail",
-            pos = {x = 2877.586206216166, y = 651.7241383543858},
-            propsData = {}
-          },
-          ["1745756518937992"] = {
-            key = "1745756518937992",
-            type = "ShowGuideButtonNode",
-            name = "图鉴1",
-            pos = {x = 1101.5800295653535, y = 943.1280078269729},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302407,
-              MessageNote = "点击配置武器。",
-              DelayTime = 0,
-              IsForceClick = false,
-              IsControlPlayer = false,
-              IsTimePause = false,
-              IsShowCursor = true,
-              HighLightUIPath = "ModArchiveMain.ModArchive_Tab.List_Tab:2",
-              UICompName = "Btn_Click",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "DownRight",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["1745756518938993"] = {
-            key = "1745756518938993",
-            type = "ShowGuideButtonNode",
-            name = "圈圈一个任务.可以获得经验",
-            pos = {x = 2263.711451163004, y = 583.0132495022978},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302405,
-              MessageNote = "点击协战印记。",
-              DelayTime = 0,
-              IsForceClick = false,
-              IsControlPlayer = false,
-              IsTimePause = true,
-              IsShowCursor = true,
-              HighLightUIPath = "ModArchiveMain.Group_Page:1.List_Task:1",
-              UICompName = "",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "UpRight",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["1745756518938994"] = {
-            key = "1745756518938994",
-            type = "ShowGuideButtonNode",
-            name = "按esc",
-            pos = {x = 488.35078407300296, y = 760.4933464289238},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302402,
-              MessageNote = "点击“玩法”进入委托系统。",
-              DelayTime = 0,
-              IsForceClick = true,
-              IsControlPlayer = false,
-              IsTimePause = true,
-              IsShowCursor = false,
-              HighLightUIPath = "BattleMain.Btn_Esc",
-              UICompName = "Btn_top",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "Right",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["1745756518938995"] = {
-            key = "1745756518938995",
-            type = "ShowGuideTextNode",
-            name = "每日解锁啦",
-            pos = {x = 1062.1857169366301, y = 297.53351850888237},
-            propsData = {
-              MessageId = 302401,
-              MessageNote = "歧路迷津解锁了，在歧路迷津中，我们将探索未知的深渊，获取不同组合的烛芯和遗物，挑战强敌！一起去看看吧！",
-              IsTimePause = true,
-              IsResetPlayer = false,
-              IsForbidInAnim = false,
-              IsForbidOutAnim = true,
-              GuideManPosEnum = "DownLeft",
-              GuidemanHead = "Bai_Idle"
-            }
-          },
-          ["1745756518938997"] = {
-            key = "1745756518938997",
-            type = "ShowGuideButtonNode",
-            name = "按esc",
-            pos = {x = 276.78869099199926, y = 884.5128731575824},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302402,
-              MessageNote = "点击“玩法”进入委托系统。",
-              DelayTime = 0,
-              IsForceClick = true,
-              IsControlPlayer = false,
-              IsTimePause = true,
-              IsShowCursor = false,
-              HighLightUIPath = "BattleMain.Btn_Esc",
-              UICompName = "Btn_top",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "Right",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["1745756518938998"] = {
-            key = "1745756518938998",
-            type = "ShowGuideButtonNode",
-            name = "按右上角魔之匣",
-            pos = {x = 1436.4803041137998, y = 416.9659795655469},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302403,
-              MessageNote = "点击<H>“迷津”</>。",
-              DelayTime = 0,
-              IsForceClick = true,
-              IsControlPlayer = false,
-              IsTimePause = true,
-              IsShowCursor = false,
-              HighLightUIPath = "BattleMain.ListView:25",
-              UICompName = "Btn_top",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "Down",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["1745756518938999"] = {
-            key = "1745756518938999",
-            type = "ShowGuideButtonNode",
-            name = "按右上角魔之匣",
-            pos = {x = 1423.9558997127076, y = 698.6922476331412},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302403,
-              MessageNote = "点击<H>“迷津”</>。",
-              DelayTime = 0,
-              IsForceClick = true,
-              IsControlPlayer = false,
-              IsTimePause = true,
-              IsShowCursor = true,
-              HighLightUIPath = "BattleMain.ListView:25",
-              UICompName = "Btn_top",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "Right",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["17457565722791993"] = {
-            key = "17457565722791993",
-            type = "ShowGuideMainNode",
-            name = "显示图文引导",
-            pos = {x = 3085.4124773502035, y = 927.4239625530591},
-            propsData = {GuideId = 32}
-          },
-          ["17457582203761104624"] = {
-            key = "17457582203761104624",
-            type = "ShowGuideButtonNode",
-            name = "推荐配置1",
-            pos = {x = 1465.8680894007198, y = 970.1190129099381},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302409,
-              MessageNote = "推荐配置",
-              DelayTime = 0,
-              IsForceClick = false,
-              IsControlPlayer = false,
-              IsTimePause = false,
-              IsShowCursor = true,
-              HighLightUIPath = "ModArchiveMain.ModArchive_Tab.List_Tab:3",
-              UICompName = "Btn_Click",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "DownRight",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["17457582430991104858"] = {
-            key = "17457582430991104858",
-            type = "ShowGuideButtonNode",
-            name = "图鉴2",
-            pos = {x = 2798.943022124332, y = 549.0631766338826},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302407,
-              MessageNote = "点击配置武器。",
-              DelayTime = 0,
-              IsForceClick = false,
-              IsControlPlayer = false,
-              IsTimePause = false,
-              IsShowCursor = true,
-              HighLightUIPath = "ModArchiveMain.Group_Page:2.List_ModArchive:1",
-              UICompName = "List_Item",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "UpRight",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["17457582457061104952"] = {
-            key = "17457582457061104952",
-            type = "ShowGuideButtonNode",
-            name = "推荐配置2",
-            pos = {x = 503.770182649258, y = 1213.292843857489},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302409,
-              MessageNote = "点击配置武器。",
-              DelayTime = 0,
-              IsForceClick = false,
-              IsControlPlayer = false,
-              IsTimePause = false,
-              IsShowCursor = true,
-              HighLightUIPath = "ModArchiveMain.Group_Page:3.List_Recommend:1",
-              UICompName = "List_RecommendMod",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = false,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "Down",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["17457604044594400939"] = {
-            key = "17457604044594400939",
-            type = "ShowGuideButtonNode",
-            name = "圈圈一个任务.可以获得经验",
-            pos = {x = 2000.259272787468, y = 568.1938199454714},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302404,
-              MessageNote = "点击协战印记。",
-              DelayTime = 0,
-              IsForceClick = false,
-              IsControlPlayer = false,
-              IsTimePause = true,
-              IsShowCursor = true,
-              HighLightUIPath = "ModArchiveMain.ModArchive_Tab.List_Tab:1",
-              UICompName = "Btn_Click",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "DownRight",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["17471216644693559"] = {
-            key = "17471216644693559",
-            type = "ShowGuideButtonNode",
-            name = "按格子们",
-            pos = {x = 519.2971767790804, y = 944.3092135689321},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302403,
-              MessageNote = "点击<H>“迷津”</>。",
-              DelayTime = 0,
-              IsForceClick = true,
-              IsControlPlayer = false,
-              IsTimePause = true,
-              IsShowCursor = true,
-              HighLightUIPath = "Panel_Main.WBP_Menu_EntranceBtn:9",
-              UICompName = "Button_Area",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "Right",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["17525484941103818937"] = {
-            key = "17525484941103818937",
-            type = "ShowGuideTextNode",
-            name = "消息",
-            pos = {x = 1752.0485333741044, y = 966.1123862899763},
-            propsData = {
-              MessageId = 302410,
-              MessageNote = "挑战夜航手册中的委托，可以获取魔之楔",
-              IsTimePause = true,
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              GuideManPosEnum = "DownLeft",
-              GuidemanHead = "Bai_Idle"
-            }
-          },
-          ["17525489299613820389"] = {
-            key = "17525489299613820389",
-            type = "ShowGuideButtonNode",
-            name = "点击图鉴",
-            pos = {x = 2098.6002544729786, y = 981.6296275332091},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302411,
-              MessageNote = "点击图鉴",
-              DelayTime = 0,
-              IsForceClick = true,
-              IsControlPlayer = false,
-              IsTimePause = false,
-              IsShowCursor = true,
-              HighLightUIPath = "ModArchiveMain.ModArchive_Tab.List_Tab:2",
-              UICompName = "Btn_Click",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "DownRight",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["17525490305223821337"] = {
-            key = "17525490305223821337",
-            type = "ShowGuideButtonNode",
-            name = "前往夜航手册",
-            pos = {x = 1801.9795710319975, y = 1304.8710062538862},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302413,
-              MessageNote = "前往夜航手册",
-              DelayTime = 0,
-              IsForceClick = true,
-              IsControlPlayer = false,
-              IsTimePause = true,
-              IsShowCursor = true,
-              HighLightUIPath = "ModArchiveMain.Group_Page:2.Method:1",
-              UICompName = "Btn_Click",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = false,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "Up",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["17525491262363822991"] = {
-            key = "17525491262363822991",
-            type = "ShowGuideButtonNode",
-            name = "开始挑战",
-            pos = {x = 2087.5657750558084, y = 1294.388247497119},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302414,
-              MessageNote = "",
-              DelayTime = 0,
-              IsForceClick = true,
-              IsControlPlayer = false,
-              IsTimePause = true,
-              IsShowCursor = true,
-              HighLightUIPath = "StyleOfPlay.Group_Root:Depute.Button_Solo",
-              UICompName = "Button_Area",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "Up",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["17525497250623824673"] = {
-            key = "17525497250623824673",
-            type = "ShowGuideButtonNode",
-            name = "点击魔之楔",
-            pos = {x = 1144.5312987079355, y = 1272.1123854130342},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302412,
-              MessageNote = "",
-              DelayTime = 0,
-              IsForceClick = false,
-              IsControlPlayer = false,
-              IsTimePause = true,
-              IsShowCursor = true,
-              HighLightUIPath = "ModArchiveMain.Group_Page:2.List_ModArchive:1.List_Item:1.Node_Widget:2",
-              UICompName = "",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "Up",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["1754878063679826"] = {
-            key = "1754878063679826",
-            type = "ShowGuideButtonNode",
-            name = "Button显示/隐藏信息",
-            pos = {x = 1743.1578970087533, y = 333.1579070474305},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302415,
-              MessageNote = "关闭获得物品界面",
-              DelayTime = 0,
-              IsForceClick = true,
-              IsControlPlayer = false,
-              IsTimePause = true,
-              IsShowCursor = true,
-              HighLightUIPath = "ModArchiveUpdateTips",
-              UICompName = "Btn_AllClose",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "Up",
-              MessageLocOffset = {X = 0, Y = 150}
-            }
-          },
-          ["17563708528562202"] = {
-            key = "17563708528562202",
-            type = "ShowGuideButtonNode",
-            name = "Button显示/隐藏信息",
-            pos = {x = 2378, y = 1306},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302414,
-              MessageNote = "",
-              DelayTime = 0,
-              IsForceClick = true,
-              IsControlPlayer = false,
-              IsTimePause = true,
-              IsShowCursor = true,
-              HighLightUIPath = "CommonDialog.Pos_Btn:1.Btn_Yes",
-              UICompName = "Button_Area",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = false,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "Up",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["17563708991701269501"] = {
-            key = "17563708991701269501",
-            type = "InputDeviceBranchNode",
-            name = "输入设备分支",
-            pos = {x = 1022, y = 518},
-            propsData = {}
-          },
-          ["17563709142101269944"] = {
-            key = "17563709142101269944",
-            type = "ShowGuideNode",
-            name = "显示引导（支持执行操作后自动关闭/强制引导）",
-            pos = {x = 1288, y = 548},
-            propsData = {
-              MessageId = 301611,
-              SkillNameList = {"OpenMenu"},
-              LastTime = -1,
-              bIsForceTouch = true,
-              bIsTimeDilation = true,
-              HighLightUIPath = "BattleMain.Btn_Esc",
-              UICompName = "Btn_top",
-              UIShape = "Square",
-              IsForbidInAnim = false,
-              IsForbidOutAnim = false,
-              ForbidSuccessAnim = false,
-              IsNotForceRelease = false,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["17563709338981270267"] = {
-            key = "17563709338981270267",
-            type = "ShowGuideButtonNode",
-            name = "Button显示/隐藏信息",
-            pos = {x = 1550, y = 556},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302403,
-              MessageNote = "点击<H>“整备”</>进入整备系统。",
-              DelayTime = 0,
-              IsForceClick = true,
-              IsControlPlayer = false,
-              IsTimePause = true,
-              IsShowCursor = false,
-              HighLightUIPath = "MenuWorld.Panel_Function:10",
-              UICompName = "Button_Area",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "Right",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          }
-        },
-        commentData = {}
-      }
-    }
-  },
-  commentData = {}
+	["storyName"] = "Home",
+	["storyDescription"] = "",
+	["lineData"] = {
+		{
+			["startStory"] = "17454761535622279977",
+			["startPort"] = "StoryStart",
+			["endStory"] = "17454761535622279979",
+			["endPort"] = "In"
+		},
+		{
+			["startStory"] = "17454761535622279979",
+			["startPort"] = "Success",
+			["endStory"] = "17454761535622279978",
+			["endPort"] = "StoryEnd"
+		}
+	},
+	["storyNodeData"] = {
+		["17454761535622279977"] = {
+			["isStoryNode"] = true,
+			["key"] = "17454761535622279977",
+			["type"] = "StoryStartNode",
+			["name"] = "StoryStart",
+			["pos"] = {
+				["x"] = 800,
+				["y"] = 300
+			},
+			["propsData"] = {
+				["QuestChainId"] = 0
+			},
+			["questNodeData"] = {
+				["lineData"] = {},
+				["nodeData"] = {},
+				["commentData"] = {}
+			}
+		},
+		["17454761535622279978"] = {
+			["isStoryNode"] = true,
+			["key"] = "17454761535622279978",
+			["type"] = "StoryEndNode",
+			["name"] = "StoryEnd",
+			["pos"] = {
+				["x"] = 1697.1999999999998,
+				["y"] = 409.2
+			},
+			["propsData"] = {},
+			["questNodeData"] = {
+				["lineData"] = {},
+				["nodeData"] = {},
+				["commentData"] = {}
+			}
+		},
+		["17454761535622279979"] = {
+			["isStoryNode"] = true,
+			["key"] = "17454761535622279979",
+			["type"] = "StoryNode",
+			["name"] = "任务节点",
+			["pos"] = {
+				["x"] = 1300.1701736030377,
+				["y"] = 313.3160100029196
+			},
+			["propsData"] = {
+				["QuestId"] = 0,
+				["QuestDescriptionComment"] = "",
+				["QuestDescription"] = "",
+				["QuestDeatil"] = "",
+				["TaskRegionReName"] = "",
+				["TaskSubRegionReName"] = "",
+				["RecommendLevel"] = -1,
+				["bIsStartQuest"] = false,
+				["bIsEndQuest"] = false,
+				["bIsNotifyGameMode"] = true,
+				["bIsStartChapter"] = false,
+				["bIsEndChapter"] = false,
+				["bIsPlayBlackScreenOnComplete"] = false,
+				["bIsPlayBlackScreenOnFail"] = false,
+				["bIsDynamicEvent"] = false,
+				["ResurgencePoint"] = "",
+				["bUseQuestCoordinate"] = false,
+				["bDeadTriggerQuestFail"] = false,
+				["IsFairyLand"] = false,
+				["IsBacktrack"] = false,
+				["SubRegionId"] = 0,
+				["SubRegionIdList"] = {},
+				["StoryGuideType"] = "Point",
+				["StoryGuidePointName"] = "",
+				["JumpId"] = 0
+			},
+			["questNodeData"] = {
+				["lineData"] = {
+					{
+						["startQuest"] = "1745756518938993",
+						["startPort"] = "Out",
+						["endQuest"] = "1745756518937992",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "17457604044594400939",
+						["startPort"] = "Out",
+						["endQuest"] = "1745756518938993",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "17525484941103818937",
+						["startPort"] = "Out",
+						["endQuest"] = "17525489299613820389",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "17525489299613820389",
+						["startPort"] = "Out",
+						["endQuest"] = "17525497250623824673",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "17525490305223821337",
+						["startPort"] = "Out",
+						["endQuest"] = "17525491262363822991",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "17454761535622279985",
+						["startPort"] = "QuestStart",
+						["endQuest"] = "1745756518938995",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "1745756518938999",
+						["startPort"] = "Out",
+						["endQuest"] = "17457604044594400939",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "17525491262363822991",
+						["startPort"] = "Out",
+						["endQuest"] = "17563708528562202",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "17563708528562202",
+						["startPort"] = "Out",
+						["endQuest"] = "17454761535622279986",
+						["endPort"] = "Success"
+					},
+					{
+						["startQuest"] = "1745756518938995",
+						["startPort"] = "Out",
+						["endQuest"] = "17563708991701269501",
+						["endPort"] = "Input"
+					},
+					{
+						["startQuest"] = "17563708991701269501",
+						["startPort"] = "Gamepad",
+						["endQuest"] = "17563709142101269944",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "17563708991701269501",
+						["startPort"] = "Touch",
+						["endQuest"] = "1745756518938999",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "17563709142101269944",
+						["startPort"] = "Out",
+						["endQuest"] = "17563709338981270267",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "17563709338981270267",
+						["startPort"] = "Out",
+						["endQuest"] = "17457604044594400939",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "17525497250623824673",
+						["startPort"] = "Out",
+						["endQuest"] = "17525490305223821337",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "17563708991701269501",
+						["startPort"] = "MouseAndKeyboard",
+						["endQuest"] = "177305777852317334280",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "177305777852317334280",
+						["startPort"] = "Out",
+						["endQuest"] = "177305778991417334676",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "177305778991417334676",
+						["startPort"] = "Out",
+						["endQuest"] = "17457604044594400939",
+						["endPort"] = "In"
+					},
+					{
+						["startQuest"] = "1745756518937992",
+						["startPort"] = "Out",
+						["endQuest"] = "17525484941103818937",
+						["endPort"] = "In"
+					}
+				},
+				["nodeData"] = {
+					["17454761535622279985"] = {
+						["key"] = "17454761535622279985",
+						["type"] = "QuestStartNode",
+						["name"] = "QuestStart",
+						["pos"] = {
+							["x"] = 680.9913043478261,
+							["y"] = 294.67826086956524
+						},
+						["propsData"] = {
+							["ModeType"] = 0
+						}
+					},
+					["17454761535622279986"] = {
+						["key"] = "17454761535622279986",
+						["type"] = "QuestSuccessNode",
+						["name"] = "QuestSuccess",
+						["pos"] = {
+							["x"] = 2678.829887688297,
+							["y"] = 1299.983331413133
+						},
+						["propsData"] = {
+							["ModeType"] = 0
+						}
+					},
+					["17454761535622279987"] = {
+						["key"] = "17454761535622279987",
+						["type"] = "QuestFailNode",
+						["name"] = "QuestFail",
+						["pos"] = {
+							["x"] = 2877.586206216166,
+							["y"] = 651.7241383543858
+						},
+						["propsData"] = {}
+					},
+					["1745756518937992"] = {
+						["key"] = "1745756518937992",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "图鉴1",
+						["pos"] = {
+							["x"] = 1101.5800295653535,
+							["y"] = 943.1280078269729
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302407,
+							["MessageNote"] = "点击配置武器。",
+							["DelayTime"] = 0,
+							["IsForceClick"] = false,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = false,
+							["IsShowCursor"] = true,
+							["HighLightUIPath"] = "ModArchiveMain.ModArchive_Tab.List_Tab:2",
+							["UICompName"] = "Btn_Click",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "DownRight",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["1745756518938993"] = {
+						["key"] = "1745756518938993",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "圈圈一个任务.可以获得经验",
+						["pos"] = {
+							["x"] = 2263.711451163004,
+							["y"] = 583.0132495022978
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302405,
+							["MessageNote"] = "点击协战印记。",
+							["DelayTime"] = 0,
+							["IsForceClick"] = false,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = true,
+							["IsShowCursor"] = true,
+							["HighLightUIPath"] = "ModArchiveMain.Group_Page:1.List_Task:1",
+							["UICompName"] = "",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "UpRight",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["1745756518938994"] = {
+						["key"] = "1745756518938994",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "按esc",
+						["pos"] = {
+							["x"] = 488.35078407300296,
+							["y"] = 760.4933464289238
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302402,
+							["MessageNote"] = "点击“玩法”进入委托系统。",
+							["DelayTime"] = 0,
+							["IsForceClick"] = true,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = true,
+							["IsShowCursor"] = false,
+							["HighLightUIPath"] = "BattleMain.Btn_Esc",
+							["UICompName"] = "Btn_top",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "Right",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["1745756518938995"] = {
+						["key"] = "1745756518938995",
+						["type"] = "ShowGuideTextNode",
+						["name"] = "每日解锁啦",
+						["pos"] = {
+							["x"] = 1062.1857169366301,
+							["y"] = 297.53351850888237
+						},
+						["propsData"] = {
+							["MessageId"] = 302401,
+							["MessageNote"] = "歧路迷津解锁了，在歧路迷津中，我们将探索未知的深渊，获取不同组合的烛芯和遗物，挑战强敌！一起去看看吧！",
+							["IsTimePause"] = true,
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = false,
+							["IsForbidOutAnim"] = true,
+							["GuideManPosEnum"] = "DownLeft",
+							["GuidemanHead"] = "Bai_Idle"
+						}
+					},
+					["1745756518938997"] = {
+						["key"] = "1745756518938997",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "按esc",
+						["pos"] = {
+							["x"] = 276.78869099199926,
+							["y"] = 884.5128731575824
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302402,
+							["MessageNote"] = "点击“玩法”进入委托系统。",
+							["DelayTime"] = 0,
+							["IsForceClick"] = true,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = true,
+							["IsShowCursor"] = false,
+							["HighLightUIPath"] = "BattleMain.Btn_Esc",
+							["UICompName"] = "Btn_top",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "Right",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["1745756518938998"] = {
+						["key"] = "1745756518938998",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "按右上角魔之匣",
+						["pos"] = {
+							["x"] = 1588.298480667069,
+							["y"] = 153.32962507184584
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302403,
+							["MessageNote"] = "点击<H>“迷津”</>。",
+							["DelayTime"] = 0,
+							["IsForceClick"] = true,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = true,
+							["IsShowCursor"] = false,
+							["HighLightUIPath"] = "BattleMain.ListView:25",
+							["UICompName"] = "Btn_top",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "Down",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["1745756518938999"] = {
+						["key"] = "1745756518938999",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "按右上角魔之匣",
+						["pos"] = {
+							["x"] = 1423.9558997127076,
+							["y"] = 698.6922476331412
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302403,
+							["MessageNote"] = "点击<H>“迷津”</>。",
+							["DelayTime"] = 0,
+							["IsForceClick"] = true,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = true,
+							["IsShowCursor"] = true,
+							["HighLightUIPath"] = "BattleMain.ListView:25",
+							["UICompName"] = "Btn_top",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "Right",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["17457565722791993"] = {
+						["key"] = "17457565722791993",
+						["type"] = "ShowGuideMainNode",
+						["name"] = "显示图文引导",
+						["pos"] = {
+							["x"] = 3085.4124773502035,
+							["y"] = 927.4239625530591
+						},
+						["propsData"] = {
+							["GuideId"] = 32
+						}
+					},
+					["17457582203761104624"] = {
+						["key"] = "17457582203761104624",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "推荐配置1",
+						["pos"] = {
+							["x"] = 1504.240181289263,
+							["y"] = 879.4213411733812
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302409,
+							["MessageNote"] = "推荐配置",
+							["DelayTime"] = 0,
+							["IsForceClick"] = false,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = false,
+							["IsShowCursor"] = true,
+							["HighLightUIPath"] = "ModArchiveMain.ModArchive_Tab.List_Tab:3",
+							["UICompName"] = "Btn_Click",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "DownRight",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["17457582430991104858"] = {
+						["key"] = "17457582430991104858",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "图鉴2",
+						["pos"] = {
+							["x"] = 2798.943022124332,
+							["y"] = 549.0631766338826
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302407,
+							["MessageNote"] = "点击配置武器。",
+							["DelayTime"] = 0,
+							["IsForceClick"] = false,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = false,
+							["IsShowCursor"] = true,
+							["HighLightUIPath"] = "ModArchiveMain.Group_Page:2.List_ModArchive:1",
+							["UICompName"] = "List_Item",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "UpRight",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["17457582457061104952"] = {
+						["key"] = "17457582457061104952",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "推荐配置2",
+						["pos"] = {
+							["x"] = 503.770182649258,
+							["y"] = 1213.292843857489
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302409,
+							["MessageNote"] = "点击配置武器。",
+							["DelayTime"] = 0,
+							["IsForceClick"] = false,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = false,
+							["IsShowCursor"] = true,
+							["HighLightUIPath"] = "ModArchiveMain.Group_Page:3.List_Recommend:1",
+							["UICompName"] = "List_RecommendMod",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = false,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "Down",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["17457604044594400939"] = {
+						["key"] = "17457604044594400939",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "圈圈一个任务.可以获得经验",
+						["pos"] = {
+							["x"] = 2000.259272787468,
+							["y"] = 568.1938199454714
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302404,
+							["MessageNote"] = "点击协战印记。",
+							["DelayTime"] = 0,
+							["IsForceClick"] = false,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = true,
+							["IsShowCursor"] = true,
+							["HighLightUIPath"] = "ModArchiveMain.ModArchive_Tab.List_Tab:1",
+							["UICompName"] = "Btn_Click",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "DownRight",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["17471216644693559"] = {
+						["key"] = "17471216644693559",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "按格子们",
+						["pos"] = {
+							["x"] = 519.2971767790804,
+							["y"] = 944.3092135689321
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302403,
+							["MessageNote"] = "点击<H>“迷津”</>。",
+							["DelayTime"] = 0,
+							["IsForceClick"] = true,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = true,
+							["IsShowCursor"] = true,
+							["HighLightUIPath"] = "Panel_Main.WBP_Menu_EntranceBtn:9",
+							["UICompName"] = "Button_Area",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "Right",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["17525484941103818937"] = {
+						["key"] = "17525484941103818937",
+						["type"] = "ShowGuideTextNode",
+						["name"] = "消息",
+						["pos"] = {
+							["x"] = 1752.0485333741044,
+							["y"] = 966.1123862899763
+						},
+						["propsData"] = {
+							["MessageId"] = 302410,
+							["MessageNote"] = "挑战夜航手册中的委托，可以获取魔之楔",
+							["IsTimePause"] = true,
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["GuideManPosEnum"] = "DownLeft",
+							["GuidemanHead"] = "Bai_Idle"
+						}
+					},
+					["17525489299613820389"] = {
+						["key"] = "17525489299613820389",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "点击图鉴",
+						["pos"] = {
+							["x"] = 2098.6002544729786,
+							["y"] = 981.6296275332091
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302411,
+							["MessageNote"] = "点击图鉴",
+							["DelayTime"] = 0,
+							["IsForceClick"] = true,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = false,
+							["IsShowCursor"] = true,
+							["HighLightUIPath"] = "ModArchiveMain.ModArchive_Tab.List_Tab:2",
+							["UICompName"] = "Btn_Click",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "DownRight",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["17525490305223821337"] = {
+						["key"] = "17525490305223821337",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "前往夜航手册",
+						["pos"] = {
+							["x"] = 1801.9795710319975,
+							["y"] = 1304.8710062538862
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302413,
+							["MessageNote"] = "前往夜航手册",
+							["DelayTime"] = 0,
+							["IsForceClick"] = true,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = true,
+							["IsShowCursor"] = true,
+							["HighLightUIPath"] = "ModArchiveMain.Group_Page:2.Method:1",
+							["UICompName"] = "Btn_Click",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = false,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "Up",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["17525491262363822991"] = {
+						["key"] = "17525491262363822991",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "开始挑战",
+						["pos"] = {
+							["x"] = 2087.5657750558084,
+							["y"] = 1294.388247497119
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302414,
+							["MessageNote"] = "",
+							["DelayTime"] = 0,
+							["IsForceClick"] = true,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = true,
+							["IsShowCursor"] = true,
+							["HighLightUIPath"] = "StyleOfPlay.Group_Root:Depute.Button_Solo",
+							["UICompName"] = "Button_Area",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "Up",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["17525497250623824673"] = {
+						["key"] = "17525497250623824673",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "点击魔之楔",
+						["pos"] = {
+							["x"] = 1144.5312987079355,
+							["y"] = 1272.1123854130342
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302412,
+							["MessageNote"] = "",
+							["DelayTime"] = 0,
+							["IsForceClick"] = false,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = true,
+							["IsShowCursor"] = true,
+							["HighLightUIPath"] = "ModArchiveMain.Group_Page:2.List_ModArchive:1.List_Item:1",
+							["UICompName"] = "Node_Widget",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "Up",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["1754878063679826"] = {
+						["key"] = "1754878063679826",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "Button显示/隐藏信息",
+						["pos"] = {
+							["x"] = 1790.4306226421065,
+							["y"] = 284.06699965894825
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302415,
+							["MessageNote"] = "关闭获得物品界面",
+							["DelayTime"] = 0,
+							["IsForceClick"] = true,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = true,
+							["IsShowCursor"] = true,
+							["HighLightUIPath"] = "ModArchiveUpdateTips",
+							["UICompName"] = "Btn_AllClose",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "Up",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 150
+							}
+						}
+					},
+					["17563708528562202"] = {
+						["key"] = "17563708528562202",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "Button显示/隐藏信息",
+						["pos"] = {
+							["x"] = 2378,
+							["y"] = 1306
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302414,
+							["MessageNote"] = "",
+							["DelayTime"] = 0,
+							["IsForceClick"] = true,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = true,
+							["IsShowCursor"] = true,
+							["HighLightUIPath"] = "CommonDialog.Pos_Btn:1.Btn_Yes",
+							["UICompName"] = "Button_Area",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = false,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "Up",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["17563708991701269501"] = {
+						["key"] = "17563708991701269501",
+						["type"] = "InputDeviceBranchNode",
+						["name"] = "输入设备分支",
+						["pos"] = {
+							["x"] = 1022,
+							["y"] = 518
+						},
+						["propsData"] = {}
+					},
+					["17563709142101269944"] = {
+						["key"] = "17563709142101269944",
+						["type"] = "ShowGuideNode",
+						["name"] = "显示引导（支持执行操作后自动关闭/强制引导）",
+						["pos"] = {
+							["x"] = 1288,
+							["y"] = 548
+						},
+						["propsData"] = {
+							["MessageId"] = 301611,
+							["SkillNameList"] = {
+								"OpenMenu"
+							},
+							["LastTime"] = -1,
+							["bIsForceTouch"] = true,
+							["bIsTimeDilation"] = true,
+							["HighLightUIPath"] = "BattleMain.Btn_Esc",
+							["UICompName"] = "Btn_top",
+							["UIShape"] = "Square",
+							["IsForbidInAnim"] = false,
+							["IsForbidOutAnim"] = false,
+							["ForbidSuccessAnim"] = true,
+							["IsNotForceRelease"] = false,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "Left",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["17563709338981270267"] = {
+						["key"] = "17563709338981270267",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "Button显示/隐藏信息",
+						["pos"] = {
+							["x"] = 1550,
+							["y"] = 556
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302403,
+							["MessageNote"] = "点击<H>“整备”</>进入整备系统。",
+							["DelayTime"] = 0,
+							["IsForceClick"] = true,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = true,
+							["IsShowCursor"] = false,
+							["HighLightUIPath"] = "MenuWorld.Panel_Function:25",
+							["UICompName"] = "Button_Area",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = true,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "Right",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["177305777852317334280"] = {
+						["key"] = "177305777852317334280",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "Button显示/隐藏信息",
+						["pos"] = {
+							["x"] = 1318.669097882258,
+							["y"] = 348.08581909981075
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 303102,
+							["MessageNote"] = "打开菜单",
+							["DelayTime"] = 0,
+							["IsForceClick"] = true,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = true,
+							["IsShowCursor"] = false,
+							["HighLightUIPath"] = "BattleMain.Btn_Esc",
+							["UICompName"] = "Btn_top",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = false,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "DownRight",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					},
+					["177305778991417334676"] = {
+						["key"] = "177305778991417334676",
+						["type"] = "ShowGuideButtonNode",
+						["name"] = "Button显示/隐藏信息",
+						["pos"] = {
+							["x"] = 1612.305451335587,
+							["y"] = 408.08581701906684
+						},
+						["propsData"] = {
+							["ShowEnable"] = true,
+							["MessageId"] = 302403,
+							["MessageNote"] = "点击<H>“整备”</>进入整备系统。",
+							["DelayTime"] = 0,
+							["IsForceClick"] = true,
+							["IsControlPlayer"] = false,
+							["IsTimePause"] = true,
+							["IsShowCursor"] = false,
+							["HighLightUIPath"] = "MenuWorld.Panel_Function:25",
+							["UICompName"] = "Button_Area",
+							["GamePadWidgetName"] = "",
+							["IsAutoClick"] = false,
+							["IsAutoClickByGamepad"] = false,
+							["IsFindByMainUI"] = true,
+							["UIShape"] = "Square",
+							["IsResetPlayer"] = false,
+							["IsForbidInAnim"] = true,
+							["IsForbidOutAnim"] = true,
+							["UICompSizeOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["UICompLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							},
+							["MessageParentLoc"] = "HighLightUI",
+							["MessageLoc"] = "Right",
+							["MessageLocOffset"] = {
+								["X"] = 0,
+								["Y"] = 0
+							}
+						}
+					}
+				},
+				["commentData"] = {}
+			}
+		}
+	},
+	["commentData"] = {}
 }

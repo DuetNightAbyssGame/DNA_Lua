@@ -1,5 +1,5 @@
-local sproto = require("Utils.Sproto.Sproto")
-local CommonUtils = require("Utils.CommonUtils")
+local sproto = require "Utils.Sproto.Sproto"
+local CommonUtils = require "Utils.CommonUtils"
 local DamageProtoStr = [[
 .Damage {
 	.RateStruct {
@@ -7,16 +7,13 @@ local DamageProtoStr = [[
 		ExtraEffect 1 : integer
 	}
 	.DamageValues {]]
+
 local DamageTypes = CommonUtils.Keys(DataMgr.DamageType)
 table.sort(DamageTypes)
 for Index, DamageType in ipairs(DamageTypes) do
-  DamageProtoStr = DamageProtoStr .. [[
-
-		]] .. DamageType .. " " .. tostring(Index - 1) .. " : RateStruct"
+	DamageProtoStr = DamageProtoStr .. "\n\t\t" .. DamageType .. " " .. tostring(Index - 1) .. " : RateStruct"
 end
-DamageProtoStr = DamageProtoStr .. [[
-
-	]] .. [[
+DamageProtoStr = DamageProtoStr .. "\n\t".. [[
 }
 	.Vector {
 		X 0 : double
@@ -40,6 +37,7 @@ DamageProtoStr = DamageProtoStr .. [[
 	CauseHitDamage 14 : boolean
 }
 ]]
-PrintTable({DamageProtoStr = DamageProtoStr})
+
+PrintTable({DamageProtoStr=DamageProtoStr})
 local DamageProto = sproto.parse(DamageProtoStr)
 return DamageProto

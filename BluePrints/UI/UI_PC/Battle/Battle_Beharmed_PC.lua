@@ -1,26 +1,38 @@
-require("UnLua")
+require "UnLua"
+
+---@type Battle_Beharmed_PC_C
 local M = Class("BluePrints.UI.BP_UIState_C")
 
+-- function M:Initialize(Initializer)
+-- end
+
+-- function M:PreConstruct(IsDesignTime)
+-- end
+
+-- function M:Construct()
+-- end
+
+-- function M:Tick(MyGeometry, InDeltaTime)
+-- end
+
 function M:OnLoaded()
-  M.Super.OnLoaded(self)
-  self:SetVisibility(ESlateVisibility.Collapsed)
-  
-  local function OnAnimationFinished()
+    M.Super.OnLoaded(self)
     self:SetVisibility(ESlateVisibility.Collapsed)
-  end
-  
-  self:BindToAnimationFinished(self.Auto_In, {self, OnAnimationFinished})
+    local OnAnimationFinished = function()
+        self:SetVisibility(ESlateVisibility.Collapsed)
+    end
+    self:BindToAnimationFinished(self.Auto_In,{self,OnAnimationFinished})
 end
 
 function M:Refresh()
-  self:SetVisibility(ESlateVisibility.HitTestInvisible)
-  if not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.Auto_In) then
-    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Auto_In)
-  end
+    self:SetVisibility(ESlateVisibility.HitTestInvisible)
+    if not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.Auto_In) then
+        EMUIAnimationSubsystem:EMPlayAnimation(self, self.Auto_In)
+    end
 end
 
 function M:Close()
-  M.Super.Close(self)
+    M.Super.Close(self)
 end
 
 return M

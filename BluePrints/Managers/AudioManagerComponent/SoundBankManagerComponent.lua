@@ -1,17 +1,17 @@
 local Component = {}
 
 function Component:ManualLoadBank(Bank)
-  if not Bank then
-    UEPrint("LogFMOD: Cannot Load NULL as Bank.")
-    return false
-  end
-  if self:IfSoundBankLoaded(Bank) then
-    return true
-  end
+    if not Bank then
+        UEPrint("LogFMOD: Cannot Load NULL as Bank.")
+        return false
+    end
+    if self:IfSoundBankLoaded(Bank) then
+        return true
+    end
 end
 
 function Component:IfSoundBankLoaded(Bank)
-  return true
+    if true then return true end
 end
 
 function Component:AfterLoadBank()

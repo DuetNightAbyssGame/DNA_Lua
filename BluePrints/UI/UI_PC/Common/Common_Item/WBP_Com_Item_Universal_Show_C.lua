@@ -1,256 +1,320 @@
-require("UnLua")
-local M = Class({
-  "BluePrints.UI.BP_UIState_C"
-})
+--
+-- DESCRIPTION
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
+require "UnLua"
+
+---@type WBP_Com_Item_Universal_Show_C
+local M = Class({"BluePrints.UI.BP_EMUserWidget_C"})
+
+---仅初始化lua变量时使用，千万不要有控件操作！！
+--function M:Initialize(Initializer)
+--end
+
+-- function M:Construct()
+-- end
+
+--function M:Tick(MyGeometry, InDeltaTime)
+--end
+
+--function M:Destruct()
+--end
 
 function M:Init(ParentWidget)
-  self.ParentWidget = ParentWidget
-  self.WidgetMap = {}
+    self.ParentWidget = ParentWidget
+    self.WidgetMap = {}
 end
 
 function M:InitCommonView()
-  self.Node_Widget:ClearChildren()
-  self:SetItem(self.ParentWidget.Type)
-  self:SetItemIcon(self.ParentWidget.ItemIcon)
-  self:SetTypeIcon(self.ParentWidget.TypeIcon)
-  self:SetName(self.ParentWidget.Name)
-  self:SetRarity(self.ParentWidget.Rarity, self.ParentWidget.IsLock)
-  self:SetAscend(self.ParentWidget.Type, self.ParentWidget.Id, self.ParentWidget.EnhanceLevel)
-  self:SetIntron(self.ParentWidget.Type, self.ParentWidget.Id, self.ParentWidget.GradeLevel)
-  self:SetCheckBtn(self.ParentWidget.OnClickCheckBtnEvent)
-  self.ParentWidget:SetNew(self.ParentWidget.Content.IsNew)
-  self.ParentWidget:SetSelected(self.ParentWidget.Content.IsSelect)
+    -- 空框
+    -- if not self.Id or self.Id == 0 then
+    --     self.Item.WidgetSwitcher_State:SetActiveWidgetIndex(1)
+    --     return
+    -- else
+    --     self.Item.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+    -- end
+    self.Node_Widget:ClearChildren()
+    self:SetItem(self.ParentWidget.Type)
+    self:SetItemIcon(self.ParentWidget.ItemIcon)
+    self:SetTypeIcon(self.ParentWidget.TypeIcon)
+    self:SetName(self.ParentWidget.Name, self.ParentWidget.Rarity)
+    self:SetEmpty(self.ParentWidget.IsEmpty)
+    self:SetRarity(self.ParentWidget.Rarity, self.ParentWidget.IsLock)
+    self:SetAscend(self.ParentWidget.Type, self.ParentWidget.Id, self.ParentWidget.EnhanceLevel)
+    self:SetIntron(self.ParentWidget.Type, self.ParentWidget.Id, self.ParentWidget.GradeLevel)
+    self:SetCheckBtn(self.ParentWidget.OnClickCheckBtnEvent)
+    self.ParentWidget:SetNew(self.ParentWidget.Content.IsNew)
+    self.ParentWidget:SetSelected(self.ParentWidget.Content.IsSelect)
 end
 
 function M:SetItem(Type)
-  if "Weapon" == Type then
-    local Object = LoadObject("/Game/UI/Materials/CommonItem/MI_CommonItem_Show_Weapon.MI_CommonItem_Show_Weapon")
-    self.Item.Image_Item:SetBrushResourceObject(Object)
-  elseif "Character" == Type then
-    local Object = LoadObject("/Game/UI/Materials/CommonItem/MI_CommonItem_Show_Char.MI_CommonItem_Show_Char")
-    self.Item.Image_Item:SetBrushResourceObject(Object)
-  else
-    DebugPrint("Type Error")
-  end
+    if Type == "Weapon" then
+        local Object = LoadObject("/Game/UI/Materials/CommonItem/MI_CommonItem_Show_Weapon.MI_CommonItem_Show_Weapon")
+        self.Item.Image_Item:SetBrushResourceObject(Object)
+    elseif Type == "Character" then
+        local Object = LoadObject("/Game/UI/Materials/CommonItem/MI_CommonItem_Show_Char.MI_CommonItem_Show_Char")
+        self.Item.Image_Item:SetBrushResourceObject(Object)
+    else
+        DebugPrint("Type Error")
+    end
 end
 
 function M:SetItemIcon(ItemIconPath)
-  local ItemIcon = LoadObject(ItemIconPath)
-  local ItemDynamicMaterial = self.Item.Image_Item:GetDynamicMaterial()
-  ItemDynamicMaterial:SetTextureParameterValue("IconMap", ItemIcon)
+    local ItemIcon = nil
+    local MainTex = nil
+    if ItemIconPath then
+        ItemIcon = LoadObject(ItemIconPath)
+        MainTex = LoadObject('/Game/UI/Texture/Static/Image/Common/Item/T_Show_Item.T_Show_Item')
+    else
+        ItemIcon = LoadObject('/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Empty.T_Head_Empty')
+        MainTex = LoadObject('/Game/UI/Texture/Static/Image/Common/Item/T_Show_Item_Empty.T_Show_Item_Empty')
+    end
+    -- local TypeIcon = LoadObject(TypeIconPath)
+    local ItemDynamicMaterial = self.Item.Image_Item:GetDynamicMaterial()
+    ItemDynamicMaterial:SetTextureParameterValue("MainTex", MainTex)
+    ItemDynamicMaterial:SetTextureParameterValue("IconMap", ItemIcon)
+    -- local TypeDynamicMaterial = self.Item.Image_Type:GetDynamicMaterial()
+    -- TypeDynamicMaterial:SetTextureParameterValue("IconTex", TypeIcon)
 end
 
 function M:SetTypeIcon(TypeIconPath)
-  if TypeIconPath then
-    if not self.WidgetMap[self.AttributeWidget] then
-      self.AttributeWidget = self:CreateWidgetNew("ItemShowAttribute")
-      local TypeIcon = LoadObject(TypeIconPath)
-      self.AttributeWidget.Attribute:SetBrushResourceObject(TypeIcon)
-      self:AddWidgetToNode(self.AttributeWidget)
+    if TypeIconPath then
+        if not self.WidgetMap[self.AttributeWidget] then
+            local UIManager = GWorld.GameInstance:GetGameUIManager()
+            self.AttributeWidget = UIManager:_CreateWidgetNew("ItemShowAttribute")
+            local TypeIcon = LoadObject(TypeIconPath)
+            self.AttributeWidget.Attribute:SetBrushResourceObject(TypeIcon)
+            self:AddWidgetToNode(self.AttributeWidget)
+        end
+    elseif self.WidgetMap[self.AttributeWidget] then
+        self:RemoveWidgetFromNode(self.AttributeWidget)
     end
-  elseif self.WidgetMap[self.AttributeWidget] then
-    self:RemoveWidgetFromNode(self.AttributeWidget)
-  end
 end
 
 function M:PlayAttributeWidgetNormal()
-  if self.WidgetMap[self.AttributeWidget] then
-    self.AttributeWidget:PlayAnimation(self.AttributeWidget.Normal)
-  end
+    if self.WidgetMap[self.AttributeWidget] then
+        self.AttributeWidget:PlayAnimation(self.AttributeWidget.Normal)
+    end
 end
 
 function M:PlayAttributeWidgeClick()
-  if self.WidgetMap[self.AttributeWidget] then
-    self.AttributeWidget:PlayAnimation(self.AttributeWidget.Click)
-  end
+    if self.WidgetMap[self.AttributeWidget] then
+        self.AttributeWidget:PlayAnimation(self.AttributeWidget.Click)
+    end
 end
 
 function M:SetRarity(Rarity, IsLock)
-  if not Rarity or Rarity < 1 or Rarity > 5 then
-    DebugPrint("No Rarity")
-    return
-  end
-  local TempRarity = Rarity
-  local Saturation = 0
-  if IsLock then
-    TempRarity = 0
-    Saturation = self.Item.Saturation
-  end
-  local ItemDynamicMaterial = self.Item.Image_Item:GetDynamicMaterial()
-  local BgDynamicMaterial = self.Item.Image_Bg:GetDynamicMaterial()
-  local LightBigColor = self.Item["Color_BottomBG_" .. TempRarity]
-  local LightSmallColor = self.Item["Color_UpperBG_" .. TempRarity]
-  local OutlineColor = self.Item["Color_OutLine_" .. Rarity]
-  local TextColor = self.Item["Color_" .. Rarity]
-  ItemDynamicMaterial:SetScalarParameterValue("Saturation", Saturation)
-  ItemDynamicMaterial:SetVectorParameterValue("Light_Big_Color", LightBigColor)
-  ItemDynamicMaterial:SetVectorParameterValue("Light_Small_Color", LightSmallColor)
-  ItemDynamicMaterial:SetVectorParameterValue("OutlineColor", OutlineColor)
-  BgDynamicMaterial:SetVectorParameterValue("OutlineColor", OutlineColor)
-  self.Item.Image_Text:SetBrushTintColor(TextColor)
+    if not Rarity or Rarity < 1 or Rarity > 5 then
+        return
+    end
+    local TempRarity = Rarity
+    local Saturation = 0
+    if IsLock then
+        TempRarity = 0
+        Saturation = self.Item.Saturation
+    end
+    local ItemDynamicMaterial = self.Item.Image_Item:GetDynamicMaterial()
+    --local TypeDynamicMaterial = self.Item.Image_Type:GetDynamicMaterial()
+    --local BgDynamicMaterial = self.Item.Image_Bg:GetDynamicMaterial()
+    local LightBigColor = self.Item["Color_BottomBG_"..TempRarity]
+    local LightSmallColor = self.Item["Color_UpperBG_"..TempRarity]
+    local OutlineColor = self.Item["Color_OutLine_"..Rarity]
+    local TextColor = self.Item["Color_"..Rarity]
+    ItemDynamicMaterial:SetScalarParameterValue("Saturation", Saturation)
+    ItemDynamicMaterial:SetVectorParameterValue("Light_Big_Color", LightBigColor)
+    ItemDynamicMaterial:SetVectorParameterValue("Light_Small_Color", LightSmallColor)
+    ItemDynamicMaterial:SetVectorParameterValue("OutlineColor", OutlineColor)
+    --TypeDynamicMaterial:SetVectorParameterValue("OutlineColor", OutlineColor)
+    --BgDynamicMaterial:SetVectorParameterValue("OutlineColor", OutlineColor)
+    --self.Item.Image_Text:SetBrushTintColor(TextColor)
+    --self:SetStar(Rarity)
 end
 
-function M:SetName(Name)
-  if Name then
-    if not self.WidgetMap[self.NameWidget] then
-      self.NameWidget = self:CreateWidgetNew("ItemShowName")
-      self:AddWidgetToNode(self.NameWidget)
+function M:SetName(Name, Rarity)
+    if Name then
+        if not self.WidgetMap[self.NameWidget] then
+            local UIManager = GWorld.GameInstance:GetGameUIManager()
+            self.NameWidget = UIManager:_CreateWidgetNew("ItemShowName")
+            self:AddWidgetToNode(self.NameWidget)
+        end
+        self.NameWidget.Text_Name:SetText(GText(Name))
+        local FontMaterial = self.NameWidget.Text_Name:GetDynamicFontMaterial()
+        if Rarity and self.NameWidget["Quality_"..Rarity] then
+            FontMaterial:SetTextureParameterValue("IconTex", self.NameWidget["Quality_"..Rarity])
+        elseif self.NameWidget["Quality_0"] then
+            FontMaterial:SetTextureParameterValue("IconTex", self.NameWidget["Quality_0"])
+        end
+    elseif self.WidgetMap[self.NameWidget] then
+        self:RemoveWidgetFromNode(self.NameWidget)
     end
-    self.NameWidget.Text_Name:SetText(GText(Name))
-  elseif self.WidgetMap[self.NameWidget] then
-    self:RemoveWidgetFromNode(self.NameWidget)
-  end
+end
+
+function M:SetEmpty(IsEmpty)
+    if IsEmpty then
+        if not self.WidgetMap[self.EmptyWidget] then
+            local UIManager = GWorld.GameInstance:GetGameUIManager()
+            self.EmptyWidget = UIManager:_CreateWidgetNew("ItemShowEmpty")
+            self:AddWidgetToNode(self.EmptyWidget)
+        end
+    elseif self.WidgetMap[self.EmptyWidget] then
+        self:RemoveWidgetFromNode(self.EmptyWidget)
+    end
 end
 
 function M:SetStar(Num)
-  if Num then
-    if not self.WidgetMap[self.StarWidget] then
-      self.StarWidget = self:CreateWidgetNew("ItemShowStar")
-      self:AddWidgetToNode(self.StarWidget)
+    if Num then
+        if not self.WidgetMap[self.StarWidget] then
+            local UIManager = GWorld.GameInstance:GetGameUIManager()
+            self.StarWidget = UIManager:_CreateWidgetNew("ItemShowStar")
+            self:AddWidgetToNode(self.StarWidget)
+        end
+        self.StarWidget.ListView_Star:ClearListItems()
+        for i=1,Num do
+            local Content = NewObject(UIUtils.GetCommonItemContentClass())
+            self.StarWidget.ListView_Star:AddItem(Content)
+        end
+    elseif self.WidgetMap[self.StarWidget] then
+        self:RemoveWidgetFromNode(self.StarWidget)
     end
-    self.StarWidget.ListView_Star:ClearListItems()
-    for i = 1, Num do
-      local Content = NewObject(UIUtils.GetCommonItemContentClass())
-      self.StarWidget.ListView_Star:AddItem(Content)
-    end
-  elseif self.WidgetMap[self.StarWidget] then
-    self:RemoveWidgetFromNode(self.StarWidget)
-  end
 end
 
 function M:SetNew(IsNew)
-  if IsNew then
-    if not self.WidgetMap[self.NewWidget] then
-      self.NewWidget = self:CreateWidgetNew("ItemShowNew")
-      self:AddWidgetToNode(self.NewWidget)
+    if IsNew then
+        if not self.WidgetMap[self.NewWidget] then
+            local UIManager = GWorld.GameInstance:GetGameUIManager()
+            self.NewWidget = UIManager:_CreateWidgetNew("ItemShowNew")
+            self:AddWidgetToNode(self.NewWidget)
+        end
+    elseif self.WidgetMap[self.NewWidget] then
+        self:RemoveWidgetFromNode(self.NewWidget)
     end
-  elseif self.WidgetMap[self.NewWidget] then
-    self:RemoveWidgetFromNode(self.NewWidget)
-  end
 end
 
 function M:SetCheckBtn(Event)
-  if Event then
-    if not self.WidgetMap[self.CheckBtnWidget] then
-      self.CheckBtnWidget = self:CreateWidgetNew("ItemShowCheckBtn")
-      self:AddWidgetToNode(self.CheckBtnWidget)
+    if Event then
+        if not self.WidgetMap[self.CheckBtnWidget] then
+            local UIManager = GWorld.GameInstance:GetGameUIManager()
+            self.CheckBtnWidget = UIManager:_CreateWidgetNew("ItemShowCheckBtn")
+            self:AddWidgetToNode(self.CheckBtnWidget)
+        end
+        if Event.Params then
+            self.CheckBtnWidget.Btn_Check:BindEventOnClicked(Event.Obj, Event.Callback, table.unpack(Event.Params))
+        else
+            self.CheckBtnWidget.Btn_Check:BindEventOnClicked(Event.Obj, Event.Callback)
+        end
+        if Event.CreateInfo then
+            self.CheckBtnWidget.Key_Controller:CreateCommonKey(Event.CreateInfo)
+        end
+    elseif self.WidgetMap[self.CheckBtnWidget] then
+        self:RemoveWidgetFromNode(self.CheckBtnWidget)
     end
-    if Event.Params then
-      self.CheckBtnWidget.Btn_Check:BindEventOnClicked(Event.Obj, Event.Callback, table.unpack(Event.Params))
-    else
-      self.CheckBtnWidget.Btn_Check:BindEventOnClicked(Event.Obj, Event.Callback)
-    end
-    if Event.CreateInfo then
-      self.CheckBtnWidget.Key_Controller:CreateCommonKey(Event.CreateInfo)
-    end
-  elseif self.WidgetMap[self.CheckBtnWidget] then
-    self:RemoveWidgetFromNode(self.CheckBtnWidget)
-  end
 end
 
 function M:SetAscend(Type, Id, Num)
-  if Num then
-    if not self.WidgetMap[self.AscendWidget] then
-      self.AscendWidget = self:CreateWidgetNew("ItemShowAscend")
-      self:AddWidgetToNode(self.AscendWidget)
+    if Num then
+        if not self.WidgetMap[self.AscendWidget] then
+            local UIManager = GWorld.GameInstance:GetGameUIManager()
+            self.AscendWidget = UIManager:_CreateWidgetNew("ItemShowAscend")
+            self:AddWidgetToNode(self.AscendWidget)
+        end
+        self.AscendWidget.ListView_Star:ClearListItems()
+        if Type == "Character" then
+            Type = "Char"
+        end
+        local BreakLevelUpData = DataMgr[Type.."Break"][Id]
+        local MaxNumber = (BreakLevelUpData and #BreakLevelUpData) or 0
+        for i=1,MaxNumber do
+            local Content = NewObject(UIUtils.GetCommonItemContentClass())
+            if i <= Num then
+                Content.Light = true
+            else
+                Content.Light = false
+            end
+            self.AscendWidget.ListView_Star:AddItem(Content)
+        end
+    elseif self.WidgetMap[self.AscendWidget] then
+        self:RemoveWidgetFromNode(self.AscendWidget)
     end
-    self.AscendWidget.ListView_Star:ClearListItems()
-    if "Character" == Type then
-      Type = "Char"
-    end
-    local BreakLevelUpData = DataMgr[Type .. "Break"][Id]
-    local MaxNumber = BreakLevelUpData and #BreakLevelUpData or 0
-    for i = 1, MaxNumber do
-      local Content = NewObject(UIUtils.GetCommonItemContentClass())
-      if i <= Num then
-        Content.Light = true
-      else
-        Content.Light = false
-      end
-      self.AscendWidget.ListView_Star:AddItem(Content)
-    end
-  elseif self.WidgetMap[self.AscendWidget] then
-    self:RemoveWidgetFromNode(self.AscendWidget)
-  end
 end
 
 function M:SetIntron(Type, Id, Num)
-  if Num then
-    self.Item.Image_Type:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    self.Item.Image_Type_Glow:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    local ImageTypeDynamicMaterial = self.Item.Image_Type:GetDynamicMaterial()
-    ImageTypeDynamicMaterial:SetScalarParameterValue("Index", Num)
-    local MaxIntron
-    if "Character" == Type then
-      MaxIntron = DataMgr.GlobalConstant.CharCardLevelMax.ConstantValue
+    if Num then
+        self.Item.Image_Type:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+        local ImageTypeDynamicMaterial = self.Item.Image_Type:GetDynamicMaterial()
+        ImageTypeDynamicMaterial:SetScalarParameterValue("Index", Num)
+        local MaxIntron = nil
+        if Type == "Character" then
+            MaxIntron = DataMgr.GlobalConstant.CharCardLevelMax.ConstantValue
+        else
+            MaxIntron = DataMgr.WeaponCardLevel[Id].CardLevelMax
+        end
+        if MaxIntron and Num >= MaxIntron then
+            self.Item:PlayAnimation(self.Item.Max)
+        else
+            self.Item:PlayAnimation(self.Item.Min)
+        end
     else
-      MaxIntron = DataMgr.WeaponCardLevel[Id].CardLevelMax
+        self.Item.Image_Type:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
-    if MaxIntron and Num >= MaxIntron then
-      self.Item:PlayAnimation(self.Item.Max)
-    else
-      self.Item:PlayAnimation(self.Item.Min)
-    end
-  else
-    self.Item.Image_Type:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Item.Image_Type_Glow:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  end
 end
 
 function M:AddWidgetToNode(Widget)
-  if not self.Node_Widget or not Widget then
-    return
-  end
-  if not self.WidgetMap then
-    self.WidgetMap = {}
-  end
-  self.WidgetMap[Widget] = true
-  local Slot = self.Node_Widget:AddChild(Widget)
-  Slot:SetVerticalAlignment(EVerticalAlignment.HAlign_Fill)
-  Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+    if not self.Node_Widget or not Widget then
+        return
+    end
+    if not self.WidgetMap then
+        self.WidgetMap = {}
+    end
+    self.WidgetMap[Widget] = true
+    local Slot = self.Node_Widget:AddChild(Widget)
+    Slot:SetVerticalAlignment(EVerticalAlignment.HAlign_Fill)
+    Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
 end
 
 function M:RemoveWidgetFromNode(Widget)
-  if not self.Node_Widget or not Widget then
-    return
-  end
-  self.WidgetMap[Widget] = nil
-  Widget:RemoveFromParent()
+    if not self.Node_Widget or not Widget then
+        return
+    end
+    self.WidgetMap[Widget] = nil
+    Widget:RemoveFromParent()
 end
 
 function M:SetCheckBtnKeyTipVisible(IsVisible)
-  if not self.WidgetMap[self.CheckBtnWidget] then
-    return
-  end
-  self.ParentWidget.Content.ShowCheckBtnKeyTip = IsVisible
-  if IsVisible then
-    self.CheckBtnWidget.Key_Controller:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-  else
-    self.CheckBtnWidget.Key_Controller:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  end
+    if not self.WidgetMap[self.CheckBtnWidget] then
+        return
+    end
+    self.ParentWidget.Content.ShowCheckBtnKeyTip = IsVisible
+    if IsVisible then
+        self.CheckBtnWidget.Key_Controller:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    else
+        self.CheckBtnWidget.Key_Controller:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
 end
 
 function M:HideCheckBtnKeyTip()
-  if not self.WidgetMap[self.CheckBtnWidget] then
-    return
-  end
-  self.CheckBtnWidget.Key_Controller:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if not self.WidgetMap[self.CheckBtnWidget] then
+        return
+    end
+    self.CheckBtnWidget.Key_Controller:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:OnParentRefreshOpInfoByInputDevice(CurInputType, CurGamepadName)
-  if CurInputType == ECommonInputType.Gamepad then
-    self:InitGamepadView()
-  else
-    self:InitKeyboardView()
-  end
+    if CurInputType == ECommonInputType.Gamepad then
+        self:InitGamepadView()
+    else
+        self:InitKeyboardView()
+    end
 end
 
 function M:InitGamepadView()
-  self:SetCheckBtnKeyTipVisible(self.ParentWidget.Content.ShowCheckBtnKeyTip)
+    self:SetCheckBtnKeyTipVisible(self.ParentWidget.Content.ShowCheckBtnKeyTip)
 end
 
 function M:InitKeyboardView()
-  self:HideCheckBtnKeyTip()
+	self:HideCheckBtnKeyTip()
 end
 
 return M

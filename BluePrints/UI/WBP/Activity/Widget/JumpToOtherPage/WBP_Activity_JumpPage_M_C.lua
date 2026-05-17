@@ -1,61 +1,79 @@
-require("UnLua")
-local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
-local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotHelper")
+--
+-- DESCRIPTION
+-- 新手任务主界面
+-- @COMPANY **
+-- @AUTHOR ** hy
+-- @DATE ${date} ${time}
+--
+require "UnLua"
+
+local ActivityUtils = require "Blueprints.UI.WBP.Activity.ActivityUtils"
+local ActivityReddotHelper = require "BluePrints.UI.WBP.Activity.ActivityReddotHelper"
+
 local M = Class({
-  "BluePrints.Common.TimerMgr",
-  "BluePrints.UI.BP_EMUserWidget_C",
-  "BluePrints.UI.WBP.Activity.Widget.JumpToOtherPage.ActivityJumpPageBase"
+    "BluePrints.Common.TimerMgr",
+    "BluePrints.UI.BP_EMUserWidget_C",
+    "BluePrints.UI.WBP.Activity.Widget.JumpToOtherPage.ActivityJumpPageBase",
 })
+
 M._components = {
-  "BluePrints.UI.WBP.Activity.Widget.View.ActivityJumpPageView"
+    "BluePrints.UI.WBP.Activity.Widget.View.ActivityJumpPageView",
 }
 
 function M:Initialize(Initializer)
-  self.OwnerPlayer = nil
-  self.CurActivityId = nil
-  self.ParentTabId = nil
+    self.OwnerPlayer = nil               -- 所属的Player
+    self.CurActivityId = nil             -- 当前活动的EventId
+    self.ParentTabId = nil               -- 父页面上的TabId
 end
 
 function M:UpdatePage(OperateSrc)
-  local IsReBindClickFunction = false
-  if IsReBindClickFunction then
-    self:BindAllClickFunction(self.ViewInfoBtnClick, self.GoToShopClick, self.GoToTargetPageClick)
-  end
-  self:ResetVariable()
-  self:RefreshPageDynamicView()
+    local IsReBindClickFunction = false
+
+    -- 重新绑定按钮事件
+    if (IsReBindClickFunction) then
+        self:BindAllClickFunction(self.ViewInfoBtnClick, self.GoToShopClick, self.GoToTargetPageClick)
+    end
+
+    self:ResetVariable()
+    self:RefreshPageDynamicView()
+    self:UpdatePageDynamicView()
 end
 
 function M:OnUpdateSubUIViewStyle()
+    -- 手机版暂不实现
 end
 
 function M:OnStuffDetailOpenChanged(bIsOpen, Stuff)
+    -- 手机版暂不实现
 end
 
+---------------------------------各种输入事件相关----------------------------------
 function M:HandleKeyDownInPage(MyGeometry, InKeyEvent)
-  local IsEventHandled = false
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
-    IsEventHandled = self:OnGamePadButtonDown(InKeyName)
-  else
-    IsEventHandled = false
-  end
-  return IsEventHandled
+    local IsEventHandled = false
+    local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+    local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+    if (UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey)) then
+        IsEventHandled = self:OnGamePadButtonDown(InKeyName)
+    else
+        IsEventHandled = false
+    end
+    return IsEventHandled
 end
 
 function M:OnGamePadButtonDown(InKeyName)
-  local IsEventHandled = self:Handle_KeyDownOnGamePad(InKeyName)
-  return IsEventHandled
+    local IsEventHandled = self:Handle_KeyDownOnGamePad(InKeyName)
+    return IsEventHandled
 end
 
 function M:Handle_KeyDownOnGamePad()
-  return true
+    -- 处理手柄相关的交互事件
+    return true
 end
 
 function M:Destruct()
-  if self.CurActivityId then
-    ActivityReddotHelper.RemoveReddotListenByEventId(self.CurActivityId, self)
-  end
+    if self.CurActivityId then
+        ActivityReddotHelper.RemoveReddotListenByEventId(self.CurActivityId, self)
+    end
 end
 
 AssembleComponents(M)

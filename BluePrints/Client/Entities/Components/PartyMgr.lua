@@ -1,82 +1,72 @@
 local Component = {}
-local EntertainmentController = require("BluePrints.UI.WBP.Entertainment.EntertainmentController")
+local EntertainmentController = require "BluePrints.UI.WBP.Entertainment.EntertainmentController"
 
-function Component:EnterWorld()
-  EntertainmentController:Init()
+function Component:_OnLoginSuccess()
+    EntertainmentController:Init()
 end
 
 function Component:LeaveWorld()
-  EntertainmentController:Destory()
+    EntertainmentController:Destory()
 end
 
+--获取话题属性
 function Component:GetPartyTopic(CharId, Level)
-  if not CharId then
-    return
-  end
-  if not Level then
-    return
-  end
-  local Party = self.PartyNpcs[CharId]
-  if not Party then
-    return
-  end
-  local PartyTopic = Party.PartyTopics[Level]
-  if not PartyTopic then
-    return
-  end
-  return PartyTopic
+    if not CharId then return end
+    if not Level then return end
+    local Party = self.PartyNpcs[CharId]
+    if not Party then return end
+    local PartyTopic = Party.PartyTopics[Level]
+    if not PartyTopic then return end
+    return PartyTopic
 end
 
+--触发话题聊天解锁并领取奖励
 function Component:TriggerPartyTopicUnLock(CharId, Level, HandleCallback)
-  CharId = tonumber(CharId)
-  Level = tonumber(Level)
-  self.logger.debug("TriggerPartyTopicUnLock Start", CharId, Level)
-  
-  local function Callback(Ret)
-    self.logger.debug("TriggerPartyTopicUnLock callback", Ret, CharId, Level)
-    if HandleCallback then
-      HandleCallback(Ret)
+    CharId = tonumber(CharId)
+    Level = tonumber(Level)
+    self.logger.debug("TriggerPartyTopicUnLock Start", CharId, Level)
+    local function Callback(Ret)
+		self.logger.debug("TriggerPartyTopicUnLock callback", Ret, CharId, Level)
+        if (HandleCallback) then
+            HandleCallback(Ret)
+        end
+        EntertainmentController:GetModel():RefreshRedState()
     end
-    EntertainmentController:GetModel():RefreshRedState()
-  end
-  
-  self:CallServer("TriggerPartyTopicUnLock", Callback, CharId, Level)
+    self:CallServer("TriggerPartyTopicUnLock", Callback, CharId, Level)
 end
 
+--触发话题聊天完成
 function Component:TriggerPartyTopicComplete(PartyId, Level, HandleCallback)
-  PartyId = tonumber(PartyId)
-  Level = tonumber(Level)
-  self.logger.debug("TriggerPartyTopicComplete Start", PartyId, Level)
-  
-  local function Callback(Ret)
-    self.logger.debug("TriggerPartyTopicComplete callback", Ret, PartyId, Level)
-    if HandleCallback then
-      HandleCallback(Ret)
+    PartyId = tonumber(PartyId)
+    Level = tonumber(Level)
+    self.logger.debug("TriggerPartyTopicComplete Start", PartyId, Level)
+    local function Callback(Ret)
+		self.logger.debug("TriggerPartyTopicComplete callback", Ret, PartyId, Level)
+        if (HandleCallback) then
+            HandleCallback(Ret)
+        end
+        EntertainmentController:GetModel():RefreshRedState()
     end
-    EntertainmentController:GetModel():RefreshRedState()
-  end
-  
-  self:CallServer("TriggerPartyTopicComplete", Callback, PartyId, Level)
+    self:CallServer("TriggerPartyTopicComplete", Callback, PartyId, Level)
 end
 
 function Component:StartSojourns(PartyId, Level, HandleCallback)
-  local function Callback(Ret)
-    if HandleCallback then
-      HandleCallback(ErrorCode:Check(Ret), Ret)
+    local function Callback(Ret)
+        if HandleCallback then
+            HandleCallback(ErrorCode:Check(Ret), Ret)
+        end
     end
-  end
-  
-  self:CallServer("StartSojourns", Callback, PartyId, Level)
+    self:CallServer("StartSojourns", Callback, PartyId, Level)
 end
 
 function Component:ExitSojourns(PartyId, Level, HandleCallback)
-  local function Callback(Ret)
-    if HandleCallback then
-      HandleCallback(ErrorCode:Check(Ret), Ret)
+    local function Callback(Ret)
+        if HandleCallback then
+            HandleCallback(ErrorCode:Check(Ret), Ret)
+        end
     end
-  end
-  
-  self:CallServer("ExitSojourns", Callback, PartyId, Level)
+    self:CallServer("ExitSojourns", Callback, PartyId, Level)
 end
+
 
 return Component

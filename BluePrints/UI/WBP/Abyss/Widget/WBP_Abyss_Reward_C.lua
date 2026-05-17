@@ -1,154 +1,187 @@
+
 local WBP_Abyss_Reward_C = Class("BluePrints.UI.BP_EMUserWidget_C")
 
 function WBP_Abyss_Reward_C:Construct()
-  self:BindButtonPerformances()
+    self:BindButtonPerformances()
 end
 
 function WBP_Abyss_Reward_C:Destruct()
-  self:UnBindButtonPerformances()
-  ReddotManager.RemoveListener("AbyssReward", self)
+    self:UnBindButtonPerformances()
+    ReddotManager.RemoveListener("AbyssReward", self)
 end
 
 function WBP_Abyss_Reward_C:Init(Parent, Func, AbyssId, NowValue, MaxValue)
-  self.Parent = Parent
-  self.Func = Func
-  self.NowValue = NowValue
-  self.MaxValue = MaxValue
-  self.AbyssId = AbyssId
-  self.Text_Now:SetText(NowValue)
-  self.Text_All:SetText(MaxValue)
-  if not ReddotManager.GetTreeNode("AbyssReward") then
-    ReddotManager.AddNode("AbyssReward")
-  end
-  ReddotManager.RemoveListener("AbyssReward", self)
-  ReddotManager.AddListener("AbyssReward", self, self.RefreshReddot)
+    self.Parent = Parent
+    self.Func = Func
+    self.NowValue = NowValue
+    self.MaxValue = MaxValue
+    self.AbyssId = AbyssId
+    self.Text_Now:SetText(NowValue)
+    self.Text_All:SetText(MaxValue)
+    local Abysses = DataMgr.AbyssSeason
+    if AbyssId and Abysses[AbyssId] and Abysses[AbyssId].AbyssType and Abysses[AbyssId].AbyssType == 3 then
+        self.Text_Split:SetVisibility(ESlateVisibility.Collapsed)
+        self.Text_All:SetVisibility(ESlateVisibility.Collapsed)
+    else
+        self.Text_Split:SetVisibility(ESlateVisibility.HitTestInvisible)
+        self.Text_All:SetVisibility(ESlateVisibility.HitTestInvisible)
+    end
+    if not ReddotManager.GetTreeNode("AbyssReward") then
+		ReddotManager.AddNode("AbyssReward")
+	end
+    ReddotManager.RemoveListener("AbyssReward", self)
+	ReddotManager.AddListener("AbyssReward",self,self.RefreshReddot)
 end
 
+-- function WBP_Abyss_Reward_C:Refresh(NowValue, MaxValue, AbyssId)
+--     self.NowValue = NowValue
+--     self.MaxValue = MaxValue
+--     self.AbyssId = AbyssId
+-- 	self.Text_Now:SetText(NowValue)
+--     self.Text_All:SetText(MaxValue)
+-- end
+
 function WBP_Abyss_Reward_C:RefreshReddot()
-  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("AbyssReward")
-  if not CacheDetail[self.AbyssId] then
-    self.Reddot:SetVisibility(ESlateVisibility.Collapsed)
-  else
-    self.Reddot:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  end
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("AbyssReward")
+    if not CacheDetail[self.AbyssId] then
+        self.Reddot:SetVisibility(ESlateVisibility.Collapsed)
+    else
+        self.Reddot:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    end
 end
 
 function WBP_Abyss_Reward_C:OnClicked()
-  if self.Func then
-    self.Func(self.Parent, self.NowValue, self.MaxValue)
-  else
-    DebugPrint("WBP_Abyss_Reward_C:OnClicked()，self.Func无效")
-  end
+	if self.Func then
+		self.Func(self.Parent, self.NowValue, self.MaxValue)
+	else
+		DebugPrint("WBP_Abyss_Reward_C:OnClicked()，self.Func无效")
+	end
 end
 
+-------------------------------- 按钮 绑定/解绑 相关 -----------------------------------
 function WBP_Abyss_Reward_C:BindButtonPerformances()
-  self.Btn_Click.OnClicked:Add(self, self.OnBtnClicked)
-  self.Btn_Click.OnPressed:Add(self, self.OnBtnPressed)
-  self.Btn_Click.OnReleased:Add(self, self.OnBtnReleased)
-  if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
-    self.Btn_Click.OnHovered:Add(self, self.OnBtnHovered)
-    self.Btn_Click.OnUnhovered:Add(self, self.OnBtnUnhovered)
-  end
+    self.Btn_Click.OnClicked:Add(self, self.OnBtnClicked)
+    self.Btn_Click.OnPressed:Add(self, self.OnBtnPressed)
+    self.Btn_Click.OnReleased:Add(self, self.OnBtnReleased)
+    if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+        self.Btn_Click.OnHovered:Add(self, self.OnBtnHovered)
+        self.Btn_Click.OnUnhovered:Add(self, self.OnBtnUnhovered)
+    end
 end
 
 function WBP_Abyss_Reward_C:UnBindButtonPerformances()
-  if not self.Btn_Click then
-    return
-  end
-  self.Btn_Click.OnClicked:Clear()
-  self.Btn_Click.OnPressed:Clear()
-  self.Btn_Click.OnReleased:Clear()
-  if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
-    self.Btn_Click.OnHovered:Clear()
-    self.Btn_Click.OnUnhovered:Clear()
-  end
+    if not self.Btn_Click then
+        return
+    end
+    self.Btn_Click.OnClicked:Clear()
+    self.Btn_Click.OnPressed:Clear()
+    self.Btn_Click.OnReleased:Clear()
+    if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+        self.Btn_Click.OnHovered:Clear()
+        self.Btn_Click.OnUnhovered:Clear()
+    end
 end
+-------------------------------- 按钮 Click Press Release Hover UnHover 相关表现 -----------------------------------
 
+----------------------------------------- 按钮 Normal -----------------------------------------------
 function WBP_Abyss_Reward_C:SwitchNormalAnimation()
-  self:StopAllAnimations()
-  self:PlayAnimation(self.Normal)
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Normal)
 end
 
+----------------------------------------- 按钮 Click -----------------------------------------------
 function WBP_Abyss_Reward_C:PlayButtonClickSound()
-  AudioManager(self):PlayUISound(self, "event:/ui/activity/drama_gift_btn_click", nil, nil)
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/drama_gift_btn_click", nil, nil)
+    --UIUtils.PlayCommonBtnSe(self)
 end
 
 function WBP_Abyss_Reward_C:PlayButtonClickAnimation()
-  self:StopAllAnimations()
-  self:PlayAnimation(self.Normal)
-  self:PlayAnimation(self.Click)
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Normal)
+    self:PlayAnimation(self.Click)
 end
 
 function WBP_Abyss_Reward_C:OnBtnClicked()
-  self:PlayButtonClickSound()
-  self:PlayButtonClickAnimation()
-  self:OnClicked()
+    self:PlayButtonClickSound()
+	self:PlayButtonClickAnimation()
+    self:OnClicked()
 end
+----------------------------------------- 按钮 Click -----------------------------------------------
 
+----------------------------------------- 按钮 Press -----------------------------------------------
 function WBP_Abyss_Reward_C:PlayButtonPressAnim()
-  self:StopAllAnimations()
-  self:PlayAnimation(self.Normal)
-  self:PlayAnimation(self.Press)
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Normal)
+    self:PlayAnimation(self.Press)
 end
 
 function WBP_Abyss_Reward_C:OnBtnPressed()
-  self.IsPressing = true
-  self:PlayButtonPressAnim()
+    --self:PlayButtonClickSound()
+    self.IsPressing = true
+    self:PlayButtonPressAnim()
 end
+----------------------------------------- 按钮 Press -----------------------------------------------
 
+----------------------------------------- 按钮 Hover -----------------------------------------------
 function WBP_Abyss_Reward_C:PlayButtonHoverSound()
-  AudioManager(self):PlayUISound(self, "event:/ui/activity/drama_gift_btn_hover", nil, nil)
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/drama_gift_btn_hover", nil, nil)
 end
 
 function WBP_Abyss_Reward_C:PlayButtonHoverAnim()
-  self:PlayButtonHoverSound()
-  self:StopAllAnimations()
-  self:PlayAnimation(self.Normal)
-  self:PlayAnimation(self.Hover)
+    self:PlayButtonHoverSound()
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Normal)
+    self:PlayAnimation(self.Hover)
 end
 
 function WBP_Abyss_Reward_C:OnBtnHovered()
-  self.IsHovering = true
-  self:PlayButtonHoverAnim()
+    self.IsHovering = true
+    self:PlayButtonHoverAnim()
 end
 
 function WBP_Abyss_Reward_C:SetBtnHovered(IsHovered)
-  if IsHovered then
-    self:OnBtnHovered()
-  else
-    self:OnBtnUnhovered()
-  end
-end
+    if IsHovered then 
+        self:OnBtnHovered()
+    else 
+        self:OnBtnUnhovered()
+    end
+end 
 
+----------------------------------------- 按钮 Hover -----------------------------------------------
+
+----------------------------------------- 按钮 Release -----------------------------------------------
 function WBP_Abyss_Reward_C:PlayButtonReleaseButHoverAnim()
-  self:StopAllAnimations()
-  self:PlayButtonHoverAnim()
+    self:StopAllAnimations()
+    self:PlayButtonHoverAnim()
 end
 
 function WBP_Abyss_Reward_C:PlayButtonReleaseAndUnHoverAnim()
-  self:StopAllAnimations()
-  self:SwitchNormalAnimation()
+    self:StopAllAnimations()
+    self:SwitchNormalAnimation()
 end
 
 function WBP_Abyss_Reward_C:OnBtnReleased()
-  self.IsPressing = false
-  if not self.IsHovering then
-    self:PlayButtonReleaseAndUnHoverAnim()
-  else
-    self:PlayButtonReleaseButHoverAnim()
-  end
+    self.IsPressing = false
+    if not self.IsHovering then
+        self:PlayButtonReleaseAndUnHoverAnim()
+    else
+        self:PlayButtonReleaseButHoverAnim()
+    end
 end
+----------------------------------------- 按钮 Release -----------------------------------------------
 
+----------------------------------------- 按钮 UnHover -----------------------------------------------
 function WBP_Abyss_Reward_C:PlayButtonUnHoverAnim()
-  self:StopAllAnimations()
-  self:SwitchNormalAnimation()
+    self:StopAllAnimations()
+    self:SwitchNormalAnimation()
 end
 
 function WBP_Abyss_Reward_C:OnBtnUnhovered()
-  self.IsHovering = false
-  if not self.IsPressing then
-    self:PlayButtonUnHoverAnim()
-  end
+    self.IsHovering = false
+    if not self.IsPressing then
+        self:PlayButtonUnHoverAnim()
+    end
 end
+----------------------------------------- 按钮  UnHover -----------------------------------------------
 
 return WBP_Abyss_Reward_C

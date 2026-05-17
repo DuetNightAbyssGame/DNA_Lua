@@ -1,16 +1,22 @@
-require("UnLua")
-local M = Class({
-  "BluePrints.UI.BP_EMUserWidget_C"
-})
+--
+-- DESCRIPTION
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
+require "UnLua"
+
+---@type WBP_Rouge_Btn_C
+local M = Class({"BluePrints.UI.BP_EMUserWidget_C"})
 
 function M:OnAnimationFinished(Anim)
-  if Anim == self.Click then
-    if self.Parent and self.Parent.RougePurchase then
-      self.Parent:RougePurchase()
+    if Anim == self.Click then
+        if self.Parent and self.Parent.RougePurchase then
+            self.Parent:RougePurchase()
+        end
+    elseif Anim == self.UnHover then
+        EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
     end
-  elseif Anim == self.UnHover then
-    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
-  end
 end
-
 return M

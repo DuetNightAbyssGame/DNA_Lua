@@ -1,16 +1,12 @@
-local M = Class("BluePrints.GameMode.BP_EMGameMode_C")
+--
+-- DESCRIPTION
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
 
-function M:IsNeedPostProcessMaterial()
-  if not GWorld.GameInstance then
-    return true
-  end
-  local IsLowScalabilityLevel = GWorld.GameInstance:GetGameplayScalabilityLevel() <= 1
-  local IsLowMemoryDevice = true
-  if IsLowScalabilityLevel and IsLowMemoryDevice then
-    return false
-  else
-    return true
-  end
-end
+---@type BP_EMGameMode_C
+local M = Class("BluePrints.GameMode.BP_EMGameMode_C")
 
 return M

@@ -1,45 +1,52 @@
-require("UnLua")
-local M = Class({
-  "BluePrints.Common.TimerMgr",
-  "BluePrints.UI.BP_EMUserWidget_C"
-})
+--
+-- 拼接关卡主页面
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
+require "UnLua"
+
+---@type Prologue_Map_Level_Main_PC_C
+local M = Class({"BluePrints.Common.TimerMgr","BluePrints.UI.BP_EMUserWidget_C"})
 
 function M:Construct()
-  self.Panel_Level:ClearListItems()
-  self:InitMap()
-  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "SystemOpenSound", nil)
+    self.Panel_Level:ClearListItems()
+    self:InitMap()
+    AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "SystemOpenSound", nil)
 end
 
 function M:Destruct()
-  self:CleanTimer()
-  self:StopAllAnimations()
-  self:PlayAnimation(self.Out)
+    self:CleanTimer()
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Out)
+end
+-- 加载拼接关卡选择页面
+function M:InitMap()
+    local DungeonData = CommonUtils.DeepCopy(DataMgr.SelectDungeon)
+    table.sort(DungeonData, function(A, B)
+        return A.Sequence < B.Sequence
+    end)
+    for i = 1, #DungeonData do
+        self:AddTimer(self.IntervalTime*(i-1), function()
+            local Content = NewObject(self.LevelCellContentClass)
+            Content.ChapterId = DungeonData[i].ChapterId
+            Content.TextTitle = DungeonData[i].ChapterName
+            Content.DungeonList = DungeonData[i].DungeonList
+            Content.IconPath = DungeonData[i].Path
+            Content.Reward = DungeonData[i].ChapterSubName
+            Content.IsUnLocked = PageJumpUtils:CheckDungeonCondition(DungeonData[i].Condition)
+            Content.Parent = self
+            self.Panel_Level:AddItem(Content)
+        end, false, 0, nil, true)
+    end
 end
 
-function M:InitMap()
-  local DungeonData = CommonUtils.DeepCopy(DataMgr.SelectDungeon)
-  table.sort(DungeonData, function(A, B)
-    return A.Sequence < B.Sequence
-  end)
-  for i = 1, #DungeonData do
-    self:AddTimer(self.IntervalTime * (i - 1), function()
-      local Content = NewObject(self.LevelCellContentClass)
-      Content.ChapterId = DungeonData[i].ChapterId
-      Content.TextTitle = DungeonData[i].ChapterName
-      Content.DungeonList = DungeonData[i].DungeonList
-      Content.IconPath = DungeonData[i].Path
-      Content.Reward = DungeonData[i].ChapterSubName
-      Content.IsUnLocked = PageJumpUtils:CheckDungeonCondition(DungeonData[i].Condition)
-      Content.Parent = self
-      self.Panel_Level:AddItem(Content)
-    end, false, 0, nil, true)
-  end
-end
 
 function M:OnAnimationFinished(InAnimation)
-  if InAnimation == self.Out then
-    AudioManager(self):SetEventSoundParam(self, "SystemOpenSound", {ToEnd = 1})
-  end
+    if InAnimation == self.Out then
+        AudioManager(self):SetEventSoundParam(self,"SystemOpenSound",{ToEnd=1})
+    end
 end
 
 return M

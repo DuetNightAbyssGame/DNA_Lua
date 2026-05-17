@@ -1,15 +1,15 @@
-local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
-  return x
-end
+-- Source Excel file path: ..\datas\Talk\Impression.xlsx
+local LocalTimeProxy = (DataMgr or {})["LocalTimeProxy"] or function(x) return x end
+local ReadOnly = (DataMgr or {})["ReadOnly"] or function(n, x) return x end
 return ReadOnly("ImpressionResource", {
-  [1011] = {
-    Count = 1,
-    RegionId = 1011,
-    ResourceId = 3001
-  },
-  [1041] = {
-    Count = 1,
-    RegionId = 1041,
-    ResourceId = 3001
-  }
+	[1011] = {
+		Count = 1,
+		RegionId = 1011,
+		ResourceId = 3001,
+	},
+	[1041] = {
+		Count = 1,
+		RegionId = 1041,
+		ResourceId = 3001,
+	},
 })

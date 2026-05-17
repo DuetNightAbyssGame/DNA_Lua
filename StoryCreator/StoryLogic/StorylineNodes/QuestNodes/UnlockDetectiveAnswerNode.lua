@@ -1,17 +1,17 @@
-local UnlockDetectiveAnswerNode = Class("StoryCreator.StoryLogic.StorylineNodes.BaseQuestNode")
+local UnlockDetectiveAnswerNode = Class('StoryCreator.StoryLogic.StorylineNodes.BaseQuestNode')
 
 function UnlockDetectiveAnswerNode:Init()
-  self.AnswerIds = {}
+    self.AnswerIds = {}
 end
 
 function UnlockDetectiveAnswerNode:Execute()
-  local Avatar = GWorld:GetAvatar()
-  if Avatar then
-    for _, Id in pairs(self.AnswerIds) do
-      Avatar:DetectiveQuestionUnlockAnswer(Id)
-      DebugPrint("UnlockDetectiveAnswerNode AnswerId: " .. Id)
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+        for _, Id in pairs(self.AnswerIds) do
+            Avatar:DetectiveQuestionUnlockAnswer(Id)
+            DebugPrint("UnlockDetectiveAnswerNode AnswerId: "..Id)
+        end
     end
-  end
 end
 
 return UnlockDetectiveAnswerNode

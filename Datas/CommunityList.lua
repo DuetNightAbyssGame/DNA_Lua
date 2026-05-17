@@ -1,30 +1,166 @@
-local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
-  return x
-end
+-- Source Excel file path: ..\datas\GameEvent\FollowCommunityEvent.xlsx
+local LocalTimeProxy = (DataMgr or {})["LocalTimeProxy"] or function(x) return x end
+local ReadOnly = (DataMgr or {})["ReadOnly"] or function(n, x) return x end
 return ReadOnly("CommunityList", {
-  [1] = {
-    CommunityId = 1,
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/SNS/T_Icon_Sns_JJJCN.T_Icon_Sns_JJJCN'",
-    JobTips = "FollowCommunity_JJJ",
-    JumpLink = "https://dnabbs.yingxiong.com",
-    JumpTips = "UI_FollowCommunity",
-    Reward = 107003,
-    RewardMark = true
-  },
-  [2] = {
-    CommunityId = 2,
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/SNS/T_Icon_Sns_Weixin.T_Icon_Sns_Weixin'",
-    JobTips = "FollowCommunity_WeCom",
-    JumpLink = "https://huke.163.com/wxUrlScheme?shareInfo=KGECZ-PzF_PfE59khJhhLpIbxMjDgC_HlhO6xgvMS-3CIvz3RfnPEA8mXZOsdobO2fAlxAWJG7jVJF5KN37kRj6L3C-al1ek6SVF9uwsgEqMfz19MzMPKdnU5Dz6URrr&type=drainage&appid=wxfe42d57febf7bf0d",
-    JumpTips = "UI_JumpCommunity",
-    Reward = 107004
-  },
-  [3] = {
-    CommunityId = 3,
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/SNS/T_Icon_Sns_Douyin.T_Icon_Sns_Douyin'",
-    JobTips = "FollowCommunity_Douyin",
-    JumpLink = "https://v.douyin.com/O8ILZ72QUZM/ 8@3.com",
-    JumpTips = "UI_JumpCommunity",
-    Reward = 107004
-  }
+	[1] = {
+		ChinaCommunity = true,
+		CommunityId = 1,
+		Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/SNS/T_Icon_Sns_JJJCN.T_Icon_Sns_JJJCN'",
+		JobTips = "FollowCommunity_JJJ",
+		JumpLink = {
+			ChinaCN = "https://dnabbs.yingxiong.com",
+		},
+		JumpTips = "UI_FollowCommunity",
+		Reward = 107003,
+		RewardMark = true,
+	},
+	[2] = {
+		ChinaCommunity = true,
+		CommunityId = 2,
+		Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/SNS/T_Icon_Sns_Weixin.T_Icon_Sns_Weixin'",
+		JobTips = "FollowCommunity_WeCom",
+		JumpLink = {
+			ChinaCN = "https://huke.163.com/wxUrlScheme?shareInfo=KGECZ-PzF_PfE59khJhhLpIbxMjDgC_HlhO6xgvMS-3CIvz3RfnPEA8mXZOsdobO2fAlxAWJG7jVJF5KN37kRj6L3C-al1ek6SVF9uwsgEqMfz19MzMPKdnU5Dz6URrr&type=drainage&appid=wxfe42d57febf7bf0d",
+		},
+		JumpTips = "UI_JumpCommunity",
+		Reward = 107004,
+	},
+	[3] = {
+		ChinaCommunity = true,
+		CommunityId = 3,
+		Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/SNS/T_Icon_Sns_Douyin.T_Icon_Sns_Douyin'",
+		JobTips = "FollowCommunity_Douyin",
+		JumpLink = {
+			ChinaCN = "https://v.douyin.com/O8ILZ72QUZM/ 8@3.com",
+		},
+		JumpTips = "UI_JumpCommunity",
+		Reward = 107004,
+	},
+	[4] = {
+		CommunityId = 4,
+		Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/SNS/T_Icon_Sns_JJJ.T_Icon_Sns_JJJ'",
+		JobTips = "FollowCommunity_LunoLoft",
+		JumpLink = {
+			AbroadCN = "https://duetnightabyss.dna-panstudio.com/p/hzDown.html",
+			AbroadDE = "https://duetnightabyss.dna-panstudio.com/p/hzDown.html",
+			AbroadEN = "https://duetnightabyss.dna-panstudio.com/p/hzDown.html",
+			AbroadES = "https://duetnightabyss.dna-panstudio.com/p/hzDown.html",
+			AbroadFR = "https://duetnightabyss.dna-panstudio.com/p/hzDown.html",
+			AbroadJP = "https://duetnightabyss.dna-panstudio.com/p/hzDown.html",
+			AbroadKR = "https://duetnightabyss.dna-panstudio.com/p/hzDown.html",
+			AbroadTC = "https://duetnightabyss.dna-panstudio.com/p/hzDown.html",
+		},
+		JumpTips = "UI_FollowCommunity",
+		Reward = 107003,
+		RewardMark = true,
+	},
+	[5] = {
+		CommunityId = 5,
+		Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/SNS/T_Icon_Sns_Facebook.T_Icon_Sns_Facebook'",
+		JobTips = "FollowCommunity_Facebook",
+		JumpLink = {
+			AbroadCN = "https://www.facebook.com/DNAbyss.TC",
+			AbroadDE = "https://www.facebook.com/DNAbyss.TC",
+			AbroadEN = "https://www.facebook.com/DNAbyss.Official",
+			AbroadES = "https://www.facebook.com/DNAbyss.TC",
+			AbroadFR = "https://www.facebook.com/DNAbyss.TC",
+			AbroadJP = "https://www.facebook.com/DNAbyss.JP",
+			AbroadKR = "https://www.facebook.com/DNAbyss.KR",
+			AbroadTC = "https://www.facebook.com/DNAbyss.TC",
+		},
+		JumpTips = "UI_JumpCommunity",
+		Reward = 107004,
+	},
+	[6] = {
+		CommunityId = 6,
+		Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/SNS/T_Icon_Sns_Twitter.T_Icon_Sns_Twitter'",
+		JobTips = "FollowCommunity_X",
+		JumpLink = {
+			AbroadCN = "https://twitter.com/DNAbyss_TC",
+			AbroadDE = "https://twitter.com/DNAbyss_TC",
+			AbroadEN = "https://twitter.com/DNAbyss_EN",
+			AbroadES = "https://twitter.com/DNAbyss_TC",
+			AbroadFR = "https://twitter.com/DNAbyss_TC",
+			AbroadJP = "https://x.com/DNAbyssJP",
+			AbroadKR = "https://x.com/DNAbyss_KR",
+			AbroadTC = "https://twitter.com/DNAbyss_TC",
+		},
+		JumpTips = "UI_JumpCommunity",
+		Reward = 107004,
+	},
+	[7] = {
+		CommunityId = 7,
+		Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/SNS/T_Icon_Sns_Youtube.T_Icon_Sns_Youtube'",
+		JobTips = "FollowCommunity_Youtube",
+		JumpLink = {
+			AbroadCN = "https://www.youtube.com/@DuetNightAbyss_TC?sub_confirmation=1",
+			AbroadDE = "https://www.youtube.com/@DuetNightAbyss_TC?sub_confirmation=1",
+			AbroadEN = "https://www.youtube.com/@DuetNightAbyss_Official?sub_confirmation=1",
+			AbroadES = "https://www.youtube.com/@DuetNightAbyss_TC?sub_confirmation=1",
+			AbroadFR = "https://www.youtube.com/@DuetNightAbyss_TC?sub_confirmation=1",
+			AbroadJP = "https://www.youtube.com/@DuetNightAbyss_JP?sub_confirmation=1",
+			AbroadKR = "https://www.youtube.com/@DuetNightAbyss_KR?sub_confirmation=1",
+			AbroadTC = "https://www.youtube.com/@DuetNightAbyss_TC?sub_confirmation=1",
+		},
+		JumpTips = "UI_JumpCommunity",
+		Reward = 107004,
+	},
+	[8] = {
+		CommunityId = 8,
+		Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/SNS/T_Icon_Sns_Discord.T_Icon_Sns_Discord'",
+		JobTips = "FollowCommunity_Discord",
+		JumpLink = {
+			AbroadCN = "https://discord.gg/CuYCcPhKfA",
+			AbroadDE = "https://discord.gg/CuYCcPhKfA",
+			AbroadEN = "https://discord.gg/CuYCcPhKfA",
+			AbroadES = "https://discord.gg/CuYCcPhKfA",
+			AbroadFR = "https://discord.gg/CuYCcPhKfA",
+			AbroadJP = "https://discord.gg/CuYCcPhKfA",
+			AbroadKR = "https://discord.gg/CuYCcPhKfA",
+			AbroadTC = "https://discord.gg/CuYCcPhKfA",
+		},
+		JumpTips = "UI_JumpCommunity",
+		Reward = 107004,
+	},
+	[9] = {
+		CommunityId = 9,
+		Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/SNS/T_Icon_Sns_Reddit.T_Icon_Sns_Reddit'",
+		JobTips = "FollowCommunity_Reddit",
+		JumpLink = {
+			AbroadEN = "https://www.reddit.com/r/DuetNightAbyssDNA/",
+		},
+		JumpTips = "UI_JumpCommunity",
+		Reward = 107004,
+	},
+	[10] = {
+		CommunityId = 10,
+		Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/SNS/T_Icon_Sns_Ins.T_Icon_Sns_Ins'",
+		JobTips = "FollowCommunity_Instagram",
+		JumpLink = {
+			AbroadEN = "https://www.instagram.com/duetnightabyss_official/",
+		},
+		JumpTips = "UI_JumpCommunity",
+		Reward = 107004,
+	},
+	[11] = {
+		CommunityId = 11,
+		Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/SNS/T_Icon_Sns_Tiktok.T_Icon_Sns_Tiktok'",
+		JobTips = "FollowCommunity_TikTok",
+		JumpLink = {
+			AbroadEN = "https://www.tiktok.com/@dnabyssofficial",
+			AbroadJP = "https://www.tiktok.com/@duetnightabyss_jp",
+		},
+		JumpTips = "UI_JumpCommunity",
+		Reward = 107004,
+	},
+	[12] = {
+		CommunityId = 12,
+		Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/SNS/T_Icon_Sns_NAVER.T_Icon_Sns_NAVER'",
+		JobTips = "FollowCommunity_Lounge",
+		JumpLink = {
+			AbroadKR = "https://game.naver.com/lounge/Duet_Night_Abyss",
+		},
+		JumpTips = "UI_JumpCommunity",
+		Reward = 107004,
+	},
 })

@@ -1,135 +1,152 @@
-require("UnLua")
-local M = Class({
-  "BluePrints.UI.BP_EMUserWidget_C"
-})
+--
+-- DESCRIPTION
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
+require "UnLua"
 
+---@type WBP_Activity_RechargeRebate_DetailItem_C
+local M = Class({"BluePrints.UI.BP_EMUserWidget_C"})
+
+-- Level 1 2 3
+-- ChargeFund 充值总额
 function M:InitItem(bShowOnly, LoadImgName, Level, ChargeFund, NumHave)
-  local Img = LoadObject(DataMgr.FeeRefundUIParam[LoadImgName].ParamValue)
-  self.Image_Icon:SetBrushFromTexture(Img)
-  if bShowOnly then
-    self.Group_DetailNum:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Text_RechargeDetail:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  else
-    self.Group_DetailNum:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.Text_RechargeDetail:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.PayProportion = DataMgr.FeeRefund[1].PayProportion
-    self.Level = Level
-    self.ChargeFund = ChargeFund
-    self:InitRechargeDetail()
-    self["InitNumInfo" .. Level](self, NumHave)
-  end
+    local Img = LoadObject(DataMgr.FeeRefundUIParam[LoadImgName].ParamValue)
+    self.Image_Icon:SetBrushFromTexture(Img)
+    if bShowOnly then
+        self.Group_DetailNum:SetVisibility(UIConst.VisibilityOp["Collapsed"])
+        self.Text_RechargeDetail:SetVisibility(UIConst.VisibilityOp["Collapsed"])
+    else
+        self.Group_DetailNum:SetVisibility(UIConst.VisibilityOp["SelfHitTestInvisible"])
+        self.Text_RechargeDetail:SetVisibility(UIConst.VisibilityOp["SelfHitTestInvisible"])
+        self.PayProportion = DataMgr.FeeRefund[1].PayProportion
+        self.Level = Level
+        self.ChargeFund = ChargeFund
+        self:InitRechargeDetail()
+        self["InitNumInfo"..Level](self, NumHave)
+    end
 end
 
 function M:InitNumInfo1(NumHave)
-  local MaxPhoxeneNum = self:GetStageMaxPhoxeneByLevel(self.Level)
-  local num, _ = math.modf(MaxPhoxeneNum)
-  self.Text_NumMax:SetText(num)
-  if NumHave > num then
-    self.Text_NumHave:SetText(num)
-  else
-    self.Text_NumHave:SetText(NumHave)
-  end
+    local MaxPhoxeneNum = self:GetStageMaxPhoxeneByLevel(self.Level)
+    local num,_ = math.modf(MaxPhoxeneNum)
+    self.Text_NumMax:SetText(num)
+
+    if NumHave>num then
+        self.Text_NumHave:SetText(num)
+    else
+        self.Text_NumHave:SetText(NumHave)
+    end
 end
 
 function M:InitNumInfo2(NumHave)
-  local MaxPhoxeneNum = self:GetStageMaxPhoxeneByLevel(self.Level)
-  local num, _ = math.modf(MaxPhoxeneNum)
-  self.Text_NumMax:SetText(num)
-  if NumHave > num then
-    self.Text_NumHave:SetText(num)
-  else
-    local Num = NumHave - self:GetStageMaxPhoxeneByLevel(1)
-    if Num < 0 then
-      Num = 0
+    local MaxPhoxeneNum = self:GetStageMaxPhoxeneByLevel(self.Level)
+    local num,_ = math.modf(MaxPhoxeneNum)
+    self.Text_NumMax:SetText(num)
+
+    if NumHave>num then
+        self.Text_NumHave:SetText(num)
+    else
+        local Num = NumHave-self:GetStageMaxPhoxeneByLevel(1)
+        if Num < 0 then
+            Num = 0
+        end
+        self.Text_NumHave:SetText(Num)
     end
-    self.Text_NumHave:SetText(Num)
-  end
 end
 
 function M:InitNumInfo3(NumHave)
-  self.Group_Have:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  if self.ChargeFund >= DataMgr.FeeRefund[1].ProgressMax then
-    local PhoxeneNum = NumHave - self:GetStageMaxPhoxeneByLevel(2) - self:GetStageMaxPhoxeneByLevel(1)
-    self.Text_NumMax:SetText(PhoxeneNum)
-  else
-    self.Text_NumMax:SetText(0)
-  end
+    self.Group_Have:SetVisibility(UIConst.VisibilityOp["Collapsed"])
+    if self.ChargeFund>=DataMgr.FeeRefund[1].ProgressMax then
+        local PhoxeneNum = NumHave-self:GetStageMaxPhoxeneByLevel(2)-self:GetStageMaxPhoxeneByLevel(1)
+        self.Text_NumMax:SetText(PhoxeneNum)
+    else
+        self.Text_NumMax:SetText(0)
+    end
 end
 
+-- 初始化返利文本
 function M:InitRechargeDetail()
-  local Num, _ = math.modf(self:GetStageRefundRatioByLevel(self.Level) * 100)
-  local RechargeStr = string.format(GText("UI_RefundLevel"), tostring(Num) .. "%")
-  self.Text_RechargeDetail:SetText(RechargeStr)
+    local Num,_ =  math.modf(self:GetStageRefundRatioByLevel(self.Level)*100)
+    local RechargeStr = string.format(GText("UI_RefundLevel"), tostring(Num).."%")
+    self.Text_RechargeDetail:SetText(RechargeStr)
 end
 
+-- 获得当前区间的进度条比例
 function M:GetProgress()
-  local StageFund = self:GetStageFundByLevel(self.Level)
-  local ChargeFundInStage = self:GetChargeFundInStagenyLevel(self.Level)
-  return ChargeFundInStage * 1.0 / (StageFund * 3.0)
+    local StageFund = self:GetStageFundByLevel(self.Level)
+    local ChargeFundInStage = self:GetChargeFundInStagenyLevel(self.Level)
+    return (ChargeFundInStage*1.0)/(StageFund*3.0)
 end
 
+--  获得区间Fund
 function M:GetStageFundByLevel(Level)
-  if 1 == Level then
-    return DataMgr.FeeRefund[1].PayLevel2 - DataMgr.FeeRefund[1].PayLevel1
-  elseif 2 == Level then
-    return DataMgr.FeeRefund[1].PayLevel3 - DataMgr.FeeRefund[1].PayLevel2
-  elseif 3 == Level then
-    return DataMgr.FeeRefund[1].ProgressMax - DataMgr.FeeRefund[1].PayLevel3
-  end
-  return 0
+    if Level == 1 then
+        return DataMgr.FeeRefund[1].PayLevel2-DataMgr.FeeRefund[1].PayLevel1
+    elseif Level == 2 then
+        return DataMgr.FeeRefund[1].PayLevel3-DataMgr.FeeRefund[1].PayLevel2
+    elseif Level == 3 then
+        return DataMgr.FeeRefund[1].ProgressMax-DataMgr.FeeRefund[1].PayLevel3
+    end
+    return 0
 end
 
+-- 将充值总金额拆成区间
 function M:GetChargeFundInStagenyLevel(Level)
-  local Num = 0
-  if 1 == Level then
-    if self.ChargeFund < DataMgr.FeeRefund[1].PayLevel2 then
-      Num = self.ChargeFund - DataMgr.FeeRefund[1].PayLevel1
-    else
-      Num = DataMgr.FeeRefund[1].PayLevel2 - DataMgr.FeeRefund[1].PayLevel1
+    local Num = 0
+    if Level==1 then
+        if self.ChargeFund<DataMgr.FeeRefund[1].PayLevel2 then
+            Num = self.ChargeFund-DataMgr.FeeRefund[1].PayLevel1
+        else
+            Num = DataMgr.FeeRefund[1].PayLevel2-DataMgr.FeeRefund[1].PayLevel1
+        end
+    elseif Level == 2 then
+        if self.ChargeFund<DataMgr.FeeRefund[1].PayLevel3 then
+            Num = self.ChargeFund-DataMgr.FeeRefund[1].PayLevel2
+        else
+            Num = DataMgr.FeeRefund[1].PayLevel3-DataMgr.FeeRefund[1].PayLevel2
+        end
+    elseif Level == 3 then
+        if self.ChargeFund<DataMgr.FeeRefund[1].ProgressMax then
+            Num = self.ChargeFund-DataMgr.FeeRefund[1].PayLevel3
+        else
+            Num = DataMgr.FeeRefund[1].ProgressMax-DataMgr.FeeRefund[1].PayLevel3
+        end
     end
-  elseif 2 == Level then
-    if self.ChargeFund < DataMgr.FeeRefund[1].PayLevel3 then
-      Num = self.ChargeFund - DataMgr.FeeRefund[1].PayLevel2
-    else
-      Num = DataMgr.FeeRefund[1].PayLevel3 - DataMgr.FeeRefund[1].PayLevel2
+    if Num < 0 then
+        Num = 0
     end
-  elseif 3 == Level then
-    if self.ChargeFund < DataMgr.FeeRefund[1].ProgressMax then
-      Num = self.ChargeFund - DataMgr.FeeRefund[1].PayLevel3
-    else
-      Num = DataMgr.FeeRefund[1].ProgressMax - DataMgr.FeeRefund[1].PayLevel3
-    end
-  end
-  if Num < 0 then
-    Num = 0
-  end
-  return Num
+    return Num
 end
 
+-- 获得利率
 function M:GetStageRefundRatioByLevel(Level)
-  local StageRefundRatio = 0
-  if 1 == Level then
-    StageRefundRatio = DataMgr.FeeRefund[1].RefundLevel1
-  elseif 2 == Level then
-    StageRefundRatio = DataMgr.FeeRefund[1].RefundLevel2
-  elseif 3 == Level then
-    StageRefundRatio = DataMgr.FeeRefund[1].RefundLevel3
-  end
-  return StageRefundRatio
+    local StageRefundRatio = 0
+    if Level==1 then
+        StageRefundRatio = DataMgr.FeeRefund[1].RefundLevel1
+    elseif Level == 2 then
+        StageRefundRatio = DataMgr.FeeRefund[1].RefundLevel2
+    elseif Level == 3 then
+        StageRefundRatio = DataMgr.FeeRefund[1].RefundLevel3
+    end
+    return StageRefundRatio
 end
 
+-- 获得区间内能获得最大月石数量
 function M:GetStageMaxPhoxeneByLevel(Level)
-  local Fund = 0
-  if 1 == Level then
-    Fund = self:GetStageFundByLevel(Level)
-  elseif 2 == Level then
-    Fund = self:GetStageFundByLevel(Level)
-  elseif 3 == Level then
-    Fund = self:GetStageFundByLevel(Level)
-  end
-  Fund = Fund * self.PayProportion * self:GetStageRefundRatioByLevel(Level)
-  local num, _ = math.modf(Fund)
-  return num
+    local Fund = 0
+    if Level==1 then
+        Fund = self:GetStageFundByLevel(Level)
+    elseif Level == 2 then
+        Fund = self:GetStageFundByLevel(Level)
+    elseif Level == 3 then
+        Fund = self:GetStageFundByLevel(Level)
+    end
+    Fund = Fund*self.PayProportion*self:GetStageRefundRatioByLevel(Level)
+    local num,_ = math.modf(Fund)
+    return num
 end
 
 return M

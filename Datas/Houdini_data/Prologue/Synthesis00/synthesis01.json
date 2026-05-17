@@ -1,0 +1,1485 @@
+{
+    "points": [
+        {
+            "P": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "level_center": [
+                500,
+                1000.0,
+                500
+            ],
+            "rot": 0.0,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Enter_07",
+            "enterLevel": 1,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow7",
+                    "next_id": 10
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 1
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow3",
+                    "next_id": 11
+                },
+                {
+                    "door_name": "BP_Arrow4",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 12
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "/Game/Maps/Datas/Data_Art/Prologue/Prologue_Road_08_Art",
+            "id": 0,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -7721.551513671875,
+                871.337890625,
+                473.9776611328125
+            ],
+            "level_center": [
+                -1500,
+                3311.99951171875,
+                -500
+            ],
+            "rot": 180.00001525878906,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_04",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 37
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 0
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow3",
+                    "next_id": 2
+                },
+                {
+                    "door_name": "BP_Arrow4",
+                    "door_state": 0,
+                    "if_door": 1,
+                    "near_door": "",
+                    "next_id": -1
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 1,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -15442.709350585938,
+                569.8265075683594,
+                -519.9001312255859
+            ],
+            "level_center": [
+                500,
+                768.452262878418,
+                3500
+            ],
+            "rot": -89.99999237060547,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_09",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow3",
+                    "next_id": 15
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 3
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow3",
+                    "next_id": 1
+                }
+            ],
+            "if_layout": 0,
+            "art_path": "/Game/Maps/Datas/Data_Art/Prologue/Prologue_Enter_03_Art",
+            "id": 2,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -14928.695678710938,
+                995.9877014160156,
+                -8724.449157714844
+            ],
+            "level_center": [
+                4500,
+                1627.0002365112305,
+                -500
+            ],
+            "rot": -0.0,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_10",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 2
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 35
+                },
+                {
+                    "door_name": "BP_Arrow4",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 36
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 4
+                }
+            ],
+            "if_layout": 0,
+            "art_path": "",
+            "id": 3,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -14874.920654296875,
+                965.948486328125,
+                -22743.161010742188
+            ],
+            "level_center": [
+                1500,
+                2369.9996948242188,
+                2500
+            ],
+            "rot": 180.00001525878906,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_15",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow3",
+                    "next_id": 3
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 34
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 5
+                }
+            ],
+            "if_layout": 0,
+            "art_path": "",
+            "id": 4,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -23960.369873046875,
+                -203.86276245117188,
+                -19945.3125
+            ],
+            "level_center": [
+                500,
+                281.0000419616699,
+                500
+            ],
+            "rot": -0.0,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Connector_06",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow3",
+                    "next_id": 4
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 1,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 6
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "/Game/Maps/Datas/Data_Art/Prologue/Prologue_Connector_02_Art",
+            "id": 5,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -26751.370239257812,
+                -32.86285400390625,
+                -19885.313415527344
+            ],
+            "level_center": [
+                -500,
+                -47.99995422363281,
+                500
+            ],
+            "rot": -0.0,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Connector_03",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow3",
+                    "next_id": 7
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 5
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 6,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -32598.699951171875,
+                953.1467437744141,
+                -19915.0634765625
+            ],
+            "level_center": [
+                500,
+                1500.0,
+                500
+            ],
+            "rot": 180.00001525878906,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_07",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 8
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 19
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow",
+                    "next_id": 6
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 7,
+            "loading_group_id": 1
+        },
+        {
+            "P": [
+                -32249.484252929688,
+                3418.6813354492188,
+                -9743.560791015625
+            ],
+            "level_center": [
+                -500,
+                3391.0003662109375,
+                500
+            ],
+            "rot": 90.0000228881836,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_14",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow",
+                    "next_id": 7
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 32
+                },
+                {
+                    "door_name": "BP_Arrow4",
+                    "door_state": 0,
+                    "if_door": 1,
+                    "near_door": "",
+                    "next_id": -1
+                },
+                {
+                    "door_name": "BP_Arrow5",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow4",
+                    "next_id": 22
+                },
+                {
+                    "door_name": "BP_Arrow7",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow3",
+                    "next_id": 9
+                }
+            ],
+            "if_layout": 0,
+            "art_path": "",
+            "id": 8,
+            "loading_group_id": 1
+        },
+        {
+            "P": [
+                -45874.755859375,
+                3902.4917602539062,
+                -9703.965759277344
+            ],
+            "level_center": [
+                -500,
+                3758.9996337890625,
+                7500
+            ],
+            "rot": 90.00003051757812,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Exit_02",
+            "enterLevel": 0,
+            "exitLevel": 1,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 30
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 31
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow7",
+                    "next_id": 8
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 9,
+            "loading_group_id": 1
+        },
+        {
+            "P": [
+                8086.0137939453125,
+                3074.9359130859375,
+                464.9749755859375
+            ],
+            "level_center": [
+                -500,
+                3391.0003662109375,
+                500
+            ],
+            "rot": 90.00000762939453,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_14",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 1,
+                    "near_door": "",
+                    "next_id": -1
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 0,
+                    "if_door": 1,
+                    "near_door": "",
+                    "next_id": -1
+                },
+                {
+                    "door_name": "BP_Arrow4",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 25
+                },
+                {
+                    "door_name": "BP_Arrow5",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 41
+                },
+                {
+                    "door_name": "BP_Arrow7",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow",
+                    "next_id": 0
+                }
+            ],
+            "if_layout": 0,
+            "art_path": "",
+            "id": 10,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                4737.479019165039,
+                -1470.6968307495117,
+                -11217.039489746094
+            ],
+            "level_center": [
+                5500,
+                1430.999755859375,
+                -500
+            ],
+            "rot": -0.0,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_05",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 1,
+                    "near_door": "",
+                    "next_id": -1
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 43
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow3",
+                    "next_id": 0
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 11,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                1782.638168334961,
+                -2213.0126953125,
+                6443.857574462891
+            ],
+            "level_center": [
+                -500,
+                -47.99995422363281,
+                500
+            ],
+            "rot": 90.00000762939453,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Connector_03",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow4",
+                    "next_id": 0
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 29
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 12,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -16563.116455078125,
+                1580.082893371582,
+                6746.453094482422
+            ],
+            "level_center": [
+                500,
+                2500.0,
+                -500
+            ],
+            "rot": -0.0,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_11",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 44
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 0,
+                    "if_door": 1,
+                    "near_door": "",
+                    "next_id": -1
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow",
+                    "next_id": 2
+                },
+                {
+                    "door_name": "BP_Arrow4",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 46
+                }
+            ],
+            "if_layout": 0,
+            "art_path": "",
+            "id": 15,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -31772.860717773438,
+                1221.9764709472656,
+                -29521.002197265625
+            ],
+            "level_center": [
+                500,
+                768.452262878418,
+                3500
+            ],
+            "rot": 90.0000228881836,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_09",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 47
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 7
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 48
+                }
+            ],
+            "if_layout": 0,
+            "art_path": "/Game/Maps/Datas/Data_Art/Prologue/Prologue_Enter_03_Art",
+            "id": 19,
+            "loading_group_id": 1
+        },
+        {
+            "P": [
+                -32233.474731445312,
+                2558.357048034668,
+                171.1803436279297
+            ],
+            "level_center": [
+                500,
+                2130.999755859375,
+                -500
+            ],
+            "rot": -0.0,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_13",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 49
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 50
+                },
+                {
+                    "door_name": "BP_Arrow4",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow5",
+                    "next_id": 8
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 51
+                }
+            ],
+            "if_layout": 0,
+            "art_path": "",
+            "id": 22,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                16171.530151367188,
+                461.151123046875,
+                4374.184799194336
+            ],
+            "level_center": [
+                500,
+                1000.0,
+                500
+            ],
+            "rot": -180.00001525878906,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_08",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow4",
+                    "next_id": 10
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 52
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 53
+                },
+                {
+                    "door_name": "BP_Arrow4",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 54
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 25,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                2809.5767974853516,
+                -1267.3194885253906,
+                15272.671508789062
+            ],
+            "level_center": [
+                1500,
+                1641.9998168945312,
+                -4500
+            ],
+            "rot": -0.0,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_06",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 55
+                },
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 12
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 56
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 29,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -38852.752685546875,
+                86.72256469726562,
+                -13848.556518554688
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": -0.0,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow",
+                    "next_id": 9
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 30,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -38882.75451660156,
+                86.66038513183594,
+                -5490.012359619141
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": -180.00001525878906,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 9
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 31,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -26648.4375,
+                644.6704387664795,
+                -9691.957092285156
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": 90.00003051757812,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow3",
+                    "next_id": 8
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 32,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -5256.709289550781,
+                -967.6704406738281,
+                -20693.931579589844
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": 90.0000228881836,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 4
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 34,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -21417.674255371094,
+                -35.74333190917969,
+                -8700.238800048828
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": -90.00000762939453,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 3
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 35,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -8474.74594116211,
+                -35.74333190917969,
+                -8667.448425292969
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": 90.00000762939453,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow4",
+                    "next_id": 3
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 36,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -7664.440155029297,
+                -308.2660675048828,
+                6063.659286499023
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": -180.00001525878906,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow",
+                    "next_id": 1
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 37,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                8070.717620849609,
+                834.8804473876953,
+                6226.666259765625
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": -180.00001525878906,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow5",
+                    "next_id": 10
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 41,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -260.9132766723633,
+                -1522.4273681640625,
+                -19367.491149902344
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": -0.0,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 11
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 43,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -22426.708984375,
+                -688.3293628692627,
+                6730.316925048828
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": -90.00000762939453,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow",
+                    "next_id": 15
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 44,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -14882.759094238281,
+                13.825607299804688,
+                12005.267333984375
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": 180.00001525878906,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow4",
+                    "next_id": 15
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 46,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -32332.809448242188,
+                366.27349853515625,
+                -34546.17004394531
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": -0.0,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow",
+                    "next_id": 19
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 47,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -37240.10314941406,
+                183.7932586669922,
+                -30571.652221679688
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": -89.99998474121094,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow3",
+                    "next_id": 19
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 48,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -37818.47229003906,
+                1423.6259460449219,
+                153.38134765625
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": -90.00000762939453,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow",
+                    "next_id": 22
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 49,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -26624.526977539062,
+                1430.6259155273438,
+                174.81098175048828
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": 90.00000762939453,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 22
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 50,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -32270.49560546875,
+                1178.6262512207031,
+                7319.676971435547
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": 180.00001525878906,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow3",
+                    "next_id": 22
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 51,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                21733.909606933594,
+                -461.18316650390625,
+                3921.591567993164
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": 89.99999237060547,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 25
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 52,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                16432.444763183594,
+                -1061.2762451171875,
+                10491.675567626953
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": 180.00001525878906,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow3",
+                    "next_id": 25
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 53,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                14361.891174316406,
+                -962.5923156738281,
+                -1748.6225128173828
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": -0.0,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow4",
+                    "next_id": 25
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 54,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                7964.681243896484,
+                -1833.6769104003906,
+                12591.749572753906
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": 90.00000762939453,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 29
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 55,
+            "loading_group_id": 0
+        },
+        {
+            "P": [
+                -2371.316909790039,
+                -2546.7056274414062,
+                11780.413818359375
+            ],
+            "level_center": [
+                500,
+                818.0000305175781,
+                500
+            ],
+            "rot": -90.00000762939453,
+            "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_DeadEnd_02",
+            "enterLevel": 0,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow3",
+                    "next_id": 29
+                }
+            ],
+            "if_layout": 1,
+            "art_path": "",
+            "id": 56,
+            "loading_group_id": 0
+        }
+    ],
+    "attr": [
+        {
+            "1000000001_id": 29,
+            "1000000001_struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_16"
+        },
+        {
+            "1000000002_id": 11,
+            "1000000002_struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_05"
+        },
+        {
+            "1000000003_id": 10,
+            "1000000003_struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_14"
+        },
+        {
+            "1000000011_id": 2,
+            "1000000011_struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_09"
+        },
+        {
+            "1000000012_id": 4,
+            "1000000012_struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_15"
+        },
+        {
+            "1000000013_id": 8,
+            "1000000013_struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_14"
+        },
+        {
+            "1000000021_id": 2,
+            "1000000021_struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_09"
+        },
+        {
+            "1000000022_id": 4,
+            "1000000022_struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_15"
+        },
+        {
+            "1000000023_id": 8,
+            "1000000023_struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_14"
+        },
+        {
+            "1000000031_id": 19,
+            "1000000031_struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_09"
+        },
+        {
+            "1000000041_id": 8,
+            "1000000041_struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_Road_14"
+        },
+        {
+            "custom_setting_id": "19,8,9"
+        }
+    ]
+}

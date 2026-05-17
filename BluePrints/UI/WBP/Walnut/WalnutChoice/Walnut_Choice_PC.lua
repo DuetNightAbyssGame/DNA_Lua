@@ -1,18 +1,775 @@
-require("UnLua")
-local WalnutBagController = require("BluePrints.UI.WBP.Walnut.WalnutBag.WalnutBagController")
+require "UnLua"
+local WalnutBagController = require "BluePrints.UI.WBP.Walnut.WalnutBag.WalnutBagController"
 local WalnutBagModel = WalnutBagController:GetModel()
-local TeamController = require("BluePrints.UI.WBP.Team.TeamController")
+
+local TeamController = require "BluePrints.UI.WBP.Team.TeamController"
 local TeamModel = TeamController:GetModel()
+---@type Walnut_Reward_PC_C
 local M = Class("BluePrints.UI.BP_UIState_C")
 
-function M:T()
-  local Avatar = GWorld:GetAvatar()
-  if nil == Avatar then
-    return
-  end
-  if not TeamModel:IsYourself(Uid) and Avatar.Walnuts.WalnutId then
-    WalnutBagModel:SetLastSelectWalnutId(self.CurrentDungeonId, Avatar.Walnuts.WalnutId)
-  end
-end
+--function M:Tick(MyGeometry, InDeltaTime)
+--end
+
+-- function M:Construct()
+-- end
+
+-- function M:Construct()
+--     self:CommonConstruct()
+--     self.Panel_Multi:SetVisibility(UE4.ESlateVisibility.Collapsed)
+--     self.Panel_Yes:SetVisibility(ESlateVisibility.Visible)
+--     -- if IsStandAlone(self) then
+--     --     self:StandaloneConstruct()
+--     --     self.IsStandAlone = true
+--     -- else
+--     --     self:MultiConstruct()
+--     --     self.IsStandAlone = false
+--     --     self:StartSelectCountDown()
+--     --     self:InitTeamHeads()
+--     -- end
+--     -- self:BindEvents()
+-- end
+
+-- function M:OnLoaded(...)
+--     self.Super.OnLoaded(self)
+--     if self.IsInDungeon then
+--     local GameState = UE.UGameplayStatics.GetGameState(self)
+--     self.CurrentDungeonId = GameState.DungeonId
+--         if IsStandAlone(self) then
+--             self:StandaloneConstruct()
+--             self.IsStandAlone = true
+--         else
+--             self:MultiConstruct()
+--             self.IsStandAlone = false
+--             self:StartSelectCountDown()
+--             self:InitTeamHeads()
+--         end
+--         self:BindEvents()
+--     else
+--         -- 副本外
+--         self.CurrentDungeonId = ...
+--         self.SelectYes = false
+--         local Team = TeamModel:GetTeam()
+--         self:BindDungeonEvents()
+--         self:AddDispatcher(EventID.TeamSelectWalnut, self, self.RefreshTeamWalnutInfo)
+--         self:AddDispatcher(EventID.WalnutSelectComplete, self, self.WalnutSelectComplete)
+--         self:AddDispatcher(EventID.TeamMatchOneRefused, self, self.TeamMatchOneRefused)
+--         if not Team then
+--             self:StandaloneConstruct()
+--             self.IsStandAlone = true
+--         else
+--             self:MultiConstruct()
+--             self.IsStandAlone = false
+--             self:StartDeputeSelectCountDown()
+--             self:InitDungeonTeamHeads(Team.Members)
+--         end
+--         local t = WalnutBagModel:GetLastSelectWalnutId(self.CurrentDungeonId)
+--         DebugPrint("ZDX_", t)
+--         -- self:BindDungeonEvents()
+--     end
+--     self:InitWalnuts()
+--     self:InitGameInputMode()
+--     self:SetFocus()
+--     self:PlayAnimation(self.In)
+-- end
+
+-- function M:CommonConstruct()
+--     self.Btn_No:SetText(GText("UI_Walnut_Giveup"))
+--     self.Btn_Yes:SetText(GText("UI_CONFIRM_SELECTION"))
+--     self.Text_Choose_Single:SetText(GText("UI_Walnut_Choice"))
+--     self.Text_Choose_Multi:SetText(GText("UI_Walnut_Choice"))
+--     self.Text_Selected:SetText(GText("UI_Walnut_Select"))
+--     self.State_Mine.Text_State:SetText(GText("UI_Walnut_Selecting"))
+--     self.WBP_Walnut_PlayerState_1.Text_State:SetText(GText("UI_Walnut_Selecting"))
+--     self.WBP_Walnut_PlayerState_2.Text_State:SetText(GText("UI_Walnut_Selecting"))
+--     self.WBP_Walnut_PlayerState.Text_State:SetText(GText("UI_Walnut_Selecting"))
+--     self.GameState = UE4.UGameplayStatics.GetGameState(self)
+--     if self.GameState:IsInDungeon() then
+--         self.IsInDungeon = true
+--         self.Panel_No:SetVisibility(UE4.ESlateVisibility.Collapsed)
+--     else
+--         self.IsInDungeon = false
+--         self.Panel_No:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+--     end
+--     self.HasSelect = false
+--     self.WalnutPlate:SetNoWalnut(false)
+--     self.CurrentSelectContent = nil
+--     self.RealChoice = nil
+--     self.List_WalnutItem:ClearListItems()
+--     self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+-- end
+
+-- function M:StandaloneConstruct()
+--     self.Panel_Multi:SetVisibility(UE4.ESlateVisibility.Collapsed)
+--     self.Text_Choose_Single:SetText(GText("UI_Walnut_Choice"))
+--     self.Panel_Text_Single:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+-- end
+
+-- function M:MultiConstruct()
+--     self.Panel_Multi:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+--     self.Panel_Text_Single:SetVisibility(UE4.ESlateVisibility.Collapsed)
+-- end
+
+-- function M:InitWalnuts()
+--     local Avatar = GWorld:GetAvatar()
+--     if Avatar == nil then
+--         return
+--     end
+--     -- 不选核桃的Item
+--     self:CreateAndAddForbidItem()
+--     local CurrentCount = 1
+--     self.WalnutsInBag = Avatar.Walnuts.WalnutBag
+--     for WalnutId, Number in pairs(self.WalnutsInBag) do
+--         if Number > 0 then
+--             local WalnutData = DataMgr["Walnut"][WalnutId]
+--             local WalnutSelectDungeonData = DataMgr["WalnutSelectDungeon"][WalnutData.WalnutType]
+--             local CanSelectDungeonId = WalnutSelectDungeonData.DungeonId
+--             for _, DungeonId in pairs(CanSelectDungeonId) do
+--                 if DungeonId == self.CurrentDungeonId then
+--                     self:CreateAndAddWalnutItem(WalnutId, Number)
+--                     CurrentCount = CurrentCount + 1
+--                     break
+--                 end
+--             end
+--         end
+--     end
+--     --- 用空Item补全ListView, 加定时器是因为隔一帧才能拿到已生成的Entry
+--     self:AddTimer(0.01, function()
+--         local WalnutItemUIs = self.List_WalnutItem:GetDisplayedEntryWidgets()
+--         local RestCount = UIUtils.GetListViewContentMaxCount(self.List_WalnutItem, WalnutItemUIs, true) - WalnutItemUIs:Length()
+--         for i = 1, RestCount do
+--             self:CreateAndAddEmptyItem()
+--         end
+--     end, false, 0, "PaddingWalnutListView")
+-- end
+
+-- function M:StartSelectCountDown()
+--     self:AddTimer(0.1, self.WalnutSelectCountDown, true, 0, "WalnutSelectCountDown")
+-- end
+
+-- function M:WalnutSelectCountDown()
+--     local CurrentCountDown = self:GetRemainWalnutSelectTime("NextWalnut")
+--     if CurrentCountDown < 0 then
+--         CurrentCountDown = 0
+--     end
+--     local CurrentCountDownStr = string.format("%d", math.floor(CurrentCountDown))
+--     self.Text_CountDown:SetText(CurrentCountDownStr)
+--     self.Text_CountDown_1:SetText(CurrentCountDownStr)
+--     if CurrentCountDown < 1 then
+--         self:RemoveTimer("WalnutSelectCountDown")
+--     end
+-- end
+
+-- function M:GetRemainWalnutSelectTime(TimerName)
+--     local GameState = UGameplayStatics.GetGameState(self)
+--     local Info = GameState.ClientTimerStruct:GetTimerInfo(TimerName)
+--     local WalnutRewardVoteTime = Info.Time - (GameState.ReplicatedRealTimeSeconds - Info.RealTimeSeconds)
+--     return WalnutRewardVoteTime
+-- end
+
+-- function M:CreateAndAddForbidItem()
+--     local Content =  NewObject(UIUtils.GetCommonItemContentClass())
+--     Content.Icon = '/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Forbid.T_Armory_Forbid'
+--     Content.Type = "Walnut"
+--     Content.IsSelected = true
+--     Content.Count = GText("UI_Walnut_Not_Select")
+--     self.List_WalnutItem:AddItem(Content)
+--     self.CurrentSelectContent = Content
+--     self.RealChoice = self.CurrentSelectContent
+--     -- self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
+-- end
+
+-- function M:CreateAndAddEmptyItem()
+--     local Content =  NewObject(UIUtils.GetCommonItemContentClass())
+--     Content.IsEmpty = true
+--     self.List_WalnutItem:AddItem(Content)
+-- end
+
+-- function M:CreateAndAddWalnutItem(WalnutId, Number)
+--     DebugPrint("CreateAndAddWalnutItem WalnutId: ", WalnutId, "Number: ", Number)
+--     local Content =  NewObject(UIUtils.GetCommonItemContentClass())
+--     -- 初始化WalnutIcon的Content
+--     local WalnutData = DataMgr["Walnut"][WalnutId]
+--     local WalnutType = WalnutData.WalnutType
+--     local WalnutTypeData = DataMgr["WalnutType"][WalnutType]
+--     Content.Rarity = WalnutData.Rarity or 1
+--     -- DebugPrint("Rarity", WalnutData.Rarity)
+--     Content.Type = "Walnut"
+--     Content.WalnutNumber = WalnutData.WalnutNumber
+--     -- DebugPrint("WalnutId", WalnutId)
+--     Content.Icon = WalnutTypeData.Icon
+--     -- DebugPrint("WalnutId", WalnutTypeData.Icon)
+--     Content.Parent = self
+--     Content.Count = Number
+--     Content.WalnutId = WalnutId
+--     self.List_WalnutItem:AddItem(Content)
+-- end
+
+-- function M:BindEvents()
+--     self.Btn_Yes.Button_Area.OnClicked:Clear()
+--     self.Btn_No.Button_Area.OnClicked:Clear()
+
+--     self.Btn_Yes.Button_Area.OnClicked:Add(self, self.OnClickButtonYes)
+--     self.Btn_No.Button_Area.OnClicked:Add(self, self.OnClickButtonNo)
+--     self.List_WalnutItem.BP_OnItemClicked:Add(self,self.OnListItemClicked)
+-- end
+
+-- -- 用于委托-核桃选择页面的按键绑定
+-- function M:BindDungeonEvents()
+--     self.Btn_Yes.Button_Area.OnClicked:Clear()
+--     self.Btn_No.Button_Area.OnClicked:Clear()
+    
+--     self.Btn_Yes.Button_Area.OnClicked:Add(self, self.OnClickButtonYes)
+--     self.Btn_No.Button_Area.OnClicked:Add(self, self.OnBtnNoOnClicked)
+--     self.List_WalnutItem.BP_OnItemClicked:Add(self,self.OnListItemClicked)
+-- end
+
+
+-- function M:OnListItemClicked(Content)
+--     if Content.IsEmpty then
+--         return
+--     end
+--     if self.RealChoice == Content and self.HasSelect then
+--         self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
+--     else
+--         self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+--     end
+--     if self.CurrentSelectContent == Content then
+--         return
+--     end
+--     if self.CurrentSelectContent then
+--         self.CurrentSelectContent.IsSelected = false
+--         if self.CurrentSelectContent.UI then
+--             self.CurrentSelectContent.UI:SetIsSelected(false, true)
+--         end
+--     end
+--     Content.UI:SetIsSelected(true, true)
+--     self.CurrentSelectContent = Content
+--     --处理左边界面的情况
+--     if not Content.WalnutId then
+--         self.WalnutPlate:SetNoWalnut(true)
+--     else
+--         self.WalnutPlate:SetWalnutContent(Content.WalnutId, true)
+--     end
+-- end
+
+-- function M:OnClickButtonYes()
+--     local WalnutId = self.CurrentSelectContent.WalnutId
+--     -- 不选核桃
+--     if WalnutId == nil then
+--         WalnutId = -1
+--     end
+--     -- self.SendServerSelectContent = self.CurrentSelectContent
+--     local Avatar = GWorld:GetAvatar()
+--     local GameState = UE.UGameplayStatics.GetGameState(self)
+--     local DungeonId = GameState.DungeonId
+--     Avatar:SelectWalnut(self:ShowChooseSuccessToast(self.CurrentSelectContent), self.CurrentDungeonId, WalnutId)
+--     self.SelectYes = true
+--     if not self.IsStandAlone then
+--         EventManager:FireEvent(EventID.SelectedWalnut)
+--     else
+--         self:CloseSelf()
+--     end
+-- end
+
+-- function M:ShowChooseSuccessToast(SelectContent)
+--     DebugPrint("ShowChooseSuccessToast")
+--     if self.HasSelect then
+--         -- if not self.IsStandAlone then
+--         --     UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("更改成功"))
+--         -- end
+--     else
+--         -- if not self.IsStandAlone then
+--         --     UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("选择成功"))
+--         -- end
+--         self.HasSelect = true
+--     end
+--     if self.RealChoice then
+--         self.RealChoice.UI:SetWalnutRealChoice(false)
+--     end
+--     self.RealChoice = SelectContent
+--     self.RealChoice.UI:SetWalnutRealChoice(true)
+--     self.Btn_Yes:SetText(GText("更改选择"))
+--     if self.RealChoice == self.CurrentSelectContent then
+--         self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
+--     end
+-- end
+
+-- function M:OnClickButtonNo()
+-- end
+
+-- -- 选择核桃准备完成
+-- function M:PlayWalnutReady()
+--     -- 区分为副本内和委托页面两种情况
+--     if self.IsInDungeon then
+--         self:PlayAnimation(self.LayoutRefresh_InDungeon)
+--         self:StartWalnutReadyCountDown()
+--     else
+--         self:PlayAnimation(self.LayoutRefresh)
+--         self:StartDeputeWalnutReadyCountDown()
+--         self.Btn_No.Button_Area.OnClicked:Clear()
+--         self.Btn_No.Button_Area.OnClicked:Add(self, self.OnBtnGiveUpClicked)
+--     end
+-- end
+
+-- function M:StartWalnutReadyCountDown()
+--     self.Text_Choose_Multi:SetText(GText("UI_Walnut_Begin"))
+--     self:AddTimer(0.1, self.WalnutReadyCountDown, true, 0, "WalnutReadyCountDown")
+-- end
+
+
+-- function M:WalnutReadyCountDown()
+--     local CurrentCountDown = self:GetRemainWalnutSelectTime("WalnutReady")
+--     local CountDownNumber = math.floor(CurrentCountDown)
+--     if self.WalnutSelectCountDownNumber ~= CountDownNumber then
+--         self.WalnutSelectCountDownNumber = CountDownNumber
+--         self:PlayAnimation(self.RefreshCountDown)
+--     end
+--     local CurrentCountDownStr = string.format("%d", CountDownNumber)
+--     self.Text_CountDown:SetText(CurrentCountDownStr)
+--     self.Text_CountDown_1:SetText(CurrentCountDownStr)
+--     if CurrentCountDown < 1 then
+--         self:RemoveTimer("WalnutReadyCountDown")
+--     end
+-- end
+
+-- function M:InitTeamHeads()
+--     self.TeamHeadUI = {self.State_Mine, self.WBP_Walnut_PlayerState_1, self.WBP_Walnut_PlayerState_2, self.WBP_Walnut_PlayerState}
+--     self.TeamHeadTable = {}
+--     local GameState = UE4.UGameplayStatics.GetGameState(self)
+--     local MainPlayer = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+--     local PlayerCount = GameState.PlayerArray:Num()
+--     for i, PlayerState in pairs(GameState.PlayerArray) do
+--         local Eid = PlayerState.Eid
+--         local TeamHead = self.TeamHeadUI[i].Team_Head
+--         TeamHead.Eid = Eid
+--         TeamHead:Init("Walnut", PlayerState, i, true, PlayerState.Eid == MainPlayer.Eid, self)
+--         DebugPrint("PlayerState.AvatarEidStr", PlayerState.AvatarEidStr)
+--         self.TeamHeadTable[PlayerState.AvatarEidStr] = self.TeamHeadUI[i]
+--         self.TeamHeadUI[i]:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+--         local WalnutIcon = '/Game/UI/Texture/Static/Atlas/Common/T_Com_IconTips.T_Com_IconTips'
+--         local WalnutImg = LoadObject(WalnutIcon)
+--         self.TeamHeadUI[i].Item_Walnut.Img_Item:GetDynamicMaterial():SetTextureParameterValue("IconMap", WalnutImg)
+--         -- self.TeamHeadUI[i].Item_Walnut.Button_Area.OnClicked:Add(self, function() self:OnItemWalnutClicked(self.TeamHeadUI[i].Item_Walnut) end)
+--     end
+--     for i = PlayerCount + 1, 4 do
+--         local TeamHead = self.TeamHeadUI[i]
+--         TeamHead:SetVisibility(UE4.ESlateVisibility.Collapsed)
+--     end
+-- end
+
+-- function M:ReceiveTeammateChoose(WalnutRewardPlayer)
+--     if not self.TeamHeadTable then
+--         DebugPrint("ReceiveTeammateChoose TeamHeadTable nil")
+--         return
+--     end
+--     PrintTable(self.TeamHeadTable)
+--     if WalnutRewardPlayer == nil then
+--         return
+--     end
+--     for AvatarEidStr, WalnutId in pairs(WalnutRewardPlayer) do
+--         local AllTeamHead = self.TeamHeadTable[AvatarEidStr]
+--         local TeamHead = AllTeamHead.Team_Head
+--         local ItemWalnut = AllTeamHead.Item_Walnut
+--         ItemWalnut.WalnutId = WalnutId
+--         if WalnutId == 0 then
+--             -- 未选择
+--             TeamHead:SetIsChosenState(false)
+--         elseif WalnutId == -1 then
+--             -- 未装备
+--             TeamHead:SetIsChosenState(true)
+--             local WalnutIcon = '/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Forbid.T_Armory_Forbid'
+--             local WalnutImg = LoadObject(WalnutIcon)
+--             AllTeamHead.Item_Walnut.Img_Item:GetDynamicMaterial():SetTextureParameterValue("IconMap", WalnutImg)
+--             -- local WalnutImg = LoadObject(WalnutIcon)
+--             -- AllTeamHead.Item_Walnut.Img_Item:SetBrushResourceObject(WalnutImg)
+--             AllTeamHead.Text_State:SetText(GText("UI_Walnut_Not_Select"))
+--         else
+--             TeamHead:SetIsChosenState(true)
+--             local WalnutData = DataMgr["Walnut"][WalnutId]
+--             local WalnutType = WalnutData.WalnutType
+--             local WalnutTypeData = DataMgr["WalnutType"][WalnutType]
+--             local WalnutIcon = WalnutTypeData.Icon
+--             AllTeamHead.Item_Walnut.Img_Item:GetDynamicMaterial():SetTextureParameterValue("IconMap", LoadObject(WalnutIcon))
+--             local WalnutNumber = WalnutData.WalnutNumber
+--             local NumberString = tostring(WalnutNumber)
+--             local NumberStringLen = string.len(NumberString)
+--             for i = 1, 3 - NumberStringLen do
+--                 NumberString = '0'..NumberString
+--             end
+--             AllTeamHead.Text_State:SetText(NumberString)
+--         end
+--     end
+-- end
+
+-- function M:ChangeSelectedHead(TeamHead)
+--     if TeamHead == self.SelectedHead then
+--         return
+--     end
+--     if self.SelectedHead then
+--         self.SelectedHead:OnReleaseSelected(true)
+--     end
+--     self.SelectedHead = TeamHead
+-- end
+
+---------------------------------- 委托页面相关方法-------------------------------------
+
+-- local EWalnutChoiceGamepadState = {
+--     -- 选中核桃列表时
+--     WalnutList = 0,
+--     -- 查看队伍栏状态时
+--     TeamList = 1,
+--     -- 打开玩家信息气泡时
+--     PlayerBubble = 2,
+--     -- 查看核桃奖励时
+--     WalnutReward = 3,
+--     -- 查看核桃奖励概率时
+--     WalnutRewardPercent = 4,
+--     -- 打开核桃详情弹窗时
+--     WalnutRewardDetail = 5,
+--     -- 获取途径选择
+--     Access = 6,
+-- }
+
+-- -- 计算当前倒计时（委托页面）
+-- function M:GetDeputeWalnutCountDown(StartTime, CountDownTime)
+--     local GameState = UGameplayStatics.GetGameState(self)
+--     return CountDownTime - (GameState.ReplicatedRealTimeSeconds - StartTime)
+-- end
+
+-- -- 委托页面开始选择核桃倒计时
+-- function M:StartDeputeSelectCountDown()
+--     self.Text_CountDown:SetText(DataMgr.GlobalConstant.WalnutSelectTime.ConstantValue)
+--     self.Text_CountDown_1:SetText(DataMgr.GlobalConstant.WalnutSelectTime.ConstantValue)
+--     local GameState = UGameplayStatics.GetGameState(self)
+--     self.ReadyTime = GameState.ReplicatedRealTimeSeconds
+--     self.WalnutCountDownNumber = 0
+--     self:AddTimer(0.5, self.DeputeWalnutSelectCountDown, true, 0, "WalnutSelectCountDown")
+-- end
+
+-- -- 委托页面核桃选择完成后开启倒计时
+-- function M:StartDeputeWalnutReadyCountDown()
+--     self.Text_Choose_Multi:SetText(GText("UI_Walnut_Begin"))
+--     self.Text_CountDown:SetText(DataMgr.GlobalConstant.WalnutDungeonReadyTime.ConstantValue)
+--     self.Text_CountDown_1:SetText(DataMgr.GlobalConstant.WalnutDungeonReadyTime.ConstantValue)
+--     local GameState = UGameplayStatics.GetGameState(self)
+--     self.ReadyTime = GameState.ReplicatedRealTimeSeconds
+--     self.WalnutCountDownNumber = 0
+--     self:AddTimer(0.5, self.DeputeWalnutReadyCountDown, true, 0, "WalnutReadyCountDown")
+-- end
+
+-- -- 显示核桃选择倒计时（委托页面）
+-- function M:DeputeWalnutSelectCountDown()
+--     self:DisplayCountDown(self.ReadyTime, DataMgr.GlobalConstant.WalnutSelectTime.ConstantValue, "WalnutSelectCountDown")
+-- end
+
+-- -- 显示核桃选择完成等待倒计时（委托页面）
+-- function M:DeputeWalnutReadyCountDown()
+--     self:DisplayCountDown(self.ReadyTime, DataMgr.GlobalConstant.WalnutDungeonReadyTime.ConstantValue, "WalnutReadyCountDown")
+-- end
+
+-- -- 显示倒计时（通用函数）
+-- function M:DisplayCountDown(ReadyTime, CountDownTime, TimerName)
+--     local CurrentCountDown = self:GetDeputeWalnutCountDown(ReadyTime, CountDownTime)
+--     CurrentCountDown = math.floor(CurrentCountDown)
+--     if TimerName == "WalnutReadyCountDown" and self.WalnutCountDownNumber ~= CurrentCountDown then
+--         self.WalnutCountDownNumber = CurrentCountDown
+--         self:PlayAnimation(self.RefreshCountDown)
+--     end
+--     if CurrentCountDown < 0 then
+--         CurrentCountDown = 0
+--     end
+--     local CurrentCountDownStr = string.format("%d", CurrentCountDown)
+
+--     self.Text_CountDown:SetText(CurrentCountDownStr)
+--     self.Text_CountDown_1:SetText(CurrentCountDownStr)
+
+--     -- 计时结束时移除定时器
+--     if CurrentCountDown < 1 then
+--         self:RemoveTimer(TimerName)
+--     end
+-- end
+
+-- 初始化队伍核桃选择头像（委托页面）
+-- function M:InitDungeonTeamHeads(PlayerArray)
+--     self.TeamHeadUI = {self.State_Mine, self.WBP_Walnut_PlayerState_1, self.WBP_Walnut_PlayerState_2, self.WBP_Walnut_PlayerState}
+--     self.TeamHeadTable = {}
+--     self.Uid2WalnutMap = {}
+--     self.TeamCount = #PlayerArray
+--     self.CurrentSelectCount = 0
+--     local Avatar = GWorld:GetAvatar()
+--     if not Avatar then
+--         return
+--     end
+--     for i, PlayerData in pairs(PlayerArray) do
+--         local Uid = PlayerData.Uid
+--         local TeamHead = self.TeamHeadUI[i].Team_Head
+--         TeamHead.Eid = Uid
+--         TeamHead:Init("Walnut", PlayerData, i, true, Avatar.Uid == PlayerData.Uid, self, true, TeamModel:IsTeamLeader(PlayerData.Uid))
+--         DebugPrint("PlayerState.AvatarEidStr", PlayerData.AvatarEidStr)
+--         self.TeamHeadTable[PlayerData.Uid] = self.TeamHeadUI[i]
+--         self.TeamHeadUI[i]:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+--         local WalnutIcon = '/Game/UI/Texture/Static/Atlas/Common/T_Com_IconTips.T_Com_IconTips'
+--         local WalnutImg = LoadObject(WalnutIcon)
+--         self.TeamHeadUI[i].Item_Walnut.Img_Item:GetDynamicMaterial():SetTextureParameterValue("IconMap", WalnutImg)
+--         self.Uid2WalnutMap[Uid] = -1
+--         -- self.TeamHeadUI[i].Item_Walnut.Button_Area.OnClicked:Add(self, function() self:OnItemWalnutClicked(self.TeamHeadUI[i].Item_Walnut) end)
+--     end
+--     for i = self.TeamCount + 1, 4 do
+--         local TeamHead = self.TeamHeadUI[i]
+--         TeamHead:SetVisibility(UE4.ESlateVisibility.Collapsed)
+--     end
+-- end
+
+-- function M:SetDefaultSelect(TeamHead, AllTeamHead)
+--     -- 未装备
+--     TeamHead:SetIsChosenState(true)
+--     local WalnutIcon = '/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Forbid.T_Armory_Forbid'
+--     local WalnutImg = LoadObject(WalnutIcon)
+--     AllTeamHead.Item_Walnut.Img_Item:GetDynamicMaterial():SetTextureParameterValue("IconMap", WalnutImg)
+--     AllTeamHead.Text_State:SetText(GText("UI_Walnut_Not_Select"))
+-- end
+
+-- -- 刷新队友核桃选择信息
+-- ---@param Uid number @玩家Uid
+-- ---@param WalnutId number @核桃id
+-- function M:RefreshTeamWalnutInfo(Uid, WalnutId)
+--     local AllTeamHead = self.TeamHeadTable[Uid]
+--     local TeamHead = AllTeamHead.Team_Head
+--     local ItemWalnut = AllTeamHead.Item_Walnut
+--     ItemWalnut.WalnutId = WalnutId
+--     if WalnutId == -1 then
+--         -- 未装备
+--         self:SetDefaultSelect(TeamHead, AllTeamHead)
+--         -- TeamHead:SetIsChosenState(true)
+--         -- local WalnutIcon = '/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Forbid.T_Armory_Forbid'
+--         -- local WalnutImg = LoadObject(WalnutIcon)
+--         -- AllTeamHead.Item_Walnut.Img_Item:GetDynamicMaterial():SetTextureParameterValue("IconMap", WalnutImg)
+--         AllTeamHead.Text_State:SetText(GText("UI_Walnut_Not_Select"))
+--     else
+--         TeamHead:SetIsChosenState(true)
+--         local WalnutData = DataMgr["Walnut"][WalnutId]
+--         local WalnutType = WalnutData.WalnutType
+--         local WalnutTypeData = DataMgr["WalnutType"][WalnutType]
+--         local WalnutIcon = WalnutTypeData.Icon
+--         AllTeamHead.Item_Walnut.Img_Item:GetDynamicMaterial():SetTextureParameterValue("IconMap", LoadObject(WalnutIcon))
+--         local WalnutNumber = WalnutData.WalnutNumber
+--         local NumberString = tostring(WalnutNumber)
+--         local NumberStringLen = string.len(NumberString)
+--         for i = 1, 3 - NumberStringLen do
+--             NumberString = '0'..NumberString
+--         end
+--         AllTeamHead.Text_State:SetText(NumberString)
+--     end
+--     self.Uid2WalnutMap[Uid] = WalnutId
+-- end
+
+-- --- 完成选择页面
+-- function M:WalnutSelectComplete()
+--     for Uid, WalnutId in pairs(self.Uid2WalnutMap) do
+--         if WalnutId == -1 then
+--             local AllTeamHead = self.TeamHeadTable[Uid]
+--             local TeamHead = AllTeamHead.Team_Head
+--             self:SetDefaultSelect(TeamHead, AllTeamHead)
+--         end
+--     end
+--     self.Panel_Yes:SetVisibility(ESlateVisibility.Collapsed)
+--     self:RemoveTimer("WalnutSelectCountDown")
+--     self:PlayWalnutReady()
+-- end
+
+-- function M:OnBtnNoOnClicked()
+--     local Avatar = GWorld:GetAvatar()
+--     if Avatar == nil then
+--         return
+--     end
+--     if Avatar:IsInTeam() then
+--         Avatar:VoteStartBattle(false)
+--     end
+--     self:CloseSelf()
+-- end
+
+-- function M:OnBtnGiveUpClicked()
+--     local Avatar = GWorld:GetAvatar()
+--     if Avatar == nil then
+--         return
+--     end
+--     local CommonDialog = UIManager(self):ShowCommonPopupUI(100141, {
+--         RightCallbackObj = self,
+--         RightCallbackFunction = function(Obj, PackageData)
+--             if Avatar:IsInTeam() then
+--                 Avatar:VoteStartBattle(false)
+--             end
+--             self:CloseSelf()
+--         end,
+--         ForbiddenRightCallbackObj = self}, self)
+-- end
+
+
+-- function M:TeamMatchOneRefused(Uid)
+--     if not TeamModel:IsYourself(Uid) then
+--         UIManager(self):ShowUITip("CommonToastMain", string.format(GText("UI_Walnut_Giveup_Toast"), GText(TeamModel:GetTeamMember(Uid).Nickname)), 1.5)
+--     end
+--     self:CloseSelf()
+-- end
+
+-- function M:T()
+--     local Avatar = GWorld:GetAvatar()
+--     if Avatar == nil then
+--         return
+--     end
+--     if not TeamModel:IsYourself(Uid) and Avatar.Walnuts.WalnutId then
+--         WalnutBagModel:SetLastSelectWalnutId(self.CurrentDungeonId, Avatar.Walnuts.WalnutId)
+--     end
+-- end
+
+-- function M:CloseSelf()
+--     if self:IsAnimationPlaying(self.Auto_Out) then
+--         return
+--     end
+--     self:Close()
+-- end
+
+-- function M:OnAnimationFinished(Animation)
+--     if Animation == self.Auto_Out then
+--         if not self.IsInDungeon and self.IsStandAlone and self.SelectYes then
+--             EventManager:FireEvent(EventID.SelectedWalnut)
+--         end
+--     end
+-- end
+
+-- function M:OnItemWalnutClicked(ItemWalnut)
+--     local WalnutId = ItemWalnut.WalnutId
+--     if not WalnutId or WalnutId <= 0 then
+--         return
+--     end
+--     if not UIManager(self):GetUIObj("WalnutRewardDialog") then
+--         UIManager(self):LoadUINew("WalnutRewardDialog", WalnutId)
+--     end
+-- end
+
+------------------------ 手柄端 ------------------------
+
+-- 选中核桃列表时
+-- self:UpdateCommonKeys("Menu", GText("查看概率"), "LS", GText("查看奖励"), "RS", GText("查看队伍信息"))
+-- -- 查看队伍栏状态时
+-- self:UpdateCommonKeys("A", GText("查看玩家信息"), "B", GText("返回"))
+-- -- 打开玩家信息气泡时
+-- self:UpdateCommonKeys("B", GText("关闭信息"))
+-- -- 查看核桃奖励时
+-- self:UpdateCommonKeys("A", GText("查看详情"), "B", GText("返回"))
+-- -- 查看核桃奖励概率时
+-- self:UpdateCommonKeys("B", GText("返回"))
+-- -- 打开核桃详情弹窗时
+-- self:UpdateCommonKeys("Menu", GText("查看概率"), "LS", GText("查看奖励"), "B", GText("关闭"))
+-- -- 获取途径选择
+-- self:UpdateCommonKeys("A", GText("前往"), GText("关闭"))
+
+-- function M:InitGameInputMode()
+--     DebugPrint("InitGameInputMode")
+--     local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
+--     self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
+--     self.IsFocusInit = false
+--     if (IsValid(self.GameInputModeSubsystem)) then
+--         self:InitCommonKey()
+--         self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
+--         self.GameInputModeSubsystem.OnInputMethodChanged:Add(self,self.RefreshOpInfoByInputDevice)
+--     end
+-- end
+
+-- function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
+--     DebugPrint("RefreshOpInfoByInputDevice",CurInputDevice, CurGamepadName)
+--     --- 输入设备切换通知
+--     if (self.CurInputDeviceType == CurInputDevice) then
+--         -- 已经显示的是该输入模式，不需要进行刷新
+--         return
+--     end
+--     local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard
+--     if (IsUseKeyAndMouse) then
+--         self:GamePadToPC()
+--     else
+--         self:PCToGamepad()
+--     end
+--     self.CurInputDeviceType = CurInputDevice
+
+--     self.Super.RefreshOpInfoByInputDevice(self, CurInputDevice, CurGamepadName)
+-- end
+
+-- function M:InitCommonKey()
+--     self.Panel_Key_GamePad:ClearChildren()
+--     for i = 1, 3 do
+--         local MenuKeyWidget = Utils.UIManager(self):CreateWidget('/Game/UI/WBP/Common/Key/WBP_Com_KeyTextDesc.WBP_Com_KeyTextDesc', false)
+--         self.Panel_Key_GamePad:AddChild(MenuKeyWidget)
+--     end
+-- end
+
+-- function M:UpdateCommonKeys(...)
+--     local Param = {...}
+--     for i = 0, 2 do
+--         local CurerentKey = self.Panel_Key_GamePad:GetChildAt(i)
+--         if Param[i * 2 + 1] ~= nil and Param[i * 2 + 2] ~= nil then
+--             CurerentKey:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+--             CurerentKey:CreateCommonKey({
+--                 KeyInfoList = {
+--                     {
+--                         Type = "Img",
+--                         ImgShortPath = Param[i * 2 + 1],
+--                     }
+--                 },
+--                 Desc = Param[i * 2 + 2]
+--             })
+--         else
+--             CurerentKey:SetVisibility(UE4.ESlateVisibility.Collapsed)
+--         end
+--     end
+-- end
+
+-- function M:GamePadToPC()
+--     self.Panel_Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
+-- end
+
+-- function M:PCToGamepad()
+--     DebugPrint("PCToGamepad")
+--     self.Panel_Key_GamePad:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+--     if self.IsStandAlone then
+--         self:UpdateCommonKeys("Menu", GText("查看概率"), "LS", GText("查看奖励"))
+--     else
+--         self:UpdateCommonKeys("Menu", GText("查看概率"), "LS", GText("查看奖励"), "RS", GText("查看队伍信息"))
+--     end
+--     -- if not self.IsFocusInit then
+--         -- self.GameInputModeSubsystem:SetTargetUIFocusWidget(self.CurrentSelectContent.UI)
+--         self.GameInputModeSubsystem:SetTargetUIFocusWidget(self.CurrentSelectContent.UI)
+--         self.GameInputModeSubsystem:UpdateCurrentFocusWidgetPos()
+--         self.GamepadState = EWalnutChoiceGamepadState.WalnutList
+--         self.IsFocusInit = true
+--     -- end
+-- end
+
+-- function M:OnKeyDown(MyGeometry, InKeyEvent)
+--     local IsEventHandled = false
+--     local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+--     local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+--     if (UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey)) then
+--         DebugPrint("Key_IsGamepadKey", InKeyName)
+--         IsEventHandled = self:Handle_OnGamePadDown(InKeyName)
+--     end
+--     if (IsEventHandled) then
+--         return UE4.UWidgetBlueprintLibrary.Handled()
+--     else
+--         return UE4.UWidgetBlueprintLibrary.UnHandled()
+--     end
+-- end
+
+-- function M:Handle_OnGamePadDown(InKeyName)
+--     -- if (InKeyName == "Gamepad_LeftTrigger") then
+--     --     self:SwitchToLeft()
+--     --     return true
+--     -- elseif (InKeyName == "Gamepad_RightTrigger") then
+--     --     self:SwitchToRight()
+--     --     return true
+--     -- end
+--     return false
+-- end
+
+------------------------ 手柄端 END ------------------------
 
 return M

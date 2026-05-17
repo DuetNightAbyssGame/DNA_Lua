@@ -1,8 +1,13 @@
-local StoryStartNode = Class("StoryCreator.StoryLogic.StorylineNodes.Node")
+
+
+
+
+-------------------------Start Event Node-----------------------------
+local StoryStartNode = Class('StoryCreator.StoryLogic.StorylineNodes.Node')
 StoryStartNode.IsStartNode = true
 
 function StoryStartNode:Start(Context)
-  self:Finish("StoryStart")
+	self:Finish('StoryStart')
 end
 
 return StoryStartNode

@@ -1,8 +1,7 @@
-local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
-  return x
-end
+local LocalTimeProxy = (DataMgr or {})["LocalTimeProxy"] or function(x) return x end
+local ReadOnly = (DataMgr or {})["ReadOnly"] or function(n, x) return x end
 return ReadOnly("DailyTalkNpc", {
-  [888888] = {
-    [1] = 88888801
-  }
+	[888888] = {
+		[1] = 88888801,
+	},
 })

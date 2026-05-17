@@ -1,124 +1,132 @@
 local Class = _G.TypeClass
-local BaseTypes = require("BluePrints.Client.CustomTypes.BaseTypes")
-local CustomTypes = require("BluePrints.Client.CustomTypes.CustomTypes")
-local prop = require("NetworkEngine.Common.Prop")
-local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperties
+local BaseTypes = require "BluePrints.Client.CustomTypes.BaseTypes"
+local CustomTypes = require "BluePrints.Client.CustomTypes.CustomTypes"
+local prop = require "NetworkEngine.Common.Prop"
+local FormatProperties = require "NetworkEngine.Common.Assemble".FormatProperties
+
 local Paotai = Class("Paotai", CustomTypes.CustomAttr)
-Paotai.__Props__ = {
-  PaotaiId = prop.prop("Int", "client save"),
-  MaxScore = prop.prop("Int", "client save"),
-  RewardsGot = prop.prop("Int2IntDict", "client save"),
-  DungeonId = prop.getter("Data", "DungeonId"),
-  StartTime = prop.getter("Data", "StartTime")
-}
+    Paotai.__Props__ = {
+        -- Id(表PaotaiMiniGame的DungeonId)
+        PaotaiId = prop.prop("Int", "client save"),
+        -- 本关最高积分
+        MaxScore = prop.prop("Int", "client save"),
+        -- 领奖信息{[Idx] = 1,表示已领取}
+        RewardsGot = prop.prop("Int2IntDict", "client save"),
 
-function Paotai:Data()
-  return DataMgr.PaotaiMiniGame[self.PaotaiId]
-end
+        DungeonId = prop.getter("Data", "DungeonId"),
+        StartTime = prop.getter("Data", "StartTime"),
+    }
 
-function Paotai:Init(Id)
-  self.PaotaiId = Id
-  self.MaxScore = 0
-end
+    function Paotai:Data()
+        return DataMgr.PaotaiMiniGame[self.PaotaiId]
+    end
 
-function Paotai:SetMaxScore(Score)
-  self.MaxScore = Score
-end
+    function Paotai:Init(Id)
+        self.PaotaiId = Id
+        self.MaxScore = 0
+    end
 
-function Paotai:GetMaxScore()
-  return self.MaxScore
-end
+    function Paotai:SetMaxScore(Score)
+        self.MaxScore = Score
+    end
 
-function Paotai:GetRewardsGotInfo()
-  return self.RewardsGot
-end
+    function Paotai:GetMaxScore()
+        return self.MaxScore
+    end
 
-function Paotai:SetRewardsGot(RewardsGot)
-  self.RewardsGot = RewardsGot
-end
+    function Paotai:GetRewardsGotInfo()
+        return self.RewardsGot
+    end
 
-function Paotai:SetBuffs(Buffs)
-  self.Buffs = Buffs
-end
+    function Paotai:SetRewardsGot(RewardsGot)
+        self.RewardsGot = RewardsGot
+    end
 
-FormatProperties(Paotai)
+    function Paotai:SetBuffs(Buffs)
+        self.Buffs = Buffs
+    end
+
+    FormatProperties(Paotai)
+
 local PaotaiDict = Class("PaotaiDict", CustomTypes.CustomDict)
-PaotaiDict.KeyType = BaseTypes.Int
-PaotaiDict.ValueType = Paotai
+    PaotaiDict.KeyType = BaseTypes.Int
+    PaotaiDict.ValueType = Paotai
 
-function PaotaiDict:Init(inner)
-  self.Super.Init(self, inner)
-end
+    function PaotaiDict:Init(inner)
+        self.Super.Init(self, inner)
+        --self:UnlockFirstDungeon()
+    end
 
-function PaotaiDict:UnlockFirstDungeon()
-  for _, Data in ipairs(DataMgr.PaotaiMiniGame) do
-    self:GetNewPaotai(Data.Id)
-    break
-  end
-end
+    function PaotaiDict:UnlockFirstDungeon()
+        -- 默认解锁第一个关卡
+        for _, Data in ipairs(DataMgr.PaotaiMiniGame) do
+            self:GetNewPaotai(Data.Id)
+            break
+        end
+    end
 
-function PaotaiDict:NewPaotai(PaotaiId)
-  return Paotai(PaotaiId)
-end
+    function PaotaiDict:NewPaotai(PaotaiId)
+        return Paotai(PaotaiId)
+    end
 
-function PaotaiDict:GetPaotai(PaotaiId)
-  return self[PaotaiId]
-end
+    function PaotaiDict:GetPaotai(PaotaiId)
+        return self[PaotaiId]
+    end
 
-function PaotaiDict:GetNewPaotai(PaotaiId)
-  if not self[PaotaiId] then
-    self[PaotaiId] = self:NewPaotai(PaotaiId)
-  end
-  return self[PaotaiId]
-end
+    function PaotaiDict:GetNewPaotai(PaotaiId)
+        if not self[PaotaiId] then
+            self[PaotaiId] = self:NewPaotai(PaotaiId)
+        end
+        return self[PaotaiId]
+    end
 
-function PaotaiDict:SetPaotai(PaotaiId, Paotai)
-  self[PaotaiId] = Paotai
-end
+    function PaotaiDict:SetPaotai(PaotaiId, Paotai)
+        self[PaotaiId] = Paotai
+    end
 
-function PaotaiDict:PaotaiSetMaxScore(PaotaiId, Score)
-  local Pt = self:GetPaotai(PaotaiId)
-  Pt:SetMaxScore(Score)
-  self[PaotaiId] = Pt
-end
+    function PaotaiDict:PaotaiSetMaxScore(PaotaiId, Score)
+        local Pt = self:GetPaotai(PaotaiId)
+        Pt:SetMaxScore(Score)
+        self[PaotaiId] = Pt
+    end
 
-function PaotaiDict:PaotaiSetRewardsGot(PaotaiId, RewardsGot)
-  local Pt = self:GetPaotai(PaotaiId)
-  Pt:SetRewardsGot(RewardsGot)
-  self[PaotaiId] = Pt
-end
+    function PaotaiDict:PaotaiSetRewardsGot(PaotaiId, RewardsGot)
+        local Pt = self:GetPaotai(PaotaiId)
+        Pt:SetRewardsGot(RewardsGot)
+        self[PaotaiId] = Pt
+    end
 
-function PaotaiDict:PaotaiSetBuffs(PaotaiId, Buffs)
-  local Pt = self:GetPaotai(PaotaiId)
-  Pt:SetBuffs(Buffs)
-  self[PaotaiId] = Pt
-end
+    function PaotaiDict:PaotaiSetBuffs(PaotaiId, Buffs)
+        local Pt = self:GetPaotai(PaotaiId)
+        Pt:SetBuffs(Buffs)
+        self[PaotaiId] = Pt
+    end
 
 local PaotaiEventDict = Class("PaotaiEventDict", CustomTypes.CustomDict)
-PaotaiEventDict.KeyType = BaseTypes.Int
-PaotaiEventDict.ValueType = PaotaiDict
+    PaotaiEventDict.KeyType = BaseTypes.Int
+    PaotaiEventDict.ValueType = PaotaiDict
 
-function PaotaiEventDict:NewPaotaiDict()
-  return PaotaiDict()
-end
+    function PaotaiEventDict:NewPaotaiDict()
+        return PaotaiDict()
+    end
 
-function PaotaiEventDict:GetNewPaotaiEvent(EventId)
-  if not self[EventId] then
-    self[EventId] = self:NewPaotaiDict()
-  end
-  return self[EventId]
-end
+    function PaotaiEventDict:GetNewPaotaiEvent(EventId)
+        if not self[EventId] then
+            self[EventId] = self:NewPaotaiDict()
+        end
+        return self[EventId]
+    end
 
-function PaotaiEventDict:GetPaotaiEvent(EventId)
-  return self[EventId]
-end
+    function PaotaiEventDict:GetPaotaiEvent(EventId)
+        return self[EventId]
+    end
 
-function PaotaiEventDict:SetPaotaiEvent(EventId, PaotaiEvent)
-  self[EventId] = PaotaiEvent
-end
+    function PaotaiEventDict:SetPaotaiEvent(EventId, PaotaiEvent)
+        self[EventId] = PaotaiEvent
+    end
 
 return {
-  Paotai = Paotai,
-  PaotaiDict = PaotaiDict,
-  PaotaiEventDict = PaotaiEventDict
+    Paotai = Paotai,
+    PaotaiDict = PaotaiDict,
+    PaotaiEventDict = PaotaiEventDict,
 }

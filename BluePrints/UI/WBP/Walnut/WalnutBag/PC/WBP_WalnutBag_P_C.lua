@@ -1,637 +1,568 @@
-require("UnLua")
-local WalnutBagController = require("BluePrints.UI.WBP.Walnut.WalnutBag.WalnutBagController")
+--
+-- DESCRIPTION
+-- 核桃包裹主界面 PC
+-- @COMPANY **
+-- @AUTHOR ** hy
+-- @DATE ${date} ${time}
+--
+
+require "UnLua"
+
+local WalnutBagController = require "BluePrints.UI.WBP.Walnut.WalnutBag.WalnutBagController"
 local WalnutBagModel = WalnutBagController:GetModel()
-local WalnutBagCommon = require("BluePrints.UI.WBP.Walnut.WalnutBag.WalnutBagCommon")
-local M = Class({
-  "BluePrints.UI.BP_UIState_C",
-  "BluePrints.UI.WBP.Walnut.WalnutBag.Base.WalnutBagListBase"
-})
+local WalnutBagCommon = require "BluePrints.UI.WBP.Walnut.WalnutBag.WalnutBagCommon"
+
+local M = Class({"BluePrints.UI.BP_UIState_C", "BluePrints.UI.WBP.Walnut.WalnutBag.Base.WalnutBagListBase"})
+
 M._components = {
-  "BluePrints.UI.WBP.Walnut.WalnutBag.Base.WalnutBagBaseView",
-  "BluePrints.UI.UI_PC.Common.HorizontalListViewResizeComp",
-  "BluePrints.UI.UI_PC.Common.LSFocusComp"
+    "BluePrints.UI.WBP.Walnut.WalnutBag.Base.WalnutBagBaseView",
+    "BluePrints.UI.UI_PC.Common.HorizontalListViewResizeComp",
+    "BluePrints.UI.UI_PC.Common.LSFocusComp",
 }
 
 function M:Initialize(Initializer)
-  self.Super.Initialize(self)
-  self.CurTabId = nil
-  self.NpcId = WalnutBagCommon.NpcId
-  self.AllTabInfo = {}
-  self.AllReddotItemsId = {}
-  self.CurFocusWidget = nil
-  self.BottomKeyInfoList = nil
-  self.NeedSelectTabId = nil
-  self.NeedSelectItemId = nil
-  self.NeedSelectGridIndex = -1
-  self.CurSelectGridIndex = 1
-  self.CurSelectWalnutContent = nil
-  self.BagSellState = false
-  self.DesireSaleStuffObjList = {}
-  self.CurSelectStuffContent = nil
-  self.bIsWalnutSelling = false
+    self.Super.Initialize(self)
+    self.CurTabId = nil                 -- 当前的TabId
+    self.NpcId = WalnutBagCommon.NpcId  -- 界面的NpcI
+    self.AllTabInfo = {}                -- 所有的Tab信息
+    self.AllReddotItemsId = {}          -- 所有红点信息
+    self.CurFocusWidget = nil           -- 当前聚焦的Widget名称
+    self.BottomKeyInfoList = nil        -- 右下方快捷键信息
+    self.NeedSelectTabId = nil          -- 用于进入界面是初始选中某个页签
+    self.NeedSelectItemId = nil         -- 用于进入界面是初始选中某个核桃
+    self.NeedSelectGridIndex = -1       -- 用于进入界面是初始选中某个格子索引
+    self.CurSelectGridIndex = 1         -- 当前选中的Grid编号
+    self.CurSelectWalnutContent = nil   -- 当前选中的WalnutContent
+    self.BagSellState = false           -- 是否处于出售状态
+    self.DesireSaleStuffObjList = {}    -- 需要出售的Stuff对象列表
+    self.CurSelectStuffContent = nil    -- 当前选中的StuffContent
+    self.bIsWalnutSelling = false       -- 已出售核桃，等待rpc回调
 end
 
 function M:Construct()
-  self.Super.Construct(self)
-  self:RefreshBaseInfo()
+    self.Super.Construct(self)
+    self:RefreshBaseInfo()
+    self:CheckIsCanSellWalnut()
 end
 
 function M:Close()
-  local SellPageMainUI = UIManager(self):GetUIObj(WalnutBagCommon.WalnutSelectUIName)
-  if nil ~= SellPageMainUI then
-    SellPageMainUI:Close()
-  end
-  WalnutBagModel:ClearReddotCount()
-  self:HorizontalListViewResize_TearDown()
-  self.CheckBox_Own:UnInitCommonCheckBox()
-  self:_StopListFramingInAnim()
-  M.Super.Close(self)
+    local SellPageMainUI = UIManager(self):GetUIObj(WalnutBagCommon.WalnutSelectUIName)
+    if (SellPageMainUI ~= nil) then
+        SellPageMainUI:Close()
+    end
+    WalnutBagModel:ClearReddotCount()
+    self:HorizontalListViewResize_TearDown()
+    self.CheckBox_Own:UnInitCommonCheckBox()
+    self:_StopListFramingInAnim()
+    M.Super.Close(self)
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
-  self.Walnut_Detail:ResetInfo()
-  self:RefreshBottomKeyInfo()
-  return M.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)
+    self.Walnut_Detail:ResetInfo()
+    self:RefreshBottomKeyInfo()
+    return M.Super.OnFocusReceived(self,MyGeometry, InFocusEvent)
 end
 
 function M:ReceiveEnterState(StackAction)
-  M.Super.ReceiveEnterState(self, StackAction)
-  if 1 == StackAction then
-    self:RefreshList(true, WalnutBagCommon.AllOptionName.TabClick)
-    if self.GameInputModeSubsystem then
-      self:OnUpdateUIStyleByInputTypeChange(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
+    M.Super.ReceiveEnterState(self, StackAction)
+    if (StackAction == 1) then
+        -- 跳转回来的时候重新设置一下内容
+        -- self:RefreshList(true, WalnutBagCommon.AllOptionName.TabClick)
+        -- 跳转回来的时候刷新一下样式
+        if (self.GameInputModeSubsystem) then
+            self:OnUpdateUIStyleByInputTypeChange(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
+        end
     end
-  end
-  self.AllReddotItemsId = WalnutBagModel:GetAllNewItemsId()
+    self.AllReddotItemsId = WalnutBagModel:GetAllNewItemsId()
+    self:InitTabInfo()
 end
 
 function M:ReceiveExitState(StackAction)
-  self.Super.ReceiveExitState(self, StackAction)
-  if 0 == StackAction then
-    local SellPageMainUI = UIManager(self):GetUI(WalnutBagCommon.WalnutSelectUIName)
-    if nil ~= SellPageMainUI then
-      SellPageMainUI:PlayOutAnim()
+    self.Super.ReceiveExitState(self, StackAction)
+    if (StackAction == 0) then
+        -- 跳转出去的时候进行一些操作
+        local SellPageMainUI = UIManager(self):GetUI(WalnutBagCommon.WalnutSelectUIName)
+        if (SellPageMainUI ~= nil) then
+            SellPageMainUI:PlayOutAnim()
+        end
     end
-  end
 end
 
 function M:InitTabInfo()
-  self.AllTabInfo = {
-    {
-      Text = GText("UI_TAB_NAME_ALL"),
-      IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_All.T_Tab_All",
-      TabId = 1,
-      IsNew = not IsEmptyTable(self.AllReddotItemsId)
-    }
-  }
-  for key, BagTabData in pairs(DataMgr.WalnutType) do
-    local IsShowNew = false
-    if self.AllReddotItemsId[BagTabData.WalnutType] ~= nil then
-      IsShowNew = true
+    -- self.AllReddotItemsId = WalnutBagModel:GetAllNewItemsId()
+    self.AllTabInfo = {{Text=GText("UI_TAB_NAME_ALL"), IconPath="/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_All.T_Tab_All", TabId=1, 
+                            IsNew=not IsEmptyTable(self.AllReddotItemsId)}}
+    for key, BagTabData in pairs(DataMgr.WalnutType) do
+        local IsShowNew = false
+        if (self.AllReddotItemsId[BagTabData.WalnutType] ~= nil) then
+            IsShowNew = true
+        end
+        table.insert(self.AllTabInfo, {Text=GText(BagTabData.Name), IconPath=BagTabData.TabIcon, TabId=key + 1, IsNew=IsShowNew})
     end
-    table.insert(self.AllTabInfo, {
-      Text = GText(BagTabData.Name),
-      IconPath = BagTabData.TabIcon,
-      TabId = key + 1,
-      IsNew = IsShowNew
-    })
-  end
-  self.BottomKeyInfoList = {
-    {
-      KeyInfoList = {
-        {
-          Type = "Text",
-          Text = "Esc",
-          ClickCallback = self.OnReturnKeyDown,
-          Owner = self
-        }
-      },
-      GamePadInfoList = {
-        {
-          Type = "Img",
-          ImgShortPath = "B",
-          ClickCallback = self.OnReturnKeyDown,
-          Owner = self
-        }
-      },
-      Desc = GText("UI_BACK")
-    }
-  }
-  self.Tab_WalnutBag:Init({
-    LeftKey = "Q",
-    RightKey = "E",
-    Tabs = self.AllTabInfo,
-    DynamicNode = {
-      "Back",
-      "Tip",
-      "BottomKey"
-    },
-    BottomKeyInfo = self.BottomKeyInfoList,
-    StyleName = "TextImage",
-    OwnerPanel = self,
-    TitleName = GText("MAIN_UI_WALNUTBAG"),
-    BackCallback = self.OnReturnKeyDown
-  })
-  self.Tab_WalnutBag:BindEventOnTabSelected(self, self.WalnutTabItemClick)
-  self.Btn_Sell:SetGamePadImg("X")
-  self:AddDelayFrameFunc(function()
-    self.Tab_WalnutBag:SelectTabById(self.NeedSelectTabId or WalnutBagCommon.DefaultSelectTabId)
-  end, 1, "FillWithWalnutItemInfo")
+    self.BottomKeyInfoList = { {KeyInfoList = {{Type="Text", Text="Esc", ClickCallback=self.OnReturnKeyDown, Owner=self}},
+                                GamePadInfoList = {{Type="Img", ImgShortPath="B", ClickCallback=self.OnReturnKeyDown, Owner=self}}, Desc=GText("UI_BACK")} }
+    self.Tab_WalnutBag:Init({LeftKey="Q", RightKey="E", Tabs=self.AllTabInfo, 
+                        DynamicNode={"Back", "Tip", "BottomKey",}, 
+                        BottomKeyInfo = self.BottomKeyInfoList,
+                        StyleName="TextImage", OwnerPanel=self, TitleName=GText("MAIN_UI_WALNUTBAG"), BackCallback=self.OnReturnKeyDown})
+    self.Tab_WalnutBag:BindEventOnTabSelected(self, self.WalnutTabItemClick)
+
+    self.Btn_Sell:SetGamePadImg("X")
+
+    self:AddDelayFrameFunc(
+        function()
+            self.Tab_WalnutBag:SelectTabById(self.NeedSelectTabId or WalnutBagCommon.DefaultSelectTabId) 
+        end, 1, "FillWithWalnutItemInfo")
 end
 
 function M:InitListenEvent()
-  self:AddDispatcher(EventID.OnUpdateWalnutItem, self, self.OnUpdateWalnutItemByAction)
+    self:AddDispatcher(EventID.OnUpdateWalnutItem, self, self.OnUpdateWalnutItemByAction)
 end
 
 function M:OnLoaded(...)
-  M.Super.OnLoaded(self, ...)
-  self.NeedSelectTabId, self.NeedSelectItemId = ...
-  self:PlayInAnim()
-  self:SwitchToNpcCamera(true)
-  self:InitBtnExplanation()
-  self.Com_BtnExplanation.Com_KeyImg:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "Menu"}
-    }
-  })
+    M.Super.OnLoaded(self, ...)
+    self.NeedSelectTabId, self.NeedSelectItemId = ...
+    self:PlayInAnim()
+    -- self:SwitchToNpcCamera(true)
+    self:InitBtnExplanation()
+    self.Com_BtnExplanation.Com_KeyImg:CreateCommonKey({
+        KeyInfoList = {{
+            Type = "Img",
+            ImgShortPath = "Menu"
+        }}
+    })
 end
 
 function M:InitBtnExplanation()
-  local BtnExplanationConfigData = {}
-  BtnExplanationConfigData.ClickCallback = self.OnBtnExplanationClickCallback
-  BtnExplanationConfigData.OwnerWidget = self
-  BtnExplanationConfigData.PopupId = 100224
-  BtnExplanationConfigData.Desc = "UI_Walnut_Gacha_Des"
-  self.Com_BtnExplanation:Init(BtnExplanationConfigData)
+    local BtnExplanationConfigData = {}
+    BtnExplanationConfigData.ClickCallback = self.OnBtnExplanationClickCallback
+    BtnExplanationConfigData.OwnerWidget = self
+    BtnExplanationConfigData.PopupId = 100224
+    BtnExplanationConfigData.Desc = "UI_Walnut_Gacha_Des"
+    self.Com_BtnExplanation:Init(BtnExplanationConfigData)
 end
 
 function M:OnBtnExplanationClickCallback()
-  print("lgc@ OnBtnExplanationClickCallback")
+    print("lgc@ OnBtnExplanationClickCallback")
 end
 
 function M:RefreshBottomKeyInfo(FocusTypeName)
-  FocusTypeName = FocusTypeName or "DefaultWidget"
-  if self.CurFocusWidget == FocusTypeName then
-    return
-  end
-  if "ViewStuff" == FocusTypeName then
-    local BottomKeyInfoList = {
-      {
-        GamePadInfoList = {
-          {
-            Type = "Img",
-            ImgShortPath = "A",
-            Owner = self
-          }
-        },
-        Desc = GText("UI_Controller_CheckDetails")
-      },
-      {
-        KeyInfoList = {
-          {
-            Type = "Text",
-            Text = "Esc",
-            ClickCallback = self.OnReturnKeyDown,
-            Owner = self
-          }
-        },
-        GamePadInfoList = {
-          {
-            Type = "Img",
-            ImgShortPath = "B",
-            ClickCallback = self.OnReturnKeyDown,
-            Owner = self
-          }
-        },
-        Desc = GText("UI_BACK")
-      }
-    }
-    self.Tab_WalnutBag:UpdateBottomKeyInfo(BottomKeyInfoList)
-  elseif "ViewMethod" == FocusTypeName then
-    local BottomKeyInfoList = {
-      {
-        GamePadInfoList = {
-          {
-            Type = "Img",
-            ImgShortPath = "A",
-            Owner = self
-          }
-        },
-        Desc = GText("UI_Controller_Go")
-      },
-      {
-        KeyInfoList = {
-          {
-            Type = "Text",
-            Text = "Esc",
-            ClickCallback = self.OnReturnKeyDown,
-            Owner = self
-          }
-        },
-        GamePadInfoList = {
-          {
-            Type = "Img",
-            ImgShortPath = "B",
-            ClickCallback = self.OnReturnKeyDown,
-            Owner = self
-          }
-        },
-        Desc = GText("UI_BACK")
-      }
-    }
-    self.Tab_WalnutBag:UpdateBottomKeyInfo(BottomKeyInfoList)
-  elseif "NotAnyKey" == FocusTypeName then
-    local BottomKeyInfoList = {}
-    self.Tab_WalnutBag:UpdateBottomKeyInfo(BottomKeyInfoList)
-  elseif "WalnutSell" == FocusTypeName then
-    local BottomKeyInfoList = {
-      {
-        GamePadInfoList = {
-          {
-            Type = "Img",
-            ImgShortPath = "X",
-            Owner = self
-          }
-        },
-        Desc = GText("UI_CTL_Remove")
-      },
-      {
-        GamePadInfoList = {
-          {
-            Type = "Img",
-            ImgShortPath = "A",
-            Owner = self
-          }
-        },
-        Desc = GText("UI_Tips_Ensure")
-      },
-      {
-        KeyInfoList = {
-          {
-            Type = "Text",
-            Text = "Esc",
-            ClickCallback = self.OnReturnKeyDown,
-            Owner = self
-          }
-        },
-        GamePadInfoList = {
-          {
-            Type = "Img",
-            ImgShortPath = "B",
-            ClickCallback = self.OnReturnKeyDown,
-            Owner = self
-          }
-        },
-        Desc = GText("UI_BACK")
-      }
-    }
-    self.Tab_WalnutBag:UpdateBottomKeyInfo(BottomKeyInfoList)
-  elseif "SelectWalnutSell" == FocusTypeName then
-    local BottomKeyInfoList = {
-      {
-        GamePadInfoList = {
-          {
-            Type = "Img",
-            ImgShortPath = "A",
-            Owner = self
-          }
-        },
-        Desc = GText("UI_CTL_Add")
-      },
-      {
-        KeyInfoList = {
-          {
-            Type = "Text",
-            Text = "Esc",
-            ClickCallback = self.OnReturnKeyDown,
-            Owner = self
-          }
-        },
-        GamePadInfoList = {
-          {
-            Type = "Img",
-            ImgShortPath = "B",
-            ClickCallback = self.OnReturnKeyDown,
-            Owner = self
-          }
-        },
-        Desc = GText("UI_BACK")
-      }
-    }
-    self.Tab_WalnutBag:UpdateBottomKeyInfo(BottomKeyInfoList)
-  elseif self.BottomKeyInfoList then
-    self.Tab_WalnutBag:UpdateBottomKeyInfo(self.BottomKeyInfoList)
-  end
-  self.CurFocusWidget = FocusTypeName
+    FocusTypeName = FocusTypeName or "DefaultWidget"
+    -- if self.BagSellState then
+    --     FocusTypeName = "WalnutSell"
+    -- end
+    if (self.CurFocusWidget == FocusTypeName) then
+        return
+    end
+    if (FocusTypeName == "ViewStuff") then
+        local BottomKeyInfoList = { {GamePadInfoList = {{Type="Img", ImgShortPath="A", Owner=self}}, Desc=GText("UI_Controller_CheckDetails")},
+                                    {KeyInfoList = {{Type="Text", Text="Esc", ClickCallback=self.OnReturnKeyDown, Owner=self}},
+                                        GamePadInfoList = {{Type="Img", ImgShortPath="B", ClickCallback=self.OnReturnKeyDown, Owner=self}}, Desc=GText("UI_BACK")} }
+        self.Tab_WalnutBag:UpdateBottomKeyInfo(BottomKeyInfoList)
+    elseif (FocusTypeName == "ViewMethod") then
+        local BottomKeyInfoList = { {GamePadInfoList = {{Type="Img", ImgShortPath="A", Owner=self}}, Desc=GText("UI_Controller_Go")},
+                                    {KeyInfoList = {{Type="Text", Text="Esc", ClickCallback=self.OnReturnKeyDown, Owner=self}},
+                                        GamePadInfoList = {{Type="Img", ImgShortPath="B", ClickCallback=self.OnReturnKeyDown, Owner=self}}, Desc=GText("UI_BACK")} }
+        self.Tab_WalnutBag:UpdateBottomKeyInfo(BottomKeyInfoList)
+    elseif (FocusTypeName == "NotAnyKey") then
+        local BottomKeyInfoList = {}
+        self.Tab_WalnutBag:UpdateBottomKeyInfo(BottomKeyInfoList)
+    elseif (FocusTypeName == "WalnutSell") then
+        local BottomKeyInfoList = { {GamePadInfoList = {{Type="Img", ImgShortPath="X", Owner=self}}, Desc=GText("UI_CTL_Remove")},
+                                    {GamePadInfoList = {{Type="Img", ImgShortPath="A", Owner=self}}, Desc=GText("UI_Tips_Ensure")},
+                                    {KeyInfoList = {{Type="Text", Text="Esc", ClickCallback=self.OnReturnKeyDown, Owner=self}},
+                                    GamePadInfoList = {{Type="Img", ImgShortPath="B", ClickCallback=self.OnReturnKeyDown, Owner=self}}, Desc=GText("UI_BACK")}}
+                                    
+        self.Tab_WalnutBag:UpdateBottomKeyInfo(BottomKeyInfoList)
+    elseif (FocusTypeName == "SelectWalnutSell") then
+        local BottomKeyInfoList = { {GamePadInfoList = {{Type="Img", ImgShortPath="A", Owner=self}}, Desc=GText("UI_CTL_Add")},
+                                    {KeyInfoList = {{Type="Text", Text="Esc", ClickCallback=self.OnReturnKeyDown, Owner=self}},
+                                    GamePadInfoList = {{Type="Img", ImgShortPath="B", ClickCallback=self.OnReturnKeyDown, Owner=self}}, Desc=GText("UI_BACK")}}
+        self.Tab_WalnutBag:UpdateBottomKeyInfo(BottomKeyInfoList)
+    else
+        if (self.BottomKeyInfoList) then
+            self.Tab_WalnutBag:UpdateBottomKeyInfo(self.BottomKeyInfoList)
+        end
+    end
+    self.CurFocusWidget = FocusTypeName
 end
 
+--- =============================== 一些输入事件和点击回调函数 =============================================
 function M:WalnutTabItemClick(TabWidget)
-  local TabId = TabWidget:GetTabId()
-  self.CurTabId = TabId
-  self.Walnut_Detail:SetVisibility(UE4.ESlateVisibility.Hidden)
-  self.ListCanvas:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  self:RefreshList(true, WalnutBagCommon.AllOptionName.TabClick)
-  self:HorizontalListViewResize_SetUp(self.Panel_ItemList, self.List_Item, 0)
+    -- 核桃Item点击回调
+    local TabId = TabWidget:GetTabId()
+    self.CurTabId = TabId
+
+    self.Walnut_Detail:SetVisibility(UE4.ESlateVisibility.Hidden)
+    self.ListCanvas:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    -- 填充数据
+    self:RefreshList(true, WalnutBagCommon.AllOptionName.TabClick)
+    -- 列表自适应大小
+    self:HorizontalListViewResize_SetUp(self.Panel_ItemList, self.List_Item, 0)
 end
 
 function M:OnUpdateWalnutItemByAction(OpAction, ErrCode, ...)
-  if not ErrorCode:Check(ErrCode, UIConst.Tip_CommonToast) then
-    return
-  end
-  if "WalnutBulkSale" == OpAction then
-    local SaleItemSucc, SaleItemFail = ...
-    local SellCount, IsNeedRefreshAll, bIsIgnore = 0, true, false
-    if not bIsIgnore then
-      if IsNeedRefreshAll then
-        self:ReGenerateBagList()
-      else
-        self.NeedSelectGridIndex = 0
-        self:JumpToSelectItem(false)
-        self:RefreshAllGridIndex()
-      end
+    -- RPC的回调
+    if not ErrCode then return end
+    if (not ErrorCode:Check(ErrCode, UIConst.Tip_CommonToast)) then
+        return
     end
-    local AllRewards, bIsNotShowGetItemPage = {}, true
-    local ItemKeys = "Resources"
-    AllRewards[ItemKeys] = {}
-    bIsNotShowGetItemPage = false
-    for k, v in pairs(SaleItemSucc) do
-      AllRewards[ItemKeys][k] = v
+    if (OpAction == "WalnutBulkSale") then
+        local SaleItemSucc, SaleItemFail = ...
+        local SellCount, IsNeedRefreshAll, bIsIgnore = 0, true, false
+        if (not bIsIgnore) then
+            if (IsNeedRefreshAll) then
+                self:ReGenerateBagList()
+            else
+                self.NeedSelectGridIndex = 0
+                self:JumpToSelectItem(false)
+                self:RefreshAllGridIndex()
+            end
+        end
+
+        local AllRewards, bIsNotShowGetItemPage = {}, true
+        local ItemKeys = "Resources"
+        AllRewards[ItemKeys] = {}
+        bIsNotShowGetItemPage = false
+        for k,v in pairs(SaleItemSucc) do
+            AllRewards[ItemKeys][k] = v
+        end
+        if (not bIsNotShowGetItemPage) then
+            self:ShowGetItemPage(AllRewards)
+        end
     end
-    if not bIsNotShowGetItemPage then
-      self:ShowGetItemPage(AllRewards)
-    end
-  end
-  self.bIsWalnutSelling = false
+    self.bIsWalnutSelling = false
 end
 
 function M:IsCanChangeToGamePadViewMode()
-  if self.CurFocusWidget == "DefaultWidget" then
-    return true
-  else
-    return not self.Walnut_Detail:IsInGamePadViewMode()
-  end
+    -- 判断是否可以切换到手柄端
+    if (self.CurFocusWidget == "DefaultWidget") then
+        return true
+    else
+        return not self.Walnut_Detail:IsInGamePadViewMode()
+    end
 end
 
 function M:UpdateUIStyleInPlatform(IsUseGamePad, CurGamepadName)
-  IsUseGamePad = IsUseGamePad and self:IsCanChangeToGamePadViewMode()
-  self.Walnut_Detail:UpdateUIStyleInPlatform(IsUseGamePad)
-  self.Btn_Goto:UpdateUIStyleInPlatform(IsUseGamePad)
-  self.Tab_WalnutBag:UpdateUIStyleInPlatform(IsUseGamePad)
-  self.Com_BtnExplanation:UpdateUIStyleInPlatform(IsUseGamePad)
-  if IsUseGamePad then
-    self.InputBox:ChangeKeyByInputDevice(ECommonInputType.Gamepad)
-    self:RefreshOpInfoByInputDeviceForLSComp(ECommonInputType.Gamepad, CurGamepadName)
-    self.Btn_Sell.Key_GamePad:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  else
-    self.InputBox:ChangeKeyByInputDevice(ECommonInputType.MouseAndKeyboard)
-    self:RefreshOpInfoByInputDeviceForLSComp(ECommonInputType.MouseAndKeyboard, CurGamepadName)
-    self.Btn_Sell.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  end
-  if self.BagSellState then
-    local SellPageMainUI = UIManager(self):GetUI("WalnutSelectToList")
-    if nil ~= SellPageMainUI then
-      SellPageMainUI:UpdateUIStyleInPlatform(IsUseGamePad)
+    IsUseGamePad = IsUseGamePad and self:IsCanChangeToGamePadViewMode()
+    -- 一些公共组件切换显示模式
+    self.Walnut_Detail:UpdateUIStyleInPlatform(IsUseGamePad)
+    self.Btn_Goto:UpdateUIStyleInPlatform(IsUseGamePad)
+    self.Tab_WalnutBag:UpdateUIStyleInPlatform(IsUseGamePad)
+    self.Com_BtnExplanation:UpdateUIStyleInPlatform(IsUseGamePad)
+    if (IsUseGamePad) then
+        self.InputBox:ChangeKeyByInputDevice(ECommonInputType.Gamepad)
+        self:RefreshOpInfoByInputDeviceForLSComp(ECommonInputType.Gamepad, CurGamepadName)
+        self.Btn_Sell.Key_GamePad:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    else
+        self.InputBox:ChangeKeyByInputDevice(ECommonInputType.MouseAndKeyboard)
+        self:RefreshOpInfoByInputDeviceForLSComp(ECommonInputType.MouseAndKeyboard, CurGamepadName)
+        self.Btn_Sell.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
-  end
+
+    if self.BagSellState then
+        local SellPageMainUI = UIManager(self):GetUI("WalnutSelectToList")
+        if (SellPageMainUI ~= nil) then
+            SellPageMainUI:UpdateUIStyleInPlatform(IsUseGamePad)
+        end
+    end
 end
 
 function M:UpdateFocusInGamepad()
-  if self.BagSellState then
-    local SellPageMainUI = UIManager(self):GetUI("WalnutSelectToList")
-    if nil ~= SellPageMainUI then
-      if SellPageMainUI.bIsOpenList then
-        SellPageMainUI.List_Item:SetFocus()
-      else
-        self.List_Item:SetFocus()
-      end
+    if self.BagSellState then
+        local SellPageMainUI = UIManager(self):GetUI("WalnutSelectToList")
+        if (SellPageMainUI ~= nil) then
+            if SellPageMainUI.bIsOpenList then
+                SellPageMainUI.List_Item:SetFocus()
+            else
+                self.List_Item:SetFocus()
+            end
+        end
     end
-  end
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
-  local IsEventHandled = false
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
-    if self.Walnut_Detail:IsVisible() then
-      IsEventHandled = self.Walnut_Detail:Handle_KeyDownOnGamePad(InKeyName)
+    local IsEventHandled = false
+    local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+    local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+    if (UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey)) then
+        if (self.Walnut_Detail:IsVisible()) then
+            IsEventHandled = self.Walnut_Detail:Handle_KeyDownOnGamePad(InKeyName)
+        end
+        if (not IsEventHandled) then
+            IsEventHandled = self:OnGamePadButtonDown(InKeyName)
+        end
+    else
+        if (self.BagSellState) then
+            -- 出售或者分解状态下，只响应Esc按键
+            IsEventHandled = true
+            if (InKeyName == "Escape") then
+                self:OnReturnKeyDown()
+            end
+        else
+            IsEventHandled = self.Tab_WalnutBag:Handle_KeyEventOnPC(InKeyName)
+        end
     end
-    if not IsEventHandled then
-      IsEventHandled = self:OnGamePadButtonDown(InKeyName)
+    if (IsEventHandled) then
+        return UE4.UWidgetBlueprintLibrary.Handled()
+    else
+        return UE4.UWidgetBlueprintLibrary.UnHandled()
     end
-  elseif self.BagSellState then
-    IsEventHandled = true
-    if "Escape" == InKeyName then
-      self:OnReturnKeyDown()
-    end
-  else
-    IsEventHandled = self.Tab_WalnutBag:Handle_KeyEventOnPC(InKeyName)
-  end
-  if IsEventHandled then
-    return UE4.UWidgetBlueprintLibrary.Handled()
-  else
-    return UE4.UWidgetBlueprintLibrary.UnHandled()
-  end
 end
 
 function M:OnGamePadButtonDown(InKeyName)
-  local IsEventHandled = false
-  if InKeyName == UIConst.GamePadKey.FaceButtonLeft then
-    IsEventHandled = self:Handle_KeyDownOnGamePad(InKeyName)
-  elseif self.BagSellState then
-    local SellPageMainUI = UIManager(self):GetUI("WalnutSelectToList")
-    if nil ~= SellPageMainUI then
-      IsEventHandled = SellPageMainUI:OnGamePadButtonDown(InKeyName)
+    local IsEventHandled = false
+    if InKeyName == UIConst.GamePadKey.FaceButtonLeft then
+        IsEventHandled = self:Handle_KeyDownOnGamePad(InKeyName)
+    elseif self.BagSellState then
+        local SellPageMainUI = UIManager(self):GetUI("WalnutSelectToList")
+        if (SellPageMainUI ~= nil) then
+            IsEventHandled = SellPageMainUI:OnGamePadButtonDown(InKeyName)
+        end
+    else
+        IsEventHandled = self:Handle_KeyDownOnGamePad(InKeyName)
     end
-  else
-    IsEventHandled = self:Handle_KeyDownOnGamePad(InKeyName)
-  end
-  IsEventHandled = IsEventHandled or self.Tab_WalnutBag:Handle_KeyEventOnGamePad(InKeyName)
-  return IsEventHandled
+    if (not IsEventHandled) then
+        IsEventHandled = self.Tab_WalnutBag:Handle_KeyEventOnGamePad(InKeyName)
+    end
+    return IsEventHandled
 end
 
 function M:Handle_KeyDownOnGamePad(InKeyName)
-  if InKeyName == UIConst.GamePadKey.FaceButtonLeft then
-    if self.BagSellState then
-      if self.HoverItem then
-        self:OnHoverItemKeyPressed()
-      end
-    else
-      self:OnSellButtonClicked()
+    -- 处理手柄相关的交互事件
+    if (InKeyName == UIConst.GamePadKey.FaceButtonLeft) then
+        if self.BagSellState then
+            if self.HoverItem then
+                self:OnHoverItemKeyPressed()
+            end
+        elseif self.SellUnlocked then
+            self:OnSellButtonClicked()
+        end
+        return true
+    elseif (InKeyName == UIConst.GamePadKey.RightThumb) then
+        self:RefreshBottomKeyInfo()
+        self.InputBox:SetText("")
+        return true
+    elseif (InKeyName == UIConst.GamePadKey.FaceButtonTop) then
+        self:RefreshBottomKeyInfo()
+        self.Btn_Goto:OnGoToButtonClicked()
+        return true
+    elseif (InKeyName == UIConst.GamePadKey.SpecialRight) then
+        self.Com_BtnExplanation:OnBtnClick()
+        return true
+    elseif (InKeyName == UIConst.GamePadKey.LeftThumb) then
+        self:RefreshBottomKeyInfo()
+        self.InputBox:SetFocus()
+        return true
     end
-    return true
-  elseif InKeyName == UIConst.GamePadKey.RightThumb then
-    self:RefreshBottomKeyInfo()
-    self.InputBox:SetText("")
-    return true
-  elseif InKeyName == UIConst.GamePadKey.FaceButtonTop then
-    self:RefreshBottomKeyInfo()
-    self.Btn_Goto:OnGoToButtonClicked()
-    return true
-  elseif InKeyName == UIConst.GamePadKey.SpecialRight then
-    self.Com_BtnExplanation:OnBtnClick()
-    return true
-  elseif InKeyName == UIConst.GamePadKey.LeftThumb then
-    self:RefreshBottomKeyInfo()
-    self.InputBox:SetFocus()
-    return true
-  end
-  return false
+    return false
 end
 
 function M:OnKeyUp(MyGeometry, InKeyEvent)
-  local IsEventHandled = false
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  IsEventHandled = self:OnGamePadButtonUp(InKeyName)
-  if IsEventHandled then
-    return UE4.UWidgetBlueprintLibrary.Handled()
-  end
-  self:OnKeyDownForLSComp(MyGeometry, InKeyEvent)
-  return M.Super.OnKeyUp(self, MyGeometry, InKeyEvent)
+    local IsEventHandled = false
+    local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+    local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+    IsEventHandled = self:OnGamePadButtonUp(InKeyName)
+    if (IsEventHandled) then
+        return UE4.UWidgetBlueprintLibrary.Handled()
+    end
+
+    self:OnKeyDownForLSComp(MyGeometry, InKeyEvent)
+    return M.Super.OnKeyUp(self, MyGeometry, InKeyEvent)
 end
 
 function M:OnGamePadButtonUp(InKeyName)
-  local IsEventHandled = false
-  if self.BagSellState then
-    local SellPageMainUI = UIManager(self):GetUI("WalnutSelectToList")
-    if nil ~= SellPageMainUI then
-      IsEventHandled = SellPageMainUI:OnGamePadButtonUp(InKeyName)
+    local IsEventHandled = false
+    if self.BagSellState then
+        local SellPageMainUI = UIManager(self):GetUI("WalnutSelectToList")
+        if (SellPageMainUI ~= nil) then
+            IsEventHandled = SellPageMainUI:OnGamePadButtonUp(InKeyName)
+        end
     end
-  end
-  return IsEventHandled
+    return IsEventHandled
 end
 
 function M:OnReturnKeyDown()
-  if self.bIsWalnutSelling then
-    return
-  end
-  local SellPageMainUI = UIManager(self):GetUI("WalnutSelectToList")
-  if nil ~= SellPageMainUI then
-    SellPageMainUI:PlayOutAnim()
-    return
-  end
-  local CommonDialog = UIManager(self):GetUIObj("CommonDialog")
-  if nil ~= CommonDialog then
-    CommonDialog:Close()
-    return
-  end
-  if self:CheckIsCanCloseSelf() then
-    self:PlayOutAnim()
-  end
+    -- 返回上一级
+    if self.bIsWalnutSelling then return end
+    -- 分解核桃
+    local SellPageMainUI = UIManager(self):GetUI("WalnutSelectToList")
+    if (SellPageMainUI ~= nil) then
+        SellPageMainUI:PlayOutAnim()
+        return
+    end
+
+    -- 上面有弹窗
+    local CommonDialog = UIManager(self):GetUIObj("CommonDialog")
+    if (CommonDialog ~= nil) then
+        CommonDialog:Close()
+        return
+    end
+
+    if (self:CheckIsCanCloseSelf()) then
+        self:PlayOutAnim()
+    end
 end
 
+-- 分解核桃
 function M:EnterWalnutSellState()
-  if self.bIsWalnutSelling then
-    return
-  end
-  self.Tab_WalnutBag:EnterViewSingleMode()
-  self:RefreshList(true, "ShowHaveWalnutOnly")
-  self.DesireSaleWalnutObjList = {}
-  self.BagSellState = true
-  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-  local UIManager = GameInstance:GetGameUIManager()
-  if nil ~= UIManager then
-    local SelectWalnutDatas
-    if self.CurSelectContent then
-      if self:CheckIsCanAddToSaleList(self.CurSelectContent, false) then
-        local WalnutUuid = self.CurSelectContent.Id
-        local WalnutServerData = self:GetWalnutServerData(WalnutUuid)
-        local WalnutStateTagInfo = {
-          Name = "IsToChoose",
-          ExtraData = {
-            1,
-            WalnutServerData.StuffCount,
-            WalnutServerData.Price,
-            WalnutServerData.CoinId
-          }
-        }
-        self.CurSelectContent.StateTagInfo = WalnutStateTagInfo
-        if self.CurSelectContent.SelfWidget then
-          self.CurSelectContent.SelfWidget:SetStuffStyleByStateTag(self.CurSelectContent)
+    if self.bIsWalnutSelling then return end
+    self.Tab_WalnutBag:EnterViewSingleMode()
+    -- 隐藏未拥有核桃隐藏
+    self.BagSellState = true
+    self:RefreshList(true, "ShowHaveWalnutOnly")
+    -- self:RefreshBottomKeyInfo("WalnutSell")
+
+    self.DesireSaleWalnutObjList = {}
+    local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+    local UIManager = GameInstance:GetGameUIManager()
+    if (UIManager ~= nil) then
+        local SelectWalnutDatas = nil
+        if (self.CurSelectContent) then
+            -- if self:CheckIsCanAddToSaleList(self.CurSelectContent, false) then
+            --     local WalnutUuid = self.CurSelectContent.Id
+            --     local WalnutServerData = self:GetWalnutServerData(WalnutUuid)
+            --     local WalnutStateTagInfo = {Name="IsToChoose", ExtraData={1, WalnutServerData.StuffCount, WalnutServerData.Price, WalnutServerData.CoinId}}
+            --     self.CurSelectContent.StateTagInfo = WalnutStateTagInfo
+            --     if (self.CurSelectContent.SelfWidget) then
+            --         self.CurSelectContent.SelfWidget:SetStuffStyleByStateTag(self.CurSelectContent)
+            --     end
+            --     self.DesireSaleStuffObjList[WalnutUuid] = self.CurSelectContent 
+            -- else
+            --     if (self.CurSelectContent.SelfWidget) then
+            --         self.CurSelectContent.SelfWidget:SetSelected(false)
+            --     else
+            --         self.CurSelectContent.IsSelect = false
+            --     end
+            --     self.WS_Detail:SetActiveWidgetIndex(1)
+            -- end
+            if (self.CurSelectContent.SelfWidget) then
+                self.CurSelectContent.SelfWidget:SetSelected(false)
+            else
+                self.CurSelectContent.IsSelect = false
+            end
+            self.WS_Detail:SetActiveWidgetIndex(1)
         end
-        self.DesireSaleStuffObjList[WalnutUuid] = self.CurSelectContent
-      elseif self.CurSelectContent.SelfWidget then
-        self.CurSelectContent.SelfWidget:SetSelected(false)
-      else
-        self.CurSelectContent.IsSelect = false
-      end
+
+        if self:IsAnimationPlaying(self.Sell_Close) then
+            self:StopAnimation(self.Sell_Close)
+        end
+        self:PlayAnimation(self.Sell)
+        UIManager:LoadUI(UIConst.WALNUTBAGSALESELECT,WalnutBagCommon.WalnutSelectUIName,WalnutBagCommon.WalnutBagSellPageZOrder,self,
+            self.LeaveWalnutSellState, self.RemoveItemSaleState, self.RealToSaleWalnuts)
     end
-    if self:IsAnimationPlaying(self.Sell_Close) then
-      self:StopAnimation(self.Sell_Close)
-    end
-    self:PlayAnimation(self.Sell)
-    UIManager:LoadUI(UIConst.WALNUTBAGSALESELECT, WalnutBagCommon.WalnutSelectUIName, WalnutBagCommon.WalnutBagSellPageZOrder, self, self.LeaveWalnutSellState, self.RemoveItemSaleState, self.RealToSaleWalnuts)
-  end
-  self:UpdateAllItemsStyle(false)
+    -- 取消当前选中
+    -- self:CancelStuffClickAndHideDetail() 
+    self:UpdateAllItemsStyle(false)
 end
 
 function M:LeaveWalnutSellState()
-  self.Tab_WalnutBag:LeaveViewSingleMode()
-  self:RefreshList(true, WalnutBagCommon.AllOptionName.TabClick)
-  self.BagSellState = false
-  local tempList = self.DesireSaleStuffObjList
-  local Length = self.List_Item:GetNumItems()
-  for i = 0, Length - 1 do
-    local Item = self.List_Item:GetItemAt(i)
-    if Item.SelfWidget then
-      Item.SelfWidget:SetSelectNum()
+    self.Tab_WalnutBag:LeaveViewSingleMode()
+    self.BagSellState = false
+    self:RefreshList(true, WalnutBagCommon.AllOptionName.TabClick)
+    -- self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+    -- self:ResetMultiSelectWidget()
+    -- self:RecoverAllItemsStyle()
+
+    -- -- 取消当前选中
+    -- self:CancelStuffClickAndHideDetail()
+
+
+    local tempList = self.DesireSaleStuffObjList
+
+    local Length = self.List_Item:GetNumItems()
+    for i = 0, Length - 1 do
+        local Item = self.List_Item:GetItemAt(i)
+        if Item.SelfWidget then
+            Item.SelfWidget:SetSelectNum()
+        end
     end
-  end
-  self:SetFocus_Lua()
-  if self:IsAnimationPlaying(self.Sell) then
-    self:StopAnimation(self.Sell)
-  end
-  self:PlayAnimation(self.Sell_Close)
+
+    self:SetFocus_Lua()
+    if self:IsAnimationPlaying(self.Sell) then
+        self:StopAnimation(self.Sell)
+    end
+    self:PlayAnimation(self.Sell_Close)
+
+    -- self:AddTimer(0.1, function()
+    --     if self.List_Item:GetNumItems() > 0 then
+    --         local FirstItem = self.List_Item:GetItemAt(0)
+    --         if FirstItem then
+    --             self:OnListItemSelected(FirstItem)
+    --         end
+    --     end
+    -- end, false, 0, "SelectFirstWalnutItem", true)
 end
 
 function M:RemoveWalnutSaleState()
 end
 
 function M:RealToSaleWalnuts(AllStuffContentList, AllStuffSellInfo)
-  local PlayerAvatar = GWorld:GetAvatar()
-  local WalnutList = {}
-  local WalnutId
-  for k, v in pairs(AllStuffContentList) do
-    WalnutId = math.tointeger(v.Uuid)
-    WalnutList[WalnutId] = AllStuffSellInfo[k]
-  end
-  if not IsEmptyTable(WalnutList) then
-    PlayerAvatar:WalnutBulkSale(WalnutList)
-  end
-  local SellPageMainUI = UIManager(self):GetUI(WalnutBagCommon.WalnutSelectUIName)
-  if nil ~= SellPageMainUI then
-    SellPageMainUI:PlayOutAnim()
-  end
-  self.bIsWalnutSelling = true
+    -- 真正出售核桃
+    -- self:RecoverAllItemsStyle()
+    local PlayerAvatar = GWorld:GetAvatar()
+    local WalnutList = {}
+    local WalnutId
+    for k, v in pairs(AllStuffContentList) do
+        WalnutId = math.tointeger(v.Uuid)
+        WalnutList[WalnutId] = AllStuffSellInfo[k]
+    end
+    if (not IsEmptyTable(WalnutList)) then
+        PlayerAvatar:WalnutBulkSale(WalnutList)
+    end
+    local SellPageMainUI = UIManager(self):GetUI(WalnutBagCommon.WalnutSelectUIName)
+    if (SellPageMainUI ~= nil) then
+        SellPageMainUI:PlayOutAnim()
+    end
+
+    self.bIsWalnutSelling = true
 end
 
 function M:GetWalnutServerData(WalnutId)
-  local PlayerAvatar = GWorld:GetAvatar()
-  local StuffServerData = {}
-  if nil == PlayerAvatar then
-    return
-  end
-  StuffServerData.Id = WalnutId
-  StuffServerData.Count = PlayerAvatar.Walnuts:GetCount(WalnutId) or 0
-  return StuffServerData
+    local PlayerAvatar = GWorld:GetAvatar()
+    local StuffServerData = {}
+    if (PlayerAvatar == nil) then return end
+    StuffServerData.Id = WalnutId
+    StuffServerData.Count = PlayerAvatar.Walnuts:GetCount(WalnutId) or 0
+    return StuffServerData
 end
 
 function M:OnHoverItemKeyPressed()
-  if self.HoverItem then
-    EventManager:FireEvent(EventID.OnRemoveWalnutItemInList, self.HoverItem.Uuid)
-    self:RefreshBottomKeyInfo("SelectWalnutSell")
-  end
+    if self.HoverItem  then
+        EventManager:FireEvent(EventID.OnRemoveWalnutItemInList,  self.HoverItem.Uuid)
+        self:RefreshBottomKeyInfo("SelectWalnutSell")
+    end
 end
 
 function M:ShowGetItemPage(AllRewards)
-  if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
-    self:AddTimer(0.1, function()
-      UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, AllRewards, false, nil, self, true)
-    end)
-  else
-    UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, AllRewards, false, nil, self, true)
-  end
+    local Cb = function()
+        if self.List_Item:GetNumItems() > 0 then
+            local FirstItem = self.List_Item:GetItemAt(0)
+            if FirstItem then
+                self:OnListItemSelected(FirstItem)
+            end
+        end
+    end
+    if (self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad) then
+        self:AddDelayFrameFunc(function() 
+            UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, AllRewards, false, Cb, self, true)
+        end)
+    else
+        UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, AllRewards, false, Cb, self, true)
+    end
+end
+
+function M:CheckIsCanSellWalnut()
+    local UIUnlockRule = DataMgr.UIUnlockRule
+    local UIUnlockRuleId = UIUnlockRule.WalnutSell.UIUnlockRuleId
+    local Avatar = GWorld:GetAvatar()
+    if not Avatar then return false end
+    self.SellUnlocked = Avatar:CheckUIUnlocked(UIUnlockRuleId)
+    if not self.SellUnlocked then
+        self.Btn_Sell:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    else
+        self.Btn_Sell:SetVisibility(UE4.ESlateVisibility.Visable)
+    end
 end
 
 AssembleComponents(M)

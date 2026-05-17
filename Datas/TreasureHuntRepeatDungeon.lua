@@ -1,0 +1,97 @@
+-- Source Excel file path: ..\datas\Extraction\TreasureHuntEvent.xlsx
+local T = {}
+T.RT_1 = {
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+	}
+T.RT_2 = {
+		701101,
+	}
+T.RT_3 = {
+		4010101,
+	}
+local LocalTimeProxy = (DataMgr or {})["LocalTimeProxy"] or function(x) return x end
+local ReadOnly = (DataMgr or {})["ReadOnly"] or function(n, x) return x end
+return ReadOnly("TreasureHuntRepeatDungeon", {
+	[10301401] = {
+		DungeonDes = "RepeatDungeon01_Des",
+		DungeonImage = "Texture2D'/Game/UI/Texture/Dynamic/Image/Encyclopedia/T_Encyclopedia_56.T_Encyclopedia_56'",
+		DungeonName = "RepeatDungeon01_Title",
+		EasyDungeonId = 41802,
+		EasyModeFee = 0,
+		EventDugeonId = 10301401,
+		FeeResource = 6000004,
+		HardDungeonId = 41804,
+		HardModeFee = 1000,
+		IsBanEasyPhantom = false,
+		IsBanHardPhantom = true,
+		LevelBackPack = T.RT_1,
+		TrialCharacter = T.RT_2,
+		TrialWeapon = T.RT_3,
+		UnlockCondition = 10301401,
+		UnlockDate = LocalTimeProxy(1749960000),
+	},
+	[10301402] = {
+		DungeonDes = "RepeatDungeon02_Des",
+		DungeonImage = "Texture2D'/Game/UI/Texture/Dynamic/Image/Encyclopedia/T_Encyclopedia_56.T_Encyclopedia_56'",
+		DungeonName = "RepeatDungeon02_Title",
+		EasyDungeonId = 41806,
+		EasyModeFee = 500,
+		EventDugeonId = 10301402,
+		FeeResource = 6000004,
+		HardDungeonId = 41808,
+		HardModeFee = 2000,
+		IsBanEasyPhantom = false,
+		IsBanHardPhantom = true,
+		LevelBackPack = T.RT_1,
+		TrialCharacter = T.RT_2,
+		TrialWeapon = T.RT_3,
+		UnlockCondition = 10301402,
+		UnlockDate = LocalTimeProxy(1749960000),
+	},
+	[10301403] = {
+		DungeonDes = "RepeatDungeon03_Des",
+		DungeonImage = "Texture2D'/Game/UI/Texture/Dynamic/Image/Encyclopedia/T_Encyclopedia_56.T_Encyclopedia_56'",
+		DungeonName = "RepeatDungeon03_Title",
+		EventDugeonId = 10301403,
+		FeeResource = 6000004,
+		HardDungeonId = 41810,
+		HardModeFee = 4000,
+		IsBanHardPhantom = true,
+		LevelBackPack = T.RT_1,
+		TrialCharacter = T.RT_2,
+		TrialWeapon = T.RT_3,
+		UnlockCondition = 10301403,
+		UnlockDate = LocalTimeProxy(1749960000),
+	},
+	[10301404] = {
+		DungeonDes = "RepeatDungeon04_Des",
+		DungeonImage = "Texture2D'/Game/UI/Texture/Dynamic/Image/Encyclopedia/T_Encyclopedia_56.T_Encyclopedia_56'",
+		DungeonName = "RepeatDungeon04_Title",
+		EasyDungeonId = 41811,
+		EasyMaxConvertResource = 1000000,
+		EasyModeFee = 1,
+		EasyScoreToResource = {
+			[1000] = 101,
+		},
+		EventDugeonId = 10301404,
+		FeeResource = 6000005,
+		HardDungeonId = 41812,
+		HardMaxConvertResource = 5000000,
+		HardModeFee = 3,
+		HardScoreToResource = {
+			[500] = 101,
+		},
+		IsBanEasyPhantom = false,
+		IsBanHardPhantom = true,
+		LevelBackPack = T.RT_1,
+		TrialCharacter = T.RT_2,
+		TrialWeapon = T.RT_3,
+		UnlockCondition = 10301404,
+		UnlockDate = LocalTimeProxy(1749960000),
+	},
+})

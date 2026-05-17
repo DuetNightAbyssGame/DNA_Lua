@@ -1,18 +1,21 @@
 local M = Class("BluePrints.UI.Reddot.ReddotTreeNode")
 
 function M:OnInitNodeCache(NodeCache)
-  NodeCache.Count = 0
-  for key, value in pairs(NodeCache.Detail) do
-    if 1 == value then
-      NodeCache.Count = NodeCache.Count + 1
+    NodeCache.Count = 0
+    for key, value in pairs(NodeCache.Detail) do
+        if(value == 1)then
+            NodeCache.Count = NodeCache.Count + 1
+        end
     end
-  end
 end
 
 function M:OnDecreaseCount(SubValue, CacheDetailChangedParams, OldCount)
-  if 0 ~= self.Count then
-    ReddotManager.TryInvokeEvent(self, self.Count, true)
-  end
+    if(self.Count ~= 0)then
+        ReddotManager.TryInvokeEvent(self, self.Count, true)
+    end
+    --TODO:先这样写着，后面再优化
 end
+
+
 
 return M

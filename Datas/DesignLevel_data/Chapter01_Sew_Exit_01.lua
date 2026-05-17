@@ -1,6 +1,11 @@
-return {
-  StaticCreator = {},
-  ManualItem = {},
-  Explore = {},
-  RandomRule = {}
+return 
+{
+    ["StaticCreator"] = {
+    },
+    ["ManualItem"] = {
+    },
+    ["Explore"] = {
+    },
+    ["RandomRule"] = {
+    }
 }

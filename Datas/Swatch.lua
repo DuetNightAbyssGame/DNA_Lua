@@ -1,328 +1,638 @@
-local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
-  return x
-end
+-- Source Excel file path: ..\datas\Swatch.xlsx
+local LocalTimeProxy = (DataMgr or {})["LocalTimeProxy"] or function(x) return x end
+local ReadOnly = (DataMgr or {})["ReadOnly"] or function(n, x) return x end
 return ReadOnly("Swatch", {
-  [1001] = {
-    ActualB = 1,
-    ActualG = 0.7529,
-    ActualR = 0.5029,
-    ColorID = 1001,
-    ColorNumber = {
-      183,
-      221,
-      232
-    },
-    ResourceID = 30102
-  },
-  [1002] = {
-    ActualB = 0.6584,
-    ActualG = 0.3467,
-    ActualR = 0.1746,
-    ColorID = 1002,
-    ColorNumber = {
-      84,
-      141,
-      212
-    },
-    ResourceID = 30102
-  },
-  [1003] = {
-    ActualB = 0.481,
-    ActualG = 0.1878,
-    ActualR = 0.05,
-    ColorID = 1003,
-    ColorNumber = {
-      54,
-      96,
-      146
-    },
-    ResourceID = 30102
-  },
-  [1004] = {
-    ActualB = 0.3062,
-    ActualG = 0.717,
-    ActualR = 0.5666,
-    ColorID = 1004,
-    ColorNumber = {
-      195,
-      214,
-      155
-    },
-    ResourceID = 30103
-  },
-  [1005] = {
-    ActualB = 0.0648,
-    ActualG = 0.3325,
-    ActualR = 0.2165,
-    ColorID = 1005,
-    ColorNumber = {
-      118,
-      146,
-      60
-    },
-    ResourceID = 30103
-  },
-  [1006] = {
-    ActualB = 0.1329,
-    ActualG = 0.1329,
-    ActualR = 0.0144,
-    ColorID = 1006,
-    ColorNumber = {
-      26,
-      87,
-      69
-    },
-    ResourceID = 30103
-  },
-  [1007] = {
-    ActualB = 0.1845,
-    ActualG = 0.7961,
-    ActualR = 1,
-    ColorID = 1007,
-    ColorNumber = {
-      254,
-      237,
-      145
-    },
-    ResourceID = 30104
-  },
-  [1008] = {
-    ActualB = 0,
-    ActualG = 0.8388,
-    ActualR = 0.7689,
-    ColorID = 1008,
-    ColorNumber = {
-      255,
-      255,
-      16
-    },
-    ResourceID = 30104
-  },
-  [1009] = {
-    ActualB = 0.008,
-    ActualG = 0.1685,
-    ActualR = 0.2831,
-    ColorID = 1009,
-    ColorNumber = {
-      145,
-      125,
-      22
-    },
-    ResourceID = 30104
-  },
-  [1010] = {
-    ActualB = 0,
-    ActualG = 0.7157,
-    ActualR = 1,
-    ColorID = 1010,
-    ColorNumber = {
-      241,
-      201,
-      46
-    },
-    ResourceID = 30105
-  },
-  [1011] = {
-    ActualB = 0.0252,
-    ActualG = 0.198,
-    ActualR = 0.8388,
-    ColorID = 1011,
-    ColorNumber = {
-      236,
-      119,
-      22
-    },
-    ResourceID = 30105
-  },
-  [1012] = {
-    ActualB = 0.0331,
-    ActualG = 0.0648,
-    ActualR = 0.1878,
-    ColorID = 1012,
-    ColorNumber = {
-      151,
-      72,
-      6
-    },
-    ResourceID = 30105
-  },
-  [1013] = {
-    ActualB = 0.0018,
-    ActualG = 0.0612,
-    ActualR = 0.855,
-    ColorID = 1013,
-    ColorNumber = {
-      231,
-      68,
-      6
-    },
-    ResourceID = 30106
-  },
-  [1014] = {
-    ActualB = 0.01,
-    ActualG = 0.0168,
-    ActualR = 0.712,
-    ColorID = 1014,
-    ColorNumber = {
-      229,
-      37,
-      27
-    },
-    ResourceID = 30106
-  },
-  [1015] = {
-    ActualB = 0.037,
-    ActualG = 0.0083,
-    ActualR = 0.311,
-    ColorID = 1015,
-    ColorNumber = {
-      122,
-      16,
-      42
-    },
-    ResourceID = 30106
-  },
-  [1016] = {
-    ActualB = 0.3372,
-    ActualG = 0.3419,
-    ActualR = 0.9823,
-    ColorID = 1016,
-    ColorNumber = {
-      240,
-      157,
-      156
-    },
-    ResourceID = 30107
-  },
-  [1017] = {
-    ActualB = 0.1384,
-    ActualG = 0.1384,
-    ActualR = 0.8714,
-    ColorID = 1017,
-    ColorNumber = {
-      231,
-      100,
-      100
-    },
-    ResourceID = 30107
-  },
-  [1018] = {
-    ActualB = 0.0732,
-    ActualG = 0.0493,
-    ActualR = 0.48,
-    ColorID = 1018,
-    ColorNumber = {
-      173,
-      59,
-      57
-    },
-    ResourceID = 30107
-  },
-  [1019] = {
-    ActualB = 0.6172,
-    ActualG = 0.1845,
-    ActualR = 0.2874,
-    ColorID = 1019,
-    ColorNumber = {
-      128,
-      100,
-      187
-    },
-    ResourceID = 30109
-  },
-  [1020] = {
-    ActualB = 0.5776,
-    ActualG = 0.0561,
-    ActualR = 0.1865,
-    ColorID = 1020,
-    ColorNumber = {
-      71,
-      35,
-      136
-    },
-    ResourceID = 30109
-  },
-  [1021] = {
-    ActualB = 0.25,
-    ActualG = 0,
-    ActualR = 0.1036,
-    ColorID = 1021,
-    ColorNumber = {
-      43,
-      18,
-      78
-    },
-    ResourceID = 30109
-  },
-  [1022] = {
-    ColorID = 1022,
-    ColorNumber = {
-      255,
-      255,
-      255
-    },
-    Fresnel = 0.2581,
-    ResourceID = 30101
-  },
-  [1023] = {
-    ActualB = 0.7084,
-    ActualG = 0.7084,
-    ActualR = 0.7084,
-    ColorID = 1023,
-    ColorNumber = {
-      219,
-      219,
-      219
-    },
-    ResourceID = 30101
-  },
-  [1024] = {
-    ActualB = 0.3515,
-    ActualG = 0.3515,
-    ActualR = 0.3515,
-    ColorID = 1024,
-    ColorNumber = {
-      160,
-      160,
-      160
-    },
-    ResourceID = 30101
-  },
-  [1025] = {
-    ActualB = 0.136,
-    ActualG = 0.136,
-    ActualR = 0.136,
-    ColorID = 1025,
-    ColorNumber = {
-      101,
-      101,
-      101
-    },
-    ResourceID = 30108
-  },
-  [1026] = {
-    ActualB = 0.0319,
-    ActualG = 0.0319,
-    ActualR = 0.0319,
-    ColorID = 1026,
-    ColorNumber = {
-      50,
-      50,
-      50
-    },
-    ResourceID = 30108
-  },
-  [1027] = {
-    ActualB = 0.0203,
-    ActualG = 0.0203,
-    ActualR = 0.0203,
-    ColorID = 1027,
-    ColorNumber = {
-      0,
-      0,
-      0
-    },
-    Fresnel = 0.06,
-    ResourceID = 30108
-  }
+	[1001] = {
+		ActualB = 1,
+		ActualG = 0.7529,
+		ActualR = 0.5029,
+		ColorID = 1001,
+		ColorNumber = {
+			183,
+			221,
+			232,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30102,
+		Sort = 1,
+	},
+	[1002] = {
+		ActualB = 0.6584,
+		ActualG = 0.3467,
+		ActualR = 0.1746,
+		ColorID = 1002,
+		ColorNumber = {
+			84,
+			141,
+			212,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30102,
+		Sort = 2,
+	},
+	[1003] = {
+		ActualB = 0.481,
+		ActualG = 0.1878,
+		ActualR = 0.05,
+		ColorID = 1003,
+		ColorNumber = {
+			54,
+			96,
+			146,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30102,
+		Sort = 3,
+	},
+	[1004] = {
+		ActualB = 0.3062,
+		ActualG = 0.717,
+		ActualR = 0.5666,
+		ColorID = 1004,
+		ColorNumber = {
+			195,
+			214,
+			155,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30103,
+		Sort = 10,
+	},
+	[1005] = {
+		ActualB = 0.0648,
+		ActualG = 0.3325,
+		ActualR = 0.2165,
+		ColorID = 1005,
+		ColorNumber = {
+			118,
+			146,
+			60,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30103,
+		Sort = 11,
+	},
+	[1006] = {
+		ActualB = 0.1329,
+		ActualG = 0.1329,
+		ActualR = 0.0144,
+		ColorID = 1006,
+		ColorNumber = {
+			26,
+			87,
+			69,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30103,
+		Sort = 12,
+	},
+	[1007] = {
+		ActualB = 0.1845,
+		ActualG = 0.7961,
+		ActualR = 1,
+		ColorID = 1007,
+		ColorNumber = {
+			254,
+			237,
+			145,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30104,
+		Sort = 13,
+	},
+	[1008] = {
+		ActualB = 0,
+		ActualG = 0.8388,
+		ActualR = 0.7689,
+		ColorID = 1008,
+		ColorNumber = {
+			255,
+			255,
+			16,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30104,
+		Sort = 14,
+	},
+	[1009] = {
+		ActualB = 0.008,
+		ActualG = 0.1685,
+		ActualR = 0.2831,
+		ColorID = 1009,
+		ColorNumber = {
+			145,
+			125,
+			22,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30104,
+		Sort = 15,
+	},
+	[1010] = {
+		ActualB = 0,
+		ActualG = 0.7157,
+		ActualR = 1,
+		ColorID = 1010,
+		ColorNumber = {
+			241,
+			201,
+			46,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30105,
+		Sort = 16,
+	},
+	[1011] = {
+		ActualB = 0.0252,
+		ActualG = 0.198,
+		ActualR = 0.8388,
+		ColorID = 1011,
+		ColorNumber = {
+			236,
+			119,
+			22,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30105,
+		Sort = 17,
+	},
+	[1012] = {
+		ActualB = 0.0331,
+		ActualG = 0.0648,
+		ActualR = 0.1878,
+		ColorID = 1012,
+		ColorNumber = {
+			151,
+			72,
+			6,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30105,
+		Sort = 18,
+	},
+	[1013] = {
+		ActualB = 0.0018,
+		ActualG = 0.0612,
+		ActualR = 0.855,
+		ColorID = 1013,
+		ColorNumber = {
+			231,
+			68,
+			6,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30106,
+		Sort = 19,
+	},
+	[1014] = {
+		ActualB = 0.01,
+		ActualG = 0.0168,
+		ActualR = 0.712,
+		ColorID = 1014,
+		ColorNumber = {
+			229,
+			37,
+			27,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30106,
+		Sort = 20,
+	},
+	[1015] = {
+		ActualB = 0.037,
+		ActualG = 0.0083,
+		ActualR = 0.311,
+		ColorID = 1015,
+		ColorNumber = {
+			122,
+			16,
+			42,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30106,
+		Sort = 21,
+	},
+	[1016] = {
+		ActualB = 0.3372,
+		ActualG = 0.3419,
+		ActualR = 0.9823,
+		ColorID = 1016,
+		ColorNumber = {
+			240,
+			157,
+			156,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30107,
+		Sort = 34,
+	},
+	[1017] = {
+		ActualB = 0.1384,
+		ActualG = 0.1384,
+		ActualR = 0.8714,
+		ColorID = 1017,
+		ColorNumber = {
+			231,
+			100,
+			100,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30107,
+		Sort = 35,
+	},
+	[1018] = {
+		ActualB = 0.0732,
+		ActualG = 0.0493,
+		ActualR = 0.48,
+		ColorID = 1018,
+		ColorNumber = {
+			173,
+			59,
+			57,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30107,
+		Sort = 36,
+	},
+	[1019] = {
+		ActualB = 0.6172,
+		ActualG = 0.1845,
+		ActualR = 0.2874,
+		ColorID = 1019,
+		ColorNumber = {
+			128,
+			100,
+			187,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30109,
+		Sort = 37,
+	},
+	[1020] = {
+		ActualB = 0.5776,
+		ActualG = 0.0561,
+		ActualR = 0.1865,
+		ColorID = 1020,
+		ColorNumber = {
+			71,
+			35,
+			136,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30109,
+		Sort = 38,
+	},
+	[1021] = {
+		ActualB = 0.25,
+		ActualG = 0,
+		ActualR = 0.1036,
+		ColorID = 1021,
+		ColorNumber = {
+			43,
+			18,
+			78,
+		},
+		HairResourceID = 30118,
+		ResourceID = 30109,
+		Sort = 39,
+	},
+	[1022] = {
+		ColorID = 1022,
+		ColorNumber = {
+			255,
+			255,
+			255,
+		},
+		Fresnel = 0.2581,
+		HairResourceID = 30119,
+		ResourceID = 30101,
+		Sort = 40,
+	},
+	[1023] = {
+		ActualB = 0.7084,
+		ActualG = 0.7084,
+		ActualR = 0.7084,
+		ColorID = 1023,
+		ColorNumber = {
+			219,
+			219,
+			219,
+		},
+		Fresnel = 0.27,
+		HairResourceID = 30119,
+		ResourceID = 30101,
+		Sort = 41,
+	},
+	[1024] = {
+		ActualB = 0.3515,
+		ActualG = 0.3515,
+		ActualR = 0.3515,
+		ColorID = 1024,
+		ColorNumber = {
+			160,
+			160,
+			160,
+		},
+		Fresnel = 0.2581,
+		HairResourceID = 30119,
+		ResourceID = 30101,
+		Sort = 42,
+	},
+	[1025] = {
+		ActualB = 0.136,
+		ActualG = 0.136,
+		ActualR = 0.136,
+		ColorID = 1025,
+		ColorNumber = {
+			101,
+			101,
+			101,
+		},
+		Fresnel = 0.06,
+		HairResourceID = 30119,
+		ResourceID = 30108,
+		Sort = 43,
+	},
+	[1026] = {
+		ActualB = 0.0319,
+		ActualG = 0.0319,
+		ActualR = 0.0319,
+		ColorID = 1026,
+		ColorNumber = {
+			50,
+			50,
+			50,
+		},
+		Fresnel = 0.08,
+		HairResourceID = 30119,
+		ResourceID = 30108,
+		Sort = 44,
+	},
+	[1027] = {
+		ActualB = 0.0203,
+		ActualG = 0.0203,
+		ActualR = 0.0203,
+		ColorID = 1027,
+		ColorNumber = {
+			0,
+			0,
+			0,
+		},
+		Fresnel = 0.06,
+		HairResourceID = 30119,
+		ResourceID = 30108,
+		Sort = 45,
+	},
+	[1028] = {
+		ActualB = 0.2317,
+		ActualG = 0.3719,
+		ActualR = 0.6094,
+		ColorID = 1028,
+		ColorNumber = {
+			248,
+			202,
+			150,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30113,
+		Sort = 28,
+	},
+	[1029] = {
+		ActualB = 0.0742,
+		ActualG = 0.3325,
+		ActualR = 0.7529,
+		ColorID = 1029,
+		ColorNumber = {
+			233,
+			170,
+			98,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30113,
+		Sort = 29,
+	},
+	[1030] = {
+		ActualB = 0.0203,
+		ActualG = 0.0666,
+		ActualR = 0.159,
+		ColorID = 1030,
+		ColorNumber = {
+			204,
+			135,
+			56,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30113,
+		Sort = 30,
+	},
+	[1031] = {
+		ActualB = 0.0103,
+		ActualG = 0.0222,
+		ActualR = 0.0578,
+		ColorID = 1031,
+		ColorNumber = {
+			68,
+			47,
+			30,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30114,
+		Sort = 31,
+	},
+	[1032] = {
+		ActualB = 0.0039,
+		ActualG = 0.0131,
+		ActualR = 0.0365,
+		ColorID = 1032,
+		ColorNumber = {
+			57,
+			35,
+			12,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30114,
+		Sort = 32,
+	},
+	[1033] = {
+		ActualB = 0.0051,
+		ActualG = 0.0077,
+		ActualR = 0.0242,
+		ColorID = 1033,
+		ColorNumber = {
+			51,
+			20,
+			1,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30114,
+		Sort = 33,
+	},
+	[1034] = {
+		ActualB = 0.839,
+		ActualG = 0.7917,
+		ActualR = 1,
+		ColorID = 1034,
+		ColorNumber = {
+			249,
+			205,
+			216,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30117,
+		Sort = 22,
+	},
+	[1035] = {
+		ActualB = 0.5583,
+		ActualG = 0.4969,
+		ActualR = 1,
+		ColorID = 1035,
+		ColorNumber = {
+			242,
+			149,
+			172,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30117,
+		Sort = 23,
+	},
+	[1036] = {
+		ActualB = 0.3185,
+		ActualG = 0.2232,
+		ActualR = 0.9216,
+		ColorID = 1036,
+		ColorNumber = {
+			221,
+			94,
+			127,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30117,
+		Sort = 24,
+	},
+	[1037] = {
+		ActualB = 0.1559,
+		ActualG = 0.0723,
+		ActualR = 0.6939,
+		ColorID = 1037,
+		ColorNumber = {
+			193,
+			72,
+			107,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30117,
+		Sort = 25,
+	},
+	[1038] = {
+		ActualB = 0.0782,
+		ActualG = 0.0382,
+		ActualR = 0.4072,
+		ColorID = 1038,
+		ColorNumber = {
+			152,
+			52,
+			76,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30117,
+		Sort = 26,
+	},
+	[1039] = {
+		ActualB = 0.0411,
+		ActualG = 0.0159,
+		ActualR = 0.2031,
+		ColorID = 1039,
+		ColorNumber = {
+			110,
+			30,
+			35,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30117,
+		Sort = 27,
+	},
+	[1040] = {
+		ActualB = 0.6867,
+		ActualG = 0.956,
+		ActualR = 0.491,
+		ColorID = 1040,
+		ColorNumber = {
+			184,
+			246,
+			221,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30115,
+		Sort = 4,
+	},
+	[1041] = {
+		ActualB = 0.4621,
+		ActualG = 0.7379,
+		ActualR = 0.162,
+		ColorID = 1041,
+		ColorNumber = {
+			99,
+			215,
+			176,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30115,
+		Sort = 5,
+	},
+	[1042] = {
+		ActualB = 0.2051,
+		ActualG = 0.3515,
+		ActualR = 0.0561,
+		ColorID = 1042,
+		ColorNumber = {
+			59,
+			154,
+			122,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30115,
+		Sort = 6,
+	},
+	[1043] = {
+		ActualB = 0.0723,
+		ActualG = 0.1144,
+		ActualR = 0.0103,
+		ColorID = 1043,
+		ColorNumber = {
+			20,
+			91,
+			73,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30116,
+		Sort = 7,
+	},
+	[1044] = {
+		ActualB = 0.0395,
+		ActualG = 0.0595,
+		ActualR = 0.0075,
+		ColorID = 1044,
+		ColorNumber = {
+			16,
+			66,
+			54,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30116,
+		Sort = 8,
+	},
+	[1045] = {
+		ActualB = 0.0249,
+		ActualG = 0.0365,
+		ActualR = 0.0011,
+		ColorID = 1045,
+		ColorNumber = {
+			3,
+			50,
+			42,
+		},
+		HairResourceID = 30119,
+		ResourceID = 30116,
+		Sort = 9,
+	},
 })

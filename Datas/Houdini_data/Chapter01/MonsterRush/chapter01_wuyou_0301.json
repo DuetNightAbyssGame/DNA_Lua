@@ -1,0 +1,74 @@
+{
+    "points": [
+        {
+            "P": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "level_center": [
+                -2500,
+                5820.99951171875,
+                -3500
+            ],
+            "rot": -1800.0,
+            "struct": "/Game/Maps/Datas/Data_Design/Chapter01/Chapter01_Kuangkeng_Enter_03",
+            "enterLevel": 1,
+            "exitLevel": 0,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 1,
+                    "near_door": "",
+                    "next_id": -1
+                },
+                {
+                    "door_name": "BP_Arrow2",
+                    "door_state": 1,
+                    "if_door": 1,
+                    "near_door": "BP_Arrow",
+                    "next_id": 1
+                },
+                {
+                    "door_name": "BP_Arrow3",
+                    "door_state": 0,
+                    "if_door": 1,
+                    "near_door": "",
+                    "next_id": -1
+                }
+            ],
+            "if_layout": 0,
+            "art_path": "/Game/Maps/Datas/Data_Art/Chapter01/Chapter01_Kuangkeng_Enter_02_Art",
+            "id": 0
+        },
+        {
+            "P": [
+                -1310.0051879882812,
+                -9730.998229980469,
+                20859.999084472656
+            ],
+            "level_center": [
+                -2500,
+                2500.0,
+                -500
+            ],
+            "rot": -89.9999771118164,
+            "struct": "/Game/Maps/Datas/Data_Design/Chapter01/Chapter01_Abyss_Boss01",
+            "enterLevel": 0,
+            "exitLevel": 1,
+            "door": [
+                {
+                    "door_name": "BP_Arrow",
+                    "door_state": 0,
+                    "if_door": 0,
+                    "near_door": "BP_Arrow2",
+                    "next_id": 0
+                }
+            ],
+            "if_layout": 0,
+            "art_path": "",
+            "id": 1
+        }
+    ]
+}

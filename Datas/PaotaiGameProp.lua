@@ -1,4 +1,66 @@
-local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
-  return x
-end
-return ReadOnly("PaotaiGameProp", {})
+-- Source Excel file path: ..\datas\GameEvent\PaotaiMiniGame.xlsx
+local LocalTimeProxy = (DataMgr or {})["LocalTimeProxy"] or function(x) return x end
+local ReadOnly = (DataMgr or {})["ReadOnly"] or function(n, x) return x end
+return ReadOnly("PaotaiGameProp", {
+	[1] = {
+		BuffId = 40101005,
+		Id = 1,
+		PropDes = "PaotaiGame_PropDes_1",
+		PropIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fort/T_Fort_Bullet_01.T_Fort_Bullet_01",
+		PropName = "PaotaiGame_PropName_1",
+	},
+	[2] = {
+		BuffId = 40101006,
+		DungeonId = 40101,
+		Id = 2,
+		PropDes = "PaotaiGame_PropDes_2",
+		PropIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fort/T_Fort_Bullet_02.T_Fort_Bullet_02",
+		PropLockDes = "PaotaiGame_PropLock_1",
+		PropName = "PaotaiGame_PropName_2",
+	},
+	[3] = {
+		BuffId = 40101007,
+		DungeonId = 40102,
+		Id = 3,
+		PropDes = "PaotaiGame_PropDes_3",
+		PropIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fort/T_Fort_Bullet_03.T_Fort_Bullet_03",
+		PropLockDes = "PaotaiGame_PropLock_2",
+		PropName = "PaotaiGame_PropName_3",
+	},
+	[4] = {
+		BuffId = 40101008,
+		DungeonId = 40103,
+		Id = 4,
+		PropDes = "PaotaiGame_PropDes_4",
+		PropIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fort/T_Fort_Bullet_04.T_Fort_Bullet_04",
+		PropLockDes = "PaotaiGame_PropLock_3",
+		PropName = "PaotaiGame_PropName_4",
+	},
+	[5] = {
+		BuffId = 40101009,
+		DungeonId = 40104,
+		Id = 5,
+		PropDes = "PaotaiGame_PropDes_5",
+		PropIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fort/T_Fort_Bullet_05.T_Fort_Bullet_05",
+		PropLockDes = "PaotaiGame_PropLock_4",
+		PropName = "PaotaiGame_PropName_5",
+	},
+	[6] = {
+		BuffId = 40101010,
+		DungeonId = 40105,
+		Id = 6,
+		PropDes = "PaotaiGame_PropDes_6",
+		PropIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fort/T_Fort_Bullet_06.T_Fort_Bullet_06",
+		PropLockDes = "PaotaiGame_PropLock_5",
+		PropName = "PaotaiGame_PropName_6",
+	},
+	[7] = {
+		BuffId = 40101011,
+		DungeonId = 40106,
+		Id = 7,
+		PropDes = "PaotaiGame_PropDes_7",
+		PropIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fort/T_Fort_Bullet_07.T_Fort_Bullet_07",
+		PropLockDes = "PaotaiGame_PropLock_6",
+		PropName = "PaotaiGame_PropName_7",
+	},
+})

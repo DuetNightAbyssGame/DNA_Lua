@@ -1,14 +1,13 @@
-local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
-  return x
-end
+local LocalTimeProxy = (DataMgr or {})["LocalTimeProxy"] or function(x) return x end
+local ReadOnly = (DataMgr or {})["ReadOnly"] or function(n, x) return x end
 return ReadOnly("QuestDropId2QuestPickId", {
-  [30007] = {
-    [1] = 1
-  },
-  [30008] = {
-    [1] = 2
-  },
-  [30009] = {
-    [1] = 3
-  }
+	[30007] = {
+		[1] = 1,
+	},
+	[30008] = {
+		[1] = 2,
+	},
+	[30009] = {
+		[1] = 3,
+	},
 })

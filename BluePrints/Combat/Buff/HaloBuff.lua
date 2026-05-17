@@ -1,0 +1,329 @@
+﻿-- local Component = {}
+
+-- function Component:BeginPlay_Lua()
+-- end
+
+-- -- 服务端，状态合并，层数发生变化
+-- function Component:Refresh_Server()
+--     self:InitHaloBuff()
+--     self.LastFreeLayerNum = self.Layer
+-- end
+
+-- -- 服务端
+-- function Component:ServerBeginPlay_Lua()
+--     if not self.BuffConfig.Halo then
+--         return
+--     end
+--     self.HaloData = self.BuffConfig.Halo
+--     --self.ObjectTypes = TArray(EObjectTypeQuery)
+--     --self.ObjectTypes:Add(EObjectTypeQuery.Pawn)
+--     --self.ObjectTypes:Add(EObjectTypeQuery.MonsterPawn)
+--     --self.ActorsToIgnore = TArray(AActor)
+--     --self.FilterTargetArray = {}
+--     --self.TargetArray = TArray(UObject)
+--     --self.InRangePawns = {}
+--     self.PreInRangePawns = {}
+--     self.LoopAddBuffList = {}
+--     --self.IsRefresh = true
+--     self.LastFreeLayerNum = self.Layer
+--     self:InitHaloBuff()
+-- end
+
+-- -- 服务端
+-- function Component:ServerBeforeDestroy()
+--     self:ClearHaloBuff()
+--     EventManager:RemoveEvent(EventID.TeammateRecovery, self)
+--     EventManager:RemoveEvent(EventID.ShowTeammateBloodUI, self)
+-- end
+
+-- --function Component:UpdateHaloBuff()
+-- --    if self.FilterTargetArray:Length() == 0 and self.IsRefresh then 
+-- --        return 
+-- --    end
+-- --    self.IsRefresh = true
+-- --    local InRangePawnMap = {}
+-- --    for _, Target in pairs(self.FilterTargetArray) do
+-- --        if type(Target) ~= 'function' then
+-- --            InRangePawnMap[Target.Eid] = Target.Eid
+-- --            table.insert(self.InRangePawns, Target.Eid)
+-- --        end
+-- --    end
+-- --    for RoleEid, UniqueId in pairs(self.PreInRangePawns) do
+-- --        if not InRangePawnMap[RoleEid] then
+-- --            self:HaloRemoveBuff(RoleEid, UniqueId)
+-- --            self.PreInRangePawns[RoleEid] = nil
+-- --        else
+-- --            if not self.LastFreeLayerNum or self.LastFreeLayerNum ~= self.FreeLayer then 
+-- --                self:HaloChangeBuffLayer(RoleEid, self.HaloData.BuffId, self.FreeLayer)
+-- --            end
+-- --            InRangePawnMap[RoleEid] = nil
+-- --            self.IsRefresh = false
+-- --        end
+-- --    end
+-- --    for i = 1, #self.InRangePawns do --添加光环buff
+-- --        local RoleEid = self.InRangePawns[i]
+-- --        local AddBuffs
+-- --        if InRangePawnMap[RoleEid] then
+-- --            AddBuffs = self:HaloAddBuff(RoleEid, self.HaloData.BuffId, i)
+-- --        end
+-- --        if AddBuffs and AddBuffs:Length() > 0 then
+-- --            self.PreInRangePawns[RoleEid] = AddBuffs:GetRef(1).UniqueId
+-- --            self.IsRefresh = false
+-- --        end
+-- --    end
+-- --    
+-- --    self.LastFreeLayerNum = self.FreeLayer
+-- --    self.InRangePawns = {}
+-- --end
+
+-- --function Component:HaloChangeBuffLayer(TargetEid, BuffId, Layer)
+-- --    local Battle = Battle(self.Owner)
+-- --    local Target = Battle:GetEntity(TargetEid)
+-- --    if not Target then 
+-- --        return 
+-- --    end
+-- --    Battle:ChangeBuffLayerFromTarget(self.Owner, Target, BuffId, Layer)
+-- --end
+
+-- --function Component:HaloAddBuff(TargetEid, BuffId, InRangePawnsIndex)
+-- --    local Battle = Battle(self.Owner)
+-- --    local Target = Battle:GetEntity(TargetEid)
+-- --    if not Target then 
+-- --        return 
+-- --    end
+-- --    local AddBuff = Battle:AddBuffToTarget(self.Owner, Target, BuffId, -1, self.Value, self, self.FreeLayer)
+-- --    if not AddBuff or AddBuff:Num() == 0 then
+-- --        self.InRangePawns[InRangePawnsIndex] = 0
+-- --    end
+-- --    return AddBuff
+-- --end
+
+-- --function Component:HaloRemoveBuff(TargetEid, UniqueId)
+-- --    local Battle = Battle(self.Owner)
+-- --    local Target = Battle:GetEntity(TargetEid)
+-- --    if not Target then 
+-- --        return 
+-- --    end
+-- --    Battle:RemoveUniqueBuffFromTarget(Target, UniqueId)
+-- --end
+
+-- function Component:FilterTarget(TargetArray)
+--     if self.HaloData.Camp == "" then
+--         return
+--     end
+--     Battle(self.Owner):FilterTargetsByCamp(self.Owner, TargetArray, ECampFilter[self.HaloData.Camp])
+-- end
+
+-- --function Component:FindAllTarget()
+-- --    local DotPos = self.Owner:K2_GetActorLocation()
+-- --    local HaloRangeFactor = 1
+-- --    if self.HaloData.AllowSkillRange then
+-- --        local RootSource = self:GetSource()
+-- --        HaloRangeFactor = RootSource:GetAttrByConstrain(EAttrName.SkillRange)
+-- --    end
+-- --    UE4.UKismetSystemLibrary.SphereOverlapActors(self.Owner, DotPos, self.HaloData.AuraRange * HaloRangeFactor,  self.ObjectTypes, nil, self.ActorsToIgnore, self.TargetArray)
+-- --    self:FilterTarget(self.TargetArray)
+-- --    self:UpdateHaloBuff()
+-- --end
+
+-- function Component:GetTeammate()
+--     local Teammate = {}
+--     local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+--     if not GameMode then
+--         return Teammate
+--     end
+--     local Players = self.Owner:GetAllTeammates()
+-- 	for _, PlayerCharacter in pairs(Players) do
+--         if PlayerCharacter:IsPlayerControlled() or PlayerCharacter:IsPhantom() then
+--             if PlayerCharacter.Eid ~= self.Owner.Eid then
+--                 table.insert(Teammate, PlayerCharacter)
+--             elseif self.HaloData.IncludeSelf then
+--                 table.insert(Teammate, PlayerCharacter)
+--             end
+--         end
+--     end
+--     return Teammate
+-- end
+
+-- function Component:RefreshHaloBuffByLayer(CurLayer)
+--     local Battle = Battle(self.Owner)
+--     for TargetEid, _ in pairs(self.PreInRangePawns) do
+--         local Target = Battle:GetEntity(TargetEid)
+--         if Target then
+--             Battle:ChangeBuffLayerFromTarget(self.Owner, Target, self.HaloData.BuffId, CurLayer)
+--         end
+--     end
+-- end
+
+-- function Component:CreateSphereOverlapComponent()
+--     if self.HaloSphereComponent then
+--         return
+--     end
+--     self.HaloSphereComponent = self.Owner:AddComponentByClass(USphereComponent:StaticClass(), false, FTransform(), false)
+--     local HaloRangeFactor = 1
+--     if self.HaloData.AllowSkillRange then
+--         local RootSource = self:GetSource()
+--         HaloRangeFactor = RootSource:GetAttrByConstrain(EAttrName.SkillRange)
+--     end
+--     self.HaloSphereComponent:SetSphereRadius(self.HaloData.AuraRange * HaloRangeFactor)
+--     self.HaloSphereComponent:SetCollisionProfileName("Halo")
+--     self.HaloSphereComponent.OnComponentBeginOverlap:Add(self, self.OnBeginOverlap)
+--     self.HaloSphereComponent.OnComponentEndOverlap:Add(self, self.OnEndOverlap)
+--     local AllOverlapActor = self.HaloSphereComponent:GetOverlappingActors()
+--     self:FilterTarget(AllOverlapActor)
+--     for i = 1, AllOverlapActor:Length() do
+--         local TargetEid = AllOverlapActor[i].Eid
+--         if TargetEid then
+--             self:AddBuffFromHalo(TargetEid)
+--         end
+--     end
+-- end
+
+-- function Component:AddBuffFromHalo(TargetEid)
+--     local Battle = Battle(self.Owner)
+--     local Target = Battle:GetEntity(TargetEid)
+--     if not Target then 
+--         return 
+--     end
+--     if not self.HaloData.BuffId then
+--         return
+--     end
+--     local AddBuffs = Battle:AddBuffToTarget(self.Owner, Target, self.HaloData.BuffId, -1, self.Value, self, self.FreeLayer)
+--     if AddBuffs and AddBuffs:Length() > 0 then
+--         self.PreInRangePawns[TargetEid] = AddBuffs:GetRef(1).UniqueId
+--     else
+--         self.LoopAddBuffList[Target] = true
+--         if not self.LoopAddBuffTimer then
+--             self.LoopAddBuffTimer = self:AddTimer(0.1, self.LoopAddHaloBuffToTarget, true)
+--         end
+--     end
+-- end
+
+-- function Component:RemoveBuffFromHalo(TargetEid)
+--     local Battle = Battle(self.Owner)
+--     local Target = Battle:GetEntity(TargetEid)
+--     if not Target then 
+--         return 
+--     end
+--     local UniqueId = self.PreInRangePawns[TargetEid]
+--     if not UniqueId then
+--         return
+--     else
+--         self.LoopAddBuffList[Target] = nil
+--     end
+--     Battle:RemoveUniqueBuffFromTarget(Target, UniqueId)
+--     self.PreInRangePawns[TargetEid] = nil
+-- end
+
+-- function Component:LoopAddHaloBuffToTarget()
+--     for Target, _ in pairs(self.LoopAddBuffList) do
+--         if IsValid(Target) and not Target:IsDead() then
+--             if Target.ServerInitSuccess and not Battle(self.Owner):IsCampAgreeWithBoth(self.Owner, Target, ECampFilter[self.HaloData.Camp]) then
+--                 self:AddBuffFromHalo(Target.Eid)
+--                 self.LoopAddBuffList[Target] = nil
+--             end
+--         else
+--             self.LoopAddBuffList[Target] = nil
+--         end
+--     end
+--     if CommonUtils.IsEmpty(self.LoopAddBuffList) then
+--         self:RemoveTimer(self.LoopAddBuffTimer)
+--         self.LoopAddBuffTimer = nil
+--     end
+-- end
+
+-- function Component:OnBeginOverlap(OverlappedComponent, OtherActor, OtherComp,OtherBodyIndex, bFromSweep, SweepResult)
+--     if not CommonUtils.CheckIsTarget(OtherActor) then
+--         return
+--     end
+--     if OtherActor.ServerInitSuccess == false then
+--         self.LoopAddBuffList[OtherActor] = true
+--         if not self.LoopAddBuffTimer then
+--             self.LoopAddBuffTimer = self:AddTimer(0.1, self.LoopAddHaloBuffToTarget, true)
+--         end
+--         return
+--     end
+--     if Battle(self.Owner):IsCampAgreeWithBoth(self.Owner, OtherActor, ECampFilter[self.HaloData.Camp]) then
+--         return
+--     end
+--     self:AddBuffFromHalo(OtherActor.Eid)
+-- end
+
+-- function Component:OnEndOverlap(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex)
+--     if not CommonUtils.CheckIsTarget(OtherActor) then
+--         return
+--     end
+--     for Target, _ in pairs(self.LoopAddBuffList) do
+--         if Target == OtherActor then
+--             self.LoopAddBuffList[Target] = nil
+--             break
+--         end
+--     end
+--     if not self.PreInRangePawns[OtherActor.Eid] then
+--         return
+--     end
+--     self:RemoveBuffFromHalo(OtherActor.Eid)
+-- end
+
+-- function Component:InitHaloBuff()
+--     if not self.HaloData then
+--         self:ClearHaloBuff()
+--         return
+--     end
+--     if self.HaloData.TeamMate then
+--         local TeammateList = self:GetTeammate()
+--         for i = 1, #TeammateList do
+--             local Teammate = TeammateList[i]
+--             local AddBuffs = Battle(self.Owner):AddBuffToTarget(self.Owner, Teammate, self.HaloData.BuffId, -1, self.Value, self, self.FreeLayer)
+--             if AddBuffs and AddBuffs:Length() > 0 then
+--                 self.PreInRangePawns[Teammate.Eid] = AddBuffs:GetRef(1).UniqueId
+--             end
+--         end
+--         EventManager:AddEvent(EventID.TeammateRecovery, self, self.ReAddBuffToTeammate)
+--         EventManager:AddEvent(EventID.ShowTeammateBloodUI, self, self.ReAddBuffToTeammate)
+--     else
+--         --if not self.FindTargetTimer then
+--         --    self.FindTargetTimer = self:AddTimer(0.1, self.FindAllTarget, true)
+--         --end
+--         if self.HaloSphereComponent then
+--             if not self.LastFreeLayerNum or self.LastFreeLayerNum ~= self.FreeLayer then
+--                 self:RefreshHaloBuffByLayer(self.FreeLayer)
+--             end
+--         else
+--             self:CreateSphereOverlapComponent()
+--         end
+--     end
+-- end
+
+-- function Component:ClearHaloBuff()
+--     if not self.HaloData then 
+--         return 
+--     end
+--     for TargetEid, _ in pairs(self.PreInRangePawns) do
+--         self:RemoveBuffFromHalo(TargetEid)
+--     end
+--     self.PreInRangePawns = {}
+--     --self:RemoveTimer(self.FindTargetTimer)
+--     --self.FindTargetTimer = nil
+--     if self.LoopAddBuffTimer then
+--         self:RemoveTimer(self.LoopAddBuffTimer)
+--         self.LoopAddBuffTimer = nil
+--     end
+--     if self.HaloSphereComponent then
+--         self.HaloSphereComponent:K2_DestroyComponent(self.Owner)
+--     end
+-- end
+
+-- function Component:ReAddBuffToTeammate(TeammateEid)
+--     if TeammateEid == self.Owner.Eid then
+--         return
+--     end
+--     local Battle = Battle(self.Owner)
+--     local Teammate = Battle:GetEntity(TeammateEid)
+--     local AddBuffs = Battle:AddBuffToTarget(self.Owner, Teammate, self.HaloData.BuffId, -1, self.Value, self, self.FreeLayer)
+--     if AddBuffs and AddBuffs:Length() > 0 then
+--         self.PreInRangePawns[Teammate.Eid] = AddBuffs:GetRef(1).UniqueId
+--     end
+-- end
+
+-- return Component

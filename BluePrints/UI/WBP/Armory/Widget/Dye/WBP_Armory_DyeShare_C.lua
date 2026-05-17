@@ -1,137 +1,170 @@
-require("UnLua")
+--
+-- DESCRIPTION
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
+require "UnLua"
 local ModModel = ModController:GetModel()
-local M = Class({
-  "BluePrints.UI.BP_EMUserWidget_C"
-})
+---@type WBP_Armory_DyeShare_C
+local M = Class({"BluePrints.UI.BP_EMUserWidget_C"})
 
 function M:Construct()
+
 end
 
 function M:InitUIInfo(Params)
-  self.Parent = Params.Parent
-  self.DyeDraftModel = Params.DyeDraftModel
-  self.Btn_ShareChat:SetText(GText("UI_Armory_Share_Chat"))
-  self.Btn_ShareChat:UnBindEventOnClicked(self, self.OnBtn_ShareChatClick)
-  self.Btn_ShareChat:BindEventOnClicked(self, self.OnBtn_ShareChatClick)
-  self.Btn_ShareChat.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Btn_ShareCommunity:SetText(GText("UI_Armory_Share_Community"))
-  self.Btn_ShareCommunity:UnBindEventOnClicked(self, self.OnBtn_ShareCommunityClick)
-  self.Btn_ShareCommunity:BindEventOnClicked(self, self.OnBtn_ShareCommunityClick)
-  self.Btn_ShareCommunity.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Text_DyeCode:SetText(GText("UI_Dye_Output_Build"))
-  self.Btn_CopyCode:UnBindEventOnClicked(self, self.OnBtn_CopyCodeClick)
-  self.Btn_CopyCode:BindEventOnClicked(self, self.OnBtn_CopyCodeClick)
-  self.Btn_CopyCode.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
-  self.Btn_ShareChat:SetFocus()
-  self.Btn_ShareChat:SetNavigationRuleCustom(EUINavigation.Down, {
-    self,
-    function()
-      local currentIndex = self.WidgetSwitcher_State:GetActiveWidgetIndex()
-      if 0 == currentIndex then
-        return self.Btn_ShareCommunity
-      elseif 1 == currentIndex then
-        return self.Btn_CopyCode
-      else
-        return nil
-      end
-    end
-  })
+    self.Parent = Params.Parent
+    self.DyeDraftModel = Params.DyeDraftModel
+    self.Btn_ShareChat:SetText(GText("UI_Armory_Share_Chat"))
+    self.Btn_ShareChat:UnBindEventOnClicked(self, self.OnBtn_ShareChatClick)
+    self.Btn_ShareChat:BindEventOnClicked(self,self.OnBtn_ShareChatClick)
+    self.Btn_ShareChat.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Btn_ShareCommunity:SetText(GText("UI_Armory_Share_Community"))
+    self.Btn_ShareCommunity:UnBindEventOnClicked(self, self.OnBtn_ShareCommunityClick)
+    self.Btn_ShareCommunity:BindEventOnClicked(self,self.OnBtn_ShareCommunityClick)
+    self.Btn_ShareCommunity.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Text_DyeCode:SetText(GText("UI_Dye_Output_Build"))
+    self.Btn_CopyCode:UnBindEventOnClicked(self, self.OnBtn_CopyCodeClick)
+    self.Btn_CopyCode:BindEventOnClicked(self,self.OnBtn_CopyCodeClick)
+    self.Btn_CopyCode.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+    self.Btn_ShareChat:SetFocus()
+    self.Btn_ShareChat:SetNavigationRuleCustom(EUINavigation.Down, {self, function()
+        local currentIndex = self.WidgetSwitcher_State:GetActiveWidgetIndex()
+        if currentIndex == 0 then
+            return self.Btn_ShareCommunity
+        elseif currentIndex == 1 then
+            return self.Btn_CopyCode
+        else
+            return nil
+        end
+    end})
 end
 
 function M:OnBtn_ShareChatClick()
-  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-  local UIManger = GameInstance:GetGameUIManager()
-  local CurrentDraft = self.DyeDraftModel:GetDyeDraftPlan(self.Parent.CurrentSkin.SkinId, self.Parent.CurrentPlan)
-  if CurrentDraft and next(CurrentDraft) then
-    UIManger:ShowUITip(UIConst.Tip_CommonToast, GText("UI_Dye_Output_Temporary"))
-  end
-  local DyePlanInfo = self:GetCurrentDyePlanInfo()
-  if not DyePlanInfo then
-    return
-  end
-  ModModel:CacheDyePlanInfoCopyed(DyePlanInfo)
-  UIManger:ShowUITip(UIConst.Tip_CommonToast, GText("UI_Dye_Output_CopyBoard"))
-  self:Close()
+    local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+    local UIManger = GameInstance:GetGameUIManager()
+    -- 判断parent中当前方案下是否有未应用的草稿，如果有，提示玩家草稿中未应用部分无法分享
+    local CurrentDraft = self.DyeDraftModel:GetDyeDraftPlan(self.Parent.CurrentSkin.SkinId, self.Parent.CurrentPlan)
+    if CurrentDraft and next(CurrentDraft) then
+        -- 有未应用的草稿，提示用户
+        UIManger:ShowUITip(UIConst.Tip_CommonToast, GText("UI_Dye_Output_Temporary"))
+    end
+
+    -- 根据self.Parent中的数据信息，拿到当前正在使用的方案的配色信息DyePlanInfo
+    local DyePlanInfo = self:GetCurrentDyePlanInfo()
+    if not DyePlanInfo then
+        return
+    end
+    
+    ModModel:CacheDyePlanInfoCopyed(DyePlanInfo)
+    
+    -- 显示成功提示
+    UIManger:ShowUITip(UIConst.Tip_CommonToast, GText("UI_Dye_Output_CopyBoard"))
+    self:Close()
 end
 
 function M:GetCurrentDyePlanInfo()
-  local Parent = self.Parent
-  if not Parent or not Parent.CurrentSkin then
-    return nil
-  end
-  local DyePlanInfo = {}
-  local CurrentSkin = Parent.CurrentSkin
-  local CurrentPlan = Parent.CurrentPlan or 1
-  if Parent.Type == CommonConst.ArmoryType.Char then
-    DyePlanInfo.SkinType = "Char"
-    DyePlanInfo.SkinId = CurrentSkin.SkinId
-    local SkinData = DataMgr.Skin[CurrentSkin.SkinId]
-    if SkinData then
-      DyePlanInfo.TargetName = GText(SkinData.SkinName)
+    local Parent = self.Parent
+    if not Parent or not Parent.CurrentSkin then
+        return nil
     end
-  else
-    DyePlanInfo.SkinType = "Weapon"
-    DyePlanInfo.SkinId = CurrentSkin.SkinId
-    local SkinData = DataMgr.WeaponSkin[CurrentSkin.SkinId]
-    if SkinData then
-      DyePlanInfo.TargetName = GText(SkinData.Name)
+    
+    local DyePlanInfo = {}
+    local CurrentSkin = Parent.CurrentSkin
+    local CurrentPlan = Parent.CurrentPlan or 1
+
+    -- 获取皮肤类型和ID
+    if Parent.Type == CommonConst.ArmoryType.Char then
+        if Parent.SkinType == CommonConst.DataType.Hair then  -- 角色头发
+            DyePlanInfo.SkinType = Parent.SkinType
+            DyePlanInfo.SkinId = CurrentSkin.SkinId
+            DyePlanInfo.CharId  = self.Parent.Target and self.Parent.Target.CharId
+            local CharData = DataMgr.Char[DyePlanInfo.CharId]
+            local HairData = DataMgr.Hair[CurrentSkin.SkinId]
+            if CharData and HairData then
+                DyePlanInfo.TargetName =  table.concat({GText(CharData.CharName), ": ", GText(HairData.Name)})
+            end
+        else -- 角色皮肤
+            DyePlanInfo.SkinType = "Char"
+            DyePlanInfo.SkinId = CurrentSkin.SkinId
+            -- 获取角色名称
+            local SkinData = DataMgr.Skin[CurrentSkin.SkinId]
+            if SkinData then
+                DyePlanInfo.TargetName = GText(SkinData.SkinName)
+            end
+        end
     else
-      SkinData = DataMgr.Weapon[CurrentSkin.SkinId]
-      if SkinData then
-        DyePlanInfo.TargetName = GText(SkinData.WeaponName)
-      end
+        DyePlanInfo.SkinType = "Weapon"
+        DyePlanInfo.SkinId = CurrentSkin.SkinId
+        local SkinData = DataMgr.WeaponSkin[CurrentSkin.SkinId]
+        if SkinData then
+            DyePlanInfo.TargetName = GText(SkinData.Name)
+        else
+            SkinData = DataMgr.Weapon[CurrentSkin.SkinId]
+            if SkinData then
+                DyePlanInfo.TargetName = GText(SkinData.WeaponName)
+            end
+        end
     end
-  end
-  local PlanNames = Parent:GetPlanNames()
-  DyePlanInfo.PlanName = PlanNames[CurrentPlan] or "方案" .. CurrentPlan
-  local Colors = CurrentSkin:GetColors(CurrentPlan)
-  DyePlanInfo.Colors = {}
-  for i = 1, Parent.ColorPartCount do
-    DyePlanInfo.Colors[i] = Colors[i] or Parent.DefaultColorId
-  end
-  return DyePlanInfo
+    
+    -- 获取方案名称
+    local PlanNames = Parent:GetPlanNames()
+    DyePlanInfo.PlanName = PlanNames[CurrentPlan] or ("方案" .. CurrentPlan)
+    
+    -- 获取颜色信息
+    local Colors = CurrentSkin:GetColors(CurrentPlan)
+    DyePlanInfo.Colors = {}
+    for i = 1, Parent.ColorPartCount do
+        DyePlanInfo.Colors[i] = Colors[i] or Parent.DefaultColorId
+    end
+    return DyePlanInfo
 end
 
 function M:OnBtn_ShareCommunityClick()
-  self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
-  self.Btn_CopyCode:SetFocus()
-  local DyePlanInfo = self:GetCurrentDyePlanInfo()
-  self.ShareCommunityCopyCode = ModModel:GenerateShareCommunityCopyCode(DyePlanInfo)
-  self.Btn_CopyCode:SetText(GText(self.ShareCommunityCopyCode))
+    self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
+    self.Btn_CopyCode:SetFocus()
+    local DyePlanInfo = self:GetCurrentDyePlanInfo()
+    self.ShareCommunityCopyCode = ModModel:GenerateShareCommunityCopyCode(DyePlanInfo)
+    self.Btn_CopyCode:SetText(GText(self.ShareCommunityCopyCode))
 end
 
 function M:OnBtn_CopyCodeClick()
-  ULowEntryExtendedStandardLibrary.ClipboardSet(self.ShareCommunityCopyCode)
-  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-  local UIManger = GameInstance:GetGameUIManager()
-  UIManger:ShowUITip(UIConst.Tip_CommonToast, GText("UI_Dye_Output_Copy"))
+    ULowEntryExtendedStandardLibrary.ClipboardSet(self.ShareCommunityCopyCode)
+    local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+    local UIManger = GameInstance:GetGameUIManager()
+    UIManger:ShowUITip(UIConst.Tip_CommonToast, GText("UI_Dye_Output_Copy"))
 end
 
 function M:Close()
-  self:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  if self.Parent and self.Parent.Btn_Share then
-    self.Parent.Btn_Share:SetFocus()
-  end
+    self:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if self.Parent and self.Parent.Btn_Share then
+        self.Parent.Btn_Share:SetFocus()
+    end
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if "Gamepad_FaceButton_Right" == InKeyName then
-    self:Close()
-    return UE4.UWidgetBlueprintLibrary.Handled()
-  end
-  return UE4.UWidgetBlueprintLibrary.Unhandled()
+    local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+    local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+    if (InKeyName == "Gamepad_FaceButton_Right") or (InKeyName == "Escape") then
+        self:Close()
+        return UE4.UWidgetBlueprintLibrary.Handled()
+    end
+    return UE4.UWidgetBlueprintLibrary.Unhandled()
 end
 
 function M:OnAddedToFocusPath(InFocusEvent)
-  self.HasAnyFocus = true
+    self.HasAnyFocus = true
+    --self:UpdateGamepadKeyVisibility()
 end
 
 function M:OnRemovedFromFocusPath(InFocusEvent)
-  self.HasAnyFocus = false
-  self:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.HasAnyFocus = false
+    --self:UpdateGamepadKeyVisibility()
+    self:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 return M
+

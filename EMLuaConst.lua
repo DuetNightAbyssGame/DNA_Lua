@@ -1,40 +1,75 @@
+
+
 local EMLuaConst = {
-  EMRandomSubSystem_MaxNumber = 10000,
-  EMRandomSubSystem_MaxNumberPerTick = 1000,
-  EMRandomSubSystem_TickInterval = 5
+	EMRandomSubSystem_MaxNumber = 10000,
+	EMRandomSubSystem_MaxNumberPerTick = 1000,
+	EMRandomSubSystem_TickInterval = 5,
 }
+
 local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName()
+
 EMLuaConst.EnableClientRpcDelay = Const.EnableClientRpcDelay
 EMLuaConst.PushMonsterOptimizationLevel = Const.PushMonsterOptimizationLevel
 EMLuaConst.BeginRagdollExecutePreFrame_PC = Const.BeginRagdollExecutePreFrame_PC
 EMLuaConst.BeginRagdollExecutePreFrame_IOS = Const.BeginRagdollExecutePreFrame_IOS
 EMLuaConst.BeginRagdollExecutePreFrame_Android = Const.BeginRagdollExecutePreFrame_Android
 EMLuaConst.bPlayerMoveDefferUpdateOverlap = true
-if "Android" == PlatformName then
-  EMLuaConst.bPlayerPreloadSummon = Const.PlayerPreloadSummon_Android
-  EMLuaConst.bSummonDeadCache = Const.SummonDeadCache_Android
-  EMLuaConst.NPCDeadCache = Const.NPCDeadCache_Andriod
-elseif "IOS" == PlatformName then
-  EMLuaConst.bPlayerPreloadSummon = Const.PlayerPreloadSummon_IOS
-  EMLuaConst.bSummonDeadCache = Const.SummonDeadCache_IOS
-  EMLuaConst.NPCDeadCache = Const.NPCDeadCache_IOS
+EMLuaConst.bDisableOcclusionInTalk = false
+if PlatformName == "Android" then
+	EMLuaConst.bPlayerPreloadSummon = Const.PlayerPreloadSummon_Android
+	EMLuaConst.bSummonDeadCache = Const.SummonDeadCache_Android
+	EMLuaConst.NPCDeadCache = Const.NPCDeadCache_Andriod
+elseif PlatformName == "IOS" then
+	EMLuaConst.bPlayerPreloadSummon = Const.PlayerPreloadSummon_IOS
+	EMLuaConst.bSummonDeadCache = Const.SummonDeadCache_IOS
+	EMLuaConst.NPCDeadCache = Const.NPCDeadCache_IOS
+	EMLuaConst.bDisableOcclusionInTalk = true
 else
-  EMLuaConst.bPlayerPreloadSummon = Const.PlayerPreloadSummon_Windows
-  EMLuaConst.bSummonDeadCache = Const.SummonDeadCache_Windows
-  EMLuaConst.NPCDeadCache = Const.NPCDeadCache_Win
+	EMLuaConst.bPlayerPreloadSummon = Const.PlayerPreloadSummon_Windows
+	EMLuaConst.bSummonDeadCache = Const.SummonDeadCache_Windows
+	EMLuaConst.NPCDeadCache = Const.NPCDeadCache_Win
 end
+EMLuaConst.bALSameLM = Const.bALSameLM
+EMLuaConst.bCNPCDelHide = Const.CNPCDelHide
+EMLuaConst.bPhantomWCDungeonBornAdjust = false
+EMLuaConst.bCNPCCreateAsync = true
+EMLuaConst.bCNPCUpdateAsync = true
+
+if PlatformName == "Android" or PlatformName == "IOS" then
+	EMLuaConst.bCustomNPCUseSignificanceOpt = false
+end
+
+EMLuaConst.AndroidPreloadCoefficient = 1.2
+EMLuaConst.PcPreloadCoefficient = 1.0
+EMLuaConst.IosPreloadCoefficient = 1.0
+
+EMLuaConst.RegionPreloadSupportSceneId = Const.RegionPreloadSupportSceneId
+EMLuaConst.RegionStoryPreloadSupportSceneId = Const.RegionStoryPreloadSupportSceneId
+
+EMLuaConst.EnableCacheSummonID = Const.EnableCacheSummonID
 EMLuaConst.SkillCreatureSpeed = Const.SkillCreatureSpeed
 EMLuaConst.DecalHeight = 2000
+
 EMLuaConst.DefaultSkillLevel = Const.DefaultSkillLevel
 EMLuaConst.DefaultSkillGrade = Const.DefaultSkillGrade
+
 EMLuaConst.DefaultPhantomSkillLevel = Const.DefaultPhantomSkillLevel
 EMLuaConst.DefaultPhantomSkillGrade = Const.DefaultPhantomSkillGrade
+
 EMLuaConst.ChargingFPS = 27
+
+
 EMLuaConst.CheckTimeAccelerationInterval = CommonConst.CheckTimeAccelerationInterval
 EMLuaConst.bShowDamageDetails = Const.bShowDamageDetails
+
 EMLuaConst.SkillFeatureEndCameraBlendType = EViewTargetBlendFunction.VTBlend_Linear
-EMLuaConst.EnableHitDelay = false
+EMLuaConst.EnableHitDelay = true
 EMLuaConst.IsOpenNpcInitOpt = Const.IsOpenNpcInitOpt
+EMLuaConst.IsOpenNpcGetBattleCharTag = Const.IsOpenNpcGetBattleCharTag
+EMLuaConst.IsNpcUseNavFixPawnLoc = Const.IsNpcUseNavFixPawnLoc
+EMLuaConst.IsOpenCustomNPCCategory = Const.IsOpenCustomNPCCategory
+EMLuaConst.IsOpenEscortNPCPhantomOpt = Const.IsOpenEscortNPCPhantomOpt
+
 EMLuaConst.EnableDynamicAIController = Const.EnableDynamicAIController
 EMLuaConst.EnableMonDeathOptimization = Const.bEnableMonDeathOptimization
 EMLuaConst.FlyAIControllerPath = Const.FlyAIControllerPath
@@ -48,52 +83,179 @@ EMLuaConst.bWeaponAndAccessoryItemHcc = Const.bWeaponAndAccessoryItemHcc
 EMLuaConst.bMonsterInitByPropertySync = Const.bMonsterInitByPropertySync
 EMLuaConst.IsOpenNetMultiClientOnly = Const.IsOpenNetMultiClientOnly
 EMLuaConst.OpenLookAtProtect = Const.OpenLookAtProtect
-EMLuaConst.AntiCheatInterval = Const.AntiCheatInterval
-EMLuaConst.bOpenAntiCheat = Const.bOpenAntiCheat
-EMLuaConst.bOpenPropertyEncryption = true
+
+EMLuaConst.AntiCheat_MonsterGatherWhiteListChars = { 1502 }
+EMLuaConst.OpenCheckHPLock = true
+
 EMLuaConst.DungeonCheckMonsterZLocDist = 40000.0
+
 EMLuaConst.SyncNavModiferCullIsolatedTileNums = 1
-EMLuaConst.bEnableAndroidBackgroundLua = true
-EMLuaConst.bEnableIOSBackgroundLua = true
+
+EMLuaConst.bEnableAndroidBackgroundLua = false
+
+EMLuaConst.bEnableIOSBackgroundLua = false
+
 EMLuaConst.IsShowRayCreature = Const.IsShowRayCreature
+EMLuaConst.bUseBodyMeshAsVirtualBoneSource = Const.bUseBodyMeshAsVirtualBoneSource
+-- EMLuaConst.bEnableClassCache = false
+
 EMLuaConst.IsOpenBulletCreature = Const.IsOpenBulletCreature
 EMLuaConst.IsOpenSkillCreature = Const.IsOpenSkillCreature
 EMLuaConst.IsOpenCreatureECS = Const.IsOpenCreatureECS
-EMLuaConst.MaxFilterDisSquare = 225000000
+
+EMLuaConst.MaxFilterDisSquare = 15000 * 15000
+-- EMLuaConst.OverridenNotifyNames = {"AnimNotify_BindNewWeaponType"}
+-- EMLuaConst.NotifyStateOverriden = {"AnimNotifyState_HitCapsuleFollow"}
+
+
+-- EMLuaConst.OpenComputeWorker = false
+EMLuaConst.bOpenComputeBattleAchievement=false
+--EMLuaConst.OpenFightAttrWorker = false
+EMLuaConst.OpenComputeInteractive = true
+
 EMLuaConst.MaxBatteryOneChar = Const.MaxBatteryOneChar
 EMLuaConst.MaxCrackKeyOneChar = Const.MaxCrackKeyOneChar
+EMLuaConst.PickAllDropWithoutFly = false
+
 EMLuaConst.DungeonFrameLoadBreakableItemMaxNum = Const.DungeonFrameLoadBreakableItemMaxNum
+
 EMLuaConst.bEnablePlayerRootMotionOptimizations = Const.bEnablePlayerRootMotionOptimizations
+
 EMLuaConst.OpenCritCompute = true
+
+EMLuaConst.OpenHatredCompute = true
+
+EMLuaConst.OpenAccessoryDrop = true
+
 EMLuaConst.bIsEnableHotUpdate = true
+
 EMLuaConst.HotUpdateServerIdStr = "Default"
+
 EMLuaConst.PCInterativeTickCount = 5
+
 EMLuaConst.MobileInterativeTickCount = 3
+
 EMLuaConst.bEnableHideRegionPlayer = true
 EMLuaConst.RagdollClientMotorsAngularDriveParams = 1000
 EMLuaConst.LowMemoryDeviceNPCOptimize = Const.LowMemoryDeviceNPCOptimize
-EMLuaConst.LimitCreateCharacterNum_Low = 0
+
+EMLuaConst.RagdollForceExitTime = 15
+EMLuaConst.RagdollForceExitTimeShort = 5
+EMLuaConst.RagdollForceExitTimeShortUnitId = 10005001
+EMLuaConst.bEnableNotifyAllClientLand = false
+
+EMLuaConst.FootstepFXSlowSpeed = Const.FootstepFXSlowSpeed
+EMLuaConst.FootstepFXFastSpeed = Const.FootstepFXFastSpeed
+EMLuaConst.FootstepDeepWaterRatio = Const.WaterDepth
+-- EMLuaConst.OpenGetEventByIDCompute = Const.OpenGetEventByIDCompute
+EMLuaConst.SkillPlaySeUseHitLocation = true
+EMLuaConst.EventCallbackStop = true
+
 EMLuaConst.OnlineNPCCreateOptimize = Const.OnlineNPCCreateOptimize
-EMLuaConst.WeaponSyncInternel = 1
+EMLuaConst.LimitCreateCharacterNum_Low = 0
 EMLuaConst.HighFrequencyCheckGCInterval = 2
+EMLuaConst.bEnableClientMonsterOptimization = true
+
+-- EMLuaConst.RegionSyncSubsysEnable = true
+
+EMLuaConst.bSplitFrame_RefreshBloodBar = true
+EMLuaConst.SplitFrame_RefreshBloodBar_MaxTimes = 16
+
+-- 根据情况自动选择物理资产，若置为false，默认所有情况下使用原始物理资产
+-- 自动选择规则
+-- 1. PC单机使用原本的物理资产
+-- 2. 所有IOS手机和高配安卓手机使用简化的物理资产，命名在原名基础上增加_Lite结尾
+-- 3. 中低配手机/任意平台DS使用极简的物理资产，命名在原名基础上增加_Minimal结尾
+EMLuaConst.bAutoChoosePhysicsAssetForOptimization = true
+-- 强制所有情况下使用原本的物理资产，测试用
+EMLuaConst.bForceChoosePhysicsAssetOriginal = false
+-- 强制所有情况下使用简化的物理资产，测试用
+EMLuaConst.bForceChoosePhysicsAssetLite = false
+-- 强制所有情况下使用极简的物理资产，测试用
+EMLuaConst.bForceChoosePhysicsAssetMinimal = false
+
+EMLuaConst.bEnablePCGlobalAnimCache = false
+EMLuaConst.bEnableRegionAnimCache = true
+EMLuaConst.bEnableAnimCacheAsyncLoad = false
+EMLuaConst.bEnableSummonAnimCache = true
+EMLuaConst.bEnableDSAnimCache = false
+
 EMLuaConst.bMonEnableExecuteInLuaDelegate = false
+EMLuaConst.bNpcEnableExecuteInLuaDelegate = false
+EMLuaConst.bNpcOpenCustomNpcMoveCheck = true
+EMLuaConst.bEnableAnimCacheRootMotion = true 
+EMLuaConst.RootMotionSampleInterval = 1
+EMLuaConst.bMoveOpt_SkipSlideMove = true
+EMLuaConst.bMoveOpt_SkipRVONavigationCheck = true
+EMLuaConst.bMoveOpt_SweepIgnoreStatic = false
+EMLuaConst.bAsyncMonMovement = false
+EMLuaConst.bAsyncMonMoveTickInPhysThread = false
+EMLuaConst.bEnableRegionPlayerUnitBudget = true
+EMLuaConst.bEnableLimitCreateCharacterNumDefault = false
+
+EMLuaConst.HookEllipsePCX = 0.74
+EMLuaConst.HookEllipsePCY = 0.82
+EMLuaConst.HookEllipseMoblieX = 0.82
+EMLuaConst.HookEllipseMoblieY = 0.95
+
+EMLuaConst.bShouldMobileReplacePath = true
+EMLuaConst.MapPCReplacePath = "Maps"
+EMLuaConst.MapMobileReplacePath = "Maps_Phone"
+EMLuaConst.bConditionalSkipMonsterReplication = true
+
+EMLuaConst.RegionOnlineNearbyMaxCount = 50
+EMLuaConst.RegionOnlineNearbyMaxDist = 10000
+
+EMLuaConst.bOpenComputeDotBuff = false
+EMLuaConst.OpenComputeJumpWord = true
+EMLuaConst.OpenHatredCompute = true
+EMLuaConst.OpenAccessoryDrop = false
+EMLuaConst.OpenShieldRecoverThreadTimer = false	
+EMLuaConst.OpenFightAttrWorker = true
+EMLuaConst.OpenGetEventByIDCompute = true
+EMLuaConst.EnablePSODiskCache = true
+EMLuaConst.PSOFlushThreshold = 10
+EMLuaConst.ShouldCombinePartMesh = false
+
+-- 计算推怪向量是否使用迭代法，false代表使用原来的递归法
+EMLuaConst.bAIComputeSlipVector_UseIteration = true
+-- 最大迭代次数
+EMLuaConst.AIComputeSlipVector_MaxIterationTime = 5
+
+EMLuaConst.bOptimizeDeadRPC = false
+
+-- 开启自定义标题栏
+EMLuaConst.bEnableCustomTitleBar = true
+EMLuaConst.TitleBarHeight = 30
+EMLuaConst.ForceUseCustomTitleBar = false
+
+--窗口化模式下最小高度占显示器的百分比
+EMLuaConst.WindowMinHeightPercent = 0.2
+--窗口化模式下最小高度占比
+EMLuaConst.WindowMinHeightMinPx = 200
+-- 窗口大小调整防抖延时（秒）
+EMLuaConst.WindowResizeDebounceDelay = 0.3
+-- 窗口移动触发的防抖延时（秒）
+EMLuaConst.WindowMovedDebounceDelay = 0.3
+
+EMLuaConst.bUseLineTraceForSkillMove = true
+
 return setmetatable({}, {
-  __index = function(t, k)
-    local v = rawget(EMLuaConst, k)
-    if v then
-      return v
-    end
-    local EMLuaConstCpp = rawget(t, "EMLuaConstCpp")
-    return EMLuaConstCpp.TempVars[k]
-  end,
-  __newindex = function(t, k, v)
-    EMLuaConst[k] = v
-    local EMLuaConstCpp = rawget(t, "EMLuaConstCpp")
-    if EMLuaConstCpp then
-      EMLuaConstCpp:RefreshVars()
-    end
-  end,
-  __pairs = function(t)
-    return pairs(EMLuaConst)
-  end
+	__index = function(t, k)
+		local v = rawget(EMLuaConst, k)
+		if v then
+			return v
+		end
+
+		local EMLuaConstCpp = rawget(t, "EMLuaConstCpp")
+		return EMLuaConstCpp.TempVars[k]
+	end,
+	__newindex = function(t, k, v)
+		EMLuaConst[k] = v
+		local EMLuaConstCpp = rawget(t, "EMLuaConstCpp")
+		if EMLuaConstCpp then
+			EMLuaConstCpp:RefreshVars()
+		end
+	end,
+	__pairs = function (t) return pairs(EMLuaConst) end,
 })

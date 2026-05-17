@@ -1,233 +1,213 @@
-local DailyTalkController = require("BluePrints.UI.WBP.DailyTalk.DailyTalkController")
-local DailyTalkCommon = require("BluePrints.UI.WBP.DailyTalk.DailyTalkCommon")
-local Decorator = require("BluePrints.Client.Wrapper.Decorator")
+local DailyTalkController = require "BluePrints.UI.WBP.DailyTalk.DailyTalkController"
+local DailyTalkCommon = require "BluePrints.UI.WBP.DailyTalk.DailyTalkCommon"
+local Decorator = require "BluePrints.Client.Wrapper.Decorator"
 local Component = {}
-for key, value in pairs(Decorator) do
-  Component[key] = value
+Decorator:ApplyDecorator(Component)
+
+function Component:_OnLoginSuccess()
+    DailyTalkController:Init()
+    local bUnlocked = self:CheckUIUnlocked("DailyGoal")
+    if not bUnlocked then
+        self.UnlockKey = self:BindOnUIFirstTimeUnlock("DailyGoal", function()
+            self:TryAddDailyTaskReddot()
+        end)
+    else
+        self:TryAddDailyTaskReddot()
+    end
 end
 
-function Component:EnterWorld()
-  DailyTalkController:Init()
-  local PlayerAvatar = GWorld:GetAvatar()
-  if not PlayerAvatar then
-    return
-  end
-  self.UnlockKey = PlayerAvatar:BindOnUIFirstTimeUnlock("DailyGoal", function()
-    local bUnlocked = PlayerAvatar:CheckUIUnlocked("DailyGoal")
-    if not bUnlocked then
-      return
-    end
+function Component:TryAddDailyTaskReddot()
     if not ReddotManager.GetTreeNode("DailyMain") then
-      ReddotManager.AddNode("DailyMain")
+        ReddotManager.AddNode("DailyMain")
     end
     if self:HasClaimableTaskReward() and not self:HasClaimableProgressReward() then
-      local reddot = ReddotManager.GetTreeNode("DailyMain")
-      if reddot.Count <= 0 then
-        ReddotManager.IncreaseLeafNodeCount("DailyMain", 1)
-      end
+        local reddot = ReddotManager.GetTreeNode("DailyMain")
+        if reddot.Count <= 0 then
+            ReddotManager.IncreaseLeafNodeCount("DailyMain", 1)
+        end
     else
-      ReddotManager.ClearLeafNodeCount("DailyMain", false)
+        ReddotManager.ClearLeafNodeCount("DailyMain", false)
     end
-  end)
 end
 
 function Component:LeaveWorld()
-  DailyTalkController:Destory()
-  local PlayerAvatar = GWorld:GetAvatar()
-  if not PlayerAvatar then
-    return
-  end
-  if self.UnlockKey then
-    PlayerAvatar:UnBindOnUIFirstTimeUnlock("DailyGoal", self.UnlockKey)
-  end
+    DailyTalkController:Destory()
+    if self.UnlockKey then
+        self:UnBindOnUIFirstTimeUnlock("DailyGoal", self.UnlockKey)
+    end
 end
 
-setmetatable(Component, getmetatable(Decorator))
 Component:LimitCall(1)
-
 function Component:GetDailyTaskReward(DailyTaskId)
-  local DailyTask = self.DailyTasks:GetDailyTask(DailyTaskId)
-  if not DailyTask then
-    return
-  end
-  if not DailyTask:IsComplete() then
-    return
-  end
-  local DailyTaskAchv = self.DailyTaskAchvs[DailyTaskId]
-  if not DailyTaskAchv then
-    return
-  end
-  if not DailyTaskAchv:IsComplete() then
-    return
-  end
-  
-  local function Callback(Ret, Rewards)
-    if not self:CheckRegionErrorCode(Ret) then
-      return
-    else
-      EventManager:FireEvent(EventID.DailyTaskRewardChange, DailyTaskId, Rewards)
+    local DailyTask = self.DailyTasks:GetDailyTask(DailyTaskId)
+    if not DailyTask then
+        return
     end
-    self.logger.debug("ZJT_ GetDailyTaskReward ServerCallClient ", Ret, DailyTaskId)
-  end
-  
-  self:CallServer("GetDailyTaskReward", Callback, DailyTaskId)
+    if not DailyTask:IsComplete() then
+        return
+    end
+    local DailyTaskAchv = self.DailyTaskAchvs[DailyTaskId]
+    if not DailyTaskAchv then
+        return
+    end
+    if not DailyTaskAchv:IsComplete() then
+        return
+    end
+    local function Callback(Ret,Rewards)
+        if not self:CheckRegionErrorCode(Ret) then
+            return
+        else
+            EventManager:FireEvent(EventID.DailyTaskRewardChange,DailyTaskId,Rewards)
+            --DebugPrint("GetDailyTaskReward  self.CurrentTaskProgress  ",self.CurrentTaskProgress)
+        end
+        self.logger.debug("ZJT_ GetDailyTaskReward ServerCallClient ", Ret, DailyTaskId)
+    end
+    self:CallServer("GetDailyTaskReward", Callback, DailyTaskId)
 end
 
 Component:LimitCall(1)
-
 function Component:GetDailyProgressReward(TargetProgress)
-  if TargetProgress > self.CurrentTaskProgress then
-    return
-  end
-  if self.DailyTaskProgress[TargetProgress] == nil then
-    return
-  end
-  if self.DailyTaskProgress[TargetProgress] ~= CommonConst.DailyTaskState.Complete then
-    return
-  end
-  
-  local function Callback(Ret, Rewards)
-    if not self:CheckRegionErrorCode(Ret) then
-      return
-    else
-      EventManager:FireEvent(EventID.DailyProgressRewardChange, TargetProgress, Rewards)
+    if self.CurrentTaskProgress < TargetProgress then
+        return
     end
-    self.logger.debug("ZJT_ GetDailyProgressReward ServerCallClient ", Ret, TargetProgress)
-  end
-  
-  self:CallServer("GetDailyProgressReward", Callback, TargetProgress)
+    if self.DailyTaskProgress[TargetProgress] == nil then
+        return
+    end
+    if self.DailyTaskProgress[TargetProgress] ~= CommonConst.DailyTaskState.Complete then
+
+        return
+    end
+    local function Callback(Ret,Rewards)
+        if not self:CheckRegionErrorCode(Ret) then
+            --DebugPrint("OnDailyProgressRewardChange  Ret  ",Rewards)
+            return
+        else
+            EventManager:FireEvent(EventID.DailyProgressRewardChange,TargetProgress,Rewards)
+        end
+        self.logger.debug("ZJT_ GetDailyProgressReward ServerCallClient ", Ret, TargetProgress)
+    end
+    self:CallServer("GetDailyProgressReward", Callback, TargetProgress)
 end
 
 Component:LimitCall(1)
-
 function Component:GetAllDailyTaskReward()
-  local function Callback(Ret, Rewards)
-    if not self:CheckRegionErrorCode(Ret) then
-      return
-    else
-      EventManager:FireEvent(EventID.AllDailyTaskRewardChange, Rewards)
+    local function Callback(Ret,Rewards)
+        if not self:CheckRegionErrorCode(Ret) then
+            return
+        else
+            EventManager:FireEvent(EventID.AllDailyTaskRewardChange,Rewards)
+        end
+        self.logger.debug("ZJT_ GetAllDailyTaskReward ServerCallClient ", Ret)
     end
-    self.logger.debug("ZJT_ GetAllDailyTaskReward ServerCallClient ", Ret)
-  end
-  
-  self:CallServer("GetAllDailyTaskReward", Callback)
+    self:CallServer("GetAllDailyTaskReward", Callback)
 end
-
 Component:LimitCall(1)
-
 function Component:GetAllDailyProgressReward()
-  local function Callback(Ret, Rewards)
-    if not self:CheckRegionErrorCode(Ret) then
-      return
-    else
-      EventManager:FireEvent(EventID.AllDailyProgressRewardChange, Rewards)
+    local function Callback(Ret,Rewards)
+        if not self:CheckRegionErrorCode(Ret) then
+            return
+        else
+            EventManager:FireEvent(EventID.AllDailyProgressRewardChange,Rewards)
+        end
+        self.logger.debug("ZJT_ GetAllDailyProgressReward ServerCallClient ", Ret)
     end
-    self.logger.debug("ZJT_ GetAllDailyProgressReward ServerCallClient ", Ret)
-  end
-  
-  self:CallServer("GetAllDailyProgressReward", Callback)
+    self:CallServer("GetAllDailyProgressReward", Callback)
 end
 
 function Component:OnDailyRefreshDailyTask()
-  EventManager:FireEvent(EventID.DailyRefreshDailyTask)
-  self.logger.debug("ZJT_ OnDailyRefreshDailyTask ServerCallClient ")
+    EventManager:FireEvent(EventID.DailyRefreshDailyTask)
+    self.logger.debug("ZJT_ OnDailyRefreshDailyTask ServerCallClient ")
 end
 
 function Component:OnDailyRefreshDailyTalk()
-  self.logger.debug("ZJT_ OnDailyRefreshDailyTalk ServerCallClient ")
+    self.logger.debug("ZJT_ OnDailyRefreshDailyTalk ServerCallClient ")
 end
 
 function Component:_OnPropChangeDailyTasks(Keys)
-  self:DailyTaskChange(Keys)
+	self:DailyTaskChange(Keys)
 end
 
 function Component:_OnPropChangeDailyTaskProgress(Keys)
-  self:DailyTaskChange(Keys)
+	self:DailyTaskChange(Keys)
 end
 
 function Component:DailyTaskChange(Keys)
-  local PlayerAvatar = GWorld:GetAvatar()
-  if not PlayerAvatar then
-    return
-  end
-  if not PlayerAvatar:CheckUIUnlocked("DailyGoal") then
-    return
-  end
-  if not ReddotManager.GetTreeNode("DailyMain") then
-    ReddotManager.AddNode("DailyMain")
-  end
-  if self:HasClaimableTaskReward() and not self:HasClaimableProgressReward() then
-    local reddot = ReddotManager.GetTreeNode("DailyMain")
-    if reddot.Count <= 0 then
-      ReddotManager.IncreaseLeafNodeCount("DailyMain", 1)
+    local PlayerAvatar = GWorld:GetAvatar()
+    if not PlayerAvatar then return end
+    if not PlayerAvatar:CheckUIUnlocked("DailyGoal") then
+        return
     end
-  else
-    ReddotManager.ClearLeafNodeCount("DailyMain", false)
-  end
+    self:TryAddDailyTaskReddot()
 end
 
+-- 检查是否有可领取的任务奖励
 function Component:HasClaimableTaskReward()
-  local PlayerAvatar = GWorld:GetAvatar()
-  if not PlayerAvatar then
+    local PlayerAvatar = GWorld:GetAvatar()
+    if not PlayerAvatar then return false end
+
+    local DailyTaskServerData = self.DailyTasks
+    local DailyTaskProgressState = self.DailyTaskProgress
+
+    -- 是否有可领取的奖励
+    for _, TaskData in pairs(DailyTaskServerData) do
+        if TaskData.State == CommonConst.DailyTaskState.Complete then
+            return true
+        end
+    end
+
+    for _, ProgressState in pairs(DailyTaskProgressState) do
+        if ProgressState == CommonConst.DailyTaskState.Complete then
+            return true
+        end
+    end
+
     return false
-  end
-  local DailyTaskServerData = self.DailyTasks
-  local DailyTaskProgressState = self.DailyTaskProgress
-  for _, TaskData in pairs(DailyTaskServerData) do
-    if TaskData.State == CommonConst.DailyTaskState.Complete then
-      return true
-    end
-  end
-  for _, ProgressState in pairs(DailyTaskProgressState) do
-    if ProgressState == CommonConst.DailyTaskState.Complete then
-      return true
-    end
-  end
-  return false
 end
 
+--进度奖励是否领取完成
 function Component:HasClaimableProgressReward()
-  local DataArray = {}
-  local DailyGoalReward = DataMgr.DailyGoalReward[1]
-  for key, ItemData in pairs(DailyGoalReward) do
-    table.insert(DataArray, ItemData)
-  end
-  table.sort(DataArray, function(a, b)
-    return a.RequiredActiveness < b.RequiredActiveness
-  end)
-  local bDailyTaskComplete = true
-  local DailyTaskProgressState = self.DailyTaskProgress
-  for _, ProgressState in pairs(DailyTaskProgressState) do
-    if ProgressState ~= CommonConst.DailyTaskState.GetReward then
-      bDailyTaskComplete = false
-      break
+    local DataArray = {}
+    local DailyGoalReward = DataMgr.DailyGoalReward[1]
+    -- 填充 DataArray 并排序
+    for key, ItemData in pairs(DailyGoalReward) do
+        table.insert(DataArray, ItemData)
     end
-  end
-  return self.CurrentTaskProgress >= DataArray[#DataArray].RequiredActiveness and bDailyTaskComplete
+
+    table.sort(DataArray, function(a, b)
+        return a.RequiredActiveness < b.RequiredActiveness
+    end)
+    local bDailyTaskComplete = true
+    local DailyTaskProgressState = self.DailyTaskProgress
+    for _, ProgressState in pairs(DailyTaskProgressState) do
+        if ProgressState ~= CommonConst.DailyTaskState.GetReward then
+            bDailyTaskComplete = false
+            break
+        end
+    end
+    return self.CurrentTaskProgress >= DataArray[#DataArray].RequiredActiveness and bDailyTaskComplete
 end
 
 function Component:GetAllRewardDailyTask()
-  local function Callback(Ret, Rewards)
-    self.logger.debug("ZJT_ GetAllRewardDailyTask ServerCallClient ", Ret)
-    
-    PrintTable({Rewards = Rewards}, 10)
-    EventManager:FireEvent(EventID.AllRewardDailyTask, Rewards)
-  end
-  
-  self:CallServer("GetAllRewardDailyTask", Callback)
+    local function Callback(Ret, Rewards)
+        self.logger.debug("ZJT_ GetAllRewardDailyTask ServerCallClient ", Ret)
+        PrintTable({Rewards = Rewards}, 10)
+        EventManager:FireEvent(EventID.AllRewardDailyTask,Rewards)
+    end
+    self:CallServer("GetAllRewardDailyTask", Callback)
 end
 
+
+
 function Component:GetDailyTalkReward(DailyTalkId)
-  local function Callback(Ret, Rewards)
-    self.logger.debug("ZJT_ GetAllRewardDailyTask ServerCallClient ", Ret)
-    
-    if ErrorCode:Check(Ret) then
-      DailyTalkController:ShowDailyRewards(DailyTalkId, Rewards)
+    local function Callback(Ret, Rewards)
+        self.logger.debug("ZJT_ GetAllRewardDailyTask ServerCallClient ", Ret)
+        if ErrorCode:Check(Ret) then
+            DailyTalkController:ShowDailyRewards(DailyTalkId, Rewards)
+        end
+        DailyTalkController:OnGetReward()
     end
-    DailyTalkController:OnGetReward()
-  end
-  
-  self:CallServer("GetDailyTalkReward", Callback, DailyTalkId)
+    self:CallServer("GetDailyTalkReward", Callback, DailyTalkId)
 end
+
 
 return Component

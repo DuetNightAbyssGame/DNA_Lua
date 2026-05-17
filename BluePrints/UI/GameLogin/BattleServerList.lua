@@ -1,206 +1,312 @@
 return {
-  [102] = {
-    area = "China",
-    hostnum = 102,
-    ip = "10.18.200.102",
-    port = 8000
-  },
-  [306] = {
-    area = "China",
-    hostnum = 306,
-    ip = "10.18.18.120",
-    port = 8000
-  },
-  [307] = {
-    area = "China",
-    hostnum = 307,
-    ip = "10.18.8.171",
-    port = 8000
-  },
-  [308] = {
-    area = "China",
-    hostnum = 308,
-    ip = "10.18.5.48",
-    port = 8000
-  },
-  [311] = {
-    area = "China",
-    hostnum = 311,
-    ip = "10.18.8.171",
-    port = 18000
-  },
-  [312] = {
-    area = "China",
-    hostnum = 312,
-    ip = "10.18.8.245",
-    port = 8000
-  },
-  [316] = {
-    area = "China",
-    hostnum = 316,
-    ip = "10.112.0.214",
-    port = 8000
-  },
-  [317] = {
-    area = "China",
-    hostnum = 317,
-    ip = "10.18.200.80",
-    port = 8000
-  },
-  [318] = {
-    area = "China",
-    hostnum = 318,
-    ip = "10.18.200.64",
-    port = 8000
-  },
-  [399] = {
-    area = "China",
-    hostnum = 399,
-    ip = "127.0.0.1",
-    port = 18000
-  },
-  [1001] = {
-    area = "China",
-    hostnum = 1002,
-    ip = "10.112.0.146",
-    port = 8000
-  },
-  [1109] = {
-    area = "China",
-    hostnum = 1109,
-    ip = "10.18.200.71",
-    port = 8000
-  },
-  [2001] = {
-    area = "Asian",
-    hostnum = 2002,
-    ip = "10.1.0.3",
-    port = 8000
-  },
-  [2012] = {
-    area = "China",
-    hostnum = 2012,
-    ip = "14.103.50.93",
-    port = 8000
-  },
-  [3001] = {
-    area = "China",
-    hostnum = 3001,
-    ip = "10.112.0.162",
-    port = 8000
-  },
-  [4001] = {
-    area = "Asian",
-    hostnum = 4001,
-    ip = "10.1.0.193",
-    port = 8000
-  },
-  [5001] = {
-    area = "China",
-    hostnum = 5001,
-    ip = "10.112.0.199",
-    port = 8000
-  },
-  [5002] = {
-    area = "China",
-    hostnum = 5002,
-    ip = "172.16.0.119",
-    port = 8000
-  },
-  [5003] = {
-    area = "America",
-    hostnum = 5003,
-    ip = "10.100.1.40",
-    port = 8000
-  },
-  [5004] = {
-    area = "China",
-    hostnum = 5004,
-    ip = "10.112.0.168",
-    port = 8000
-  },
-  [5005] = {
-    area = "America",
-    hostnum = 5005,
-    ip = "10.100.0.12",
-    port = 8000
-  },
-  [6001] = {
-    area = "China",
-    hostnum = 6001,
-    ip = "10.112.0.165",
-    port = 8000
-  },
-  [7001] = {
-    area = "China",
-    hostnum = 7001,
-    ip = "10.112.0.198",
-    port = 8000
-  },
-  [8001] = {
-    area = "Asian",
-    hostnum = 8001,
-    ip = "172.22.32.5",
-    port = 8000
-  },
-  [10001] = {
-    area = "China",
-    hostnum = 10051,
-    ip = "10.112.0.53",
-    port = 8000
-  },
-  [20001] = {
-    area = "Asian",
-    hostnum = 20051,
-    ip = "10.10.0.29",
-    port = 8000
-  },
-  [30001] = {
-    area = "America",
-    hostnum = 30051,
-    ip = "10.110.0.44",
-    port = 8000
-  },
-  [40001] = {
-    area = "Europe",
-    hostnum = 40051,
-    ip = "10.50.0.138",
-    port = 8000
-  },
-  [50001] = {
-    area = "HMT",
-    hostnum = 50051,
-    ip = "172.19.0.19",
-    port = 8000
-  },
-  [60001] = {
-    area = "SEA",
-    hostnum = 60051,
-    ip = "172.22.32.45",
-    port = 8000
-  },
-  [70001] = {
-    area = "China",
-    hostnum = 70001,
-    ip = "10.112.0.164",
-    port = 8000
-  },
-  [70002] = {
-    area = "Asian",
-    hostnum = 70002,
-    ip = "10.10.0.18",
-    port = 8000
-  },
-  [70003] = {
-    area = "America",
-    hostnum = 70003,
-    ip = "10.110.0.18",
-    port = 8000
-  },
-  [70004] = {
-    area = "Europe",
-    hostnum = 70004,
-    ip = "10.50.0.84",
-    port = 8000
-  }
+    [101] = {
+        area = "China",
+        hostnum = 101,
+        ip = "10.18.200.101",
+        port = 8000,
+    },
+    [102] = {
+        area = "China",
+        hostnum = 102,
+        ip = "10.18.200.102",
+        port = 8000,
+    },
+    [103] = {
+        area = "China",
+        hostnum = 103,
+        ip = "10.18.200.113",
+        port = 8000,
+    },
+    [104] = {
+        area = "America",
+        hostnum = 104,
+        ip = "10.110.0.30",
+        port = 8000,
+    },
+    [105] = {
+        area = "Europe",
+        hostnum = 105,
+        ip = "10.50.0.91",
+        port = 8000,
+    },
+    [106] = {
+        area = "China",
+        hostnum = 106,
+        ip = "10.112.0.43",
+        port = 8000,
+    },
+    [201] = {
+        area = "China",
+        hostnum = 201,
+        ip = "10.112.0.214",
+        port = 8000,
+    },
+    [202] = {
+        area = "China",
+        hostnum = 202,
+        ip = "10.112.0.29",
+        port = 8000,
+    },
+    [203] = {
+        area = "China",
+        hostnum = 203,
+        ip = "10.112.0.31",
+        port = 8000,
+    },
+    [204] = {
+        area = "China",
+        hostnum = 204,
+        ip = "10.112.0.251",
+        port = 8000,
+    },
+    [205] = {
+        area = "China",
+        hostnum = 205,
+        ip = "10.112.0.32",
+        port = 8000,
+    },
+    [306] = {
+        area = "China",
+        hostnum = 306,
+        ip = "10.18.18.91",
+        port = 8000,
+    },
+    [307] = {
+        area = "China",
+        hostnum = 307,
+        ip = "10.18.8.171",
+        port = 8000,
+    },
+    [308] = {
+        area = "China",
+        hostnum = 308,
+        ip = "10.18.5.48",
+        port = 8000,
+    },
+    [311] = {
+        area = "China",
+        hostnum = 311,
+        ip = "10.18.8.142",
+        port = 18000,
+    },
+    [312] = {
+        area = "China",
+        hostnum = 312,
+        ip = "10.18.8.245",
+        port = 8000,
+    },
+    [317] = {
+        area = "China",
+        hostnum = 317,
+        ip = "10.112.0.81",
+        port = 8000,
+    },
+    [318] = {
+        area = "China",
+        hostnum = 318,
+        ip = "10.18.200.64",
+        port = 8000,
+    },
+    [319] = {
+        area = "China",
+        hostnum = 319,
+        ip = "10.18.200.104",
+        port = 8000,
+    },
+    [399] = {
+        area = "China",
+        hostnum = 399,
+        ip = "127.0.0.1",
+        port = 18000,
+    },
+    [401] = {
+        area = "China",
+        hostnum = 401,
+        ip = "10.112.0.21",
+        port = 8000,
+    },
+    [402] = {
+        area = "China",
+        hostnum = 402,
+        ip = "10.112.0.30",
+        port = 8000,
+    },
+    [403] = {
+        area = "Asian",
+        hostnum = 403,
+        ip = "10.10.0.43",
+        port = 8000,
+    },
+    [501] = {
+        area = "China",
+        hostnum = 501,
+        ip = "10.112.0.147",
+        port = 8000,
+    },
+    [502] = {
+        area = "Asian",
+        hostnum = 502,
+        ip = "10.1.0.2",
+        port = 8000,
+    },
+    [1109] = {
+        area = "China",
+        hostnum = 1109,
+        ip = "10.18.200.71",
+        port = 8000,
+    },
+    [2012] = {
+        area = "China",
+        hostnum = 2012,
+        ip = "14.103.50.93",
+        port = 8000,
+    },
+    [5001] = {
+        area = "China",
+        hostnum = 5001,
+        ip = "10.112.0.199",
+        port = 8000,
+    },
+    [5002] = {
+        area = "China",
+        hostnum = 5002,
+        ip = "172.16.0.119",
+        port = 8000,
+    },
+    [5003] = {
+        area = "America",
+        hostnum = 5003,
+        ip = "10.100.1.40",
+        port = 8000,
+    },
+    [5004] = {
+        area = "China",
+        hostnum = 5004,
+        ip = "10.112.0.168",
+        port = 8000,
+    },
+    [5005] = {
+        area = "America",
+        hostnum = 5005,
+        ip = "10.100.0.12",
+        port = 8000,
+    },
+    [6001] = {
+        area = "China",
+        hostnum = 6001,
+        ip = "10.112.0.165",
+        port = 8000,
+    },
+    [7001] = {
+        area = "China",
+        hostnum = 7001,
+        ip = "10.112.0.198",
+        port = 8000,
+    },
+    [7002] = {
+        area = "China",
+        hostnum = 7002,
+        ip = "10.112.0.6",
+        port = 8000,
+    },
+    [8001] = {
+        area = "Asian",
+        hostnum = 8001,
+        ip = "172.22.32.5",
+        port = 8000,
+    },
+    [8002] = {
+        area = "Asian",
+        hostnum = 8002,
+        ip = "172.22.32.134",
+        port = 8000,
+    },
+    [8003] = {
+        area = "America",
+        hostnum = 8003,
+        ip = "10.110.0.36",
+        port = 8000,
+    },
+    [8004] = {
+        area = "Europe",
+        hostnum = 8004,
+        ip = "10.50.0.133",
+        port = 8000,
+    },
+    [10001] = {
+        area = "China",
+        hostnum = 10051,
+        ip = "10.112.0.53",
+        port = {
+            [1] = 8000,
+            [2] = 8001,
+            [3] = 8002,
+        },
+    },
+    [20001] = {
+        area = "Asian",
+        hostnum = 20051,
+        ip = "10.10.0.29",
+        port = 8000,
+    },
+    [30001] = {
+        area = "America",
+        hostnum = 30051,
+        ip = "10.110.0.44",
+        port = 8000,
+    },
+    [40001] = {
+        area = "Europe",
+        hostnum = 40051,
+        ip = "10.50.0.138",
+        port = 8000,
+    },
+    [50001] = {
+        area = "HMT",
+        hostnum = 50051,
+        ip = "172.19.0.19",
+        port = 8000,
+    },
+    [60001] = {
+        area = "SEA",
+        hostnum = 60051,
+        ip = "172.22.32.45",
+        port = 8000,
+    },
+    [70001] = {
+        area = "China",
+        hostnum = 70001,
+        ip = "10.112.0.164",
+        port = 8000,
+    },
+    [70002] = {
+        area = "Asian",
+        hostnum = 70002,
+        ip = "10.10.0.18",
+        port = 8000,
+    },
+    [70003] = {
+        area = "America",
+        hostnum = 70003,
+        ip = "10.110.0.18",
+        port = 8000,
+    },
+    [80001] = {
+        area = "China",
+        hostnum = 80001,
+        ip = "10.112.0.42",
+        port = 8000,
+    },
+    [80002] = {
+        area = "Asian",
+        hostnum = 80002,
+        ip = "10.10.0.141",
+        port = 8000,
+    },
+    [80003] = {
+        area = "America",
+        hostnum = 80003,
+        ip = "10.110.5.171",
+        port = 8000,
+    },
 }

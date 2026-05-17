@@ -1,0 +1,114 @@
+-- --
+-- -- 拼接关卡界面——关卡类型
+-- --
+-- -- @COMPANY **
+-- -- @AUTHOR **
+-- -- @DATE ${date} ${time}
+-- --
+-- require "UnLua"
+
+-- ---@type Prologue_Map_Level_Cell_PC_C
+-- local M = Class({"BluePrints.Common.TimerMgr","BluePrints.UI.BP_EMUserWidget_C"})
+
+-- function M:Construct()
+-- end
+
+-- function M:OnListItemObjectSet(Content)
+--     self.IsHovered = false
+--     self.Clicked = false
+--     self.Content = Content
+--     self.ChapterId = Content.ChapterId
+--     self.DungeonList = Content.DungeonList
+--     self.Parent = Content.Parent
+--     self.IsUnLocked = Content.IsUnLocked
+--     local LevelIcon = LoadObject(string.format("Texture2D'%s'", Content.IconPath))
+--     local ImgMat = self.Image_Level:GetDynamicMaterial()
+--     ImgMat:SetTextureParameterValue("IconMap", LevelIcon)
+--     self.Text_World:SetText(EnText(Content.TextTitle))
+--     self.Text_Title:SetText(GText(Content.TextTitle))
+--     self.Text_Title_Select:SetText(GText(Content.TextTitle))
+--     self.Text_Reward:SetText(GText(Content.Reward))
+--     self.Title:SetActiveWidget(self.Text_Title)
+--     self:PlayAnimation(self.In)
+--     if self.IsUnLocked then
+--         self:PlayAnimation(self.Normal)
+--     else
+--         self:PlayAnimation(self.Forbidden)
+--     end
+--     self.Common_GuidePoint_PC:SetVisibility(ESlateVisibility.Collapsed)
+-- end
+
+-- function M:OnCellClicked()
+--     local Avatar = GWorld:GetAvatar()
+--     if not Avatar then
+--         return false
+--     end
+--     if PageJumpUtils:CheckDungeonCondition(DataMgr.SelectDungeon[self.ChapterId].Condition, true) then
+--         if not self.Parent.Root:IsAnimationPlaying(self.Parent.Root.Out) and not self:IsAnimationPlaying(self.Click) then
+--             local Item = UIManager(self):GetUIObj("StyleOfPlay")
+--             Item.IsOpenSelectLevel = true
+--             self.Clicked = true
+--             AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_large", nil, nil)
+--             self:PlayAnimation(self.Click)
+--         end
+--     else
+--         AudioManager(self):PlayUISound(self, "event:/ui/common/click_select_lock", nil, nil)
+--     end
+-- end
+
+-- function M:OnCellHovered()
+--     if self.IsUnLocked and not self:IsAnimationPlaying(self.Click) and not self.Clicked then
+--         self:StopAnimation(self.Normal)
+--         self.Title:SetActiveWidget(self.Text_Title_Select)
+--         self:PlayAnimation(self.Hover)
+--     end
+-- end
+
+-- function M:OnCellUnhovered()
+--     if self.IsUnLocked and not self:IsAnimationPlaying(self.Click) and not self.Clicked then
+--         self:StopAnimation(self.Hover)
+--         self.Title:SetActiveWidget(self.Text_Title)
+--         self:PlayAnimation(self.Normal)
+--     end
+-- end
+
+-- function M:OnCellPressed()
+--     if not self.IsUnLocked then
+--         return
+--     end
+--     self:PlayAnimation(self.Press)
+-- end
+
+-- function M:OnCellReleased()
+--     if not self.IsUnLocked then
+--         return
+--     end
+--     self:StopAnimation(self.Press)
+-- end
+
+-- function M:OnAnimationFinished(InAnimation)
+--     if InAnimation == self.Click then
+--         local Item = UIManager(self):GetUIObj("StyleOfPlay")
+--         Item.IsOpenSelectLevel = false
+--         local SelectLevel = Item:OpenSubUI({Idx = "DungeonSelect"}, nil, true)
+--         local DungeonList = DataMgr.SelectDungeon[self.ChapterId].DungeonList
+--         SelectLevel:InitLevelList(DungeonList)
+--         Item:InitOtherPageTab({
+--             DynamicNode = {"Back", "ResourceBar", "BottomKey"},
+--             BottomKeyInfo = { { KeyInfoList = {{Type="Text", Text="Esc", ClickCallback=SelectLevel.OnReturnKeyDown, Owner=SelectLevel}}, Desc = GText("UI_BACK"), bLongPress = false}},
+--             OwnerPanel=SelectLevel,
+--             BackCallback=SelectLevel.OnReturnKeyDown,
+--             StyleName = "Text",
+--             TitleName=GText(self.Content.TextTitle),
+--             InfoCallback = SelectLevel.ShowIntro
+--         },nil,true)
+--         self:AddTimer(0.5, function()
+--             self:PlayAnimation(self.Normal)
+--             self.Clicked = false
+--         end, false, 0, "ResetLevelMain", true)
+--     end
+--     if InAnimation == self.Forbidden then
+--         self:PlayAnimation(self.In)
+--     end
+-- end
+-- return M

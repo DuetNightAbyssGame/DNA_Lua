@@ -1,396 +1,499 @@
-require("UnLua")
-local WBP_Build_List_C = Class({
-  "BluePrints.UI.BP_EMUserWidget_C",
-  "BluePrints.Common.TimerMgr"
-})
+--
+-- DESCRIPTION
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
+require "UnLua"
+
+---@type WBP_Build_List_C
+local WBP_Build_List_C = Class({"BluePrints.UI.BP_EMUserWidget_C","BluePrints.Common.TimerMgr","BluePrints.UI.BP_UIState_C"})
+
+--function M:Initialize(Initializer)
+--end
+
+-- function M:Construct()
+-- end
+
+--function M:Tick(MyGeometry, InDeltaTime)
+--end
+
+--function M:Destruct()
+--end
+
 WBP_Build_List_C._components = {
-  "BluePrints.UI.UI_PC.Common.LSFocusComp",
-  "BluePrints.UI.UI_PC.Common.HorizontalListViewResizeComp"
+    "BluePrints.UI.UI_PC.Common.LSFocusComp",
+    "BluePrints.UI.UI_PC.Common.HorizontalListViewResizeComp",
 }
-WBP_Build_List_C.GamepadIcons = {}
+
+WBP_Build_List_C.GamepadIcons = 
+{
+    
+}
 
 function WBP_Build_List_C:Construct()
-  self.List_Select.BP_OnItemClicked:Clear()
-  self.List_Select.BP_OnItemClicked:Add(self, self.OnListItemClicked)
-  self.List_Select.BP_OnEntryInitialized:Clear()
-  self.List_Select.BP_OnEntryInitialized:Add(self, self.OnListItemInited)
-  self.EMListView_Filter.BP_OnItemClicked:Clear()
-  self.EMListView_Filter.BP_OnItemClicked:Add(self, self.OnFilterListItemClicked)
-  self.CurFilterItem = nil
-  self.Text_Empty:SetText(GText("UI_Armory_Char_Empty"))
-  self:AddLSFocusTarget(self.Sort.Controller, {
-    self.Sort
-  })
-  self:InitKeyInfo()
-  self:RefreshBaseInfo()
-  self:InitListenEvent()
+    self.List_Select.BP_OnItemClicked:Clear()
+    self.List_Select.BP_OnItemClicked:Add(self,self.OnListItemClicked)
+    self.List_Select.BP_OnEntryInitialized:Clear()
+    self.List_Select.BP_OnEntryInitialized:Add(self,self.OnListItemInited)
+    self.EMListView_Filter.BP_OnItemClicked:Clear()
+    self.EMListView_Filter.BP_OnItemClicked:Add(self,self.OnFilterListItemClicked)
+    self.CurFilterItem = nil
+    self.Text_Empty:SetText(GText("UI_Armory_Char_Empty"))
+    self:AddLSFocusTarget(self.Sort.Controller, {self.Sort})
+    self:InitKeyInfo()
+    self:RefreshBaseInfo()
+    self:InitListenEvent()
 end
 
 function WBP_Build_List_C:Destruct()
-  if IsValid(self.GameInputModeSubsystem) then
-    self.GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.RefreshOpInfoByInputDevice)
-  end
+    if (IsValid(self.GameInputModeSubsystem)) then
+        self.GameInputModeSubsystem.OnInputMethodChanged:Remove(self,self.RefreshOpInfoByInputDevice) 
+    end
 end
 
 function WBP_Build_List_C:BtnEventClear(Btn)
-  Btn.OnPressed:Clear()
-  Btn.OnReleased:Clear()
-  Btn.OnClicked:Clear()
-  Btn.OnHovered:Clear()
-  Btn.OnUnhovered:Clear()
+    Btn.OnPressed:Clear()
+    Btn.OnReleased:Clear()
+    Btn.OnClicked:Clear()
+    Btn.OnHovered:Clear()
+    Btn.OnUnhovered:Clear()
 end
 
 function WBP_Build_List_C:InitKeyInfo()
-  self.Key_L:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Text", Text = "Q"}
-    }
-  })
-  self:BtnEventClear(self.Key_L.Button_Key)
-  self.Key_R:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Text", Text = "E"}
-    }
-  })
-  self:BtnEventClear(self.Key_R.Button_Key)
-  self.Key_Controller_L:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "LT"}
-    }
-  })
-  self.Key_Controller_R:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "RT"}
-    }
-  })
+    self.Key_L:CreateCommonKey({
+        KeyInfoList={
+            {
+                Type = "Text",
+                Text = "Q",
+            }
+        }
+    })
+    self:BtnEventClear(self.Key_L.Button_Key)
+    self.Key_R:CreateCommonKey({
+        KeyInfoList={
+            {
+                Type = "Text",
+                Text = "E",
+            }
+        }
+    })
+    self:BtnEventClear(self.Key_R.Button_Key)
+    self.Key_Controller_L:CreateCommonKey({
+        KeyInfoList={
+            {
+                Type = "Img",
+                ImgShortPath = "LT",
+            },
+        },
+    })
+    self.Key_Controller_R:CreateCommonKey({
+        KeyInfoList={
+            {
+                Type = "Img",
+                ImgShortPath = "RT",
+            },
+        },
+    })
+    -- self.KeyLS:CreateCommonKey({
+    --     KeyInfoList={
+    --         {
+    --             Type = "Img",
+    --             ImgShortPath = "LS",
+    --         },
+    --     },
+    -- })
 end
 
 function WBP_Build_List_C:SetEmptyText(Text)
-  self.Text_Empty:SetText(Text)
+    self.Text_Empty:SetText(Text)
 end
 
 function WBP_Build_List_C:GetSquadMainUI()
-  return UIManager(self):GetUIObj("SquadMainUINew")
+    return UIManager(self):GetUIObj("SquadMainUINew")
 end
 
 function WBP_Build_List_C:IsSubstringContained(parentStr, subStr)
-  local startPos, endPos = string.find(parentStr, subStr)
-  if nil ~= startPos then
-    return nil ~= startPos, string.sub(parentStr, -1)
-  end
-  return nil, nil
+    local startPos, endPos = string.find(parentStr, subStr)
+    if startPos ~= nil then
+        return startPos ~= nil, string.sub(parentStr, -1)
+    end
+    return nil, nil
 end
 
 function WBP_Build_List_C:OnListItemInited(Content, EntryUI)
-  local SquadMainUI = self:GetSquadMainUI()
-  local Avatar = GWorld:GetAvatar()
-  EntryUI:SetInGear(false)
-  EntryUI:SetWeaponMiniPhantomIcon()
-  EntryUI:SetSelected(false)
-  if SquadMainUI.CurSquadInfo then
-    for key, value in pairs(SquadMainUI.CurSquadInfo) do
-      local IsEquipped, WidgetName = SquadMainUI:CheckThisContentIsEquippedByOtherSlot(Content.Uuid)
-      if IsEquipped then
-        local IsPhantomWeapon, EndPos = self:IsSubstringContained(WidgetName or key, "PhantomWeapon")
-        if IsPhantomWeapon then
-          EntryUI:SetWeaponMiniPhantomIcon(Avatar and Avatar.Chars[SquadMainUI.CurSquadInfo["Phantom" .. EndPos]].CharId or SquadMainUI.SquadInfo["Phantom" .. EndPos .. "Id"])
-        else
-          EntryUI.Rarity = Content.Rarity
-          EntryUI:SetInGear(true)
+    local SquadMainUI = self:GetSquadMainUI()
+    local Avatar = GWorld:GetAvatar()
+
+    --清空之前的状态
+    EntryUI:SetInGear(false)
+    EntryUI:SetWeaponMiniPhantomIcon()
+    EntryUI:SetSelected(false)
+
+    if SquadMainUI.CurSquadInfo then
+        for key, value in pairs(SquadMainUI.CurSquadInfo) do
+            --不仅是要看服务器的数据，还是要看玩家该次装备好后的临时数据，临时数据应该优先检查。主要修复了在未保存的情况下，切换槽位会出现其他槽位装备的图标没有继承过来
+            local IsEquipped, WidgetName = SquadMainUI:CheckThisContentIsEquippedByOtherSlot(Content.Uuid)
+            if IsEquipped then
+                local IsPhantomWeapon, EndPos = self:IsSubstringContained(WidgetName or key, "PhantomWeapon")
+                if IsPhantomWeapon then --魅影的武器 需要在武器上标记魅影的头像
+                    --优先看临时存储数据，来判断武器的魅影头像
+                    EntryUI:SetWeaponMiniPhantomIcon(
+                        (Avatar and Avatar.Chars[SquadMainUI.CurSquadInfo["Phantom"..EndPos]].CharId) 
+                            or SquadMainUI.SquadInfo["Phantom"..EndPos.."Id"]
+                    )
+                else --其他的只有玩家操控角色和魅影/武器/宠物
+                    EntryUI.Rarity = Content.Rarity
+                    EntryUI:SetInGear(true)
+                end
+                
+                SquadMainUI.RightSlots[WidgetName].ItemInfo = Content
+                if SquadMainUI.CurSlot.Uuid and SquadMainUI.CurSlot.Uuid == Content.Uuid then
+                    Content.IsSelected = true
+                    Content.SelfWidget:SetSelected(true)
+                end
+                return
+            end
         end
-        SquadMainUI.RightSlots[WidgetName].ItemInfo = Content
-        if SquadMainUI.CurSlot.Uuid and SquadMainUI.CurSlot.Uuid == Content.Uuid then
-          Content.IsSelected = true
-          Content.SelfWidget:SetSelected(true)
-        end
-        return
-      end
     end
-  end
-  if self.Event_OnEntryInitialized then
-    self.Event_OnEntryInitialized(self.EventReceiver, Content, EntryUI)
-  end
+    
+    if(self.Event_OnEntryInitialized)then
+        self.Event_OnEntryInitialized(self.EventReceiver,Content,EntryUI)
+    end
 end
 
 function WBP_Build_List_C:InitListenEvent()
-  if IsValid(self.GameInputModeSubsystem) then
-    self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
-  end
+    if (IsValid(self.GameInputModeSubsystem)) then
+        self.GameInputModeSubsystem.OnInputMethodChanged:Add(self,self.RefreshOpInfoByInputDevice) 
+    end
 end
 
 function WBP_Build_List_C:RefreshBaseInfo()
-  local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
-  self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
-  if IsValid(self.GameInputModeSubsystem) then
-    self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
-  end
+    -- 刷新一些基础信息
+    local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
+    self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
+    if (IsValid(self.GameInputModeSubsystem)) then
+        self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
+    end
 end
 
 function WBP_Build_List_C:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
-  if CurInputDevice == ECommonInputType.Touch then
-    self.Switch_Mode_L:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.Switch_Mode_R:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    return
-  else
-    self.Switch_Mode_L:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.Switch_Mode_R:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  end
-  local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard
-  if IsUseKeyAndMouse then
-    for _, IconName in pairs(self.GamepadIcons) do
-      if self[IconName] then
-        self[IconName]:SetVisibility(UE4.ESlateVisibility.Collapsed)
-      end
+    --- 切换手柄端相关图标显隐
+    if (CurInputDevice == ECommonInputType.Touch) then
+        -- 触控模式即默认样式，不需要刷新
+        self.Switch_Mode_L:SetVisibility(UE4.ESlateVisibility.Collapsed)
+        self.Switch_Mode_R:SetVisibility(UE4.ESlateVisibility.Collapsed)
+        return
+    else
+        self.Switch_Mode_L:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+        self.Switch_Mode_R:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     end
-    self.Switch_Mode_L:SetActiveWidgetIndex(0)
-    self.Switch_Mode_R:SetActiveWidgetIndex(0)
-  else
-    for _, IconName in pairs(self.GamepadIcons) do
-      if self[IconName] then
-        self[IconName]:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-      end
+
+    local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard
+    if (IsUseKeyAndMouse) then
+        for _, IconName in pairs(self.GamepadIcons) do
+            if self[IconName] then
+                self[IconName]:SetVisibility(UE4.ESlateVisibility.Collapsed)
+            end
+        end
+        self.Switch_Mode_L:SetActiveWidgetIndex(0)
+        self.Switch_Mode_R:SetActiveWidgetIndex(0)
+    else
+        for _, IconName in pairs(self.GamepadIcons) do
+            if self[IconName] then
+                self[IconName]:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+            end
+        end
+        self.Switch_Mode_L:SetActiveWidgetIndex(1)
+        self.Switch_Mode_R:SetActiveWidgetIndex(1)
     end
-    self.Switch_Mode_L:SetActiveWidgetIndex(1)
-    self.Switch_Mode_R:SetActiveWidgetIndex(1)
-  end
 end
 
 function WBP_Build_List_C:OnKeyDown(MyGeometry, InKeyEvent)
-  local IsHandled = self:OnKeyDownForLSComp(MyGeometry, InKeyEvent)
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  DebugPrint("thy   WBP_Build_List_C:OnKeyDown", InKeyName)
-  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
-    if "Gamepad_LeftThumbstick" == InKeyName then
-    elseif "Gamepad_FaceButton_Right" == InKeyName then
+    
+    local IsHandled =  self:OnKeyDownForLSComp(MyGeometry, InKeyEvent)
+    local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+    local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+    DebugPrint("thy   WBP_Build_List_C:OnKeyDown", InKeyName)
+    if (UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey)) then
+        if InKeyName == "Gamepad_LeftThumbstick" then --左边摇杆按下
+            -- local SquadMainUI = self:GetSquadMainUI()
+            -- if SquadMainUI.Pos_Tips:GetChildAt(0) or UIManager(self):IsHaveMenuAnchorOpen() then
+            --     return true
+            -- end
+
+            -- if SquadMainUI.CurGamepadArea == "RightDetatilInSingleSquad" then
+            --     if self.IsInSort then
+            --         SquadMainUI:SwitchGamepadFocusArea("RightDetatilInSingleSquad")
+            --         self.IsInSort = false
+            --         return true
+            --     end
+            -- end
+        elseif InKeyName == "Gamepad_FaceButton_Right" then
+            -- if self.IsInSort then
+            --     UIManager(self):GetUIObj("SquadMainUI"):SwitchGamepadFocusArea("RightDetatilInSingleSquad")
+            --     self.IsInSort = false
+            --     UIManager(self):GetUIObj("SquadMainUI").BackFromSort = true
+            --     return true
+            -- end
+        end
+        return false
     end
-    return false
-  end
-  if not IsHandled then
-    return UE4.UWidgetBlueprintLibrary.UnHandled()
-  else
-    return UE4.UWidgetBlueprintLibrary.Handled()
-  end
+    
+    if not IsHandled then
+        return UE4.UWidgetBlueprintLibrary.UnHandled()
+    else
+        return UE4.UWidgetBlueprintLibrary.Handled()
+    end
 end
 
-function WBP_Build_List_C:Init(Parent, Params)
-  self.Parent = Parent
-  self.Params = Params
-  self.Filters = Params.Filters or {}
-  self.FilterMod = Params.FilterMod or "Single"
-  self.FilterIdxes = {}
-  self.OrderByDisplayNames = Params.OrderByDisplayNames
-  self.SortType = Params.SortType
-  self.AllItemContents = Params.ItemContents
-  self.EMListView_Filter:ClearListItems()
-  self.SelectedFilterContents = {}
-  self.FilteredContents = {}
-  self.CurFilterItem = nil
-  if self.AllItemContents then
-    for index, value in ipairs(self.AllItemContents) do
-      value.OnFocusReceivedEvent = {
-        Obj = self,
-        Callback = self.OnFocusReceivedEvent
-      }
-      table.insert(self.FilteredContents, value)
+
+function WBP_Build_List_C:Init(Parent,Params)
+    self.Parent = Parent
+    self.Params = Params
+    self.Filters = Params.Filters or {}
+    self.FilterMod = Params.FilterMod or "Single"
+    self.FilterIdxes = {}
+    self.OrderByDisplayNames = Params.OrderByDisplayNames
+    self.SortType = Params.SortType
+    self.AllItemContents = Params.ItemContents
+    self.EMListView_Filter:ClearListItems()
+    self.SelectedFilterContents = {}
+    self.FilteredContents = {}
+    self.CurFilterItem = nil
+    if(self.AllItemContents)then
+        for index, value in ipairs(self.AllItemContents) do
+            value.OnFocusReceivedEvent = {
+                Obj = self,
+                Callback = self.OnFocusReceivedEvent
+            }
+            table.insert(self.FilteredContents,value)
+        end
     end
-  end
-  self.FilterContentObj_All = nil
-  if #self.Filters > 0 then
-    self.FilterContentObj_All = NewObject(UIUtils.GetCommonItemContentClass())
-    self.FilterContentObj_All.IsSelecte = true
-    self.FilterContentObj_All.Index = 0
-    self.FilterContentObj_All.Icon = "/Game/UI/Texture/Static/Atlas/Armory/T_Armory_Select.T_Armory_Select"
-    self.FilterContentObj_All.IsSelected = true
-    self.FilterContentObj_All.Owner = self
-    self.EMListView_Filter:AddItem(self.FilterContentObj_All)
-    self.Tab_Sub:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  else
-    self.Tab_Sub:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  end
-  for Index, Tag in ipairs(self.Filters) do
-    local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-    for key, value in pairs(Tag) do
-      Obj[key] = value
+
+    self.FilterContentObj_All = nil
+    if(#self.Filters>0)then
+        self.FilterContentObj_All = NewObject(UIUtils.GetCommonItemContentClass())
+        self.FilterContentObj_All.IsSelecte = true
+        self.FilterContentObj_All.Index = 0
+        self.FilterContentObj_All.Icon = '/Game/UI/Texture/Static/Atlas/Armory/T_Armory_Select.T_Armory_Select'
+        self.FilterContentObj_All.IsSelected = true
+        self.FilterContentObj_All.Owner = self
+        self.EMListView_Filter:AddItem(self.FilterContentObj_All)
+        self.Tab_Sub:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    else
+        self.Tab_Sub:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
-    Obj.Index = Index
-    Obj.Owner = self
-    self.EMListView_Filter:AddItem(Obj)
-  end
-  local Params = {
-    OnGetBackFocusWidget = function()
-      return self.List_Select
+
+    for Index, Tag in ipairs(self.Filters) do
+        local Obj = NewObject(UIUtils.GetCommonItemContentClass())
+        for key, value in pairs(Tag) do
+            Obj[key] = value
+        end
+        Obj.Index = Index
+        --Obj.ClickCallback = self.OnFilterListItemClicked
+        Obj.Owner = self
+        self.EMListView_Filter:AddItem(Obj)
     end
-  }
-  self.Sort:Init(self.Parent, self.OrderByDisplayNames, self.SortType or CommonConst.DESC, Params)
-  self.Sort:BindEventOnSelectionsChanged(self, self.OnSortListSelectionsChanged)
-  self.Sort:BindEventOnSortTypeChanged(self, self.OnSortTypeChanged)
-  self:FillListView()
+    local Params = {OnGetBackFocusWidget = function()
+        return self.List_Select
+    end}
+    self.Sort:Init(self.Parent,self.OrderByDisplayNames,self.SortType or CommonConst.DESC, Params)
+    self.Sort:BindEventOnSelectionsChanged(self,self.OnSortListSelectionsChanged)
+    self.Sort:BindEventOnSortTypeChanged(self,self.OnSortTypeChanged)
+    self:FillListView()
 end
 
-function WBP_Build_List_C:BindEvents(EventReceiver, Events)
-  self.EventReceiver = EventReceiver
-  self.Event_OnListItemClicked = Events.OnListItemClicked
-  self.Event_SortFuncion = Events.SortFuncion
-  self.Event_FilterFunction = Events.FilterFunction
-  self.Event_OnListItemInited = Events.OnListItemInited
-  self.Event_OnEntryInitialized = Events.OnEntryInitialized
+function WBP_Build_List_C:BindEvents(EventReceiver,Events)
+    self.EventReceiver = EventReceiver
+    self.Event_OnListItemClicked = Events.OnListItemClicked
+    self.Event_SortFuncion = Events.SortFuncion
+    self.Event_FilterFunction = Events.FilterFunction
+    self.Event_OnListItemInited = Events.OnListItemInited
+    self.Event_OnEntryInitialized = Events.OnEntryInitialized
 end
 
 function WBP_Build_List_C:OnFocusReceivedEvent()
-  self.IsFromListContent = true
+    self.IsFromListContent = true
 end
 
 function WBP_Build_List_C:SetSortWidgetFocus()
-  self.Sort:SetFocus()
+    self.Sort:SetFocus()
 end
 
 function WBP_Build_List_C:OnListItemClicked(Content)
-  if self.Event_OnListItemClicked then
-    self.Event_OnListItemClicked(self.EventReceiver, Content)
-  end
+    if(self.Event_OnListItemClicked)then
+        self.Event_OnListItemClicked(self.EventReceiver,Content)
+    end
 end
 
+---筛选器选项选中改变时
 function WBP_Build_List_C:OnFilterListItemClicked(Content)
-  if self.FilterMod == "Single" then
-    if Content.IsSelected then
-      return
-    end
-    for Tag, Value in pairs(self.SelectedFilterContents) do
-      if Value ~= Content then
-        self:SetFilterContentIsSelected(Value, false)
-        self.SelectedFilterContents[Tag] = nil
-      end
-    end
-    if self.FilterContentObj_All ~= Content then
-      self:SetFilterContentIsSelected(self.FilterContentObj_All, false)
+    if(self.FilterMod == "Single")then
+        if(Content.IsSelected)then
+            return
+        end
+        for Tag, Value in pairs(self.SelectedFilterContents) do
+            if(Value ~= Content)then
+                self:SetFilterContentIsSelected(Value,false)
+                self.SelectedFilterContents[Tag] = nil
+            end
+        end
+        if(self.FilterContentObj_All ~= Content)then
+            self:SetFilterContentIsSelected(self.FilterContentObj_All,false)
+        else
+        end
+        self:SetFilterContentIsSelected(Content,true)
     else
+        --TODO多选
     end
-    self:SetFilterContentIsSelected(Content, true)
-  else
-  end
-  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_sort_tab", nil, nil)
-  self:UpdateFilterInfos()
-  local FilterIdxes = self.FilterIdxes
-  if self.Event_FilterFunction then
-    self.FilteredContents = self.Event_FilterFunction(self.EventReceiver, self.AllItemContents, FilterIdxes) or {}
-    if self.Event_SortFuncion then
-      local SortByIdx, SortType = self.Sort:GetSortInfos()
-      self.Event_SortFuncion(self.EventReceiver, self.FilteredContents, SortByIdx, SortType)
+    AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_sort_tab", nil, nil)
+    self:UpdateFilterInfos()
+    local FilterIdxes = self.FilterIdxes
+    if(self.Event_FilterFunction)then
+        self.FilteredContents = self.Event_FilterFunction(self.EventReceiver,self.AllItemContents,FilterIdxes) or {}
+        if(self.Event_SortFuncion)then
+            local SortByIdx, SortType = self.Sort:GetSortInfos()
+            self.Event_SortFuncion(self.EventReceiver,self.FilteredContents,SortByIdx, SortType)
+        end
+        self:FillListView()
     end
-    self:FillListView()
-  end
 end
 
-function WBP_Build_List_C:SetFilterContentIsSelected(Content, IsSelected)
-  Content.IsSelected = IsSelected
-  if Content.UI then
-    Content.UI:SetIsSelected(Content.IsSelected)
-  end
-  if Content.Tag then
-    self.SelectedFilterContents[Content.Tag] = Content
-  end
+function WBP_Build_List_C:SetFilterContentIsSelected(Content,IsSelected)
+    Content.IsSelected = IsSelected
+    if(Content.UI)then
+        Content.UI:SetIsSelected(Content.IsSelected)
+    end
+    if(Content.Tag)then
+        self.SelectedFilterContents[Content.Tag] = Content
+    end
 end
 
 function WBP_Build_List_C:UpdateFilterInfos()
-  local Indexes = {}
-  local bHasItem = next(self.SelectedFilterContents) ~= nil
-  local Items = self.EMListView_Filter:GetListItems()
-  local Len = Items:Length()
-  if bHasItem then
-    for i = 2, Len do
-      if self.SelectedFilterContents[Items[i].Tag] then
-        table.insert(Indexes, Items[i].Index)
-      end
+    local Indexes = {}
+    local bHasItem = (next(self.SelectedFilterContents) ~= nil)
+    local Items = self.EMListView_Filter:GetListItems()
+    local Len = Items:Length()
+    if(bHasItem)then
+        for i = 2,Len do
+            if(self.SelectedFilterContents[Items[i].Tag])then
+                table.insert(Indexes,Items[i].Index)
+            end
+        end
+    else
+        for i = 2,Len do
+            table.insert(Indexes,Items[i].Index)
+        end
     end
-  else
-    for i = 2, Len do
-      table.insert(Indexes, Items[i].Index)
-    end
-  end
-  self.FilterIdxes = Indexes
-  return self.FilterIdxes
+    self.FilterIdxes = Indexes
+    return self.FilterIdxes
 end
 
+---排序依据选项选中时
 function WBP_Build_List_C:OnSortListSelectionsChanged()
-  local SortByIdx, SortType = self.Sort:GetSortInfos()
-  if self.Event_SortFuncion then
-    self.Event_SortFuncion(self.EventReceiver, self.FilteredContents, SortByIdx, SortType)
-    self:FillListView()
-  end
+    local SortByIdx, SortType = self.Sort:GetSortInfos()
+    if(self.Event_SortFuncion)then
+        self.Event_SortFuncion(self.EventReceiver,self.FilteredContents,SortByIdx, SortType)
+        self:FillListView()
+    end
 end
 
+---升序降序改变时
 function WBP_Build_List_C:OnSortTypeChanged()
-  local SortByIdx, SortType = self.Sort:GetSortInfos()
-  if self.Event_SortFuncion then
-    self.Event_SortFuncion(self.EventReceiver, self.FilteredContents, SortByIdx, SortType)
-    self:FillListView()
-  end
+    local SortByIdx, SortType = self.Sort:GetSortInfos()
+    if(self.Event_SortFuncion)then
+        self.Event_SortFuncion(self.EventReceiver,self.FilteredContents,SortByIdx, SortType)
+        self:FillListView()
+    end
 end
 
 function WBP_Build_List_C:FillListView()
-  self.List_Select:ClearListItems()
-  for _, value in ipairs(self.FilteredContents) do
-    self.List_Select:AddItem(value)
-  end
-  if #self.FilteredContents <= 0 then
-    self.List_Select:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Empty:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.Sort:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  else
-    self.Empty:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Sort:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.List_Select:SetVisibility(UIConst.VisibilityOp.Visible)
-    self:AddTimer(0.01, function()
-      local ItemUIs = self.List_Select:GetDisplayedEntryWidgets()
-      local XCount, YCount = UIUtils.GetTileViewContentMaxCount(self.List_Select, "XY")
-      local ItemLen = ItemUIs:Length()
-      local RestCount = XCount * YCount - ItemLen
-      if RestCount <= 0 then
-        RestCount = XCount - #self.FilteredContents % XCount
-      end
-      self:FillEmptyItems(RestCount)
-      self.List_Select:RegenerateAllEntries()
-      self.List_Select:ScrollToTop()
-      if self.Event_OnListItemInited then
-        self.Event_OnListItemInited(self.EventReceiver)
-      end
-    end, false, 0, "DelayAddEmptyItem", true)
-  end
+    --self:PlayAnimation(self.List_Change)
+    self.List_Select:ClearListItems()
+    for _, value in ipairs(self.FilteredContents) do
+        if _ % 3 == 1 then
+            value.NavigationRule = {
+                FocusWidget = self.EMListView_Filter,
+                UINavigation = EUINavigation.Left,
+                UINavigationRuleFunc = function(Item,UINavigation, FocusWidget)
+                    Item:SetNavigationRuleExplicit(UINavigation, FocusWidget)
+                end
+            }
+        else
+            value.NavigationRule = {
+                FocusWidget = EUINavigationRule.Escape,
+                UINavigation = EUINavigation.Left,
+                UINavigationRuleFunc = function(Item,UINavigation, FocusWidget)
+                    Item:SetNavigationRuleBase(UINavigation, FocusWidget)
+                end
+            }
+        end
+        self.List_Select:AddItem(value)
+    end
+
+    if(#self.FilteredContents <= 0)then
+        self.List_Select:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        self.Empty:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+        self.Sort:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    else
+        self.Empty:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        self.Sort:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+        self.List_Select:SetVisibility(UIConst.VisibilityOp.Visible)
+        self:AddTimer(0.01, function()
+            local ItemUIs = self.List_Select:GetDisplayedEntryWidgets()
+            local  XCount, YCount = UIUtils.GetTileViewContentMaxCount(self.List_Select,"XY")
+            local ItemLen = ItemUIs:Length()
+            local RestCount = XCount * YCount - ItemLen
+            if(RestCount <= 0)then
+                RestCount = XCount - #self.FilteredContents % XCount
+            end
+            self:FillEmptyItems(RestCount)
+            --刷新列表显示项，防止错位
+            self.List_Select:RegenerateAllEntries()
+            self.List_Select:ScrollToTop()
+            if self.Event_OnListItemInited then
+                self.Event_OnListItemInited(self.EventReceiver)
+            end
+        end,false, 0, "DelayAddEmptyItem",true)
+    end
 end
 
 function WBP_Build_List_C:FillEmptyItems(Count)
-  for i = 1, Count do
-    self.List_Select:AddItem(NewObject(UIUtils.GetCommonItemContentClass()))
-  end
+    for i = 1, Count do
+        self.List_Select:AddItem(NewObject(UIUtils.GetCommonItemContentClass()))
+    end
 end
 
 function WBP_Build_List_C:ScrollItemIntoView(Content)
-  if Content then
-    self.List_Select:BP_ScrollItemIntoView(Content)
-  end
+    if(Content)then
+        self.List_Select:BP_ScrollItemIntoView(Content)
+    end
 end
 
 function WBP_Build_List_C:PlayInAnim()
-  AudioManager(self):PlayUISound(self, "event:/ui/common/sub_panel_expand", "Selective_Listing_In", nil)
-  self:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  self:StopAnimation(self.Out)
-  self:PlayAnimation(self.In)
+    AudioManager(self):PlayUISound(self, "event:/ui/common/sub_panel_expand", "Selective_Listing_In", nil)
+    self:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self:StopAnimation(self.Out)
+    self:PlayAnimation(self.In)
 end
 
 function WBP_Build_List_C:PlayOutAnim()
-  AudioManager(self):PlayUISound(self, "event:/ui/common/sub_panel_expand", "Selective_Listing_In", {ToEnd = 1})
-  self:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-  self:StopAnimation(self.In)
-  self:PlayAnimation(self.Out)
+    AudioManager(self):PlayUISound(self, "event:/ui/common/sub_panel_expand", "Selective_Listing_In", {ToEnd = 1})
+    self:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self:StopAnimation(self.In)
+    self:PlayAnimation(self.Out)
 end
 
 function WBP_Build_List_C:Destruct()
-  if AudioManager(self):IsSoundPlaying(self, "Selective_Listing_In") then
-    AudioManager(self):SetEventSoundParam(self, "Selective_Listing_In", {ToEnd = 1})
-  end
-  self:RemoveTimer("DelayAddEmptyItem")
+    if(AudioManager(self):IsSoundPlaying(self, "Selective_Listing_In"))then
+        AudioManager(self):SetEventSoundParam(self, "Selective_Listing_In", {ToEnd = 1})
+    end
+    self:RemoveTimer("DelayAddEmptyItem")
 end
 
 AssembleComponents(WBP_Build_List_C)
+
 return WBP_Build_List_C
+

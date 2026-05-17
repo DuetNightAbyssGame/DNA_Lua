@@ -1,0 +1,118 @@
+{
+	"Ailixian_Miandao_Main":
+	{
+		"Chapter01_Alch": 0
+	},
+	"BH_Thea_Main":
+	{
+		"BH_Thea": 151
+	},
+	"Chapter01_Alch_Main":
+	{
+		"Chapter01_Alch": 52
+	},
+	"Chapter01":
+	{
+		"Chapter01_IcelakeCity": 218
+	},
+	"Chapter_Sew_Main":
+	{
+		"Chapter01_Sew01": 13
+	},
+	"Haiboliya_Longsha_Main":
+	{
+		"Haiboliya_Longsha01": 28,
+		"Haiboliya_Longsha02": 11
+	},
+	"Huaxu_Haojing_Int_Main":
+	{
+		"Huaxu_Haojing_Int": 4
+	},
+	"Huaxu_Haojing_Main":
+	{
+		"Huaxu_Haojing_Art_2520BigObjs": 7,
+		"Huaxu_Haojing_Art_2619BigObjs": 11,
+		"Huaxu_Haojing_Art_2519BigObjs": 12,
+		"Huaxu_Haojing_Art_2518BigObjs": 140,
+		"Huaxu_Haojing_Art_2618BigObjs": 13,
+		"Huaxu_Haojing_Art_2617BigObjs": 5,
+		"Huaxu_Haojing_Art_2517BigObjs": 43,
+		"Huaxu_Haojing_Art_2516BigObjs": 15,
+		"Huaxu_Haojing_Art_2616BigObjs": 2,
+		"Huaxu_Haojing_Art_2418BigObjs": 1,
+		"Huaxu_Haojing_Art_2317BigObjs": 3,
+		"Huaxu_Haojing_Art_2417BigObjs": 1,
+		"Huaxu_Haojing_Art_2218BigObjs": 10,
+		"Huaxu_Haojing_Art_2219BigObjs": 15,
+		"Huaxu_Haojing_Art_2118BigObjs": 7,
+		"Huaxu_Haojing_Art_2119BigObjs": 9,
+		"Huaxu_Haojing_Art_2319BigObjs": 1,
+		"Huaxu_Haojing_Art_2717BigObjs": 8,
+		"Huaxu_Haojing_Art_2817BigObjs": 9,
+		"Huaxu_Haojing_Art_2816BigObjs": 2,
+		"Huaxu_Haojing_Art_2818BigObjs": 9,
+		"Huaxu_Haojing_Art_2918BigObjs": 1,
+		"Huaxu_Haojing_Art_2719BigObjs": 25,
+		"Huaxu_Haojing_Art_2720BigObjs": 20,
+		"Huaxu_Haojing_Art_2718BigObjs": 4,
+		"Huaxu_Haojing_Art_2514BigObjs": 24,
+		"Huaxu_Haojing_Art_2614BigObjs": 1,
+		"Huaxu_Haojing_Art_2523BigObjs": 1,
+		"Huaxu_Haojing_Art_2322BigObjs": 47,
+		"Huaxu_Haojing_Art_2321BigObjs": 4,
+		"Huaxu_Haojing_Art_2422BigObjs": 156,
+		"Huaxu_Haojing_Art_2522BigObjs": 79,
+		"Huaxu_Haojing_Art_2521BigObjs": 22,
+		"Huaxu_Haojing_Art_2420BigObjs": 32,
+		"Huaxu_Haojing_Art_2323BigObjs": 14,
+		"Huaxu_Haojing_Art_2423BigObjs": 17,
+		"Huaxu_Haojing_Art_2221BigObjs": 2,
+		"Huaxu_Haojing_Art_2421BigObjs": 19,
+		"Huaxu_Haojing_Art_2419BigObjs": 10,
+		"Huaxu_Haojing_Art_2320BigObjs": 2,
+		"Huaxu_Haojing_Art_2722BigObjs": 41,
+		"Huaxu_Haojing_Art_2622BigObjs": 7,
+		"Huaxu_Haojing_Art_2721BigObjs": 51,
+		"Huaxu_Haojing_Art_2621BigObjs": 39,
+		"Huaxu_Haojing_Art_2821BigObjs": 1,
+		"Huaxu_Haojing_Art_2620BigObjs": 25
+	},
+	"Huaxu_Haojing_Reb_Main":
+	{
+		"Huaxu_Haojing_Reb": 12
+	},
+	"Huaxu_Yanjindu_Alt_Main":
+	{
+		"Huaxu_Yanjindu_Alt": 26
+	},
+	"Huaxu_Yanjindu_Main":
+	{
+		"Huaxu_Yanjindu_Art_0509BigObjs": 57,
+		"Huaxu_Yanjindu_Art_0508BigObjs": 16,
+		"Huaxu_Yanjindu_Art_1210BigObjs": 2,
+		"Huaxu_Yanjindu_Art_1209BigObjs": 3,
+		"Huaxu_Yanjindu_Art_1110BigObjs": 2,
+		"Huaxu_Yanjindu_Art_1111BigObjs": 1,
+		"Huaxu_Yanjindu_Art_1010BigObjs": 1,
+		"Huaxu_Yanjindu_Art_1213BigObjs": 52,
+		"Huaxu_Yanjindu_Art_1113BigObjs": 3,
+		"Huaxu_Yanjindu_Art_1212BigObjs": 89,
+		"Huaxu_Yanjindu_Art_1312BigObjs": 7,
+		"Huaxu_Yanjindu_Art_1313BigObjs": 23,
+		"Huaxu_Yanjindu_Art_1314BigObjs": 1,
+		"Huaxu_Yanjindu_Art_1112BigObjs": 2,
+		"Huaxu_Yanjindu_Art_1411BigObjs": 2,
+		"Huaxu_Yanjindu_Art_1410BigObjs": 4,
+		"Huaxu_Yanjindu_Art_1311BigObjs": 1,
+		"Huaxu_Yanjindu_Art_1310BigObjs": 4,
+		"Huaxu_Yanjindu_Art_1214BigObjs": 1,
+		"Huaxu_Yanjindu_Art_0809BigObjs": 33,
+		"Huaxu_Yanjindu_Art_0909BigObjs": 2,
+		"Huaxu_Yanjindu_Art_0709BigObjs": 18,
+		"Huaxu_Yanjindu_Art_1208BigObjs": 113,
+		"Huaxu_Yanjindu_Art_1207BigObjs": 3,
+		"Huaxu_Yanjindu_Art_1108BigObjs": 16,
+		"Huaxu_Yanjindu_Art_1109BigObjs": 10,
+		"Huaxu_Yanjindu_Art_1308BigObjs": 2
+	}
+}

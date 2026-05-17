@@ -1,15 +1,17 @@
-require("UnLua")
-require("DataMgr")
-local PersonalTitleUtils = require("Utils.PersonalTitleUtils")
+require "UnLua"
+require "DataMgr"
+local PersonalTitleUtils = require "Utils.PersonalTitleUtils"
 local WBP_PersonalInfo_Title_C = Class("BluePrints.UI.BP_EMUserWidget_C")
 
+
 function WBP_PersonalInfo_Title_C:SetTitleContent(PrefixId, SuffixId)
-  local TitleContent = PersonalTitleUtils.GetTitleContent(PrefixId, SuffixId)
-  self.Text_Title:SetText(TitleContent)
+    local TitleContent = PersonalTitleUtils.GetTitleContent(PrefixId, SuffixId)
+    self.Text_Title:SetText(TitleContent)
+end
+function WBP_PersonalInfo_Title_C:SetEmpty()
+    self.Text_Title:SetText("— —")
 end
 
-function WBP_PersonalInfo_Title_C:SetEmpty()
-  self.Text_Title:SetText("— —")
-end
+
 
 return WBP_PersonalInfo_Title_C

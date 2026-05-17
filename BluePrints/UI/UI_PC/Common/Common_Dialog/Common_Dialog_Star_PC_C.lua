@@ -1,17 +1,26 @@
-require("UnLua")
+--
+-- DESCRIPTION
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
+require "UnLua"
+
+---@type Common_Dialog_Star_PC_C
 local M = Class("BluePrints.UI.UI_PC.Common.Common_Dialog.Common_Dialog_ContentBase")
 
-function M:PreInitContent(Params, PopupData, Owner)
-  self.Super.PreInitContent(self, Params, PopupData, Owner)
-  if Params then
-    self._components = {
-      "BluePrints.UI.UIComponent.StarsUIComponent"
-    }
-    if Params.BehaviourType == "BreakLevelUp" then
-      table.insert(self._components, "BluePrints.UI.WBP.Armory.Armory_CharOrWeaponBreakLvup_Component")
-      AssembleComponents(self)
+function M:PreInitContent(Params, PopupData, Owner) 
+    self.Super.PreInitContent(self, Params, PopupData, Owner)
+    if(Params)then
+        self._components = {
+            "BluePrints.UI.UIComponent.StarsUIComponent",
+        }
+        if(Params.BehaviourType == "BreakLevelUp")then
+            table.insert(self._components,"BluePrints.UI.WBP.Armory.Armory_CharOrWeaponBreakLvup_Component")
+            AssembleComponents(self)
+        end
     end
-  end
 end
 
 return M

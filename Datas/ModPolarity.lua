@@ -1,26 +1,29 @@
-local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
-  return x
-end
+-- Source Excel file path: ..\datas\Combat\Mod.xlsx
+local LocalTimeProxy = (DataMgr or {})["LocalTimeProxy"] or function(x) return x end
+local ReadOnly = (DataMgr or {})["ReadOnly"] or function(n, x) return x end
 return ReadOnly("ModPolarity", {
-  [-1] = {Char = "E", Id = -1},
-  [1] = {
-    Char = "C",
-    Id = 1,
-    Name = "Polarity_1_Name"
-  },
-  [2] = {
-    Char = "B",
-    Id = 2,
-    Name = "Polarity_2_Name"
-  },
-  [3] = {
-    Char = "D",
-    Id = 3,
-    Name = "Polarity_3_Name"
-  },
-  [4] = {
-    Char = "A",
-    Id = 4,
-    Name = "Polarity_4_Name"
-  }
+	[-1] = {
+		Char = "E",
+		Id = -1,
+	},
+	[1] = {
+		Char = "C",
+		Id = 1,
+		Name = "Polarity_1_Name",
+	},
+	[2] = {
+		Char = "B",
+		Id = 2,
+		Name = "Polarity_2_Name",
+	},
+	[3] = {
+		Char = "D",
+		Id = 3,
+		Name = "Polarity_3_Name",
+	},
+	[4] = {
+		Char = "A",
+		Id = 4,
+		Name = "Polarity_4_Name",
+	},
 })

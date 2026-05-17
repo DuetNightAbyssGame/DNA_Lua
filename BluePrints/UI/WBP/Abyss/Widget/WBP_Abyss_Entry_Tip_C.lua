@@ -1,115 +1,129 @@
+
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
 function M:Construct()
-  self.IsForbidden = false
-  self:BindButtonPerformances()
-  self.Btn_Entry:TryOverrideSoundFunc(function()
-    AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
-  end)
+    self.IsForbidden = false
+    self:BindButtonPerformances()
+    self.Btn_Entry:TryOverrideSoundFunc(function()
+        AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small",nil,nil)
+    end)
 end
 
 function M:Destruct()
-  self:UnBindButtonPerformances()
+    self:UnBindButtonPerformances()
 end
 
 function M:SetText(Text)
-  if self.Text_Save then
-    self:PlayAnimation(self.Change)
-    self.Text_Save:SetText(Text)
-  end
+    if(self.Text_Save)then
+        self:PlayAnimation(self.Change)
+        self.Text_Save:SetText(Text)
+    end
 end
 
+-------------------------------- 按钮 绑定/解绑 相关 -----------------------------------
 function M:BindButtonPerformances()
-  self.Btn_Entry_L.OnClicked:Add(self, self.OnBtnClicked)
-  self.Btn_Entry_L.OnPressed:Add(self, self.OnBtnPressed)
-  self.Btn_Entry_L.OnReleased:Add(self, self.OnBtnReleased)
-  if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
-    self.Btn_Entry_L.OnHovered:Add(self, self.OnBtnHovered)
-    self.Btn_Entry_L.OnUnhovered:Add(self, self.OnBtnUnhovered)
-  end
+    self.Btn_Entry_L.OnClicked:Add(self, self.OnBtnClicked)
+    self.Btn_Entry_L.OnPressed:Add(self, self.OnBtnPressed)
+    self.Btn_Entry_L.OnReleased:Add(self, self.OnBtnReleased)
+    if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+        self.Btn_Entry_L.OnHovered:Add(self, self.OnBtnHovered)
+        self.Btn_Entry_L.OnUnhovered:Add(self, self.OnBtnUnhovered)
+    end
 end
 
 function M:UnBindButtonPerformances()
-  if not self.Btn_Entry_L then
-    return
-  end
-  self.Btn_Entry_L.OnClicked:Clear()
-  self.Btn_Entry_L.OnPressed:Clear()
-  self.Btn_Entry_L.OnReleased:Clear()
-  if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
-    self.Btn_Entry_L.OnHovered:Clear()
-    self.Btn_Entry_L.OnUnhovered:Clear()
-  end
+    if not self.Btn_Entry_L then
+        return
+    end
+    self.Btn_Entry_L.OnClicked:Clear()
+    self.Btn_Entry_L.OnPressed:Clear()
+    self.Btn_Entry_L.OnReleased:Clear()
+    if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+        self.Btn_Entry_L.OnHovered:Clear()
+        self.Btn_Entry_L.OnUnhovered:Clear()
+    end
 end
+-------------------------------- 按钮 Click Press Release Hover UnHover 相关表现 -----------------------------------
 
+----------------------------------------- 按钮 Normal -----------------------------------------------
 function M:SwitchNormalAnimation()
-  self:StopAllAnimations()
-  self:PlayAnimation(self.Normal)
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Normal)
 end
 
+----------------------------------------- 按钮 Click -----------------------------------------------
 function M:PlayButtonClickAnimation()
-  self:StopAllAnimations()
-  self:PlayAnimation(self.Click)
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Click)
 end
 
 function M:OnBtnClicked()
-  self:PlayButtonClickAnimation()
-  self.Btn_Entry:OnBtnClicked()
+	self:PlayButtonClickAnimation()
+    self.Btn_Entry:OnBtnClicked()
 end
+----------------------------------------- 按钮 Click -----------------------------------------------
 
+----------------------------------------- 按钮 Press -----------------------------------------------
 function M:PlayButtonPressAnim()
-  self:StopAllAnimations()
-  self:PlayAnimation(self.Press)
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Press)
 end
 
 function M:OnBtnPressed()
-  self.IsPressing = true
-  self:PlayButtonPressAnim()
-  self.Btn_Entry:OnBtnPressed()
+    self.IsPressing = true
+    self:PlayButtonPressAnim()
+    self.Btn_Entry:OnBtnPressed()
 end
+----------------------------------------- 按钮 Press -----------------------------------------------
 
+----------------------------------------- 按钮 Hover -----------------------------------------------
 function M:PlayButtonHoverAnim()
-  self:StopAllAnimations()
-  self:PlayAnimation(self.Hover)
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Hover)
 end
 
 function M:OnBtnHovered()
-  self.IsHovering = true
-  self:PlayButtonHoverAnim()
-  self.Btn_Entry:OnBtnHovered()
+    self.IsHovering = true
+    self:PlayButtonHoverAnim()
+    self.Btn_Entry:OnBtnHovered()
 end
+----------------------------------------- 按钮 Hover -----------------------------------------------
 
+----------------------------------------- 按钮 Release -----------------------------------------------
 function M:PlayButtonReleaseButHoverAnim()
-  self:StopAllAnimations()
-  self:PlayButtonHoverAnim()
+    self:StopAllAnimations()
+    self:PlayButtonHoverAnim()
 end
 
 function M:PlayButtonReleaseAndUnHoverAnim()
-  self:StopAllAnimations()
-  self:SwitchNormalAnimation()
+    self:StopAllAnimations()
+    self:SwitchNormalAnimation()
 end
 
 function M:OnBtnReleased()
-  self.IsPressing = false
-  if not self.IsHovering then
-    self:PlayButtonReleaseAndUnHoverAnim()
-  else
-    self:PlayButtonReleaseButHoverAnim()
-  end
-  self.Btn_Entry:OnBtnReleased()
+    self.IsPressing = false
+    if not self.IsHovering then
+        self:PlayButtonReleaseAndUnHoverAnim()
+    else
+        self:PlayButtonReleaseButHoverAnim()
+    end
+    self.Btn_Entry:OnBtnReleased()
 end
+----------------------------------------- 按钮 Release -----------------------------------------------
 
+----------------------------------------- 按钮 UnHover -----------------------------------------------
 function M:PlayButtonUnHoverAnim()
-  self:StopAllAnimations()
-  self:SwitchNormalAnimation()
+    self:StopAllAnimations()
+    self:SwitchNormalAnimation()
 end
 
 function M:OnBtnUnhovered()
-  self.IsHovering = false
-  if not self.IsPressing then
-    self:PlayButtonUnHoverAnim()
-  end
-  self.Btn_Entry:OnBtnUnhovered()
+    self.IsHovering = false
+    if not self.IsPressing then
+        self:PlayButtonUnHoverAnim()
+    end
+    self.Btn_Entry:OnBtnUnhovered()
 end
+----------------------------------------- 按钮  UnHover -----------------------------------------------
 
 return M

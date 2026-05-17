@@ -1,0 +1,23 @@
+{
+    "points": [
+      {
+        "P": [
+          31500.0,
+          27500.0,
+          32500.0
+        ],
+        "level_center": [
+          31500,
+          27500,
+          32500
+        ],
+        "rot": 0.0,
+        "struct": "/Game/Maps/Datas/Data_Design/Prologue/Prologue_HardBoss_01",
+        "enterLevel": 1,
+        "exitLevel": 0,
+        "if_layout": 0,
+        "art_path": "",
+        "id": 0
+      }
+    ]
+}

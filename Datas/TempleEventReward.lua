@@ -1,4 +1,92 @@
-local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
-  return x
-end
-return ReadOnly("TempleEventReward", {})
+-- Source Excel file path: ..\datas\GameEvent\TempleEvent.xlsx
+local LocalTimeProxy = (DataMgr or {})["LocalTimeProxy"] or function(x) return x end
+local ReadOnly = (DataMgr or {})["ReadOnly"] or function(n, x) return x end
+return ReadOnly("TempleEventReward", {
+	[10800101] = {
+		EventId = 108001,
+		LevelDes = "UI_TempleEvent_RewardDes",
+		RewardId = 110301,
+		StarRequired = 3,
+		TempleRewardId = 10800101,
+	},
+	[10800102] = {
+		EventId = 108001,
+		LevelDes = "UI_TempleEvent_RewardDes",
+		RewardId = 110302,
+		StarRequired = 6,
+		TempleRewardId = 10800102,
+	},
+	[10800103] = {
+		EventId = 108001,
+		LevelDes = "UI_TempleEvent_RewardDes",
+		RewardId = 110303,
+		StarRequired = 9,
+		TempleRewardId = 10800103,
+	},
+	[10800104] = {
+		EventId = 108001,
+		LevelDes = "UI_TempleEvent_RewardDes",
+		RewardId = 110304,
+		StarRequired = 12,
+		TempleRewardId = 10800104,
+	},
+	[10800105] = {
+		EventId = 108001,
+		LevelDes = "UI_TempleEvent_RewardDes",
+		RewardId = 110305,
+		StarRequired = 15,
+		TempleRewardId = 10800105,
+	},
+	[10800106] = {
+		EventId = 108001,
+		LevelDes = "UI_TempleEvent_RewardDes",
+		RewardId = 110306,
+		StarRequired = 18,
+		TempleRewardId = 10800106,
+	},
+	[10800107] = {
+		EventId = 108001,
+		LevelDes = "UI_TempleEvent_RewardDes",
+		RewardId = 110307,
+		StarRequired = 21,
+		TempleRewardId = 10800107,
+	},
+	[10800108] = {
+		EventId = 108001,
+		LevelDes = "UI_TempleEvent_RewardDes",
+		RewardId = 110308,
+		StarRequired = 24,
+		TempleRewardId = 10800108,
+	},
+	[10800109] = {
+		EventId = 108001,
+		LevelDes = "UI_TempleEvent_RewardDes",
+		RewardId = 110309,
+		StarRequired = 27,
+		TempleRewardId = 10800109,
+	},
+	[10800110] = {
+		EventId = 108001,
+		IsHardMode = true,
+		LevelDes = "UI_TempleEvent_RewardDes",
+		RewardId = 110310,
+		StarRequired = 3,
+		TempleRewardId = 10800110,
+	},
+	[10800111] = {
+		EventId = 108001,
+		IsHardMode = true,
+		LevelDes = "UI_TempleEvent_RewardDes",
+		RewardId = 110311,
+		StarRequired = 6,
+		TempleRewardId = 10800111,
+	},
+	[10800112] = {
+		EventId = 108001,
+		IsHardMode = true,
+		LevelDes = "UI_TempleEvent_RewardDes",
+		RewardId = 110312,
+		StarRequired = 9,
+		TempleRewardId = 10800112,
+	},
+})

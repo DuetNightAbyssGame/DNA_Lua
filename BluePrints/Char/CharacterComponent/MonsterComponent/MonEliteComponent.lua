@@ -1,0 +1,295 @@
+
+-- require "UnLua"
+-- require "Const"
+
+-- local Component = {}
+
+-- function Component:InitComponent()
+-- 	self.EliteTeamData = DataMgr.EliteTeamData[self.EliteId]
+-- 	if self.EliteTeamData == nil then
+-- 		self.EliteTeamId = 0
+-- 		return
+-- 	end
+-- 	self.EliteTeamId = self.EliteId
+-- 	self.EliteTeamTickTime = 0.1
+-- 	self.EliteTeamRemainTime = self.EliteTeamTickTime
+-- 	self.EliteTeamSignal = EEliteSignalType.NoSignal
+-- 	self.EliteTargetDis = self.EliteTeamData.EliteArgs[1]
+-- 	self.EliteTeamRadius = self.EliteTeamData.EliteArgs[2]
+-- 	self.EliteNum = self.EliteTeamData.EliteArgs[3]
+-- 	self:InitEliteTeamRule(self.EliteTeamData.EliteArgs[4])
+-- 	self.LastEliteTeamForward = self:GetActorForwardVector()
+-- 	self.EliteTeamInfo = {}  -- {1:Eid, 2,Eid}
+-- 	self:InitEliteTeamInfo()
+-- 	self.EliteTeamWorldLoc = {}   -- 队员的位置 (无朝向)
+-- 	self.EliteTeamSelfLoc = {}	  -- 队员的位置（带有队长的朝向）
+-- 	self.NeedPublishTeamInfo = {} -- 需要招募队员的位置
+-- end
+
+-- function Component:InitEliteTeamRule(RuleId)
+-- 	self.EliteTeamRule = {}
+-- 	local RuleData = DataMgr.EliteTeamRule[RuleId]
+-- 	if RuleData then
+-- 		self.EliteTeamRule = RuleData.FilterTags
+-- 	end
+-- end
+
+-- function Component:InitEliteTeamInfo()
+-- 	for i = 1, self.EliteNum do
+-- 		table.insert(self.EliteTeamInfo, 0)
+-- 	end
+-- end
+
+-- function Component:TickComponent(DeltaSeconds)
+-- 	if self.EliteTeamData == nil then 
+-- 		return 
+-- 	end
+-- 	if not IsValid(self.BBTarget) then
+-- 		return
+-- 	end
+-- 	if (self:K2_GetActorLocation() - self.BBTarget:K2_GetActorLocation()):Size() > self.EliteTargetDis then 
+-- 		return 
+-- 	end
+-- 	-- EliteTeamTickTime 更新队伍成员信息
+-- 	self.EliteTeamRemainTime = self.EliteTeamRemainTime - DeltaSeconds
+-- 	if self.EliteTeamRemainTime <= 0 then
+-- 		self.EliteTeamRemainTime = self.EliteTeamTickTime
+-- 		self:UpdateEliteTeamInfo()
+-- 	end
+
+-- 	--每次tick更新位置
+-- 	self:UpdateEliteTeamLoc()
+
+-- 	-- DebugPrint ("===========================================", self.EliteTeamSignal)
+-- 	-- for i,j in pairs(self.EliteTeamInfo) do
+-- 	-- 	DebugPrint ("精英队列情况 ", i ,j)
+-- 	-- end
+-- 	-- DebugPrint ("===========================================")
+-- end
+
+-- function Component:UpdateEliteTeamLoc()
+-- 	if self.EliteTeamSignal == EEliteSignalType.AdjustSignal then
+-- 		-- 更新队伍中位置的世界坐标(带朝向)
+-- 		self:UpdateEliteTeamSelfLoc()
+-- 	else
+-- 		-- 更新队伍中位置的世界坐标(无朝向)
+-- 		self:UpdateEliteTeamWorldLoc()
+-- 	end
+-- 	-- 更新队伍朝向
+-- 	self:UpdateEliteTeamForward()
+-- 	-- 更新队员位置
+-- 	for Index, Eid in pairs(self.EliteTeamInfo) do
+-- 		local EliteTeamMonster = Battle(self):GetEntity(Eid)
+-- 		if Eid ~= 0 and IsValid(EliteTeamMonster) and not EliteTeamMonster:IsDead() then 
+-- 			self:UpdateTeamMonsterLoc(Index, EliteTeamMonster)
+-- 		end
+-- 	end
+-- end
+
+-- function Component:UpdateEliteTeamInfo()
+-- 	self.NeedPublishTeamInfo = {}
+-- 	for Index, Eid in pairs(self.EliteTeamInfo) do
+-- 		local EliteTeamMonster = Battle(self):GetEntity(Eid)
+-- 		if Eid == 0 or not IsValid(EliteTeamMonster) or EliteTeamMonster:IsDead() then
+-- 			table.insert(self.NeedPublishTeamInfo, Index)
+-- 			if IsValid(EliteTeamMonster) then
+-- 				self:RealQuitEliteTeam(Index, EliteTeamMonster)
+-- 			end
+-- 		end
+-- 	end
+-- 	-- 增加队员
+-- 	self:TryAddEliteTeamMonster()
+-- end
+
+-- function Component:TryAddEliteTeamMonster()
+-- 	-- 招募/补充队员
+-- 	if IsEmptyTable(self.NeedPublishTeamInfo) then
+-- 		return
+-- 	end
+-- 	local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+-- 	local CampTargets = GameMode:GetAICampResult("Friend", self)
+-- 	for _, Target in pairs(CampTargets) do
+-- 		if self.NeedPublishTeamInfo[1] and self:CheckMonsterCanJoin(self.NeedPublishTeamInfo[1], Target) then
+-- 			self.EliteTeamInfo[self.NeedPublishTeamInfo[1]] = Target.Eid
+-- 			self:UpdateEliteBBValue(Target, self.Eid)
+-- 			table.remove(self.NeedPublishTeamInfo, 1)
+-- 		end
+-- 		if IsEmptyTable(self.NeedPublishTeamInfo) then
+-- 			return
+-- 		end
+-- 	end
+-- end
+
+-- function Component:UpdateEliteTeamForward()
+-- 	local ForwardAngleOffset = 0
+-- 	local NowEliteTeamForward = self:GetActorForwardVector()
+-- 	NowEliteTeamForward:Normalize()
+-- 	self.LastEliteTeamForward:Normalize()
+--     local DotResult = NowEliteTeamForward:Dot(self.LastEliteTeamForward)
+--     ForwardAngleOffset = UE4.UKismetMathLibrary.DegAcos(DotResult)
+-- 	self:GetOwnBlackBoardComponent():SetValueAsFloat("EliteTeamForwardOffset", ForwardAngleOffset)
+-- end
+
+-- function Component:UpdateTeamMonsterLoc(Index, EliteTeamMonster)
+-- 	-- 更新队伍怪物对应的位置
+-- 	local Loc = self:GetEliteTeamLoc(Index)
+-- 	if UNavigationFunctionLibrary.IsTwoPosNavConnect(self:K2_GetActorLocation(), Loc, EliteTeamMonster) then
+-- 		EliteTeamMonster:GetOwnBlackBoardComponent():SetValueAsVector("EliteTeamLoc", Loc)
+-- 	else
+-- 		-- 位置不合理，退队
+-- 		self:RealQuitEliteTeam(Index, EliteTeamMonster)
+-- 	end
+-- end
+
+-- function Component:GetEliteTeamLoc(Index)
+-- 	if self.EliteTeamSignal == EEliteSignalType.AdjustSignal then
+-- 		return self.EliteTeamSelfLoc[Index]
+-- 	end
+-- 	return self.EliteTeamWorldLoc[Index]
+-- end
+
+-- function Component:UpdateEliteBBValue(EliteTeamMonster, Value)
+-- 	EliteTeamMonster.EliteTeamId = Value
+-- 	if Value == 0 then 
+-- 		EliteTeamMonster:GetOwnBlackBoardComponent():SetValueAsEnum("EliteTeamState", EEliteTeamState.OutTeam)
+-- 		EliteTeamMonster:GetOwnBlackBoardComponent():ClearValue("EliteTeamLeader")
+-- 		EliteTeamMonster:GetOwnBlackBoardComponent():ClearValue("EliteTeamLoc")
+-- 	elseif Value > 0 then
+-- 		EliteTeamMonster:GetOwnBlackBoardComponent():SetValueAsEnum("EliteTeamState", EEliteTeamState.InTeam)
+-- 		EliteTeamMonster:GetOwnBlackBoardComponent():SetValueAsObject("EliteTeamLeader", self)
+-- 		EliteTeamMonster:GetOwnBlackBoardComponent():SetValueAsEnum("EliteTeamSignal", self.EliteTeamSignal)
+-- 	end
+-- end
+
+-- function Component:CheckMonsterCanJoin(Index, Target)
+-- 	if not IsValid(Target) then
+-- 		return false
+-- 	end
+-- 	-- 队列目前不考虑召唤物，只考虑纯种
+-- 	if not Target:IsRealMonster() then
+-- 		return false
+-- 	end
+-- 	if Target.EliteTeamId > 0 then
+-- 		return false
+-- 	end
+-- 	if Target:IsDead() then
+-- 		return false
+-- 	end
+-- 	if (self:k2_GetActorLocation() - Target:K2_GetActorLocation()):Size() > self.EliteTeamRadius then
+-- 		return false
+-- 	end
+-- 	if not Target:HasAnyTags_Table(Target, self.EliteTeamRule, false)then
+-- 		return false
+-- 	end
+-- 	return true
+-- end
+
+-- function Component:QuitEliteTeam(EliteTeamMonster)
+-- 	-- EliteTeamMonster 退出队伍
+-- 	if not IsValid(EliteTeamMonster) then 
+-- 		return  
+-- 	end
+-- 	if self.EliteId <= 0 then
+-- 		DebugPrint("未进行正确的EliteId配置   Eid: " .. self.Eid .. "  Name: " .. self:GetName())
+-- 		return 
+-- 	end
+-- 	for Index, Eid in pairs(self.EliteTeamInfo) do
+-- 		if Eid == EliteTeamMonster.Eid then
+-- 			self:RealQuitEliteTeam(Index, EliteTeamMonster)
+-- 		end
+-- 	end
+-- end
+
+-- function Component:RealQuitEliteTeam(Index, EliteTeamMonster)
+-- 	self:UpdateEliteBBValue(EliteTeamMonster, 0)
+-- 	self.EliteTeamInfo[Index] = 0
+-- end
+
+-- function Component:PublishTeamSignal(EliteTeamSignal)
+-- 	if self.EliteId <= 0 then
+-- 		DebugPrint("未进行正确的EliteId配置   Eid: " .. self.Eid .. "  Name: " .. self:GetName())
+-- 		return 
+-- 	end
+-- 	self.EliteTeamSignal = EliteTeamSignal
+-- 	if self.EliteTeamSignal == EEliteSignalType.AdjustSignal then
+-- 		self.LastEliteTeamForward = self:GetActorForwardVector()
+-- 		self:UpdateEliteTeamSelfLoc()
+-- 	else
+-- 		self:UpdateEliteTeamWorldLoc()
+-- 	end
+-- 	for i, Eid in pairs(self.EliteTeamInfo) do
+-- 		local EliteTeamMonster = Battle(self):GetEntity(Eid)
+-- 		if Eid ~= 0 and EliteTeamMonster ~= nil then
+-- 			EliteTeamMonster:GetOwnBlackBoardComponent():SetValueAsEnum("EliteTeamSignal", self.EliteTeamSignal)
+-- 		end
+-- 	end
+-- 	self:UpdateEliteTeamInfo()
+-- 	self:UpdateEliteTeamLoc()
+-- end
+
+-- function Component:UpdateEliteTeamWorldLoc()
+-- 	self.EliteTeamWorldLoc = {}
+-- 	local EliteLoc = self:K2_GetActorLocation()
+-- 	for i = 1, self.EliteNum do
+-- 		-- local ResLoc = self:K2_GetActorLocation() + FVector(self:GetOffset(i, 1), self:GetOffset(i, 2), self:GetOffset(i, 3))
+-- 		local MonOffset = FVector(self:GetOffset(i, 1), self:GetOffset(i, 2), self:GetOffset(i, 3))
+-- 		local ResLoc = EliteLoc + MonOffset
+-- 		if not UNavigationFunctionLibrary.IsTwoPosNavConnect(self:K2_GetActorLocation(), ResLoc, self) then
+-- 			ResLoc = self:GetNewValidLoc(EliteLoc, MonOffset)
+-- 		end
+-- 		table.insert(self.EliteTeamWorldLoc, ResLoc)
+-- 	end
+-- end
+
+-- function Component:UpdateEliteTeamSelfLoc()
+-- 	self.EliteTeamSelfLoc = {}
+-- 	local EliteLoc = self:K2_GetActorLocation()
+-- 	for i = 1, self.EliteNum do
+-- 		local ForwardVector = self:GetActorForwardVector()
+-- 		ForwardVector:Normalize()
+-- 		local RightVector = self:GetActorRightVector()
+-- 		RightVector:Normalize()
+-- 		local UpVector = self:GetActorUpVector()
+-- 		UpVector:Normalize()
+-- 		-- local ResLoc = self:K2_GetActorLocation() + ForwardVector * self:GetOffset(i, 1) + RightVector * self:GetOffset(i, 2) + UpVector * self:GetOffset(i, 3)
+-- 		local MonOffset = ForwardVector * self:GetOffset(i, 1) + RightVector * self:GetOffset(i, 2) + UpVector * self:GetOffset(i, 3)
+-- 		local ResLoc = EliteLoc + MonOffset
+-- 		if not UNavigationFunctionLibrary.IsTwoPosNavConnect(self:K2_GetActorLocation(), ResLoc, self) then
+-- 			ResLoc = self:GetNewValidLoc(EliteLoc, MonOffset)
+-- 		end
+-- 		table.insert(self.EliteTeamSelfLoc, ResLoc)
+-- 	end
+-- end
+
+-- function Component:GetNewValidLoc(EliteLoc, MonOffset)
+-- 	local Dir = FVector(MonOffset.X, MonOffset.Y, MonOffset.Z)
+-- 	Dir:Normalize()c
+-- 	local NewResLoc = EliteLoc + MonOffset + Dir * 500  
+-- 	if UNavigationFunctionLibrary.IsTwoPosNavConnect(self:K2_GetActorLocation(), NewResLoc, self) then
+-- 		return NewResLoc
+-- 	end
+-- 	return URuntimeCommonFunctionLibrary.GetValidLocationBySimulateMovement(EliteLoc, EliteLoc + MonOffset, 40, 20, 100, 45)
+-- end
+
+-- function Component:GetOffset(i, j)
+-- 	local Val = 0
+-- 	if(self.EliteTeamData.Offsets[i] ~= nil and self.EliteTeamData.Offsets[i].OffsetXY[j] ~= nil)then
+-- 		Val = self.EliteTeamData.Offsets[i].OffsetXY[j]
+-- 	end
+-- 	return Val
+-- end
+
+-- function Component:ClearEliteTeamInfo()
+-- 	-- 解散队伍
+-- 	if not self.EliteTeamData then 
+-- 		return
+-- 	end
+-- 	for Index, Eid in pairs(self.EliteTeamInfo) do
+-- 		local EliteTeamMonster = Battle(self):GetEntity(Eid)
+-- 		if Eid ~= 0 and IsValid(EliteTeamMonster) and not EliteTeamMonster:IsDead() then 
+-- 			self:RealQuitEliteTeam(Index, EliteTeamMonster)
+-- 		end
+-- 	end
+-- end
+
+-- return Component

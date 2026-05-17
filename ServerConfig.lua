@@ -1,933 +1,1080 @@
 return {
-  [102] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 102,
-    Name = "分支服",
-    ServerID = 102
-  },
-  [301] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 301,
-    Name = "永浩服",
-    ServerID = 301
-  },
-  [302] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 302,
-    Name = "shuitian",
-    ServerID = 302
-  },
-  [303] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 303,
-    Name = "杨晨服",
-    ServerID = 303
-  },
-  [304] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 304,
-    Name = "Json",
-    ServerID = 304
-  },
-  [305] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 305,
-    Name = "LXZ",
-    ServerID = 305
-  },
-  [306] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 306,
-    Name = "QA服",
-    ServerID = 306
-  },
-  [307] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 307,
-    Name = "雪月服（跨服）",
-    ServerID = 307
-  },
-  [308] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 308,
-    Name = "咕咕服",
-    ServerID = 308
-  },
-  [309] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 309,
-    Name = "性能分析服",
-    ServerID = 309
-  },
-  [310] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 310,
-    Name = "Biaomopopo",
-    ServerID = 310
-  },
-  [311] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 311,
-    Name = "雪月服",
-    ServerID = 311
-  },
-  [312] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 312,
-    Name = "咕咕物理服",
-    ServerID = 312
-  },
-  [313] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 313,
-    Name = "内网http服",
-    ServerID = 313
-  },
-  [314] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 314,
-    Name = "永浩2服",
-    ServerID = 314
-  },
-  [315] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 315,
-    Name = "zhangxiang",
-    ServerID = 315
-  },
-  [316] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 316,
-    Name = "跑测服",
-    ServerID = 316
-  },
-  [317] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 317,
-    Name = "性能优化服",
-    ServerID = 317
-  },
-  [318] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 318,
-    Name = "自动化测试服",
-    ServerID = 318
-  },
-  [333] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 333,
-    Name = "JuleszzZ服",
-    ServerID = 333
-  },
-  [397] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 399,
-    Name = "本地私服2",
-    ServerID = 397
-  },
-  [398] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 398,
-    Name = "协议工具服",
-    ServerID = 398
-  },
-  [399] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 399,
-    Name = "本地私服1",
-    ServerID = 399
-  },
-  [1001] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 1001,
-    Name = "OBT分支测试国服登录",
-    ServerID = 1001
-  },
-  [1109] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 1109,
-    Name = "分支2服",
-    ServerID = 1109
-  },
-  [2001] = {
-    Area = "Asian",
-    DevFlag = "Development",
-    GroupId = 2001,
-    Name = "OBT分支测试外服登录",
-    ServerID = 2001
-  },
-  [2012] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 2012,
-    Name = "ds容器测试服",
-    ServerID = 2012
-  },
-  [3001] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 3001,
-    Name = "3.5测试国内给力服",
-    ServerID = 3001
-  },
-  [4001] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 4001,
-    Name = "3.5测试海外给力服",
-    ServerID = 4001
-  },
-  [5001] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 5001,
-    Name = "官方提审服",
-    ServerID = 5001
-  },
-  [5002] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 5002,
-    Name = "B站提审服",
-    ServerID = 5002
-  },
-  [5003] = {
-    Area = "America",
-    DevFlag = "Public",
-    GroupId = 5003,
-    Name = "海外提审服",
-    ServerID = 5003
-  },
-  [5004] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 5004,
-    Name = "国服推荐服",
-    ServerID = 5004
-  },
-  [5005] = {
-    Area = "America",
-    DevFlag = "Public",
-    GroupId = 5005,
-    Name = "海外推荐服",
-    ServerID = 5005
-  },
-  [6001] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 6001,
-    Name = "云游戏服",
-    ServerID = 6001
-  },
-  [7001] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 7001,
-    Name = "1.0国内给力服",
-    ServerID = 7001
-  },
-  [8001] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 8001,
-    Name = "1.0海外给力服",
-    ServerID = 8001
-  },
-  [10001] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录1",
-    ServerID = 10001
-  },
-  [10002] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录2",
-    ServerID = 10002
-  },
-  [10003] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录3",
-    ServerID = 10003
-  },
-  [10004] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录4",
-    ServerID = 10004
-  },
-  [10005] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录5",
-    ServerID = 10005
-  },
-  [10006] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录6",
-    ServerID = 10006
-  },
-  [10007] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录7",
-    ServerID = 10007
-  },
-  [10008] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录8",
-    ServerID = 10008
-  },
-  [10009] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录9",
-    ServerID = 10009
-  },
-  [10010] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录10",
-    ServerID = 10010
-  },
-  [10011] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录11",
-    ServerID = 10011
-  },
-  [10012] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录12",
-    ServerID = 10012
-  },
-  [10013] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录13",
-    ServerID = 10013
-  },
-  [10014] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录14",
-    ServerID = 10014
-  },
-  [10015] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录15",
-    ServerID = 10015
-  },
-  [10016] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录16",
-    ServerID = 10016
-  },
-  [10017] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录17",
-    ServerID = 10017
-  },
-  [10018] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录18",
-    ServerID = 10018
-  },
-  [10019] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录19",
-    ServerID = 10019
-  },
-  [10020] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录20",
-    ServerID = 10020
-  },
-  [10021] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录21",
-    ServerID = 10021
-  },
-  [10022] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录22",
-    ServerID = 10022
-  },
-  [10023] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录23",
-    ServerID = 10023
-  },
-  [10024] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录24",
-    ServerID = 10024
-  },
-  [10025] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录25",
-    ServerID = 10025
-  },
-  [10026] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录26",
-    ServerID = 10026
-  },
-  [10027] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录27",
-    ServerID = 10027
-  },
-  [10028] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录28",
-    ServerID = 10028
-  },
-  [10029] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录29",
-    ServerID = 10029
-  },
-  [10030] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录30",
-    ServerID = 10030
-  },
-  [10031] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录31",
-    ServerID = 10031
-  },
-  [10032] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录32",
-    ServerID = 10032
-  },
-  [10033] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录33",
-    ServerID = 10033
-  },
-  [10034] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录34",
-    ServerID = 10034
-  },
-  [10035] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录35",
-    ServerID = 10035
-  },
-  [10036] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录36",
-    ServerID = 10036
-  },
-  [10037] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录37",
-    ServerID = 10037
-  },
-  [10038] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录38",
-    ServerID = 10038
-  },
-  [10039] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录39",
-    ServerID = 10039
-  },
-  [10040] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录40",
-    ServerID = 10040
-  },
-  [10041] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录41",
-    ServerID = 10041
-  },
-  [10042] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录42",
-    ServerID = 10042
-  },
-  [10043] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录43",
-    ServerID = 10043
-  },
-  [10044] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录44",
-    ServerID = 10044
-  },
-  [10045] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录45",
-    ServerID = 10045
-  },
-  [10046] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录46",
-    ServerID = 10046
-  },
-  [10047] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录47",
-    ServerID = 10047
-  },
-  [10048] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录48",
-    ServerID = 10048
-  },
-  [10049] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录49",
-    ServerID = 10049
-  },
-  [10050] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 10001,
-    Name = "obt国服登录50",
-    ServerID = 10050
-  },
-  [20001] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 20001,
-    Name = "obt亚服登录1",
-    ServerID = 20001
-  },
-  [20002] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 20001,
-    Name = "obt亚服登录2",
-    ServerID = 20002
-  },
-  [20003] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 20001,
-    Name = "obt亚服登录3",
-    ServerID = 20003
-  },
-  [20004] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 20001,
-    Name = "obt亚服登录4",
-    ServerID = 20004
-  },
-  [20005] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 20001,
-    Name = "obt亚服登录5",
-    ServerID = 20005
-  },
-  [20006] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 20001,
-    Name = "obt亚服登录6",
-    ServerID = 20006
-  },
-  [20007] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 20001,
-    Name = "obt亚服登录7",
-    ServerID = 20007
-  },
-  [20008] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 20001,
-    Name = "obt亚服登录8",
-    ServerID = 20008
-  },
-  [20009] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 20001,
-    Name = "obt亚服登录9",
-    ServerID = 20009
-  },
-  [20010] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 20001,
-    Name = "obt亚服登录10",
-    ServerID = 20010
-  },
-  [20011] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 20001,
-    Name = "obt亚服登录11",
-    ServerID = 20011
-  },
-  [20012] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 20001,
-    Name = "obt亚服登录12",
-    ServerID = 20012
-  },
-  [20013] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 20001,
-    Name = "obt亚服登录13",
-    ServerID = 20013
-  },
-  [30001] = {
-    Area = "America",
-    DevFlag = "Public",
-    GroupId = 30001,
-    Name = "obt美服登录1",
-    ServerID = 30001
-  },
-  [30002] = {
-    Area = "America",
-    DevFlag = "Public",
-    GroupId = 30001,
-    Name = "obt美服登录2",
-    ServerID = 30002
-  },
-  [30003] = {
-    Area = "America",
-    DevFlag = "Public",
-    GroupId = 30001,
-    Name = "obt美服登录3",
-    ServerID = 30003
-  },
-  [30004] = {
-    Area = "America",
-    DevFlag = "Public",
-    GroupId = 30001,
-    Name = "obt美服登录4",
-    ServerID = 30004
-  },
-  [30005] = {
-    Area = "America",
-    DevFlag = "Public",
-    GroupId = 30001,
-    Name = "obt美服登录5",
-    ServerID = 30005
-  },
-  [30006] = {
-    Area = "America",
-    DevFlag = "Public",
-    GroupId = 30001,
-    Name = "obt美服登录6",
-    ServerID = 30006
-  },
-  [30007] = {
-    Area = "America",
-    DevFlag = "Public",
-    GroupId = 30001,
-    Name = "obt美服登录7",
-    ServerID = 30007
-  },
-  [30008] = {
-    Area = "America",
-    DevFlag = "Public",
-    GroupId = 30001,
-    Name = "obt美服登录8",
-    ServerID = 30008
-  },
-  [30009] = {
-    Area = "America",
-    DevFlag = "Public",
-    GroupId = 30001,
-    Name = "obt美服登录9",
-    ServerID = 30009
-  },
-  [30010] = {
-    Area = "America",
-    DevFlag = "Public",
-    GroupId = 30001,
-    Name = "obt美服登录10",
-    ServerID = 30010
-  },
-  [30011] = {
-    Area = "America",
-    DevFlag = "Public",
-    GroupId = 30001,
-    Name = "obt美服登录11",
-    ServerID = 30011
-  },
-  [40001] = {
-    Area = "Europe",
-    DevFlag = "Public",
-    GroupId = 40001,
-    Name = "obt欧服登录1",
-    ServerID = 40001
-  },
-  [40002] = {
-    Area = "Europe",
-    DevFlag = "Public",
-    GroupId = 40001,
-    Name = "obt欧服登录2",
-    ServerID = 40002
-  },
-  [40003] = {
-    Area = "Europe",
-    DevFlag = "Public",
-    GroupId = 40001,
-    Name = "obt欧服登录3",
-    ServerID = 40003
-  },
-  [40004] = {
-    Area = "Europe",
-    DevFlag = "Public",
-    GroupId = 40001,
-    Name = "obt欧服登录4",
-    ServerID = 40004
-  },
-  [40005] = {
-    Area = "Europe",
-    DevFlag = "Public",
-    GroupId = 40001,
-    Name = "obt欧服登录5",
-    ServerID = 40005
-  },
-  [40006] = {
-    Area = "Europe",
-    DevFlag = "Public",
-    GroupId = 40001,
-    Name = "obt欧服登录6",
-    ServerID = 40006
-  },
-  [50001] = {
-    Area = "HMT",
-    DevFlag = "Public",
-    GroupId = 50001,
-    Name = "obt港澳台服登录1",
-    ServerID = 50001
-  },
-  [50002] = {
-    Area = "HMT",
-    DevFlag = "Public",
-    GroupId = 50001,
-    Name = "obt港澳台服登录2",
-    ServerID = 50002
-  },
-  [50003] = {
-    Area = "HMT",
-    DevFlag = "Public",
-    GroupId = 50001,
-    Name = "obt港澳台服登录3",
-    ServerID = 50003
-  },
-  [50004] = {
-    Area = "HMT",
-    DevFlag = "Public",
-    GroupId = 50001,
-    Name = "obt港澳台服登录4",
-    ServerID = 50004
-  },
-  [50005] = {
-    Area = "HMT",
-    DevFlag = "Public",
-    GroupId = 50001,
-    Name = "obt港澳台服登录5",
-    ServerID = 50005
-  },
-  [60001] = {
-    Area = "SEA",
-    DevFlag = "Public",
-    GroupId = 60001,
-    Name = "obt东南亚服登录1",
-    ServerID = 60001
-  },
-  [60002] = {
-    Area = "SEA",
-    DevFlag = "Public",
-    GroupId = 60001,
-    Name = "obt东南亚服登录2",
-    ServerID = 60002
-  },
-  [60003] = {
-    Area = "SEA",
-    DevFlag = "Public",
-    GroupId = 60001,
-    Name = "obt东南亚服登录3",
-    ServerID = 60003
-  },
-  [60004] = {
-    Area = "SEA",
-    DevFlag = "Public",
-    GroupId = 60001,
-    Name = "obt东南亚服登录4",
-    ServerID = 60004
-  },
-  [60005] = {
-    Area = "SEA",
-    DevFlag = "Public",
-    GroupId = 60001,
-    Name = "obt东南亚服登录5",
-    ServerID = 60005
-  },
-  [60006] = {
-    Area = "SEA",
-    DevFlag = "Public",
-    GroupId = 60001,
-    Name = "obt东南亚服登录6",
-    ServerID = 60006
-  },
-  [60007] = {
-    Area = "SEA",
-    DevFlag = "Public",
-    GroupId = 60001,
-    Name = "obt东南亚服登录7",
-    ServerID = 60007
-  },
-  [70001] = {
-    Area = "China",
-    DevFlag = "Public",
-    GroupId = 70001,
-    Name = "国服媒体",
-    ServerID = 70001
-  },
-  [70002] = {
-    Area = "Asian",
-    DevFlag = "Public",
-    GroupId = 70002,
-    Name = "Asia",
-    ServerID = 70002
-  },
-  [70003] = {
-    Area = "America",
-    DevFlag = "Public",
-    GroupId = 70003,
-    Name = "America",
-    ServerID = 70003
-  },
-  [70004] = {
-    Area = "Europe",
-    DevFlag = "Public",
-    GroupId = 70004,
-    Name = "Europe",
-    ServerID = 70004
-  }
+    [101] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 101,
+        Name = "开发服",
+        ServerID = 101,
+    },
+    [102] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 102,
+        Name = "1.2分支国服",
+        ServerID = 102,
+    },
+    [103] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 103,
+        Name = "1.3分支内网服",
+        ServerID = 103,
+    },
+    [104] = {
+        Area = "America",
+        DevFlag = "Development",
+        GroupId = 104,
+        Name = "1.2分支美服",
+        ServerID = 104,
+    },
+    [105] = {
+        Area = "Europe",
+        DevFlag = "Development",
+        GroupId = 105,
+        Name = "1.2分支欧服",
+        ServerID = 105,
+    },
+    [106] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 106,
+        Name = "1.2分支合服测试1",
+        ServerID = 106,
+    },
+    [107] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 106,
+        Name = "1.2分支合服测试2",
+        ServerID = 107,
+    },
+    [201] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 201,
+        Name = "1.3跑测服上",
+        ServerID = 201,
+    },
+    [202] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 202,
+        Name = "1.3跑测服下",
+        ServerID = 202,
+    },
+    [203] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 203,
+        Name = "跑测服1.1下",
+        ServerID = 203,
+    },
+    [204] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 204,
+        Name = "跑测服1.2上",
+        ServerID = 204,
+    },
+    [205] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 205,
+        Name = "跑测服1.2下",
+        ServerID = 205,
+    },
+    [301] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 301,
+        Name = "永浩服",
+        ServerID = 301,
+    },
+    [302] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 302,
+        Name = "shuitian",
+        ServerID = 302,
+    },
+    [303] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 303,
+        Name = "杨晨服",
+        ServerID = 303,
+    },
+    [304] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 304,
+        Name = "Json",
+        ServerID = 304,
+    },
+    [305] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 305,
+        Name = "LXZ",
+        ServerID = 305,
+    },
+    [306] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 306,
+        Name = "QA服",
+        ServerID = 306,
+    },
+    [307] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 307,
+        Name = "雪月服（跨服）",
+        ServerID = 307,
+    },
+    [308] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 308,
+        Name = "咕咕服",
+        ServerID = 308,
+    },
+    [309] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 309,
+        Name = "性能分析服",
+        ServerID = 309,
+    },
+    [310] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 310,
+        Name = "Biaomopopo",
+        ServerID = 310,
+    },
+    [311] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 311,
+        Name = "雪月服",
+        ServerID = 311,
+    },
+    [312] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 312,
+        Name = "咕咕物理服",
+        ServerID = 312,
+    },
+    [313] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 313,
+        Name = "内网http服",
+        ServerID = 313,
+    },
+    [314] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 314,
+        Name = "永浩2服",
+        ServerID = 314,
+    },
+    [315] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 315,
+        Name = "zhangxiang",
+        ServerID = 315,
+    },
+    [317] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 317,
+        Name = "性能优化服",
+        ServerID = 317,
+    },
+    [318] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 318,
+        Name = "自动化测试服",
+        ServerID = 318,
+    },
+    [319] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 319,
+        Name = "自动化测试2服",
+        ServerID = 319,
+    },
+    [333] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 333,
+        Name = "JuleszzZ服",
+        ServerID = 333,
+    },
+    [397] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 399,
+        Name = "本地私服2",
+        ServerID = 397,
+    },
+    [398] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 398,
+        Name = "协议工具服",
+        ServerID = 398,
+    },
+    [399] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 399,
+        Name = "本地私服1",
+        ServerID = 399,
+    },
+    [401] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 401,
+        Name = "阿里云主干测试服1",
+        ServerID = 401,
+    },
+    [402] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 402,
+        Name = "阿里云主干测试服2",
+        ServerID = 402,
+    },
+    [403] = {
+        Area = "Asian",
+        DevFlag = "Development",
+        GroupId = 403,
+        Name = "海外主干测试服",
+        ServerID = 403,
+    },
+    [501] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 501,
+        Name = "OBT分支测试国服501",
+        ServerID = 501,
+    },
+    [502] = {
+        Area = "Asian",
+        DevFlag = "Development",
+        GroupId = 502,
+        Name = "OBT分支测试外服502",
+        ServerID = 502,
+    },
+    [1109] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 1109,
+        Name = "分支2服",
+        ServerID = 1109,
+    },
+    [2012] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 2012,
+        Name = "ds容器测试服",
+        ServerID = 2012,
+    },
+    [5001] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 5001,
+        Name = "官方提审服",
+        ServerID = 5001,
+    },
+    [5002] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 5002,
+        Name = "B站提审服",
+        ServerID = 5002,
+    },
+    [5003] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 5003,
+        Name = "海外提审服",
+        ServerID = 5003,
+    },
+    [5004] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 5004,
+        Name = "国服推荐服",
+        ServerID = 5004,
+    },
+    [5005] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 5005,
+        Name = "海外推荐服",
+        ServerID = 5005,
+    },
+    [6001] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 6001,
+        Name = "云游戏服",
+        ServerID = 6001,
+    },
+    [7001] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 7001,
+        Name = "1.2国内给力服",
+        ServerID = 7001,
+    },
+    [7002] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 7002,
+        Name = "1.1国内给力服",
+        ServerID = 7002,
+    },
+    [8001] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 8001,
+        Name = "1.2海外给力服",
+        ServerID = 8001,
+    },
+    [8002] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 8002,
+        Name = "1.1海外给力服",
+        ServerID = 8002,
+    },
+    [8003] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 8003,
+        Name = "1.2海外给力服(美服测试)",
+        ServerID = 8003,
+    },
+    [8004] = {
+        Area = "Europe",
+        DevFlag = "Public",
+        GroupId = 8004,
+        Name = "1.2海外给力服(欧服测试)",
+        ServerID = 8004,
+    },
+    [10001] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录1",
+        ServerID = 10001,
+    },
+    [10002] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录2",
+        ServerID = 10002,
+    },
+    [10003] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录3",
+        ServerID = 10003,
+    },
+    [10004] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录4",
+        ServerID = 10004,
+    },
+    [10005] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录5",
+        ServerID = 10005,
+    },
+    [10006] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录6",
+        ServerID = 10006,
+    },
+    [10007] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录7",
+        ServerID = 10007,
+    },
+    [10008] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录8",
+        ServerID = 10008,
+    },
+    [10009] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录9",
+        ServerID = 10009,
+    },
+    [10010] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录10",
+        ServerID = 10010,
+    },
+    [10011] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录11",
+        ServerID = 10011,
+    },
+    [10012] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录12",
+        ServerID = 10012,
+    },
+    [10013] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录13",
+        ServerID = 10013,
+    },
+    [10014] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录14",
+        ServerID = 10014,
+    },
+    [10015] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录15",
+        ServerID = 10015,
+    },
+    [10016] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录16",
+        ServerID = 10016,
+    },
+    [10017] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录17",
+        ServerID = 10017,
+    },
+    [10018] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录18",
+        ServerID = 10018,
+    },
+    [10019] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录19",
+        ServerID = 10019,
+    },
+    [10020] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录20",
+        ServerID = 10020,
+    },
+    [10021] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录21",
+        ServerID = 10021,
+    },
+    [10022] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录22",
+        ServerID = 10022,
+    },
+    [10023] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录23",
+        ServerID = 10023,
+    },
+    [10024] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录24",
+        ServerID = 10024,
+    },
+    [10025] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录25",
+        ServerID = 10025,
+    },
+    [10026] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录26",
+        ServerID = 10026,
+    },
+    [10027] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录27",
+        ServerID = 10027,
+    },
+    [10028] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录28",
+        ServerID = 10028,
+    },
+    [10029] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录29",
+        ServerID = 10029,
+    },
+    [10030] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录30",
+        ServerID = 10030,
+    },
+    [10031] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录31",
+        ServerID = 10031,
+    },
+    [10032] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录32",
+        ServerID = 10032,
+    },
+    [10033] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录33",
+        ServerID = 10033,
+    },
+    [10034] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录34",
+        ServerID = 10034,
+    },
+    [10035] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录35",
+        ServerID = 10035,
+    },
+    [10036] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录36",
+        ServerID = 10036,
+    },
+    [10037] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录37",
+        ServerID = 10037,
+    },
+    [10038] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录38",
+        ServerID = 10038,
+    },
+    [10039] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录39",
+        ServerID = 10039,
+    },
+    [10040] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录40",
+        ServerID = 10040,
+    },
+    [10041] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录41",
+        ServerID = 10041,
+    },
+    [10042] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录42",
+        ServerID = 10042,
+    },
+    [10043] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录43",
+        ServerID = 10043,
+    },
+    [10044] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录44",
+        ServerID = 10044,
+    },
+    [10045] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录45",
+        ServerID = 10045,
+    },
+    [10046] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录46",
+        ServerID = 10046,
+    },
+    [10047] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录47",
+        ServerID = 10047,
+    },
+    [10048] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录48",
+        ServerID = 10048,
+    },
+    [10049] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录49",
+        ServerID = 10049,
+    },
+    [10050] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 10001,
+        Name = "obt国服登录50",
+        ServerID = 10050,
+    },
+    [20001] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 20001,
+        Name = "obt亚服登录1",
+        ServerID = 20001,
+    },
+    [20002] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 20001,
+        Name = "obt亚服登录2",
+        ServerID = 20002,
+    },
+    [20003] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 20001,
+        Name = "obt亚服登录3",
+        ServerID = 20003,
+    },
+    [20004] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 20001,
+        Name = "obt亚服登录4",
+        ServerID = 20004,
+    },
+    [20005] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 20001,
+        Name = "obt亚服登录5",
+        ServerID = 20005,
+    },
+    [20006] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 20001,
+        Name = "obt亚服登录6",
+        ServerID = 20006,
+    },
+    [20007] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 20001,
+        Name = "obt亚服登录7",
+        ServerID = 20007,
+    },
+    [20008] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 20001,
+        Name = "obt亚服登录8",
+        ServerID = 20008,
+    },
+    [20009] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 20001,
+        Name = "obt亚服登录9",
+        ServerID = 20009,
+    },
+    [20010] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 20001,
+        Name = "obt亚服登录10",
+        ServerID = 20010,
+    },
+    [20011] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 20001,
+        Name = "obt亚服登录11",
+        ServerID = 20011,
+    },
+    [20012] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 20001,
+        Name = "obt亚服登录12",
+        ServerID = 20012,
+    },
+    [20013] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 20001,
+        Name = "obt亚服登录13",
+        ServerID = 20013,
+    },
+    [30001] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 30001,
+        Name = "obt美服登录1",
+        ServerID = 30001,
+    },
+    [30002] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 30001,
+        Name = "obt美服登录2",
+        ServerID = 30002,
+    },
+    [30003] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 30001,
+        Name = "obt美服登录3",
+        ServerID = 30003,
+    },
+    [30004] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 30001,
+        Name = "obt美服登录4",
+        ServerID = 30004,
+    },
+    [30005] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 30001,
+        Name = "obt美服登录5",
+        ServerID = 30005,
+    },
+    [30006] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 30001,
+        Name = "obt美服登录6",
+        ServerID = 30006,
+    },
+    [30007] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 30001,
+        Name = "obt美服登录7",
+        ServerID = 30007,
+    },
+    [30008] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 30001,
+        Name = "obt美服登录8",
+        ServerID = 30008,
+    },
+    [30009] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 30001,
+        Name = "obt美服登录9",
+        ServerID = 30009,
+    },
+    [30010] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 30001,
+        Name = "obt美服登录10",
+        ServerID = 30010,
+    },
+    [30011] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 30001,
+        Name = "obt美服登录11",
+        ServerID = 30011,
+    },
+    [40001] = {
+        Area = "Europe",
+        DevFlag = "Public",
+        GroupId = 40001,
+        Name = "obt欧服登录1",
+        ServerID = 40001,
+    },
+    [40002] = {
+        Area = "Europe",
+        DevFlag = "Public",
+        GroupId = 40001,
+        Name = "obt欧服登录2",
+        ServerID = 40002,
+    },
+    [40003] = {
+        Area = "Europe",
+        DevFlag = "Public",
+        GroupId = 40001,
+        Name = "obt欧服登录3",
+        ServerID = 40003,
+    },
+    [40004] = {
+        Area = "Europe",
+        DevFlag = "Public",
+        GroupId = 40001,
+        Name = "obt欧服登录4",
+        ServerID = 40004,
+    },
+    [40005] = {
+        Area = "Europe",
+        DevFlag = "Public",
+        GroupId = 40001,
+        Name = "obt欧服登录5",
+        ServerID = 40005,
+    },
+    [40006] = {
+        Area = "Europe",
+        DevFlag = "Public",
+        GroupId = 40001,
+        Name = "obt欧服登录6",
+        ServerID = 40006,
+    },
+    [50001] = {
+        Area = "HMT",
+        DevFlag = "Public",
+        GroupId = 50001,
+        Name = "obt港澳台服登录1",
+        ServerID = 50001,
+    },
+    [50002] = {
+        Area = "HMT",
+        DevFlag = "Public",
+        GroupId = 50001,
+        Name = "obt港澳台服登录2",
+        ServerID = 50002,
+    },
+    [50003] = {
+        Area = "HMT",
+        DevFlag = "Public",
+        GroupId = 50001,
+        Name = "obt港澳台服登录3",
+        ServerID = 50003,
+    },
+    [50004] = {
+        Area = "HMT",
+        DevFlag = "Public",
+        GroupId = 50001,
+        Name = "obt港澳台服登录4",
+        ServerID = 50004,
+    },
+    [50005] = {
+        Area = "HMT",
+        DevFlag = "Public",
+        GroupId = 50001,
+        Name = "obt港澳台服登录5",
+        ServerID = 50005,
+    },
+    [60001] = {
+        Area = "SEA",
+        DevFlag = "Public",
+        GroupId = 60001,
+        Name = "obt东南亚服登录1",
+        ServerID = 60001,
+    },
+    [60002] = {
+        Area = "SEA",
+        DevFlag = "Public",
+        GroupId = 60001,
+        Name = "obt东南亚服登录2",
+        ServerID = 60002,
+    },
+    [60003] = {
+        Area = "SEA",
+        DevFlag = "Public",
+        GroupId = 60001,
+        Name = "obt东南亚服登录3",
+        ServerID = 60003,
+    },
+    [60004] = {
+        Area = "SEA",
+        DevFlag = "Public",
+        GroupId = 60001,
+        Name = "obt东南亚服登录4",
+        ServerID = 60004,
+    },
+    [60005] = {
+        Area = "SEA",
+        DevFlag = "Public",
+        GroupId = 60001,
+        Name = "obt东南亚服登录5",
+        ServerID = 60005,
+    },
+    [60006] = {
+        Area = "SEA",
+        DevFlag = "Public",
+        GroupId = 60001,
+        Name = "obt东南亚服登录6",
+        ServerID = 60006,
+    },
+    [60007] = {
+        Area = "SEA",
+        DevFlag = "Public",
+        GroupId = 60001,
+        Name = "obt东南亚服登录7",
+        ServerID = 60007,
+    },
+    [70001] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 70001,
+        Name = "先遣测试服",
+        ServerID = 70001,
+    },
+    [70002] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 70002,
+        Name = "Asia",
+        ServerID = 70002,
+    },
+    [70003] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 70003,
+        Name = "America",
+        ServerID = 70003,
+    },
+    [80001] = {
+        Area = "China",
+        DevFlag = "Public",
+        GroupId = 80001,
+        Name = "先遣测试服",
+        ServerID = 80001,
+    },
+    [80002] = {
+        Area = "Asian",
+        DevFlag = "Public",
+        GroupId = 80002,
+        Name = "Asia",
+        ServerID = 80002,
+    },
+    [80003] = {
+        Area = "America",
+        DevFlag = "Public",
+        GroupId = 80003,
+        Name = "America",
+        ServerID = 80003,
+    },
+    [90001] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 90001,
+        Name = "1.1压测登录服1",
+        ServerID = 90001,
+    },
+    [90002] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 90001,
+        Name = "1.1压测登录服2",
+        ServerID = 90002,
+    },
+    [90003] = {
+        Area = "China",
+        DevFlag = "Development",
+        GroupId = 90001,
+        Name = "1.1压测登录服3",
+        ServerID = 90003,
+    },
 }

@@ -1,11 +1,23 @@
-return {
-  StaticCreator = {},
-  ManualItem = {},
-  Explore = {},
-  RandomRule = {
-    ["10405"] = {RandomRuleId = 10405},
-    ["108"] = {RandomRuleId = 108},
-    ["7013004"] = {RandomRuleId = 7013004},
-    ["7013005"] = {RandomRuleId = 7013005}
-  }
+return 
+{
+    ["StaticCreator"] = {
+    },
+    ["ManualItem"] = {
+    },
+    ["Explore"] = {
+    },
+    ["RandomRule"] = {
+        ["10405"] = {
+            ["RandomRuleId"] = 10405
+        },
+        ["108"] = {
+            ["RandomRuleId"] = 108
+        },
+        ["7013004"] = {
+            ["RandomRuleId"] = 7013004
+        },
+        ["7013005"] = {
+            ["RandomRuleId"] = 7013005
+        }
+    }
 }

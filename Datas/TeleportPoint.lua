@@ -1,1734 +1,4234 @@
+-- Source Excel file path: ..\datas\Region.xlsx
 local T = {}
 T.RT_1 = {
-  9,
-  10,
-  11,
-  12,
-  13,
-  14,
-  15,
-  16
-}
+		9,
+		10,
+		11,
+		12,
+		13,
+		14,
+		15,
+		16,
+	}
 T.RT_2 = {
-  9,
-  10,
-  13,
-  14,
-  15
-}
+		9,
+		10,
+		13,
+		14,
+		15,
+	}
 T.RT_3 = {
-  1,
-  2,
-  3,
-  5,
-  6,
-  7,
-  9,
-  10,
-  11,
-  13,
-  14
-}
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7,
+		8,
+	}
 T.RT_4 = {
-  1,
-  5,
-  9,
-  13
-}
-T.RT_5 = {16}
-T.RT_6 = {15, 16}
-T.RT_7 = {1, 5}
+		1,
+		2,
+		3,
+		5,
+		6,
+		7,
+		9,
+		10,
+	}
+T.RT_5 = {
+		1,
+		2,
+		3,
+		5,
+		6,
+		7,
+		9,
+		10,
+		11,
+		13,
+		14,
+	}
+T.RT_6 = {
+		1,
+		5,
+		9,
+		13,
+	}
+T.RT_7 = {
+		7,
+		8,
+		11,
+		12,
+		15,
+		16,
+	}
 T.RT_8 = {
-  3,
-  4,
-  7,
-  8,
-  11,
-  12,
-  15,
-  16
-}
+		16,
+	}
 T.RT_9 = {
-  1,
-  2,
-  5,
-  6,
-  9,
-  13
-}
+		13,
+		14,
+		15,
+	}
 T.RT_10 = {
-  1,
-  2,
-  5,
-  6,
-  9,
-  10,
-  13,
-  14
-}
+		1,
+		2,
+		3,
+		5,
+		6,
+		7,
+		9,
+		10,
+		11,
+		13,
+		14,
+		15,
+	}
 T.RT_11 = {
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  8,
-  9,
-  10,
-  11,
-  12,
-  13,
-  14,
-  15,
-  16
-}
-T.RT_12 = {13}
-T.RT_13 = {4}
+		Big = 8,
+		FloorId = 0,
+		Small = T.RT_10,
+	}
+T.RT_12 = {
+		15,
+		16,
+	}
+T.RT_13 = {
+		13,
+		14,
+	}
 T.RT_14 = {
-  1,
-  2,
-  5,
-  6
-}
+		1,
+		5,
+	}
 T.RT_15 = {
-  3,
-  4,
-  7,
-  8,
-  11,
-  12
-}
+		3,
+		4,
+		7,
+		8,
+		11,
+		12,
+		15,
+		16,
+	}
 T.RT_16 = {
-  1,
-  2,
-  5,
-  6,
-  9,
-  10
-}
-T.RT_17 = {8, 12}
-T.RT_18 = {1}
-local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
-  return x
-end
+		1,
+		2,
+		5,
+		6,
+		9,
+		13,
+	}
+T.RT_17 = {
+		3,
+		4,
+	}
+T.RT_18 = {
+		1,
+		2,
+		5,
+		6,
+		9,
+		10,
+		13,
+		14,
+	}
+T.RT_19 = {
+		14,
+		15,
+	}
+T.RT_20 = {
+		Big = 1,
+		FloorId = -1,
+		Small = T.RT_19,
+	}
+T.RT_21 = {
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11,
+		12,
+		13,
+		14,
+		15,
+		16,
+	}
+T.RT_22 = {
+		13,
+	}
+T.RT_23 = {
+		4,
+	}
+T.RT_24 = {
+		8,
+		12,
+		16,
+	}
+T.RT_25 = {
+		4,
+		8,
+		12,
+		15,
+		16,
+	}
+T.RT_26 = {
+		5,
+		9,
+		10,
+		13,
+		14,
+		15,
+	}
+T.RT_27 = {
+		11,
+		12,
+		15,
+		16,
+	}
+T.RT_28 = {
+		3,
+		4,
+		7,
+		8,
+	}
+T.RT_29 = {
+		14,
+	}
+T.RT_30 = {
+		Big = 1,
+		FloorId = 0,
+		Small = T.RT_29,
+	}
+T.RT_31 = {
+		Big = 3,
+		FloorId = 0,
+		Small = T.RT_21,
+	}
+T.RT_32 = {
+		1,
+		2,
+		5,
+		6,
+	}
+T.RT_33 = {
+		3,
+		4,
+		7,
+		8,
+		11,
+		12,
+	}
+T.RT_34 = {
+		4,
+		8,
+		12,
+		16,
+	}
+T.RT_35 = {
+		1,
+		2,
+		5,
+		6,
+		9,
+		10,
+	}
+T.RT_36 = {
+		5,
+		6,
+		9,
+		10,
+		13,
+		14,
+	}
+T.RT_37 = {
+		8,
+		12,
+	}
+T.RT_38 = {
+		1,
+	}
+T.RT_39 = {
+		5,
+		9,
+		13,
+	}
+T.RT_40 = {
+		1,
+		2,
+		5,
+		6,
+		7,
+		9,
+		10,
+		11,
+		12,
+		13,
+		14,
+		15,
+		16,
+	}
+T.RT_41 = {
+		13,
+		14,
+		15,
+		16,
+	}
+T.RT_42 = {
+		2,
+		3,
+		4,
+		6,
+		7,
+		8,
+		10,
+		11,
+		12,
+		14,
+		15,
+		16,
+	}
+T.RT_43 = {
+		4,
+		8,
+	}
+T.RT_44 = {
+		Big = 2,
+		FloorId = 0,
+		Small = T.RT_21,
+	}
+T.RT_45 = {
+		9,
+		13,
+		14,
+	}
+T.RT_46 = {
+		1,
+		2,
+	}
+T.RT_47 = {
+		12,
+		15,
+		16,
+	}
+T.RT_48 = {
+		1,
+		2,
+		5,
+	}
+T.RT_49 = {
+		12,
+		16,
+	}
+T.RT_50 = {
+		Big = 1,
+		FloorId = 0,
+		Small = T.RT_21,
+	}
+T.RT_51 = {
+		3,
+		4,
+		7,
+		8,
+		10,
+		11,
+		12,
+		13,
+		14,
+		15,
+		16,
+	}
+T.RT_52 = {
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11,
+		12,
+	}
+T.RT_53 = {
+		3,
+		4,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11,
+		12,
+		13,
+		14,
+		15,
+		16,
+	}
+T.RT_54 = {
+		3,
+		4,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11,
+		12,
+		13,
+		14,
+		15,
+		16,
+	}
+T.RT_55 = {
+		1,
+		5,
+		9,
+		10,
+		11,
+		13,
+		14,
+		15,
+	}
+T.RT_56 = {
+		1,
+		2,
+		3,
+		4,
+	}
+T.RT_57 = {
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11,
+		12,
+		13,
+		14,
+		15,
+		16,
+	}
+T.RT_58 = {
+		1,
+		2,
+		5,
+		6,
+		9,
+	}
+T.RT_59 = {
+		Big = 44,
+		FloorId = 0,
+		Small = T.RT_21,
+	}
+T.RT_60 = {
+		Big = 4,
+		FloorId = 0,
+		Small = T.RT_21,
+	}
+T.RT_61 = {
+		Big = 22,
+		FloorId = 0,
+		Small = T.RT_21,
+	}
+T.RT_62 = {
+		4,
+		8,
+		12,
+	}
+T.RT_63 = {
+		Big = 15,
+		FloorId = 0,
+		Small = T.RT_21,
+	}
+T.RT_64 = {
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11,
+		12,
+		13,
+		14,
+		15,
+	}
+T.RT_65 = {
+		2,
+		3,
+		4,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11,
+		12,
+		13,
+		14,
+		15,
+		16,
+	}
+T.RT_66 = {
+		1,
+		2,
+		3,
+		5,
+		6,
+		7,
+		9,
+		10,
+		11,
+	}
+T.RT_67 = {
+	}
+T.RT_68 = {
+		Big = 34,
+		FloorId = 0,
+		Small = T.RT_67,
+	}
+T.RT_69 = {
+		Big = 9,
+		FloorId = 0,
+		Small = T.RT_21,
+	}
+local LocalTimeProxy = (DataMgr or {})["LocalTimeProxy"] or function(x) return x end
+local ReadOnly = (DataMgr or {})["ReadOnly"] or function(n, x) return x end
 return ReadOnly("TeleportPoint", {
-  [1001] = {
-    Block = {
-      {
-        Big = 1,
-        FloorId = 0,
-        Small = {
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16
-        },
-        SubRegionId = 100101
-      },
-      {
-        Big = 2,
-        FloorId = 0,
-        Small = T.RT_1,
-        SubRegionId = 100101
-      },
-      {
-        Big = 3,
-        FloorId = 0,
-        Small = {
-          1,
-          2,
-          3,
-          4,
-          6,
-          7,
-          8,
-          12
-        },
-        SubRegionId = 100101
-      },
-      {
-        Big = 4,
-        FloorId = 0,
-        Small = {
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          9,
-          10,
-          11,
-          13,
-          14
-        },
-        SubRegionId = 100101
-      }
-    },
-    Id = 1001,
-    IsDefault = 1,
-    LevelName = "Prologue_Village_Art_0102BigObjs",
-    MechanismPos = {370, -1950},
-    MechanismStateId = 901002,
-    StaticId = 1590001,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_100101_1",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 100101,
-    Temples = {80101},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1002] = {
-    Block = {
-      {
-        Big = 1,
-        FloorId = 0,
-        Small = T.RT_1,
-        SubRegionId = 100102
-      },
-      {
-        Big = 2,
-        FloorId = 0,
-        Small = T.RT_2,
-        SubRegionId = 100102
-      },
-      {
-        Big = 3,
-        FloorId = 0,
-        Small = {
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8
-        },
-        SubRegionId = 100102
-      },
-      {
-        Big = 4,
-        FloorId = 0,
-        Small = {
-          1,
-          2,
-          3,
-          5,
-          6,
-          7,
-          9,
-          10
-        },
-        SubRegionId = 100102
-      }
-    },
-    Id = 1002,
-    LevelName = "Prologue_Balcony_Art_0101BigObjs",
-    MechanismPos = {23530, -985},
-    MechanismStateId = 901002,
-    StaticId = 1570001,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_100102_1",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 100102,
-    Temples = {80102},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1003] = {
-    Block = {
-      {
-        Big = 1,
-        FloorId = 0,
-        Small = {
-          1,
-          2,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16
-        },
-        SubRegionId = 100103
-      },
-      {
-        Big = 2,
-        FloorId = 0,
-        Small = T.RT_3,
-        SubRegionId = 100103
-      },
-      {
-        Big = 3,
-        FloorId = 0,
-        Small = {
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          15,
-          16
-        },
-        SubRegionId = 100103
-      },
-      {
-        Big = 4,
-        FloorId = 0,
-        Small = T.RT_4,
-        SubRegionId = 100103
-      }
-    },
-    Id = 1003,
-    LevelName = "Prologue_Clouds_Art_0101BigObjs",
-    MechanismPos = {22051, 19329},
-    MechanismStateId = 901002,
-    StaticId = 1580002,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_100103_1",
-    TeleportPointPos = 2,
-    TeleportPointSubRegion = 100103,
-    Temples = {80201},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1010] = {
-    Block = {
-      {
-        Big = 5,
-        FloorId = 0,
-        Small = {
-          7,
-          8,
-          11,
-          12,
-          15,
-          16
-        }
-      },
-      {
-        Big = 6,
-        FloorId = 0,
-        Small = {
-          5,
-          9,
-          13,
-          14
-        }
-      }
-    },
-    Id = 1010,
-    IsDefault = 1,
-    LevelName = "Chapter01_Icelake_Art_0303BigObjs",
-    MechanismPos = {-34886, 6415},
-    MechanismStateId = 901002,
-    StaticId = 1180087,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_3",
-    TeleportPointPos = 10,
-    TeleportPointSubRegion = 101103,
-    Temples = {80601},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1011] = {
-    Block = {
-      {
-        Big = 3,
-        FloorId = 0,
-        Small = T.RT_5
-      },
-      {
-        Big = 4,
-        FloorId = 0,
-        Small = {
-          13,
-          14,
-          15
-        }
-      },
-      {
-        Big = 7,
-        FloorId = 0,
-        Small = {
-          3,
-          4,
-          8,
-          11,
-          12,
-          15,
-          16
-        }
-      },
-      {
-        Big = 8,
-        FloorId = 0,
-        Small = {
-          1,
-          2,
-          3,
-          5,
-          6,
-          7,
-          9,
-          10,
-          11,
-          13,
-          14,
-          15
-        }
-      },
-      {
-        Big = 11,
-        FloorId = 0,
-        Small = {
-          1,
-          2,
-          3
-        }
-      }
-    },
-    Id = 1011,
-    LevelName = "Chapter01_IcelakeCity_Art_0202BigObjs",
-    MechanismPos = {358, -1796},
-    MechanismStateId = 901002,
-    StaticId = 1190079,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 101101,
-    Temples = {80301, 70101},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1012] = {
-    Block = {
-      {
-        Big = 1,
-        FloorId = 0,
-        Small = T.RT_6
-      },
-      {
-        Big = 2,
-        FloorId = 0,
-        Small = {13, 14}
-      },
-      {
-        Big = 3,
-        FloorId = 0,
-        Small = {
-          3,
-          4,
-          7,
-          8,
-          12
-        }
-      },
-      {
-        Big = 4,
-        FloorId = 0,
-        Small = {
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11
-        }
-      },
-      {
-        Big = 5,
-        FloorId = 0,
-        Small = T.RT_7
-      }
-    },
-    Id = 1012,
-    LevelName = "Chapter01_IcelakeCity_Art_0103BigObjs",
-    MechanismPos = {-3275, 10937},
-    MechanismStateId = 901002,
-    StaticId = 1190398,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_3",
-    TeleportPointPos = 14,
-    TeleportPointSubRegion = 101101,
-    Temples = {80901},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1013] = {
-    Block = {
-      {
-        Big = 4,
-        FloorId = 0,
-        Small = T.RT_6
-      },
-      {
-        Big = 5,
-        FloorId = 0,
-        Small = {
-          9,
-          10,
-          13,
-          14
-        }
-      },
-      {
-        Big = 8,
-        FloorId = 0,
-        Small = T.RT_8
-      },
-      {
-        Big = 9,
-        FloorId = 0,
-        Small = T.RT_9
-      },
-      {
-        Big = 11,
-        FloorId = 0,
-        Small = {3, 4}
-      }
-    },
-    Id = 1013,
-    LevelName = "Chapter01_Icelake_Art_0402BigObjs",
-    MechanismPos = {-16993, -4920},
-    MechanismStateId = 901002,
-    StaticId = 1190335,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1",
-    TeleportPointPos = 14,
-    TeleportPointSubRegion = 101103,
-    Temples = {80701},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1014] = {
-    Block = {
-      {
-        Big = 9,
-        FloorId = 0,
-        Small = {
-          3,
-          4,
-          7,
-          8,
-          10,
-          11,
-          12,
-          14,
-          15,
-          16
-        }
-      },
-      {
-        Big = 10,
-        FloorId = 0,
-        Small = T.RT_10
-      }
-    },
-    Id = 1014,
-    LevelName = "Chapter01_Icelake_Art_0302BigObjs",
-    MechanismPos = {-33228, -8523},
-    MechanismStateId = 901002,
-    StaticId = 1180086,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_2",
-    TeleportPointPos = 9,
-    TeleportPointSubRegion = 101103,
-    Temples = {80902},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1015] = {
-    Block = {
-      {
-        Big = 1,
-        FloorId = -1,
-        Small = {14, 15}
-      },
-      {
-        Big = 2,
-        FloorId = -1,
-        Small = T.RT_11
-      },
-      {
-        Big = 3,
-        FloorId = -1,
-        Small = T.RT_12
-      },
-      {
-        Big = 7,
-        FloorId = -1,
-        Small = T.RT_13
-      },
-      {
-        Big = 8,
-        FloorId = -1,
-        Small = T.RT_7
-      }
-    },
-    BuildingNameAndId = "Icelake_L-1",
-    Id = 1015,
-    LevelName = "Chapter01_Icelake_Art_0404BigObjs",
-    MechanismPos = {-21962, 24549},
-    MechanismStateId = 901002,
-    StaticId = 1240130,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101103_2",
-    TeleportPointPos = 3,
-    TeleportPointSubRegion = 101103,
-    Temples = {80903},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1016] = {
-    Block = {
-      {
-        Big = 3,
-        FloorId = -1,
-        Small = {
-          8,
-          12,
-          16
-        }
-      },
-      {
-        Big = 4,
-        FloorId = -1,
-        Small = {
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16
-        }
-      },
-      {
-        Big = 5,
-        FloorId = -1,
-        Small = {
-          1,
-          2,
-          5,
-          6,
-          7,
-          9,
-          10,
-          11,
-          13,
-          14,
-          15
-        }
-      },
-      {
-        Big = 9,
-        FloorId = -1,
-        Small = {
-          1,
-          2,
-          3,
-          4,
-          6,
-          7,
-          8,
-          11,
-          12
-        }
-      },
-      {
-        Big = 10,
-        FloorId = -1,
-        Small = T.RT_3
-      }
-    },
-    BuildingNameAndId = "Icelake_L-1",
-    Id = 1016,
-    LevelName = "Chapter01_Icelake_Art_0205BigObjs",
-    MechanismPos = {-49727, 31495},
-    MechanismStateId = 901002,
-    StaticId = 1240354,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101103_1",
-    TeleportPointPos = 5,
-    TeleportPointSubRegion = 101103,
-    Temples = {80501},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1017] = {
-    Block = {
-      {
-        Big = 8,
-        FloorId = -1,
-        Small = {
-          4,
-          8,
-          12,
-          15,
-          16
-        }
-      },
-      {
-        Big = 9,
-        FloorId = -1,
-        Small = {
-          5,
-          9,
-          10,
-          13,
-          14,
-          15
-        }
-      },
-      {
-        Big = 13,
-        FloorId = -1,
-        Small = {
-          2,
-          3,
-          4,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12
-        }
-      },
-      {
-        Big = 14,
-        FloorId = -1,
-        Small = T.RT_7
-      }
-    },
-    BuildingNameAndId = "Icelake_L-1",
-    Id = 1017,
-    LevelName = "Chapter01_Icelake_Art_0304BigObjs",
-    MechanismPos = {-29756, 12563},
-    MechanismStateId = 901002,
-    StaticId = 1240555,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101103_3",
-    TeleportPointPos = 6,
-    TeleportPointSubRegion = 101103,
-    Temples = {80602},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1018] = {
-    Block = {
-      {
-        Big = 6,
-        FloorId = -1,
-        Small = {
-          11,
-          12,
-          15,
-          16
-        }
-      },
-      {
-        Big = 7,
-        FloorId = -1,
-        Small = {
-          1,
-          2,
-          3,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16
-        }
-      },
-      {
-        Big = 8,
-        FloorId = -1,
-        Small = T.RT_12
-      },
-      {
-        Big = 11,
-        FloorId = -1,
-        Small = {
-          3,
-          4,
-          7,
-          8
-        }
-      },
-      {
-        Big = 12,
-        FloorId = -1,
-        Small = {
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        }
-      },
-      {
-        Big = 13,
-        FloorId = -1,
-        Small = T.RT_7
-      }
-    },
-    BuildingNameAndId = "Icelake_L-1",
-    Id = 1018,
-    LevelName = "Chapter01_Icelake_Art_0504BigObjs",
-    MechanismPos = {-3514, 18575},
-    MechanismStateId = 901002,
-    StaticId = 1240556,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101103_4",
-    TeleportPointPos = 7,
-    TeleportPointSubRegion = 101103,
-    Temples = {80502},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1020] = {
-    Block = {
-      {
-        Big = 1,
-        FloorId = 0,
-        Small = {14}
-      },
-      {
-        Big = 2,
-        FloorId = 0,
-        Small = {
-          7,
-          8,
-          10,
-          11,
-          12,
-          15,
-          16
-        }
-      },
-      {
-        Big = 3,
-        FloorId = 0,
-        Small = T.RT_11
-      },
-      {
-        Big = 4,
-        FloorId = 0,
-        Small = T.RT_9
-      },
-      {
-        Big = 6,
-        FloorId = 0,
-        Small = T.RT_14
-      }
-    },
-    Id = 1020,
-    IsDefault = 1,
-    LevelName = "Chapter01_Kuangkeng_Part_01",
-    MechanismPos = {-2104, -3290},
-    MechanismStateId = 901002,
-    StaticId = 1270033,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1",
-    TeleportPointPos = 2,
-    TeleportPointSubRegion = 101301,
-    Temples = {81501},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1021] = {
-    Block = {
-      {
-        Big = 4,
-        FloorId = 0,
-        Small = T.RT_15
-      },
-      {
-        Big = 5,
-        FloorId = 0,
-        Small = T.RT_14
-      },
-      {
-        Big = 1,
-        FloorId = -1,
-        Small = {
-          4,
-          8,
-          12,
-          16
-        }
-      },
-      {
-        Big = 2,
-        FloorId = -1,
-        Small = T.RT_10
-      },
-      {
-        Big = 3,
-        FloorId = -1,
-        Small = T.RT_8
-      },
-      {
-        Big = 4,
-        FloorId = -1,
-        Small = T.RT_16
-      },
-      {
-        Big = 1,
-        FloorId = -2,
-        Small = T.RT_5
-      },
-      {
-        Big = 2,
-        FloorId = -2,
-        Small = T.RT_2
-      },
-      {
-        Big = 3,
-        FloorId = -2,
-        Small = T.RT_8
-      },
-      {
-        Big = 4,
-        FloorId = -2,
-        Small = {
-          1,
-          2,
-          5,
-          6,
-          7,
-          9,
-          10,
-          13,
-          14
-        }
-      }
-    },
-    BuildingNameAndId = "Kuangkeng_L-1",
-    Id = 1021,
-    LevelName = "Chapter01_Kuangkeng_Part_04",
-    MechanismPos = {13852, 31566},
-    MechanismStateId = 901002,
-    StaticId = 1440066,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 101304,
-    Temples = {81502},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1030] = {
-    Block = {
-      {
-        Big = 7,
-        FloorId = 0,
-        Small = {
-          1,
-          5,
-          6,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16
-        }
-      },
-      {
-        Big = 8,
-        FloorId = 0,
-        Small = {
-          5,
-          6,
-          9,
-          10
-        }
-      },
-      {
-        Big = 9,
-        FloorId = 0,
-        Small = {
-          6,
-          9,
-          10,
-          13,
-          14
-        }
-      }
-    },
-    Id = 1030,
-    LevelName = "Chapter01_Sew01_Art_0402BigObjs",
-    MechanismPos = {632, 693},
-    MechanismStateId = 901002,
-    StaticId = 1720062,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101701_1",
-    TeleportPointPos = 3,
-    TeleportPointSubRegion = 101701,
-    Temples = {80702},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1031] = {
-    Block = {
-      {
-        Big = 2,
-        FloorId = 0,
-        Small = {
-          2,
-          3,
-          4,
-          8,
-          12
-        }
-      },
-      {
-        Big = 3,
-        FloorId = 0,
-        Small = T.RT_4
-      }
-    },
-    Id = 1031,
-    IsDefault = 1,
-    LevelName = "Chapter01_Sew02",
-    MechanismPos = {-17261, -8662},
-    MechanismStateId = 901002,
-    StaticId = 1730041,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101702_1",
-    TeleportPointPos = 2,
-    TeleportPointSubRegion = 101702,
-    Temples = {80704},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1032] = {
-    Block = {
-      {
-        Big = 1,
-        FloorId = 0,
-        Small = T.RT_17
-      },
-      {
-        Big = 2,
-        FloorId = 0,
-        Small = {
-          5,
-          6,
-          7,
-          9,
-          10,
-          11,
-          13,
-          14,
-          15
-        }
-      },
-      {
-        Big = 5,
-        FloorId = 0,
-        Small = T.RT_15
-      },
-      {
-        Big = 6,
-        FloorId = 0,
-        Small = T.RT_18
-      }
-    },
-    Id = 1032,
-    LevelName = "Chapter01_Sew02",
-    MechanismPos = {-33224, -14159},
-    MechanismStateId = 901002,
-    StaticId = 1730176,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101702_2",
-    TeleportPointPos = 4,
-    TeleportPointSubRegion = 101702,
-    Temples = {80705},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1033] = {
-    Block = {
-      {
-        Big = 3,
-        FloorId = 0,
-        Small = {
-          3,
-          4,
-          7,
-          8,
-          11,
-          12,
-          14,
-          15,
-          16
-        }
-      },
-      {
-        Big = 4,
-        FloorId = 0,
-        Small = {
-          5,
-          9,
-          13
-        }
-      },
-      {
-        Big = 6,
-        FloorId = 0,
-        Small = {
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16
-        }
-      },
-      {
-        Big = 7,
-        FloorId = 0,
-        Small = {
-          2,
-          3,
-          4
-        }
-      },
-      {
-        Big = 8,
-        FloorId = 0,
-        Small = T.RT_18
-      }
-    },
-    Id = 1033,
-    LevelName = "Chapter01_Sew01_Art_0103BigObjs",
-    MechanismPos = {-31374, 4286},
-    MechanismStateId = 901002,
-    StaticId = 1720679,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101701_2",
-    TeleportPointPos = 4,
-    TeleportPointSubRegion = 101701,
-    Temples = {80703},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1040] = {
-    Block = {
-      {
-        Big = 4,
-        FloorId = 1,
-        Small = T.RT_15
-      },
-      {
-        Big = 5,
-        FloorId = 1,
-        Small = {
-          1,
-          2,
-          5,
-          6,
-          7,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16
-        }
-      },
-      {
-        Big = 6,
-        FloorId = 1,
-        Small = {9, 13}
-      },
-      {
-        Big = 7,
-        FloorId = 1,
-        Small = {2, 3}
-      }
-    },
-    BuildingNameAndId = "Fort_L1",
-    Id = 1040,
-    IsDefault = 1,
-    LevelName = "Haiboliya_Longsha01_Art_0404BigObjs",
-    MechanismPos = {29184, -30997},
-    MechanismStateId = 901002,
-    StaticId = 1640109,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_102101_1",
-    TeleportPointPos = 2,
-    TeleportPointSubRegion = 102101,
-    Temples = {81101},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1041] = {
-    Block = {
-      {
-        Big = 1,
-        FloorId = 1,
-        Small = {
-          13,
-          14,
-          15,
-          16
-        }
-      },
-      {
-        Big = 2,
-        FloorId = 1,
-        Small = {
-          5,
-          6,
-          9,
-          10,
-          13,
-          14
-        }
-      },
-      {
-        Big = 3,
-        FloorId = 1,
-        Small = {
-          2,
-          3,
-          4,
-          6,
-          7,
-          8,
-          10,
-          11,
-          12,
-          14,
-          15,
-          16
-        }
-      },
-      {
-        Big = 4,
-        FloorId = 1,
-        Small = T.RT_16
-      }
-    },
-    BuildingNameAndId = "Fort_L1",
-    Id = 1041,
-    LevelName = "Haiboliya_Longsha01_Art_0303BigObjs",
-    MechanismPos = {10038, -42605},
-    MechanismStateId = 901002,
-    StaticId = 1640264,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_102101_2",
-    TeleportPointPos = 4,
-    TeleportPointSubRegion = 102101,
-    Temples = {81102},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1042] = {
-    Block = {
-      {
-        Big = 1,
-        FloorId = 0,
-        Small = {4, 8}
-      },
-      {
-        Big = 2,
-        FloorId = 0,
-        Small = T.RT_11
-      },
-      {
-        Big = 3,
-        FloorId = 0,
-        Small = {
-          9,
-          13,
-          14
-        }
-      },
-      {
-        Big = 5,
-        FloorId = 0,
-        Small = {
-          3,
-          4,
-          6,
-          7,
-          8
-        }
-      },
-      {
-        Big = 6,
-        FloorId = 0,
-        Small = {1, 2}
-      },
-      {
-        Big = 1,
-        FloorId = -1,
-        Small = {
-          6,
-          7,
-          8,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16
-        }
-      },
-      {
-        Big = 2,
-        FloorId = -1,
-        Small = {2}
-      }
-    },
-    Id = 1042,
-    LevelName = "Haiboliya_Longsha01_Art_0203BigObjs",
-    MechanismPos = {-3802, -35377},
-    MechanismStateId = 901002,
-    StaticId = 1640108,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_102101_3",
-    TeleportPointPos = 3,
-    TeleportPointSubRegion = 102101,
-    Temples = {81103},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1043] = {
-    Block = {
-      {
-        Big = 4,
-        FloorId = 0,
-        Small = {
-          12,
-          15,
-          16
-        }
-      },
-      {
-        Big = 5,
-        FloorId = 0,
-        Small = {
-          9,
-          10,
-          11,
-          13,
-          14
-        }
-      },
-      {
-        Big = 8,
-        FloorId = 0,
-        Small = T.RT_13
-      },
-      {
-        Big = 9,
-        FloorId = 0,
-        Small = {
-          1,
-          2,
-          5
-        }
-      },
-      {
-        Big = 3,
-        FloorId = -1,
-        Small = {
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12
-        }
-      },
-      {
-        Big = 4,
-        FloorId = -1,
-        Small = {5, 9}
-      }
-    },
-    Id = 1043,
-    LevelName = "Haiboliya_Longsha02_Art_0302BigObjs",
-    MechanismPos = {-5977, -11054},
-    MechanismStateId = 901002,
-    StaticId = 1650261,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_102102_1",
-    TeleportPointPos = 5,
-    TeleportPointSubRegion = 102102,
-    Temples = {81001},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1044] = {
-    Block = {
-      {
-        Big = 7,
-        FloorId = 0,
-        Small = {12, 16}
-      },
-      {
-        Big = 8,
-        FloorId = 0,
-        Small = T.RT_1
-      },
-      {
-        Big = 11,
-        FloorId = 0,
-        Small = T.RT_13
-      },
-      {
-        Big = 12,
-        FloorId = 0,
-        Small = {
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          12
-        }
-      },
-      {
-        Big = 8,
-        FloorId = 1,
-        Small = {
-          2,
-          3,
-          4,
-          6,
-          7,
-          8,
-          12
-        }
-      },
-      {
-        Big = 9,
-        FloorId = 1,
-        Small = T.RT_7
-      }
-    },
-    Id = 1044,
-    LevelName = "Haiboliya_Longsha02_Art_0203BigObjs",
-    MechanismPos = {-19392, -1767},
-    MechanismStateId = 901002,
-    StaticId = 1650075,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_102102_2",
-    TeleportPointPos = 3,
-    TeleportPointSubRegion = 102102,
-    Temples = {81002},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1045] = {
-    Block = {
-      {
-        Big = 9,
-        FloorId = 0,
-        Small = T.RT_1
-      },
-      {
-        Big = 10,
-        FloorId = 0,
-        Small = T.RT_12
-      },
-      {
-        Big = 13,
-        FloorId = 0,
-        Small = {
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          10,
-          11,
-          12,
-          14,
-          15,
-          16
-        }
-      },
-      {
-        Big = 14,
-        FloorId = 0,
-        Small = {
-          1,
-          2,
-          5,
-          9
-        }
-      },
-      {
-        Big = 15,
-        FloorId = 0,
-        Small = {
-          2,
-          3,
-          4,
-          6,
-          7,
-          8
-        }
-      },
-      {
-        Big = 4,
-        FloorId = -1,
-        Small = T.RT_17
-      }
-    },
-    Id = 1045,
-    LevelName = "Haiboliya_Longsha02_Art_0403BigObjs",
-    MechanismPos = {4223, 4940},
-    MechanismStateId = 901002,
-    StaticId = 1650076,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_102102_3",
-    TeleportPointPos = 4,
-    TeleportPointSubRegion = 102102,
-    Temples = {81003},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1050] = {
-    Block = {
-      {
-        Big = 1,
-        FloorId = 0,
-        Small = T.RT_11
-      }
-    },
-    Id = 1050,
-    LevelName = "BH_Thea",
-    MechanismPos = {21110, 10770},
-    MechanismStateId = 901002,
-    StaticId = 1969954,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101901_1",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 101901,
-    Temples = {80302},
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1100] = {
-    Id = 1100,
-    IsDefault = 1,
-    LevelName = "Huaxu_Yanjindu_Art_1112BigObjs",
-    MechanismPos = {39438, 45856},
-    MechanismStateId = 901002,
-    StaticId = 2090006,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_1",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 104108,
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1101] = {
-    Id = 1101,
-    LevelName = "Huaxu_Yanjindu_Art_1210BigObjs",
-    MechanismPos = {46525, 22636},
-    MechanismStateId = 901002,
-    StaticId = 2090007,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_2",
-    TeleportPointPos = 2,
-    TeleportPointSubRegion = 104108,
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1102] = {
-    Id = 1102,
-    LevelName = "Huaxu_Yanjindu_Art_1108BigObjs",
-    MechanismPos = {30949, -6210},
-    MechanismStateId = 901002,
-    StaticId = 2110001,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_4",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 104110,
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1103] = {
-    Id = 1103,
-    LevelName = "Huaxu_Yanjindu_Art_1109BigObjs",
-    MechanismPos = {35036, 12212},
-    MechanismStateId = 901002,
-    StaticId = 2080002,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_5",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 104107,
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1104] = {
-    Id = 1104,
-    LevelName = "Huaxu_Yanjindu_Art_0910BigObjs",
-    MechanismPos = {9926, 22736},
-    MechanismStateId = 901002,
-    StaticId = 2040001,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_6",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 104103,
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1105] = {
-    Id = 1105,
-    LevelName = "Huaxu_Yanjindu_Art_0709BigObjs",
-    MechanismPos = {-16352, 11053},
-    MechanismStateId = 901002,
-    StaticId = 2100001,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_7",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 104109,
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1106] = {
-    Id = 1106,
-    LevelName = "Huaxu_Yanjindu_Art_0509BigObjs",
-    MechanismPos = {-41338, 7512},
-    MechanismStateId = 901002,
-    StaticId = 2030001,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_8",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 104102,
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1107] = {
-    Id = 1107,
-    LevelName = "Huaxu_Yanjindu_Art_0606BigObjs",
-    MechanismPos = {-23356, -24687},
-    MechanismStateId = 901002,
-    StaticId = 2060001,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_9",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 104105,
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1108] = {
-    Id = 1108,
-    LevelName = "Huaxu_Yanjindu_Art_1010BigObjs",
-    MechanismPos = {24643, 16027},
-    MechanismStateId = 901002,
-    StaticId = 2080025,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_10",
-    TeleportPointPos = 2,
-    TeleportPointSubRegion = 104107,
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1109] = {
-    Id = 1109,
-    LevelName = "Huaxu_Yanjindu_Art_0908BigObjs",
-    MechanismPos = {7731, -9705},
-    MechanismStateId = 901002,
-    StaticId = 2050001,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_12",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 104104,
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1110] = {
-    Id = 1110,
-    LevelName = "Huaxu_Yanjindu_Art_1006BigObjs",
-    MechanismPos = {18596, -25296},
-    MechanismStateId = 901002,
-    StaticId = 2070001,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_11",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 104106,
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1111] = {
-    Id = 1111,
-    LevelName = "Huaxu_Yanjindu_Art_0810BigObjs",
-    MechanismPos = {2422, 18134},
-    MechanismStateId = 901002,
-    StaticId = 2080026,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_13",
-    TeleportPointPos = 3,
-    TeleportPointSubRegion = 104107,
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1112] = {
-    Id = 1112,
-    LevelName = "Huaxu_Yanjindu_Art_1011BigObjs",
-    MechanismPos = {26814, 33011},
-    MechanismStateId = 901002,
-    StaticId = 2080027,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_14",
-    TeleportPointPos = 4,
-    TeleportPointSubRegion = 104107,
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [1113] = {
-    Id = 1113,
-    LevelName = "Huaxu_Yanjindu_Art_0904BigObjs",
-    MechanismPos = {10407, -61582},
-    MechanismStateId = 901002,
-    StaticId = 2020005,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_15",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 104101,
-    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
-  },
-  [9000] = {
-    Id = 9000,
-    MechanismPos = {31670, 32317},
-    TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
-    TeleportPointPos = 1,
-    TeleportPointSubRegion = 100103
-  },
-  [9001] = {
-    BuildingNameAndId = "Kuangkeng_L-2",
-    Id = 9001,
-    MechanismPos = {18965, 31181},
-    TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
-    TeleportPointPos = 2,
-    TeleportPointSubRegion = 101304
-  },
-  [9002] = {
-    BuildingNameAndId = "Icelake_L-1",
-    Id = 9002,
-    MechanismPos = {-8800, 42600},
-    TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
-    TeleportPointPos = 2,
-    TeleportPointSubRegion = 101103
-  },
-  [9003] = {
-    BuildingNameAndId = "Fort_L-1",
-    Id = 9003,
-    MechanismPos = {3946, -8069},
-    TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
-    TeleportPointPos = 3,
-    TeleportPointSubRegion = 102104
-  },
-  [9004] = {
-    Id = 9004,
-    MechanismPos = {20490, 4135},
-    TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
-    TeleportPointPos = 2,
-    TeleportPointSubRegion = 101901
-  }
+	[101] = {
+		Id = 101,
+		MechanismPos = {
+			7173,
+			3028,
+		},
+		MechanismStateId = 901002,
+		StaticId = 17,
+		TeleportPointName = "核心1",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 999701,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[102] = {
+		Id = 102,
+		IsDefault = 1,
+		MechanismPos = {
+			7874,
+			1050,
+		},
+		MechanismStateId = 901002,
+		StaticId = 18,
+		TeleportPointName = "核心2",
+		TeleportPointPos = 3,
+		TeleportPointSubRegion = 999701,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[103] = {
+		Id = 103,
+		MechanismPos = {
+			9204,
+			-17364,
+		},
+		MechanismStateId = 901002,
+		StaticId = 19,
+		TeleportPointName = "斜坡",
+		TeleportPointPos = 4,
+		TeleportPointSubRegion = 999701,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[104] = {
+		Id = 104,
+		MechanismPos = {
+			-18292,
+			-52533,
+		},
+		MechanismStateId = 901002,
+		StaticId = 20,
+		TeleportPointName = "绿色独立联机区域",
+		TeleportPointPos = 5,
+		TeleportPointSubRegion = 999701,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[105] = {
+		Id = 105,
+		MechanismPos = {
+			3584,
+			510,
+		},
+		MechanismStateId = 901002,
+		StaticId = 21,
+		TeleportPointName = "电梯上",
+		TeleportPointPos = 6,
+		TeleportPointSubRegion = 999701,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[106] = {
+		Id = 106,
+		IsDefault = 1,
+		MechanismPos = {
+			-1806,
+			7080,
+		},
+		MechanismStateId = 901002,
+		StaticId = 22,
+		TeleportPointName = "山上",
+		TeleportPointPos = 7,
+		TeleportPointSubRegion = 999701,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[107] = {
+		Id = 107,
+		MechanismPos = {
+			-22066,
+			-21810,
+		},
+		MechanismStateId = 901002,
+		StaticId = 23,
+		TeleportPointName = "彩色独立联机区域",
+		TeleportPointPos = 8,
+		TeleportPointSubRegion = 999701,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[108] = {
+		Id = 108,
+		MechanismPos = {
+			8554,
+			-5400,
+		},
+		MechanismStateId = 901002,
+		StaticId = 24,
+		TeleportPointName = "钓鱼点",
+		TeleportPointPos = 9,
+		TeleportPointSubRegion = 999701,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1001] = {
+		Block = {
+			{
+				Big = 1,
+				FloorId = 0,
+				Small = {
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+				},
+				SubRegionId = 100101,
+			},
+			{
+				Big = 2,
+				FloorId = 0,
+				Small = T.RT_1,
+				SubRegionId = 100101,
+			},
+			{
+				Big = 3,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					6,
+					7,
+					8,
+					12,
+				},
+				SubRegionId = 100101,
+			},
+			{
+				Big = 4,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					9,
+					10,
+					11,
+					13,
+					14,
+				},
+				SubRegionId = 100101,
+			},
+		},
+		Id = 1001,
+		IsDefault = 1,
+		LevelName = "Prologue_Village_Art_0102BigObjs",
+		MechanismPos = {
+			370,
+			-1950,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1590001,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_100101_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 100101,
+		Temples = {
+			80101,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1002] = {
+		Block = {
+			{
+				Big = 1,
+				FloorId = 0,
+				Small = T.RT_1,
+				SubRegionId = 100102,
+			},
+			{
+				Big = 2,
+				FloorId = 0,
+				Small = T.RT_2,
+				SubRegionId = 100102,
+			},
+			{
+				Big = 3,
+				FloorId = 0,
+				Small = T.RT_3,
+				SubRegionId = 100102,
+			},
+			{
+				Big = 4,
+				FloorId = 0,
+				Small = T.RT_4,
+				SubRegionId = 100102,
+			},
+		},
+		Id = 1002,
+		LevelName = "Prologue_Balcony_Art_0101BigObjs",
+		MechanismPos = {
+			23530,
+			-985,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1570001,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_100102_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 100102,
+		Temples = {
+			80102,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1003] = {
+		Block = {
+			{
+				Big = 1,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+				},
+				SubRegionId = 100103,
+			},
+			{
+				Big = 2,
+				FloorId = 0,
+				Small = T.RT_5,
+				SubRegionId = 100103,
+			},
+			{
+				Big = 3,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					15,
+					16,
+				},
+				SubRegionId = 100103,
+			},
+			{
+				Big = 4,
+				FloorId = 0,
+				Small = T.RT_6,
+				SubRegionId = 100103,
+			},
+		},
+		Id = 1003,
+		LevelName = "Prologue_Clouds_Art_0101BigObjs",
+		MechanismPos = {
+			22051,
+			19329,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1580002,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_100103_1",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 100103,
+		Temples = {
+			80201,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1010] = {
+		Block = {
+			{
+				Big = 5,
+				FloorId = 0,
+				Small = T.RT_7,
+			},
+			{
+				Big = 6,
+				FloorId = 0,
+				Small = {
+					5,
+					9,
+					13,
+					14,
+				},
+			},
+		},
+		Id = 1010,
+		IsDefault = 1,
+		LevelName = "Chapter01_Icelake_Art_0303BigObjs",
+		MechanismPos = {
+			-34886,
+			6415,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1180087,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_3",
+		TeleportPointPos = 10,
+		TeleportPointSubRegion = 101103,
+		Temples = {
+			80601,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1011] = {
+		Block = {
+			{
+				Big = 3,
+				FloorId = 0,
+				Small = T.RT_8,
+			},
+			{
+				Big = 4,
+				FloorId = 0,
+				Small = T.RT_9,
+			},
+			{
+				Big = 7,
+				FloorId = 0,
+				Small = {
+					3,
+					4,
+					8,
+					11,
+					12,
+					15,
+					16,
+				},
+			},
+			T.RT_11,
+			{
+				Big = 11,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+				},
+			},
+		},
+		Id = 1011,
+		LevelName = "Chapter01_IcelakeCity_Art_0202BigObjs",
+		MechanismPos = {
+			358,
+			-1796,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1190079,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 101101,
+		Temples = {
+			80301,
+			70101,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1012] = {
+		Block = {
+			{
+				Big = 1,
+				FloorId = 0,
+				Small = T.RT_12,
+			},
+			{
+				Big = 2,
+				FloorId = 0,
+				Small = T.RT_13,
+			},
+			{
+				Big = 3,
+				FloorId = 0,
+				Small = {
+					3,
+					4,
+					7,
+					8,
+					12,
+				},
+			},
+			{
+				Big = 4,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+				},
+			},
+			{
+				Big = 5,
+				FloorId = 0,
+				Small = T.RT_14,
+			},
+		},
+		Id = 1012,
+		LevelName = "Chapter01_IcelakeCity_Art_0103BigObjs",
+		MechanismPos = {
+			-3275,
+			10937,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1190398,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_3",
+		TeleportPointPos = 14,
+		TeleportPointSubRegion = 101101,
+		Temples = {
+			80901,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1013] = {
+		Block = {
+			{
+				Big = 4,
+				FloorId = 0,
+				Small = T.RT_12,
+			},
+			{
+				Big = 5,
+				FloorId = 0,
+				Small = {
+					9,
+					10,
+					13,
+					14,
+				},
+			},
+			{
+				Big = 8,
+				FloorId = 0,
+				Small = T.RT_15,
+			},
+			{
+				Big = 9,
+				FloorId = 0,
+				Small = T.RT_16,
+			},
+			{
+				Big = 11,
+				FloorId = 0,
+				Small = T.RT_17,
+			},
+		},
+		Id = 1013,
+		LevelName = "Chapter01_Icelake_Art_0402BigObjs",
+		MechanismPos = {
+			-16993,
+			-4920,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1190335,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1",
+		TeleportPointPos = 14,
+		TeleportPointSubRegion = 101103,
+		Temples = {
+			80701,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1014] = {
+		Block = {
+			{
+				Big = 9,
+				FloorId = 0,
+				Small = {
+					3,
+					4,
+					7,
+					8,
+					10,
+					11,
+					12,
+					14,
+					15,
+					16,
+				},
+			},
+			{
+				Big = 10,
+				FloorId = 0,
+				Small = T.RT_18,
+			},
+		},
+		Id = 1014,
+		LevelName = "Chapter01_Icelake_Art_0302BigObjs",
+		MechanismPos = {
+			-33228,
+			-8523,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1180086,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_2",
+		TeleportPointPos = 9,
+		TeleportPointSubRegion = 101103,
+		Temples = {
+			80902,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1015] = {
+		Block = {
+			T.RT_20,
+			{
+				Big = 3,
+				FloorId = -1,
+				Small = T.RT_21,
+			},
+			{
+				Big = 4,
+				FloorId = -1,
+				Small = T.RT_22,
+			},
+			{
+				Big = 8,
+				FloorId = -1,
+				Small = T.RT_23,
+			},
+			{
+				Big = 9,
+				FloorId = -1,
+				Small = T.RT_14,
+			},
+		},
+		BuildingNameAndId = "Icelake_L-1",
+		Id = 1015,
+		LevelName = "Chapter01_Icelake_Art_0404BigObjs",
+		MechanismPos = {
+			-21962,
+			24549,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1240130,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101103_2",
+		TeleportPointPos = 3,
+		TeleportPointSubRegion = 101103,
+		Temples = {
+			80903,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1016] = {
+		Block = {
+			{
+				Big = 4,
+				FloorId = -1,
+				Small = T.RT_24,
+			},
+			{
+				Big = 5,
+				FloorId = -1,
+				Small = {
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+				},
+			},
+			{
+				Big = 6,
+				FloorId = -1,
+				Small = {
+					1,
+					2,
+					5,
+					6,
+					7,
+					9,
+					10,
+					11,
+					13,
+					14,
+					15,
+				},
+			},
+			{
+				Big = 10,
+				FloorId = -1,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					6,
+					7,
+					8,
+					11,
+					12,
+				},
+			},
+			{
+				Big = 11,
+				FloorId = -1,
+				Small = T.RT_5,
+			},
+		},
+		BuildingNameAndId = "Icelake_L-1",
+		Id = 1016,
+		LevelName = "Chapter01_Icelake_Art_0205BigObjs",
+		MechanismPos = {
+			-49727,
+			31495,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1240354,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101103_1",
+		TeleportPointPos = 5,
+		TeleportPointSubRegion = 101103,
+		Temples = {
+			80501,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1017] = {
+		Block = {
+			{
+				Big = 9,
+				FloorId = -1,
+				Small = T.RT_25,
+			},
+			{
+				Big = 9,
+				FloorId = -1,
+				Small = T.RT_26,
+			},
+			{
+				Big = 14,
+				FloorId = -1,
+				Small = {
+					2,
+					3,
+					4,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+				},
+			},
+			{
+				Big = 15,
+				FloorId = -1,
+				Small = T.RT_14,
+			},
+		},
+		BuildingNameAndId = "Icelake_L-1",
+		Id = 1017,
+		LevelName = "Chapter01_Icelake_Art_0304BigObjs",
+		MechanismPos = {
+			-29756,
+			12563,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1240555,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101103_3",
+		TeleportPointPos = 6,
+		TeleportPointSubRegion = 101103,
+		Temples = {
+			80602,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1018] = {
+		Block = {
+			{
+				Big = 7,
+				FloorId = -1,
+				Small = T.RT_27,
+			},
+			{
+				Big = 8,
+				FloorId = -1,
+				Small = {
+					1,
+					2,
+					3,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+				},
+			},
+			{
+				Big = 9,
+				FloorId = -1,
+				Small = T.RT_22,
+			},
+			{
+				Big = 12,
+				FloorId = -1,
+				Small = T.RT_28,
+			},
+			{
+				Big = 13,
+				FloorId = -1,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+				},
+			},
+			{
+				Big = 14,
+				FloorId = -1,
+				Small = T.RT_14,
+			},
+		},
+		BuildingNameAndId = "Icelake_L-1",
+		Id = 1018,
+		LevelName = "Chapter01_Icelake_Art_0504BigObjs",
+		MechanismPos = {
+			-3514,
+			18575,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1240556,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101103_4",
+		TeleportPointPos = 7,
+		TeleportPointSubRegion = 101103,
+		Temples = {
+			80502,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1020] = {
+		Block = {
+			T.RT_30,
+			{
+				Big = 2,
+				FloorId = 0,
+				Small = {
+					7,
+					8,
+					10,
+					11,
+					12,
+					15,
+					16,
+				},
+			},
+			T.RT_31,
+			{
+				Big = 4,
+				FloorId = 0,
+				Small = T.RT_16,
+			},
+			{
+				Big = 7,
+				FloorId = 0,
+				Small = T.RT_32,
+			},
+		},
+		Id = 1020,
+		IsDefault = 1,
+		LevelName = "Chapter01_Kuangkeng_Part_01",
+		MechanismPos = {
+			-2104,
+			-3290,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1270033,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101301_1",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 101301,
+		Temples = {
+			81501,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1021] = {
+		Block = {
+			{
+				Big = 4,
+				FloorId = 0,
+				Small = T.RT_33,
+			},
+			{
+				Big = 5,
+				FloorId = 0,
+				Small = T.RT_32,
+			},
+			{
+				Big = 2,
+				FloorId = -1,
+				Small = T.RT_34,
+			},
+			{
+				Big = 3,
+				FloorId = -1,
+				Small = T.RT_18,
+			},
+			{
+				Big = 4,
+				FloorId = -1,
+				Small = T.RT_15,
+			},
+			{
+				Big = 5,
+				FloorId = -1,
+				Small = T.RT_35,
+			},
+			{
+				Big = 1,
+				FloorId = -2,
+				Small = T.RT_8,
+			},
+			{
+				Big = 2,
+				FloorId = -2,
+				Small = T.RT_2,
+			},
+			{
+				Big = 3,
+				FloorId = -2,
+				Small = T.RT_15,
+			},
+			{
+				Big = 4,
+				FloorId = -2,
+				Small = {
+					1,
+					2,
+					5,
+					6,
+					7,
+					9,
+					10,
+					13,
+					14,
+				},
+			},
+		},
+		BuildingNameAndId = "Kuangkeng_L-1",
+		Id = 1021,
+		LevelName = "Chapter01_Kuangkeng_Part_04",
+		MechanismPos = {
+			13852,
+			31566,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1440066,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101304_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 101304,
+		Temples = {
+			81502,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1030] = {
+		Block = {
+			{
+				Big = 8,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+				},
+			},
+			{
+				Big = 9,
+				FloorId = 0,
+				Small = T.RT_36,
+			},
+			{
+				Big = 10,
+				FloorId = 0,
+				Small = {
+					3,
+				},
+			},
+		},
+		Id = 1030,
+		LevelName = "Chapter01_Sew01_Art_0402BigObjs",
+		MechanismPos = {
+			632,
+			693,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1720062,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101701_1",
+		TeleportPointPos = 3,
+		TeleportPointSubRegion = 101701,
+		Temples = {
+			80702,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1031] = {
+		Block = {
+			T.RT_30,
+			{
+				Big = 3,
+				FloorId = 0,
+				Small = {
+					2,
+					3,
+					4,
+					7,
+					8,
+					11,
+					12,
+				},
+			},
+			{
+				Big = 4,
+				FloorId = 0,
+				Small = T.RT_18,
+			},
+		},
+		Id = 1031,
+		IsDefault = 1,
+		LevelName = "Chapter01_Sew02",
+		MechanismPos = {
+			-17261,
+			-8662,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1730041,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101702_1",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 101702,
+		Temples = {
+			80704,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1032] = {
+		Block = {
+			{
+				Big = 2,
+				FloorId = 0,
+				Small = T.RT_37,
+			},
+			{
+				Big = 3,
+				FloorId = 0,
+				Small = T.RT_36,
+			},
+			{
+				Big = 6,
+				FloorId = 0,
+				Small = T.RT_33,
+			},
+			{
+				Big = 7,
+				FloorId = 0,
+				Small = T.RT_38,
+			},
+		},
+		Id = 1032,
+		LevelName = "Chapter01_Sew02",
+		MechanismPos = {
+			-33224,
+			-14159,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1730176,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101702_2",
+		TeleportPointPos = 4,
+		TeleportPointSubRegion = 101702,
+		Temples = {
+			80705,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1033] = {
+		Block = {
+			{
+				Big = 4,
+				FloorId = 0,
+				Small = T.RT_7,
+			},
+			{
+				Big = 5,
+				FloorId = 0,
+				Small = T.RT_39,
+			},
+			{
+				Big = 7,
+				FloorId = 0,
+				Small = {
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+				},
+			},
+			{
+				Big = 8,
+				FloorId = 0,
+				Small = T.RT_17,
+			},
+			{
+				Big = 9,
+				FloorId = 0,
+				Small = T.RT_38,
+			},
+		},
+		Id = 1033,
+		LevelName = "Chapter01_Sew01_Art_0103BigObjs",
+		MechanismPos = {
+			-31374,
+			4286,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1720679,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101701_2",
+		TeleportPointPos = 4,
+		TeleportPointSubRegion = 101701,
+		Temples = {
+			80703,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1040] = {
+		Block = {
+			{
+				Big = 4,
+				FloorId = 1,
+				Small = T.RT_33,
+			},
+			{
+				Big = 5,
+				FloorId = 1,
+				Small = T.RT_40,
+			},
+			{
+				Big = 6,
+				FloorId = 1,
+				Small = {
+					9,
+					13,
+				},
+			},
+			{
+				Big = 8,
+				FloorId = 1,
+				Small = {
+					2,
+					3,
+				},
+			},
+		},
+		BuildingNameAndId = "Fort_L1",
+		Id = 1040,
+		IsDefault = 1,
+		LevelName = "Haiboliya_Longsha01_Art_0404BigObjs",
+		MechanismPos = {
+			29184,
+			-30997,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1640109,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_102101_1",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 102101,
+		Temples = {
+			81101,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1041] = {
+		Block = {
+			{
+				Big = 1,
+				FloorId = 1,
+				Small = T.RT_41,
+			},
+			{
+				Big = 2,
+				FloorId = 1,
+				Small = T.RT_36,
+			},
+			{
+				Big = 3,
+				FloorId = 1,
+				Small = T.RT_42,
+			},
+			{
+				Big = 4,
+				FloorId = 1,
+				Small = T.RT_35,
+			},
+		},
+		BuildingNameAndId = "Fort_L1",
+		Id = 1041,
+		LevelName = "Haiboliya_Longsha01_Art_0303BigObjs",
+		MechanismPos = {
+			10038,
+			-42605,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1640264,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_102101_2",
+		TeleportPointPos = 4,
+		TeleportPointSubRegion = 102101,
+		Temples = {
+			81102,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1042] = {
+		Block = {
+			{
+				Big = 1,
+				FloorId = 0,
+				Small = T.RT_43,
+			},
+			T.RT_44,
+			{
+				Big = 3,
+				FloorId = 0,
+				Small = T.RT_45,
+			},
+			{
+				Big = 5,
+				FloorId = 0,
+				Small = {
+					3,
+					4,
+					6,
+					7,
+					8,
+				},
+			},
+			{
+				Big = 6,
+				FloorId = 0,
+				Small = T.RT_46,
+			},
+			{
+				Big = 1,
+				FloorId = -1,
+				Small = {
+					6,
+					7,
+					8,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+				},
+			},
+			{
+				Big = 2,
+				FloorId = -1,
+				Small = {
+					2,
+				},
+			},
+		},
+		Id = 1042,
+		LevelName = "Haiboliya_Longsha01_Art_0203BigObjs",
+		MechanismPos = {
+			-3802,
+			-35377,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1640108,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_102101_3",
+		TeleportPointPos = 3,
+		TeleportPointSubRegion = 102101,
+		Temples = {
+			81103,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1043] = {
+		Block = {
+			{
+				Big = 4,
+				FloorId = 0,
+				Small = T.RT_47,
+			},
+			{
+				Big = 5,
+				FloorId = 0,
+				Small = {
+					9,
+					10,
+					11,
+					13,
+					14,
+				},
+			},
+			{
+				Big = 8,
+				FloorId = 0,
+				Small = T.RT_23,
+			},
+			{
+				Big = 9,
+				FloorId = 0,
+				Small = T.RT_48,
+			},
+			{
+				Big = 4,
+				FloorId = -1,
+				Small = {
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+				},
+			},
+			{
+				Big = 5,
+				FloorId = -1,
+				Small = {
+					5,
+					9,
+				},
+			},
+		},
+		Id = 1043,
+		LevelName = "Haiboliya_Longsha02_Art_0302BigObjs",
+		MechanismPos = {
+			-5977,
+			-11054,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1650261,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_102102_1",
+		TeleportPointPos = 5,
+		TeleportPointSubRegion = 102102,
+		Temples = {
+			81001,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1044] = {
+		Block = {
+			{
+				Big = 7,
+				FloorId = 0,
+				Small = T.RT_49,
+			},
+			{
+				Big = 8,
+				FloorId = 0,
+				Small = T.RT_1,
+			},
+			{
+				Big = 11,
+				FloorId = 0,
+				Small = T.RT_23,
+			},
+			{
+				Big = 12,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					12,
+				},
+			},
+			{
+				Big = 9,
+				FloorId = 1,
+				Small = {
+					2,
+					3,
+					4,
+					6,
+					7,
+					8,
+					12,
+				},
+			},
+			{
+				Big = 10,
+				FloorId = 1,
+				Small = T.RT_14,
+			},
+		},
+		Id = 1044,
+		LevelName = "Haiboliya_Longsha02_Art_0203BigObjs",
+		MechanismPos = {
+			-19392,
+			-1767,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1650075,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_102102_2",
+		TeleportPointPos = 3,
+		TeleportPointSubRegion = 102102,
+		Temples = {
+			81002,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1045] = {
+		Block = {
+			{
+				Big = 9,
+				FloorId = 0,
+				Small = T.RT_1,
+			},
+			{
+				Big = 10,
+				FloorId = 0,
+				Small = T.RT_22,
+			},
+			{
+				Big = 13,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					10,
+					11,
+					12,
+					14,
+					15,
+					16,
+				},
+			},
+			{
+				Big = 14,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					5,
+					9,
+				},
+			},
+			{
+				Big = 15,
+				FloorId = 0,
+				Small = {
+					2,
+					3,
+					4,
+					6,
+					7,
+					8,
+				},
+			},
+			{
+				Big = 5,
+				FloorId = -1,
+				Small = T.RT_37,
+			},
+		},
+		Id = 1045,
+		LevelName = "Haiboliya_Longsha02_Art_0403BigObjs",
+		MechanismPos = {
+			4223,
+			4940,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1650076,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_102102_3",
+		TeleportPointPos = 4,
+		TeleportPointSubRegion = 102102,
+		Temples = {
+			81003,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1050] = {
+		Block = {
+			T.RT_50,
+		},
+		Id = 1050,
+		LevelName = "BH_Thea",
+		MechanismPos = {
+			21110,
+			10770,
+		},
+		MechanismStateId = 901002,
+		StaticId = 1969954,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_101901_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 101901,
+		Temples = {
+			80302,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1100] = {
+		Block = {
+			{
+				Big = 94,
+				FloorId = 0,
+				Small = T.RT_7,
+			},
+			{
+				Big = 95,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 96,
+				FloorId = 0,
+				Small = {
+					5,
+					6,
+					7,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+				},
+			},
+			{
+				Big = 97,
+				FloorId = 0,
+				Small = T.RT_1,
+			},
+			{
+				Big = 98,
+				FloorId = 0,
+				Small = T.RT_1,
+			},
+			{
+				Big = 108,
+				FloorId = 0,
+				Small = T.RT_51,
+			},
+			{
+				Big = 109,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 110,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 111,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 112,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 116,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					6,
+					7,
+					8,
+				},
+			},
+			{
+				Big = 117,
+				FloorId = 0,
+				Small = T.RT_52,
+			},
+			{
+				Big = 118,
+				FloorId = 0,
+				Small = T.RT_52,
+			},
+			{
+				Big = 119,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 120,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 124,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 125,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+		},
+		Id = 1100,
+		IsDefault = 1,
+		LevelName = "Huaxu_Yanjindu_Art_1112BigObjs",
+		MechanismPos = {
+			39437,
+			45854,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2090006,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 104108,
+		Temples = {
+			81401,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1101] = {
+		Block = {
+			{
+				Big = 66,
+				FloorId = 0,
+				Small = T.RT_53,
+			},
+			{
+				Big = 67,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 68,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 80,
+				FloorId = 0,
+				Small = T.RT_51,
+			},
+			{
+				Big = 81,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 82,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 83,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 96,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					8,
+				},
+			},
+			{
+				Big = 97,
+				FloorId = 0,
+				Small = T.RT_3,
+			},
+			{
+				Big = 98,
+				FloorId = 0,
+				Small = T.RT_3,
+			},
+		},
+		Id = 1101,
+		LevelName = "Huaxu_Yanjindu_Art_1210BigObjs",
+		MechanismPos = {
+			46155,
+			22382,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2090007,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_2",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 104108,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1102] = {
+		Block = {
+			{
+				Big = 37,
+				FloorId = 0,
+				Small = T.RT_8,
+			},
+			{
+				Big = 38,
+				FloorId = 0,
+				Small = T.RT_54,
+			},
+			{
+				Big = 39,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 40,
+				FloorId = 0,
+				Small = T.RT_55,
+			},
+			{
+				Big = 49,
+				FloorId = 0,
+				Small = T.RT_34,
+			},
+			{
+				Big = 50,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 51,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 52,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 53,
+				FloorId = 0,
+				Small = T.RT_10,
+			},
+			{
+				Big = 63,
+				FloorId = 0,
+				Small = T.RT_43,
+			},
+			{
+				Big = 64,
+				FloorId = 0,
+				Small = T.RT_3,
+			},
+			{
+				Big = 65,
+				FloorId = 0,
+				Small = T.RT_56,
+			},
+			{
+				Big = 66,
+				FloorId = 0,
+				Small = T.RT_46,
+			},
+		},
+		Id = 1102,
+		LevelName = "Huaxu_Yanjindu_Art_1108BigObjs",
+		MechanismPos = {
+			31029,
+			-6177,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2110001,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_4",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 104110,
+		Temples = {
+			81301,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1103] = {
+		Block = {
+			{
+				Big = 63,
+				FloorId = 0,
+				Small = T.RT_27,
+			},
+			{
+				Big = 64,
+				FloorId = 0,
+				Small = T.RT_1,
+			},
+			{
+				Big = 65,
+				FloorId = 0,
+				Small = T.RT_57,
+			},
+			{
+				Big = 66,
+				FloorId = 0,
+				Small = {
+					5,
+				},
+			},
+			{
+				Big = 78,
+				FloorId = 0,
+				Small = {
+					3,
+					4,
+					8,
+				},
+			},
+			{
+				Big = 79,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					11,
+					12,
+				},
+			},
+			{
+				Big = 80,
+				FloorId = 0,
+				Small = T.RT_58,
+			},
+		},
+		Id = 1103,
+		LevelName = "Huaxu_Yanjindu_Art_1109BigObjs",
+		MechanismPos = {
+			35037,
+			12202,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2080002,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_5",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 104107,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1104] = {
+		Block = {
+			T.RT_20,
+			{
+				Big = 3,
+				FloorId = -1,
+				Small = T.RT_13,
+			},
+			{
+				Big = 5,
+				FloorId = -1,
+				Small = {
+					3,
+					4,
+					6,
+					7,
+					8,
+					10,
+					11,
+					12,
+					14,
+					15,
+					16,
+				},
+			},
+			{
+				Big = 6,
+				FloorId = -1,
+				Small = T.RT_21,
+			},
+			{
+				Big = 7,
+				FloorId = -1,
+				Small = T.RT_4,
+			},
+			{
+				Big = 9,
+				FloorId = -1,
+				Small = T.RT_3,
+			},
+			{
+				Big = 10,
+				FloorId = -1,
+				Small = T.RT_58,
+			},
+		},
+		BuildingNameAndId = "Yanjindu_L-1",
+		Id = 1104,
+		LevelName = "Huaxu_Yanjindu_Art_0910BigObjs",
+		MechanismPos = {
+			9817,
+			22799,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2040001,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_6",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 104103,
+		Temples = {
+			81402,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1105] = {
+		Block = {
+			{
+				Big = 46,
+				FloorId = 0,
+				Small = T.RT_12,
+			},
+			{
+				Big = 47,
+				FloorId = 0,
+				Small = T.RT_41,
+			},
+			{
+				Big = 48,
+				FloorId = 0,
+				Small = T.RT_13,
+			},
+			{
+				Big = 60,
+				FloorId = 0,
+				Small = {
+					3,
+					4,
+					7,
+					8,
+					12,
+					16,
+				},
+			},
+			{
+				Big = 61,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 62,
+				FloorId = 0,
+				Small = T.RT_10,
+			},
+			{
+				Big = 76,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					7,
+					8,
+				},
+			},
+			{
+				Big = 77,
+				FloorId = 0,
+				Small = T.RT_48,
+			},
+		},
+		Id = 1105,
+		LevelName = "Huaxu_Yanjindu_Art_0709BigObjs",
+		MechanismPos = {
+			-16352,
+			11053,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2100001,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_7",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 104109,
+		Temples = {
+			80904,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1106] = {
+		Block = {
+			{
+				Big = 19,
+				FloorId = 0,
+				Small = T.RT_41,
+			},
+			{
+				Big = 29,
+				FloorId = 0,
+				Small = {
+					8,
+					12,
+					13,
+					14,
+					15,
+					16,
+				},
+			},
+			{
+				Big = 30,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 31,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 32,
+				FloorId = 0,
+				Small = T.RT_57,
+			},
+			{
+				Big = 33,
+				FloorId = 0,
+				Small = T.RT_39,
+			},
+			{
+				Big = 42,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			T.RT_50,
+			{
+				Big = 43,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			T.RT_59,
+			{
+				Big = 45,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 46,
+				FloorId = 0,
+				Small = {
+					1,
+					5,
+					6,
+					9,
+					10,
+					13,
+					14,
+				},
+			},
+			{
+				Big = 55,
+				FloorId = 0,
+				Small = T.RT_34,
+			},
+			{
+				Big = 56,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 57,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 58,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 59,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 60,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					5,
+					6,
+					9,
+					10,
+					11,
+					13,
+					14,
+					15,
+				},
+			},
+			{
+				Big = 70,
+				FloorId = 0,
+				Small = T.RT_34,
+			},
+			{
+				Big = 71,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 72,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 73,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 74,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 75,
+				FloorId = 0,
+				Small = T.RT_10,
+			},
+			{
+				Big = 86,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 87,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 88,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 89,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 90,
+				FloorId = 0,
+				Small = T.RT_10,
+			},
+			{
+				Big = 101,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 102,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+		},
+		Id = 1106,
+		LevelName = "Huaxu_Yanjindu_Art_0509BigObjs",
+		MechanismPos = {
+			-41158,
+			6354,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2030001,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_8",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 104102,
+		Temples = {
+			81302,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1107] = {
+		Block = {
+			T.RT_60,
+			{
+				Big = 5,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 11,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 12,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 13,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 14,
+				FloorId = 0,
+				Small = T.RT_18,
+			},
+			{
+				Big = 21,
+				FloorId = 0,
+				Small = T.RT_15,
+			},
+			T.RT_61,
+			{
+				Big = 23,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 24,
+				FloorId = 0,
+				Small = T.RT_46,
+			},
+			{
+				Big = 33,
+				FloorId = 0,
+				Small = T.RT_15,
+			},
+			{
+				Big = 34,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 35,
+				FloorId = 0,
+				Small = T.RT_5,
+			},
+			{
+				Big = 46,
+				FloorId = 0,
+				Small = T.RT_62,
+			},
+			{
+				Big = 47,
+				FloorId = 0,
+				Small = T.RT_52,
+			},
+			{
+				Big = 48,
+				FloorId = 0,
+				Small = {
+					1,
+					5,
+					9,
+				},
+			},
+		},
+		Id = 1107,
+		LevelName = "Huaxu_Yanjindu_Art_0606BigObjs",
+		MechanismPos = {
+			-23383,
+			-24272,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2060001,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_9",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 104105,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1108] = {
+		Id = 1108,
+		LevelName = "Huaxu_Yanjindu_Art_1010BigObjs",
+		MechanismPos = {
+			24643,
+			16027,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2080025,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_10",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 104107,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1109] = {
+		Block = {
+			{
+				Big = 35,
+				FloorId = 0,
+				Small = T.RT_47,
+			},
+			{
+				Big = 36,
+				FloorId = 0,
+				Small = {
+					9,
+					10,
+					11,
+					13,
+					14,
+					15,
+				},
+			},
+			{
+				Big = 48,
+				FloorId = 0,
+				Small = {
+					2,
+					3,
+					4,
+					6,
+					7,
+					8,
+					10,
+					11,
+					12,
+					15,
+					16,
+				},
+			},
+			{
+				Big = 49,
+				FloorId = 0,
+				Small = T.RT_10,
+			},
+			{
+				Big = 62,
+				FloorId = 0,
+				Small = T.RT_62,
+			},
+			{
+				Big = 63,
+				FloorId = 0,
+				Small = T.RT_4,
+			},
+		},
+		Id = 1109,
+		LevelName = "Huaxu_Yanjindu_Art_0908BigObjs",
+		MechanismPos = {
+			7731,
+			-9705,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2050001,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_12",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 104104,
+		Temples = {
+			81403,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1110] = {
+		Block = {
+			{
+				Big = 7,
+				FloorId = 0,
+				Small = T.RT_47,
+			},
+			{
+				Big = 8,
+				FloorId = 0,
+				Small = T.RT_45,
+			},
+			{
+				Big = 14,
+				FloorId = 0,
+				Small = {
+					2,
+					3,
+					4,
+					7,
+					8,
+					11,
+					12,
+					15,
+					16,
+				},
+			},
+			T.RT_63,
+			{
+				Big = 16,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 24,
+				FloorId = 0,
+				Small = T.RT_54,
+			},
+			{
+				Big = 25,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 26,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 35,
+				FloorId = 0,
+				Small = T.RT_43,
+			},
+			{
+				Big = 36,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					12,
+					16,
+				},
+			},
+			{
+				Big = 37,
+				FloorId = 0,
+				Small = T.RT_64,
+			},
+			{
+				Big = 38,
+				FloorId = 0,
+				Small = T.RT_46,
+			},
+		},
+		Id = 1110,
+		LevelName = "Huaxu_Yanjindu_Art_1006BigObjs",
+		MechanismPos = {
+			18608,
+			-25303,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2070001,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_11",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 104106,
+		Temples = {
+			81601,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1111] = {
+		Block = {
+			{
+				Big = 62,
+				FloorId = 0,
+				Small = T.RT_8,
+			},
+			{
+				Big = 63,
+				FloorId = 0,
+				Small = T.RT_13,
+			},
+			{
+				Big = 75,
+				FloorId = 0,
+				Small = T.RT_49,
+			},
+			{
+				Big = 76,
+				FloorId = 0,
+				Small = T.RT_1,
+			},
+			{
+				Big = 77,
+				FloorId = 0,
+				Small = T.RT_53,
+			},
+			{
+				Big = 78,
+				FloorId = 0,
+				Small = T.RT_40,
+			},
+			{
+				Big = 90,
+				FloorId = 0,
+				Small = T.RT_23,
+			},
+			{
+				Big = 91,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 92,
+				FloorId = 0,
+				Small = T.RT_64,
+			},
+			{
+				Big = 93,
+				FloorId = 0,
+				Small = T.RT_14,
+			},
+			{
+				Big = 106,
+				FloorId = 0,
+				Small = T.RT_46,
+			},
+		},
+		Id = 1111,
+		LevelName = "Huaxu_Yanjindu_Art_0810BigObjs",
+		MechanismPos = {
+			2376,
+			23863,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2080026,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_14",
+		TeleportPointPos = 3,
+		TeleportPointSubRegion = 104107,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1112] = {
+		Block = {
+			{
+				Big = 79,
+				FloorId = 0,
+				Small = {
+					9,
+					10,
+					13,
+					14,
+					15,
+					16,
+				},
+			},
+			{
+				Big = 92,
+				FloorId = 0,
+				Small = T.RT_8,
+			},
+			{
+				Big = 93,
+				FloorId = 0,
+				Small = T.RT_65,
+			},
+			{
+				Big = 94,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					9,
+					10,
+					13,
+					14,
+				},
+			},
+			{
+				Big = 106,
+				FloorId = 0,
+				Small = T.RT_54,
+			},
+			{
+				Big = 107,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 108,
+				FloorId = 0,
+				Small = T.RT_16,
+			},
+		},
+		Id = 1112,
+		LevelName = "Huaxu_Yanjindu_Art_1011BigObjs",
+		MechanismPos = {
+			26937,
+			33106,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2080027,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_13",
+		TeleportPointPos = 4,
+		TeleportPointSubRegion = 104107,
+		Temples = {
+			80706,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1113] = {
+		Id = 1113,
+		IsDefault = 1,
+		LevelName = "Huaxu_Yanjindu_Alt",
+		MechanismPos = {
+			10608,
+			-61626,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2020005,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_105701_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 105701,
+		Temples = {
+			81602,
+		},
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1200] = {
+		Block = {
+			{
+				Big = 40,
+				FloorId = 0,
+				Small = T.RT_41,
+			},
+			{
+				Big = 41,
+				FloorId = 0,
+				Small = T.RT_41,
+			},
+			{
+				Big = 50,
+				FloorId = 0,
+				Small = T.RT_23,
+			},
+			{
+				Big = 51,
+				FloorId = 0,
+				Small = T.RT_56,
+			},
+			{
+				Big = 47,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 45,
+				FloorId = 0,
+				Small = T.RT_34,
+			},
+			{
+				Big = 46,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 39,
+				FloorId = 0,
+				Small = T.RT_8,
+			},
+		},
+		Id = 1200,
+		IsDefault = 1,
+		LevelName = "Huaxu_Haojing_Art_2622BigObjs",
+		MechanismPos = {
+			43600,
+			-14370,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2010067,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 104501,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1202] = {
+		Block = {
+			{
+				Big = 40,
+				FloorId = 0,
+				Small = T.RT_52,
+			},
+			{
+				Big = 41,
+				FloorId = 0,
+				Small = T.RT_52,
+			},
+			{
+				Big = 34,
+				FloorId = 0,
+				Small = {
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+				},
+			},
+			{
+				Big = 35,
+				FloorId = 0,
+				Small = T.RT_41,
+			},
+			{
+				Big = 39,
+				FloorId = 0,
+				Small = T.RT_37,
+			},
+		},
+		Id = 1202,
+		LevelName = "Huaxu_Haojing_Art_2620BigObjs",
+		MechanismPos = {
+			43307,
+			-34483,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2010069,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3",
+		TeleportPointPos = 3,
+		TeleportPointSubRegion = 104501,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1203] = {
+		Block = {
+			{
+				Big = 48,
+				FloorId = 0,
+				Small = {
+					2,
+					3,
+					4,
+					6,
+					7,
+					8,
+					10,
+					11,
+					12,
+				},
+			},
+			{
+				Big = 49,
+				FloorId = 0,
+				Small = T.RT_52,
+			},
+			{
+				Big = 50,
+				FloorId = 0,
+				Small = T.RT_66,
+			},
+			{
+				Big = 43,
+				FloorId = 0,
+				Small = T.RT_42,
+			},
+			T.RT_59,
+			{
+				Big = 45,
+				FloorId = 0,
+				Small = T.RT_10,
+			},
+		},
+		Id = 1203,
+		LevelName = "Huaxu_Haojing_Art_2422BigObjs",
+		MechanismPos = {
+			9679,
+			-7692,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2400013,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104502_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 104502,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1205] = {
+		Block = {
+			{
+				Big = 32,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 33,
+				FloorId = 0,
+				Small = T.RT_6,
+			},
+			T.RT_68,
+			{
+				Big = 35,
+				FloorId = 0,
+				Small = T.RT_67,
+			},
+			{
+				Big = 36,
+				FloorId = 0,
+				Small = T.RT_15,
+			},
+			{
+				Big = 37,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 38,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 39,
+				FloorId = 0,
+				Small = T.RT_55,
+			},
+			{
+				Big = 40,
+				FloorId = 0,
+				Small = T.RT_67,
+			},
+			{
+				Big = 41,
+				FloorId = 0,
+				Small = T.RT_67,
+			},
+			{
+				Big = 42,
+				FloorId = 0,
+				Small = T.RT_28,
+			},
+			{
+				Big = 43,
+				FloorId = 0,
+				Small = T.RT_14,
+			},
+			{
+				Big = 30,
+				FloorId = 0,
+				Small = T.RT_12,
+			},
+			{
+				Big = 31,
+				FloorId = 0,
+				Small = {
+					4,
+					8,
+					12,
+					13,
+					14,
+					15,
+					16,
+				},
+			},
+		},
+		Id = 1205,
+		LevelName = "Huaxu_Haojing_Art_2420BigObjs",
+		MechanismPos = {
+			14271,
+			-29017,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2400015,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104502_3",
+		TeleportPointPos = 3,
+		TeleportPointSubRegion = 104502,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1206] = {
+		Block = {
+			{
+				Big = 39,
+				FloorId = 0,
+				Small = {
+					2,
+					3,
+					4,
+					7,
+					8,
+				},
+			},
+			{
+				Big = 33,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					6,
+					7,
+					8,
+					10,
+					11,
+					12,
+					14,
+					15,
+					16,
+				},
+			},
+			{
+				Big = 34,
+				FloorId = 0,
+				Small = T.RT_58,
+			},
+		},
+		Id = 1206,
+		LevelName = "Huaxu_Haojing_Art_2619BigObjs",
+		MechanismPos = {
+			33302,
+			-45653,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2410015,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 104503,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1207] = {
+		Block = {
+			{
+				Big = 16,
+				FloorId = 0,
+				Small = T.RT_34,
+			},
+			{
+				Big = 17,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 18,
+				FloorId = 0,
+				Small = T.RT_10,
+			},
+			{
+				Big = 4,
+				FloorId = 0,
+				Small = T.RT_41,
+			},
+			{
+				Big = 5,
+				FloorId = 0,
+				Small = T.RT_41,
+			},
+			{
+				Big = 6,
+				FloorId = 0,
+				Small = T.RT_41,
+			},
+			{
+				Big = 8,
+				FloorId = 0,
+				Small = {
+					2,
+					3,
+					4,
+					7,
+					8,
+					12,
+					16,
+				},
+			},
+			T.RT_69,
+			{
+				Big = 10,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					13,
+					14,
+					15,
+				},
+			},
+		},
+		Id = 1207,
+		LevelName = "Huaxu_Haojing_Art_2517BigObjs",
+		MechanismPos = {
+			30649,
+			-75570,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2410016,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 104503,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1208] = {
+		Block = {
+			{
+				Big = 9,
+				FloorId = 0,
+				Small = T.RT_67,
+			},
+			T.RT_44,
+			T.RT_31,
+			{
+				Big = 4,
+				FloorId = 0,
+				Small = T.RT_52,
+			},
+			{
+				Big = 5,
+				FloorId = 0,
+				Small = T.RT_52,
+			},
+			{
+				Big = 6,
+				FloorId = 0,
+				Small = T.RT_52,
+			},
+			T.RT_50,
+		},
+		Id = 1208,
+		LevelName = "Huaxu_Haojing_Art_2515BigObjs",
+		MechanismPos = {
+			30099,
+			-102626,
+		},
+		MechanismStateId = 901002,
+		StaticId = 292440001,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104506_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 104506,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1209] = {
+		Block = {
+			{
+				Big = 24,
+				FloorId = 0,
+				Small = T.RT_10,
+			},
+			{
+				Big = 16,
+				FloorId = 0,
+				Small = {
+					10,
+					11,
+					14,
+					15,
+				},
+			},
+			{
+				Big = 23,
+				FloorId = 0,
+				Small = T.RT_24,
+			},
+		},
+		Id = 1209,
+		LevelName = "Huaxu_Haojing_Art_2419BigObjs",
+		MechanismPos = {
+			11121,
+			-54242,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2420027,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 104504,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1210] = {
+		Block = {
+			{
+				Big = 14,
+				FloorId = 0,
+				Small = T.RT_41,
+			},
+			T.RT_61,
+			{
+				Big = 23,
+				FloorId = 0,
+				Small = T.RT_10,
+			},
+			{
+				Big = 21,
+				FloorId = 0,
+				Small = T.RT_49,
+			},
+			{
+				Big = 30,
+				FloorId = 0,
+				Small = T.RT_52,
+			},
+			{
+				Big = 31,
+				FloorId = 0,
+				Small = T.RT_66,
+			},
+		},
+		Id = 1210,
+		LevelName = "Huaxu_Haojing_Art_2219BigObjs",
+		MechanismPos = {
+			-10629,
+			-52926,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2420028,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_2",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 104504,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1211] = {
+		Block = {
+			{
+				Big = 14,
+				FloorId = 0,
+				Small = T.RT_22,
+			},
+			{
+				Big = 21,
+				FloorId = 0,
+				Small = {
+					2,
+					3,
+					4,
+					6,
+					7,
+					8,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+				},
+			},
+			{
+				Big = 29,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 22,
+				FloorId = 0,
+				Small = T.RT_67,
+			},
+			{
+				Big = 13,
+				FloorId = 0,
+				Small = {
+					14,
+					15,
+					16,
+				},
+			},
+		},
+		Id = 1211,
+		LevelName = "Huaxu_Haojing_Art_2019BigObjs",
+		MechanismPos = {
+			-32016,
+			-50249,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2420029,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_3",
+		TeleportPointPos = 3,
+		TeleportPointSubRegion = 104504,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1212] = {
+		Block = {
+			{
+				Big = 34,
+				FloorId = 0,
+				Small = T.RT_28,
+			},
+			{
+				Big = 35,
+				FloorId = 0,
+				Small = T.RT_52,
+			},
+			{
+				Big = 26,
+				FloorId = 0,
+				Small = T.RT_25,
+			},
+			{
+				Big = 27,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					5,
+					6,
+					7,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+				},
+			},
+		},
+		Id = 1212,
+		LevelName = "Huaxu_Haojing_Art_2719BigObjs",
+		MechanismPos = {
+			51349,
+			-48304,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2430044,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104505_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 104505,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1213] = {
+		Block = {
+			{
+				Big = 11,
+				FloorId = 0,
+				Small = T.RT_8,
+			},
+			{
+				Big = 27,
+				FloorId = 0,
+				Small = T.RT_43,
+			},
+			{
+				Big = 12,
+				FloorId = 0,
+				Small = T.RT_9,
+			},
+			{
+				Big = 19,
+				FloorId = 0,
+				Small = T.RT_25,
+			},
+			{
+				Big = 28,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					5,
+					6,
+					7,
+				},
+			},
+			{
+				Big = 20,
+				FloorId = 0,
+				Small = T.RT_10,
+			},
+		},
+		Id = 1213,
+		LevelName = "Huaxu_Haojing_Art_2817BigObjs",
+		MechanismPos = {
+			68490,
+			-73070,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2430045,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104505_2",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 104505,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1214] = {
+		Block = {
+			{
+				Big = 18,
+				FloorId = 0,
+				Small = T.RT_34,
+			},
+			{
+				Big = 19,
+				FloorId = 0,
+				Small = T.RT_5,
+			},
+			{
+				Big = 10,
+				FloorId = 0,
+				Small = T.RT_24,
+			},
+			{
+				Big = 11,
+				FloorId = 0,
+				Small = T.RT_26,
+			},
+		},
+		Id = 1214,
+		LevelName = "Huaxu_Haojing_Art_2717BigObjs",
+		MechanismPos = {
+			49903,
+			-79459,
+		},
+		MechanismStateId = 901002,
+		StaticId = 292430075,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104505_3",
+		TeleportPointPos = 3,
+		TeleportPointSubRegion = 104505,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1215] = {
+		Block = {
+			T.RT_11,
+			{
+				Big = 23,
+				FloorId = 0,
+				Small = T.RT_56,
+			},
+			{
+				Big = 7,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 16,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					5,
+					6,
+					7,
+					9,
+					13,
+				},
+			},
+			T.RT_63,
+		},
+		Id = 1215,
+		LevelName = "Huaxu_Haojing_Art_2317BigObjs",
+		MechanismPos = {
+			357,
+			-76977,
+		},
+		MechanismStateId = 901002,
+		StaticId = 292420056,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_4",
+		TeleportPointPos = 4,
+		TeleportPointSubRegion = 104504,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1216] = {
+		Block = {
+			{
+				Big = 24,
+				FloorId = 0,
+				Small = T.RT_62,
+			},
+			{
+				Big = 33,
+				FloorId = 0,
+				Small = T.RT_67,
+			},
+			T.RT_68,
+			{
+				Big = 18,
+				FloorId = 0,
+				Small = T.RT_67,
+			},
+			{
+				Big = 17,
+				FloorId = 0,
+				Small = T.RT_67,
+			},
+			{
+				Big = 16,
+				FloorId = 0,
+				Small = T.RT_67,
+			},
+			{
+				Big = 26,
+				FloorId = 0,
+				Small = T.RT_66,
+			},
+			{
+				Big = 25,
+				FloorId = 0,
+				Small = T.RT_52,
+			},
+		},
+		Id = 1216,
+		LevelName = "Huaxu_Haojing_Art_2618BigObjs",
+		MechanismPos = {
+			33050,
+			-55115,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2410218,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3",
+		TeleportPointPos = 7,
+		TeleportPointSubRegion = 104503,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1300] = {
+		Block = {
+			{
+				Big = 8,
+				FloorId = 0,
+				Small = T.RT_39,
+			},
+			T.RT_69,
+			{
+				Big = 10,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 7,
+				FloorId = 0,
+				Small = {
+					7,
+					8,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+				},
+			},
+		},
+		Id = 1300,
+		IsDefault = 1,
+		LevelName = "Huaxu_Haojing_Reb",
+		MechanismPos = {
+			4566,
+			14347,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2360004,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_105201_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 105201,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1301] = {
+		Block = {
+			{
+				Big = 1,
+				FloorId = 0,
+				Small = T.RT_9,
+			},
+			{
+				Big = 2,
+				FloorId = 0,
+				Small = T.RT_8,
+			},
+			{
+				Big = 3,
+				FloorId = 0,
+				Small = T.RT_65,
+			},
+			T.RT_60,
+			{
+				Big = 5,
+				FloorId = 0,
+				Small = {
+					4,
+					7,
+					8,
+					11,
+					12,
+					16,
+				},
+			},
+			{
+				Big = 6,
+				FloorId = 0,
+				Small = T.RT_21,
+			},
+			{
+				Big = 7,
+				FloorId = 0,
+				Small = {
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					9,
+					10,
+				},
+			},
+			{
+				Big = 8,
+				FloorId = 0,
+				Small = T.RT_67,
+			},
+		},
+		Id = 1301,
+		LevelName = "Huaxu_Haojing_Reb",
+		MechanismPos = {
+			-4131,
+			-5517,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2360005,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_105201_2",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 105201,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1400] = {
+		Id = 1400,
+		IsDefault = 1,
+		LevelName = "Huaxu_Haojing_TRLM",
+		MechanismPos = {
+			-12512,
+			23717,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2370633,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 105301,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[1500] = {
+		Id = 1500,
+		IsDefault = 1,
+		LevelName = "Huaxu_Haojing_YLX",
+		MechanismPos = {
+			17560,
+			3410,
+		},
+		MechanismStateId = 901002,
+		StaticId = 2340003,
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_105501_1",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 105501,
+		UnlockMsg = "UI_TELEPORTPOINT_UNLOCK",
+	},
+	[8000] = {
+		Id = 8000,
+		MechanismPos = {
+			38273,
+			6442,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_AreaCoop.T_Gp_AreaCoop",
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_DEFENCE_1",
+		TeleportPointPos = 7,
+		TeleportPointSubRegion = 104107,
+	},
+	[8001] = {
+		Id = 8001,
+		MechanismPos = {
+			-22713,
+			-15610,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_AreaCoop.T_Gp_AreaCoop",
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_SURVIVALMINIPRO_1",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 104105,
+	},
+	[8002] = {
+		Id = 8002,
+		MechanismPos = {
+			19351,
+			-18648,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_AreaCoop.T_Gp_AreaCoop",
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_EXTERMINATE_1",
+		TeleportPointPos = 4,
+		TeleportPointSubRegion = 104106,
+	},
+	[8003] = {
+		Id = 8003,
+		MechanismPos = {
+			45084,
+			42222,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_AreaCoop.T_Gp_AreaCoop",
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_EXTERNPRO_1",
+		TeleportPointPos = 7,
+		TeleportPointSubRegion = 104108,
+	},
+	[8004] = {
+		BuildingNameAndId = "Yanjindu_L-1",
+		Id = 8004,
+		MechanismPos = {
+			-6274,
+			23368,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_AreaCoop.T_Gp_AreaCoop",
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_DEFENCE_2",
+		TeleportPointPos = 3,
+		TeleportPointSubRegion = 104103,
+	},
+	[8005] = {
+		Id = 8005,
+		MechanismPos = {
+			6760,
+			22943,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_AreaCoop.T_Gp_AreaCoop",
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_SURVIVALMINIPRO_2",
+		TeleportPointPos = 6,
+		TeleportPointSubRegion = 104107,
+	},
+	[8006] = {
+		Id = 8006,
+		MechanismPos = {
+			-1440,
+			-13200,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_AreaCoop.T_Gp_AreaCoop",
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_EXTERNPRO_2",
+		TeleportPointPos = 3,
+		TeleportPointSubRegion = 104104,
+	},
+	[8007] = {
+		Id = 8007,
+		MechanismPos = {
+			-7530,
+			-50410,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_AreaCoop.T_Gp_AreaCoop",
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_DEFENCE_3",
+		TeleportPointPos = 8,
+		TeleportPointSubRegion = 104504,
+	},
+	[8008] = {
+		Id = 8008,
+		MechanismPos = {
+			13260,
+			-83070,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_AreaCoop.T_Gp_AreaCoop",
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_SURVIVALMINIPRO_3",
+		TeleportPointPos = 9,
+		TeleportPointSubRegion = 104504,
+	},
+	[8010] = {
+		Id = 8010,
+		MechanismPos = {
+			51400,
+			-78340,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_AreaCoop.T_Gp_AreaCoop",
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_EXTERNPRO_3",
+		TeleportPointPos = 8,
+		TeleportPointSubRegion = 104505,
+	},
+	[8011] = {
+		Id = 8011,
+		MechanismPos = {
+			12183,
+			6856,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_AreaCoop.T_Gp_AreaCoop",
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_DEFENCE_4",
+		TeleportPointPos = 5,
+		TeleportPointSubRegion = 105201,
+	},
+	[8012] = {
+		Id = 8012,
+		MechanismPos = {
+			13326,
+			831,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_AreaCoop.T_Gp_AreaCoop",
+		TeleportPointName = "UI_TELEPORTPOINT_NAME_SURVIVALMINIPRO_4",
+		TeleportPointPos = 5,
+		TeleportPointSubRegion = 105501,
+	},
+	[9000] = {
+		Id = 9000,
+		MechanismPos = {
+			31670,
+			32317,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
+		TeleportPointPos = 1,
+		TeleportPointSubRegion = 100103,
+	},
+	[9001] = {
+		BuildingNameAndId = "Kuangkeng_L-2",
+		Id = 9001,
+		MechanismPos = {
+			18965,
+			31181,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 101304,
+	},
+	[9002] = {
+		BuildingNameAndId = "Icelake_L-1",
+		Id = 9002,
+		MechanismPos = {
+			-8800,
+			42600,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 101103,
+	},
+	[9003] = {
+		BuildingNameAndId = "Fort_L-1",
+		Id = 9003,
+		MechanismPos = {
+			3946,
+			-8069,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
+		TeleportPointPos = 3,
+		TeleportPointSubRegion = 102104,
+	},
+	[9004] = {
+		Id = 9004,
+		MechanismPos = {
+			20490,
+			4135,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 101901,
+	},
+	[9005] = {
+		Id = 9005,
+		MechanismPos = {
+			43715,
+			23455,
+		},
+		TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
+		TeleportPointPos = 2,
+		TeleportPointSubRegion = 105301,
+	},
 })

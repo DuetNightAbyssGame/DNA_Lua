@@ -1,60 +1,122 @@
-local T = {}
-T.RT_1 = {851400101}
-local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
-  return x
-end
+-- Source Excel file path: ..\datas\Dungeons\MonsterRush.xlsx
+local LocalTimeProxy = (DataMgr or {})["LocalTimeProxy"] or function(x) return x end
+local ReadOnly = (DataMgr or {})["ReadOnly"] or function(n, x) return x end
 return ReadOnly("MonsterRushDungeon", {
-  [40201] = {
-    Description = "无关卡效果",
-    LevelId = 40201,
-    MonsterList = {4020101, 4020102},
-    StaticCreatorList = {851500101},
-    TargetNum = 100
-  },
-  [40202] = {
-    Description = "无关卡效果",
-    LevelId = 40202,
-    MonsterList = {4020201, 4020202},
-    StaticCreatorList = {850100101},
-    TargetNum = 100
-  },
-  [40203] = {
-    Description = "无关卡效果",
-    LevelId = 40203,
-    MonsterList = {4020301, 4020302},
-    StaticCreatorList = {851300101},
-    TargetNum = 100
-  },
-  [40204] = {
-    Description = "Test",
-    GlobalPassiveList = {40101},
-    LevelId = 40204,
-    MonsterList = {4020401, 4020402},
-    StaticCreatorList = T.RT_1,
-    TargetNum = 100
-  },
-  [40205] = {
-    Description = "Test",
-    GlobalPassiveList = {40102},
-    LevelId = 40205,
-    MonsterList = {4020501, 4020502},
-    StaticCreatorList = T.RT_1,
-    TargetNum = 100
-  },
-  [40206] = {
-    Description = "Test",
-    GlobalPassiveList = {40103},
-    LevelId = 40206,
-    MonsterList = {4020601, 4020602},
-    StaticCreatorList = T.RT_1,
-    TargetNum = 100
-  },
-  [40207] = {
-    Description = "Test",
-    GlobalPassiveList = {40104},
-    LevelId = 40207,
-    MonsterList = {4020701, 4020702},
-    StaticCreatorList = {850000201},
-    TargetNum = 100
-  }
+	[22001] = {
+		LevelId = 22001,
+		MonsterList = {
+			2200101,
+			2200102,
+		},
+		StaticCreatorList = {
+			2560001,
+			2010194,
+			2560008,
+			1120008,
+			1120009,
+		},
+		TargetNum = 300,
+	},
+	[22002] = {
+		LevelId = 22002,
+		MonsterList = {
+			2200201,
+			2200202,
+		},
+		StaticCreatorList = {
+			2570002,
+			2010194,
+			2570008,
+			1710055,
+			1710061,
+		},
+		TargetNum = 300,
+	},
+	[22003] = {
+		LevelId = 22003,
+		MonsterList = {
+			2200301,
+			2200302,
+		},
+		StaticCreatorList = {
+			2560003,
+			2010194,
+			2560008,
+			1120008,
+			1120009,
+		},
+		TargetNum = 300,
+	},
+	[22004] = {
+		GlobalPassiveList = {
+			22002,
+		},
+		LevelId = 22004,
+		MonsterList = {
+			2200401,
+			2200402,
+		},
+		StaticCreatorList = {
+			2570009,
+			2010194,
+			2570008,
+			1710055,
+			1710061,
+		},
+		TargetNum = 300,
+	},
+	[22005] = {
+		GlobalPassiveList = {
+			22001,
+		},
+		LevelId = 22005,
+		MonsterList = {
+			2200501,
+			2200502,
+		},
+		StaticCreatorList = {
+			2560004,
+			2010194,
+			2560008,
+			1120008,
+			1120009,
+		},
+		TargetNum = 300,
+	},
+	[22006] = {
+		GlobalPassiveList = {
+			22003,
+		},
+		LevelId = 22006,
+		MonsterList = {
+			2200601,
+			2200602,
+		},
+		StaticCreatorList = {
+			2570005,
+			2010194,
+			2570008,
+			1710055,
+			1710061,
+		},
+		TargetNum = 300,
+	},
+	[22007] = {
+		GlobalPassiveList = {
+			22004,
+		},
+		LevelId = 22007,
+		MonsterList = {
+			2200701,
+			2200702,
+		},
+		StaticCreatorList = {
+			2560007,
+			2010191,
+			2560008,
+			1120008,
+			1120009,
+		},
+		TargetNum = 300,
+	},
 })

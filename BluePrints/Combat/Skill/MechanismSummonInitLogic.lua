@@ -1,17 +1,22 @@
+
+-- local EffectResults = require "BluePrints.Combat.BattleLogic.EffectResults"
+
+---@type BP_CharacterBase_C
 local Component = {}
 
 function Component:RegisterInfo(Info)
-  if Info then
-    self.InfoForInit = Info
-  end
-  self:TryInitActorInfo("InitInfo")
+    if Info then
+        self.InfoForInit = Info
+    end
+
+    self:TryInitActorInfo("InitInfo")
 end
 
 function Component:ReceiveBeginPlay()
-  if self.BPBorn and IsAuthority(self) then
-    self.InfoForInit = {}
-    self:TryInitActorInfo("InitInfo")
-  end
+    if self.BPBorn and IsAuthority(self) then
+        self.InfoForInit = {}
+        self:TryInitActorInfo("InitInfo")
+    end
 end
 
 return Component

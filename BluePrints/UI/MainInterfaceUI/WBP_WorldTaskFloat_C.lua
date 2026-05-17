@@ -1,0 +1,460 @@
+-- --
+-- -- DESCRIPTION
+-- --
+-- -- @COMPANY **
+-- -- @AUTHOR **
+-- -- @DATE ${date} ${time}
+-- --
+
+-- require "UnLua"
+-- require "DataMgr"
+-- local StrLib = require "BluePrints.Common.DataStructure"
+-- local TaskUtils = require "BluePrints.UI.TaskPanel.TaskUtils"
+-- local EMCache = require "EMCache.EMCache"
+-- local WBP_WorldTaskFloat_C = Class("BluePrints.UI.BP_UIState_C")
+
+-- local Deque = StrLib.Deque
+
+-- function WBP_WorldTaskFloat_C:Initialize(Initializer)
+--     self.Super.Initialize(self)
+--     self.CurDoingTaskId = nil
+--     self.PlayerClientAvatar = nil
+--     self.CurTaskInfo = nil
+--     self.CurTaskExtraInfo = nil
+--     self.AnimStatus = nil
+--     self.Status = true -- 用于在L2_To_A和L2_To_B之间切换的标记
+--     self.AnimationWaitToPlayQueue = Deque.New() --- 等待被播放的动效队列，用于Get in和Finish Out，被打断后清空
+--     self.IsAnimQueuePlaying = false -- 是否正在轮播
+-- end
+
+-- function WBP_WorldTaskFloat_C:InitAllTaskInfo()
+--     -- 刚加载出界面的时候刷新一下信息
+--     self.PlayerClientAvatar = self:GetPlayerClientAvatar()
+--     self:RefreshAllList()
+--     if self.CurDoingTaskId ~= nil and self.CurTaskInfo ~= nil then
+--         self.WorldTaskEntryItem:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+--     end
+--     self.WorldTaskEntryItem.Text_Complete:SetText(GText("UI_QUEST_SUCCESS"))
+--     self.WorldTaskEntryItem.Text_NewTask:SetText(GText("UI_QUEST_NEW"))
+--     self:AddTimer(0.5, function ()
+--         self:CheckAndSwitchToTrackingQuest(true)
+--     end)
+-- end
+
+-- function WBP_WorldTaskFloat_C:HideOrShowWorldTask(bShow, bIsNew, bIsComplete)
+--     self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+--     local TaskUI=self.WorldTaskEntryItem
+--     TaskUI:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+--     local ShowOrHideUIInfo = TaskUtils:GetQuestExtraShowOrHideInfoString(self.CurShowingQuestChainId)
+--     if ShowOrHideUIInfo ~= nil then
+--         if ShowOrHideUIInfo['Task'] then
+--             TaskUI:SetVisibility(UE4.ESlateVisibility.Collapsed)
+--         end
+--     end
+--     if bShow then
+--         if bIsNew  then
+--             local NewTaskSet = EMCache:Get("NewTaskSet",true) or {}
+--             local QuestChainId = self.CurShowingQuestChainId
+--             bIsNew = NewTaskSet[QuestChainId] == nil
+--             NewTaskSet[QuestChainId] = true
+--             EMCache:Set("NewTaskSet", NewTaskSet, true)
+--         end
+--         TaskUI:ShowOrHideNewTaskPanel(bIsNew)
+--         local AnimPlaying = nil
+--         if TaskUI:IsAnimationPlaying(TaskUI.L2_To_A) then AnimPlaying = TaskUI.L2_To_A end
+--         if TaskUI:IsAnimationPlaying(TaskUI.L2_To_B) then AnimPlaying = TaskUI.L2_To_B end
+--         if AnimPlaying then 
+--             TaskUI:StopAnimation(AnimPlaying)  -- 停止正在播放中的切换任务动效
+--         end
+--         if self.Status==false then
+--             TaskUI:ResetTaskContent()  -- 当播放Get In时，不管当前的state如何，全部重置为L2_To_A时的状态
+--             TaskUI:ResetPosition()
+--             self.Status=true
+--         end
+--         TaskUI:PlayAnimation(TaskUI.Get_in)
+--     else
+--         TaskUI:PlayFinishAnimWithComplete(bIsComplete)
+--     end
+-- end
+-- -- 检查不透明度
+-- function WBP_WorldTaskFloat_C:HelpShowTask()
+--     local TaskUI=self.WorldTaskEntryItem
+--     -- TaskUI.Panel_Mission01:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+--     -- TaskUI.panel_prologue:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+--     TaskUI:UnbindAllFromAnimationFinished(TaskUI.Get_in)
+--     TaskUI:PlayAnimation(TaskUI.Get_in)
+--     TaskUI:BindToAnimationFinished(
+--         TaskUI.Get_in,
+--         {self, function()
+--                 self:AddTimer(0.02,function() TaskUI:CheckOpacity(self.Status) end)
+--                 --print(_G.LogTag,UE4.UKismetSystemLibrary.GetFrameCount(),"TASKKK Get——in Finish")
+--             end}
+--     )
+-- end
+
+-- function WBP_WorldTaskFloat_C:UpdateTaskExtraInfo(OpType, ExtraInfo)
+--     -- if (self.CurDoingTaskId == nil) then
+--     --     return
+--     -- end
+--     if (OpType == "Add" or OpType == "Modify") then
+--         self:DoUpdateTaskExtraInfo(ExtraInfo)
+--     elseif (OpType == "Delete") then
+--         self.CurTaskExtraInfo = nil
+--     end
+-- end
+
+-- function WBP_WorldTaskFloat_C:CheckIsTaskExist(TaskId)
+--     return TaskId == self.CurDoingTaskId
+-- end
+
+-- function WBP_WorldTaskFloat_C:DoUpdateTaskExtraInfo(ExtraInfo)
+--     local QuestChainId = tonumber(ExtraInfo[3])
+--     if ExtraInfo.ShowOrHideUIInfo ~= nil then
+--         TaskUtils:SetQuestShowOrHideUIInfo(QuestChainId, ExtraInfo.ShowOrHideUIInfo.UIName, ExtraInfo.ShowOrHideUIInfo.IsHide)
+--         return
+--     end
+--     local QuestId = ExtraInfo[4]
+--     local Cnt,Max = ExtraInfo[1],ExtraInfo[2]
+--     TaskUtils:SetQuestExtraInfo(QuestChainId, QuestId, Cnt, Max)
+--     if QuestChainId ~= self:GetPlayerClientAvatar().TrackingQuestChainId then
+--         return
+--     end
+--     self.CurTaskExtraInfo = TaskUtils:GetQuestExtraInfoString(QuestChainId, QuestId)
+--     local TaskDescribe = self:GetTaskDescribeByTaskId(QuestChainId, QuestId)
+--     -- local Info = self:GetTaskInfo(self.CurTaskInfo)
+--     -- Info.TaskDescribe = TaskDescribe
+--     self.WorldTaskEntryItem:SetTaskContentText(self.Status,TaskDescribe)
+-- end
+
+-- function WBP_WorldTaskFloat_C:UpdateTaskInfo(TaskInfo, OpType)
+--     -- 刷新单个Task信息
+--     if self.PlayerClientAvatar == nil or TaskInfo == nil then
+--         return
+--     end
+--     if OpType == "Delete" then
+--         if TaskInfo.IsChainLastTask and not TaskInfo.IsChapterEnd then
+--             self:DoDeleteTaskCommand(TaskInfo)
+--         end
+--     elseif OpType == "Add" then
+--         self.CurDoingTaskId = TaskInfo.TaskId
+--         self.CurTaskInfo = self:GetTaskInfo(TaskInfo)
+--         self:DoAddTaskCommand(TaskInfo)
+--     elseif OpType == "AllDone" then
+--         -- self.AllCurTaskInfo = {}
+--         -- 修改任务信息
+--         local TaskDescribe = self:GetTaskDescribeByTaskId(TaskInfo.TaskChainId, TaskInfo.TaskId)
+--         local NewContentData = {
+--             TaskChainId = TaskInfo.TaskChainId,
+--             TaskName = TaskInfo.TaskName,
+--             TaskTypeImage = TaskInfo.TaskTypeImage,
+--             TaskDescribe = TaskDescribe,
+--             AnimAction = "Finsh_Out"
+--         }
+--         self:DoRefreshTaskCommand(self.CurDoingTaskId, NewContentData)
+--     else
+--         -- 修改任务信息
+--         local TaskDescribe = self:GetTaskDescribeByTaskId(TaskInfo.TaskChainId, TaskInfo.TaskId)
+--         local NewContentData = {
+--             TaskChainId = TaskInfo.TaskChainId,
+--             TaskName = TaskInfo.TaskName,
+--             TaskTypeImage = TaskInfo.TaskTypeImage,
+--             TaskDescribe = TaskDescribe,
+--             AnimAction = "Loop"
+--         }
+--         self:DoRefreshTaskCommand(self.CurDoingTaskId, NewContentData)
+--     end
+-- end
+
+-- function WBP_WorldTaskFloat_C:DoAddTaskCommand(TaskInfo)
+--     self.WorldTaskEntryItem:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+--     local ShowOrHideUIInfo = TaskUtils:GetQuestExtraShowOrHideInfoString(TaskInfo.TaskChainId)
+--     if ShowOrHideUIInfo ~= nil then
+--         if ShowOrHideUIInfo['Task'] then
+--             self.WorldTaskEntryItem:SetVisibility(UE4.ESlateVisibility.Collapsed)
+--         end
+--     end
+--     if (TaskInfo.IsChainFirstTask) then
+
+--         --------------------用于任务面板显示新任务的表格--------------------------
+--         -- local NewQuestChainTable = EMCache:Get("NewQuestChainTable", true) or {}
+--         -- if not NewQuestChainTable[TaskInfo.TaskChainId] then
+--         --     NewQuestChainTable[TaskInfo.TaskChainId] = 1
+--         -- end
+--         -- EMCache:Set("NewQuestChainTable",NewQuestChainTable,true)
+--         --------------------------------------------------------------------------
+
+--         self.CurTaskInfo.AnimAction = nil
+--         self.Status = true
+
+--         --------------------任务链的第一个任务使用Get In动效------------------------------
+--         if not TaskInfo.IsChapterStart then
+--             local NewQuestSet = EMCache:Get("NewTaskSet",true) or {}
+--             -- 第一次收到的任务或者追踪当中的任务才显示
+--             local bCanShow = NewQuestSet[TaskInfo.TaskChainId] == nil --or TaskInfo.TaskChainId == self:GetCurTrackingQuestId()
+--             if bCanShow then
+--                 self:AddToAnimQueue({QuestChainId = TaskInfo.TaskChainId,IsShow = true,IsNew = true})
+--             end
+--         end
+--         --------------------------------------------------------------------------
+
+--         -- if self.Status==false then
+--         --     self.CurTaskInfo.AnimAction = "L2_To_A"
+--         -- else
+--         --     self.CurTaskInfo.AnimAction = nil
+--         -- end
+--         -- self.WorldTaskEntryItem:RefreshTaskInfo(self.CurTaskInfo, self.Status)
+--     else
+--         -- self:ExecuteAdd("L2_In", TaskInfo)
+--         -- 重新下线再上线时STL会再次触发，同时通知到UI中，此时需要判断能不能显示
+--         if TaskInfo.TaskChainId ~= self:GetPlayerClientAvatar().TrackingQuestChainId then
+--             return
+--         end
+
+--         self:FlipStatus()
+--         if self.Status then
+--             self.CurTaskInfo.AnimAction = "L2_To_A"
+--         else
+--             self.CurTaskInfo.AnimAction = "L2_To_B"
+--         end
+--         if self.IsAnimQueuePlaying then
+--             self:ClearAndStopAnimQueue()
+--         end
+--         self.CurShowingQuestChainId = TaskInfo.TaskChainId
+--         self.WorldTaskEntryItem:RefreshTaskInfo(self.CurTaskInfo, self.Status)
+--     end
+-- end
+
+-- function WBP_WorldTaskFloat_C:DoDeleteTaskCommand(TaskInfo)
+--     self:HideOrShowWorldTask(false, false, true)
+--     self:AddToAnimQueue({QuestChainId = TaskInfo.TaskChainId,IsShow = false,IsComplete = true})
+-- end
+
+-- function WBP_WorldTaskFloat_C:DoRefreshTaskCommand(TaskId, NewContentData)
+--     -- 刷新当前任务
+--     self.CurTaskInfo.TaskId = TaskId
+--     self.CurTaskInfo.TaskChainId = NewContentData.TaskChainId
+--     self.CurTaskInfo.TaskName = NewContentData.TaskName
+--     self.CurTaskInfo.TaskTypeImage = NewContentData.TaskTypeImage
+--     self.CurTaskInfo.TaskDescribe = NewContentData.TaskDescribe
+--     self.CurTaskInfo.AnimAction = NewContentData.AnimAction
+
+--     self.WorldTaskEntryItem:RefreshTaskInfo(self.CurTaskInfo, self.Status)
+-- end
+
+-- function WBP_WorldTaskFloat_C:ClickToDoTaskItems(Index)
+--     -- print(_G.LogTag, "DoPickUpItems, Index is ", Index)
+--     -- local TaskInfo = self.AllCurTaskInfo[Index]
+--     local TaskInfo = self.CurTaskInfo
+--     if (type(TaskInfo) == "number") then
+--         local TaskChainId = DataMgr.Quest[TaskInfo].QuestChainId
+--         if (self.PlayerClientAvatar ~= nil) then
+--             --self.PlayerClientAvatar:TryToDoQuest(TaskChainId, TaskId)
+--         end
+--     else
+--         local TaskChainId = TaskInfo.TaskChainId
+--         if (self.PlayerClientAvatar ~= nil) then
+--             --self.PlayerClientAvatar:TryToDoQuest(TaskChainId, TaskId)
+--         end
+--     end
+-- end
+
+-- function WBP_WorldTaskFloat_C:GetTaskDescribeByTaskId(QuestChainId, QuestId)
+--     local TaskDescribe = TaskUtils:GetQuestDetail(QuestChainId,QuestId).QuestDescription
+--     if not TaskDescribe or not  DataMgr.TextMap[TaskDescribe] then
+--         TaskDescribe = GText("UI_QUEST_UNKNOWN")
+--     else
+--         TaskDescribe = GText(TaskDescribe)..TaskUtils:GetQuestExtraInfoString(QuestChainId,QuestId)
+--     end
+--     return TaskDescribe
+-- end
+
+-- function WBP_WorldTaskFloat_C:GetPlayerClientAvatar()
+--     return GWorld:GetAvatar()
+-- end
+
+-- function WBP_WorldTaskFloat_C:GetCurTrackingQuestId()
+--     return GWorld:GetAvatar().TrackingQuestChainId
+-- end
+
+-- function WBP_WorldTaskFloat_C:GetTaskInfo(TaskInfo, Anim,QuestId)
+--     local Result = {}
+--     -- local TaskInfo = self.CurTaskInfo
+--     if (type(TaskInfo) == "number") then
+--         Result.TaskId = TaskInfo
+--         local TaskInfoConfig = DataMgr.QuestChain[TaskInfo]
+--         Result.TaskTypeImage = TaskInfoConfig.TaskTypeImage or "Guide_Icon_Task"
+--         -- print(_G.LogTag, "WBP_PickUpItems_C, Index is ", PickUpItem, Index)
+--         if (TaskInfoConfig ~= nil) then
+--             Result.TaskChainId = TaskInfoConfig.QuestChainId
+--             Result.TaskName = GText(TaskInfoConfig.QuestChainName)
+--             Result.TaskDescribe = self:GetTaskDescribeByTaskId(TaskInfo, QuestId)
+--         end
+--     else
+--         Result.TaskId = TaskInfo.TaskId
+--         Result.TaskTypeImage = "Guide_Icon_Task"
+--         Result.TaskChainId = TaskInfo.TaskChainId
+--         Result.TaskName = TaskInfo.TaskName
+--         Result.TaskDescribe = TaskInfo.TaskDescription --or TaskInfo.TaskDescribe
+--     end
+--     Result.AnimAction = Anim
+--     Result.ParentWidget = self
+--     return Result
+-- end
+
+
+-- -- function WBP_WorldTaskFloat_C:RefreshTaskContentInfo(TaskId, NowNum, MaxNum)
+-- --     local TaskInfoConfig = self.CurTaskInfo
+-- --     if (TaskInfoConfig == nil) then
+-- --         return
+-- --     end
+-- --     local TaskDescribeMain = TaskInfoConfig.TaskDescription or ""
+-- --     local TaskConditionText = "(" .. NowNum .. "/" .. MaxNum .. ")"
+-- --     local TaskDescribeAll = TaskDescribeMain .. TaskConditionText
+-- --     local NewContentData = {
+-- --         TaskChainId = TaskInfoConfig.TaskChainId,
+-- --         TaskName = TaskInfoConfig.TaskName,
+-- --         TaskTypeImage = TaskInfoConfig.TaskTypeImage or "Guide_Icon_Task",
+-- --         TaskDescribe = TaskDescribeAll
+-- --     }
+-- --     self:DoRefreshTaskContentInfo(TaskId, NewContentData)
+-- -- end
+
+-- function WBP_WorldTaskFloat_C:Close()
+--     -- self:RemoveTimer("DelayAddTaskIndicator")
+--     self.ListView_Task:ClearListItems()
+--     self.Super.Close(self)
+-- end
+
+-- function WBP_WorldTaskFloat_C:FlipStatus()
+--     if self.Status == true then
+--         self.Status = false
+--     else
+--         self.Status = true
+--     end
+-- end
+
+-- function WBP_WorldTaskFloat_C:CheckAndSwitchToTrackingQuest(ForceRefresh)
+--     self.AnimationWaitToPlayQueue:Init()
+--     self.IsAnimQueuePlaying = false
+--     local function DoCheckAndSwitch()
+
+--         if not self.AnimationWaitToPlayQueue:IsEmpty() then
+--             return false
+--         end
+
+--         local Avatar = GWorld:GetAvatar()
+--         if not Avatar then
+--             return true
+--         end
+--         local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+--         if not GameMode then
+--             return true
+--         end
+
+--         local TrackingQuestId = Avatar.TrackingQuestChainId
+--         local CurQuestChianId = self.CurShowingQuestChainId or 0
+--         if self.CurTaskInfo then
+--             self.CurTaskInfo.TaskChainId = TrackingQuestId
+--         end
+--         if TrackingQuestId <= 0 and not GameMode:IsInDungeon() then
+--             return true
+--         end
+
+--         if CurQuestChianId ~= TrackingQuestId or ForceRefresh then
+--             local TrackTaskInfo = TaskUtils:GetTrackingQuestDetailInfo()
+--             local CurQuestExtraInfo = TaskUtils.QuestExtraInfo[TrackingQuestId]
+--             if CurQuestExtraInfo and CurQuestExtraInfo[TrackTaskInfo.QuestId] then
+--                 local CurCount = CurQuestExtraInfo[TrackTaskInfo.QuestId][1]
+--                 local MaxCount = CurQuestExtraInfo[TrackTaskInfo.QuestId][2]
+--                 if CurCount >= MaxCount and TrackTaskInfo.bIsEndQuest == true then
+--                     return true
+--                 end
+--             end
+--             if TrackTaskInfo and not GameMode:IsInDungeon() then
+--                 self:AddToAnimQueue({QuestChainId = TrackingQuestId, IsShow = true})
+--                 return false
+--             elseif GameMode:IsInDungeon() then
+--                 return false
+--             else
+--                 return true
+--             end
+--         end
+
+--         return false
+--     end
+
+--     local IsNeedHideSelf = DoCheckAndSwitch()
+--     if IsNeedHideSelf then
+--         self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+--         self.CurShowingQuestChainId = 0
+--     else
+--         self:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+--     end
+
+-- end
+
+-- -----------------------------------Queue相关------------------------------------
+-- -- Data = { QuestChainId = ,  IsShow = , IsNew =, IsComplete =    }
+-- function WBP_WorldTaskFloat_C:AddToAnimQueue(Data)
+--     self.AnimationWaitToPlayQueue:PushBack(Data)
+--     local TaskUI = self.WorldTaskEntryItem
+--     if not TaskUI:IsAnimationPlaying(TaskUI.Get_in) and not TaskUI:IsAnimationPlaying(TaskUI.Finsh_Out) then
+--         self.IsAnimQueuePlaying = false
+--     end
+--     if not self.IsAnimQueuePlaying then
+--         self:StartAnimQueue()
+--     end
+-- end
+
+-- function WBP_WorldTaskFloat_C:StartAnimQueue()
+--     local TaskUI = self.WorldTaskEntryItem
+--     TaskUI:BindToAnimationFinished(TaskUI.Get_in,{self,self.PlayAnimInQueue})
+--     TaskUI:BindToAnimationFinished(TaskUI.Finsh_Out,{self,self.PlayAnimInQueue})
+--     self:PlayAnimInQueue()
+--     self.IsAnimQueuePlaying = true
+-- end
+
+-- function WBP_WorldTaskFloat_C:PlayAnimInQueue()
+--     if self.AnimationWaitToPlayQueue:IsEmpty() then
+--         self:ClearAndStopAnimQueue()
+--         return
+--     end
+--     --print(_G.LogTag,"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+--     local QueueItem = self.AnimationWaitToPlayQueue:PopFront()
+--     local QuestChainId = QueueItem.QuestChainId
+--     local Avatar = GWorld:GetAvatar()
+--     if not Avatar then
+--         return
+--     end
+--     local QuestId = Avatar.QuestChains[QuestChainId].DoingQuestId
+--     if QuestId == 0 then
+--         QuestId = QuestChainId * 100 + 1
+--     end
+--     local TaskInfo = self:GetTaskInfo(QuestChainId,nil,QuestId)
+--     local TaskDescribe = TaskUtils:GetQuestDetail(QuestChainId,QuestId).QuestDescription
+--     if not TaskDescribe or not  DataMgr.TextMap[TaskDescribe] then
+--         TaskInfo.TaskDescribe = GText("UI_QUEST_UNKNOWN")
+--     else
+--         TaskInfo.TaskDescribe = GText(TaskDescribe)..TaskUtils:GetQuestExtraInfoString(QuestChainId,QuestId)
+--     end
+--     self.CurTaskInfo = TaskInfo
+--     self.WorldTaskEntryItem:RefreshTaskInfo(TaskInfo, self.Status)
+--     if QueueItem.IsShow then
+--         self.CurShowingQuestChainId = QuestChainId
+--     end
+--     self:HideOrShowWorldTask(QueueItem.IsShow, QueueItem.IsNew, QueueItem.IsComplete)
+-- end
+
+-- function WBP_WorldTaskFloat_C:ClearAndStopAnimQueue()
+--     local TaskUI = self.WorldTaskEntryItem
+--     TaskUI:UnbindAllFromAnimationFinished(TaskUI.Get_in)
+--     TaskUI:UnbindAllFromAnimationFinished(TaskUI.Finsh_Out)
+--     -- TaskUI:StopAnimation(TaskUI.Finsh_Out)
+--     -- TaskUI:StopAnimation(TaskUI.Get_in)
+--     self.AnimationWaitToPlayQueue:Init()
+--     self.IsAnimQueuePlaying = false
+--     self:CheckAndSwitchToTrackingQuest()
+-- end
+
+-- ------------------------------------------------------------------------
+-- return WBP_WorldTaskFloat_C

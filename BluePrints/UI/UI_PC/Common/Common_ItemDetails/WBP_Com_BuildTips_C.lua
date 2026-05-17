@@ -1,0 +1,113 @@
+local ModController = require "BluePrints.UI.WBP.Armory.Mod.Utils.ModController"
+--
+-- DESCRIPTION
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
+require "UnLua"
+
+---@type WBP_Com_BuildTips_C
+local WBP_Com_BuildTips_C = Class({"BluePrints.UI.BP_EMUserWidget_C","BluePrints.Common.DelayFrameComponent"})
+
+--function M:Initialize(Initializer)
+--end
+
+function WBP_Com_BuildTips_C:Construct()
+    self.Btn_Armory:SetDefaultGamePadImg("View")
+    self.Edit_Tips.Btn_Confirm:SetDefaultGamePadImg("X")
+end
+
+--function M:Tick(MyGeometry, InDeltaTime)
+--end
+
+--function M:Destruct()
+--end
+
+function WBP_Com_BuildTips_C:InitWidget(Params)
+    DebugPrint("thy      Widget is Initing!!!!!!!!!!!!!")
+    self:PlayAnimation(self.In)
+    self:InitData(Params)
+    self:InitUI()
+    self.Btn_Armory:SetText(GText("UI_BAG_Gotoarmory"))
+    self.Btn_Armory:BindEventOnClicked(self.Owner, self.GoToArmoryCallback)
+    
+end
+
+function WBP_Com_BuildTips_C:InitUI()
+    if self.ItemInfo.Type ~= "Pet" then
+        self.Switch_Tips:SetActiveWidgetIndex(0)
+        self.Edit_Tips:SetComfirmCallball(self.MakeSureCallback, self.Owner)
+        self.Edit_Tips:FreahWeaponView(self.Name, self.ItemInfo.Rarity, self.Uuid, nil, self.ItemInfo.Type == "Char")
+        self.Edit_Tips.Btn_Confirm:SetText(GText("UI_Squad_Equip"))
+        self.Edit_Tips.ModType01:SetFocus()
+    else
+        self.Switch_Tips:SetActiveWidgetIndex(1)
+        self.Com_Tips:RefreshItemInfo(self.ItemInfo)
+        local MakeSureCallbackWrapper = function()
+            if self.MakeSureCallback then
+                self.MakeSureCallback(self.Owner, nil)
+            end
+        end
+        self.Com_Tips:InitButtonEvent({
+            ButtonIcon = 3,--黄色圈圈
+            ButtonClickCallBack = MakeSureCallbackWrapper,
+            ButtonClickText = "UI_Squad_Equip",
+            ButtonClickPadKey = "Gamepad_FaceButton_Left",
+        })
+        self.Com_Tips.HandleKeyDown = false
+        self:AddDelayFrameFunc(function()
+            self.Com_Tips.Panel_Controller:SetVisibility(ESlateVisibility.Collapsed)
+        end, 2, "DelayShow")
+        self.Owner.IsPetTipsOpen = true
+        self.Com_Tips:SetFocus()
+    end
+    self.Owner:SetCurFocusArea("Tip")
+end
+
+function WBP_Com_BuildTips_C:InitData(Params)
+    self.ItemInfo = Params.ItemInfo
+    self.Owner = Params.Owner
+    self.MakeSureCallback = Params.MakeSureCallback
+    self.GoToArmoryCallback = Params.GoToArmory
+    if self.ItemInfo.Type ~= "Pet" then
+        local ItemId = self.ItemInfo.UnitId
+        if ItemId then
+            self.Name = self.ItemInfo.Type == "Char" and DataMgr.Char[ItemId].CharName or DataMgr.Weapon[ItemId].WeaponName
+        else
+            self.Owner:CloseTips()
+            return
+        end
+    end
+    self.Uuid = self.ItemInfo.Uuid
+end
+
+function WBP_Com_BuildTips_C:CloseWidget()
+    self:Close()
+end
+
+function WBP_Com_BuildTips_C:Handle_OnGamePadDown(InKeyName)
+    if InKeyName == "Gamepad_FaceButton_Bottom" then--A
+        return true
+    end
+    return false
+end
+--监听PC/手柄按键
+function WBP_Com_BuildTips_C:OnKeyDown(MyGeometry, InKeyEvent)
+    local IsEventHandled = false
+    local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+    local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+    if (UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey)) then
+        IsEventHandled = self:Handle_OnGamePadDown(InKeyName)
+    else
+        --IsEventHandled = self:Handle_OnPCDown(InKeyName) 
+    end
+    if (IsEventHandled) then
+        return UE4.UWidgetBlueprintLibrary.Handled()
+    else
+        return UE4.UWidgetBlueprintLibrary.UnHandled()    
+    end
+end
+
+return WBP_Com_BuildTips_C

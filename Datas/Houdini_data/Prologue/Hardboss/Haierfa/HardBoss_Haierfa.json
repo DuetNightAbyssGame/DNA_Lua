@@ -1,0 +1,23 @@
+{
+    "points": [
+      {
+        "P": [
+          500,
+          -6370,
+          500
+        ],
+        "level_center": [
+          500,
+          -6370,
+          500
+        ],
+        "rot": 0.0,
+        "struct": "/Game/Maps/Datas/Data_Design/Chapter01/Chapter01_HardBoss_03",
+        "enterLevel": 1,
+        "exitLevel": 0,
+        "if_layout": 0,
+        "art_path": "",
+        "id": 0
+      }
+    ]
+}

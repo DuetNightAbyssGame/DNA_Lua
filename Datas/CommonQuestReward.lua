@@ -1,0 +1,51 @@
+-- Source Excel file path: ..\datas\GameEvent\CommonQuestEvent.xlsx
+local LocalTimeProxy = (DataMgr or {})["LocalTimeProxy"] or function(x) return x end
+local ReadOnly = (DataMgr or {})["ReadOnly"] or function(n, x) return x end
+return ReadOnly("CommonQuestReward", {
+	[1001] = {
+		EventId = 103018,
+		Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/T_Icon_ActivityFool_03.T_Icon_ActivityFool_03",
+		Id = 1001,
+		Name = "UI_Accessory_Name_10088",
+		QuestId = {
+			10301801,
+			10301802,
+			10301803,
+			10301804,
+			10301805,
+			10301806,
+		},
+		Reward = 110907,
+	},
+	[103014] = {
+		EventId = 103014,
+		Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back35.T_Fashion_Back35'",
+		Id = 103014,
+		Name = "UI_Accessory_Name_40033",
+		QuestId = {
+			10301401,
+			10301402,
+			10301403,
+			10301404,
+			10301405,
+			10301406,
+			10301407,
+			10301411,
+			10301412,
+			10301413,
+			10301414,
+			10301415,
+			10301416,
+			10301421,
+			10301422,
+			10301423,
+			10301424,
+			10301425,
+			10301426,
+			10301427,
+			10301428,
+		},
+		Reward = 103014,
+		SpecifiedCount = 12,
+	},
+})

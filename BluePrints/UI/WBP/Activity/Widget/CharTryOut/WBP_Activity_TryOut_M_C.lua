@@ -1,224 +1,253 @@
-require("UnLua")
-local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
-local ActivityCommon = require("BluePrints.UI.WBP.Activity.ActivityCommon")
-local EMCache = require("EMCache.EMCache")
+--
+-- DESCRIPTION
+-- 新手任务主界面
+-- @COMPANY **
+-- @AUTHOR ** hy
+-- @DATE ${date} ${time}
+--
+require "UnLua"
+
+local ActivityUtils = require "Blueprints.UI.WBP.Activity.ActivityUtils"
+local ActivityCommon = require "BluePrints.UI.WBP.Activity.ActivityCommon"
+local EMCache = require "EMCache.EMCache"
+
 local M = Class({
-  "BluePrints.Common.TimerMgr",
-  "BluePrints.UI.BP_EMUserWidget_C"
+    "BluePrints.Common.TimerMgr",
+    "BluePrints.UI.BP_EMUserWidget_C"
 })
+
 M._components = {
-  "BluePrints.UI.WBP.Activity.Widget.View.ActivityTryOutView"
+    "BluePrints.UI.WBP.Activity.Widget.View.ActivityTryOutView",
 }
 
 function M:Initialize(Initializer)
-  self.OwnerPlayer = nil
-  self.CurActivityId = nil
-  self.CurSelectIndex = nil
-  self.OriginalActivityId = nil
-  self.CurCharId = nil
-  self.CurSkinId = nil
-  self.AllActivityIds = nil
-  self.ParentTabId = nil
-  self.ParentWidget = nil
+    self.OwnerPlayer = nil               -- 所属的Player
+    self.CurActivityId = nil             -- 当前活动的EventId
+    self.CurSelectIndex = nil            -- 当前选中的活动索引
+    self.OriginalActivityId = nil        -- 初始活动索引
+    self.CurCharId = nil                 -- 当前的活动角色Id
+    self.CurSkinId = nil                 -- 当前的活动皮肤Id
+    self.AllActivityIds = nil            -- 当前所有活动Id
+    self.ParentTabId = nil               -- 父页面上的TabId
+    self.ParentWidget = nil              -- 父页面
 end
 
 function M:GetPageName()
-  return DataMgr.EventTab[self.ParentTabId].EventTabName
+    return DataMgr.EventTab[self.ParentTabId].EventTabName
 end
 
 function M:GetActivityId()
-  return self.CurActivityId
+    return self.CurActivityId
 end
 
 function M:GetParentTabId()
-  return self.ParentTabId
+    return self.ParentTabId
 end
 
 function M:ResetVariable()
-  self.CurSelectIndex = 1
-  self.CurActivityId = self.OriginalActivityId
-  self.FocusWidgetName = nil
+    -- 重置一些变量
+    self.CurSelectIndex = 1
+    self.CurActivityId = self.OriginalActivityId
+    self.FocusWidgetName = nil
 end
 
 function M:InitPage(ActivityId, ParentTabId, AllActivityId, ParentWidget)
-  self.CurSelectIndex = 1
-  self.CurActivityId = ActivityId
-  self.OriginalActivityId = ActivityId
-  self.ParentTabId = ParentTabId
-  self.AllActivityIds = AllActivityId
-  self.ParentWidget = ParentWidget
-  self:UpdateSubPage()
+    -- 初始化当前页面的信息
+    self.CurSelectIndex = 1
+    self.CurActivityId = ActivityId
+    self.OriginalActivityId = ActivityId
+    self.ParentTabId = ParentTabId
+    self.AllActivityIds = AllActivityId
+    self.ParentWidget = ParentWidget
+
+    self:UpdateSubPage()
 end
 
 function M:UpdateSubPage()
-  local ActivityMain = UIManager(self):GetUIObj("ActivityMain")
-  if ActivityMain and ActivityMain.TryOutActivityNeedJumpToTabIndex then
-    local TabIndex = ActivityMain.TryOutActivityNeedJumpToTabIndex
-    ActivityMain.NeedJumpToActivityId = nil
-    ActivityMain.TryOutActivityNeedJumpToTabIndex = nil
-    self.CurSelectIndex = TabIndex
-  end
-  local PlayerAvatar = GWorld:GetAvatar()
-  local ActivityConfigData = DataMgr.EventMain[self.CurActivityId]
-  self.ActivityEndTime = ActivityConfigData.EventEndTime and ActivityConfigData.EventEndTime or ActivityConfigData.PermanenEventTime
-  self.RewardEndTime = ActivityConfigData.RewardEndTime
-  local PageConfigData = DataMgr.CharTrialEvent[self.CurActivityId]
-  self.CurCharId = PageConfigData.CharId
-  self:RefreshPageStaticView(ActivityConfigData, PageConfigData, PlayerAvatar.CharTrial, self.ViewInfoBtnClick, self.GoToGachaClick, self.GoToTargetPageClick, self.TryToGetReward, self.TryToViewCharDetail, self.TryToSelectChar, self.OnStuffDetailOpenChanged)
-  self:RefreshPageDynamicView(PlayerAvatar.CharTrial[self.CurActivityId])
-  self:InitTimeInfo()
+    local ActivityMain = UIManager(self):GetUIObj("ActivityMain")
+    -- 如果主页面存了需要自动跳转，就设置一下
+    if ActivityMain and ActivityMain.TryOutActivityNeedJumpToTabIndex then
+        local TabIndex = ActivityMain.TryOutActivityNeedJumpToTabIndex
+        ActivityMain.NeedJumpToActivityId = nil
+        ActivityMain.TryOutActivityNeedJumpToTabIndex = nil
+        self.CurSelectIndex = TabIndex
+    end
+
+    local PlayerAvatar = GWorld:GetAvatar()
+
+    local ActivityConfigData = DataMgr.EventMain[self.CurActivityId]
+    self.ActivityEndTime = ActivityConfigData.EventEndTime and ActivityConfigData.EventEndTime or ActivityConfigData.PermanenEventTime
+    self.RewardEndTime = ActivityConfigData.RewardEndTime
+    local PageConfigData = DataMgr.CharTrialEvent[self.CurActivityId]
+    -- 刷新静态UI信息
+    self.CurCharId = PageConfigData.CharId
+    self:RefreshPageStaticView(ActivityConfigData, PageConfigData, PlayerAvatar.CharTrial, self.ViewInfoBtnClick, self.GoToGachaClick, self.GoToTargetPageClick,
+                                self.TryToGetReward, self.TryToViewCharDetail, self.TryToSelectChar, self.OnStuffDetailOpenChanged)
+    -- 刷新动态UI信息
+    self:RefreshPageDynamicView(PlayerAvatar.CharTrial[self.CurActivityId])
+    -- 刷新剩余时间
+    self:InitTimeInfo()
 end
 
 function M:InitTimeInfo()
-  if (self.ActivityEndTime ~= nil or nil ~= self.RewardEndTime) and self.Activity_Time.Com_Time then
-    ActivityUtils.RefreshLeftTime(self, self.Activity_Time.Com_Time)
-    self:AddTimer(1.0, ActivityUtils.RefreshLeftTime, true, 0, "RefreshLeftTime", true, self.Activity_Time.Com_Time)
-  else
-    ActivityUtils.SetLeftTimeView(self.Activity_Time.Com_Time, true)
-  end
+    if (self.ActivityEndTime ~= nil or self.RewardEndTime ~= nil) and self.Activity_Time.Com_Time then
+        ActivityUtils.RefreshLeftTime(self, self.Activity_Time.Com_Time)
+        self:AddTimer(1.0, ActivityUtils.RefreshLeftTime, true, 0, "RefreshLeftTime", true, self.Activity_Time.Com_Time)
+    else
+        ActivityUtils.SetLeftTimeView(self.Activity_Time.Com_Time, true)
+    end
 end
 
 function M:OnUpdateSubUIViewStyle()
+    -- 手机版暂不实现
 end
 
 function M:UpdatePage(OperateSrc)
-  local IsReBindClickFunction = false
-  if IsReBindClickFunction then
-    self:BindAllClickFunction(self.ViewInfoBtnClick, self.GoToGachaClick, self.GoToTargetPageClick)
-  end
-  local PlayerAvatar = GWorld:GetAvatar()
-  if OperateSrc == ActivityCommon.AllUpdateTag.ActivityTab then
-    self:ResetVariable()
-  end
-  self:UpdateSubPage()
-  self:RefreshPageDynamicView(PlayerAvatar.CharTrial[self.CurActivityId])
+    local IsReBindClickFunction = false
+
+    -- 重新绑定按钮事件
+    if (IsReBindClickFunction) then
+        self:BindAllClickFunction(self.ViewInfoBtnClick, self.GoToGachaClick, self.GoToTargetPageClick)
+    end
+
+    local PlayerAvatar = GWorld:GetAvatar()
+    if (OperateSrc == ActivityCommon.AllUpdateTag.ActivityTab) then
+        self:ResetVariable()
+    end
+    self:UpdateSubPage()
+    self:RefreshPageDynamicView(PlayerAvatar.CharTrial[self.CurActivityId])
 end
 
 function M:GetPageConfigData()
-  return DataMgr.CharTrialEvent[self.CurActivityId]
+    return DataMgr.CharTrialEvent[self.CurActivityId]
 end
 
 function M:RefreshItemStyleByAction(ActionName, ActivityID)
-  local PlayerAvatar = GWorld:GetAvatar()
-  if "TryOutGetReward" == ActionName then
-    self:RefreshItemStyleView(PlayerAvatar.CharTrial[ActivityID])
-  end
+    local PlayerAvatar = GWorld:GetAvatar()
+
+    if (ActionName == "TryOutGetReward") then
+        self:RefreshItemStyleView(PlayerAvatar.CharTrial[ActivityID])
+    end
 end
 
 function M:CleanSelf(bIsRemoveSelf)
-  self:RemoveTimer("RefreshLeftTime")
-  if bIsRemoveSelf then
-    self:RemoveFromParent()
-  end
+    self:RemoveTimer("RefreshLeftTime")
+    if (bIsRemoveSelf) then
+        self:RemoveFromParent()
+    end
 end
 
+---------------------------------各种点击事件相关----------------------------------
 function M:ViewInfoBtnClick()
-  local ActivityConfigData = DataMgr.EventMain[self.CurActivityId]
-  if not ActivityConfigData.EventRule then
-    DebugPrint("ViewInfoBtn Click, EventRule is nil, EventId is", self.CurActivityId)
-    return
-  end
-  local Params = {
-    ShortText = GText(ActivityConfigData.EventRule)
-  }
-  UIManager(self):ShowCommonPopupUI(100192, Params, self)
+    local ActivityConfigData = DataMgr.EventMain[self.CurActivityId]
+    if (not ActivityConfigData.EventRule) then
+        DebugPrint("ViewInfoBtn Click, EventRule is nil, EventId is", self.CurActivityId)
+        return
+    end
+    local Params = {
+        ShortText = GText(ActivityConfigData.EventRule)
+    }
+    UIManager(self):ShowCommonPopupUI(100192, Params, self)
 end
 
 function M:GoToTargetPageClick()
-  local Params = {
-    RightCallbackFunction = function(Obj, Result, PopUI)
-      local PageConfigData = DataMgr.CharTrialEvent[self.CurActivityId]
-      local CharTrialId = PageConfigData.CharTrialId
-      local TrialDungeonId = DataMgr.CharTrial[CharTrialId].TrialDungeonId
-      local PlayerAvatar = GWorld:GetAvatar()
-      PlayerAvatar:EnterCharTrialByEvent(nil, TrialDungeonId, self.CurActivityId)
-      local ActivityMain = UIManager(self):GetUIObj("ActivityMain")
-      local CurTabIndex = 1
-      if ActivityMain then
-        CurTabIndex = ActivityMain.CurTabIndex
-      end
-      local ExitDungeonInfo = {
-        Type = "TryOut",
-        CurTabIndex = CurTabIndex,
-        ActivityId = self.CurActivityId,
-        CurSelectIndex = self.CurSelectIndex
-      }
-      GWorld.GameInstance:SetExitDungeonData(ExitDungeonInfo)
-    end,
-    RightCallbackObj = self
-  }
-  UIManager(self):ShowCommonPopupUI(100214, Params, self)
+    -- 添加弹窗确认
+    local Params = {
+        RightCallbackFunction = function(Obj, Result, PopUI)
+            local PageConfigData = DataMgr.CharTrialEvent[self.CurActivityId]
+            local CharTrialId = PageConfigData.CharTrialId
+            local TrialDungeonId = DataMgr.CharTrial[CharTrialId].TrialDungeonId
+            local PlayerAvatar = GWorld:GetAvatar()
+            -- 确认后进入试玩
+            PlayerAvatar:EnterCharTrialByEvent(nil, TrialDungeonId, self.CurActivityId)
+
+            local ActivityMain = UIManager(self):GetUIObj("ActivityMain")
+            local CurTabIndex = 1
+            if ActivityMain then
+                CurTabIndex = ActivityMain.CurTabId
+            end
+            -- 进副本前缓存相关信息，用于退出副本时弹出此界面
+            local ExitDungeonInfo = {
+                Type = "TryOut",
+                CurTabIndex = CurTabIndex,
+                ActivityId = self.CurActivityId,
+                CurSelectIndex = self.CurSelectIndex,
+            }
+            GWorld.GameInstance:SetExitDungeonData(ExitDungeonInfo)
+        end,
+        RightCallbackObj = self
+    }
+    
+    UIManager(self):ShowCommonPopupUI(100214, Params, self)
 end
 
 function M:GoToGachaClick()
-  local PageConfigData = DataMgr.CharTrialEvent[self.CurActivityId]
-  if PageConfigData.GachaTabId then
-    PageJumpUtils:JumpToGachaPage(PageConfigData.GachaTabId)
-  elseif PageConfigData.InterfaceJumpId then
-    PageJumpUtils:JumpToTargetPageByJumpId(PageConfigData.InterfaceJumpId)
-  end
+    local PageConfigData = DataMgr.CharTrialEvent[self.CurActivityId]
+    if PageConfigData.GachaTabId then
+        PageJumpUtils:JumpToGachaPage(PageConfigData.GachaTabId)
+    elseif PageConfigData.InterfaceJumpId then
+        PageJumpUtils:JumpToTargetPageByJumpId(PageConfigData.InterfaceJumpId)
+    end
 end
 
 function M:OnStuffDetailOpenChanged(bIsOpen, Stuff)
+    -- 手机上暂不实现
 end
 
 function M:TryToGetReward()
-  local PlayerAvatar = GWorld:GetAvatar()
-  if nil == PlayerAvatar then
-    return
-  end
-  PlayerAvatar:GetCharTrialReward(ActivityUtils.OnGetTryOutActivityRewardBack, self.CurActivityId)
+    local PlayerAvatar = GWorld:GetAvatar()
+    if PlayerAvatar == nil then return end
+    PlayerAvatar:GetCharTrialReward(ActivityUtils.OnGetTryOutActivityRewardBack, self.CurActivityId)
 end
 
 function M:TryToViewCharDetail()
-  local PageConfigData = self:GetPageConfigData()
-  local CharId = PageConfigData.CharId
-  UIManager(self):LoadUINew("ArmoryDetail", {
-    PreviewCharIds = {CharId},
-    bHideCharAppearance = true,
-    bHideWeaponAppearance = true,
-    EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
-    OnCloseDelegate = nil
-  })
+    local PageConfigData = self:GetPageConfigData()
+    local CharId = PageConfigData.CharId
+    UIManager(self):LoadUINew("ArmoryDetail",{PreviewCharIds = {CharId},
+                                                bHideCharAppearance = true,
+                                                bHideWeaponAppearance = true,
+                                                EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
+                                                OnCloseDelegate = nil})
 end
 
 function M:TryToSelectChar(NewActivityId, Index, CharId)
-  if self.CurActivityId == NewActivityId then
-    return
-  end
-  self:CancelCharSelectView()
-  self.CurSelectIndex = Index
-  self.CurActivityId = NewActivityId
-  self.CurCharId = CharId
-  self:UnBindAllClickFunction()
-  self:UpdateSubPage()
-  if self.ParentWidget then
-    local ActivityConfigData = DataMgr.EventMain[self.CurActivityId]
-    self.ParentWidget:RefreshViewAfterPageDataSet(ActivityConfigData, self:GetPageConfigData())
-    self.ParentWidget:UpdateTabRedInfoByActivityID(nil, NewActivityId)
-  end
+    if (self.CurActivityId == NewActivityId) then
+        return
+    end
+    self:CancelCharSelectView()
+    self.CurSelectIndex = Index
+    self.CurActivityId = NewActivityId
+    self.CurCharId = CharId
+    self:UnBindAllClickFunction()
+    self:UpdateSubPage()
+    -- 替换背景
+    if (self.ParentWidget) then
+        local ActivityConfigData = DataMgr.EventMain[self.CurActivityId]
+        self.ParentWidget:RefreshViewAfterPageDataSet(ActivityConfigData, self:GetPageConfigData())
+        self.ParentWidget:UpdateTabRedInfoByActivityID(nil, NewActivityId)
+    end
 end
-
+---------------------------------各种输入事件相关----------------------------------
 function M:HandleKeyDownInPage(MyGeometry, InKeyEvent)
-  local IsEventHandled = false
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
-    IsEventHandled = self:OnGamePadDown(InKeyName)
-  else
-    IsEventHandled = false
-  end
-  return IsEventHandled
+    local IsEventHandled = false
+    local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+    local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+    if (UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey)) then
+        IsEventHandled = self:OnGamePadDown(InKeyName)
+    else
+        IsEventHandled = false
+    end
+    return IsEventHandled
 end
 
 function M:OnGamePadButtonDown(InKeyName)
-  local IsEventHandled = self:Handle_KeyDownOnGamePad(InKeyName)
-  return IsEventHandled
+    local IsEventHandled = self:Handle_KeyDownOnGamePad(InKeyName)
+    return IsEventHandled
 end
 
 function M:Handle_KeyDownOnGamePad()
-  return true
+    -- 处理手柄相关的交互事件
+    return true
 end
-
 AssembleComponents(M)
 return M

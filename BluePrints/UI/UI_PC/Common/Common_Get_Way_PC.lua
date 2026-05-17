@@ -1,20 +1,37 @@
-require("UnLua")
+--
+-- DESCRIPTION
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
+
+require "UnLua"
 local Common_Get_Way_PC = Class("BluePrints.UI.BP_EMUserWidget_C")
 
+-- function Common_Get_Way_PC:Initialize(Initializer)
+-- end
+
+-- function Common_Get_Way_PC:PreConstruct(IsDesignTime)
+-- end
+
 function Common_Get_Way_PC:Construct()
-  self:InitButtonLogic()
+    self:InitButtonLogic()
 end
 
 function Common_Get_Way_PC:Destruct()
-  self.Btn_Get_Way_3.OnClicked:Clear()
+    self.Btn_Get_Way_3.OnClicked:Clear()
 end
 
+--function Common_Get_Way_PC:Tick(MyGeometry, InDeltaTime)
+--end
+
 function Common_Get_Way_PC:InitButtonLogic()
-  self.Btn_Get_Way_3.OnClicked:Add(self, self.OnButtonClicked)
+    self.Btn_Get_Way_3.OnClicked:Add(self, self.OnButtonClicked)
 end
 
 function Common_Get_Way_PC:OnButtonClicked()
-  UIUtils.PlayCommonBtnSe(self)
+    UIUtils.PlayCommonBtnSe(self)
 end
 
 return Common_Get_Way_PC

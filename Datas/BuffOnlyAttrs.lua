@@ -1,10 +1,13 @@
-local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
-  return x
-end
+-- Source Excel file path: ..\datas\Combat\AttributeType.xlsx
+local LocalTimeProxy = (DataMgr or {})["LocalTimeProxy"] or function(x) return x end
+local ReadOnly = (DataMgr or {})["ReadOnly"] or function(n, x) return x end
 return ReadOnly("BuffOnlyAttrs", {
-  FakeHpRate = {ActiveRule = false, ID = "FakeHpRate"},
-  MaxDamagedValue = {
-    ActiveRule = false,
-    ID = "MaxDamagedValue"
-  }
+	FakeHpRate = {
+		ActiveRule = false,
+		ID = "FakeHpRate",
+	},
+	MaxDamagedValue = {
+		ActiveRule = false,
+		ID = "MaxDamagedValue",
+	},
 })

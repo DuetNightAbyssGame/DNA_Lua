@@ -1,129 +1,162 @@
-local HasDetectiveResultNode = Class("StoryCreator.StoryLogic.StorylineNodes.BaseAsynQuestNode")
-local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
+local HasDetectiveResultNode = Class('StoryCreator.StoryLogic.StorylineNodes.BaseAsynQuestNode')
+local TaskUtils = require "BluePrints.UI.TaskPanel.TaskUtils"
+local ClientEventUtils = require "BluePrints.Common.ClientEvent.ClientEventUtils"
 
 function HasDetectiveResultNode:Init()
-  self.ResultIds = {}
-  self.FinishResultTable = {}
+    self.ResultIds = {}
+    self.FinishResultTable = {}
 end
 
 function HasDetectiveResultNode:Execute(Callback)
-  local Avatar = GWorld:GetAvatar()
-  if Avatar then
-    TaskUtils:SetQuestExtraInfo(self.QuestChainId, self.QuestData.QuestId, {
-      NodeKey = self.Key,
-      Node = self,
-      Description = GText("打开推理界面")
-    })
-    self:OnChooseTrack()
-    
-    function HasDetectiveResultNodeCallback(ResultId)
-      DebugPrint("HasDetectiveResultNode HasDetectiveResultNodeCallback ResultId: " .. ResultId)
-      self.FinishResultTable[ResultId] = true
-      for _, IsFinish in pairs(self.FinishResultTable) do
-        if false == IsFinish then
-          return
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+        TaskUtils:SetQuestExtraInfo(self.QuestChainId, self.QuestData.QuestId, 
+        {
+            NodeKey = self.Key,
+            Node = self,
+            Description = GText("打开推理界面")
+        })
+        self:OnChooseTrack()
+        local function ExecuteCallback()
+            DebugPrint("JLY: HasDetectiveResultNode: ExecuteCallback")
+            self:ClearTaskBarNeedOpenDetectiveGame()
+            Callback()
         end
-      end
-      local UIManager = GWorld.GameInstance:GetGameUIManager()
-      local ReasoningUI = UIManager:GetUIObj("DetectiveMinigame")
-      if ReasoningUI then
-        ReasoningUI.AutoClose = true
-      end
-      self:ClearTaskBarNeedOpenDetectiveGame()
-      Callback()
+        local function HasDetectiveResultNodeCallback(ResultId)
+            DebugPrint("HasDetectiveResultNode HasDetectiveResultNodeCallback ResultId: "..ResultId)
+            self.FinishResultTable[ResultId] = true
+            for _, IsFinish in pairs(self.FinishResultTable) do
+                if IsFinish == false then
+                    return
+                end
+            end
+            local UIManager = GWorld.GameInstance:GetGameUIManager()
+            local ReasoningUI = UIManager:GetUIObj("DetectiveMinigame")
+            if ReasoningUI then
+                ReasoningUI.AutoClose = true
+                if not ReasoningUI.IsPlayingAnimation then
+                    ReasoningUI:Close()
+                else
+                    if ReasoningUI.AddCloseCallback then
+                        DebugPrint("JLY: HasDetectiveResultNode: AddCloseCallback")
+                        ReasoningUI:AddCloseCallback(self, function()
+                            ExecuteCallback()
+                        end)
+                    end
+                    return
+                end
+            else
+                ExecuteCallback()
+            end
+        end
+
+        local DetectiveGameUnlockedResults = Avatar.DetectiveGameUnlockedResults
+        local AllResultUnlocked = true
+        for _, Id in pairs(self.ResultIds) do
+            local ResultV = DetectiveGameUnlockedResults[Id]
+            if ResultV == nil then
+                DebugPrint("HasDetectiveResultNode: False ResultId: "..Id)
+                self.FinishResultTable[Id] = false
+                AllResultUnlocked = false
+                Avatar:AddUnlockDetectiveResultCallback(Id, HasDetectiveResultNodeCallback)
+            else
+                DebugPrint("HasDetectiveResultNode: True ResultId: "..Id)
+                self.FinishResultTable[Id] = true
+            end
+        end
+        if AllResultUnlocked then
+            local UIManager = GWorld.GameInstance:GetGameUIManager()
+            local ReasoningUI = UIManager:GetUIObj("DetectiveMinigame")
+            if ReasoningUI then
+                ReasoningUI.AutoClose = true
+                if not ReasoningUI.IsPlayingAnimation then
+                    ReasoningUI:Close()
+                else
+                    if ReasoningUI.AddCloseCallback then
+                        ReasoningUI:AddCloseCallback(self, function()
+                            ExecuteCallback()
+                        end)
+                    end
+                    return
+                end
+            else
+                ExecuteCallback()
+            end
+        end
     end
-    
-    local DetectiveGameUnlockedResults = Avatar.DetectiveGameUnlockedResults
-    local AllResultUnlocked = true
-    for _, Id in pairs(self.ResultIds) do
-      local ResultV = DetectiveGameUnlockedResults[Id]
-      if nil == ResultV then
-        DebugPrint("HasDetectiveResultNode: False ResultId: " .. Id)
-        self.FinishResultTable[Id] = false
-        AllResultUnlocked = false
-        Avatar:AddUnlockDetectiveResultCallback(Id, HasDetectiveResultNodeCallback)
-      else
-        DebugPrint("HasDetectiveResultNode: True ResultId: " .. Id)
-        self.FinishResultTable[Id] = true
-      end
-    end
-    if AllResultUnlocked then
-      local UIManager = GWorld.GameInstance:GetGameUIManager()
-      local ReasoningUI = UIManager:GetUIObj("DetectiveMinigame")
-      if ReasoningUI then
-        ReasoningUI.AutoClose = true
-      end
-      self:ClearTaskBarNeedOpenDetectiveGame()
-      Callback()
-    end
-  end
 end
 
 function HasDetectiveResultNode:Clear()
-  local Avatar = GWorld:GetAvatar()
-  if Avatar then
-    for _, Id in pairs(self.ResultIds) do
-      Avatar:RemoveUnlockDetectiveResultCallback(Id)
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+        for _, Id in pairs(self.ResultIds) do
+            Avatar:RemoveUnlockDetectiveResultCallback(Id)
+        end
     end
-  end
-  self:ClearTaskBarNeedOpenDetectiveGame()
-  TaskUtils:ClearQuestExtraInfo(self.CurQuestChainId, self.CurDoingQuestId, self.Key)
+    self:ClearTaskBarNeedOpenDetectiveGame()
+    TaskUtils:ClearQuestExtraInfo(self.CurQuestChainId, self.CurDoingQuestId, self.Key)
 end
 
 function HasDetectiveResultNode:OnCancelTrack()
-  self.IsTracking = false
-  self:ClearTaskBarNeedOpenDetectiveGame()
+    self:ClearTaskBarNeedOpenDetectiveGame()
+    self.IsTracking = false
 end
 
 function HasDetectiveResultNode:OnChooseTrack()
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    self:FinishAction()
-    return
-  end
-  local IsTracking = false
-  self.CurQuestChainId = self.QuestChainId
-  if Avatar.InSpecialQuest then
-    self.CurQuestChainId = ClientEventUtils:GetCurrentEvent().PreQuestChainId
-  end
-  self.CurDoingQuestId = Avatar.QuestChains[self.CurQuestChainId].DoingQuestId
-  if Avatar.TrackingQuestChainId == self.CurQuestChainId then
-    IsTracking = true
-    self.IsTracking = true
-  end
-  if IsTracking then
-    self:ChangeMainTaskBarInfo()
-  end
+     local Avatar = GWorld:GetAvatar()
+    if not Avatar then
+        self:FinishAction()
+        return
+    end
+    local IsTracking = false
+    self.CurQuestChainId = self.QuestChainId
+    if Avatar.InSpecialQuest then
+        self.CurQuestChainId = ClientEventUtils:GetCurrentEvent().PreQuestChainId
+    end
+    self.CurDoingQuestId = Avatar.QuestChains[self.CurQuestChainId].DoingQuestId
+    
+    if Avatar.TrackingQuestChainId == self.CurQuestChainId then
+        IsTracking = true
+        self.IsTracking = true
+    end
+
+    if IsTracking then
+        self:ChangeMainTaskBarInfo()
+    end
 end
 
 function HasDetectiveResultNode:ChangeMainTaskBarInfo()
-  local TaskUIObj = TaskUtils:GetTaskBarWidget()
-  if not TaskUIObj then
-    return
-  end
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return
-  end
-  self.Text = TaskUIObj.Text_Tips02:GetText()
-  TaskUIObj.Text_Tips02:SetText(GText("Minigame_Textmap_100304"))
-  TaskUIObj.NeedOpenDetectiveGame = true
+    local TaskUIObj = TaskUtils:GetTaskBarWidget()
+    if not TaskUIObj then
+        return
+    end
+
+    local Avatar = GWorld:GetAvatar()
+    if not Avatar then
+        return
+    end
+    self.Text = TaskUIObj.Text_Tips02:GetText()
+    TaskUIObj.Text_Tips02:SetText(GText("Minigame_Textmap_100304"))
+    TaskUIObj.NeedOpenDetectiveGame = true
+    TaskUIObj.NeedOpenDetectiveResultIds = self.ResultIds
 end
 
+
 function HasDetectiveResultNode:ClearTaskBarNeedOpenDetectiveGame()
-  if not self.IsTracking then
-    return
-  end
-  local TaskUIObj = TaskUtils:GetTaskBarWidget()
-  if not TaskUIObj then
-    return
-  end
-  TaskUIObj.Text_Tips02:SetText(self.Text)
-  TaskUIObj.NeedOpenDetectiveGame = false
+    if not self.IsTracking then
+        return
+    end
+    local TaskUIObj = TaskUtils:GetTaskBarWidget()
+    if not TaskUIObj then
+        return
+    end
+    TaskUIObj.Text_Tips02:SetText(self.Text)
+    TaskUIObj.NeedOpenDetectiveGame = false
+    TaskUIObj.NeedOpenDetectiveResultIds = nil
 end
 
 function HasDetectiveResultNode:ClearWhenQuestSuccess()
-  TaskUtils:ClearQuestExtraInfo(self.CurQuestChainId, self.CurDoingQuestId, self.Key)
-end
+    TaskUtils:ClearQuestExtraInfo(self.CurQuestChainId, self.CurDoingQuestId, self.Key)
+ end
 
 return HasDetectiveResultNode

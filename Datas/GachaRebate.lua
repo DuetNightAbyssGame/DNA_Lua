@@ -1,14 +1,29 @@
-local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
-  return x
-end
+-- Source Excel file path: ..\datas\Gacha.xlsx
+local LocalTimeProxy = (DataMgr or {})["LocalTimeProxy"] or function(x) return x end
+local ReadOnly = (DataMgr or {})["ReadOnly"] or function(n, x) return x end
 return ReadOnly("GachaRebate", {
-  Char = {
-    [4] = {Rarity = 4, Type = "Char"},
-    [5] = {Rarity = 5, Type = "Char"}
-  },
-  Weapon = {
-    [3] = {Rarity = 3, Type = "Weapon"},
-    [4] = {Rarity = 4, Type = "Weapon"},
-    [5] = {Rarity = 5, Type = "Weapon"}
-  }
+	Char = {
+		[4] = {
+			Rarity = 4,
+			Type = "Char",
+		},
+		[5] = {
+			Rarity = 5,
+			Type = "Char",
+		},
+	},
+	Weapon = {
+		[3] = {
+			Rarity = 3,
+			Type = "Weapon",
+		},
+		[4] = {
+			Rarity = 4,
+			Type = "Weapon",
+		},
+		[5] = {
+			Rarity = 5,
+			Type = "Weapon",
+		},
+	},
 })

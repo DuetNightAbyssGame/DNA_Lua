@@ -1,0 +1,657 @@
+ --
+-- 拼接关卡二级界面
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+-- --
+-- require "UnLua"
+-- local CommonUtils = require "Utils.CommonUtils"
+-- local MonsterUtils = require "Utils.MonsterUtils"
+
+
+-- ---@type Prologue_Map_SelectLevel_PC_C
+-- local M = Class({"BluePrints.UI.BP_UIState_C", "BluePrints.Common.TimerMgr"})
+-- local TypeSort = {
+--     Char = 1,
+--     Weapon = 2,
+--     Mod = 3,
+--     Draft = 4,
+--     Reward = 5,
+--     Resource = 6,
+-- }
+-- local DungeonSelectCache = {}
+-- function M:Construct()
+--     -- self.Text_Limit:SetText(GText("UI_DUNGEON_LevelLimit"))
+--     self.Text_Monster:SetText(GText("UI_DUNGEON_MonsterType"))
+--     self.Text_Prop:SetText(GText("UI_DUNGEON_ObtainType"))
+--     self.Button_Solo:SetText(GText("DUNGEONSINGLE"))
+--     self.Button_Multi:SetText(GText("DUNGEONMATCH"))
+--     self.Text_TypeSelect:SetText(GText("UI_Dungeon_Type_List"))
+--     self.Button_Check:BindEventOnClicked(self, self.OnBtnCheckClicked)
+--     self.Button_Multi:BindEventOnClicked(self, self.OnClickMulti)
+--     self.Button_Solo:BindEventOnClicked(self, self.OnClickSolo)
+--     self.Stats_ListView.BP_OnEntryInitialized:Add(self,self.OnElementEntryInitialized)
+--     self.Button_Type.OnHovered:Add(self, self.OnButtonAttibuteHovered)
+--     self.Button_Type.OnUnhovered:Add(self, self.OnButtonAttibuteUnhovered)
+--     self:AddDispatcher(EventID.OnChangeActionPoint, self, self.UpdateActionPoint)
+-- 	self:AddDispatcher(EventID.TeamMatchTimingStart, self, self.RefreshBtnState)
+-- 	self:AddDispatcher(EventID.TeamMatchTimingEnd, self, self.RefreshBtnState)
+-- end
+
+-- function M:Destruct()
+--     self.Super.Destruct(self)
+--     self.Button_Check:UnBindEventOnClickedByObj(self)
+--     self.Button_Multi:UnBindEventOnClickedByObj(self)
+--     self.Button_Solo:UnBindEventOnClickedByObj(self)
+-- end
+
+-- --- 初始化拼接关信息
+-- ---@param DungeonList number @拼接关章节list
+-- ---@param DungeonId number @拼接关关卡Id
+-- function M:InitLevelList(DungeonList, SelectDungeonId)
+--     self:SetFocus()
+--     self.MonsterIdToItem = {}
+--     self.TypeTable = {}
+--     self.HB_Type:ClearChildren()
+--     ---@type Prologue_Map_Level_ListCell_PC_C
+--     self.SelectCell = nil
+
+--     ---@type number[] @关卡Id列表
+--     --local DungeonList = DataMgr.SelectDungeon[ChapterId].DungeonList
+--     if SelectDungeonId then
+--         DungeonSelectCache = {}
+--     end
+--     if not DungeonList then
+--         return
+--     end
+--     local ActionPointId = DataMgr.ResourceSType2Resource["ActionPoint"][1]
+--     self.Common_Item_Icon:Init(
+--         {
+--             Id = ActionPointId,
+--             Icon = LoadObject(DataMgr.Resource[ActionPointId].Icon),
+--             ItemType = "Resource",
+--             UIName = "DungeonSelect",
+--             IsShowDetails = true,
+--             MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight,
+--         }
+--     )
+--     -- 初始化关卡列表
+--     self.ScrollBox_List:ClearChildren()
+--     self.ScrollBox_List:ScrollToStart()
+--     local Avatar = GWorld:GetAvatar()
+--     if not Avatar then
+--         return
+--     end
+--     for i, DungeonId in pairs(DungeonList) do
+--         ---@type Prologue_Map_Level_ListCell_PC_C
+--         local Item = self:CreateWidgetNew("DungeonSelectLevel")
+--         Item:BindEventOnClicked(self, self.OnClickedLevelCell, Item)
+--         Item:InitDungeonInfo(DungeonId)
+--         -- 如果未指定关卡Id，则默认选中第一个关卡
+--         -- 如果指定了关卡Id：
+--         -- 如果SelectDungeonId是正常关卡，用DungeonId == SelectDungeonId 判断
+--         -- 如果SelectDungeonId是子级关卡，用DungeonId  == Dungeon2SubDungeon[SelectDungeonId] 判断
+--         if (not SelectDungeonId and i == 1) or SelectDungeonId == DungeonId or DataMgr.Dungeon2SubDungeon[SelectDungeonId] == DungeonId then
+--             -- 如果关卡未解锁，则不选中
+--             if PageJumpUtils:CheckDungeonCondition(DataMgr.Dungeon[DungeonId].Condition) then
+--                 self.SelectCell = Item
+--                 Item.Common_List_Subcell_PC.IsSelect = true
+--                 Item.Common_List_Subcell_PC:PlayAnimation(Item.Common_List_Subcell_PC.Select)
+--                 Item:PlayAnimation(Item.Select)
+--                 -- 记录父级Cell的Id，以便缓存父级Cell上次选择的属性关卡Id
+--                 self.CurCellDungeonId = SelectDungeonId and DataMgr.Dungeon2SubDungeon[SelectDungeonId] or DungeonId
+--                 self:InitListCellInfo(SelectDungeonId or DungeonId)
+--             else
+--                 self.Panel_Detail:SetVisibility(ESlateVisibility.Collapsed)
+--             end
+--         end
+--         self.ScrollBox_List:AddChild(Item)
+--     end
+--     self:PlayAnimation(self.In)
+--     -- local function GetWrapBoxSize()
+--     --     local ScrollBoxSize = USlateBlueprintLibrary.GetLocalSize(self.ScrollBox_List:GetCachedGeometry())
+--     --     return ScrollBoxSize
+--     -- end
+--     -- local HasEmptyCell = false
+
+--     -- -- 填充ScrollBox空余部分
+--     -- local ScrollBoxSize = GetWrapBoxSize()
+--     -- local function FillWrapBoxFunc()
+--     --     if ScrollBoxSize.Y == 0 then
+--     --         return false
+--     --     end
+--     --     ---@type Prologue_Map_Level_ListCell_PC_C
+--     --     local LevelCellItem
+--     --     if self.ScrollBox_List:GetChildrenCount() > 0 then
+--     --         LevelCellItem = self.ScrollBox_List:GetChildAt(0)
+--     --     else
+--     --         HasEmptyCell = true
+--     --         LevelCellItem = self:CreateWidgetNew("DungeonSelectLevel")
+--     --         LevelCellItem:InitDungeonInfo()
+--     --         self.ScrollBox_List:AddChild(LevelCellItem)
+--     --     end
+--     --     local ItemSize = USlateBlueprintLibrary.GetLocalSize(LevelCellItem:GetCachedGeometry())
+--     --     if ItemSize.X == 0 then
+--     --         return false
+--     --     end
+
+--     --     local YCount = math.floor(ScrollBoxSize.Y / (ItemSize.Y)) + 1
+--     --     for i = 1, YCount - self.ScrollBox_List:GetChildrenCount() do
+--     --         ---@type Prologue_Map_Level_ListCell_PC_C
+--     --         local LevelCellItem = self:CreateWidgetNew("DungeonSelectLevel")
+--     --         LevelCellItem:InitDungeonInfo()
+--     --         self.ScrollBox_List:AddChild(LevelCellItem)
+--     --         HasEmptyCell = true
+--     --     end
+
+--     --     -- 如果有空态cell，则禁止scrollbox滚动
+--     --     if HasEmptyCell then
+--     --         self.ScrollBox_List:SetScrollBarVisibility(ESlateVisibility.Collapsed)
+--     --         self.ScrollBox_List:SetConsumeMouseWheel(EConsumeMouseWheel.Never)
+--     --     else
+--     --         self.ScrollBox_List:SetScrollBarVisibility(ESlateVisibility.Visible)
+--     --         self.ScrollBox_List:SetConsumeMouseWheel(EConsumeMouseWheel.WhenScrollingPossible)
+--     --     end
+--     --     return true
+--     -- end
+--     -- if FillWrapBoxFunc() then
+--     --     return
+--     -- end
+--     -- local TimerFunc = function()
+--     --     ScrollBoxSize = GetWrapBoxSize()
+--     --     if FillWrapBoxFunc() then
+--     --         self:RemoveTimer("FillWrapBoxTimer")
+--     --         return true
+--     --     end
+--     --     return false
+--     -- end
+--     -- self:AddTimer(0.05, TimerFunc, true, nil, "FillWrapBoxTimer")
+-- end
+
+-- --- LevelCell点击响应方法
+-- ---@param LevelCell Prologue_Map_Level_ListCell_PC_C @关卡Cell
+-- function M:OnClickedLevelCell(LevelCell)
+--     if self.SelectCell ~= nil then
+--         self.SelectCell:PlayAnimationReverse(self.SelectCell.Select)
+--         local SubCell = self.SelectCell.Common_List_Subcell_PC
+--         SubCell:StopAllAnimations()
+--         SubCell:PlayAnimation(SubCell.Normal)
+--         SubCell.IsSelect = false
+--     end
+--     self.SelectCell = LevelCell
+--     --- 清空属性选择Item列表
+--     self.TypeTable = {}
+--     self.HB_Type:ClearChildren()
+--     --- 初始化关卡详情内容
+--     self.LastMarkType = nil
+--     self.CurCellDungeonId = LevelCell.DungeonId
+--     self:InitListCellInfo(LevelCell.DungeonId)
+-- end
+
+-- --- 属性选择按钮点击响应方法
+-- ---@param TypeId number @属性Id[DungeonId]
+-- function M:OnTypeClicked(TypeId)
+--     self.TypeTable[TypeId].IsSelected = true
+--     DungeonSelectCache[self.CurCellDungeonId] = TypeId
+--     self:SetElementIcon(DataMgr.Dungeon[TypeId].AttributeType)
+--     self.TypeTable[TypeId]:PlayAnimation(self.TypeTable[TypeId].Click_Entrust)
+--     if self.LastMarkType and self.LastMarkType ~= self.TypeTable[TypeId] then
+--         self.LastMarkType.IsSelected = false
+--         self.LastMarkType:PlayAnimation(self.LastMarkType.Normal)
+--     end
+--     self.LastMarkType = self.TypeTable[TypeId]
+--     self.CurSelectedDungeonId = TypeId
+--     self:RefreshLevelCellContent(TypeId)
+-- end
+
+-- --- 初始化初始化关卡详情内容
+-- --- 判断是父级Cell还是普通Cell来初始化Cell的内容
+-- function M:InitListCellInfo(DungeonId)
+--     local Dungeon2SubDungeon = DataMgr.Dungeon2SubDungeon
+--     self.CurSelectedDungeonId = DungeonId
+--     self.HasTypeSelect = false
+--     self.Stats:SetRenderOpacity(0)
+--     --- 如果DungeonId是父级 or 子级，加载Dungeon[Dungeon2SubDungeon[DungeonId]]所有SubDungeonList的选择信息
+--     if Dungeon2SubDungeon[DungeonId] then
+--         self.WidgetSwitcher_Type:SetActiveWidgetIndex(1)
+--         --- 对属性进行排序
+--         local SubDungeonList = DataMgr.Dungeon[Dungeon2SubDungeon[DungeonId]].SubDungeonId
+--         local SubDungeonData = {}
+--         table.insert(SubDungeonData, Dungeon2SubDungeon[DungeonId])
+--         if not SubDungeonList then
+--             DebugPrint("ZDX SubDungeonList is nil")
+--             return
+--         end
+--         for k, v in pairs(SubDungeonList) do
+--             table.insert(SubDungeonData, v)
+--             if not DataMgr.Dungeon[v].AttributeType then
+--                 DebugPrint("ZDX Dungeon AttributeType is nil")
+--             end
+--         end
+--         table.sort(SubDungeonData, function(A, B)
+--             local PriorityA = DataMgr.Attribute[DataMgr.Dungeon[A].AttributeType].DisplayPriority
+--             local PriorityB = DataMgr.Attribute[DataMgr.Dungeon[B].AttributeType].DisplayPriority
+--             return PriorityA < PriorityB
+--         end)
+--         --- 加载属性选择按钮Item
+--         for k, v in pairs(SubDungeonData) do
+--             local Item = UIManager(self):CreateWidget("/Game/UI/UI_PC/Common/Common_Button/Common_Button_Image_Select_PC.Common_Button_Image_Select_PC")
+--             local Icon = LoadObject(DataMgr.Attribute[DataMgr.Dungeon[v].AttributeType].Icon)
+--             Item.Img_Mark:SetBrushResourceObject(Icon)
+--             Item.Btn.OnClicked:Add(self, function()
+--                 self:OnTypeClicked(v)
+--             end)
+--             Item.IsPlayClick_Entrust = true
+--             self.HB_Type:AddChild(Item)
+--             self.TypeTable[v] = Item
+--         end
+--         self:OnTypeClicked(DungeonSelectCache[self.CurSelectedDungeonId] or self.CurSelectedDungeonId)
+--         --- 标记当前Cell是一个父级Cell
+--         self.HasTypeSelect = true
+--     else
+--         self.WidgetSwitcher_Type:SetActiveWidgetIndex(0)
+--     end
+
+--     --- 刷新关卡介绍内容
+--     self:RefreshLevelCellContent(self.CurSelectedDungeonId)
+-- end
+
+-- -- 更新关卡介绍内容
+-- function M:RefreshLevelCellContent(DungeonId)
+--     if not DungeonId then
+--         DebugPrint("ZDX DungeonId is nil")
+--         return
+--     end
+--     local DungeonData = DataMgr.Dungeon[DungeonId]
+--     -- 加载背景蓝图
+--     local DungeonUIBG = DungeonData and DungeonData.DungeonUIBG
+--     local Item
+--     self.Panel_Bg:ClearChildren()
+--     if DungeonUIBG then
+--         Item = UIManager(self):CreateWidget(DungeonData.DungeonUIBG)
+--         self.Panel_Bg:AddChild(Item)
+--     else
+--         Item = UIManager(self):CreateWidget(Const.DungeonBgBluePrint)
+--         self.Panel_Bg:AddChild(Item)
+--     end
+--     if not Item then
+--         DebugPrint("ZDX DungeonUIBG Create Failed")
+--     end
+--     if Item and Item.Loop then
+--         Item:PlayAnimation(Item.Loop, 0, 0)
+--     end
+--     -- 重置关卡详情页面信息
+--     self.List_Prop:ClearListItems()
+--     self.List_Monster:ClearListItems()
+--     self.Description:ScrollToStart()
+--     self.ScrollBox_Monster:ScrollToStart()
+--     self.ScrollBox_Reward:ScrollToStart()
+
+--     -- 设置关卡名、等级、描述、类型等
+--     self.Title_Level:SetText(GText(DungeonData.DungeonName))
+--     -- self.Text_Lv:SetText(GText(DungeonData.DungeonLevel))
+--     self.Text_Summary:SetText(GText(DungeonData.DungeonDes))
+--     self.Text_Description:SetText(GText(DungeonData.DungeonContent))
+
+--     if DungeonData.AttributeType then
+--         self.Type:SetVisibility(ESlateVisibility.Visible)
+--         self.Icon_Type:SetBrushResourceObject(LoadObject(DataMgr.Attribute[DungeonData.AttributeType].Icon))
+--         self.Text_Type:SetText(GText(DataMgr.Attribute[DungeonData.AttributeType].Textmap))
+--     else
+--         self.Type:SetVisibility(ESlateVisibility.Collapsed)
+--     end
+--     -- 控制等级、类型图标的显示
+--     -- self.Limit:SetVisibility(DungeonData.DungeonLevel and ESlateVisibility.HitTestInvisible or ESlateVisibility.Collapsed)
+
+--     -- 获取玩家体力信息
+--     local Avatar = GWorld:GetAvatar()
+--     self.MyActionPoint = Avatar.ActionPoint
+--     -- 获取关卡体力消耗
+--     self.DungeonCost = DungeonData.DungeonCost and DungeonData.DungeonCost[1] or 0
+
+--     -- 更新关卡体力消耗信息
+--     self.Num_Over:SetText(GText(self.MyActionPoint))
+--     self.Num_Short:SetText(GText(self.MyActionPoint))
+--     self.Num_Consume:SetText(GText(self.DungeonCost))
+--     self.Text_Consume:SetText(GText("UI_Armory_Trace_Cost"))
+--     -- 根据当前体力是否足够跳转，设置不同文本类型
+--     self.Switcher_Owned:SetActiveWidgetIndex(self.MyActionPoint >= self.DungeonCost and 0 or 1)
+
+--     self:PlayAnimation(self.ClickRefresh)
+--     self:PlayAnimation(self.Refresh_Type)
+--     -- 刷新怪物信息列表和奖励信息列表
+--     self:RefreshMonsterInfoList(DungeonId)
+--     self:RefreshRewardInfoList(DungeonData.DungeonRewardView)
+-- 	self:RefreshBtnState()
+-- end
+
+-- -- 更新奖励信息列表
+-- ---@param DungeonReward number[] @奖励Id列表[RewardView]
+-- function M:RefreshRewardInfoList(DungeonReward)
+--     if not DungeonReward then
+--         DebugPrint("ZDX DungeonReward is nil")
+--         self.Obtain_Prop:SetVisibility(ESlateVisibility.Collapsed)
+--         return
+--     end
+--     self.Obtain_Prop:SetVisibility(ESlateVisibility.Visible)
+--     local RewardList = RewardUtils:GetRewardViewInfoById(DungeonReward)
+--     table.sort(RewardList,function(A, B)
+--         if A.Rarity == B.Rarity then
+--             if TypeSort[A.Type] and TypeSort[B.Type] then
+--                 if TypeSort[A.Type] == TypeSort[B.Type] then
+--                     return A.Id < B.Id
+--                 end
+--                 return TypeSort[A.Type] < TypeSort[B.Type]
+--             end
+--             return A.Id < B.Id
+--         end
+--         return A.Rarity > B.Rarity
+--     end)
+--     -- 逐个实例化奖励列表
+--     for _, ItemData in pairs(RewardList) do
+--         local Content = NewObject(self.RewardItemContentClass)
+--         Content.Id = ItemData.Id
+--         Content.Icon = ItemUtils.GetItemIcon(ItemData.Id, ItemData.Type)
+--         Content.ParentWidget = self
+--         Content.ItemType = ItemData.Type
+--         Content.Rarity = ItemData.Rarity or 1
+--         Content.IsShowDetails = true
+--         Content.UIName = "DungeonSelect"
+--         self.List_Prop:AddItem(Content)
+--     end
+-- end
+
+-- -- 更新关卡怪物信息列表
+-- function M:RefreshMonsterInfoList(DungeonId)
+--     -- 检查关卡是否有怪物信息
+--     local DungeonInfo = DataMgr.Dungeon[DungeonId]
+--     if not DungeonInfo or not DungeonInfo.DungeonMonsters or #DungeonInfo.DungeonMonsters == 0 then
+--         DebugPrint("ZDX DungeonMonster is nil")
+--         self.Info_Monster:SetVisibility(ESlateVisibility.Collapsed)
+--         return
+--     end
+--     self.Info_Monster:SetVisibility(ESlateVisibility.Visible)
+
+--     -- 复制怪物列表并进行排序
+--     local DisplayMonsters = CommonUtils.DeepCopy(DungeonInfo.DungeonMonsters)
+--     table.sort(DisplayMonsters, MonsterUtils.CompareMonsters)
+
+--     self.MonsterWeaknessIcon = {}
+--     self:InitMonsterWeakness(DungeonId)
+--     for _, MonsterId in ipairs(DisplayMonsters) do
+--         -- 逐个实例化怪物列表
+--         local Content = NewObject(self.MonsterItemContentClass)
+--         Content.ParentWidget = self
+--         Content.MonsterId = MonsterId
+--         Content.DisableSelect = true
+--         Content.SoundEvent = "event:/ui/common/click"
+--         -- 怪物图标
+--         Content.WeaknessIcon = self.MonsterWeaknessIcon[MonsterId]
+--         self.List_Monster:AddItem(Content)
+--     end
+-- end
+
+-- -- 初始化怪物弱点信息
+-- function M:InitMonsterWeakness(DungeonId)
+--     assert(DungeonId, "dungeon id is nil")
+--     local DungeonInfo = DataMgr.Dungeon[DungeonId]
+
+--     assert(DungeonInfo, string.format("dungeon id [%d] is wrong, cant find dungeonInfo", DungeonId))
+--     local MonsterBuff = DungeonInfo.MonsterBuff
+--     local Monsters = DungeonInfo.DungeonMonsters
+--     if MonsterBuff then
+--         for _, MonsterId in ipairs(Monsters) do
+--             if type(MonsterId) == "number" then
+--                 local AllBuffs = MonsterUtils.GetRealMonsterBuffs(DungeonId, MonsterId)
+--                 for _, BuffId in ipairs(AllBuffs) do
+--                     local BuffInfo = DataMgr.Buff[BuffId]
+--                     if BuffInfo then
+--                         local BuffTypes = BuffInfo.BuffType
+--                         if BuffTypes and BuffInfo.WeaknessType then
+--                             local HasWeakness = false
+--                             for _, BuffType in ipairs(BuffTypes) do
+--                                 if BuffType == CommonConst.BuffType.Weakness then
+--                                     HasWeakness = true
+--                                 end
+--                             end
+--                             if HasWeakness then
+--                                 local WeaknessIcon = DataMgr.DamageType[BuffInfo.WeaknessType].WeaknessIcon
+--                                 if WeaknessIcon then
+--                                     self.MonsterWeaknessIcon[MonsterId] = self.MonsterWeaknessIcon[MonsterId] or {}
+--                                     self.MonsterWeaknessIcon[MonsterId][WeaknessIcon] = true
+--                                 end
+--                             end
+--                         end
+--                     end
+--                 end
+--             end
+--         end
+--     end
+-- end
+
+-- -- 多人挑战按钮响应方法
+-- function M:OnClickMulti()
+--     if not self.CurSelectedDungeonId then
+--         DebugPrint("ZDX CurSelectedDungeonId is nil")
+--         return
+--     end
+--     if not PageJumpUtils:CheckDungeonCondition(DataMgr.Dungeon[self.CurSelectedDungeonId].Condition) then
+--         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Tosat_Level_Locked"))
+--         return
+--     end
+--     if self:IsAnimationPlaying(self.Out_Loading) then
+--         return
+--     end
+--     if self.MyActionPoint < self.DungeonCost then
+--         UIManager(self):ShowUITip("CommonToastMain", "UI_Toast_Insufficient_Content")
+--         return
+--     end
+--     self.bSolo = false
+--     local Avatar = GWorld:GetAvatar()
+-- 	assert(Avatar, "NO AVATAR")
+
+-- 	-- 请求进入副本
+-- 	Avatar:EnterDungeon(self.CurSelectedDungeonId, CommonConst.DungeonNetMode.DedicatedServer)
+
+-- 	local bIsInTeam = Avatar:IsInTeam()
+-- 	if bIsInTeam then
+-- 		UIManager(self):LoadUINew("DungeonMatchTimingBar",
+-- 				self.CurSelectedDungeonId, Const.DUNGEON_MATCH_BAR_STATE.SPONSOR_WAITING_CONFIRM)
+-- 	else
+-- 		UIManager(self):LoadUINew("DungeonMatchTimingBar", 
+-- 				self.CurSelectedDungeonId, Const.DUNGEON_MATCH_BAR_STATE.WAITING_MATCHING_WITH_CANCEL)
+-- 	end
+-- end
+
+-- -- 单人挑战按钮响应方法
+-- function M:OnClickSolo()
+--     if not self.CurSelectedDungeonId then
+--         DebugPrint("ZDX CurSelectedDungeonId is nil")
+--         return
+--     end
+--     if not PageJumpUtils:CheckDungeonCondition(DataMgr.Dungeon[self.CurSelectedDungeonId].Condition) then
+--         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Tosat_Level_Locked"))
+--         return
+--     end
+--     if self:IsAnimationPlaying(self.Out_Loading) then
+--         return
+--     end
+--     if self.MyActionPoint < self.DungeonCost then
+--         UIManager(self):ShowUITip("CommonToastMain", "UI_Toast_Insufficient_Content")
+--         return
+--     end
+--     self.bSolo = true
+--     local StyleOfPlay = UIManager(self):GetUI("StyleOfPlay")
+--     StyleOfPlay:PlayAnimation(StyleOfPlay.Out)
+--     self:PlayAnimation(self.Out_Loading)
+-- end
+
+-- -- 查看怪物信息按钮响应事件
+-- function M:OnBtnCheckClicked()
+--     if not self:IsAnimationPlaying(self.Out) then
+--         UIManager(self):LoadUINew("MonsterDetailInfo", self.CurSelectedDungeonId, self)
+--     end
+-- end
+
+-- --点击怪物信息
+-- function M:SelectMonsterInfoItem(MonsterId)
+--     UIManager(self):LoadUINew("MonsterDetailInfo", self.CurSelectedDungeonId, self,MonsterId)
+-- end
+
+-- --- 属性图标悬浮相关
+-- ---@param ElementType string @属性类型
+-- function M:SetElementIcon(ElementType)
+--     if(ElementType)then
+--         self.Type:SetVisibility(ESlateVisibility.Visible)
+--     else
+--         self.Type:SetVisibility(ESlateVisibility.Collapsed)
+--         return
+--     end
+--     local IconPath = DataMgr.Attribute[ElementType].Icon
+--     local Icon = LoadObject(IconPath)
+--     self.Icon_Type:SetBrushResourceObject(Icon)
+--     self.Stats_ListView:ClearListItems()
+--     local ElmtTypes, ElmtNames = UIUtils.GetAllElementTypes()
+--     for idx, Type in ipairs(ElmtTypes) do
+--         self.Stats_ListView:AddItem(self:NewElmtIconContent(Type, ElmtNames[idx], Type == ElementType))
+--     end
+-- end
+
+-- function M:NewElmtIconContent(ElmtType, ElmtName, IsSelected)
+--     local Obj = NewObject(self.AttributeContentClass)
+--     local IconPath = DataMgr.Attribute[ElmtType].Icon
+--     Obj.Icon =  LoadObject(IconPath)
+--     Obj.Text = GText(ElmtName)
+--     Obj.IsSelected = IsSelected
+--     return Obj
+-- end
+
+-- function M:OnElementEntryInitialized(Content, Widget)
+--     if(Content.IsSelected)then
+--         Widget.Bg_On:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+--     else
+--         Widget.Bg_On:SetVisibility(ESlateVisibility.Collapsed)
+--     end
+--     Widget.Image_Attribute:SetBrushResourceObject(Content.Icon)
+--     Widget.Stats_Name:SetText(Content.Text)
+-- end
+
+-- function M:OnButtonAttibuteHovered()
+--     self.Stats:SetRenderOpacity(1)
+-- end
+
+-- function M:OnButtonAttibuteUnhovered()
+--     self.Stats:SetRenderOpacity(0)
+-- end
+
+-- --- 默认返回按钮响应方法
+-- function M:OnReturnKeyDown()
+--     if not self:IsAnimationPlaying(self.Out) then
+--         self:SetVisibility(ESlateVisibility.HitTestInvisible)
+--         self:PlayAnimation(self.Out)
+--     end
+-- end
+
+-- function M:OnAnimationFinished(InAnimation)
+--     if InAnimation == self.Out then
+--         self:RemoveFromParent()
+--         local PlayEntry = UIManager(self):GetUIObj("StyleOfPlay")
+--         PlayEntry.SubUI[PlayEntry.CurTabId] = nil
+--         -- 如果当前拼接关是由其他页面跳转，则关闭当前页面时，玩法入口页面直接关闭
+--         -- 如果当前拼接关是通过玩法页面打开，则关闭当前页面时，返回到玩法入口页面
+--         if self.IsFromJump then
+--             PlayEntry:Close()
+--         else
+--             PlayEntry:InitMainTab()
+--             PlayEntry.ComTab:SelectTab(1)
+--         end
+--     elseif InAnimation == self.Out_Loading then
+--         if self.bSolo then
+--             AudioManager(self):PlayUISound(self, "event:/ui/common/map_click_enter_level", nil, nil)
+--             local Avatar = GWorld:GetAvatar()
+--             if Avatar then
+--                 Avatar:EnterDungeon(self.CurSelectedDungeonId)
+--             else
+--                 WorldTravelSubsystem():ChangeDungeonByDungeonId(self.CurSelectedDungeonId)
+--             end
+--         end
+--     end
+-- end
+
+-- function M:OnKeyDown(MyGeometry, InKeyEvent)
+--     local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+--     local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+--     if (InKeyName == "Escape") then
+--         self:OnReturnKeyDown()
+--     end
+--     return UWidgetBlueprintLibrary.UnHandled()
+-- end
+
+-- function M:OnForbiddenRightBtnClicked()
+--     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, "UI_REGISTER_COMINGSOON")
+-- end
+
+-- function M:ShowIntro()
+--     UIManager(self):LoadUINew("CommonDialogTip", GText("UI_Dungeon_Detail"), GText("UI_Toast_Dungeon_Detail"))
+-- end
+
+-- function M:UpdateActionPoint(ActionPointID)
+--     -- 获取玩家体力信息
+--     local Avatar = GWorld:GetAvatar()
+--     self.MyActionPoint = Avatar.ActionPoint
+
+--     -- 更新关卡体力消耗信息
+--     self.Num_Over:SetText(GText(self.MyActionPoint))
+--     self.Num_Short:SetText(GText(self.MyActionPoint))
+--     -- 根据当前体力是否足够跳转，设置不同文本类型
+--     self.Switcher_Owned:SetActiveWidgetIndex(self.MyActionPoint >= self.DungeonCost and 0 or 1)
+-- end
+
+-- function M:RefreshBtnState(bInIsMatching)
+-- 	if self.CurSelectedDungeonId then
+-- 		local DungeonData = DataMgr.Dungeon[self.CurSelectedDungeonId]
+-- 		if bInIsMatching == nil then
+-- 			bInIsMatching = self:IsMatching()
+-- 		end
+-- 		if bInIsMatching then
+-- 			self.Button_Multi:ForbidBtn(true)
+-- 			self.Button_Solo:ForbidBtn(true)
+			
+-- 			self.Button_Multi:UnBindEventOnClickedByObj(self)
+-- 			self.Button_Solo:UnBindEventOnClickedByObj(self)
+-- 			self.Button_Multi:BindForbidStateExecuteEvent(self, function() return end)
+-- 			self.Button_Solo:BindForbidStateExecuteEvent(self, function() return end)
+-- 		else
+-- 			-- 根据是否为多人副本设置多人按钮的可见性
+-- 		    --优先使用Cdn配置
+--             local IsMultiDungeon = DungeonData.IsMultiDungeon
+--             local Avatar = GWorld:GetAvatar()
+--             if Avatar and Avatar.CdnHideData and Avatar.CdnHideData.dungeon then
+--                 if Avatar.CdnHideData.dungeon.multidungeon ~= nil then
+--                     IsMultiDungeon = Avatar.CdnHideData.dungeon.multidungeon
+--                 end
+--             end
+-- 			if IsMultiDungeon then
+-- 				self.Button_Multi:ForbidBtn(false)
+-- 			else
+-- 				self.Button_Multi:ForbidBtn(true)
+-- 			end
+-- 			self.Button_Multi:UnBindEventOnClickedByObj(self)
+-- 			self.Button_Solo:UnBindEventOnClickedByObj(self)
+			
+-- 			self.Button_Solo:ForbidBtn(false)
+
+-- 			self.Button_Multi:BindEventOnClicked(self, self.OnClickMulti)
+-- 			self.Button_Solo:BindEventOnClicked(self, self.OnClickSolo)
+-- 			self.Button_Multi:BindForbidStateExecuteEvent(self,self.OnForbiddenRightBtnClicked)
+-- 		end
+-- 	end
+-- end
+
+-- function M:IsMatching()
+-- 	local MatchTimingBar = UIManager(self):GetUIObj("DungeonMatchTimingBar")
+-- 	return MatchTimingBar and true
+-- end
+ 
+-- return M

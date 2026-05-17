@@ -1,3 +1,5 @@
-require("UnLua")
+require "UnLua"
+
 local M = Class()
+
 return M

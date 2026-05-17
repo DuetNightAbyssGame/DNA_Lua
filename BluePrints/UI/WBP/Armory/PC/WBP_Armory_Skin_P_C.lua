@@ -1,507 +1,645 @@
-require("UnLua")
-local M = Class("BluePrints.UI.WBP.Armory.WBP_Armory_Skin_Base_C")
+--
+-- DESCRIPTION
+--
+-- @COMPANY **
+-- @AUTHOR **
+-- @DATE ${date} ${time}
+--
+require "UnLua"
+
+local FSM = require("Blueprints.UI.FocusStateMachine")
+local FocusAreas = {
+    SkinList = "SkinList",
+    AccessoryList = "AccessoryList",
+    AccessoryTab = "AccessoryTab",
+    HiddenSelf = "HiddenSelf",
+    Resource = "Resource",
+    MVPList = "MVPList",
+    SkinLevelUp = "SkinLevelUp",
+}
+
+---@type WBP_Armory_Skin_P_C|WBP_Armory_Skin_Base_C
+local M = Class("BluePrints.UI.WBP.Armory.Appearance.WBP_Armory_Skin_Base_C")
+M._components = {
+    "BluePrints.UI.KeyInputComponent"
+}
+--function M:Initialize(Initializer)
+--end
 
 function M:Construct()
-  self.KeyDownEvents = {}
-  self.RepeatKeyDownEvents = {}
-  self.TabStyleName = "Text"
-  self.UKey = "U"
-  self.GamePadHideUIKey = UIConst.GamePadKey.FaceButtonLeft
-  self.TabLeftKey = EKeys.Q.KeyName
-  self.TabRightKey = EKeys.E.KeyName
-  self.LeftThumbstickKey = UIConst.GamePadKey.LeftThumb
-  self.LeftMouseButton = EKeys.LeftMouseButton.KeyName
-  self.EscapeKey = EKeys.Escape.KeyName
-  self.MainTabGamePadLeftKey = Const.GamepadLeftShoulder
-  self.MainTabGamePadRightKey = Const.GamepadRightShoulder
-  self.GamePadBackKey = Const.GamepadFaceButtonRight
-  self.GamePadConfirKey = Const.GamepadFaceButtonDown
-  self.GamePadGotoDyeKey = UIConst.GamePadKey.FaceButtonTop
-  self.LeftTriggerKey = Const.GamepadLeftTrigger
-  self.RightTriggerKey = Const.GamepadRightTrigger
-  self.DPadLeftKey = UIConst.GamePadKey.DPadLeft
-  self.DPadRightKey = UIConst.GamePadKey.DPadRight
-  self.ZoomKey = "Mouse_Button"
-  self.Key_GamePad_L:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "Left"}
-    }
-  })
-  self.Key_GamePad_R:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "Right"}
-    }
-  })
-  self.ESCKeyInfoList = {
-    KeyInfoList = {
-      {
-        Type = "Text",
-        Text = self.EscapeKey,
-        ClickCallback = self.OnBackKeyDown,
-        Owner = self
-      }
-    },
-    GamePadInfoList = {
-      {
-        Type = "Img",
-        ImgShortPath = "B",
-        ClickCallback = self.OnBackKeyDown,
-        Owner = self
-      }
-    },
-    Desc = GText("UI_BACK")
-  }
-  self.HideUI_KeyInfoList = {
-    KeyInfoList = {
-      {
-        Type = "Text",
-        Text = CommonUtils:GetKeyText("U"),
-        ClickCallback = self.OnHideUIKeyDown,
-        Owner = self
-      }
-    },
-    GamePadInfoList = {
-      {Type = "Img", ImgShortPath = "X"}
-    },
-    Desc = GText("UI_Dye_HideUI")
-  }
-  self.ZoomKeyInfoList = {
-    KeyInfoList = {
-      {
-        Type = "Text",
-        Text = self.ZoomKey,
-        Owner = self
-      }
-    },
-    GamePadInfoList = {
-      {Type = "Or"},
-      GamePadSubKeyInfoList = {
-        {
-          Type = "Img",
-          ImgShortPath = "LT",
-          Owner = self
+    rawset(self,"EscapeKey",EKeys.Escape.KeyName)
+    rawset(self,"ZoomKey","Mouse_Button")
+
+    self.ESCKeyInfoList = {
+        KeyInfoList = {
+            {Type="Text", Text = self.EscapeKey, ClickCallback=self.OnBackKeyDown, Owner=self},
         },
-        {
-          Type = "Img",
-          ImgShortPath = "RT",
-          Owner = self
-        }
-      }
-    },
-    Desc = GText("UI_Dye_Zoom"),
-    bLongPress = false
-  }
-  self.RightThumbstickAnalogBottomKeyInfoList = {
-    GamePadInfoList = {
-      {Type = "Img", ImgShortPath = "RH"}
-    },
-    Desc = GText("UI_CTL_RotatePreview")
-  }
-  self.List_Accessory.BP_OnItemSelectionChanged:Clear()
-  self.List_Accessory.BP_OnItemSelectionChanged:Add(self, self.OnAccessoryItemSelectionChanged)
-  self.Btn_Function:SetDefaultGamePadImg("A")
-  self.bShoulFocusToLastFocusedWidget = false
-  M.Super.Construct(self)
-  
-  function self.TabConfig.GetReplyOnBack()
-    return self:GetReplyOnBack()
-  end
-  
-  self:RefreshOpInfoByInputDevice(UIUtils.UtilsGetCurrentInputType())
-  self.WBP_Com_Cost:SwitchToPC()
+        GamePadInfoList =  {
+            {Type="Img", ImgShortPath="B", ClickCallback=self.OnBackKeyDown, Owner=self}
+        },
+        Desc = GText("UI_BACK"),
+    }
+    self.HideUI_KeyInfoList = {
+        KeyInfoList = {
+            {Type="Text", Text = CommonUtils:GetKeyText("U"), ClickCallback=self.OnHideUIKeyDown, Owner=self},
+        },
+        GamePadInfoList =  {
+            {Type="Img", ImgShortPath="X"}
+        },
+        Desc = GText("UI_Dye_HideUI")
+    }
+    self.ZoomKeyInfoList = {
+        KeyInfoList = {
+            {Type="Text", Text = self.ZoomKey, Owner=self},
+        },
+        GamePadInfoList =  {
+            {Type="Or"},
+            GamePadSubKeyInfoList = {
+                {Type="Img", ImgShortPath="LT", Owner=self},
+                {Type="Img", ImgShortPath="RT", Owner=self}
+            }
+        },
+        Desc = GText("UI_Dye_Zoom"),
+        bLongPress = false
+    }
+    self.RightThumbstickAnalogBottomKeyInfoList = {
+        GamePadInfoList =  {
+            {Type="Img", ImgShortPath="RH",}
+        },
+        Desc = GText("UI_CTL_RotatePreview"),
+    }
+    self.Btn_Function:SetDefaultGamePadImg("A")
+    self.Btn_Package_Open:SetDefaultGamePadImg("A")
+    self.Btn_Package_Buy:SetDefaultGamePadImg("Y")
+    self.Key_Show:CreateCommonKey({ KeyInfoList = {{Type = "Img", ImgShortPath = "View"}} })
+    self.Key_Dye:CreateCommonKey({ KeyInfoList = {{Type = "Img", ImgShortPath = "Y"}} })
+    self.Key_Custom:CreateCommonKey({ KeyInfoList = {{Type = "Img", ImgShortPath = "Y"}} })
+    M.Super.Construct(self)
+    rawset(self,"FSM",FSM:New(self,{StateNames = FocusAreas,
+                                    OnStateChanged = self.OnFocusStateChanged,
+                                    CheckFunction = self.IsFocusStateValid,}))
+    self.WBP_Com_Cost:SwitchToPC()--临时处理
+    self.Key_LevelUp:CreateCommonKey({ 
+        KeyInfoList = {{Type = "Img", ImgShortPath = "LS"}},
+        SkipRefreshInputType = true
+    })
+end
+
+function M:OnTabConfigCreated(TabConfig)
+    TabConfig.StyleName = "Text"
+    TabConfig.GetReplyOnBack = function()
+        self.FSM:Pop()
+        return self:GetReplyOnBack()
+    end
+    TabConfig.OnResourceBarAddedToFocusPath = self.OnResourceBarAddedToFocusPath
+    TabConfig.OnResourceBarRemovedFromFocusPath = self.OnResourceBarRemovedFromFocusPath
+end
+
+function M:InitUIInfo(...)
+    M.Super.InitUIInfo(self, ...)
+end
+
+function M:OnInited()
+    M.Super.OnInited(self)
+    rawset(self,"Inited",true)
+    self:RefreshOpInfoByInputDevice(UIUtils.UtilsGetCurrentInputType())
+end
+
+function M:OnTopTabSelected(...)
+    M.Super.OnTopTabSelected(self,...)
+    self:UpdateKeySetting()
 end
 
 function M:UpdateKeySetting()
-  self.KeyDownEvents = {}
-  self.RepeatKeyDownEvents = {}
-  self.KeyDownEvents[self.EscapeKey] = self.OnBackKeyDown
-  self.KeyDownEvents[self.GamePadBackKey] = self.OnBackKeyDown
-  self.KeyDownEvents[self.LeftMouseButton] = self.OnLeftMouseButtonDown
-  self.RepeatKeyDownEvents[self.LeftTriggerKey] = self.OnCameraScrollBackwardKeyDown
-  self.RepeatKeyDownEvents[self.RightTriggerKey] = self.OnCameraScrollForwardKeyDown
-  self.KeyDownEvents[self.GamePadHideUIKey] = self.OnHideUIKeyDown
-  self.KeyDownEvents[self.UKey] = self.OnHideUIKeyDown
-  self.KeyDownEvents[self.TabLeftKey] = self.OnTabLeftKeyDown
-  self.KeyDownEvents[self.TabRightKey] = self.OnTabRightKeyDown
-  self.KeyDownEvents[self.MainTabGamePadLeftKey] = self.OnTabLeftKeyDown
-  self.KeyDownEvents[self.MainTabGamePadRightKey] = self.OnTabRightKeyDown
-  if not self.bSelfHidden and self.CurrentTopTabIdx == self.SkinTabIdx then
-    if not self.IsPreviewMode and not self.IsCharacterTrialMode then
-      self.KeyDownEvents[self.GamePadGotoDyeKey] = self.OnGamePadGotoDyeKeyDown
+    if(rawget(self,"bAccessoryCustomOpened"))then
+        self:UpdateKeySetting_AccessoryCustom()
+        return
     end
-    self.KeyDownEvents[self.DPadLeftKey] = self.OnDPadLeftKeyDown
-    self.KeyDownEvents[self.DPadRightKey] = self.OnDPadRightKeyDown
-  end
-  self.BottomKeyInfo = {}
-  table.insert(self.BottomKeyInfo, self.HideUI_KeyInfoList)
-  table.insert(self.BottomKeyInfo, self.ZoomKeyInfoList)
-  table.insert(self.BottomKeyInfo, self.RightThumbstickAnalogBottomKeyInfoList)
-  table.insert(self.BottomKeyInfo, self.ESCKeyInfoList)
-  self.Tab_Skin:UpdateBottomKeyInfo(self.BottomKeyInfo)
+    self:ClearAllKeyEvents()
+    self.BottomKeyInfo = {}
+    self.RepeatKeyDownEvents = {}
+    if(self.IsGamepadInput)then
+        local StateName = self.FSM:Peak().Name
+        if(StateName == FocusAreas.Resource)then
+            self:AddKeyDownEvent(Const.GamepadFaceButtonRight,self.OnBackKeyDown)
+            table.insert(self.BottomKeyInfo,self.ESCKeyInfoList)
+        else
+            if(not self.bSelfHidden)then
+                self:AddKeyDownEvent(Const.GamepadRightThumbstick,self.OnFocusToResourceKeyDown)
+                self:AddKeyDownEvent(Const.GamepadSpecialLeft,self.OnOpenVideoKeyDown)
+                self:AddKeyDownEvent(Const.GamepadLeftShoulder,self.OnTabLeftKeyDown)
+                self:AddKeyDownEvent(Const.GamepadRightShoulder,self.OnTabRightKeyDown)
+            end
+            self:AddKeyDownEvent(Const.GamepadFaceButtonRight,self.OnBackKeyDown)
+            self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonLeft,self.OnHideUIKeyDown)
+            if(not self.bSelfHidden and not self.IsPreviewMode and not self.IsCharacterTrialMode)then
+                if(self.CurrentTopTabIdx == self.SkinTabIdx or self.CurrentTopTabIdx == self.HairTabIdx)then
+                    self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop,self.OnGamePadFaceButtonTopKeyDown)
+                elseif(self.CurrentTopTabIdx == self.AccessoryTabIdx)then
+                    self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop,self.OnGamePadAccessoryCustomKeyDown)
+                end
+            end
+            if (self.Panel_LevelUp:IsVisible()) then
+                self:AddKeyDownEvent(UIConst.GamePadKey.LeftThumb, self.OnGamePadLeftThumbKeyDown)
+            end
+            table.insert(self.BottomKeyInfo,self.HideUI_KeyInfoList)
+            if(self.EnableMouseWheel)then
+                self.RepeatKeyDownEvents[Const.GamepadLeftTrigger] = self.OnCameraScrollBackwardKeyDown
+                self.RepeatKeyDownEvents[Const.GamepadRightTrigger] = self.OnCameraScrollForwardKeyDown
+                table.insert(self.BottomKeyInfo,self.ZoomKeyInfoList)
+            end
+            if(self.EnableDrag)then
+                table.insert(self.BottomKeyInfo,self.RightThumbstickAnalogBottomKeyInfoList)
+            end
+            table.insert(self.BottomKeyInfo,self.ESCKeyInfoList)
+        end
+    else
+        --键鼠
+        if(not self.bSelfHidden)then
+            self:AddKeyDownEvent(EKeys.Q.KeyName,self.OnTabLeftKeyDown)
+            self:AddKeyDownEvent(EKeys.E.KeyName,self.OnTabRightKeyDown)
+        end
+        self:AddKeyDownEvent(self.EscapeKey,self.OnBackKeyDown)
+        self:AddKeyDownEvent(EKeys.U.KeyName,self.OnHideUIKeyDown)
+        table.insert(self.BottomKeyInfo,self.HideUI_KeyInfoList)
+        if(self.EnableMouseWheel)then
+            table.insert(self.BottomKeyInfo,self.ZoomKeyInfoList)
+        end
+        if(self.EnableDrag)then
+            table.insert(self.BottomKeyInfo,self.RightThumbstickAnalogBottomKeyInfoList)
+        end
+        table.insert(self.BottomKeyInfo,self.ESCKeyInfoList)
+    end
+    self.Tab_Skin:UpdateBottomKeyInfo(self.BottomKeyInfo)
+end
+
+function M:OnFocusToResourceKeyDown()
+    self.Tab_Skin:Handle_KeyEventOnGamePad(Const.GamepadRightThumbstick)
+    return UIUtils.Handled,true
+end
+
+function M:OnOpenVideoKeyDown()
+    self:OpenSkinVideo()
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
-  self:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
+    self:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
 end
 
 function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
-  M.Super.OnUpdateUIStyleByInputTypeChange(self, CurInputDevice, CurGamepadName)
-  self.IsGamepadInput = CurInputDevice == ECommonInputType.Gamepad
-  local Content = self.SkinMap and self.SkinMap[self.SelectedSkinId]
-  if self.IsGamepadInput then
-    self.ScrollBox_Skin:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    if not self.IsInFocusPath or self.bSelfHidden then
-      return
-    end
-    if self.CurrentTopTabIdx == self.SkinTabIdx then
-      if not Content then
+    M.Super.OnUpdateUIStyleByInputTypeChange(self,CurInputDevice, CurGamepadName)
+    if(not rawget(self,"Inited"))then
         return
-      end
-      if not self.IsSkinWidgetFocused or not UIUtils.HasAnyFocus(self.SkinWidgets[Content.Idx]) then
-        self:SelectSkinByContent(Content)
-        self.SkinWidgets[Content.Idx]:SetFocus()
-      end
-    elseif not self.IsAccessoryTabFocused and not self.IsAccessoryItemFocused then
-      self:NavigateToList():SetFocus()
     end
-  else
-    self.ScrollBox_Skin:SetVisibility(UIConst.VisibilityOp.Visible)
-  end
-  if Content then
-    self:UpdateDirBtnByIdx(Content.Idx)
-  end
+    self.IsGamepadInput = CurInputDevice == ECommonInputType.Gamepad
+    self:SetIsDealWithVirtualAccept(false)
+    if (self.IsGamepadInput) then
+        if(rawget(self,"bAccessoryCustomOpened"))then
+            self:SetIsDealWithVirtualAccept(true)
+        end
+        self.Key_Show:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+        self.Panel_Key_Dye:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+        self.Panel_Key_Custom:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+        self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+        if(not self.IsInFocusPath)then
+            return
+        end
+        local State = self.FSM:Peak()
+        if(not self:IsFocusStateValid(State))then
+            self.FSM:Clear()
+        end
+        local Widget = self:GetDesiredFocusTarget()
+        if(Widget and not UIUtils.HasAnyFocus(Widget))then
+            Widget:SetFocus()
+        end
+        if State and (State.Name == FocusAreas.SkinLevelUp) then
+            self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        end
+    else
+        self.Panel_Key_Dye:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        self.Key_Show:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        self.Panel_Key_Custom:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    self:UpdateKeySetting()
 end
 
-function M:InitSkinWidgets()
-  M.Super.InitSkinWidgets(self)
-  self:InitSkinWidgetsNavigationRules()
+function M:OnFocusStateChanged()
+    self:UpdateKeySetting()
+end
+
+function M:IsFocusStateValid(State)
+    if(rawget(self,"bAccessoryCustomOpened"))then
+        return self:IsFocusStateValid_AccessoryCustom(State)
+    end
+    local StateName = State.Name
+    if(StateName == FocusAreas.SkinList)then
+        return self.List_Skin:GetIndexForItem(State.Content) >= 0
+    elseif(StateName == FocusAreas.AccessoryTab)then
+        local CurrentTab = self.AccessoryTabsArray and self.AccessoryTabsArray[self.CurrentAccessoryTabIdx]
+        return CurrentTab and CurrentTab == State.Content
+    elseif(StateName == FocusAreas.AccessoryList)then
+        return self.List_Accessory:GetIndexForItem(State.Content) >= 0
+    elseif(StateName == FocusAreas.MVPList)then
+        return self.List_SettlementAction:GetIndexForItem(State.Content) >= 0
+    elseif(StateName == FocusAreas.HiddenSelf)then
+        return self.bSelfHidden
+    elseif(StateName == FocusAreas.Resource)then
+        return true
+    elseif(StateName == FocusAreas.SkinLevelUp) then
+        return self.Panel_LevelUp:IsVisible()
+    end
+end
+
+function M:GetDesiredFocusTarget()
+    if(rawget(self,"bAccessoryCustomOpened"))then
+        return self:GetDesiredFocusTarget_AccessoryCustom()
+    end
+    local State = self.FSM:Peak()
+    local StateName = State.Name
+    self.List_SettlementAction:BP_CancelScrollIntoView()
+    self.List_Skin:BP_CancelScrollIntoView()
+    self.List_Accessory:BP_CancelScrollIntoView()
+    if(self.bSelfHidden)then
+        return self
+    elseif(self.CurrentTopTabIdx == self.SkinTabIdx)then
+        if (StateName == FocusAreas.SkinLevelUp) then
+            return self["WBP_Armory_Skin_LevelUp_" .. self.SelectedSkinLevel]
+        else
+            return self:NavigateToSkinList()
+        end
+    elseif(self.CurrentTopTabIdx == self.MVPTabIdx)then
+        return  self:NavigateToMVPList()
+    else
+        if(StateName == FocusAreas.AccessoryTab)then
+            return self:NavigateToAccessoryTab()
+        else
+            return  self:NavigateToAccessoryList()
+        end
+    end
 end
 
 function M:OnSkinContentCreated(Content)
-  Content.OnAddedToFocusPath = self.OnSkinWidgetAddedToFocusPath
-  Content.OnRemovedFromFocusPath = self.OnSkinWidgetRemovedFromFocusPath
+    Content.OnAddedToFocusPath = self.OnSkinItemAddedToFocusPath
+    Content.OnRemovedFromFocusPath = self.OnSkinItemRemovedFromFocusPath
 end
 
-function M:OnSkinWidgetAddedToFocusPath(Content)
-  if self.IsGamepadInput then
-    self.IsSkinWidgetFocused = true
-    self:SelectSkinByContent(Content)
-  end
+function M:OnSkinItemAddedToFocusPath(Content)
+    self.FSM:Clear()
+    self.FSM:Push({Name = FocusAreas.SkinList,Content = Content})
 end
 
-function M:OnSkinWidgetRemovedFromFocusPath(Content)
-  self.IsSkinWidgetFocused = false
+function M:OnSkinItemRemovedFromFocusPath(Content)
 end
 
-function M:InitSkinWidgetsNavigationRules()
-  for index, Widget in ipairs(self.SkinWidgets) do
-    Widget.bIsShowNavigateGuide = false
-    Widget.Button_Area.bIsShowNavigateGuide = false
-    Widget:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
-    Widget:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
-    local PreWidgt = self.SkinWidgets[index - 1]
-    if PreWidgt then
-      Widget:SetNavigationRuleExplicit(EUINavigation.Left, PreWidgt)
-    else
-      Widget:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
+function M:OnResourceBarAddedToFocusPath(Widget)
+    self.FSM:Push({Name = FocusAreas.Resource,Widget = Widget})
+end
+
+function M:OnResourceBarRemovedFromFocusPath(Widget)
+end
+
+function M:NavigateToSkinList(Content)
+    local Content = Content or self.SkinMap[self.SelectedSkinId]
+    if(not Content or self.List_Skin:GetIndexForItem(Content) < 0)then
+        Content = self.List_Skin:GetItemAt(0)
     end
-    local NextWidget = self.SkinWidgets[index + 1]
-    if NextWidget then
-      Widget:SetNavigationRuleExplicit(EUINavigation.Right, NextWidget)
-    else
-      Widget:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
+    self.List_Skin:BP_CancelScrollIntoView()
+    self.List_Skin:BP_SetSelectedItem(Content)
+    self.List_Skin:BP_NavigateToItem(Content)
+    if(Content and Content.Widget)then
+        return Content.Widget
     end
-  end
+    return self.List_Skin
 end
 
-function M:UpdateSkinWidgetStyle(Content)
-  M.Super.UpdateSkinWidgetStyle(self, Content)
-  for index, Widget in ipairs(self.SkinWidgets) do
-    Widget:SetGamePadKeyVisibility(UIConst.VisibilityOp.Collapsed)
-  end
-  local CurrentWidget = self.SkinWidgets[Content.Idx]
-  if CurrentWidget and Content.bDyeable and not Content.LockType then
-    CurrentWidget:SetGamePadKeyVisibility(UIConst.VisibilityOp.HitTestInvisible)
-  end
+function M:NavigateToAccessoryTab()
+    local CurrentTab = self.AccessoryTabsArray and self.AccessoryTabsArray[self.CurrentAccessoryTabIdx]
+    return CurrentTab and CurrentTab.UI
 end
 
-function M:UpdateDirBtnByIdx(Idx)
-  if self.IsGamepadInput then
-    self.Btn_L:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Btn_R:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Key_GamePad_L:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.Key_GamePad_R:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    if Idx <= 1 then
-      self.Key_GamePad_L:SetForbidKey(true)
-    else
-      self.Key_GamePad_L:SetForbidKey(false)
+function M:NavigateToAccessoryList()
+    local Content = self.ComparedContent or self.CurrentContent
+    if(not Content or self.List_Accessory:GetIndexForItem(Content) < 0)then
+        Content = self.List_Accessory:GetItemAt(0)
     end
-    if Idx >= #self.SkinArray then
-      self.Key_GamePad_R:SetForbidKey(true)
-    else
-      self.Key_GamePad_R:SetForbidKey(false)
+    self.List_Accessory:BP_CancelScrollIntoView()
+    self.List_Accessory:BP_SetSelectedItem(Content)
+    self.List_Accessory:BP_NavigateToItem(Content)
+    if(Content and Content.SelfWidget)then
+        return Content.SelfWidget
     end
-  else
-    self.Key_GamePad_L:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Key_GamePad_R:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    M.Super.UpdateDirBtnByIdx(self, Idx)
-  end
-end
-
-function M:OnTopTabSelected(TabWidget, Content)
-  M.Super.OnTopTabSelected(self, TabWidget, Content)
-  self:UpdateKeySetting()
-  if self.CurrentTopTabIdx == self.SkinTabIdx then
-    local SkinContent = self.SkinMap[self.SelectedSkinId]
-    if SkinContent and self.SkinWidgets[SkinContent.Idx] then
-      self.SkinWidgets[SkinContent.Idx]:SetFocus()
-    end
-  else
-    self:InitAccessoryNavigationRules()
-    self:NavigateToList()
-  end
-end
-
-function M:NavigateToList()
-  self.List_Accessory:BP_CancelScrollIntoView()
-  self.List_Accessory:BP_SetSelectedItem(self.ComparedContent)
-  self.List_Accessory:BP_NavigateToItem(self.ComparedContent)
-  return self.List_Accessory
+    return self.List_Accessory
 end
 
 function M:OnAccessoryContentCreated(Content)
-  Content.OnAddedToFocusPathEvent = {
-    Obj = self,
-    Callback = function()
-      self.IsAccessoryItemFocused = true
-    end
-  }
-  Content.OnRemovedFromFocusPathEvent = {
-    Obj = self,
-    Callback = function()
-      self.IsAccessoryItemFocused = false
-    end
-  }
+    Content.OnAddedToFocusPathEvent = {Obj = self,Callback = function()
+        self.FSM:Clear()
+        self.FSM:Push({Name = FocusAreas.AccessoryList,Content = Content})
+    end}
+    Content.OnRemovedFromFocusPathEvent = {Obj = self,Callback = function()
+    end}
 end
 
-function M:OnAccessoryTabContentCreated(Content)
-  function Content.OnAddedToFocusPath()
-    self.IsAccessoryTabFocused = true
-  end
-  
-  function Content.OnRemovedFromFocusPath()
-    self.IsAccessoryTabFocused = false
-  end
+function M:OnAccessoryTabContentCreated(Content,Widget)
+    Content.OnAddedToFocusPath = function()
+        self.FSM:Clear()
+        self.FSM:Push({Name = FocusAreas.AccessoryTab,Content = Content,Widget = Widget})
+    end
+    Content.OnRemovedFromFocusPath = function()
+    end
+end
+
+function M:NavigateToMVPList()
+    local Content = self.ComparedContent or self.CurrentContent
+    if(not Content or self.List_SettlementAction:GetIndexForItem(Content) < 0)then
+        Content = self.List_SettlementAction:GetItemAt(0)
+    end
+    self.List_SettlementAction:BP_CancelScrollIntoView()
+    self.List_SettlementAction:BP_SetSelectedItem(Content)
+    self.List_SettlementAction:BP_NavigateToItem(Content)
+    if(Content and Content.Widget)then
+        return Content.Widget
+    end
+    return self.List_SettlementAction
+end
+
+function M:OnMVPContentCreated(Content)
+    Content.OnAddedToFocusPath = function()
+        self.FSM:Clear()
+        self.FSM:Push({Name = FocusAreas.MVPList,Content = Content})
+    end
+end
+
+function M:OnHairContentCreated(Content)
+    Content.OnAddedToFocusPathEvent = {Obj = self,Callback = function()
+        self.FSM:Clear()
+        self.FSM:Push({Name = FocusAreas.AccessoryList,Content = Content})
+    end}
+    Content.OnRemovedFromFocusPathEvent = {Obj = self,Callback = function()
+    end}
 end
 
 function M:OnAddedToFocusPath()
-  self.IsInFocusPath = true
+    self.IsInFocusPath = true
 end
 
 function M:OnRemovedFromFocusPath()
-  self.IsInFocusPath = false
+    self.IsInFocusPath = false
 end
 
+function M:OnCharAccessoryTabClicked(...)
+    M.Super.OnCharAccessoryTabClicked(self,...)
+    self:InitAccessoryNavigationRules()
+end
+
+function M:OnWeaponAccessoryTabClicked(...)
+    M.Super.OnWeaponAccessoryTabClicked(self,...)
+    self:InitAccessoryNavigationRules()
+end
+
+--列表间的导航
 function M:InitAccessoryNavigationRules()
-  self.Tab_Accessory:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
-  self.Tab_Accessory:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
-  self.Tab_Accessory:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
-  self.List_Accessory:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
-  self.List_Accessory:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
-  self.List_Accessory:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
-  if self.Tab_Accessory:IsVisible() then
-    self.Tab_Accessory:SetNavigationRuleCustom(EUINavigation.Right, {
-      self,
-      function()
-        local Content = self.ComparedContent or self.CurrentContent
-        self.List_Accessory:BP_CancelScrollIntoView()
-        self.List_Accessory:BP_SetSelectedItem(Content)
-        self.List_Accessory:BP_NavigateToItem(Content)
-        return self.List_Accessory
-      end
-    })
-    self.List_Accessory:SetNavigationRuleCustom(EUINavigation.Left, {
-      self,
-      function()
-        return self.CurrentAccessoryTabWidget or self.Tab_Accessory
-      end
-    })
-  end
+    self.Tab_Accessory:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
+    self.Tab_Accessory:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
+    self.Tab_Accessory:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
+    self.List_Accessory:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
+    self.List_Accessory:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
+    self.List_Accessory:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
+    if(self.Tab_Accessory:IsVisible())then
+        self.Tab_Accessory:SetNavigationRuleCustom(EUINavigation.Right, {self, function()
+            return self:NavigateToAccessoryList()
+        end})
+        self.List_Accessory:SetNavigationRuleCustom(EUINavigation.Left,{self, function()
+            return self:NavigateToAccessoryTab()
+        end})
+    end
 end
 
-function M:OnAccessoryItemSelectionChanged(Content, IsSelected)
-  if not IsSelected or not self.IsGamepadInput then
-    return
-  end
-  self:TrySelectAccessoryItem(Content)
+function M:OnAccessoryListSelectionChanged(Content,IsSelected)
+    if(not IsSelected or not self.IsGamepadInput)then
+        return
+    end
+    if(self.CurrentTopTabIdx == self.HairTabIdx)then
+        --发型和配饰使用了同一个列表
+        self:OnHairItemClicked(Content)
+    else
+        self:TrySelectAccessoryItem(Content)
+    end
 end
 
 function M:OnAccessoryItemClicked(Content)
-  if self.IsGamepadInput then
-    self:OnGamePadConfirKeyDown()
-  else
-    M.Super.OnAccessoryItemClicked(self, Content)
-  end
+    if (self.IsGamepadInput) then
+        self:OnGamePadConfirKeyDown()
+    else
+        M.Super.OnAccessoryItemClicked(self,Content)
+    end
 end
 
+function M:OnSkinListSelectionChanged(Content,IsSelected)
+    if (self.IsGamepadInput) then
+        M.Super.OnSkinItemClicked(self,Content)
+    end
+end
+
+function M:OnMVPListSelectionChanged(Content,IsSelected)
+    if (self.IsGamepadInput) then
+        M.Super.OnMVPItemClicked(self,Content)
+    end
+end
+
+function M:OnMVPItemClicked(Content)
+    if (self.IsGamepadInput) then
+        self:OnGamePadConfirKeyDown()
+    else
+        M.Super.OnMVPItemClicked(self,Content)
+    end
+end
+
+function M:OnSkinItemClicked(Content)
+    if (self.IsGamepadInput) then
+        self:OnGamePadConfirKeyDown()
+    else
+        M.Super.OnSkinItemClicked(self,Content)
+    end
+end
+
+--手柄A键按下时
 function M:OnGamePadConfirKeyDown()
-  if self.IsPreviewMode or self.IsCharacterTrialMode then
-    return
-  end
-  if self.Btn_Function:IsVisible() and not self.Btn_Function:IsBtnForbidden() and self.Btn_Function == self.WidgetSwitcher_BtnState:GetActiveWidget() and self.ConfirmBtnFunc then
-    self.ConfirmBtnFunc(self)
-  end
-end
-
-function M:OnGamePadGotoDyeKeyDown()
-  if self.IsPreviewMode or self.IsCharacterTrialMode or self.IsTargetUnowned then
-    return
-  end
-  local Content = self.SkinMap[self.SelectedSkinId]
-  if not Content then
-    return
-  end
-  if Content.bDyeable and not Content.LockType then
-    self:OpenDye()
-  end
-end
-
-function M:OnDPadLeftKeyDown()
-  local Content = self.SkinMap[self.SelectedSkinId]
-  if Content then
-    local SkinWidget = self.SkinWidgets[Content.Idx - 1]
-    if SkinWidget then
-      return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), SkinWidget), true
+    if(rawget(self,"bAccessoryCustomOpened"))then
+        return self:OnGamePadConfirKeyDown_AccessoryCustom()
     end
-  end
+    if(self.IsPreviewMode or self.IsCharacterTrialMode)then
+        return UIUtils.Handled,true
+    end
+    if(self.Btn_Function:IsVisible() and not self.Btn_Function:IsBtnForbidden() and self.WidgetSwitcher_BtnState:GetActiveWidgetIndex() == 0)then
+        if(self.RightConfirmBtnFunc)then
+            self.RightConfirmBtnFunc(self)
+        end
+    end
+    return UIUtils.Handled,true
 end
 
-function M:OnDPadRightKeyDown()
-  local Content = self.SkinMap[self.SelectedSkinId]
-  if Content then
-    local SkinWidget = self.SkinWidgets[Content.Idx + 1]
-    if SkinWidget then
-      return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), SkinWidget), true
+--手柄Y键按下时
+function M:OnGamePadFaceButtonTopKeyDown()
+    if(self.IsPreviewMode or self.IsCharacterTrialMode)then
+        return UIUtils.Handled,true
     end
-  end
+    if(self.LeftConfirmBtnFunc)then
+        self.LeftConfirmBtnFunc(self)
+        return
+    end
+    if(self.IsTargetUnowned)then
+        return UIUtils.Handled,true
+    end
+    local Content
+    if(self.CurrentTopTabIdx == self.HairTabIdx)then
+        Content = self.HairMap[self.SelectedHairId]
+    else
+        Content = self.SkinMap[self.SelectedSkinId]
+    end
+    if(not Content)then
+        return UIUtils.Handled,true
+    end
+    if(Content.bDyeable and not Content.LockType)then
+        self:OpenDye()
+    end
+    return UIUtils.Handled,true
+end
+
+--手柄左摇杆键按下时
+function M:OnGamePadLeftThumbKeyDown()
+    if(self.IsPreviewMode or self.IsCharacterTrialMode)then
+        return UIUtils.Handled,true
+    end
+    if (not self.Panel_LevelUp:IsVisible()) then
+        return UIUtils.Handled,true
+    end
+
+    self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    local CurLevelUpWidget = self["WBP_Armory_Skin_LevelUp_" .. self.SelectedSkinLevel]
+    if (CurLevelUpWidget) then
+        CurLevelUpWidget:SetFocus()
+        self.FSM:Push({Name = FocusAreas.SkinLevelUp,Content = CurLevelUpWidget})
+    end
+    return UIUtils.Handled,true
+end
+
+function M:OnGamePadAccessoryCustomKeyDown()
+    return self:TryOpenAccessoryCustom()
 end
 
 function M:OnCameraScrollBackwardKeyDown()
-  self:ScrollCamera(1)
+    self:ScrollCamera(1)
 end
 
 function M:OnCameraScrollForwardKeyDown()
-  self:ScrollCamera(-1)
+    self:ScrollCamera(-1)
 end
 
 function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
-  if CommonUtils:IfExistSystemGuideUI(self) then
-    return UE4.UWidgetBlueprintLibrary.Handled()
-  end
-  M.Super.OnPreviewKeyDown(self, MyGeometry, InKeyEvent)
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if InKeyName == self.GamePadConfirKey then
-    self:OnGamePadConfirKeyDown()
-    return UE4.UWidgetBlueprintLibrary.Handled()
-  end
-  return UE4.UWidgetBlueprintLibrary.Unhandled()
+    if(CommonUtils:IfExistSystemGuideUI(self)) then
+        return UE4.UWidgetBlueprintLibrary.Handled()
+    end
+    M.Super.OnPreviewKeyDown(self, MyGeometry, InKeyEvent)
+    local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+    local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+    local StateName = self.FSM:Peak().Name
+    if(InKeyName == Const.GamepadFaceButtonDown and StateName ~= FocusAreas.Resource)then
+        self:OnGamePadConfirKeyDown()
+        return UE4.UWidgetBlueprintLibrary.Handled()
+    end
+    return UE4.UWidgetBlueprintLibrary.Unhandled()
 end
 
 function M:OnRepeatKeyDown(MyGeometry, InKeyEvent)
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  local RepeatKeyDownEvent = self.RepeatKeyDownEvents[InKeyName]
-  if RepeatKeyDownEvent then
-    local Reply, IsHandled = RepeatKeyDownEvent(self)
-    if IsHandled then
-      return Reply
+    local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+    local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+    local RepeatKeyDownEvent = self.RepeatKeyDownEvents[InKeyName]
+    if(RepeatKeyDownEvent)then
+        local Reply,IsHandled = RepeatKeyDownEvent(self)
+        if(IsHandled)then
+            return Reply
+        end
     end
-  end
-  return UIUtils.Handled
+    return UIUtils.Handled
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
-  if CommonUtils:IfExistSystemGuideUI(self) then
-    return UE4.UWidgetBlueprintLibrary.Handled()
-  end
-  local InputEvent = UWidgetBlueprintLibrary.GetInputEventFromKeyEvent(InKeyEvent)
-  if UKismetInputLibrary.InputEvent_IsRepeat(InputEvent) then
-    return UIUtils.Handled
-  end
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  local KeyDownEvent = self.KeyDownEvents[InKeyName]
-  if KeyDownEvent then
-    local Reply, IsHandled = KeyDownEvent(self)
-    if IsHandled then
-      return Reply
+    if(CommonUtils:IfExistSystemGuideUI(self)) then
+        return UE4.UWidgetBlueprintLibrary.Handled()
     end
-  elseif not self.bSelfHidden then
-    self.Tab_Skin:Handle_KeyEventOnGamePad(InKeyName)
-  end
-  return UE4.UWidgetBlueprintLibrary.Handled()
+    local Reply,IsHandled = self:ProcessOnKeyDown(MyGeometry, InKeyEvent)
+    if(IsHandled)then
+        return Reply
+    end
+    return UE4.UWidgetBlueprintLibrary.Handled()
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
-  local Reply = M.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)
-  if not self.IsGamepadInput then
-    return UIUtils.Unhandled
-  end
-  if self.bSelfHidden then
-    return UIUtils.Unhandled
-  end
-  local NewReply = self:GetReplyOnBack()
-  if NewReply then
-    return NewReply
-  end
-  return Reply
+    local Reply = M.Super.OnFocusReceived(self,MyGeometry, InFocusEvent)
+    if(not self.IsGamepadInput)then
+        return UIUtils.Handled
+    end
+    local Widget = self:GetDesiredFocusTarget()
+    if(Widget == self)then
+        self:OnFocusStateChanged()
+        return UIUtils.Handled
+    end
+    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(),Widget)
 end
 
-function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
-  local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if "Gamepad_RightX" == InKeyName then
-    if self.ActorController then
-      local DeltaX = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
-      self.ActorController:OnDragging({X = DeltaX})
+function M:OnAnalogValueChanged(MyGeometry,InAnalogInputEvent)
+    if(not self.EnableDrag)then
+        return UIUtils.Unhandled
     end
-    return UIUtils.Handled
-  end
-  return UIUtils.Unhandled
+    local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
+    local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+    if(InKeyName == "Gamepad_RightX")then
+        if(self.ActorController)then
+            local DeltaX = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
+            self.ActorController:OnDragViewActor({X=DeltaX})
+        end
+        return UIUtils.Handled
+    elseif(InKeyName == "Gamepad_RightY")then
+        if(rawget(self,"bAccessoryCustomOpened"))then
+            local Delta = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) / 10
+            self:ScrollCamera(Delta)
+        end
+    end
+    return UIUtils.Unhandled
 end
 
 function M:OnTabLeftKeyDown()
-  self.Tab_Skin:TabToLeft()
+    self.Tab_Skin:TabToLeft()
+    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(),self:GetDesiredFocusTarget()),true
 end
 
 function M:OnTabRightKeyDown()
-  self.Tab_Skin:TabToRight()
+    self.Tab_Skin:TabToRight()
+    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(),self:GetDesiredFocusTarget()),true
 end
 
 function M:OnHideUIKeyDown()
-  M.Super.OnHideUIKeyDown(self)
-  self:UpdateKeySetting()
-  self.bShoulFocusToLastFocusedWidget = not self.bSelfHidden
-  if self.bSelfHidden then
-    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self), true
-  else
-    local Reply = self:GetReplyOnBack()
-    if Reply then
-      return Reply, true
-    end
-  end
+    M.Super.OnHideUIKeyDown(self)
+    self:OnFocusStateChanged()
+    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(),self:GetDesiredFocusTarget()),true
 end
 
 function M:GetReplyOnBack()
-  if self.CurrentTopTabIdx == self.SkinTabIdx then
-    local SkinContent = self.SkinMap[self.SelectedSkinId]
-    if SkinContent and self.SkinWidgets[SkinContent.Idx] then
-      return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.SkinWidgets[SkinContent.Idx]), true
-    end
-  else
-    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.List_Accessory), true
-  end
+    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(),self:GetDesiredFocusTarget()),true
 end
 
+function M:OnBackKeyDown()
+    local StateName = self.FSM:Peak().Name
+    if(StateName == FocusAreas.SkinLevelUp) then
+        self.FSM:Pop()
+        self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+        return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(),self:GetDesiredFocusTarget()),true
+    else
+        return M.Super.OnBackKeyDown(self)
+    end
+end
+
+AssembleComponents(M)
 return M

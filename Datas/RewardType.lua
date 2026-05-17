@@ -1,111 +1,133 @@
-local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
-  return x
-end
+-- Source Excel file path: ..\datas\Reward.xlsx
+local LocalTimeProxy = (DataMgr or {})["LocalTimeProxy"] or function(x) return x end
+local ReadOnly = (DataMgr or {})["ReadOnly"] or function(n, x) return x end
 return ReadOnly("RewardType", {
-  Char = {
-    DungeonRewardSeq = 90,
-    OperationGM = true,
-    Remark = "角色",
-    RewardType = "Char"
-  },
-  CharAccessory = {
-    DungeonRewardSeq = 70,
-    DungeonRewardType = true,
-    OperationGM = true,
-    Remark = "角色配饰",
-    RewardType = "CharAccessory",
-    UniqueType = true
-  },
-  Draft = {
-    DungeonRewardSeq = 41,
-    DungeonRewardType = true,
-    OperationGM = true,
-    Remark = "铸造图纸",
-    RewardType = "Draft"
-  },
-  Drop = {RewardType = "Drop"},
-  HeadFrame = {
-    DungeonRewardSeq = 53,
-    OperationGM = true,
-    Remark = "头像框",
-    RewardType = "HeadFrame",
-    UniqueType = true
-  },
-  HeadSculpture = {
-    DungeonRewardSeq = 60,
-    OperationGM = true,
-    Remark = "头像",
-    RewardType = "HeadSculpture",
-    UniqueType = true
-  },
-  Mod = {
-    DungeonRewardSeq = 50,
-    DungeonRewardType = true,
-    OperationGM = true,
-    Remark = "魔之楔",
-    RewardType = "Mod"
-  },
-  Pet = {
-    DungeonRewardSeq = 51,
-    DungeonRewardType = true,
-    OperationGM = true,
-    Remark = "宠物",
-    RewardType = "Pet"
-  },
-  Resource = {
-    DungeonRewardSeq = 1,
-    DungeonRewardType = true,
-    OperationGM = true,
-    Remark = "资源",
-    RewardType = "Resource"
-  },
-  Skin = {
-    DungeonRewardSeq = 72,
-    OperationGM = true,
-    Remark = "角色皮肤",
-    RewardType = "Skin",
-    UniqueType = true
-  },
-  Title = {
-    DungeonRewardSeq = 62,
-    OperationGM = true,
-    Remark = "称号",
-    RewardType = "Title",
-    UniqueType = true
-  },
-  TitleFrame = {
-    DungeonRewardSeq = 63,
-    OperationGM = true,
-    Remark = "称号框",
-    RewardType = "TitleFrame",
-    UniqueType = true
-  },
-  Walnut = {
-    DungeonRewardSeq = 40,
-    DungeonRewardType = true,
-    OperationGM = true,
-    Remark = "密函",
-    RewardType = "Walnut"
-  },
-  Weapon = {
-    DungeonRewardSeq = 80,
-    DungeonRewardType = true,
-    OperationGM = true,
-    Remark = "武器",
-    RewardType = "Weapon"
-  },
-  WeaponAccessory = {
-    DungeonRewardSeq = 61,
-    OperationGM = true,
-    Remark = "武器配饰",
-    RewardType = "WeaponAccessory",
-    UniqueType = true
-  },
-  WeaponSkin = {
-    DungeonRewardSeq = 71,
-    OperationGM = true,
-    Remark = "武器皮肤",
-    RewardType = "WeaponSkin",
-    UniqueType = true
-  }
+	Char = {
+		DungeonRewardSeq = 90,
+		OperationGM = true,
+		Remark = "角色",
+		RewardType = "Char",
+	},
+	CharAccessory = {
+		DungeonRewardSeq = 69,
+		DungeonRewardType = true,
+		OperationGM = true,
+		Remark = "角色配饰",
+		RewardType = "CharAccessory",
+		UniqueType = true,
+	},
+	Draft = {
+		DungeonRewardSeq = 41,
+		DungeonRewardType = true,
+		OperationGM = true,
+		Remark = "铸造图纸",
+		RewardType = "Draft",
+	},
+	Drop = {
+		RewardType = "Drop",
+	},
+	Hair = {
+		DungeonRewardSeq = 71,
+		Remark = "发型",
+		RewardType = "Hair",
+		UniqueType = true,
+	},
+	HeadFrame = {
+		DungeonRewardSeq = 53,
+		OperationGM = true,
+		Remark = "头像框",
+		RewardType = "HeadFrame",
+		UniqueType = true,
+	},
+	HeadSculpture = {
+		DungeonRewardSeq = 60,
+		OperationGM = true,
+		Remark = "头像",
+		RewardType = "HeadSculpture",
+		UniqueType = true,
+	},
+	IronTicket = {
+		DungeonRewardSeq = 66,
+		DungeonRewardType = true,
+		OperationGM = true,
+		Remark = "钢铁探险门票",
+		RewardType = "IronTicket",
+	},
+	Mod = {
+		DungeonRewardSeq = 50,
+		DungeonRewardType = true,
+		OperationGM = true,
+		Remark = "魔之楔",
+		RewardType = "Mod",
+	},
+	Mount = {
+		DungeonRewardSeq = 65,
+		OperationGM = true,
+		Remark = "坐骑",
+		RewardType = "Mount",
+		UniqueType = true,
+	},
+	Pet = {
+		DungeonRewardSeq = 51,
+		DungeonRewardType = true,
+		OperationGM = true,
+		Remark = "宠物",
+		RewardType = "Pet",
+	},
+	Resource = {
+		DungeonRewardSeq = 1,
+		DungeonRewardType = true,
+		OperationGM = true,
+		Remark = "资源",
+		RewardType = "Resource",
+	},
+	Skin = {
+		DungeonRewardSeq = 72,
+		OperationGM = true,
+		Remark = "角色皮肤",
+		RewardType = "Skin",
+		UniqueType = true,
+	},
+	Title = {
+		DungeonRewardSeq = 62,
+		OperationGM = true,
+		Remark = "称号",
+		RewardType = "Title",
+		UniqueType = true,
+	},
+	TitleFrame = {
+		DungeonRewardSeq = 63,
+		OperationGM = true,
+		Remark = "称号框",
+		RewardType = "TitleFrame",
+		UniqueType = true,
+	},
+	Walnut = {
+		DungeonRewardSeq = 40,
+		DungeonRewardType = true,
+		OperationGM = true,
+		Remark = "密函",
+		RewardType = "Walnut",
+	},
+	Weapon = {
+		DungeonRewardSeq = 80,
+		DungeonRewardType = true,
+		OperationGM = true,
+		Remark = "武器",
+		RewardType = "Weapon",
+	},
+	WeaponAccessory = {
+		DungeonRewardSeq = 61,
+		OperationGM = true,
+		Remark = "武器配饰",
+		RewardType = "WeaponAccessory",
+		UniqueType = true,
+	},
+	WeaponSkin = {
+		DungeonRewardSeq = 70,
+		OperationGM = true,
+		Remark = "武器皮肤",
+		RewardType = "WeaponSkin",
+		UniqueType = true,
+	},
 })
